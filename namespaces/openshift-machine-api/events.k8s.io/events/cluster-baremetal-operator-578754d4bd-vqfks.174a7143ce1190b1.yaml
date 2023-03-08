@@ -1,0 +1,41 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-08T12:25:47.182929Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:25:47Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-08T12:25:47Z"
+  name: cluster-baremetal-operator-578754d4bd-vqfks.174a7143ce1190b1
+  namespace: openshift-machine-api
+  resourceVersion: "15715"
+  uid: 960c9c04-a0f3-4ba4-9be8-4ddca1dd2056
+note: Successfully assigned openshift-machine-api/cluster-baremetal-operator-578754d4bd-vqfks
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: cluster-baremetal-operator-578754d4bd-vqfks
+  namespace: openshift-machine-api
+  resourceVersion: "15712"
+  uid: 064aa083-1ace-401a-84c9-441f4fd8dbeb
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
