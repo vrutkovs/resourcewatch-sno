@@ -1,0 +1,317 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubectl.kubernetes.io/default-container: cluster-cloud-controller-manager
+  creationTimestamp: "2023-03-08T12:25:48Z"
+  generateName: cluster-cloud-controller-manager-operator-894fc765c-
+  labels:
+    k8s-app: cloud-manager-operator
+    pod-template-hash: 894fc765c
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/default-container: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:k8s-app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"9a304169-5f1a-435b-972d-00a0be0cf15f"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"cluster-cloud-controller-manager"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"RELEASE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9258,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":9259,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/cloud-controller-manager-config/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/kubernetes"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+          k:{"name":"config-sync-controllers"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"RELEASE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9260,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"host-etc-kube"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"images"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:25:48Z"
+  name: cluster-cloud-controller-manager-operator-894fc765c-pv6m8
+  namespace: openshift-cloud-controller-manager-operator
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: cluster-cloud-controller-manager-operator-894fc765c
+    uid: 9a304169-5f1a-435b-972d-00a0be0cf15f
+  resourceVersion: "15805"
+  uid: 4d20d7cd-80bb-44b9-9e49-e4dc9d3abb9e
+spec:
+  containers:
+  - command:
+    - /bin/bash
+    - -c
+    - |
+      #!/bin/bash
+      set -o allexport
+      if [[ -f /etc/kubernetes/apiserver-url.env ]]; then
+        source /etc/kubernetes/apiserver-url.env
+      else
+        URL_ONLY_KUBECONFIG=/etc/kubernetes/kubeconfig
+      fi
+      exec /cluster-controller-manager-operator \
+      --leader-elect=true \
+      --leader-elect-lease-duration=137s \
+      --leader-elect-renew-deadline=107s \
+      --leader-elect-retry-period=26s \
+      --leader-elect-resource-namespace=openshift-cloud-controller-manager-operator \
+      "--images-json=/etc/cloud-controller-manager-config/images.json" \
+      --metrics-bind-address=:9258 \
+      --health-addr=127.0.0.1:9259
+    env:
+    - name: RELEASE_VERSION
+      value: 4.13.0-ec.4
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:af943c06e99239f3fffdb2bf6916d706390dc0a0941c9972f195161daf8cf6af
+    imagePullPolicy: IfNotPresent
+    name: cluster-cloud-controller-manager
+    ports:
+    - containerPort: 9258
+      hostPort: 9258
+      name: metrics
+      protocol: TCP
+    - containerPort: 9259
+      hostPort: 9259
+      name: healthz
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/cloud-controller-manager-config/
+      name: images
+    - mountPath: /etc/kubernetes
+      name: host-etc-kube
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-t4ftd
+      readOnly: true
+  - command:
+    - /bin/bash
+    - -c
+    - |
+      #!/bin/bash
+      set -o allexport
+      if [[ -f /etc/kubernetes/apiserver-url.env ]]; then
+        source /etc/kubernetes/apiserver-url.env
+      else
+        URL_ONLY_KUBECONFIG=/etc/kubernetes/kubeconfig
+      fi
+      exec /config-sync-controllers \
+      --leader-elect=true \
+      --leader-elect-lease-duration=137s \
+      --leader-elect-renew-deadline=107s \
+      --leader-elect-retry-period=26s \
+      --leader-elect-resource-namespace=openshift-cloud-controller-manager-operator \
+      --health-addr=127.0.0.1:9260
+    env:
+    - name: RELEASE_VERSION
+      value: 4.13.0-ec.4
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:af943c06e99239f3fffdb2bf6916d706390dc0a0941c9972f195161daf8cf6af
+    imagePullPolicy: IfNotPresent
+    name: config-sync-controllers
+    ports:
+    - containerPort: 9260
+      hostPort: 9260
+      name: healthz
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 25Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/kubernetes
+      name: host-etc-kube
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-t4ftd
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  imagePullSecrets:
+  - name: cluster-cloud-controller-manager-dockercfg-hhqdx
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: cluster-cloud-controller-manager
+  serviceAccountName: cluster-cloud-controller-manager
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.cloudprovider.kubernetes.io/uninitialized
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - configMap:
+      defaultMode: 420
+      name: cloud-controller-manager-images
+    name: images
+  - hostPath:
+      path: /etc/kubernetes
+      type: Directory
+    name: host-etc-kube
+  - name: kube-api-access-t4ftd
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  phase: Pending
+  qosClass: Burstable
