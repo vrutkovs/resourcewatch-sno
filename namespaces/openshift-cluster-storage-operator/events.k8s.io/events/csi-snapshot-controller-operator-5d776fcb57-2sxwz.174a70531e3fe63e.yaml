@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:33Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:33Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:38Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:08:38Z"
+  name: csi-snapshot-controller-operator-5d776fcb57-2sxwz.174a70531e3fe63e
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "4060"
+  uid: 000131e5-6873-48f7-9c83-b26133d4241b
+note: Started container csi-snapshot-controller-operator
+reason: Started
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{csi-snapshot-controller-operator}
+  kind: Pod
+  name: csi-snapshot-controller-operator-5d776fcb57-2sxwz
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "3132"
+  uid: a901826e-faf7-4596-8515-022854bb9206
+type: Normal
