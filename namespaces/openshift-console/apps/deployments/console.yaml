@@ -228,6 +228,7 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -247,16 +248,17 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
         f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:26:13Z"
+    time: "2023-03-08T12:26:54Z"
   name: console
   namespace: openshift-console
-  resourceVersion: "17118"
+  resourceVersion: "17601"
   uid: 8a031ddc-cef6-4b34-a5d4-692f8a8e2198
 spec:
   progressDeadlineSeconds: 600
@@ -409,20 +411,22 @@ spec:
           name: trusted-ca-bundle
         name: trusted-ca-bundle
 status:
+  availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2023-03-08T12:26:08Z"
-    lastUpdateTime: "2023-03-08T12:26:08Z"
-    message: Deployment does not have minimum availability.
-    reason: MinimumReplicasUnavailable
-    status: "False"
+  - lastTransitionTime: "2023-03-08T12:26:54Z"
+    lastUpdateTime: "2023-03-08T12:26:54Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-08T12:26:08Z"
-    lastUpdateTime: "2023-03-08T12:26:13Z"
+    lastUpdateTime: "2023-03-08T12:26:54Z"
     message: ReplicaSet "console-5d687bf7f9" is progressing.
     reason: ReplicaSetUpdated
     status: "True"
     type: Progressing
   observedGeneration: 2
+  readyReplicas: 1
   replicas: 2
-  unavailableReplicas: 2
+  unavailableReplicas: 1
   updatedReplicas: 1
