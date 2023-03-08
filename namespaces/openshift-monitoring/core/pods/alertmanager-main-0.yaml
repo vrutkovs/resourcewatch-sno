@@ -17,8 +17,8 @@ metadata:
     kubectl.kubernetes.io/default-container: alertmanager
     openshift.io/scc: nonroot
   creationTimestamp: "2023-03-08T12:21:52Z"
-  deletionGracePeriodSeconds: 120
-  deletionTimestamp: "2023-03-08T12:28:13Z"
+  deletionGracePeriodSeconds: 0
+  deletionTimestamp: "2023-03-08T12:26:13Z"
   generateName: alertmanager-main-
   labels:
     alertmanager: main
@@ -508,7 +508,7 @@ metadata:
     kind: StatefulSet
     name: alertmanager-main
     uid: 157b555d-b9f9-4bf6-8e9e-d13fe7c479d2
-  resourceVersion: "17204"
+  resourceVersion: "17236"
   uid: 71f9a3d0-635f-45d4-bc14-05e6d924068d
 spec:
   containers:
