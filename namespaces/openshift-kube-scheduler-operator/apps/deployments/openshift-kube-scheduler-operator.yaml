@@ -178,11 +178,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:01:08Z"
+    time: "2023-03-08T12:06:33Z"
   name: openshift-kube-scheduler-operator
   namespace: openshift-kube-scheduler-operator
   ownerReferences:
@@ -191,7 +193,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "2376"
+  resourceVersion: "2378"
   uid: 1183c523-80da-4a75-bc3e-713792de34ff
 spec:
   progressDeadlineSeconds: 600
@@ -316,15 +318,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:01:08Z"
     lastUpdateTime: "2023-03-08T12:01:08Z"
-    message: Created new replica set "openshift-kube-scheduler-operator-7965454467"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-08T12:01:08Z"
-    lastUpdateTime: "2023-03-08T12:01:08Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-08T12:01:08Z"
+    lastUpdateTime: "2023-03-08T12:06:33Z"
+    message: ReplicaSet "openshift-kube-scheduler-operator-7965454467" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
