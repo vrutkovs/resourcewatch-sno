@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:19:45Z"
+deprecatedLastTimestamp: "2023-03-08T12:19:45Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:19:45Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:19:45Z"
+  name: dns-operator-6cf6587b88-pbkzf.174a70ef8d3ab398
+  namespace: openshift-dns-operator
+  resourceVersion: "11545"
+  uid: bb15733e-31c4-4869-a103-0e0dc85cf558
+note: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0888f305c323c441ced34c79cbb5876251e13cdd8e2d5522e861d48585823c27"
+  in 5.644142635s (5.644153875s including waiting)
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{dns-operator}
+  kind: Pod
+  name: dns-operator-6cf6587b88-pbkzf
+  namespace: openshift-dns-operator
+  resourceVersion: "3188"
+  uid: 1ac05946-0210-48d9-b571-ff31bb18b100
+type: Normal
