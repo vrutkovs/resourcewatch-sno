@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-08T12:08:38Z"
-deprecatedLastTimestamp: "2023-03-08T12:08:54Z"
+deprecatedLastTimestamp: "2023-03-08T12:09:07Z"
 deprecatedSource:
   component: cluster-authentication-operator-config-observer-configobserver
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-08T12:08:54Z"
+    time: "2023-03-08T12:09:07Z"
   name: authentication-operator.174a70545e357491
   namespace: openshift-authentication-operator
-  resourceVersion: "4875"
+  resourceVersion: "5269"
   uid: 39c3d927-d80f-4738-88f8-c1720c189759
 note: templates changed to map["error":"/var/config/system/secrets/v4-0-config-system-ocp-branding-template/errors.html"
   "login":"/var/config/system/secrets/v4-0-config-system-ocp-branding-template/login.html"
