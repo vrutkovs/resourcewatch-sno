@@ -171,13 +171,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:08:33Z"
+    time: "2023-03-08T12:18:10Z"
   name: kube-controller-manager-operator-664468d8b9
   namespace: openshift-kube-controller-manager-operator
   ownerReferences:
@@ -187,7 +189,7 @@ metadata:
     kind: Deployment
     name: kube-controller-manager-operator
     uid: 5df04b75-b8db-486d-812b-be3794a10710
-  resourceVersion: "10643"
+  resourceVersion: "10724"
   uid: 4b8df1d1-40e5-4396-9811-7b7a71d07c59
 spec:
   replicas: 1
@@ -311,6 +313,8 @@ spec:
                   fieldPath: metadata.namespace
                 path: namespace
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
