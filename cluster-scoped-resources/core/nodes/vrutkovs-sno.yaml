@@ -38,8 +38,6 @@ metadata:
           f:node-role.kubernetes.io/control-plane: {}
           f:node-role.kubernetes.io/master: {}
           f:node.openshift.io/os_id: {}
-      f:spec:
-        f:taints: {}
     manager: kubelet
     operation: Update
     time: "2023-03-08T12:06:32Z"
@@ -58,6 +56,14 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-08T12:08:18Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:taints: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:08:24Z"
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -81,14 +87,12 @@ metadata:
     subresource: status
     time: "2023-03-08T12:08:24Z"
   name: vrutkovs-sno
-  resourceVersion: "3116"
+  resourceVersion: "3117"
   uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
 spec:
   taints:
   - effect: NoSchedule
     key: node-role.kubernetes.io/master
-  - effect: NoSchedule
-    key: node.kubernetes.io/not-ready
 status:
   addresses:
   - address: 10.0.130.68
