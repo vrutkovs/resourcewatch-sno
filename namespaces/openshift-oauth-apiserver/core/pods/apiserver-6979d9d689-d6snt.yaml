@@ -263,8 +263,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -277,8 +275,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -305,7 +301,7 @@ metadata:
     kind: ReplicaSet
     name: apiserver-6979d9d689
     uid: 9063ff97-1a18-42e1-9aca-f6d23f96ad62
-  resourceVersion: "8724"
+  resourceVersion: "8739"
   uid: aceb1e36-2ac6-4e9e-a0df-5caa7e614acf
 spec:
   affinity:
@@ -529,16 +525,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:17:48Z"
-    message: 'containers with unready status: [oauth-apiserver]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:18:01Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:17:48Z"
-    message: 'containers with unready status: [oauth-apiserver]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:18:01Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:17:48Z"
@@ -550,7 +542,7 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b8b577f9e79318d8a58cd9f29dce8be3b0c6b8963c423d162da674e5424a1770
     lastState: {}
     name: oauth-apiserver
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
