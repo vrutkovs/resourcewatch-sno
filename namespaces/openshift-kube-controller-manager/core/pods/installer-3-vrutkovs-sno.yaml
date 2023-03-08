@@ -1,6 +1,8 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.30/23"],"mac_address":"0a:58:0a:80:00:1e","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.30/23","gateway_ip":"10.128.0.1"}}'
   creationTimestamp: "2023-03-08T12:10:18Z"
   labels:
     app: installer
@@ -109,6 +111,16 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     time: "2023-03-08T12:10:18Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-08T12:10:18Z"
   name: installer-3-vrutkovs-sno
   namespace: openshift-kube-controller-manager
   ownerReferences:
@@ -116,7 +128,7 @@ metadata:
     kind: ConfigMap
     name: revision-status-3
     uid: 2e6fd78d-7554-46f3-921c-73c67c1c4b08
-  resourceVersion: "6054"
+  resourceVersion: "6055"
   uid: 25220b91-6e7d-4749-8a7d-135df843d213
 spec:
   automountServiceAccountToken: false
