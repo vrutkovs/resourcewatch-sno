@@ -3,6 +3,7 @@ kind: Pod
 metadata:
   annotations:
     cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.95/23"],"mac_address":"0a:58:0a:80:00:5f","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.95/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: restricted-v2
     operatorframework.io/managed-by: marketplace-operator
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
@@ -105,6 +106,15 @@ metadata:
     manager: catalog
     operation: Update
     time: "2023-03-08T12:25:51Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-08T12:25:51Z"
   name: redhat-operators-h96f7
   namespace: openshift-marketplace
   ownerReferences:
@@ -114,7 +124,7 @@ metadata:
     kind: CatalogSource
     name: redhat-operators
     uid: 6e4f413e-c05a-4e72-a36a-ae92eda680f3
-  resourceVersion: "16024"
+  resourceVersion: "16030"
   uid: b990e713-1456-42b1-8ff5-26ae94db6f2d
 spec:
   containers:
