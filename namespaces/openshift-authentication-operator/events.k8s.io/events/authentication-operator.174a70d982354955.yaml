@@ -1,0 +1,59 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:18:10Z"
+deprecatedLastTimestamp: "2023-03-08T12:18:10Z"
+deprecatedSource:
+  component: oauth-apiserver-status-controller-statussyncer_authentication
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:18:10Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-08T12:18:10Z"
+  name: authentication-operator.174a70d982354955
+  namespace: openshift-authentication-operator
+  resourceVersion: "10737"
+  uid: b02da9f5-b586-457d-a201-7668fb6c924f
+note: 'Status for clusteroperator/authentication changed: Degraded message changed
+  from "IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server\nOAuthServerConfigObservationDegraded:
+  secret \"v4-0-config-system-router-certs\" not found\nOAuthServerServiceEndpointAccessibleControllerDegraded:
+  Get \"https://172.30.76.170:443/healthz\": dial tcp 172.30.76.170:443: connect:
+  connection refused\nOAuthServerServiceEndpointsEndpointAccessibleControllerDegraded:
+  oauth service endpoints are not ready\nRouterCertsDegraded: neither the custom secret/v4-0-config-system-router-certs
+  -n openshift-authentication or default secret/v4-0-config-system-custom-router-certs
+  -n openshift-authentication could be retrieved: secret \"v4-0-config-system-router-certs\"
+  not found\nWebhookAuthenticatorControllerDegraded: failed to read service-ca crt
+  bundle: open /var/run/configmaps/service-ca-bundle/service-ca.crt: no such file
+  or directory" to "IngressStateEndpointsDegraded: No subsets found for the endpoints
+  of oauth-server\nOAuthClientsControllerDegraded: route.route.openshift.io \"oauth-openshift\"
+  not found\nOAuthServerConfigObservationDegraded: secret \"v4-0-config-system-router-certs\"
+  not found\nOAuthServerServiceEndpointAccessibleControllerDegraded: Get \"https://172.30.76.170:443/healthz\":
+  dial tcp 172.30.76.170:443: connect: connection refused\nOAuthServerServiceEndpointsEndpointAccessibleControllerDegraded:
+  oauth service endpoints are not ready\nRouterCertsDegraded: neither the custom secret/v4-0-config-system-router-certs
+  -n openshift-authentication or default secret/v4-0-config-system-custom-router-certs
+  -n openshift-authentication could be retrieved: secret \"v4-0-config-system-router-certs\"
+  not found\nWebhookAuthenticatorControllerDegraded: failed to read service-ca crt
+  bundle: open /var/run/configmaps/service-ca-bundle/service-ca.crt: no such file
+  or directory"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 0d9fc21a-8cec-4bfd-bab5-451303a4b438
+type: Normal
