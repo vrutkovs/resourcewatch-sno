@@ -301,14 +301,13 @@ metadata:
         f:observedGeneration: {}
         f:readyReplicas: {}
         f:replicas: {}
-        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:26:12Z"
+    time: "2023-03-08T12:26:13Z"
   name: oauth-openshift
   namespace: openshift-authentication
-  resourceVersion: "17060"
+  resourceVersion: "17070"
   uid: e7557177-2d74-4c4d-9713-9102546c56ef
 spec:
   progressDeadlineSeconds: 600
@@ -528,7 +527,6 @@ status:
     reason: NewReplicaSetCreated
     status: "True"
     type: Progressing
-  observedGeneration: 1
+  observedGeneration: 2
   readyReplicas: 1
   replicas: 1
-  updatedReplicas: 1
