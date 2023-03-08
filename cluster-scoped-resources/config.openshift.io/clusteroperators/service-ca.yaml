@@ -40,10 +40,11 @@ metadata:
       f:status:
         f:conditions: {}
         f:relatedObjects: {}
+        f:versions: {}
     manager: Go-http-client
     operation: Update
     subresource: status
-    time: "2023-03-08T12:08:47Z"
+    time: "2023-03-08T12:17:49Z"
   name: service-ca
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -51,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "4636"
+  resourceVersion: "8144"
   uid: 32d58120-fe57-4ace-8999-147cb8619675
 spec: {}
 status:
@@ -93,3 +94,6 @@ status:
   - group: ""
     name: openshift-service-ca
     resource: namespaces
+  versions:
+  - name: operator
+    version: 4.13.0-ec.4
