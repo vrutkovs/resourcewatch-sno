@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:20:11Z"
+deprecatedLastTimestamp: "2023-03-08T12:20:11Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:20:11Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:20:11Z"
+  name: telemeter-client-78868b7d66.174a70f589dfa980
+  namespace: openshift-monitoring
+  resourceVersion: "12674"
+  uid: a7787403-0a59-4661-a110-dd3c750747c6
+note: 'Created pod: telemeter-client-78868b7d66-8r8kh'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: telemeter-client-78868b7d66
+  namespace: openshift-monitoring
+  resourceVersion: "12670"
+  uid: 48683240-83e3-48c3-8870-c8bdf9930063
+type: Normal
