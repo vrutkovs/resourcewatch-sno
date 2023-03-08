@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:07:38Z"
+deprecatedLastTimestamp: "2023-03-08T12:07:38Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:07:38Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:07:38Z"
+  name: ovnkube-master-hf56q.174a7046670ee963
+  namespace: openshift-ovn-kubernetes
+  resourceVersion: "2984"
+  uid: 58082378-f79a-4fb6-84db-9d4936e18b67
+note: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c"
+  already present on machine
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-rbac-proxy}
+  kind: Pod
+  name: ovnkube-master-hf56q
+  namespace: openshift-ovn-kubernetes
+  resourceVersion: "2786"
+  uid: 2fb62bbd-46b6-4a90-bda4-a5303cf8406e
+type: Normal
