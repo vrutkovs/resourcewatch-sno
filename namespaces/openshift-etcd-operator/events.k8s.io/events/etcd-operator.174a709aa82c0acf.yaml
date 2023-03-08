@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:13:40Z"
+deprecatedLastTimestamp: "2023-03-08T12:13:40Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-member-observer-controller-etcdmemberscontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:14:07Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-08T12:14:07Z"
+  name: etcd-operator.174a709aa82c0acf
+  namespace: openshift-etcd-operator
+  resourceVersion: "6470"
+  uid: fd651d76-5122-44c3-9e36-f21edb6b8690
+note: 'Put "https://172.30.0.1:443/apis/operator.openshift.io/v1/etcds/cluster/status":
+  dial tcp 172.30.0.1:443: connect: connection refused'
+reason: ReportEtcdMembersErrorUpdatingStatus
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 7c43379a-6a36-4015-adb4-fd13f2117c5e
+type: Warning
