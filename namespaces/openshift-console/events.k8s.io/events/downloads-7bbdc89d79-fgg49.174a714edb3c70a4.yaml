@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:26:34Z"
+deprecatedLastTimestamp: "2023-03-08T12:26:34Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:26:34Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:26:34Z"
+  name: downloads-7bbdc89d79-fgg49.174a714edb3c70a4
+  namespace: openshift-console
+  resourceVersion: "17465"
+  uid: d1d7917c-a6f0-4b4d-8906-671173a5893a
+note: 'Liveness probe failed: Get "http://10.128.0.97:8080/": dial tcp 10.128.0.97:8080:
+  connect: connection refused'
+reason: Unhealthy
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{download-server}
+  kind: Pod
+  name: downloads-7bbdc89d79-fgg49
+  namespace: openshift-console
+  resourceVersion: "16887"
+  uid: b0d0b35c-481b-4559-8499-d178bc00c0db
+type: Warning
