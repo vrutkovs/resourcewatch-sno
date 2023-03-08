@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 3
+deprecatedCount: 4
 deprecatedFirstTimestamp: "2023-03-08T12:01:20Z"
 deprecatedLastTimestamp: "2023-03-08T12:01:20Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-08T12:01:20Z"
   name: etcd-operator-74b9844765.174a6fee34a90315
   namespace: openshift-etcd-operator
-  resourceVersion: "1775"
+  resourceVersion: "1777"
   uid: 0d1ddd00-16d5-4582-9188-f27e0c95e6fb
 note: 'Error creating: pods "etcd-operator-74b9844765-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
   the cluster does not have any nodes'
