@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:17:31Z"
+deprecatedLastTimestamp: "2023-03-08T12:17:31Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:17:32Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:17:32Z"
+  name: machine-config-daemon-gg48f.174a70d078a1dbd9
+  namespace: openshift-machine-config-operator
+  resourceVersion: "7839"
+  uid: 916d3009-ba60-4b4c-83b4-8909858afde4
+note: 'Unable to attach or mount volumes: unmounted volumes=[proxy-tls], unattached
+  volumes=[cookie-secret rootfs kube-api-access-9g992 proxy-tls]: timed out waiting
+  for the condition'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: machine-config-daemon-gg48f
+  namespace: openshift-machine-config-operator
+  resourceVersion: "3320"
+  uid: 17dd5f40-6d62-4ba0-8a54-33f67e581c1d
+type: Warning
