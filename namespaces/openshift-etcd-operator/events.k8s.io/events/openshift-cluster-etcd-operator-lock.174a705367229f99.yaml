@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:34Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:34Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:34Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-08T12:08:34Z"
+  name: openshift-cluster-etcd-operator-lock.174a705367229f99
+  namespace: openshift-etcd-operator
+  resourceVersion: "3571"
+  uid: 5623e159-dbbe-409c-9193-4bb3fffdaf85
+note: etcd-operator-74b9844765-rczws_d1f95802-85ba-416d-aa73-606456a5ed34 became leader
+reason: LeaderElection
+regarding:
+  apiVersion: v1
+  kind: ConfigMap
+  name: openshift-cluster-etcd-operator-lock
+  namespace: openshift-etcd-operator
+  resourceVersion: "3568"
+  uid: 9220d6bb-9cdd-4759-98f9-84c2d5be57ab
+type: Normal
