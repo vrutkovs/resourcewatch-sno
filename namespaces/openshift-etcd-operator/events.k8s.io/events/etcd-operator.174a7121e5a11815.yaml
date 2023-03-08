@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:23:21Z"
+deprecatedLastTimestamp: "2023-03-08T12:23:21Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-script-controller-scriptcontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:23:21Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-08T12:23:21Z"
+  name: etcd-operator.174a7121e5a11815
+  namespace: openshift-etcd-operator
+  resourceVersion: "14683"
+  uid: b96a79ad-da06-412e-a60b-03376fc1c7b3
+note: 'Operation cannot be fulfilled on etcds.operator.openshift.io "cluster": the
+  object has been modified; please apply your changes to the latest version and try
+  again'
+reason: ScriptControllerErrorUpdatingStatus
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 7c43379a-6a36-4015-adb4-fd13f2117c5e
+type: Warning
