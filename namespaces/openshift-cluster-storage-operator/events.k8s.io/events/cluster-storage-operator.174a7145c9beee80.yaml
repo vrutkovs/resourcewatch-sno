@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:25:55Z"
 deprecatedLastTimestamp: "2023-03-08T12:25:55Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-08T12:25:55Z"
   name: cluster-storage-operator.174a7145c9beee80
   namespace: openshift-cluster-storage-operator
-  resourceVersion: "16257"
+  resourceVersion: "16267"
   uid: 40b4f128-c42e-4abd-beb6-877a7ae57b5a
 note: clusteroperator/storage version "operator" changed from "" to "4.13.0-ec.4"
 reason: OperatorVersionChanged
