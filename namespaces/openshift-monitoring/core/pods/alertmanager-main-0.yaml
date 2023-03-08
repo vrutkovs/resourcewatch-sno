@@ -434,7 +434,7 @@ metadata:
     kind: StatefulSet
     name: alertmanager-main
     uid: 157b555d-b9f9-4bf6-8e9e-d13fe7c479d2
-  resourceVersion: "13687"
+  resourceVersion: "13689"
   uid: 71f9a3d0-635f-45d4-bc14-05e6d924068d
 spec:
   containers:
@@ -737,6 +737,7 @@ spec:
   hostname: alertmanager-main-0
   imagePullSecrets:
   - name: alertmanager-main-dockercfg-4pvf8
+  nodeName: vrutkovs-sno
   nodeSelector:
     kubernetes.io/os: linux
   preemptionPolicy: PreemptLowerPriority
@@ -838,5 +839,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:21:52Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
