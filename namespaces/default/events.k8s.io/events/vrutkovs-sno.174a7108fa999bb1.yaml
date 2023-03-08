@@ -1,0 +1,37 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:21:34Z"
+deprecatedLastTimestamp: "2023-03-08T12:21:34Z"
+deprecatedSource:
+  component: machineconfigdaemon
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:21:34Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: machine-config-daemon
+    operation: Update
+    time: "2023-03-08T12:21:34Z"
+  name: vrutkovs-sno.174a7108fa999bb1
+  namespace: default
+  resourceVersion: "13431"
+  uid: 8b000712-67a5-4ce9-9363-b86439c4a5e4
+reason: OSUpdateStarted
+regarding:
+  kind: Node
+  name: vrutkovs-sno
+  uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
+type: Normal
