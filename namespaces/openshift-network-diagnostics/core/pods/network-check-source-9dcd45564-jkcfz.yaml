@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.60/23"],"mac_address":"0a:58:0a:80:00:3c","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.60/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.60"
+          ],
+          "mac": "0a:58:0a:80:00:3c",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-08T12:17:48Z"
@@ -151,6 +162,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-08T12:19:57Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:19:59Z"
   name: network-check-source-9dcd45564-jkcfz
   namespace: openshift-network-diagnostics
   ownerReferences:
@@ -160,7 +181,7 @@ metadata:
     kind: ReplicaSet
     name: network-check-source-9dcd45564
     uid: fb49b17c-d3a9-4bb8-b46f-87ce483fafe5
-  resourceVersion: "12107"
+  resourceVersion: "12157"
   uid: 7d59c754-da92-4307-b48e-b1d61e84ffb7
 spec:
   containers:
