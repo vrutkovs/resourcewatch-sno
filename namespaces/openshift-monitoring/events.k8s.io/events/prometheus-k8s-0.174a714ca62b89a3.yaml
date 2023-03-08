@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:26:25Z"
+deprecatedLastTimestamp: "2023-03-08T12:26:25Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:26:31Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:26:31Z"
+  name: prometheus-k8s-0.174a714ca62b89a3
+  namespace: openshift-monitoring
+  resourceVersion: "17417"
+  uid: 6a23fec9-d96e-43f4-ae68-cd5cf4e5aca9
+note: Created container kube-rbac-proxy
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-rbac-proxy}
+  kind: Pod
+  name: prometheus-k8s-0
+  namespace: openshift-monitoring
+  resourceVersion: "17275"
+  uid: fe191e6d-27be-406b-a624-54bd035a85a6
+type: Normal
