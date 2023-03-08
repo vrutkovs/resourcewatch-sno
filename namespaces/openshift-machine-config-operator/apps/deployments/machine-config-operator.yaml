@@ -114,6 +114,7 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -133,13 +134,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:06:32Z"
+    time: "2023-03-08T12:08:26Z"
   name: machine-config-operator
   namespace: openshift-machine-config-operator
   ownerReferences:
@@ -148,7 +149,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "2322"
+  resourceVersion: "3262"
   uid: 73eb86a7-2ac3-4a93-bee2-b240140c1d2e
 spec:
   progressDeadlineSeconds: 600
@@ -223,20 +224,21 @@ spec:
           type: ""
         name: root-ca
 status:
+  availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2023-03-08T12:01:21Z"
-    lastUpdateTime: "2023-03-08T12:01:21Z"
-    message: Deployment does not have minimum availability.
-    reason: MinimumReplicasUnavailable
-    status: "False"
+  - lastTransitionTime: "2023-03-08T12:08:26Z"
+    lastUpdateTime: "2023-03-08T12:08:26Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-08T12:01:21Z"
-    lastUpdateTime: "2023-03-08T12:06:32Z"
-    message: ReplicaSet "machine-config-operator-5747cb856b" is progressing.
-    reason: ReplicaSetUpdated
+    lastUpdateTime: "2023-03-08T12:08:26Z"
+    message: ReplicaSet "machine-config-operator-5747cb856b" has successfully progressed.
+    reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
