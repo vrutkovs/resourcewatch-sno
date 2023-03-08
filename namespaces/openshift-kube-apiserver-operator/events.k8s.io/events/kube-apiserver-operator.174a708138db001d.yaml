@@ -1,0 +1,78 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:11:51Z"
+deprecatedLastTimestamp: "2023-03-08T12:11:51Z"
+deprecatedSource:
+  component: kube-apiserver-operator-installer-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:11:51Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-08T12:11:51Z"
+  name: kube-apiserver-operator.174a708138db001d
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "6271"
+  uid: dd4750ad-30bb-46d8-ad6f-92b4136366a5
+note: |
+  installer errors: installer: ng) (len=31) "check-endpoints-client-cert-key",
+    (string) (len=14) "kubelet-client",
+    (string) (len=16) "node-kubeconfigs"
+   },
+   OptionalCertSecretNamePrefixes: ([]string) (len=11 cap=16) {
+    (string) (len=17) "user-serving-cert",
+    (string) (len=21) "user-serving-cert-000",
+    (string) (len=21) "user-serving-cert-001",
+    (string) (len=21) "user-serving-cert-002",
+    (string) (len=21) "user-serving-cert-003",
+    (string) (len=21) "user-serving-cert-004",
+    (string) (len=21) "user-serving-cert-005",
+    (string) (len=21) "user-serving-cert-006",
+    (string) (len=21) "user-serving-cert-007",
+    (string) (len=21) "user-serving-cert-008",
+    (string) (len=21) "user-serving-cert-009"
+   },
+   CertConfigMapNamePrefixes: ([]string) (len=4 cap=4) {
+    (string) (len=20) "aggregator-client-ca",
+    (string) (len=9) "client-ca",
+    (string) (len=29) "control-plane-node-kubeconfig",
+    (string) (len=26) "check-endpoints-kubeconfig"
+   },
+   OptionalCertConfigMapNamePrefixes: ([]string) (len=1 cap=1) {
+    (string) (len=17) "trusted-ca-bundle"
+   },
+   CertDir: (string) (len=57) "/etc/kubernetes/static-pod-resources/kube-apiserver-certs",
+   ResourceDir: (string) (len=36) "/etc/kubernetes/static-pod-resources",
+   PodManifestDir: (string) (len=25) "/etc/kubernetes/manifests",
+   Timeout: (time.Duration) 2m0s,
+   StaticPodManifestsLockFile: (string) "",
+   PodMutationFns: ([]installerpod.PodMutationFunc) <nil>,
+   KubeletVersion: (string) ""
+  })
+  I0308 12:10:20.658712       1 cmd.go:410] Getting controller reference for node vrutkovs-sno
+  I0308 12:10:20.750851       1 cmd.go:423] Waiting for installer revisions to settle for node vrutkovs-sno
+  I0308 12:10:20.753233       1 cmd.go:515] Waiting additional period after revisions have settled for node vrutkovs-sno
+  I0308 12:10:50.753460       1 cmd.go:521] Getting installer pods for node vrutkovs-sno
+  F0308 12:11:04.757851       1 cmd.go:106] Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/pods?labelSelector=app%3Dinstaller": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+reason: InstallerPodFailed
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: 1fb52cdd-6ee0-4905-bac5-c1d2936c403a
+type: Warning
