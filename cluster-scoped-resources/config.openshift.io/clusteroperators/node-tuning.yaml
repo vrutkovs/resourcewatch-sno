@@ -42,10 +42,11 @@ metadata:
       f:status:
         f:conditions: {}
         f:relatedObjects: {}
+        f:versions: {}
     manager: cluster-node-tuning-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:19:51Z"
+    time: "2023-03-08T12:19:56Z"
   name: node-tuning
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -53,15 +54,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "11731"
+  resourceVersion: "12081"
   uid: e8a64f51-2748-4d39-ba88-88dfccafbd8f
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-08T12:19:51Z"
-    message: DaemonSet "tuned" has no available Pod(s)
-    reason: TunedUnavailable
-    status: "False"
+  - lastTransitionTime: "2023-03-08T12:19:56Z"
+    message: Cluster has deployed "4.13.0-ec.4"
+    reason: AsExpected
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-08T12:19:51Z"
     message: Waiting for 1/1 Profiles to be applied
@@ -90,3 +91,6 @@ status:
     name: tuned
     namespace: openshift-cluster-node-tuning-operator
     resource: daemonsets
+  versions:
+  - name: operator
+    version: 4.13.0-ec.4
