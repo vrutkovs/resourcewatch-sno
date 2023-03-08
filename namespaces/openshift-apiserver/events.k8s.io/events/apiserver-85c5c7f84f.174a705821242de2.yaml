@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:54Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:54Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:54Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:08:54Z"
+  name: apiserver-85c5c7f84f.174a705821242de2
+  namespace: openshift-apiserver
+  resourceVersion: "4917"
+  uid: 7a003cb3-9726-4aa5-b0f4-4e3e0cecd392
+note: 'Error creating: pods "apiserver-85c5c7f84f-" is forbidden: error fetching namespace
+  "openshift-apiserver": unable to find annotation openshift.io/sa.scc.uid-range'
+reason: FailedCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: apiserver-85c5c7f84f
+  namespace: openshift-apiserver
+  resourceVersion: "4507"
+  uid: 1fc6cdc3-418b-4020-8265-542b3a5aae68
+type: Warning
