@@ -163,13 +163,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:06:32Z"
+    time: "2023-03-08T12:08:26Z"
   name: kube-apiserver-operator-5bcbcdbff
   namespace: openshift-kube-apiserver-operator
   ownerReferences:
@@ -179,7 +181,7 @@ metadata:
     kind: Deployment
     name: kube-apiserver-operator
     uid: 1fb52cdd-6ee0-4905-bac5-c1d2936c403a
-  resourceVersion: "2345"
+  resourceVersion: "3258"
   uid: 0d42a4b0-780b-44ee-bee0-72496d4cbb71
 spec:
   replicas: 1
@@ -299,6 +301,8 @@ spec:
                   fieldPath: metadata.namespace
                 path: namespace
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
