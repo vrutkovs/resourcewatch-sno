@@ -64,7 +64,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "12028"
+  resourceVersion: "12049"
   uid: 9c5afb3c-849d-4f09-b16e-c210d3cf27a8
 spec: {}
 status:
@@ -85,9 +85,8 @@ status:
     status: "True"
     type: Upgradeable
   - lastTransitionTime: "2023-03-08T12:06:49Z"
-    message: |-
-      Deployment "/openshift-network-diagnostics/network-check-source" is waiting for other operators to become ready
-      Deployment "/openshift-multus/multus-admission-controller" is waiting for other operators to become ready
+    message: Deployment "/openshift-network-diagnostics/network-check-source" is waiting
+      for other operators to become ready
     reason: Deploying
     status: "True"
     type: Progressing
