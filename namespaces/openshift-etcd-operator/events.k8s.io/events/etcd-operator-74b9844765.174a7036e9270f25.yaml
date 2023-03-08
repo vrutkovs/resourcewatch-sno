@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:06:32Z"
+deprecatedLastTimestamp: "2023-03-08T12:06:32Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:06:32Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:06:32Z"
+  name: etcd-operator-74b9844765.174a7036e9270f25
+  namespace: openshift-etcd-operator
+  resourceVersion: "2305"
+  uid: 4703c785-23d5-42d3-a053-6beaa6d8c102
+note: 'Created pod: etcd-operator-74b9844765-rczws'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: etcd-operator-74b9844765
+  namespace: openshift-etcd-operator
+  resourceVersion: "1772"
+  uid: f36d348d-acef-4624-ab12-ffa9322000a1
+type: Normal
