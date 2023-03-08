@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:09:45Z"
+    time: "2023-03-08T12:11:40Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,22 +52,22 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "5689"
+  resourceVersion: "6123"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-08T12:08:34Z"
+  - lastTransitionTime: "2023-03-08T12:11:40Z"
     message: |-
-      SystemServiceCAConfigDegraded: Config "v4-0-config-system-service-ca" has no service CA data
+      IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
+      OAuthServerConfigObservationDegraded: secret "v4-0-config-system-router-certs" not found
       OAuthServerServiceEndpointAccessibleControllerDegraded: "service-ca.crt" key of the "openshift-authentication/v4-0-config-system-service-ca" CM is empty
       OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth service endpoints are not ready
-      WebhookAuthenticatorControllerDegraded: failed to read service-ca crt bundle: open /var/run/configmaps/service-ca-bundle/service-ca.crt: no such file or directory
-      IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
       RouterCertsDegraded: neither the custom secret/v4-0-config-system-router-certs -n openshift-authentication or default secret/v4-0-config-system-custom-router-certs -n openshift-authentication could be retrieved: secret "v4-0-config-system-router-certs" not found
-      OAuthServerConfigObservationDegraded: secret "v4-0-config-system-router-certs" not found
-    reason: AsExpected
-    status: "False"
+      SystemServiceCAConfigDegraded: Config "v4-0-config-system-service-ca" has no service CA data
+      WebhookAuthenticatorControllerDegraded: failed to read service-ca crt bundle: open /var/run/configmaps/service-ca-bundle/service-ca.crt: no such file or directory
+    reason: IngressStateEndpoints_MissingSubsets::OAuthServerConfigObservation_Error::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError::RouterCerts_NoRouterCertSecret::SystemServiceCAConfig_MissingCA::WebhookAuthenticatorController_SyncError
+    status: "True"
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:09:23Z"
     message: 'APIServerDeploymentProgressing: deployment/apiserver.openshift-oauth-apiserver:
