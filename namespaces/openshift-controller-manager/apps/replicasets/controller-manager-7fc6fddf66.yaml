@@ -183,7 +183,6 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
         f:replicas: {}
     manager: kube-controller-manager
@@ -199,7 +198,7 @@ metadata:
     kind: Deployment
     name: controller-manager
     uid: a8efd566-f552-482c-bb79-dec1a75042e2
-  resourceVersion: "8034"
+  resourceVersion: "8051"
   uid: 190caa35-765b-4335-97bf-45cc22ccac9f
 spec:
   replicas: 0
@@ -332,6 +331,5 @@ spec:
           name: openshift-global-ca
         name: proxy-ca-bundles
 status:
-  fullyLabeledReplicas: 1
   observedGeneration: 3
-  replicas: 1
+  replicas: 0
