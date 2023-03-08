@@ -18,6 +18,8 @@ metadata:
     operator.openshift.io/bootstrap-user-exists: "true"
     operator.openshift.io/rvs-hash: J1SEA0fEos6bdqyfo0FaA1SCy3HYkvGkpzrDvj5rHl6d6EnbqG5_Oz40ANQR3OGAKchoy5Z_XHuNXnMalI_9cg
   creationTimestamp: "2023-03-08T12:21:52Z"
+  deletionGracePeriodSeconds: 40
+  deletionTimestamp: "2023-03-08T12:26:53Z"
   generateName: oauth-openshift-5b87dcb5d7-
   labels:
     app: oauth-openshift
@@ -335,7 +337,7 @@ metadata:
     kind: ReplicaSet
     name: oauth-openshift-5b87dcb5d7
     uid: 8becf278-929d-4706-b21d-964c858d708b
-  resourceVersion: "14095"
+  resourceVersion: "17065"
   uid: aa360de9-92ba-45f6-b15a-6a6cb1e22eaf
 spec:
   affinity:
