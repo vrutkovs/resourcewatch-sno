@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.85/23"],"mac_address":"0a:58:0a:80:00:55","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.85/23","gateway_ip":"10.128.0.1"}}'
     kubectl.kubernetes.io/default-container: cluster-autoscaler-operator
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
@@ -161,6 +162,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-08T12:25:46Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-08T12:25:46Z"
   name: cluster-autoscaler-operator-747f65fc79-qcdm6
   namespace: openshift-machine-api
   ownerReferences:
@@ -170,7 +180,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-autoscaler-operator-747f65fc79
     uid: 02810043-0f26-4a91-bb5c-a1cc7cfb2761
-  resourceVersion: "15645"
+  resourceVersion: "15651"
   uid: 96131cfb-c777-4d3e-9382-0ee1a29e4a84
 spec:
   containers:
