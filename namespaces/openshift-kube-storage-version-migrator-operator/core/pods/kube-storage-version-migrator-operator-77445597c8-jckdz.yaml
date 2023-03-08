@@ -178,6 +178,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -190,6 +192,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -205,7 +209,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:08:33Z"
+    time: "2023-03-08T12:18:04Z"
   name: kube-storage-version-migrator-operator-77445597c8-jckdz
   namespace: openshift-kube-storage-version-migrator-operator
   ownerReferences:
@@ -215,7 +219,7 @@ metadata:
     kind: ReplicaSet
     name: kube-storage-version-migrator-operator-77445597c8
     uid: b0460bae-aa7a-4699-8e08-12d38dd323dd
-  resourceVersion: "3438"
+  resourceVersion: "9927"
   uid: ad2d21e0-08b5-405d-b497-9b5fa5d32f68
 spec:
   containers:
@@ -334,12 +338,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:33Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:18:04Z"
+    message: 'containers with unready status: [kube-storage-version-migrator-operator]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:33Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:18:04Z"
+    message: 'containers with unready status: [kube-storage-version-migrator-operator]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:08:24Z"
@@ -351,11 +359,26 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:42f3b58af5d13d761c5ed4f50d639f314cfa861774f2bc8ee794209a3347366f
     lastState: {}
     name: kube-storage-version-migrator-operator
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://fc14030f1a01b4a775b89f29e504af0ef5d800fb6e1eefae3a106ba3a6e4abb0
+        exitCode: 1
+        finishedAt: "2023-03-08T12:18:03Z"
+        message: |
+          message":"All is well","reason":"AsExpected","status":"False","type":"Degraded"},{"lastTransitionTime":"2023-03-08T12:17:51Z","message":"All is well","reason":"AsExpected","status":"False","type":"Progressing"},{"lastTransitionTime":"2023-03-08T12:17:51Z","message":"All is well","reason":"AsExpected","status":"True","type":"Available"},{"lastTransitionTime":"2023-03-08T12:08:34Z","message":"All is well","reason":"AsExpected","status":"True","type":"Upgradeable"}]}}
+          I0308 12:17:51.501624       1 event.go:285] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-kube-storage-version-migrator-operator", Name:"kube-storage-version-migrator-operator", UID:"51a70a1f-917f-4410-8fce-8f2067015f90", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'OperatorStatusChanged' Status for clusteroperator/kube-storage-version-migrator changed: Progressing changed from True to False ("All is well"),Available changed from False to True ("All is well")
+          I0308 12:18:03.800566       1 observer_polling.go:111] Observed file "/var/run/secrets/serving-cert/tls.key" has been created (hash="38dec8108aa263b12acb42f025b9d1d06995eb96901e29a3e403ec1b70048074")
+          W0308 12:18:03.800963       1 builder.go:129] Restart triggered because of file /var/run/secrets/serving-cert/tls.key was created
+          I0308 12:18:03.801075       1 observer_polling.go:111] Observed file "/var/run/secrets/serving-cert/tls.crt" has been created (hash="c082d843361e79528637f2570710c49ebe40cc0468800c01b1ec33522cbba565")
+          I0308 12:18:03.801500       1 genericapiserver.go:470] [graceful-termination] RunPreShutdownHooks has completed
+          I0308 12:18:03.801553       1 base_controller.go:167] Shutting down StaticConditionsController ...
+          I0308 12:18:03.801567       1 base_controller.go:167] Shutting down RemoveStaleConditionsController ...
+          W0308 12:18:03.801581       1 builder.go:106] graceful termination failed, controllers failed with error: stopped
+          I0308 12:18:03.801581       1 base_controller.go:167] Shutting down KubeStorageVersionMigrator ...
+        reason: Error
         startedAt: "2023-03-08T12:08:33Z"
   hostIP: 10.0.130.68
   phase: Running
