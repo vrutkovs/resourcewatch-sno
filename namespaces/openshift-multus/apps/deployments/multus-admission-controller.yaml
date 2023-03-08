@@ -8,7 +8,7 @@ metadata:
     networkoperator.openshift.io/non-critical: ""
     release.openshift.io/version: 4.13.0-ec.4
   creationTimestamp: "2023-03-08T12:06:52Z"
-  generation: 1
+  generation: 2
   labels:
     app: multus-admission-controller
     networkoperator.openshift.io/generates-operator-status: stand-alone
@@ -99,7 +99,7 @@ metadata:
                   f:secretName: {}
     manager: cluster-network-operator/operconfig
     operation: Apply
-    time: "2023-03-08T12:06:52Z"
+    time: "2023-03-08T12:19:13Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -142,7 +142,7 @@ metadata:
     kind: Network
     name: cluster
     uid: 33106962-b4cb-47dc-aa0e-5f6b7299dae3
-  resourceVersion: "7909"
+  resourceVersion: "11287"
   uid: 57958d1a-d183-434f-8611-63ac05777daf
 spec:
   progressDeadlineSeconds: 600
@@ -182,7 +182,7 @@ spec:
             -tls-cert-file=/etc/webhook/tls.crt \
             -metrics-listen-address=127.0.0.1:9091 \
             -alsologtostderr=true \
-            -ignore-namespaces=openshift-etcd,openshift-console,openshift-ingress-canary,openshift-apiserver-operator,openshift-authentication-operator,openshift-cloud-controller-manager,openshift-cloud-controller-manager-operator,openshift-cloud-credential-operator,openshift-cloud-network-config-controller,openshift-cluster-csi-drivers,openshift-cluster-machine-approver,openshift-cluster-node-tuning-operator,openshift-cluster-samples-operator,openshift-cluster-storage-operator,openshift-cluster-version,openshift-config-operator,openshift-controller-manager-operator,openshift-dns-operator,openshift-etcd-operator,openshift-image-registry,openshift-ingress-operator,openshift-insights,openshift-kube-apiserver,openshift-kube-apiserver-operator,openshift-kube-controller-manager,openshift-kube-controller-manager-operator,openshift-kube-scheduler-operator,openshift-kube-storage-version-migrator-operator,openshift-machine-api,openshift-machine-config-operator,openshift-marketplace,openshift-monitoring,openshift-network-operator,openshift-operator-lifecycle-manager,openshift-service-ca-operator,openshift-user-workload-monitoring
+            -ignore-namespaces=openshift-etcd,openshift-console,openshift-ingress-canary,openshift-apiserver,openshift-apiserver-operator,openshift-authentication,openshift-authentication-operator,openshift-cloud-controller-manager,openshift-cloud-controller-manager-operator,openshift-cloud-credential-operator,openshift-cloud-network-config-controller,openshift-cluster-csi-drivers,openshift-cluster-machine-approver,openshift-cluster-node-tuning-operator,openshift-cluster-samples-operator,openshift-cluster-storage-operator,openshift-cluster-version,openshift-config-operator,openshift-controller-manager,openshift-controller-manager-operator,openshift-dns-operator,openshift-etcd-operator,openshift-image-registry,openshift-ingress-operator,openshift-insights,openshift-kube-apiserver,openshift-kube-apiserver-operator,openshift-kube-controller-manager,openshift-kube-controller-manager-operator,openshift-kube-scheduler,openshift-kube-scheduler-operator,openshift-kube-storage-version-migrator,openshift-kube-storage-version-migrator-operator,openshift-machine-api,openshift-machine-config-operator,openshift-marketplace,openshift-monitoring,openshift-multus,openshift-network-diagnostics,openshift-network-operator,openshift-oauth-apiserver,openshift-operator-lifecycle-manager,openshift-ovn-kubernetes,openshift-route-controller-manager,openshift-service-ca-operator,openshift-user-workload-monitoring
         image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fd02734b25f6ed3ce051907716246f59a673ba39a075f40c55071acc013f9218
         imagePullPolicy: IfNotPresent
         name: multus-admission-controller
