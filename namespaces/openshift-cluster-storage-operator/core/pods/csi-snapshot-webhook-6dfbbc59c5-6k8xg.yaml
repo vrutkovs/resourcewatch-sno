@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.25/23"],"mac_address":"0a:58:0a:80:00:19","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.25/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.25"
+          ],
+          "mac": "0a:58:0a:80:00:19",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-08T12:08:34Z"
@@ -135,6 +146,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-08T12:08:34Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:19:40Z"
   name: csi-snapshot-webhook-6dfbbc59c5-6k8xg
   namespace: openshift-cluster-storage-operator
   ownerReferences:
@@ -144,7 +165,7 @@ metadata:
     kind: ReplicaSet
     name: csi-snapshot-webhook-6dfbbc59c5
     uid: 0ee38d18-b3e8-400b-bda6-e3dd07180cbd
-  resourceVersion: "3672"
+  resourceVersion: "11495"
   uid: 0941c169-9d8a-4dd2-8b30-975b56cbd38b
 spec:
   affinity:
