@@ -28,6 +28,16 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-08T12:00:43Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:00:44Z"
   name: insights
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -35,6 +45,8 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "649"
+  resourceVersion: "764"
   uid: ae47ccc3-db4b-4679-ba86-eae6d52f4d65
 spec: {}
+status:
+  extension: null
