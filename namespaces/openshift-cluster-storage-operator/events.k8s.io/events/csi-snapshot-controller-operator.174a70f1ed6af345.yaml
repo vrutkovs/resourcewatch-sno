@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:19:55Z"
+deprecatedLastTimestamp: "2023-03-08T12:19:55Z"
+deprecatedSource:
+  component: csi-snapshot-controller-operator-status-controller-statussyncer_csi-snapshot-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:19:55Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: csi-snapshot-controller-operator
+    operation: Update
+    time: "2023-03-08T12:19:55Z"
+  name: csi-snapshot-controller-operator.174a70f1ed6af345
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "12008"
+  uid: a6ad7bed-2661-4747-b916-f63e0e8d82f6
+note: 'Status for clusteroperator/csi-snapshot-controller changed: Progressing changed
+  from True to False ("All is well"),Available changed from False to True ("All is
+  well")'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: csi-snapshot-controller-operator
+  namespace: openshift-cluster-storage-operator
+  uid: fb0ac1ee-b184-48a0-8229-7274958e046b
+type: Normal
