@@ -1,0 +1,41 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-08T12:30:00.179910Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:30:00Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-08T12:30:00Z"
+  name: collect-profiles-27971310-cx944.174a717eb5dd2754
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "18302"
+  uid: 70f8b253-bd0f-4167-b56f-8959f7658d21
+note: Successfully assigned openshift-operator-lifecycle-manager/collect-profiles-27971310-cx944
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: collect-profiles-27971310-cx944
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "18298"
+  uid: 7060e44e-4dcb-402b-8813-6cf6aab5e0d8
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
