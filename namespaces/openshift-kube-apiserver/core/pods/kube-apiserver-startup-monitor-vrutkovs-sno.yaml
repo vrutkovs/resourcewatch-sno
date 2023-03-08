@@ -169,7 +169,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:15:28Z"
+    time: "2023-03-08T12:16:47Z"
   name: kube-apiserver-startup-monitor-vrutkovs-sno
   namespace: openshift-kube-apiserver
   ownerReferences:
@@ -178,7 +178,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
-  resourceVersion: "7029"
+  resourceVersion: "7623"
   uid: e917b130-e4b0-46ca-9cef-4fcf2ec1b811
 spec:
   containers:
@@ -265,11 +265,11 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:15:28Z"
+    lastTransitionTime: "2023-03-08T12:16:44Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:15:28Z"
+    lastTransitionTime: "2023-03-08T12:16:44Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
@@ -277,7 +277,7 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://08844e7be91c6e5984eb355033a57f8f05cc2d4e776a4d3673b1250bdb78b952
+  - containerID: cri-o://e95ecc8a4bcf6bc53aef8c665fca247552d163f5c4571d7e85b89d08f2ec1430
     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
     lastState: {}
@@ -287,7 +287,7 @@ status:
     started: true
     state:
       running:
-        startedAt: "2023-03-08T12:15:20Z"
+        startedAt: "2023-03-08T12:16:44Z"
   hostIP: 10.0.130.68
   phase: Running
   podIP: 10.0.130.68
