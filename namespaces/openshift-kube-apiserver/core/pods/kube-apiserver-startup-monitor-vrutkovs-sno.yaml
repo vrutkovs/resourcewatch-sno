@@ -169,7 +169,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:15:26Z"
+    time: "2023-03-08T12:15:28Z"
   name: kube-apiserver-startup-monitor-vrutkovs-sno
   namespace: openshift-kube-apiserver
   ownerReferences:
@@ -178,7 +178,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
-  resourceVersion: "6999"
+  resourceVersion: "7029"
   uid: e917b130-e4b0-46ca-9cef-4fcf2ec1b811
 spec:
   containers:
@@ -261,19 +261,19 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:15:19Z"
+    lastTransitionTime: "2023-03-08T12:15:28Z"
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:15:20Z"
+    lastTransitionTime: "2023-03-08T12:15:28Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:15:20Z"
+    lastTransitionTime: "2023-03-08T12:15:28Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:15:19Z"
+    lastTransitionTime: "2023-03-08T12:15:28Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
@@ -294,4 +294,4 @@ status:
   podIPs:
   - ip: 10.0.130.68
   qosClass: Burstable
-  startTime: "2023-03-08T12:15:19Z"
+  startTime: "2023-03-08T12:15:28Z"
