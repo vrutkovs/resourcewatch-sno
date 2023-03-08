@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:08:35Z"
-deprecatedLastTimestamp: "2023-03-08T12:08:35Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:36Z"
 deprecatedSource:
   component: kube-apiserver-operator-cert-rotation-controller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-apiserver-operator
     operation: Update
-    time: "2023-03-08T12:08:40Z"
+    time: "2023-03-08T12:08:44Z"
   name: kube-apiserver-operator.174a7053b4c87a6d
   namespace: openshift-kube-apiserver-operator
-  resourceVersion: "4231"
+  resourceVersion: "4491"
   uid: ae235efa-0d3d-4aa5-a638-b9474ec64a1f
 note: 'Failed to create ConfigMap/kube-control-plane-signer-ca -n openshift-kube-apiserver-operator:
   configmaps "kube-control-plane-signer-ca" already exists'
