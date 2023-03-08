@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:21:25Z"
+    time: "2023-03-08T12:21:27Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,38 +52,35 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "13331"
+  resourceVersion: "13353"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:11:40Z"
-    message: "IngressStateEndpointsDegraded: No subsets found for the endpoints of
-      oauth-server\nOAuthServerDeploymentDegraded: waiting for the oauth-openshift
-      route to contain an admitted ingress: no admitted ingress for route oauth-openshift
-      in namespace openshift-authentication\nOAuthServerDeploymentDegraded: \nOAuthServerRouteEndpointAccessibleControllerDegraded:
-      Get \"https://oauth-openshift.apps.vrutkovs.choomba.one/healthz\": EOF\nOAuthServerServiceEndpointAccessibleControllerDegraded:
-      Get \"https://172.30.76.170:443/healthz\": dial tcp 172.30.76.170:443: connect:
-      connection refused\nOAuthServerServiceEndpointsEndpointAccessibleControllerDegraded:
-      oauth service endpoints are not ready"
-    reason: IngressStateEndpoints_MissingSubsets::OAuthServerDeployment_PreconditionNotFulfilled::OAuthServerRouteEndpointAccessibleController_SyncError::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError
+    message: |-
+      IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
+      OAuthServerRouteEndpointAccessibleControllerDegraded: Get "https://oauth-openshift.apps.vrutkovs.choomba.one/healthz": EOF
+      OAuthServerServiceEndpointAccessibleControllerDegraded: Get "https://172.30.76.170:443/healthz": dial tcp 172.30.76.170:443: connect: connection refused
+      OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth service endpoints are not ready
+    reason: IngressStateEndpoints_MissingSubsets::OAuthServerRouteEndpointAccessibleController_SyncError::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError
     status: "True"
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:21:23Z"
-    message: 'WellKnownReadyControllerProgressing: kube-apiserver oauth endpoint https://10.0.130.68:6443/.well-known/oauth-authorization-server
-      is not yet served and authentication operator keeps waiting (check kube-apiserver
-      operator, and check that instances roll out successfully, which can take several
-      minutes per instance)'
-    reason: WellKnownReadyController_OAuthMetadataNotYetServed
+    message: |-
+      OAuthServerDeploymentProgressing: deployment/oauth-openshift.openshift-authentication: observed generation is 0, desired generation is 1.
+      WellKnownReadyControllerProgressing: kube-apiserver oauth endpoint https://10.0.130.68:6443/.well-known/oauth-authorization-server is not yet served and authentication operator keeps waiting (check kube-apiserver operator, and check that instances roll out successfully, which can take several minutes per instance)
+    reason: OAuthServerDeployment_NewGeneration::WellKnownReadyController_OAuthMetadataNotYetServed
     status: "True"
     type: Progressing
   - lastTransitionTime: "2023-03-08T12:08:35Z"
     message: |-
+      OAuthServerDeploymentAvailable: no oauth-openshift.openshift-authentication pods available on any node.
       OAuthServerRouteEndpointAccessibleControllerAvailable: Get "https://oauth-openshift.apps.vrutkovs.choomba.one/healthz": EOF
       OAuthServerServiceEndpointAccessibleControllerAvailable: Get "https://172.30.76.170:443/healthz": dial tcp 172.30.76.170:443: connect: connection refused
       OAuthServerServiceEndpointsEndpointAccessibleControllerAvailable: endpoints "oauth-openshift" not found
       WellKnownAvailable: The well-known endpoint is not yet available: kube-apiserver oauth endpoint https://10.0.130.68:6443/.well-known/oauth-authorization-server is not yet served and authentication operator keeps waiting (check kube-apiserver operator, and check that instances roll out successfully, which can take several minutes per instance)
-    reason: OAuthServerDeployment_PreconditionNotFulfilled::OAuthServerRouteEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound::WellKnown_NotReady
+    reason: OAuthServerDeployment_NoPod::OAuthServerRouteEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound::WellKnown_NotReady
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-08T12:08:34Z"
