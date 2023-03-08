@@ -272,7 +272,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -286,7 +288,7 @@ metadata:
     kind: Deployment
     name: cluster-storage-operator
     uid: 4752a10b-0cc3-4826-bf5c-83ff17c71d0c
-  resourceVersion: "15683"
+  resourceVersion: "15696"
   uid: 5c7ec8d5-12f2-44f3-a29e-ff1c46a609f6
 spec:
   replicas: 1
@@ -443,5 +445,6 @@ spec:
           optional: true
           secretName: cluster-storage-operator-serving-cert
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
