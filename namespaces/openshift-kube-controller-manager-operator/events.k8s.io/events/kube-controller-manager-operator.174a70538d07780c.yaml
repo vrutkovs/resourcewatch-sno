@@ -1,0 +1,51 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:35Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:35Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-status-controller-statussyncer_kube-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:35Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:08:35Z"
+  name: kube-controller-manager-operator.174a70538d07780c
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "3799"
+  uid: 5dcfae3b-35ee-4396-9ba3-fb9bf941d670
+note: 'Status for clusteroperator/kube-controller-manager changed: Degraded set to
+  Unknown (""),Progressing set to Unknown (""),Available set to Unknown (""),Upgradeable
+  set to Unknown (""),status.relatedObjects changed from [{"operator.openshift.io"
+  "kubecontrollermanagers" "" "cluster"} {"" "namespaces" "" "openshift-config"} {""
+  "namespaces" "" "openshift-config-managed"} {"" "namespaces" "" "openshift-kube-controller-manager"}
+  {"" "namespaces" "" "openshift-kube-controller-manager-operator"} {"" "namespaces"
+  "" "kube-system"} {"" "nodes" "" ""} {"certificates.k8s.io" "certificatesigningrequests"
+  "" ""}] to [{"operator.openshift.io" "kubecontrollermanagers" "" "cluster"} {""
+  "namespaces" "" "openshift-config"} {"" "namespaces" "" "openshift-config-managed"}
+  {"" "namespaces" "" "openshift-kube-controller-manager"} {"" "namespaces" "" "openshift-kube-controller-manager-operator"}
+  {"" "namespaces" "" "kube-system"} {"certificates.k8s.io" "certificatesigningrequests"
+  "" ""} {"" "nodes" "" ""} {"config.openshift.io" "nodes" "" "cluster"}],status.versions
+  changed from [] to [{"raw-internal" "4.13.0-ec.4"}]'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: 5df04b75-b8db-486d-812b-be3794a10710
+type: Normal
