@@ -192,12 +192,24 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:18:09Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"ContainersReady"}:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -210,6 +222,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -225,17 +239,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:18:09Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.v1.cni.cncf.io/network-status: {}
-    manager: multus
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:18:09Z"
+    time: "2023-03-08T12:18:14Z"
   name: route-controller-manager-6b66fd86b9-clx7x
   namespace: openshift-route-controller-manager
   ownerReferences:
@@ -245,7 +249,7 @@ metadata:
     kind: ReplicaSet
     name: route-controller-manager-6b66fd86b9
     uid: 9e12c928-aaf2-4964-8b06-ce5b2ed727d6
-  resourceVersion: "10799"
+  resourceVersion: "10849"
   uid: 5f071262-13c1-48f1-8554-a9e7b93eeebf
 spec:
   affinity:
@@ -389,12 +393,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:18:09Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:18:14Z"
+    message: 'containers with unready status: [route-controller-manager]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:18:09Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:18:14Z"
+    message: 'containers with unready status: [route-controller-manager]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:18:08Z"
@@ -406,11 +414,15 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:7b288005c8c77daaad7536b802b94ddfab190584959eb5f86e2bb5fbb04f5ed7
     lastState: {}
     name: route-controller-manager
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://160eccbe2c40865feeb2fd4c63715d2408ef39e0c04258a50fff625bd52172f1
+        exitCode: 0
+        finishedAt: "2023-03-08T12:18:14Z"
+        reason: Completed
         startedAt: "2023-03-08T12:18:09Z"
   hostIP: 10.0.130.68
   phase: Running
