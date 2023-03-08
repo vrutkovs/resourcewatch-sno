@@ -349,6 +349,7 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -368,16 +369,16 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:17:48Z"
+    time: "2023-03-08T12:18:00Z"
   name: apiserver
   namespace: openshift-apiserver
-  resourceVersion: "8006"
+  resourceVersion: "8669"
   uid: 39c861b0-f670-4019-8902-338c30caa998
 spec:
   progressDeadlineSeconds: 600
@@ -631,6 +632,7 @@ spec:
           type: ""
         name: audit-dir
 status:
+  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-03-08T12:08:44Z"
     lastUpdateTime: "2023-03-08T12:08:44Z"
@@ -639,12 +641,12 @@ status:
     status: "True"
     type: Available
   - lastTransitionTime: "2023-03-08T12:08:44Z"
-    lastUpdateTime: "2023-03-08T12:17:48Z"
-    message: ReplicaSet "apiserver-d874cf4c" is progressing.
-    reason: ReplicaSetUpdated
+    lastUpdateTime: "2023-03-08T12:18:00Z"
+    message: ReplicaSet "apiserver-d874cf4c" has successfully progressed.
+    reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
   observedGeneration: 2
+  readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
