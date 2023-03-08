@@ -34,6 +34,17 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-08T12:00:45Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:08:34Z"
   name: openshift-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -41,8 +52,82 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "774"
+  resourceVersion: "3526"
   uid: a175ceaf-21f5-40ed-bd39-ec4fb39d7fb7
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-08T12:08:34Z"
+    reason: NoData
+    status: Unknown
+    type: Degraded
+  - lastTransitionTime: "2023-03-08T12:08:34Z"
+    reason: NoData
+    status: Unknown
+    type: Progressing
+  - lastTransitionTime: "2023-03-08T12:08:34Z"
+    reason: NoData
+    status: Unknown
+    type: Available
+  - lastTransitionTime: "2023-03-08T12:08:34Z"
+    reason: NoData
+    status: Unknown
+    type: Upgradeable
   extension: null
+  relatedObjects:
+  - group: operator.openshift.io
+    name: cluster
+    resource: openshiftapiservers
+  - group: ""
+    name: openshift-config
+    resource: namespaces
+  - group: ""
+    name: openshift-config-managed
+    resource: namespaces
+  - group: ""
+    name: openshift-apiserver-operator
+    resource: namespaces
+  - group: ""
+    name: openshift-apiserver
+    resource: namespaces
+  - group: ""
+    name: openshift-etcd-operator
+    resource: namespaces
+  - group: ""
+    name: host-etcd-2
+    namespace: openshift-etcd
+    resource: endpoints
+  - group: controlplane.operator.openshift.io
+    name: ""
+    namespace: openshift-apiserver
+    resource: podnetworkconnectivitychecks
+  - group: apiregistration.k8s.io
+    name: v1.apps.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.authorization.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.build.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.image.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.project.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.quota.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.route.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.security.openshift.io
+    resource: apiservices
+  - group: apiregistration.k8s.io
+    name: v1.template.openshift.io
+    resource: apiservices
+  versions:
+  - name: operator
+    version: 4.13.0-ec.4
