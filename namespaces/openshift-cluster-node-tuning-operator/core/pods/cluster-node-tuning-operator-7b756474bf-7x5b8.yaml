@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.6/23"],"mac_address":"0a:58:0a:80:00:06","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.6/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.6"
+          ],
+          "mac": "0a:58:0a:80:00:06",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: anyuid
   creationTimestamp: "2023-03-08T12:06:32Z"
   generateName: cluster-node-tuning-operator-7b756474bf-
@@ -193,6 +204,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-08T12:08:24Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:19:39Z"
   name: cluster-node-tuning-operator-7b756474bf-7x5b8
   namespace: openshift-cluster-node-tuning-operator
   ownerReferences:
@@ -202,7 +223,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-node-tuning-operator-7b756474bf
     uid: 09609a7f-fcca-4596-802d-8ebe50eb0a05
-  resourceVersion: "3175"
+  resourceVersion: "11477"
   uid: 3a6ece43-515f-4957-a981-7911e203887e
 spec:
   containers:
