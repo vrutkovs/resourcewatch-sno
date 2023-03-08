@@ -156,7 +156,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -170,7 +172,7 @@ metadata:
     kind: Deployment
     name: machine-api-operator
     uid: 9309afd1-d506-46b1-a983-918233debb64
-  resourceVersion: "15914"
+  resourceVersion: "15923"
   uid: d9f199d7-5ffb-4ed0-940b-d01a59c729c5
 spec:
   replicas: 1
@@ -281,5 +283,6 @@ spec:
           defaultMode: 420
           secretName: machine-api-operator-tls
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
