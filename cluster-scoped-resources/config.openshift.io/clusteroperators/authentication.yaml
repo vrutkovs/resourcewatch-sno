@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:22:39Z"
+    time: "2023-03-08T12:23:27Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,13 +52,19 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "14445"
+  resourceVersion: "14755"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:22:35Z"
-    message: All is well
+    message: 'AuditPolicyDegraded: configmaps "audit" is forbidden: User "system:serviceaccount:openshift-authentication-operator:authentication-operator"
+      cannot get resource "configmaps" in API group "" in the namespace "openshift-oauth-apiserver":
+      RBAC: [clusterrole.rbac.authorization.k8s.io "basic-user" not found, clusterrole.rbac.authorization.k8s.io
+      "cluster-admin" not found, clusterrole.rbac.authorization.k8s.io "system:basic-user"
+      not found, clusterrole.rbac.authorization.k8s.io "system:openshift:discovery"
+      not found, clusterrole.rbac.authorization.k8s.io "system:build-strategy-docker"
+      not found]'
     reason: AsExpected
     status: "False"
     type: Degraded
