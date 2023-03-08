@@ -129,6 +129,14 @@ metadata:
       f:status:
         f:conditions:
           .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
           k:{"type":"Progressing"}:
             .: {}
             f:lastTransitionTime: {}
@@ -137,13 +145,15 @@ metadata:
             f:reason: {}
             f:status: {}
             f:type: {}
+        f:observedGeneration: {}
+        f:unavailableReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
     time: "2023-03-08T12:19:55Z"
   name: prometheus-operator-admission-webhook
   namespace: openshift-monitoring
-  resourceVersion: "11950"
+  resourceVersion: "11999"
   uid: 239390c2-46ea-4bc9-9b3b-60b364475a9b
 spec:
   progressDeadlineSeconds: 600
@@ -240,3 +250,11 @@ status:
     reason: NewReplicaSetCreated
     status: "True"
     type: Progressing
+  - lastTransitionTime: "2023-03-08T12:19:55Z"
+    lastUpdateTime: "2023-03-08T12:19:55Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 1
+  unavailableReplicas: 1
