@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:20:06Z"
+deprecatedLastTimestamp: "2023-03-08T12:20:06Z"
+deprecatedSource:
+  component: cluster-monitoring-operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:20:06Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: operator
+    operation: Update
+    time: "2023-03-08T12:20:06Z"
+  name: cluster-monitoring-operator.174a70f45ef5faf2
+  namespace: openshift-monitoring
+  resourceVersion: "12516"
+  uid: 00bb6144-9b83-43a5-a919-d5103661e8b1
+note: Created ServiceAccount/prometheus-adapter -n openshift-monitoring because it
+  was missing
+reason: ServiceAccountCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: cluster-monitoring-operator
+  namespace: openshift-monitoring
+  uid: 0227b773-3a3b-42b1-b3fb-56a3b6ae8996
+type: Normal
