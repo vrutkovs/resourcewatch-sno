@@ -16,10 +16,19 @@ metadata:
     manager: cluster-bootstrap
     operation: Update
     time: "2023-03-08T12:00:21Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status: {}
+    manager: cluster-bootstrap
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:00:21Z"
   name: cluster
-  resourceVersion: "561"
+  resourceVersion: "562"
   uid: 12be8ecf-1891-4b91-b388-e704fb771921
 spec:
   mastersSchedulable: true
   policy:
     name: ""
+status: {}
