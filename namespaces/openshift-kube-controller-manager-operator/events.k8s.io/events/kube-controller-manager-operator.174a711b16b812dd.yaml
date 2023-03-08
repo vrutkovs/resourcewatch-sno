@@ -1,0 +1,67 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:22:52Z"
+deprecatedLastTimestamp: "2023-03-08T12:22:52Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-status-controller-statussyncer_kube-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:22:52Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:22:52Z"
+  name: kube-controller-manager-operator.174a711b16b812dd
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "14528"
+  uid: 189d0a77-b465-448e-8052-624f9a818aee
+note: 'Status for clusteroperator/kube-controller-manager changed: Degraded message
+  changed from "StaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno container
+  \"cluster-policy-controller\" is terminated: Completed: \nStaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno
+  container \"kube-controller-manager\" is terminated: Completed: \nStaticPodsDegraded:
+  pod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager-cert-syncer\"
+  is terminated: Error: I0308 12:22:09.823084       1 base_controller.go:67] Waiting
+  for caches to sync for CertSyncController\nStaticPodsDegraded: I0308 12:22:09.823165       1
+  event.go:285] Event(v1.ObjectReference{Kind:\"Pod\", Namespace:\"openshift-kube-controller-manager\",
+  Name:\"kube-controller-manager-vrutkovs-sno\", UID:\"\", APIVersion:\"v1\", ResourceVersion:\"\",
+  FieldPath:\"\"}): type: ''Warning'' reason: ''FastControllerResync'' Controller
+  \"CertSyncController\" resync interval is set to 0s which might lead to client request
+  throttling\nStaticPodsDegraded: I0308 12:22:09.823384       1 observer_polling.go:159]
+  Starting file observer\nStaticPodsDegraded: I0308 12:22:09.924331       1 base_controller.go:73]
+  Caches are synced for CertSyncController \nStaticPodsDegraded: I0308 12:22:09.924366       1
+  base_controller.go:110] Starting #1 worker of CertSyncController controller ...\nStaticPodsDegraded:
+  I0308 12:22:09.924427       1 certsync_controller.go:66] Syncing configmaps: [{aggregator-client-ca
+  false} {client-ca false} {trusted-ca-bundle true}]\nStaticPodsDegraded: I0308 12:22:09.925001       1
+  certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
+  false} {csr-signer false}]\nStaticPodsDegraded: I0308 12:22:10.370368       1 certsync_controller.go:66]
+  Syncing configmaps: [{aggregator-client-ca false} {client-ca false} {trusted-ca-bundle
+  true}]\nStaticPodsDegraded: I0308 12:22:10.370724       1 certsync_controller.go:170]
+  Syncing secrets: [{kube-controller-manager-client-cert-key false} {csr-signer false}]\nStaticPodsDegraded:
+  I0308 12:22:35.872791       1 certsync_controller.go:66] Syncing configmaps: [{aggregator-client-ca
+  false} {client-ca false} {trusted-ca-bundle true}]\nStaticPodsDegraded: I0308 12:22:35.873062       1
+  certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
+  false} {csr-signer false}]\nStaticPodsDegraded: \nStaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno
+  container \"kube-controller-manager-recovery-controller\" is terminated: Completed:
+  \nNodeControllerDegraded: All master nodes are ready" to "NodeControllerDegraded:
+  All master nodes are ready"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: 5df04b75-b8db-486d-812b-be3794a10710
+type: Normal
