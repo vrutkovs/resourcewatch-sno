@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:09:19Z"
-deprecatedLastTimestamp: "2023-03-08T12:09:19Z"
+deprecatedLastTimestamp: "2023-03-08T12:09:55Z"
 deprecatedSource:
   component: kube-apiserver-operator-config-observer-configobserver
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-apiserver-operator
     operation: Update
-    time: "2023-03-08T12:09:19Z"
+    time: "2023-03-08T12:09:55Z"
   name: kube-apiserver-operator.174a705dd01787c1
   namespace: openshift-kube-apiserver-operator
-  resourceVersion: "5400"
+  resourceVersion: "5784"
   uid: 65579833-448e-4fd7-9f9a-2116e381fc5f
 note: 'Failed to write observed config: Operation cannot be fulfilled on kubeapiservers.operator.openshift.io
   "cluster": the object has been modified; please apply your changes to the latest
