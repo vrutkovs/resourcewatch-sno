@@ -8,13 +8,31 @@ metadata:
     operator.openshift.io/spec-hash: 6964584cc9422a4e1947cb64543198a6296efbb0c589a831da63c063c499cec9
     release.openshift.io/version: 4.13.0-ec.4
   creationTimestamp: "2023-03-08T12:08:44Z"
-  generation: 1
+  generation: 2
   labels:
     app: openshift-controller-manager-a
     controller-manager: "true"
     openshift-route-controller-manager-anti-affinity: "true"
     pod-template-hash: 678df56fb8
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ReplicaFailure"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:09:04Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -175,25 +193,7 @@ metadata:
                   f:secretName: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-08T12:08:44Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          .: {}
-          k:{"type":"ReplicaFailure"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:observedGeneration: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:09:04Z"
+    time: "2023-03-08T12:09:15Z"
   name: controller-manager-678df56fb8
   namespace: openshift-controller-manager
   ownerReferences:
@@ -203,10 +203,10 @@ metadata:
     kind: Deployment
     name: controller-manager
     uid: a8efd566-f552-482c-bb79-dec1a75042e2
-  resourceVersion: "5208"
+  resourceVersion: "5467"
   uid: f802a334-cf3b-46b3-937e-3fe152a701d0
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: openshift-controller-manager-a
