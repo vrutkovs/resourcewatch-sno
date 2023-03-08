@@ -181,7 +181,6 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
-        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -201,15 +200,14 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
-        f:replicas: {}
+        f:unavailableReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
     time: "2023-03-08T12:18:13Z"
   name: controller-manager
   namespace: openshift-controller-manager
-  resourceVersion: "10800"
+  resourceVersion: "10809"
   uid: a8efd566-f552-482c-bb79-dec1a75042e2
 spec:
   progressDeadlineSeconds: 600
@@ -347,7 +345,6 @@ spec:
           name: openshift-global-ca
         name: proxy-ca-bundles
 status:
-  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-03-08T12:08:54Z"
     lastUpdateTime: "2023-03-08T12:08:54Z"
@@ -357,10 +354,9 @@ status:
     type: Available
   - lastTransitionTime: "2023-03-08T12:08:54Z"
     lastUpdateTime: "2023-03-08T12:18:13Z"
-    message: Created new replica set "controller-manager-8649857555"
-    reason: NewReplicaSetCreated
+    message: ReplicaSet "controller-manager-8649857555" is progressing.
+    reason: ReplicaSetUpdated
     status: "True"
     type: Progressing
   observedGeneration: 5
-  readyReplicas: 1
-  replicas: 1
+  unavailableReplicas: 1
