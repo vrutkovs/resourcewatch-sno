@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:25:54Z"
+deprecatedLastTimestamp: "2023-03-08T12:25:54Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:25:55Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:25:55Z"
+  name: cluster-baremetal-operator-578754d4bd-vqfks.174a71459a72eeba
+  namespace: openshift-machine-api
+  resourceVersion: "16219"
+  uid: 4b57fb9c-d20f-41d5-82a6-2fef1f34ed66
+note: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c"
+  already present on machine
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{baremetal-kube-rbac-proxy}
+  kind: Pod
+  name: cluster-baremetal-operator-578754d4bd-vqfks
+  namespace: openshift-machine-api
+  resourceVersion: "15714"
+  uid: 064aa083-1ace-401a-84c9-441f4fd8dbeb
+type: Normal
