@@ -118,7 +118,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -132,7 +134,7 @@ metadata:
     kind: Deployment
     name: downloads
     uid: 8c4edb94-290e-458f-9397-8699e902ca6f
-  resourceVersion: "16890"
+  resourceVersion: "16893"
   uid: ec811410-4130-4634-ac28-456bbbcf22a3
 spec:
   replicas: 1
@@ -264,5 +266,6 @@ spec:
         operator: Exists
         tolerationSeconds: 120
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
