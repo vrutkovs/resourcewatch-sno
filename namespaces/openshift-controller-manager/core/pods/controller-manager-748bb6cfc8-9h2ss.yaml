@@ -208,12 +208,24 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:18:01Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"ContainersReady"}:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -226,6 +238,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -241,17 +255,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:18:01Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.v1.cni.cncf.io/network-status: {}
-    manager: multus
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:18:01Z"
+    time: "2023-03-08T12:18:14Z"
   name: controller-manager-748bb6cfc8-9h2ss
   namespace: openshift-controller-manager
   ownerReferences:
@@ -261,7 +265,7 @@ metadata:
     kind: ReplicaSet
     name: controller-manager-748bb6cfc8
     uid: 40959c94-e6da-424a-bab0-58c109cb90d4
-  resourceVersion: "10788"
+  resourceVersion: "10844"
   uid: 9c12be36-9bb3-4185-9fff-9dafd113c39e
 spec:
   affinity:
@@ -414,12 +418,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:18:01Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:18:14Z"
+    message: 'containers with unready status: [controller-manager]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:18:01Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:18:14Z"
+    message: 'containers with unready status: [controller-manager]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:18:00Z"
@@ -431,11 +439,15 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e829c4d1e1ee057d426b8965e0438754157b83fc2e985e285867a97edf509d35
     lastState: {}
     name: controller-manager
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://0ad64a8ec9292cd523807be6869ab93a23984ead718c297086652fac7efb33b6
+        exitCode: 0
+        finishedAt: "2023-03-08T12:18:14Z"
+        reason: Completed
         startedAt: "2023-03-08T12:18:01Z"
   hostIP: 10.0.130.68
   phase: Running
