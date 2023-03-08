@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 9
+deprecatedFirstTimestamp: "2023-03-08T12:06:26Z"
+deprecatedLastTimestamp: "2023-03-08T12:06:31Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:06:26Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:06:31Z"
+  name: authentication-operator-7f4d8bfc67.174a70358f299be2
+  namespace: openshift-authentication-operator
+  resourceVersion: "2289"
+  uid: a9d83f5f-caea-4aea-b9e1-c9d9288c11ac
+note: 'Error creating: pods "authentication-operator-7f4d8bfc67-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+  the cluster does not have any nodes'
+reason: FailedCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: authentication-operator-7f4d8bfc67
+  namespace: openshift-authentication-operator
+  resourceVersion: "1597"
+  uid: 9541e5d9-4291-4899-9b74-3d9bd109f7a6
+type: Warning
