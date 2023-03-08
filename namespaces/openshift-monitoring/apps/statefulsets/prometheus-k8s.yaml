@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   annotations:
-    prometheus-operator-input-hash: "15210187914338129497"
+    prometheus-operator-input-hash: "2348453071686945234"
   creationTimestamp: "2023-03-08T12:21:33Z"
-  generation: 1
+  generation: 2
   labels:
     app.kubernetes.io/component: prometheus
     app.kubernetes.io/instance: k8s
@@ -14,6 +14,23 @@ metadata:
     operator.prometheus.io/name: k8s
     operator.prometheus.io/shard: "0"
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:availableReplicas: {}
+        f:collisionCount: {}
+        f:currentReplicas: {}
+        f:currentRevision: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updateRevision: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:22:28Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -597,24 +614,7 @@ metadata:
           f:type: {}
     manager: PrometheusOperator
     operation: Update
-    time: "2023-03-08T12:21:33Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:availableReplicas: {}
-        f:collisionCount: {}
-        f:currentReplicas: {}
-        f:currentRevision: {}
-        f:observedGeneration: {}
-        f:readyReplicas: {}
-        f:replicas: {}
-        f:updateRevision: {}
-        f:updatedReplicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:22:28Z"
+    time: "2023-03-08T12:26:16Z"
   name: prometheus-k8s
   namespace: openshift-monitoring
   ownerReferences:
@@ -624,7 +624,7 @@ metadata:
     kind: Prometheus
     name: k8s
     uid: 4a742020-ccf7-42cb-80d2-0ae1213eb0aa
-  resourceVersion: "14354"
+  resourceVersion: "17141"
   uid: 89218df2-8aed-453f-8ef7-36e250c96478
 spec:
   podManagementPolicy: Parallel
@@ -665,7 +665,7 @@ spec:
         - --config.file=/etc/prometheus/config_out/prometheus.env.yaml
         - --storage.tsdb.path=/prometheus
         - --web.enable-lifecycle
-        - --web.external-url=https://prometheus-k8s.openshift-monitoring.svc:9091
+        - --web.external-url=https://console-openshift-console.apps.vrutkovs.choomba.one/monitoring
         - --web.route-prefix=/
         - --web.listen-address=127.0.0.1:9090
         - --web.config.file=/etc/prometheus/web_config/web-config.yaml
