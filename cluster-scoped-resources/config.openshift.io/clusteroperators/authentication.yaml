@@ -52,14 +52,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "17123"
+  resourceVersion: "17126"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:22:35Z"
-    message: 'OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth
-      service endpoints are not ready'
+    message: |-
+      OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth service endpoints are not ready
+      OAuthServerRouteEndpointAccessibleControllerDegraded: Get "https://oauth-openshift.apps.vrutkovs.choomba.one/healthz": EOF
     reason: AsExpected
     status: "False"
     type: Degraded
