@@ -4,6 +4,8 @@ metadata:
   annotations:
     openshift.io/scc: hostaccess
   creationTimestamp: "2023-03-08T12:06:32Z"
+  deletionGracePeriodSeconds: 130
+  deletionTimestamp: "2023-03-08T12:27:32Z"
   generateName: cluster-version-operator-cb69d4c4c-
   labels:
     k8s-app: cluster-version-operator
@@ -184,7 +186,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-version-operator-cb69d4c4c
     uid: 1ead083c-1f3b-416f-a5f4-173cd9f2d7eb
-  resourceVersion: "11596"
+  resourceVersion: "15219"
   uid: dba7a327-9338-4eb3-9a2c-1952e67b789c
 spec:
   automountServiceAccountToken: false
