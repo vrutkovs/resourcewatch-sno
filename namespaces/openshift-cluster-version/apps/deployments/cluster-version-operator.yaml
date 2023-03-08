@@ -173,14 +173,6 @@ metadata:
             f:reason: {}
             f:status: {}
             f:type: {}
-          k:{"type":"ReplicaFailure"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
         f:observedGeneration: {}
         f:unavailableReplicas: {}
     manager: kube-controller-manager
@@ -189,7 +181,7 @@ metadata:
     time: "2023-03-08T12:00:35Z"
   name: cluster-version-operator
   namespace: openshift-cluster-version
-  resourceVersion: "611"
+  resourceVersion: "2368"
   uid: e1241ff1-ac12-470d-b069-ea2407285099
 spec:
   progressDeadlineSeconds: 600
@@ -332,12 +324,5 @@ status:
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
-  - lastTransitionTime: "2023-03-08T12:00:35Z"
-    lastUpdateTime: "2023-03-08T12:00:35Z"
-    message: 'pods "cluster-version-operator-cb69d4c4c-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
-      the cluster does not have any nodes'
-    reason: FailedCreate
-    status: "True"
-    type: ReplicaFailure
   observedGeneration: 1
   unavailableReplicas: 1
