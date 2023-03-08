@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "4202"
+  resourceVersion: "4223"
   uid: a175ceaf-21f5-40ed-bd39-ec4fb39d7fb7
 spec: {}
 status:
@@ -71,8 +71,8 @@ status:
     status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-08T12:08:34Z"
-    message: 'APIServicesAvailable: endpoints "api" not found'
-    reason: APIServerDeployment_PreconditionNotFulfilled::APIServices_ErrorCheckingPrecondition
+    message: 'APIServicesAvailable: PreconditionNotReady'
+    reason: APIServerDeployment_PreconditionNotFulfilled::APIServices_PreconditionNotReady
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-08T12:08:34Z"
