@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:08:38Z"
-deprecatedLastTimestamp: "2023-03-08T12:08:38Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:54Z"
 deprecatedSource:
   component: cluster-authentication-operator-config-observer-configobserver
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-08T12:08:38Z"
+    time: "2023-03-08T12:08:54Z"
   name: authentication-operator.174a70545e35e651
   namespace: openshift-authentication-operator
-  resourceVersion: "4075"
+  resourceVersion: "4873"
   uid: 0cbcd5cf-2fb6-42e0-aa00-acfdb7284c46
 note: cipherSuites changed to ["TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256" "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
   "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384" "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
