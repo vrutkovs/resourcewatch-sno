@@ -43,7 +43,7 @@ metadata:
     manager: cluster-openshift-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:11:40Z"
+    time: "2023-03-08T12:11:41Z"
   name: openshift-controller-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -51,109 +51,13 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "6124"
+  resourceVersion: "6135"
   uid: 06f0f605-a3e2-4d92-a09e-c9e7d4992262
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:08:34Z"
-    message: "OpenshiftControllerManagerStaticResourcesDegraded: \"v3.11.0/openshift-controller-manager/informer-clusterrole.yaml\"
-      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterroles/system:openshift:openshift-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/informer-clusterrolebinding.yaml\" (string):
-      Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/system:openshift:openshift-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/ingress-to-route-controller-clusterrole.yaml\"
-      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterroles/system:openshift:openshift-controller-manager:ingress-to-route-controller\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/ingress-to-route-controller-clusterrolebinding.yaml\"
-      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/system:openshift:openshift-controller-manager:ingress-to-route-controller\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/tokenreview-clusterrole.yaml\" (string):
-      Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterroles/system:openshift:tokenreview-openshift-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/tokenreview-clusterrolebinding.yaml\"
-      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/system:openshift:tokenreview-openshift-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/leader-role.yaml\" (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/openshift-controller-manager/roles/system:openshift:leader-locking-openshift-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/leader-rolebinding.yaml\" (string): Get
-      \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/openshift-controller-manager/rolebindings/system:openshift:leader-locking-openshift-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/ns.yaml\" (string): Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/route-controller-informer-clusterrole.yaml\"
-      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterroles/system:openshift:openshift-route-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/route-controller-informer-clusterrolebinding.yaml\"
-      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/system:openshift:openshift-route-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/route-controller-leader-role.yaml\" (string):
-      Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/openshift-route-controller-manager/roles/system:openshift:leader-locking-openshift-route-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/route-controller-leader-rolebinding.yaml\"
-      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/openshift-route-controller-manager/rolebindings/system:openshift:leader-locking-openshift-route-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/route-controller-ns.yaml\" (string):
-      Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-route-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/route-controller-sa.yaml\" (string):
-      Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-route-controller-manager/serviceaccounts/route-controller-manager-sa\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/route-controller-separate-sa-role.yaml\"
-      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/openshift-infra/roles/system:openshift:sa-creating-route-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/route-controller-separate-sa-rolebinding.yaml\"
-      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/openshift-infra/rolebindings/system:openshift:sa-creating-route-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/route-controller-servicemonitor-role.yaml\"
-      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/openshift-route-controller-manager/roles/prometheus-k8s\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/route-controller-servicemonitor-rolebinding.yaml\"
-      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/openshift-route-controller-manager/rolebindings/prometheus-k8s\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/route-controller-svc.yaml\" (string):
-      Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-route-controller-manager/services/route-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/route-controller-tokenreview-clusterrole.yaml\"
-      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterroles/system:openshift:tokenreview-openshift-route-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/route-controller-tokenreview-clusterrolebinding.yaml\"
-      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/system:openshift:tokenreview-openshift-route-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/old-leader-role.yaml\" (string): Get
-      \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/roles/system:openshift:leader-locking-openshift-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/old-leader-rolebinding.yaml\" (string):
-      Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/rolebindings/system:openshift:leader-locking-openshift-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/separate-sa-role.yaml\" (string): Get
-      \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/openshift-infra/roles/system:openshift:sa-creating-openshift-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/separate-sa-rolebinding.yaml\" (string):
-      Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/openshift-infra/rolebindings/system:openshift:sa-creating-openshift-controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/sa.yaml\" (string): Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-controller-manager/serviceaccounts/openshift-controller-manager-sa\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/svc.yaml\" (string): Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-controller-manager/services/controller-manager\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/servicemonitor-role.yaml\" (string):
-      Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/openshift-controller-manager/roles/prometheus-k8s\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/servicemonitor-rolebinding.yaml\" (string):
-      Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/openshift-controller-manager/rolebindings/prometheus-k8s\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/buildconfigstatus-clusterrole.yaml\"
-      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterroles/system:openshift:openshift-controller-manager:update-buildconfig-status\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/buildconfigstatus-clusterrolebinding.yaml\"
-      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/system:openshift:openshift-controller-manager:update-buildconfig-status\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftControllerManagerStaticResourcesDegraded:
-      \"v3.11.0/openshift-controller-manager/deployer-clusterrole.yaml\" (string):
-      clusterroles.rbac.authorization.k8s.io \"system:deployer\" is forbidden: User
-      \"system:serviceaccount:openshift-controller-manager-operator:openshift-controller-manager-operator\"
-      cannot get resource \"clusterroles\" in API group \"rbac.authorization.k8s.io\"
-      at the cluster scope\nOpenshiftControllerManagerStaticResourcesDegraded: "
+    message: All is well
     reason: AsExpected
     status: "False"
     type: Degraded
