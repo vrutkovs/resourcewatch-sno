@@ -205,11 +205,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:01:20Z"
+    time: "2023-03-08T12:06:32Z"
   name: etcd-operator
   namespace: openshift-etcd-operator
   ownerReferences:
@@ -218,7 +220,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "2310"
+  resourceVersion: "2312"
   uid: 7c43379a-6a36-4015-adb4-fd13f2117c5e
 spec:
   progressDeadlineSeconds: 600
@@ -344,15 +346,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:01:20Z"
     lastUpdateTime: "2023-03-08T12:01:20Z"
-    message: Created new replica set "etcd-operator-74b9844765"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-08T12:01:20Z"
-    lastUpdateTime: "2023-03-08T12:01:20Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-08T12:01:20Z"
+    lastUpdateTime: "2023-03-08T12:06:32Z"
+    message: ReplicaSet "etcd-operator-74b9844765" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
