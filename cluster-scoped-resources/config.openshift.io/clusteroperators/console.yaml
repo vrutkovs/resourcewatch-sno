@@ -46,7 +46,7 @@ metadata:
     manager: console
     operation: Update
     subresource: status
-    time: "2023-03-08T12:26:05Z"
+    time: "2023-03-08T12:26:06Z"
   name: console
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -54,13 +54,14 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "16905"
+  resourceVersion: "16920"
   uid: f8657472-0b74-49ef-91dd-2c9fbd9b7a77
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:26:02Z"
-    message: All is well
+    message: 'RouteHealthDegraded: failed to read CA to check route health: configmaps
+      "trusted-ca-bundle" not found'
     reason: AsExpected
     status: "False"
     type: Degraded
@@ -69,9 +70,11 @@ status:
     reason: AsExpected
     status: "False"
     type: Progressing
-  - lastTransitionTime: "2023-03-08T12:26:02Z"
-    reason: NoData
-    status: Unknown
+  - lastTransitionTime: "2023-03-08T12:26:06Z"
+    message: 'RouteHealthAvailable: failed to read CA to check route health: configmaps
+      "trusted-ca-bundle" not found'
+    reason: RouteHealth_FailedLoadCA
+    status: "False"
     type: Available
   - lastTransitionTime: "2023-03-08T12:26:02Z"
     reason: NoData
