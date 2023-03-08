@@ -188,6 +188,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -200,6 +202,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -215,7 +219,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:08:33Z"
+    time: "2023-03-08T12:18:09Z"
   name: openshift-kube-scheduler-operator-7965454467-dq58n
   namespace: openshift-kube-scheduler-operator
   ownerReferences:
@@ -225,7 +229,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-kube-scheduler-operator-7965454467
     uid: 4e125cda-7c87-40f1-9614-1c6ccbb90e8b
-  resourceVersion: "3406"
+  resourceVersion: "10654"
   uid: 30e7cf20-dbb1-4ea1-b432-e793fb508198
 spec:
   automountServiceAccountToken: false
@@ -340,12 +344,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:33Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:18:09Z"
+    message: 'containers with unready status: [kube-scheduler-operator-container]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:33Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:18:09Z"
+    message: 'containers with unready status: [kube-scheduler-operator-container]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:08:24Z"
@@ -357,11 +365,15 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9a26a8cedffe6ad1a77158ba9d87ad2b90e8076f7e6661201f6e8d838c1b8c2b
     lastState: {}
     name: kube-scheduler-operator-container
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://4fd707b695ba93718fec377512a68d48ee0eceeb3ffba3d2923b4283874c189d
+        exitCode: 0
+        finishedAt: "2023-03-08T12:18:09Z"
+        reason: Completed
         startedAt: "2023-03-08T12:08:33Z"
   hostIP: 10.0.130.68
   phase: Running
