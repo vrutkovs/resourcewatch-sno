@@ -52,17 +52,16 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "14426"
+  resourceVersion: "14429"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-08T12:11:40Z"
-    message: |-
-      OAuthServerDeploymentDegraded: 1 of 1 requested instances are unavailable for oauth-openshift.openshift-authentication ()
-      OAuthServerRouteEndpointAccessibleControllerDegraded: Get "https://oauth-openshift.apps.vrutkovs.choomba.one/healthz": EOF
-    reason: OAuthServerDeployment_UnavailablePod::OAuthServerRouteEndpointAccessibleController_SyncError
-    status: "True"
+  - lastTransitionTime: "2023-03-08T12:22:35Z"
+    message: 'OAuthServerDeploymentDegraded: 1 of 1 requested instances are unavailable
+      for oauth-openshift.openshift-authentication ()'
+    reason: AsExpected
+    status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:21:23Z"
     message: 'WellKnownReadyControllerProgressing: kube-apiserver oauth endpoint https://10.0.130.68:6443/.well-known/oauth-authorization-server
