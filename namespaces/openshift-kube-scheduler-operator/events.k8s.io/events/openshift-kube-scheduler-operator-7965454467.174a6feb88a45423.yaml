@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 3
+deprecatedCount: 4
 deprecatedFirstTimestamp: "2023-03-08T12:01:08Z"
 deprecatedLastTimestamp: "2023-03-08T12:01:08Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-08T12:01:08Z"
   name: openshift-kube-scheduler-operator-7965454467.174a6feb88a45423
   namespace: openshift-kube-scheduler-operator
-  resourceVersion: "1439"
+  resourceVersion: "1442"
   uid: c34a86fc-5f5d-40b3-a6a1-5af736d37d54
 note: 'Error creating: pods "openshift-kube-scheduler-operator-7965454467-" is forbidden:
   autoscaling.openshift.io/ManagementCPUsOverride the cluster does not have any nodes'
