@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:25:55Z"
+deprecatedLastTimestamp: "2023-03-08T12:25:55Z"
+deprecatedSource:
+  component: cluster-storage-operator-defaultstorageclasscontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:25:55Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-storage-operator
+    operation: Update
+    time: "2023-03-08T12:25:55Z"
+  name: cluster-storage-operator.174a7145b1865aca
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "16196"
+  uid: e5c57e02-ee75-4467-b6e8-07c50aa792d9
+note: Controller "DefaultStorageClassController" resync interval is set to 0s which
+  might lead to client request throttling
+reason: FastControllerResync
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: cluster-storage-operator
+  namespace: openshift-cluster-storage-operator
+  uid: 4752a10b-0cc3-4826-bf5c-83ff17c71d0c
+type: Warning
