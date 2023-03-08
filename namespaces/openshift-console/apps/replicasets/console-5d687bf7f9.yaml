@@ -224,6 +224,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-08T12:26:13Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:26:13Z"
   name: console-5d687bf7f9
   namespace: openshift-console
   ownerReferences:
@@ -233,7 +242,7 @@ metadata:
     kind: Deployment
     name: console
     uid: 8a031ddc-cef6-4b34-a5d4-692f8a8e2198
-  resourceVersion: "17106"
+  resourceVersion: "17112"
   uid: d19eeb7b-fe29-4e05-9222-08fcac68132c
 spec:
   replicas: 1
@@ -381,4 +390,5 @@ spec:
           name: trusted-ca-bundle
         name: trusted-ca-bundle
 status:
+  observedGeneration: 1
   replicas: 0
