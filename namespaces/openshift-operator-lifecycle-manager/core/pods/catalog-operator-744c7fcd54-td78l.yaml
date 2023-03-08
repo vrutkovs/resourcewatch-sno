@@ -145,6 +145,25 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-08T12:25:47Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:25:49Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"ContainersReady"}:
@@ -171,30 +190,18 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.88"}:
+            .: {}
+            f:ip: {}
         f:startTime: {}
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:25:47Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.ovn.org/pod-networks: {}
-    manager: vrutkovs-sno
-    operation: Update
-    time: "2023-03-08T12:25:47Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.v1.cni.cncf.io/network-status: {}
-    manager: multus
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:25:49Z"
+    time: "2023-03-08T12:25:50Z"
   name: catalog-operator-744c7fcd54-td78l
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -204,7 +211,7 @@ metadata:
     kind: ReplicaSet
     name: catalog-operator-744c7fcd54
     uid: f4c7982e-ac08-46eb-a520-94a65cff000b
-  resourceVersion: "15842"
+  resourceVersion: "15893"
   uid: bba22bf0-3ab5-409f-a7a4-d169da4f9831
 spec:
   containers:
@@ -369,17 +376,21 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f409a5e0f81915c2aed69504472ce5f54ba568f7bd73c5110388cb541ac66426
-    imageID: ""
+  - containerID: cri-o://601551db932e20f10937a8c0fbf3d11d24424acde338be81eb1ca140fbdba722
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f409a5e0f81915c2aed69504472ce5f54ba568f7bd73c5110388cb541ac66426
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f409a5e0f81915c2aed69504472ce5f54ba568f7bd73c5110388cb541ac66426
     lastState: {}
     name: catalog-operator
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-08T12:25:49Z"
   hostIP: 10.0.130.68
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.88
+  podIPs:
+  - ip: 10.128.0.88
   qosClass: Burstable
   startTime: "2023-03-08T12:25:47Z"
