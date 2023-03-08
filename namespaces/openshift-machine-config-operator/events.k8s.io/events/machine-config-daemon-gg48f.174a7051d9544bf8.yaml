@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:27Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:27Z"
+deprecatedSource:
+  component: default-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:27Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-08T12:08:27Z"
+  name: machine-config-daemon-gg48f.174a7051d9544bf8
+  namespace: openshift-machine-config-operator
+  resourceVersion: "3319"
+  uid: 7ad9aaad-0172-4a0b-af3e-a2d9ce63ba07
+note: Successfully assigned openshift-machine-config-operator/machine-config-daemon-gg48f
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: machine-config-daemon-gg48f
+  namespace: openshift-machine-config-operator
+  resourceVersion: "3315"
+  uid: 17dd5f40-6d62-4ba0-8a54-33f67e581c1d
+type: Normal
