@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:26:14Z"
+    time: "2023-03-08T12:26:31Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "17132"
+  resourceVersion: "17415"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
@@ -63,20 +63,21 @@ status:
       OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth service endpoints are not ready
       IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
       OAuthServerRouteEndpointAccessibleControllerDegraded: Get "https://oauth-openshift.apps.vrutkovs.choomba.one/healthz": EOF
+      OAuthServerDeploymentDegraded: 1 of 1 requested instances are unavailable for oauth-openshift.openshift-authentication ()
     reason: AsExpected
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-08T12:26:13Z"
-    message: 'OAuthServerDeploymentProgressing: deployment/oauth-openshift.openshift-authentication:
-      observed generation is 1, desired generation is 2.'
-    reason: OAuthServerDeployment_NewGeneration
-    status: "True"
+  - lastTransitionTime: "2023-03-08T12:26:31Z"
+    message: 'AuthenticatorCertKeyProgressing: All is well'
+    reason: AsExpected
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-08T12:26:14Z"
     message: |-
+      OAuthServerDeploymentAvailable: no oauth-openshift.openshift-authentication pods available on any node.
       OAuthServerRouteEndpointAccessibleControllerAvailable: Get "https://oauth-openshift.apps.vrutkovs.choomba.one/healthz": EOF
       OAuthServerServiceEndpointAccessibleControllerAvailable: Get "https://172.30.76.170:443/healthz": dial tcp 172.30.76.170:443: connect: connection refused
-    reason: OAuthServerRouteEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable
+    reason: OAuthServerDeployment_NoPod::OAuthServerRouteEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-08T12:08:34Z"
