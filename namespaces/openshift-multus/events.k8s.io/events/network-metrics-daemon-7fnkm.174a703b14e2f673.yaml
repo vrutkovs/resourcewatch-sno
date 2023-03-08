@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:06:50Z"
 deprecatedLastTimestamp: "2023-03-08T12:06:50Z"
 deprecatedSource:
@@ -28,7 +28,7 @@ metadata:
     time: "2023-03-08T12:06:50Z"
   name: network-metrics-daemon-7fnkm.174a703b14e2f673
   namespace: openshift-multus
-  resourceVersion: "2642"
+  resourceVersion: "2652"
   uid: 12824a03-ea92-4a5e-8d46-32a17450ea8d
 note: 'MountVolume.SetUp failed for volume "metrics-certs" : object "openshift-multus"/"metrics-daemon-secret"
   not registered'
