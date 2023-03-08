@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:15:36Z"
+deprecatedLastTimestamp: "2023-03-08T12:15:36Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-satokensignercontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:15:36Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:15:36Z"
+  name: kube-controller-manager-operator.174a70b585ea6822
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "7166"
+  uid: 9fa88bf0-e865-4b8f-957a-13ba15080185
+note: 'Failed to update ConfigMap/sa-token-signing-certs -n openshift-config-managed:
+  Operation cannot be fulfilled on configmaps "sa-token-signing-certs": the object
+  has been modified; please apply your changes to the latest version and try again'
+reason: ConfigMapUpdateFailed
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: 5df04b75-b8db-486d-812b-be3794a10710
+type: Warning
