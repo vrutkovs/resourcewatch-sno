@@ -15,23 +15,6 @@ metadata:
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        f:availableReplicas: {}
-        f:collisionCount: {}
-        f:currentReplicas: {}
-        f:currentRevision: {}
-        f:observedGeneration: {}
-        f:readyReplicas: {}
-        f:replicas: {}
-        f:updateRevision: {}
-        f:updatedReplicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:22:28Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:metadata:
         f:annotations:
           .: {}
@@ -451,6 +434,21 @@ metadata:
     manager: PrometheusOperator
     operation: Update
     time: "2023-03-08T12:26:13Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:availableReplicas: {}
+        f:collisionCount: {}
+        f:currentRevision: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updateRevision: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:26:13Z"
   name: alertmanager-main
   namespace: openshift-monitoring
   ownerReferences:
@@ -460,7 +458,7 @@ metadata:
     kind: Alertmanager
     name: main
     uid: 88bd2cf9-8531-4ed0-afcc-9f12764e3378
-  resourceVersion: "17087"
+  resourceVersion: "17097"
   uid: 157b555d-b9f9-4bf6-8e9e-d13fe7c479d2
 spec:
   podManagementPolicy: Parallel
@@ -795,10 +793,8 @@ spec:
 status:
   availableReplicas: 1
   collisionCount: 0
-  currentReplicas: 1
   currentRevision: alertmanager-main-5b664d5f59
-  observedGeneration: 1
+  observedGeneration: 2
   readyReplicas: 1
   replicas: 1
-  updateRevision: alertmanager-main-5b664d5f59
-  updatedReplicas: 1
+  updateRevision: alertmanager-main-746d956946
