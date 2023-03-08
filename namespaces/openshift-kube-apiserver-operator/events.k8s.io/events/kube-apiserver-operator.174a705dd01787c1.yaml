@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:09:19Z"
+deprecatedLastTimestamp: "2023-03-08T12:09:19Z"
+deprecatedSource:
+  component: kube-apiserver-operator-config-observer-configobserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:09:19Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-08T12:09:19Z"
+  name: kube-apiserver-operator.174a705dd01787c1
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "5400"
+  uid: 65579833-448e-4fd7-9f9a-2116e381fc5f
+note: 'Failed to write observed config: Operation cannot be fulfilled on kubeapiservers.operator.openshift.io
+  "cluster": the object has been modified; please apply your changes to the latest
+  version and try again'
+reason: ObservedConfigWriteError
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: 1fb52cdd-6ee0-4905-bac5-c1d2936c403a
+type: Warning
