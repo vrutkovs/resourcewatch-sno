@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:23:32Z"
+    time: "2023-03-08T12:26:13Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "14798"
+  resourceVersion: "17062"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
@@ -62,10 +62,11 @@ status:
     reason: AsExpected
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-08T12:23:27Z"
-    message: 'AuthenticatorCertKeyProgressing: All is well'
-    reason: AsExpected
-    status: "False"
+  - lastTransitionTime: "2023-03-08T12:26:13Z"
+    message: 'OAuthServerDeploymentProgressing: deployment/oauth-openshift.openshift-authentication:
+      observed generation is 1, desired generation is 2.'
+    reason: OAuthServerDeployment_NewGeneration
+    status: "True"
     type: Progressing
   - lastTransitionTime: "2023-03-08T12:23:27Z"
     message: All is well
