@@ -183,7 +183,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -197,7 +199,7 @@ metadata:
     kind: Deployment
     name: cluster-autoscaler-operator
     uid: a62ec6a5-3eea-4fbb-b1ee-3d58d2bea7ad
-  resourceVersion: "15647"
+  resourceVersion: "15652"
   uid: 02810043-0f26-4a91-bb5c-a1cc7cfb2761
 spec:
   replicas: 1
@@ -320,5 +322,6 @@ spec:
           name: kube-rbac-proxy-cluster-autoscaler-operator
         name: auth-proxy-config
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
