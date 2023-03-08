@@ -44,7 +44,7 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:09:05Z"
+    time: "2023-03-08T12:09:08Z"
   name: etcd
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "5219"
+  resourceVersion: "5274"
   uid: 88149466-b942-47f3-acfa-6cc1930e9bbe
 spec: {}
 status:
@@ -67,12 +67,12 @@ status:
     status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:08:57Z"
-    message: All is well
+    message: 'NodeInstallerProgressing: 1 nodes are at revision 0'
     reason: AsExpected
     status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-08T12:08:57Z"
-    message: 'StaticPodsAvailable: 0 nodes are active; '
+    message: 'StaticPodsAvailable: 0 nodes are active; 1 nodes are at revision 0'
     reason: StaticPods_ZeroNodesActive
     status: "False"
     type: Available
