@@ -89,7 +89,7 @@ metadata:
     subresource: status
     time: "2023-03-08T12:08:46Z"
   name: vrutkovs-sno
-  resourceVersion: "4599"
+  resourceVersion: "4613"
   uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
 spec:
   taints:
@@ -106,7 +106,7 @@ status:
     type: Hostname
   allocatable:
     cpu: 7500m
-    ephemeral-storage: 125238252Ki
+    ephemeral-storage: "114345831029"
     hugepages-1Gi: "0"
     hugepages-2Mi: "0"
     memory: 15191560Ki
@@ -139,9 +139,9 @@ status:
     type: PIDPressure
   - lastHeartbeatTime: "2023-03-08T12:08:46Z"
     lastTransitionTime: "2023-03-08T12:08:46Z"
-    message: container runtime status check may not have completed yet
-    reason: KubeletNotReady
-    status: "False"
+    message: kubelet is posting ready status
+    reason: KubeletReady
+    status: "True"
     type: Ready
   daemonEndpoints:
     kubeletEndpoint:
