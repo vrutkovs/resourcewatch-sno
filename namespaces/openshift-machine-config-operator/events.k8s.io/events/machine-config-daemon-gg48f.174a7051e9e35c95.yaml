@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 4
+deprecatedCount: 5
 deprecatedFirstTimestamp: "2023-03-08T12:08:28Z"
-deprecatedLastTimestamp: "2023-03-08T12:08:31Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:35Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-08T12:08:33Z"
+    time: "2023-03-08T12:08:42Z"
   name: machine-config-daemon-gg48f.174a7051e9e35c95
   namespace: openshift-machine-config-operator
-  resourceVersion: "3404"
+  resourceVersion: "4352"
   uid: 158c5427-5ae9-465b-bbba-186c7a01dc58
 note: 'MountVolume.SetUp failed for volume "proxy-tls" : secret "proxy-tls" not found'
 reason: FailedMount
