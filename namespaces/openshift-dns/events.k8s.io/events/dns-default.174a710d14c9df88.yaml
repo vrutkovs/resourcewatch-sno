@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:21:52Z"
 deprecatedLastTimestamp: "2023-03-08T12:21:52Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-08T12:21:52Z"
   name: dns-default.174a710d14c9df88
   namespace: openshift-dns
-  resourceVersion: "13740"
+  resourceVersion: "13927"
   uid: 4b9c39d5-004b-4ba9-bd17-46713f084dcc
 note: 'Insufficient Node information: allocatable CPU or zone not specified on one
   or more nodes, addressType: IPv4'
