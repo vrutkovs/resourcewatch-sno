@@ -147,7 +147,7 @@ metadata:
     kind: ReplicaSet
     name: kube-storage-version-migrator-operator-77445597c8
     uid: b0460bae-aa7a-4699-8e08-12d38dd323dd
-  resourceVersion: "2406"
+  resourceVersion: "3131"
   uid: ad2d21e0-08b5-405d-b497-9b5fa5d32f68
 spec:
   containers:
@@ -194,6 +194,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -261,11 +262,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:06:33Z"
-    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
-      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
-    reason: Unschedulable
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:08:24Z"
+    status: "True"
     type: PodScheduled
   phase: Pending
   qosClass: Burstable
