@@ -209,8 +209,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -223,8 +221,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -240,7 +236,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:19:47Z"
+    time: "2023-03-08T12:19:49Z"
   name: marketplace-operator-78496b8dd8-xzd6t
   namespace: openshift-marketplace
   ownerReferences:
@@ -250,7 +246,7 @@ metadata:
     kind: ReplicaSet
     name: marketplace-operator-78496b8dd8
     uid: cf058760-f4fd-41b4-8580-f528f08414dd
-  resourceVersion: "11562"
+  resourceVersion: "11614"
   uid: 45744ad7-0fa7-408a-8a8e-8f293004749e
 spec:
   containers:
@@ -404,16 +400,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:24Z"
-    message: 'containers with unready status: [marketplace-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:19:49Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:24Z"
-    message: 'containers with unready status: [marketplace-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:19:49Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:08:24Z"
@@ -425,7 +417,7 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1df89c59a9b0b9254b0f72eccceddd9e26bbfe4d0a019edfcd617e4e7a03acc0
     lastState: {}
     name: marketplace-operator
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
