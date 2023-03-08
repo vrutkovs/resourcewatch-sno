@@ -22,6 +22,17 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-08T12:00:44Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+        f:relatedObjects: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:00:44Z"
   name: kube-storage-version-migrator
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -29,6 +40,21 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "671"
+  resourceVersion: "695"
   uid: c3774ee0-5ea3-4381-829b-aec5d6574c79
 spec: {}
+status:
+  extension: null
+  relatedObjects:
+  - group: operator.openshift.io
+    name: cluster
+    resource: kubestorageversionmigrators
+  - group: migration.k8s.io
+    name: ""
+    resource: storageversionmigrations
+  - group: ""
+    name: openshift-kube-storage-version-migrator
+    resource: namespaces
+  - group: ""
+    name: openshift-kube-storage-version-migrator-operator
+    resource: namespaces
