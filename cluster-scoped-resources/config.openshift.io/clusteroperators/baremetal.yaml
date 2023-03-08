@@ -37,6 +37,16 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-08T12:00:44Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:versions: {}
+    manager: cluster-baremetal-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:26:00Z"
   name: baremetal
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -44,10 +54,26 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "691"
+  resourceVersion: "16731"
   uid: 53b21d98-ba38-4c95-954e-fc289a3d2f68
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-08T12:26:00Z"
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-03-08T12:26:00Z"
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-03-08T12:26:00Z"
+    status: "False"
+    type: Available
+  - lastTransitionTime: "2023-03-08T12:26:00Z"
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2023-03-08T12:26:00Z"
+    status: "False"
+    type: Disabled
   extension: null
   relatedObjects:
   - group: ""
@@ -76,3 +102,6 @@ status:
     name: ""
     namespace: openshift-machine-api
     resource: bmceventsubscriptions
+  versions:
+  - name: operator
+    version: 4.13.0-ec.4
