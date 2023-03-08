@@ -182,7 +182,7 @@ metadata:
     kind: ReplicaSet
     name: kube-state-metrics-ff4889d68
     uid: a276fa83-00de-4e2b-9dff-17c83204725a
-  resourceVersion: "12456"
+  resourceVersion: "12461"
   uid: d647ec48-7e98-436f-9ffd-7c11be9f1ab2
 spec:
   automountServiceAccountToken: true
@@ -318,6 +318,7 @@ spec:
   enableServiceLinks: true
   imagePullSecrets:
   - name: kube-state-metrics-dockercfg-dzlld
+  nodeName: vrutkovs-sno
   nodeSelector:
     kubernetes.io/os: linux
   preemptionPolicy: PreemptLowerPriority
@@ -385,5 +386,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:20:05Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
