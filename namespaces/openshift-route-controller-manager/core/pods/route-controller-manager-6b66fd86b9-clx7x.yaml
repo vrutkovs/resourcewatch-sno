@@ -196,8 +196,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -210,8 +208,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -247,7 +243,7 @@ metadata:
     kind: ReplicaSet
     name: route-controller-manager-6b66fd86b9
     uid: 9e12c928-aaf2-4964-8b06-ce5b2ed727d6
-  resourceVersion: "10645"
+  resourceVersion: "10650"
   uid: 5f071262-13c1-48f1-8554-a9e7b93eeebf
 spec:
   affinity:
@@ -391,16 +387,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:18:08Z"
-    message: 'containers with unready status: [route-controller-manager]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:18:09Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:18:08Z"
-    message: 'containers with unready status: [route-controller-manager]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:18:09Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:18:08Z"
@@ -412,7 +404,7 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:7b288005c8c77daaad7536b802b94ddfab190584959eb5f86e2bb5fbb04f5ed7
     lastState: {}
     name: route-controller-manager
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
