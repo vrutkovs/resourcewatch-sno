@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:09:22Z"
+    time: "2023-03-08T12:09:23Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "5441"
+  resourceVersion: "5447"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
@@ -70,18 +70,20 @@ status:
     reason: AsExpected
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-08T12:09:22Z"
-    message: All is well
-    reason: AsExpected
-    status: "False"
+  - lastTransitionTime: "2023-03-08T12:09:23Z"
+    message: 'APIServerDeploymentProgressing: deployment/apiserver.openshift-oauth-apiserver:
+      0/1 pods have been updated to the latest generation'
+    reason: APIServerDeployment_PodsUpdating
+    status: "True"
     type: Progressing
   - lastTransitionTime: "2023-03-08T12:08:35Z"
     message: |-
+      APIServerDeploymentAvailable: no apiserver.openshift-oauth-apiserver pods available on any node.
       APIServicesAvailable: PreconditionNotReady
       OAuthServerServiceEndpointAccessibleControllerAvailable: service "oauth-openshift" not found
       OAuthServerServiceEndpointsEndpointAccessibleControllerAvailable: endpoints "oauth-openshift" not found
       ReadyIngressNodesAvailable: Authentication requires functional ingress which requires at least one schedulable and ready node. Got 0 worker nodes, 1 master nodes, 0 custom target nodes (none are schedulable or ready for ingress pods).
-    reason: APIServices_PreconditionNotReady::OAuthServerServiceEndpointAccessibleController_ResourceNotFound::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound::ReadyIngressNodes_NoReadyIngressNodes
+    reason: APIServerDeployment_NoPod::APIServices_PreconditionNotReady::OAuthServerServiceEndpointAccessibleController_ResourceNotFound::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound::ReadyIngressNodes_NoReadyIngressNodes
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-08T12:08:34Z"
