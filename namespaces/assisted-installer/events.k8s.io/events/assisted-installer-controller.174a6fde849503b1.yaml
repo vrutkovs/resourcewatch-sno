@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:00:12Z"
 deprecatedLastTimestamp: "2023-03-08T12:00:12Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-08T12:00:12Z"
   name: assisted-installer-controller.174a6fde849503b1
   namespace: assisted-installer
-  resourceVersion: "464"
+  resourceVersion: "466"
   uid: 30beab4c-6d97-482c-8962-721af06d6b39
 note: 'Error creating: pods "assisted-installer-controller-" is forbidden: error looking
   up service account assisted-installer/assisted-installer-controller: serviceaccount
