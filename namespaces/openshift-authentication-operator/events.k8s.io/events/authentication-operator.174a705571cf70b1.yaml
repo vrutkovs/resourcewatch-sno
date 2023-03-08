@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:08:43Z"
-deprecatedLastTimestamp: "2023-03-08T12:08:43Z"
+deprecatedLastTimestamp: "2023-03-08T12:09:05Z"
 deprecatedSource:
   component: cluster-authentication-operator-config-observer-configobserver
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-08T12:08:43Z"
+    time: "2023-03-08T12:09:05Z"
   name: authentication-operator.174a705571cf70b1
   namespace: openshift-authentication-operator
-  resourceVersion: "4418"
+  resourceVersion: "5217"
   uid: a07740f9-7ab2-4bdf-be26-2cb2fc5aa948
 note: 'Failed to write observed config: Operation cannot be fulfilled on authentications.operator.openshift.io
   "cluster": the object has been modified; please apply your changes to the latest
