@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:20:01Z"
+deprecatedLastTimestamp: "2023-03-08T12:20:01Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:20:03Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:20:03Z"
+  name: prometheus-operator-admission-webhook-85894b6996-vmpz7.174a70f33fce1267
+  namespace: openshift-monitoring
+  resourceVersion: "12328"
+  uid: 8a0fc178-7cca-4b46-8e21-291cff36e871
+note: Started container prometheus-operator-admission-webhook
+reason: Started
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{prometheus-operator-admission-webhook}
+  kind: Pod
+  name: prometheus-operator-admission-webhook-85894b6996-vmpz7
+  namespace: openshift-monitoring
+  resourceVersion: "12101"
+  uid: 39c46fc4-0e27-479e-b0bd-773e7e401dfc
+type: Normal
