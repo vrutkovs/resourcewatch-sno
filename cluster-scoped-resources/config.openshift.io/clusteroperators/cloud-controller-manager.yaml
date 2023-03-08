@@ -24,6 +24,17 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-08T12:00:44Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+        f:relatedObjects: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:00:44Z"
   name: cloud-controller-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -31,6 +42,18 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "662"
+  resourceVersion: "701"
   uid: 9e502720-60d7-4058-bf78-6b0bfe850bff
 spec: {}
+status:
+  extension: null
+  relatedObjects:
+  - group: config.openshift.io
+    name: cloud-controller-manager
+    resource: clusteroperators
+  - group: ""
+    name: openshift-cloud-controller-manager
+    resource: namespaces
+  - group: ""
+    name: openshift-cloud-controller-manager-operator
+    resource: namespaces
