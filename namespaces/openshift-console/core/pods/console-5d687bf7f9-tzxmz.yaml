@@ -239,8 +239,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -253,8 +251,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -270,7 +266,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:26:23Z"
+    time: "2023-03-08T12:26:54Z"
   name: console-5d687bf7f9-tzxmz
   namespace: openshift-console
   ownerReferences:
@@ -280,7 +276,7 @@ metadata:
     kind: ReplicaSet
     name: console-5d687bf7f9
     uid: d19eeb7b-fe29-4e05-9222-08fcac68132c
-  resourceVersion: "17329"
+  resourceVersion: "17594"
   uid: f58597af-5e57-4078-aa2a-e3b428104e23
 spec:
   affinity: {}
@@ -452,16 +448,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:26:13Z"
-    message: 'containers with unready status: [console]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:26:54Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:26:13Z"
-    message: 'containers with unready status: [console]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:26:54Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:26:13Z"
@@ -473,7 +465,7 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ebcd6dc9e9f71c347e752ee50b10b49f1f3aa3366eb2435f56840c4c7d955aa5
     lastState: {}
     name: console
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
