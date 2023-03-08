@@ -1,0 +1,190 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "1"
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+  creationTimestamp: "2023-03-08T12:25:36Z"
+  generation: 1
+  labels:
+    k8s-app: control-plane-machine-set-operator
+    pod-template-hash: 6d7f4d48f4
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deployment.kubernetes.io/desired-replicas: {}
+          f:deployment.kubernetes.io/max-replicas: {}
+          f:deployment.kubernetes.io/revision: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:labels:
+          .: {}
+          f:k8s-app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"1fa74c7f-fa2c-4790-809b-105de38afef4"}: {}
+      f:spec:
+        f:replicas: {}
+        f:selector: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:target.workload.openshift.io/management: {}
+            f:labels:
+              .: {}
+              f:k8s-app: {}
+              f:pod-template-hash: {}
+          f:spec:
+            f:containers:
+              k:{"name":"control-plane-machine-set-operator"}:
+                .: {}
+                f:args: {}
+                f:command: {}
+                f:env:
+                  .: {}
+                  k:{"name":"COMPONENT_NAMESPACE"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:fieldRef: {}
+                  k:{"name":"RELEASE_VERSION"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":9443,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                f:resources:
+                  .: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+            f:dnsPolicy: {}
+            f:nodeSelector: {}
+            f:priorityClassName: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:tolerations: {}
+            f:volumes:
+              .: {}
+              k:{"name":"control-plane-machine-set-operator-tls"}:
+                .: {}
+                f:name: {}
+                f:secret:
+                  .: {}
+                  f:defaultMode: {}
+                  f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:25:36Z"
+  name: control-plane-machine-set-operator-6d7f4d48f4
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: control-plane-machine-set-operator
+    uid: 1fa74c7f-fa2c-4790-809b-105de38afef4
+  resourceVersion: "15324"
+  uid: 53fb31d7-ba0b-4f1c-a2ef-c64119167843
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: control-plane-machine-set-operator
+      pod-template-hash: 6d7f4d48f4
+  template:
+    metadata:
+      annotations:
+        target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+      creationTimestamp: null
+      labels:
+        k8s-app: control-plane-machine-set-operator
+        pod-template-hash: 6d7f4d48f4
+    spec:
+      containers:
+      - args:
+        - -v=2
+        - --leader-elect=true
+        - --leader-elect-lease-duration=137s
+        - --leader-elect-renew-deadline=107s
+        - --leader-elect-retry-period=26s
+        - --leader-elect-resource-namespace=openshift-machine-api
+        command:
+        - /manager
+        env:
+        - name: RELEASE_VERSION
+          value: 4.13.0-ec.4
+        - name: COMPONENT_NAMESPACE
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+        image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eb5f7b37a6232eb05b45859c71c7dcfad230dd8487504c87d4ec8e0e3fbef16f
+        imagePullPolicy: IfNotPresent
+        name: control-plane-machine-set-operator
+        ports:
+        - containerPort: 9443
+          name: https
+          protocol: TCP
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /tmp/k8s-webhook-server/serving-certs
+          name: control-plane-machine-set-operator-tls
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        node-role.kubernetes.io/master: ""
+      priorityClassName: system-cluster-critical
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: control-plane-machine-set-operator
+      serviceAccountName: control-plane-machine-set-operator
+      terminationGracePeriodSeconds: 30
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/master
+        operator: Exists
+      volumes:
+      - name: control-plane-machine-set-operator-tls
+        secret:
+          defaultMode: 420
+          secretName: control-plane-machine-set-operator-tls
+status:
+  replicas: 0
