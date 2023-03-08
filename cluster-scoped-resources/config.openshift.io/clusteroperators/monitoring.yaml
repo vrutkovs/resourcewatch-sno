@@ -40,10 +40,11 @@ metadata:
     fieldsV1:
       f:status:
         f:conditions: {}
+        f:versions: {}
     manager: operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:19:47Z"
+    time: "2023-03-08T12:22:28Z"
   name: monitoring
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -51,21 +52,25 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "11571"
+  resourceVersion: "14384"
   uid: f70dfa2a-6e36-4b10-9ccc-e3227063ef03
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-08T12:19:47Z"
-    status: Unknown
-    type: Available
-  - lastTransitionTime: "2023-03-08T12:19:47Z"
-    status: Unknown
-    type: Degraded
-  - lastTransitionTime: "2023-03-08T12:19:47Z"
-    message: Rolling out the stack.
-    reason: RollOutInProgress
+  - lastTransitionTime: "2023-03-08T12:22:28Z"
+    message: Successfully rolled out the stack.
+    reason: RollOutDone
     status: "True"
+    type: Available
+  - lastTransitionTime: "2023-03-08T12:22:28Z"
+    message: 'Prometheus is running without persistent storage which can lead to data
+      loss during upgrades and cluster disruptions. Please refer to the official documentation
+      to see how to configure storage for Prometheus: https://docs.openshift.com/container-platform/4.13/monitoring/configuring-the-monitoring-stack.html'
+    reason: PrometheusDataPersistenceNotConfigured
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-03-08T12:22:28Z"
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-08T12:19:47Z"
     status: Unknown
@@ -99,3 +104,6 @@ status:
   - group: monitoring.coreos.com
     name: ""
     resource: alertmanagerconfigs
+  versions:
+  - name: operator
+    version: 4.13.0-ec.4
