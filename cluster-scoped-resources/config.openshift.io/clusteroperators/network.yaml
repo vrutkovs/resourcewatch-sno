@@ -39,22 +39,22 @@ metadata:
   - apiVersion: config.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        f:conditions: {}
-        f:relatedObjects: {}
-    manager: cluster-network-operator
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:06:59Z"
-  - apiVersion: config.openshift.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:metadata:
         f:annotations:
           f:network.operator.openshift.io/last-seen-state: {}
           f:network.operator.openshift.io/relatedClusterObjects: {}
     manager: cluster-network-operator
     operation: Update
+    time: "2023-03-08T12:07:00Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+    manager: cluster-network-operator
+    operation: Update
+    subresource: status
     time: "2023-03-08T12:07:00Z"
   name: network
   ownerReferences:
@@ -63,7 +63,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "2826"
+  resourceVersion: "2830"
   uid: 9c5afb3c-849d-4f09-b16e-c210d3cf27a8
 spec: {}
 status:
@@ -85,9 +85,10 @@ status:
     type: Upgradeable
   - lastTransitionTime: "2023-03-08T12:06:49Z"
     message: |-
+      DaemonSet "/openshift-ovn-kubernetes/ovnkube-master" is not available (awaiting 1 nodes)
+      DaemonSet "/openshift-ovn-kubernetes/ovnkube-node" is not available (awaiting 1 nodes)
       DaemonSet "/openshift-multus/multus-additional-cni-plugins" is not available (awaiting 1 nodes)
       DaemonSet "/openshift-multus/network-metrics-daemon" is waiting for other operators to become ready
-      DaemonSet "/openshift-ovn-kubernetes/ovnkube-master" is not available (awaiting 1 nodes)
       Deployment "/openshift-multus/multus-admission-controller" is waiting for other operators to become ready
     reason: Deploying
     status: "True"
