@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:08:12Z"
 deprecatedLastTimestamp: "2023-03-08T12:08:12Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-08T12:08:12Z"
   name: vrutkovs-sno.174a704e281705ff
   namespace: default
-  resourceVersion: "3065"
+  resourceVersion: "3067"
   uid: 8ea0ac61-b8d2-4e26-afc2-aad83b631d51
 note: '[k8s.ovn.org/node-chassis-id annotation not found for node vrutkovs-sno, macAddress
   annotation not found for node "vrutkovs-sno" , k8s.ovn.org/l3-gateway-config annotation
