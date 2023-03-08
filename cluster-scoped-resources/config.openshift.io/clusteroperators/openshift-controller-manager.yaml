@@ -43,7 +43,7 @@ metadata:
     manager: cluster-openshift-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:09:15Z"
+    time: "2023-03-08T12:09:25Z"
   name: openshift-controller-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -51,13 +51,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "5366"
+  resourceVersion: "5472"
   uid: 06f0f605-a3e2-4d92-a09e-c9e7d4992262
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:08:34Z"
-    message: All is well
+    message: "WorkloadDegraded: \"openshift-controller-manager\" \"deployment\": Operation
+      cannot be fulfilled on deployments.apps \"controller-manager\": the object has
+      been modified; please apply your changes to the latest version and try again\nWorkloadDegraded: "
     reason: AsExpected
     status: "False"
     type: Degraded
