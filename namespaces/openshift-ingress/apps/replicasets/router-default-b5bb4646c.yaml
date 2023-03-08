@@ -299,15 +299,6 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:conditions:
-          .: {}
-          k:{"type":"ReplicaFailure"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
         f:observedGeneration: {}
     manager: kube-controller-manager
     operation: Update
@@ -322,7 +313,7 @@ metadata:
     kind: Deployment
     name: router-default
     uid: e3477452-4082-4fb6-8c1d-6563d35863ab
-  resourceVersion: "12373"
+  resourceVersion: "12883"
   uid: 98616e62-0fac-4ca0-b0cb-5a0fc42675f6
 spec:
   minReadySeconds: 30
@@ -505,12 +496,5 @@ spec:
           defaultMode: 420
           secretName: router-metrics-certs-default
 status:
-  conditions:
-  - lastTransitionTime: "2023-03-08T12:20:05Z"
-    message: 'pods "router-default-b5bb4646c-" is forbidden: error fetching namespace
-      "openshift-ingress": unable to find annotation openshift.io/sa.scc.uid-range'
-    reason: FailedCreate
-    status: "True"
-    type: ReplicaFailure
   observedGeneration: 1
   replicas: 0
