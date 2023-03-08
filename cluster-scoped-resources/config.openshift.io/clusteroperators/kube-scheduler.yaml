@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:20:36Z"
+    time: "2023-03-08T12:20:48Z"
   name: kube-scheduler
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,49 +52,13 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "12853"
+  resourceVersion: "12948"
   uid: 22e29ce6-c07b-40ba-9194-b4b659d164c1
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:15:41Z"
-    message: "NodeControllerDegraded: All master nodes are ready\nStaticPodsDegraded:
-      pod/openshift-kube-scheduler-vrutkovs-sno container \"kube-scheduler\" is terminated:
-      Completed: \nStaticPodsDegraded: pod/openshift-kube-scheduler-vrutkovs-sno container
-      \"kube-scheduler-cert-syncer\" is terminated: Error: 1 certsync_controller.go:170]
-      Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded:
-      I0308 12:19:55.971412       1 certsync_controller.go:66] Syncing configmaps:
-      []\nStaticPodsDegraded: I0308 12:19:55.971490       1 certsync_controller.go:170]
-      Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded:
-      I0308 12:19:56.761633       1 certsync_controller.go:66] Syncing configmaps:
-      []\nStaticPodsDegraded: I0308 12:19:56.761650       1 certsync_controller.go:170]
-      Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded:
-      I0308 12:19:57.365399       1 certsync_controller.go:66] Syncing configmaps:
-      []\nStaticPodsDegraded: I0308 12:19:57.365421       1 certsync_controller.go:170]
-      Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded:
-      I0308 12:19:57.960839       1 certsync_controller.go:66] Syncing configmaps:
-      []\nStaticPodsDegraded: I0308 12:19:57.960857       1 certsync_controller.go:170]
-      Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded:
-      I0308 12:19:58.563126       1 certsync_controller.go:66] Syncing configmaps:
-      []\nStaticPodsDegraded: I0308 12:19:58.563144       1 certsync_controller.go:170]
-      Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded:
-      I0308 12:19:59.169467       1 certsync_controller.go:66] Syncing configmaps:
-      []\nStaticPodsDegraded: I0308 12:19:59.169483       1 certsync_controller.go:170]
-      Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded:
-      I0308 12:19:59.764244       1 certsync_controller.go:66] Syncing configmaps:
-      []\nStaticPodsDegraded: I0308 12:19:59.764263       1 certsync_controller.go:170]
-      Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded:
-      I0308 12:20:06.907826       1 certsync_controller.go:66] Syncing configmaps:
-      []\nStaticPodsDegraded: I0308 12:20:06.907842       1 certsync_controller.go:170]
-      Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded:
-      I0308 12:20:08.354960       1 certsync_controller.go:66] Syncing configmaps:
-      []\nStaticPodsDegraded: I0308 12:20:08.354983       1 certsync_controller.go:170]
-      Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded:
-      I0308 12:20:32.937112       1 certsync_controller.go:66] Syncing configmaps:
-      []\nStaticPodsDegraded: I0308 12:20:32.937134       1 certsync_controller.go:170]
-      Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded:
-      \nStaticPodsDegraded: pod/openshift-kube-scheduler-vrutkovs-sno container \"kube-scheduler-recovery-controller\"
-      is terminated: Completed: "
+    message: 'NodeControllerDegraded: All master nodes are ready'
     reason: AsExpected
     status: "False"
     type: Degraded
