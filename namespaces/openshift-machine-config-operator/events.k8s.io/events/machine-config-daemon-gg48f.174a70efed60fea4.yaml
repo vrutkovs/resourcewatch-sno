@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:19:46Z"
+deprecatedLastTimestamp: "2023-03-08T12:19:46Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:19:46Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:19:46Z"
+  name: machine-config-daemon-gg48f.174a70efed60fea4
+  namespace: openshift-machine-config-operator
+  resourceVersion: "11559"
+  uid: 668ca7a8-c534-4480-b7e6-d9d483e53acd
+note: Created container oauth-proxy
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{oauth-proxy}
+  kind: Pod
+  name: machine-config-daemon-gg48f
+  namespace: openshift-machine-config-operator
+  resourceVersion: "3320"
+  uid: 17dd5f40-6d62-4ba0-8a54-33f67e581c1d
+type: Normal
