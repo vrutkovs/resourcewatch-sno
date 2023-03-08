@@ -191,7 +191,7 @@ metadata:
     kind: ReplicaSet
     name: controller-manager-8649857555
     uid: e2d7f336-0a06-495f-8fd4-679203b8c781
-  resourceVersion: "10819"
+  resourceVersion: "10855"
   uid: b9c8f0dc-f6da-4d86-ba93-f499c03799a3
 spec:
   affinity:
@@ -263,6 +263,7 @@ spec:
   enableServiceLinks: true
   imagePullSecrets:
   - name: openshift-controller-manager-sa-dockercfg-wgz9z
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -341,12 +342,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:18:13Z"
-    message: '0/1 nodes are available: 1 node(s) didn''t match pod anti-affinity rules.
-      preemption: 0/1 nodes are available: 1 node(s) didn''t match pod anti-affinity
-      rules..'
-    reason: Unschedulable
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:18:15Z"
+    status: "True"
     type: PodScheduled
   phase: Pending
   qosClass: Burstable
