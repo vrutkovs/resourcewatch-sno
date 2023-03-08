@@ -186,8 +186,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -200,8 +198,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -227,7 +223,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-config-operator-59844477b6
     uid: fa8f448d-e541-4354-991c-45c82a674e9e
-  resourceVersion: "7071"
+  resourceVersion: "7073"
   uid: 5522d70c-2619-4ba6-b421-25066549db36
 spec:
   containers:
@@ -357,15 +353,11 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:15:30Z"
-    message: 'containers with unready status: [openshift-config-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:15:30Z"
-    message: 'containers with unready status: [openshift-config-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:08:24Z"
@@ -377,7 +369,7 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f1e68b64ea07b48f3443f8dd80b01fd27640a3260e2fdbc61cb48f0f8e4359cc
     lastState: {}
     name: openshift-config-operator
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
