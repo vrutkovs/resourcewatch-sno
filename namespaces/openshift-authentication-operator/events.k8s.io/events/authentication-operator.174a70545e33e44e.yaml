@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:08:38Z"
-deprecatedLastTimestamp: "2023-03-08T12:08:38Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:54Z"
 deprecatedSource:
   component: cluster-authentication-operator-config-observer-configobserver
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-08T12:08:38Z"
+    time: "2023-03-08T12:08:54Z"
   name: authentication-operator.174a70545e33e44e
   namespace: openshift-authentication-operator
-  resourceVersion: "4068"
+  resourceVersion: "4871"
   uid: ddc37825-bd18-416d-9882-29e22ff73f86
 note: accessTokenMaxAgeSeconds changed from %!d(float64=0) to %!d(float64=86400)
 reason: ObserveTokenConfig
