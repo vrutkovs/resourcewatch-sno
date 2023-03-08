@@ -1,0 +1,80 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:11:47Z"
+deprecatedLastTimestamp: "2023-03-08T12:11:47Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-installer-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:11:47Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:11:47Z"
+  name: kube-controller-manager-operator.174a70806267a27b
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "6222"
+  uid: e4931c72-cdf1-4497-8b18-05e7cc98d4ed
+note: |
+  installer errors: installer: ) (len=1 cap=1) {
+    (string) (len=12) "serving-cert"
+   },
+   ConfigMapNamePrefixes: ([]string) (len=8 cap=8) {
+    (string) (len=27) "kube-controller-manager-pod",
+    (string) (len=6) "config",
+    (string) (len=32) "cluster-policy-controller-config",
+    (string) (len=29) "controller-manager-kubeconfig",
+    (string) (len=38) "kube-controller-cert-syncer-kubeconfig",
+    (string) (len=17) "serviceaccount-ca",
+    (string) (len=10) "service-ca",
+    (string) (len=15) "recycler-config"
+   },
+   OptionalConfigMapNamePrefixes: ([]string) (len=1 cap=1) {
+    (string) (len=12) "cloud-config"
+   },
+   CertSecretNames: ([]string) (len=2 cap=2) {
+    (string) (len=39) "kube-controller-manager-client-cert-key",
+    (string) (len=10) "csr-signer"
+   },
+   OptionalCertSecretNamePrefixes: ([]string) <nil>,
+   CertConfigMapNamePrefixes: ([]string) (len=2 cap=2) {
+    (string) (len=20) "aggregator-client-ca",
+    (string) (len=9) "client-ca"
+   },
+   OptionalCertConfigMapNamePrefixes: ([]string) (len=1 cap=1) {
+    (string) (len=17) "trusted-ca-bundle"
+   },
+   CertDir: (string) (len=66) "/etc/kubernetes/static-pod-resources/kube-controller-manager-certs",
+   ResourceDir: (string) (len=36) "/etc/kubernetes/static-pod-resources",
+   PodManifestDir: (string) (len=25) "/etc/kubernetes/manifests",
+   Timeout: (time.Duration) 2m0s,
+   StaticPodManifestsLockFile: (string) "",
+   PodMutationFns: ([]installerpod.PodMutationFunc) <nil>,
+   KubeletVersion: (string) ""
+  })
+  I0308 12:10:19.656651       1 cmd.go:410] Getting controller reference for node vrutkovs-sno
+  I0308 12:10:19.662983       1 cmd.go:423] Waiting for installer revisions to settle for node vrutkovs-sno
+  I0308 12:10:19.664661       1 cmd.go:515] Waiting additional period after revisions have settled for node vrutkovs-sno
+  I0308 12:10:49.664956       1 cmd.go:521] Getting installer pods for node vrutkovs-sno
+  F0308 12:11:03.668598       1 cmd.go:106] Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager/pods?labelSelector=app%3Dinstaller": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+reason: InstallerPodFailed
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: 5df04b75-b8db-486d-812b-be3794a10710
+type: Warning
