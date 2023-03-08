@@ -44,11 +44,14 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "11762"
+  resourceVersion: "11763"
   uid: 8e4ff39a-30c7-4d85-b2c3-c0d971bcc48c
 spec: {}
 status:
   sources:
+  - disabled: false
+    name: certified-operators
+    status: Success
   - disabled: false
     name: community-operators
     status: Success
@@ -57,7 +60,4 @@ status:
     status: Success
   - disabled: false
     name: redhat-operators
-    status: Success
-  - disabled: false
-    name: certified-operators
     status: Success
