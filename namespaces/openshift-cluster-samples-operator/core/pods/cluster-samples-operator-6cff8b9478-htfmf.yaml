@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.82/23"],"mac_address":"0a:58:0a:80:00:52","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.82/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-08T12:25:45Z"
@@ -126,6 +127,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-08T12:25:45Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-08T12:25:45Z"
   name: cluster-samples-operator-6cff8b9478-htfmf
   namespace: openshift-cluster-samples-operator
   ownerReferences:
@@ -135,7 +145,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-samples-operator-6cff8b9478
     uid: 4e973bfa-4680-4d81-ba89-321bbbcc3a9c
-  resourceVersion: "15525"
+  resourceVersion: "15528"
   uid: efdcac38-ac25-48db-9607-8aa7285f3d0e
 spec:
   containers:
