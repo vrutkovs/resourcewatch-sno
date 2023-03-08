@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:21:56Z"
+deprecatedLastTimestamp: "2023-03-08T12:21:56Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:21:56Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:21:56Z"
+  name: thanos-querier-57bd6cb9c5-z6kcd.174a710e11c5ec6f
+  namespace: openshift-monitoring
+  resourceVersion: "14085"
+  uid: dc43c190-c234-4ff7-a449-72818c424b67
+note: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5925f28a7682ef5cb91d4a3e3c9f6877ccc339ddb3533ad6376771314a79cb5a"
+  already present on machine
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{oauth-proxy}
+  kind: Pod
+  name: thanos-querier-57bd6cb9c5-z6kcd
+  namespace: openshift-monitoring
+  resourceVersion: "13723"
+  uid: 8c2a4904-0c50-4ea7-a376-0fec3927c5b8
+type: Normal
