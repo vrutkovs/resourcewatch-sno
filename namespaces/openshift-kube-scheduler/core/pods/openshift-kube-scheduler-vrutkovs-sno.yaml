@@ -220,6 +220,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -238,6 +240,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -254,7 +258,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:20:06Z"
+    time: "2023-03-08T12:20:35Z"
   name: openshift-kube-scheduler-vrutkovs-sno
   namespace: openshift-kube-scheduler
   ownerReferences:
@@ -263,7 +267,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
-  resourceVersion: "12560"
+  resourceVersion: "12847"
   uid: d8e9080b-358f-47b3-91b2-78864dff488a
 spec:
   containers:
@@ -432,12 +436,18 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:20:06Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:20:35Z"
+    message: 'containers with unready status: [kube-scheduler kube-scheduler-cert-syncer
+      kube-scheduler-recovery-controller]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:20:06Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:20:35Z"
+    message: 'containers with unready status: [kube-scheduler kube-scheduler-cert-syncer
+      kube-scheduler-recovery-controller]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:15:28Z"
@@ -449,33 +459,67 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
     lastState: {}
     name: kube-scheduler
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://7a9fa681f6442aca140f61e1c4b94696591ac375863e6acee627ef1d04518c9d
+        exitCode: 0
+        finishedAt: "2023-03-08T12:20:34Z"
+        reason: Completed
         startedAt: "2023-03-08T12:19:21Z"
   - containerID: cri-o://0911656c660348b0f69afc1dfd7819fc1c4a9abe940a6a66b4c03f8a87e81a79
     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9a26a8cedffe6ad1a77158ba9d87ad2b90e8076f7e6661201f6e8d838c1b8c2b
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9a26a8cedffe6ad1a77158ba9d87ad2b90e8076f7e6661201f6e8d838c1b8c2b
     lastState: {}
     name: kube-scheduler-cert-syncer
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://0911656c660348b0f69afc1dfd7819fc1c4a9abe940a6a66b4c03f8a87e81a79
+        exitCode: 2
+        finishedAt: "2023-03-08T12:20:34Z"
+        message: |
+          1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key false}]
+          I0308 12:19:55.971412       1 certsync_controller.go:66] Syncing configmaps: []
+          I0308 12:19:55.971490       1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key false}]
+          I0308 12:19:56.761633       1 certsync_controller.go:66] Syncing configmaps: []
+          I0308 12:19:56.761650       1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key false}]
+          I0308 12:19:57.365399       1 certsync_controller.go:66] Syncing configmaps: []
+          I0308 12:19:57.365421       1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key false}]
+          I0308 12:19:57.960839       1 certsync_controller.go:66] Syncing configmaps: []
+          I0308 12:19:57.960857       1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key false}]
+          I0308 12:19:58.563126       1 certsync_controller.go:66] Syncing configmaps: []
+          I0308 12:19:58.563144       1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key false}]
+          I0308 12:19:59.169467       1 certsync_controller.go:66] Syncing configmaps: []
+          I0308 12:19:59.169483       1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key false}]
+          I0308 12:19:59.764244       1 certsync_controller.go:66] Syncing configmaps: []
+          I0308 12:19:59.764263       1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key false}]
+          I0308 12:20:06.907826       1 certsync_controller.go:66] Syncing configmaps: []
+          I0308 12:20:06.907842       1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key false}]
+          I0308 12:20:08.354960       1 certsync_controller.go:66] Syncing configmaps: []
+          I0308 12:20:08.354983       1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key false}]
+          I0308 12:20:32.937112       1 certsync_controller.go:66] Syncing configmaps: []
+          I0308 12:20:32.937134       1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key false}]
+        reason: Error
         startedAt: "2023-03-08T12:19:21Z"
   - containerID: cri-o://51c1a2fdd6e500bda2a527d2d39038e76b8671f3f8da88bffbd1c4c76eeb90d4
     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9a26a8cedffe6ad1a77158ba9d87ad2b90e8076f7e6661201f6e8d838c1b8c2b
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9a26a8cedffe6ad1a77158ba9d87ad2b90e8076f7e6661201f6e8d838c1b8c2b
     lastState: {}
     name: kube-scheduler-recovery-controller
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://51c1a2fdd6e500bda2a527d2d39038e76b8671f3f8da88bffbd1c4c76eeb90d4
+        exitCode: 0
+        finishedAt: "2023-03-08T12:20:34Z"
+        reason: Completed
         startedAt: "2023-03-08T12:19:21Z"
   hostIP: 10.0.130.68
   initContainerStatuses:
