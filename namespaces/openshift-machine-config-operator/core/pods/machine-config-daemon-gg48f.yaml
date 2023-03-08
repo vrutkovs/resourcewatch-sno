@@ -146,8 +146,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -160,12 +158,11 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -176,7 +173,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:08:28Z"
+    time: "2023-03-08T12:19:47Z"
   name: machine-config-daemon-gg48f
   namespace: openshift-machine-config-operator
   ownerReferences:
@@ -186,7 +183,7 @@ metadata:
     kind: DaemonSet
     name: machine-config-daemon
     uid: 64da2093-5ead-43ab-b55f-b16918b39d87
-  resourceVersion: "3320"
+  resourceVersion: "11561"
   uid: 17dd5f40-6d62-4ba0-8a54-33f67e581c1d
 spec:
   affinity:
@@ -320,44 +317,42 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:27Z"
-    message: 'containers with unready status: [machine-config-daemon oauth-proxy]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:19:47Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:27Z"
-    message: 'containers with unready status: [machine-config-daemon oauth-proxy]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:19:47Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:08:27Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:cd809b4b9f05e02149e45956000e29f75db7c144a2275ead651b5fec951268f9
-    imageID: ""
+  - containerID: cri-o://f7f1e674a3e3e0a6199e6f541324de0ec2c3d9deec73bfc0730ae2df0707cd1d
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:cd809b4b9f05e02149e45956000e29f75db7c144a2275ead651b5fec951268f9
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:cd809b4b9f05e02149e45956000e29f75db7c144a2275ead651b5fec951268f9
     lastState: {}
     name: machine-config-daemon
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5925f28a7682ef5cb91d4a3e3c9f6877ccc339ddb3533ad6376771314a79cb5a
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:19:39Z"
+  - containerID: cri-o://a2c2a9f40fa30a8f162b1f5e6f8446be0d97c60910c0f9ff3d79997da6f32b8e
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5925f28a7682ef5cb91d4a3e3c9f6877ccc339ddb3533ad6376771314a79cb5a
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5925f28a7682ef5cb91d4a3e3c9f6877ccc339ddb3533ad6376771314a79cb5a
     lastState: {}
     name: oauth-proxy
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-08T12:19:46Z"
   hostIP: 10.0.130.68
-  phase: Pending
+  phase: Running
   podIP: 10.0.130.68
   podIPs:
   - ip: 10.0.130.68
