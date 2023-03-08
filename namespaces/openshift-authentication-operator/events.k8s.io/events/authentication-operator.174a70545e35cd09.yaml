@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-08T12:08:38Z"
-deprecatedLastTimestamp: "2023-03-08T12:08:54Z"
+deprecatedLastTimestamp: "2023-03-08T12:09:07Z"
 deprecatedSource:
   component: cluster-authentication-operator-config-observer-configobserver
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-08T12:08:54Z"
+    time: "2023-03-08T12:09:07Z"
   name: authentication-operator.174a70545e35cd09
   namespace: openshift-authentication-operator
-  resourceVersion: "4872"
+  resourceVersion: "5267"
   uid: 99dc063b-86a3-4f11-970c-1c028d8dcc86
 note: minTLSVersion changed to VersionTLS12
 reason: ObserveTLSSecurityProfile
