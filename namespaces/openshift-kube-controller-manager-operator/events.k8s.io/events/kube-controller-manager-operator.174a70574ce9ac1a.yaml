@@ -1,0 +1,51 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:51Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:51Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-status-controller-statussyncer_kube-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:52Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:08:52Z"
+  name: kube-controller-manager-operator.174a70574ce9ac1a
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "4830"
+  uid: 614848c5-2ff7-4f5d-b710-26d92c168bf1
+note: 'Status for clusteroperator/kube-controller-manager changed: Degraded message
+  changed from "InstallerControllerDegraded: missing required resources: [configmaps:
+  client-ca, secrets: csr-signer, configmaps: cluster-policy-controller-config-1,config-1,controller-manager-kubeconfig-1,kube-controller-cert-syncer-kubeconfig-1,kube-controller-manager-pod-1,recycler-config-1,service-ca-1,serviceaccount-ca-1,
+  secrets: localhost-recovery-client-token-1,service-account-private-key-1]\nNodeControllerDegraded:
+  All master nodes are ready\nRevisionControllerDegraded: configmaps \"kube-controller-manager-pod\"
+  not found\nConfigObservationDegraded: error writing updated observed config: Operation
+  cannot be fulfilled on kubecontrollermanagers.operator.openshift.io \"cluster\":
+  the object has been modified; please apply your changes to the latest version and
+  try again" to "InstallerControllerDegraded: missing required resources: [configmaps:
+  client-ca, secrets: csr-signer, configmaps: cluster-policy-controller-config-1,config-1,controller-manager-kubeconfig-1,kube-controller-cert-syncer-kubeconfig-1,kube-controller-manager-pod-1,recycler-config-1,service-ca-1,serviceaccount-ca-1,
+  secrets: localhost-recovery-client-token-1,service-account-private-key-1]\nNodeControllerDegraded:
+  All master nodes are ready\nRevisionControllerDegraded: configmaps \"kube-controller-manager-pod\"
+  not found"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: 5df04b75-b8db-486d-812b-be3794a10710
+type: Normal
