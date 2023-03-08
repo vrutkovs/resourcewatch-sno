@@ -103,14 +103,6 @@ metadata:
             f:reason: {}
             f:status: {}
             f:type: {}
-          k:{"type":"ReplicaFailure"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
         f:observedGeneration: {}
         f:unavailableReplicas: {}
     manager: kube-controller-manager
@@ -119,7 +111,7 @@ metadata:
     time: "2023-03-08T12:09:04Z"
   name: migrator
   namespace: openshift-kube-storage-version-migrator
-  resourceVersion: "5190"
+  resourceVersion: "7957"
   uid: 60920340-de58-4e55-838f-6b2e3b1956ee
 spec:
   progressDeadlineSeconds: 600
@@ -198,12 +190,5 @@ status:
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
-  - lastTransitionTime: "2023-03-08T12:09:04Z"
-    lastUpdateTime: "2023-03-08T12:09:04Z"
-    message: 'pods "migrator-5fb6574f78-" is forbidden: error fetching namespace "openshift-kube-storage-version-migrator":
-      unable to find annotation openshift.io/sa.scc.uid-range'
-    reason: FailedCreate
-    status: "True"
-    type: ReplicaFailure
   observedGeneration: 1
   unavailableReplicas: 1
