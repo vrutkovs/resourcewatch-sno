@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.9/23"],"mac_address":"0a:58:0a:80:00:09","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.9/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.9"
+          ],
+          "mac": "0a:58:0a:80:00:09",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-08T12:06:33Z"
@@ -213,6 +224,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-08T12:08:24Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:19:39Z"
   name: marketplace-operator-78496b8dd8-xzd6t
   namespace: openshift-marketplace
   ownerReferences:
@@ -222,7 +243,7 @@ metadata:
     kind: ReplicaSet
     name: marketplace-operator-78496b8dd8
     uid: cf058760-f4fd-41b4-8580-f528f08414dd
-  resourceVersion: "3180"
+  resourceVersion: "11480"
   uid: 45744ad7-0fa7-408a-8a8e-8f293004749e
 spec:
   containers:
