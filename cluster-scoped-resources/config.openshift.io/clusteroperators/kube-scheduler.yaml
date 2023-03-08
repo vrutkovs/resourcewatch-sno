@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:22:47Z"
+    time: "2023-03-08T12:23:25Z"
   name: kube-scheduler
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,13 +52,18 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "14477"
+  resourceVersion: "14735"
   uid: 22e29ce6-c07b-40ba-9194-b4b659d164c1
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:15:41Z"
-    message: 'NodeControllerDegraded: All master nodes are ready'
+    message: |-
+      NodeControllerDegraded: All master nodes are ready
+      TargetConfigControllerDegraded: "configmap": Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/configmaps/config": dial tcp 172.30.0.1:443: connect: connection refused
+      TargetConfigControllerDegraded: "configmap/serviceaccount-ca": Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/configmaps/serviceaccount-ca": dial tcp 172.30.0.1:443: connect: connection refused
+      TargetConfigControllerDegraded: "serviceaccount/localhost-recovery-client": Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/serviceaccounts/localhost-recovery-client": dial tcp 172.30.0.1:443: connect: connection refused
+      TargetConfigControllerDegraded: "configmap/scheduler-kubeconfig": configmaps "scheduler-kubeconfig" is forbidden: User "system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator" cannot get resource "configmaps" in API group "" in the namespace "openshift-kube-scheduler": RBAC: [clusterrole.rbac.authorization.k8s.io "basic-user" not found, clusterrole.rbac.authorization.k8s.io "system:basic-user" not found, clusterrole.rbac.authorization.k8s.io "cluster-admin" not found, clusterrole.rbac.authorization.k8s.io "system:openshift:discovery" not found, clusterrole.rbac.authorization.k8s.io "system:build-strategy-docker" not found]
     reason: AsExpected
     status: "False"
     type: Degraded
