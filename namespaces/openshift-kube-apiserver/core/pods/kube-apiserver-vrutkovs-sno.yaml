@@ -3,16 +3,16 @@ kind: Pod
 metadata:
   annotations:
     kubectl.kubernetes.io/default-container: kube-apiserver
-    kubernetes.io/config.hash: e2d3e7572f5268f9d06e61a879357443
-    kubernetes.io/config.mirror: e2d3e7572f5268f9d06e61a879357443
-    kubernetes.io/config.seen: "2023-03-08T12:16:32.570377828Z"
+    kubernetes.io/config.hash: d8cd371f4ad08c8b26fcc9bb9cf66750
+    kubernetes.io/config.mirror: d8cd371f4ad08c8b26fcc9bb9cf66750
+    kubernetes.io/config.seen: "2023-03-08T12:19:18.659068649Z"
     kubernetes.io/config.source: file
     target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
-  creationTimestamp: "2023-03-08T12:16:46Z"
+  creationTimestamp: "2023-03-08T12:19:34Z"
   labels:
     apiserver: "true"
     app: openshift-kube-apiserver
-    revision: "3"
+    revision: "4"
   managedFields:
   - apiVersion: v1
     fieldsType: FieldsV1
@@ -349,7 +349,7 @@ metadata:
             f:name: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-08T12:16:46Z"
+    time: "2023-03-08T12:19:34Z"
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -360,6 +360,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -378,6 +380,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -394,7 +398,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:17:54Z"
+    time: "2023-03-08T12:19:37Z"
   name: kube-apiserver-vrutkovs-sno
   namespace: openshift-kube-apiserver
   ownerReferences:
@@ -403,8 +407,8 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
-  resourceVersion: "8309"
-  uid: 81bc231f-2acf-4e9b-92eb-7005b154e0bf
+  resourceVersion: "11463"
+  uid: 211b07ce-77e3-40a7-9be7-38b01eeb2f8e
 spec:
   containers:
   - args:
@@ -436,7 +440,7 @@ spec:
           apiVersion: v1
           fieldPath: metadata.namespace
     - name: STATIC_POD_VERSION
-      value: "3"
+      value: "4"
     - name: HOST_IP
       valueFrom:
         fieldRef:
@@ -698,7 +702,7 @@ spec:
   - operator: Exists
   volumes:
   - hostPath:
-      path: /etc/kubernetes/static-pod-resources/kube-apiserver-pod-3
+      path: /etc/kubernetes/static-pod-resources/kube-apiserver-pod-4
       type: ""
     name: resource-dir
   - hostPath:
@@ -712,34 +716,38 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:16:45Z"
+    lastTransitionTime: "2023-03-08T12:19:32Z"
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:17:54Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:19:31Z"
+    message: 'containers with unready status: [kube-apiserver kube-apiserver-check-endpoints]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:17:54Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:19:31Z"
+    message: 'containers with unready status: [kube-apiserver kube-apiserver-check-endpoints]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:15:28Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://88b9028b41464751dd95f036d95f6a2eb9f0718809edd7c3e7ca0732a0e3c225
+  - containerID: cri-o://d6499ba3fe4ba3fdbb63cc449d4519b691170d48efbb857105863003c0b49159
     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
     lastState: {}
     name: kube-apiserver
-    ready: true
+    ready: false
     restartCount: 0
     started: true
     state:
       running:
-        startedAt: "2023-03-08T12:16:45Z"
-  - containerID: cri-o://39c8bedcffba66025ed1273510b9e5937e4d1e73879a88ce2ce1d3cbef0437b6
+        startedAt: "2023-03-08T12:19:33Z"
+  - containerID: cri-o://8757a84553ec21ab2768c5ae0d558616af2d2a8d320379172b941f56c71c9631
     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
     lastState: {}
@@ -749,8 +757,8 @@ status:
     started: true
     state:
       running:
-        startedAt: "2023-03-08T12:16:45Z"
-  - containerID: cri-o://d4098ad10efe2f3ee20bd6fb506ae43c88be94ca6b02e586be353969fb2eb4dc
+        startedAt: "2023-03-08T12:19:33Z"
+  - containerID: cri-o://df33cfd260a984d57007d254105e5d7bac984353a8365a493b04a0e74218a92f
     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
     lastState: {}
@@ -760,19 +768,19 @@ status:
     started: true
     state:
       running:
-        startedAt: "2023-03-08T12:16:45Z"
-  - containerID: cri-o://aa0c378baa3222db2a77c4dfeaac3519cd70b43d32ec58f1fa583ed59b122c51
+        startedAt: "2023-03-08T12:19:33Z"
+  - containerID: cri-o://453d883eebb4e0b4c3228a699bc190e5ab065449674a86b8202dd216a829b93f
     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
     lastState: {}
     name: kube-apiserver-check-endpoints
-    ready: true
+    ready: false
     restartCount: 0
     started: true
     state:
       running:
-        startedAt: "2023-03-08T12:16:46Z"
-  - containerID: cri-o://41e3d966fb6cd20da9eb519e4a1646b7a8a203fb650c046dabcbe2acfa6d5448
+        startedAt: "2023-03-08T12:19:33Z"
+  - containerID: cri-o://cf290c4d91bf9cd7fca48322e18c07fe00ad8b9b304e1d77debd31bcb3199670
     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
     lastState: {}
@@ -782,10 +790,10 @@ status:
     started: true
     state:
       running:
-        startedAt: "2023-03-08T12:16:46Z"
+        startedAt: "2023-03-08T12:19:33Z"
   hostIP: 10.0.130.68
   initContainerStatuses:
-  - containerID: cri-o://5a01ca5b9bcb71b08981eeae41ff971d641c5927f917d8f34e4a72d94b536f22
+  - containerID: cri-o://4e043ce98ad68571dbb8459659a8d69458929ccfa514132b505f4f3c3cd8691a
     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
     lastState: {}
@@ -794,11 +802,11 @@ status:
     restartCount: 0
     state:
       terminated:
-        containerID: cri-o://5a01ca5b9bcb71b08981eeae41ff971d641c5927f917d8f34e4a72d94b536f22
+        containerID: cri-o://4e043ce98ad68571dbb8459659a8d69458929ccfa514132b505f4f3c3cd8691a
         exitCode: 0
-        finishedAt: "2023-03-08T12:16:45Z"
+        finishedAt: "2023-03-08T12:19:32Z"
         reason: Completed
-        startedAt: "2023-03-08T12:16:45Z"
+        startedAt: "2023-03-08T12:19:32Z"
   phase: Running
   podIP: 10.0.130.68
   podIPs:
