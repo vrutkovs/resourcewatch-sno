@@ -1,0 +1,53 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:09:41Z"
+deprecatedLastTimestamp: "2023-03-08T12:09:41Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:09:41Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-08T12:09:41Z"
+  name: etcd-operator.174a70630f4d9a28
+  namespace: openshift-etcd-operator
+  resourceVersion: "5630"
+  uid: 90ffae36-9f1c-4e57-b4a2-af1faf269ec9
+note: 'Status for clusteroperator/etcd changed: Degraded message changed from "InstallerControllerDegraded:
+  missing required resources: [configmaps: etcd-endpoints-0,etcd-metrics-proxy-client-ca-0,etcd-metrics-proxy-serving-ca-0,etcd-peer-client-ca-0,etcd-pod-0,etcd-serving-ca-0,
+  secrets: etcd-all-certs-0]\nNodeControllerDegraded: All master nodes are ready\nEtcdMembersControllerDegraded:
+  Operation cannot be fulfilled on etcds.operator.openshift.io \"cluster\": the object
+  has been modified; please apply your changes to the latest version and try again\nEtcdMembersDegraded:
+  No unhealthy members found\nEtcdEndpointsDegraded: no etcd members are present"
+  to "InstallerControllerDegraded: missing required resources: [configmaps: etcd-endpoints-1,etcd-metrics-proxy-client-ca-1,etcd-metrics-proxy-serving-ca-1,etcd-peer-client-ca-1,etcd-pod-1,etcd-serving-ca-1,
+  secrets: etcd-all-certs-1]\nNodeControllerDegraded: All master nodes are ready\nEtcdMembersControllerDegraded:
+  Operation cannot be fulfilled on etcds.operator.openshift.io \"cluster\": the object
+  has been modified; please apply your changes to the latest version and try again\nEtcdMembersDegraded:
+  No unhealthy members found\nEtcdEndpointsDegraded: no etcd members are present",Progressing
+  changed from False to True ("NodeInstallerProgressing: 1 nodes are at revision 0;
+  0 nodes have achieved new revision 1"),Available message changed from "StaticPodsAvailable:
+  0 nodes are active; 1 nodes are at revision 0" to "StaticPodsAvailable: 0 nodes
+  are active; 1 nodes are at revision 0; 0 nodes have achieved new revision 1"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 7c43379a-6a36-4015-adb4-fd13f2117c5e
+type: Normal
