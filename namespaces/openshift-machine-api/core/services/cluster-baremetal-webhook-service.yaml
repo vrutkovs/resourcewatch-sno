@@ -5,7 +5,9 @@ metadata:
     capability.openshift.io/name: baremetal
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678277316
     service.beta.openshift.io/serving-cert-secret-name: cluster-baremetal-webhook-server-cert
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678277316
   creationTimestamp: "2023-03-08T12:25:38Z"
   labels:
     k8s-app: cluster-baremetal-operator
@@ -41,6 +43,16 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-08T12:25:38Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-08T12:25:39Z"
   name: cluster-baremetal-webhook-service
   namespace: openshift-machine-api
   ownerReferences:
@@ -49,7 +61,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "15371"
+  resourceVersion: "15380"
   uid: 247901ea-647f-4e3c-8813-d3ac00f94a32
 spec:
   clusterIP: 172.30.13.176
