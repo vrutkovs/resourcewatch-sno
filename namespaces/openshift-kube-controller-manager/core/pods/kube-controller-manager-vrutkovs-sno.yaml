@@ -9,6 +9,8 @@ metadata:
     kubernetes.io/config.source: file
     target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
   creationTimestamp: "2023-03-08T12:22:08Z"
+  deletionGracePeriodSeconds: 0
+  deletionTimestamp: "2023-03-08T12:22:51Z"
   labels:
     app: kube-controller-manager
     kube-controller-manager: "true"
@@ -341,7 +343,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
-  resourceVersion: "14518"
+  resourceVersion: "14519"
   uid: 4bab3941-9697-4c6a-b2eb-28dc7262ab72
 spec:
   containers:
