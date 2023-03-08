@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:06:41Z"
+deprecatedLastTimestamp: "2023-03-08T12:06:41Z"
+deprecatedSource:
+  component: network-operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:06:41Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-network-operator
+    operation: Update
+    time: "2023-03-08T12:06:41Z"
+  name: network-operator-lock.174a703911f2430b
+  namespace: openshift-network-operator
+  resourceVersion: "2499"
+  uid: da18cde2-7627-4d78-be34-9a8971cda433
+note: vrutkovs-sno_7617d13b-e138-4920-b09a-0a44f12777b8 became leader
+reason: LeaderElection
+regarding:
+  apiVersion: v1
+  kind: ConfigMap
+  name: network-operator-lock
+  namespace: openshift-network-operator
+  resourceVersion: "2497"
+  uid: ada437ba-c513-4182-8343-c0e70d0df0b2
+type: Normal
