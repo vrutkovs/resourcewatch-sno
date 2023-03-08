@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:21:21Z"
+deprecatedLastTimestamp: "2023-03-08T12:21:21Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-installer-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:21:21Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:21:21Z"
+  name: kube-controller-manager-operator.174a7105dfa04a4e
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "13169"
+  uid: 21183d9c-1c0e-4ed1-bd6f-a7f08f3752ec
+note: Created Pod/installer-8-vrutkovs-sno -n openshift-kube-controller-manager because
+  it was missing
+reason: PodCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: 5df04b75-b8db-486d-812b-be3794a10710
+type: Normal
