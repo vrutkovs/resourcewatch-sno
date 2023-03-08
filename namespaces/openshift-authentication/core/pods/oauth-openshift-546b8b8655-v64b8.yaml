@@ -258,6 +258,24 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-08T12:26:13Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:26:13Z"
   name: oauth-openshift-546b8b8655-v64b8
   namespace: openshift-authentication
   ownerReferences:
@@ -267,7 +285,7 @@ metadata:
     kind: ReplicaSet
     name: oauth-openshift-546b8b8655
     uid: ed9a5ba0-ca67-4023-8298-6ba59774ad05
-  resourceVersion: "17074"
+  resourceVersion: "17083"
   uid: 81092f53-f0b2-4347-a380-56cb7105b327
 spec:
   affinity:
@@ -483,5 +501,14 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:26:13Z"
+    message: '0/1 nodes are available: 1 node(s) didn''t match pod anti-affinity rules.
+      preemption: 0/1 nodes are available: 1 node(s) didn''t match pod anti-affinity
+      rules..'
+    reason: Unschedulable
+    status: "False"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
