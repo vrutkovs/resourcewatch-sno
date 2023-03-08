@@ -52,14 +52,13 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "6035"
+  resourceVersion: "6038"
   uid: ae28a46b-58e3-46e0-8654-d3f4cf5ab63c
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:08:35Z"
     message: |-
-      InstallerControllerDegraded: missing required resources: configmaps: client-ca
       GarbageCollectorDegraded: error fetching rules: Get "https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules": dial tcp: lookup thanos-querier.openshift-monitoring.svc: i/o timeout
       NodeControllerDegraded: All master nodes are ready
     reason: AsExpected
