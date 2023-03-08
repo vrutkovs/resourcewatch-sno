@@ -159,6 +159,7 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -178,13 +179,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:25:48Z"
+    time: "2023-03-08T12:25:57Z"
   name: cluster-cloud-controller-manager-operator
   namespace: openshift-cloud-controller-manager-operator
   ownerReferences:
@@ -193,7 +194,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "15813"
+  resourceVersion: "16448"
   uid: 973ffe7e-c0e2-4772-84b8-98539771621b
 spec:
   progressDeadlineSeconds: 600
@@ -342,20 +343,22 @@ spec:
           type: Directory
         name: host-etc-kube
 status:
+  availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2023-03-08T12:25:48Z"
-    lastUpdateTime: "2023-03-08T12:25:48Z"
-    message: Deployment does not have minimum availability.
-    reason: MinimumReplicasUnavailable
-    status: "False"
+  - lastTransitionTime: "2023-03-08T12:25:57Z"
+    lastUpdateTime: "2023-03-08T12:25:57Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-08T12:25:48Z"
-    lastUpdateTime: "2023-03-08T12:25:48Z"
-    message: ReplicaSet "cluster-cloud-controller-manager-operator-894fc765c" is progressing.
-    reason: ReplicaSetUpdated
+    lastUpdateTime: "2023-03-08T12:25:57Z"
+    message: ReplicaSet "cluster-cloud-controller-manager-operator-894fc765c" has
+      successfully progressed.
+    reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
