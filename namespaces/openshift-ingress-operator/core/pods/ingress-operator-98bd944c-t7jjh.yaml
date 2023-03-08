@@ -189,40 +189,6 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"ContainersReady"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Initialized"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Ready"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:containerStatuses: {}
-        f:hostIP: {}
-        f:startTime: {}
-    manager: kubelet
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:08:24Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:metadata:
         f:annotations:
           f:k8s.ovn.org/pod-networks: {}
@@ -239,6 +205,43 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-08T12:19:39Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.13"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:19:48Z"
   name: ingress-operator-98bd944c-t7jjh
   namespace: openshift-ingress-operator
   ownerReferences:
@@ -248,7 +251,7 @@ metadata:
     kind: ReplicaSet
     name: ingress-operator-98bd944c
     uid: ccd3ef56-cf18-48dc-bbe4-dae40b86fa74
-  resourceVersion: "11484"
+  resourceVersion: "11600"
   uid: f37d5663-1b26-49ed-a3e9-7a891785ee00
 spec:
   containers:
@@ -419,43 +422,44 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:24Z"
-    message: 'containers with unready status: [ingress-operator kube-rbac-proxy]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:19:48Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:24Z"
-    message: 'containers with unready status: [ingress-operator kube-rbac-proxy]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:19:48Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:08:24Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ab9440cfb1a1cee8c97b9b5ca222c857d4ad1bc147f76c23c36727d9c9d3bfb5
-    imageID: ""
+  - containerID: cri-o://4cff366289fedfe34fa76c0dc305abc14ee82645dd3819752527b6041fb2184d
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ab9440cfb1a1cee8c97b9b5ca222c857d4ad1bc147f76c23c36727d9c9d3bfb5
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ab9440cfb1a1cee8c97b9b5ca222c857d4ad1bc147f76c23c36727d9c9d3bfb5
     lastState: {}
     name: ingress-operator
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:19:47Z"
+  - containerID: cri-o://9bad45c6e9fce730c71fababd887af13dab617aa0460d7d49126dbcf16cd91f1
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
     lastState: {}
     name: kube-rbac-proxy
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-08T12:19:47Z"
   hostIP: 10.0.130.68
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.13
+  podIPs:
+  - ip: 10.128.0.13
   qosClass: Burstable
   startTime: "2023-03-08T12:08:24Z"
