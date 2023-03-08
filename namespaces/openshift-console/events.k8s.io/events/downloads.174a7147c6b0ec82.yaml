@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:26:04Z"
+deprecatedLastTimestamp: "2023-03-08T12:26:04Z"
+deprecatedSource:
+  component: deployment-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:26:04Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:26:04Z"
+  name: downloads.174a7147c6b0ec82
+  namespace: openshift-console
+  resourceVersion: "16884"
+  uid: 1e712103-7764-4e00-b775-5088c862108f
+note: Scaled up replica set downloads-7bbdc89d79 to 1
+reason: ScalingReplicaSet
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: downloads
+  namespace: openshift-console
+  resourceVersion: "16880"
+  uid: 8c4edb94-290e-458f-9397-8699e902ca6f
+type: Normal
