@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:25:48Z"
+deprecatedLastTimestamp: "2023-03-08T12:25:48Z"
+deprecatedSource:
+  component: multus
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:25:48Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: multus
+    operation: Update
+    time: "2023-03-08T12:25:48Z"
+  name: olm-operator-74bfbdf7c9-l8v6s.174a71440113cecc
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "15770"
+  uid: 898ce005-9be7-43cf-beec-d2ebc3ac71bd
+note: Add eth0 [10.128.0.84/23] from ovn-kubernetes
+reason: AddedInterface
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: olm-operator-74bfbdf7c9-l8v6s
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "15639"
+  uid: 380d88ec-21fe-441f-9f7a-5ba1f6c9a2e2
+type: Normal
