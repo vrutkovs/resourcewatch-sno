@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 3
+deprecatedCount: 4
 deprecatedFirstTimestamp: "2023-03-08T12:01:28Z"
 deprecatedLastTimestamp: "2023-03-08T12:01:28Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-08T12:01:28Z"
   name: ingress-operator-98bd944c.174a6ff0264ef9f5
   namespace: openshift-ingress-operator
-  resourceVersion: "2002"
+  resourceVersion: "2004"
   uid: a07ecc05-64f4-46b2-ba2e-5dc254d60b71
 note: 'Error creating: pods "ingress-operator-98bd944c-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
   the cluster does not have any nodes'
