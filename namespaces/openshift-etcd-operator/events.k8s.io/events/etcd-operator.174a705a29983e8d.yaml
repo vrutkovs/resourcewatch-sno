@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:09:03Z"
+deprecatedLastTimestamp: "2023-03-08T12:09:03Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-member-observer-controller-etcdmemberscontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:09:03Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-08T12:09:03Z"
+  name: etcd-operator.174a705a29983e8d
+  namespace: openshift-etcd-operator
+  resourceVersion: "5174"
+  uid: 25caf33a-7264-43f0-97a9-73c901d74a07
+note: 'Operation cannot be fulfilled on etcds.operator.openshift.io "cluster": the
+  object has been modified; please apply your changes to the latest version and try
+  again'
+reason: EtcdMembersErrorUpdatingStatus
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 7c43379a-6a36-4015-adb4-fd13f2117c5e
+type: Warning
