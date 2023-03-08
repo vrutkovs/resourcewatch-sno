@@ -1,0 +1,74 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    service.beta.openshift.io/serving-cert-secret-name: machine-api-operator-webhook-cert
+  creationTimestamp: "2023-03-08T12:25:44Z"
+  labels:
+    k8s-app: machine-api-operator-webhook
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:service.beta.openshift.io/serving-cert-secret-name: {}
+        f:labels:
+          .: {}
+          f:k8s-app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757"}: {}
+      f:spec:
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":443,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-08T12:25:44Z"
+  name: machine-api-operator-webhook
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
+  resourceVersion: "15507"
+  uid: 132d4238-7b1e-47be-908f-eaf6322dd0db
+spec:
+  clusterIP: 172.30.141.92
+  clusterIPs:
+  - 172.30.141.92
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: https
+    port: 443
+    protocol: TCP
+    targetPort: webhook-server
+  selector:
+    api: clusterapi
+    k8s-app: controller
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
