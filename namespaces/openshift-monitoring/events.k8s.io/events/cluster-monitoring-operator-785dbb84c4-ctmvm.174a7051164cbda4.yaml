@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:24Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:24Z"
+deprecatedSource:
+  component: default-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:24Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-08T12:08:24Z"
+  name: cluster-monitoring-operator-785dbb84c4-ctmvm.174a7051164cbda4
+  namespace: openshift-monitoring
+  resourceVersion: "3178"
+  uid: 9e2296fc-9e99-4bb9-add4-74f7daf1555b
+note: Successfully assigned openshift-monitoring/cluster-monitoring-operator-785dbb84c4-ctmvm
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: cluster-monitoring-operator-785dbb84c4-ctmvm
+  namespace: openshift-monitoring
+  resourceVersion: "2326"
+  uid: e47b400c-ff39-4c40-a831-56ed16fb4165
+type: Normal
