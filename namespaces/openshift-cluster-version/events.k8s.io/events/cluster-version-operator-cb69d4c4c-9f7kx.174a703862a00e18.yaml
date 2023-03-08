@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 3
+deprecatedFirstTimestamp: "2023-03-08T12:06:38Z"
+deprecatedLastTimestamp: "2023-03-08T12:06:40Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:06:38Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:06:40Z"
+  name: cluster-version-operator-cb69d4c4c-9f7kx.174a703862a00e18
+  namespace: openshift-cluster-version
+  resourceVersion: "2490"
+  uid: 35ffd12f-9ae5-4432-a4d2-513cd2c74c29
+note: 'MountVolume.SetUp failed for volume "serving-cert" : secret "cluster-version-operator-serving-cert"
+  not found'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: cluster-version-operator-cb69d4c4c-9f7kx
+  namespace: openshift-cluster-version
+  resourceVersion: "2364"
+  uid: dba7a327-9338-4eb3-9a2c-1952e67b789c
+type: Warning
