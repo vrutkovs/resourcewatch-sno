@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:34Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:34Z"
+deprecatedSource:
+  component: csi-snapshot-controller-operator-status-controller-statussyncer_csi-snapshot-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:34Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: csi-snapshot-controller-operator
+    operation: Update
+    time: "2023-03-08T12:08:34Z"
+  name: csi-snapshot-controller-operator.174a70536c451831
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "3625"
+  uid: 0101c4d6-5a8a-4020-97f3-38307c0bf92e
+note: 'Status for clusteroperator/csi-snapshot-controller changed: Upgradeable changed
+  from Unknown to True ("All is well")'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: csi-snapshot-controller-operator
+  namespace: openshift-cluster-storage-operator
+  uid: fb0ac1ee-b184-48a0-8229-7274958e046b
+type: Normal
