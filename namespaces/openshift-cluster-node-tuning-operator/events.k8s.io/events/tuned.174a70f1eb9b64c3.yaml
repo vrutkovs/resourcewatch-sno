@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:19:55Z"
+deprecatedLastTimestamp: "2023-03-08T12:19:55Z"
+deprecatedSource:
+  component: daemonset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:19:55Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:19:55Z"
+  name: tuned.174a70f1eb9b64c3
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "11995"
+  uid: a7ad09e8-dbab-4d29-96ad-dfcde794d7a2
+note: 'Created pod: tuned-6tzvc'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: DaemonSet
+  name: tuned
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "11727"
+  uid: 91ed5045-855a-485c-9153-5fee9f820926
+type: Normal
