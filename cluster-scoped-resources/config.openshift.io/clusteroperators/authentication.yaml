@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:18:17Z"
+    time: "2023-03-08T12:19:55Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "10914"
+  resourceVersion: "12035"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
@@ -60,8 +60,7 @@ status:
   - lastTransitionTime: "2023-03-08T12:11:40Z"
     message: "IngressStateEndpointsDegraded: No subsets found for the endpoints of
       oauth-server\nOAuthClientsControllerDegraded: no ingress for host oauth-openshift.apps.vrutkovs.choomba.one
-      in route oauth-openshift in namespace openshift-authentication\nOAuthServerConfigObservationDegraded:
-      secret \"v4-0-config-system-router-certs\" not found\nOAuthServerDeploymentDegraded:
+      in route oauth-openshift in namespace openshift-authentication\nOAuthServerDeploymentDegraded:
       waiting for the oauth-openshift route to contain an admitted ingress: no admitted
       ingress for route oauth-openshift in namespace openshift-authentication\nOAuthServerDeploymentDegraded:
       \nOAuthServerRouteEndpointAccessibleControllerDegraded: route \"openshift-authentication/oauth-openshift\":
@@ -75,7 +74,7 @@ status:
       failed to get oauth metadata from openshift-config-managed/oauth-openshift ConfigMap:
       configmap \"oauth-openshift\" not found (check authentication operator, it is
       supposed to create this)"
-    reason: IngressStateEndpoints_MissingSubsets::OAuthClientsController_SyncError::OAuthServerConfigObservation_Error::OAuthServerDeployment_PreconditionNotFulfilled::OAuthServerRouteEndpointAccessibleController_SyncError::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError::RouterCerts_NoRouterCertSecret::WellKnownReadyController_SyncError
+    reason: IngressStateEndpoints_MissingSubsets::OAuthClientsController_SyncError::OAuthServerDeployment_PreconditionNotFulfilled::OAuthServerRouteEndpointAccessibleController_SyncError::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError::RouterCerts_NoRouterCertSecret::WellKnownReadyController_SyncError
     status: "True"
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:17:48Z"
