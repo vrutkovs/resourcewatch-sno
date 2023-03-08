@@ -35,9 +35,9 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:25:25Z"
+    time: "2023-03-08T12:25:40Z"
   name: version
-  resourceVersion: "15279"
+  resourceVersion: "15425"
   uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
 spec:
   channel: stable-4.13
@@ -88,7 +88,7 @@ status:
     status: "False"
     type: Failing
   - lastTransitionTime: "2023-03-08T12:00:43Z"
-    message: 'Working towards 4.13.0-ec.4: 68 of 839 done (8% complete)'
+    message: 'Working towards 4.13.0-ec.4: 574 of 839 done (68% complete)'
     status: "True"
     type: Progressing
   desired:
