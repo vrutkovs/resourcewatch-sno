@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:22:09Z"
+deprecatedLastTimestamp: "2023-03-08T12:22:09Z"
+deprecatedSource:
+  component: cert-syncer-certsynccontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:22:09Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:22:09Z"
+  name: kube-controller-manager-vrutkovs-sno.174a711132684272
+  namespace: openshift-kube-controller-manager
+  resourceVersion: "14273"
+  uid: 3bd941b9-3015-4576-9fb3-0f018a3a4165
+note: Controller "CertSyncController" resync interval is set to 0s which might lead
+  to client request throttling
+reason: FastControllerResync
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: kube-controller-manager-vrutkovs-sno
+  namespace: openshift-kube-controller-manager
+type: Warning
