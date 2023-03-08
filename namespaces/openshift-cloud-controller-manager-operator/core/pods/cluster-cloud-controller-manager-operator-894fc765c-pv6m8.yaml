@@ -147,7 +147,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-cloud-controller-manager-operator-894fc765c
     uid: 9a304169-5f1a-435b-972d-00a0be0cf15f
-  resourceVersion: "15805"
+  resourceVersion: "15809"
   uid: 4d20d7cd-80bb-44b9-9e49-e4dc9d3abb9e
 spec:
   containers:
@@ -248,6 +248,7 @@ spec:
   hostNetwork: true
   imagePullSecrets:
   - name: cluster-cloud-controller-manager-dockercfg-hhqdx
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -313,5 +314,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:25:48Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
