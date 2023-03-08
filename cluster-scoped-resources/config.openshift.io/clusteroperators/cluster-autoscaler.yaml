@@ -40,10 +40,11 @@ metadata:
       f:status:
         f:conditions: {}
         f:relatedObjects: {}
+        f:versions: {}
     manager: cluster-autoscaler-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:26:11Z"
+    time: "2023-03-08T12:26:26Z"
   name: cluster-autoscaler
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -51,21 +52,21 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "17030"
+  resourceVersion: "17364"
   uid: 821d1bf1-b14d-481e-a886-2459307bc307
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:26:11Z"
+    message: at version 4.13.0-ec.4
+    reason: AsExpected
     status: "True"
     type: Available
-  - lastTransitionTime: "2023-03-08T12:26:11Z"
+  - lastTransitionTime: "2023-03-08T12:26:26Z"
     status: "False"
     type: Progressing
-  - lastTransitionTime: "2023-03-08T12:26:11Z"
-    message: machine-api not ready
-    reason: MissingDependency
-    status: "True"
+  - lastTransitionTime: "2023-03-08T12:26:26Z"
+    status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:26:11Z"
     status: "True"
@@ -83,3 +84,6 @@ status:
   - group: ""
     name: openshift-machine-api
     resource: namespaces
+  versions:
+  - name: operator
+    version: 4.13.0-ec.4
