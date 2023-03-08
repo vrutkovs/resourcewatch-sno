@@ -1,0 +1,41 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-08T12:25:45.080000Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:25:45Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-08T12:25:45Z"
+  name: cluster-samples-operator-6cff8b9478-htfmf.174a714350b963e9
+  namespace: openshift-cluster-samples-operator
+  resourceVersion: "15529"
+  uid: a12edcd2-3c26-427c-bf8e-ded2c151b16f
+note: Successfully assigned openshift-cluster-samples-operator/cluster-samples-operator-6cff8b9478-htfmf
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: cluster-samples-operator-6cff8b9478-htfmf
+  namespace: openshift-cluster-samples-operator
+  resourceVersion: "15522"
+  uid: efdcac38-ac25-48db-9607-8aa7285f3d0e
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
