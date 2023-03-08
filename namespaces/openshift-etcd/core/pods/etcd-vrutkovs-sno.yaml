@@ -783,6 +783,51 @@ metadata:
     manager: kubelet
     operation: Update
     time: "2023-03-08T12:14:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.68"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:15:06Z"
   name: etcd-vrutkovs-sno
   namespace: openshift-etcd
   ownerReferences:
@@ -791,7 +836,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
-  resourceVersion: "6760"
+  resourceVersion: "6774"
   uid: cf9811a7-d4a2-4ed8-abb3-a531bdd2d072
 spec:
   containers:
@@ -1341,5 +1386,115 @@ spec:
       type: ""
     name: log-dir
 status:
-  phase: Pending
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:13:43Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:13:55Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:13:55Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:10:25Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://810917bb816077cbd542c84f1b49cf21b04f11967e92b9b030789398d33062e0
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4c1814ed9c062160a4e55c8b35cce9b9934348bb2522187a5781a05b9174df82
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4c1814ed9c062160a4e55c8b35cce9b9934348bb2522187a5781a05b9174df82
+    lastState: {}
+    name: etcd
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-08T12:13:43Z"
+  - containerID: cri-o://0073c380a7341301e3942a16d19f2eb7dadfc84c3eb3f96bbdf768f468bec8b2
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4c1814ed9c062160a4e55c8b35cce9b9934348bb2522187a5781a05b9174df82
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4c1814ed9c062160a4e55c8b35cce9b9934348bb2522187a5781a05b9174df82
+    lastState: {}
+    name: etcd-metrics
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-08T12:13:43Z"
+  - containerID: cri-o://5043d7caed46dfee68dfc6bf6778e1b7aeaa9faf4cdc98b3b8396547edf0d638
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4cb8a51c59a5bdc38bc97ea684f0bfebe240dede2f982a5b1f8baedeac1e0719
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4cb8a51c59a5bdc38bc97ea684f0bfebe240dede2f982a5b1f8baedeac1e0719
+    lastState: {}
+    name: etcd-readyz
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-08T12:13:44Z"
+  - containerID: cri-o://a51e803f889d0501cd79d12f983a0caf0308d6ab96ea584e0bd65f8e0f691ef2
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4c1814ed9c062160a4e55c8b35cce9b9934348bb2522187a5781a05b9174df82
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4c1814ed9c062160a4e55c8b35cce9b9934348bb2522187a5781a05b9174df82
+    lastState: {}
+    name: etcdctl
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-08T12:13:43Z"
+  hostIP: 10.0.130.68
+  initContainerStatuses:
+  - containerID: cri-o://7f0c6d5e4b1b6b5bf99726715aa09396b6e70c04cf13b3c83dad773af68ccbf0
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4c1814ed9c062160a4e55c8b35cce9b9934348bb2522187a5781a05b9174df82
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4c1814ed9c062160a4e55c8b35cce9b9934348bb2522187a5781a05b9174df82
+    lastState: {}
+    name: setup
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: cri-o://7f0c6d5e4b1b6b5bf99726715aa09396b6e70c04cf13b3c83dad773af68ccbf0
+        exitCode: 0
+        finishedAt: "2023-03-08T12:13:15Z"
+        reason: Completed
+        startedAt: "2023-03-08T12:13:15Z"
+  - containerID: cri-o://e39ef46075d78ab4ce7a31b4e630a512433bfbbf1e4cf34d99122bb7e903f48a
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4c1814ed9c062160a4e55c8b35cce9b9934348bb2522187a5781a05b9174df82
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4c1814ed9c062160a4e55c8b35cce9b9934348bb2522187a5781a05b9174df82
+    lastState: {}
+    name: etcd-ensure-env-vars
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: cri-o://e39ef46075d78ab4ce7a31b4e630a512433bfbbf1e4cf34d99122bb7e903f48a
+        exitCode: 0
+        finishedAt: "2023-03-08T12:13:26Z"
+        reason: Completed
+        startedAt: "2023-03-08T12:13:26Z"
+  - containerID: cri-o://9f27ffb7c65a69d9f09d44aa83a5735468e7853ac0190c37fd65689a47fae621
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4c1814ed9c062160a4e55c8b35cce9b9934348bb2522187a5781a05b9174df82
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4c1814ed9c062160a4e55c8b35cce9b9934348bb2522187a5781a05b9174df82
+    lastState: {}
+    name: etcd-resources-copy
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: cri-o://9f27ffb7c65a69d9f09d44aa83a5735468e7853ac0190c37fd65689a47fae621
+        exitCode: 0
+        finishedAt: "2023-03-08T12:13:42Z"
+        reason: Completed
+        startedAt: "2023-03-08T12:13:42Z"
+  phase: Running
+  podIP: 10.0.130.68
+  podIPs:
+  - ip: 10.0.130.68
   qosClass: Burstable
+  startTime: "2023-03-08T12:10:25Z"
