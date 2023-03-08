@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:19:39Z"
+deprecatedLastTimestamp: "2023-03-08T12:19:39Z"
+deprecatedSource:
+  component: multus
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:19:39Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: multus
+    operation: Update
+    time: "2023-03-08T12:19:39Z"
+  name: cluster-monitoring-operator-785dbb84c4-ctmvm.174a70ee4e96e6e5
+  namespace: openshift-monitoring
+  resourceVersion: "11492"
+  uid: 2c51f80a-039c-4c78-ba8f-05702dfc776c
+note: Add eth0 [10.128.0.10/23] from ovn-kubernetes
+reason: AddedInterface
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: cluster-monitoring-operator-785dbb84c4-ctmvm
+  namespace: openshift-monitoring
+  resourceVersion: "3189"
+  uid: e47b400c-ff39-4c40-a831-56ed16fb4165
+type: Normal
