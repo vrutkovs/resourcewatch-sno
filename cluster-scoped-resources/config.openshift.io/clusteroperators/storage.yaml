@@ -46,7 +46,7 @@ metadata:
     manager: cluster-storage-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:25:55Z"
+    time: "2023-03-08T12:25:57Z"
   name: storage
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -54,7 +54,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "16270"
+  resourceVersion: "16418"
   uid: 7154f510-2317-4c82-907a-9155356493fd
 spec: {}
 status:
@@ -75,9 +75,10 @@ status:
     reason: AsExpected
     status: "True"
     type: Available
-  - lastTransitionTime: "2023-03-08T12:25:55Z"
-    reason: NoData
-    status: Unknown
+  - lastTransitionTime: "2023-03-08T12:25:57Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
     type: Upgradeable
   extension: null
   relatedObjects:
