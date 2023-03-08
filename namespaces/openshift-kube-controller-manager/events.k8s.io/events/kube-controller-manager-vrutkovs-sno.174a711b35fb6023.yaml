@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:22:52Z"
+deprecatedLastTimestamp: "2023-03-08T12:22:52Z"
+deprecatedSource:
+  component: cluster-policy-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:22:52Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-08T12:22:52Z"
+  name: kube-controller-manager-vrutkovs-sno.174a711b35fb6023
+  namespace: openshift-kube-controller-manager
+  resourceVersion: "14536"
+  uid: ff2e9b5e-831e-4200-9103-64468efebc85
+note: 'unable to get cluster infrastructure status, using HA cluster values for leader
+  election: infrastructures.config.openshift.io "cluster" is forbidden: User "system:kube-controller-manager"
+  cannot get resource "infrastructures" in API group "config.openshift.io" at the
+  cluster scope'
+reason: ClusterInfrastructureStatus
+regarding:
+  kind: Pod
+  name: kube-controller-manager-vrutkovs-sno
+  namespace: openshift-kube-controller-manager
+type: Warning
