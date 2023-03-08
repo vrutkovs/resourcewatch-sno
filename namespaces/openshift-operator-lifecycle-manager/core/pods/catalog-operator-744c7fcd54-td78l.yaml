@@ -139,7 +139,7 @@ metadata:
     kind: ReplicaSet
     name: catalog-operator-744c7fcd54
     uid: f4c7982e-ac08-46eb-a520-94a65cff000b
-  resourceVersion: "15689"
+  resourceVersion: "15692"
   uid: bba22bf0-3ab5-409f-a7a4-d169da4f9831
 spec:
   containers:
@@ -215,6 +215,7 @@ spec:
   enableServiceLinks: true
   imagePullSecrets:
   - name: olm-operator-serviceaccount-dockercfg-h747x
+  nodeName: vrutkovs-sno
   nodeSelector:
     kubernetes.io/os: linux
     node-role.kubernetes.io/master: ""
@@ -281,5 +282,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:25:47Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
