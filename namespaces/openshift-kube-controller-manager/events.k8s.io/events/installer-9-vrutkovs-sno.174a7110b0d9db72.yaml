@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:22:07Z"
+deprecatedLastTimestamp: "2023-03-08T12:22:07Z"
+deprecatedSource:
+  component: multus
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:22:07Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: multus
+    operation: Update
+    time: "2023-03-08T12:22:07Z"
+  name: installer-9-vrutkovs-sno.174a7110b0d9db72
+  namespace: openshift-kube-controller-manager
+  resourceVersion: "14250"
+  uid: b6ad3e57-a716-47db-992f-d6961605a8c2
+note: Add eth0 [10.128.0.79/23] from ovn-kubernetes
+reason: AddedInterface
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: installer-9-vrutkovs-sno
+  namespace: openshift-kube-controller-manager
+  resourceVersion: "14242"
+  uid: e63cf31b-0c56-4f5c-bde9-c7a7e96e323c
+type: Normal
