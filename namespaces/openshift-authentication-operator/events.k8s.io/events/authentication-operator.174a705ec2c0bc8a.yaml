@@ -1,0 +1,53 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:09:23Z"
+deprecatedLastTimestamp: "2023-03-08T12:09:23Z"
+deprecatedSource:
+  component: oauth-apiserver-status-controller-statussyncer_authentication
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:09:23Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-08T12:09:23Z"
+  name: authentication-operator.174a705ec2c0bc8a
+  namespace: openshift-authentication-operator
+  resourceVersion: "5448"
+  uid: db73c789-45d8-4e5a-ae42-43f7429914b8
+note: 'Status for clusteroperator/authentication changed: Progressing changed from
+  False to True ("APIServerDeploymentProgressing: deployment/apiserver.openshift-oauth-apiserver:
+  0/1 pods have been updated to the latest generation"),Available message changed
+  from "APIServicesAvailable: PreconditionNotReady\nOAuthServerServiceEndpointAccessibleControllerAvailable:
+  service \"oauth-openshift\" not found\nOAuthServerServiceEndpointsEndpointAccessibleControllerAvailable:
+  endpoints \"oauth-openshift\" not found\nReadyIngressNodesAvailable: Authentication
+  requires functional ingress which requires at least one schedulable and ready node.
+  Got 0 worker nodes, 1 master nodes, 0 custom target nodes (none are schedulable
+  or ready for ingress pods)." to "APIServerDeploymentAvailable: no apiserver.openshift-oauth-apiserver
+  pods available on any node.\nAPIServicesAvailable: PreconditionNotReady\nOAuthServerServiceEndpointAccessibleControllerAvailable:
+  service \"oauth-openshift\" not found\nOAuthServerServiceEndpointsEndpointAccessibleControllerAvailable:
+  endpoints \"oauth-openshift\" not found\nReadyIngressNodesAvailable: Authentication
+  requires functional ingress which requires at least one schedulable and ready node.
+  Got 0 worker nodes, 1 master nodes, 0 custom target nodes (none are schedulable
+  or ready for ingress pods)."'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 0d9fc21a-8cec-4bfd-bab5-451303a4b438
+type: Normal
