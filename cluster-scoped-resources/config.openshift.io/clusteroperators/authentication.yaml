@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:09:00Z"
+    time: "2023-03-08T12:09:05Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "5078"
+  resourceVersion: "5214"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
@@ -66,6 +66,7 @@ status:
       IngressStateEndpointsDegraded: No endpoints found for oauth-server
       RevisionControllerDegraded: namespaces "openshift-oauth-apiserver" not found
       ResourceSyncControllerDegraded: namespaces "openshift-oauth-apiserver" not found
+      RouterCertsDegraded: neither the custom secret/v4-0-config-system-router-certs -n openshift-authentication or default secret/v4-0-config-system-custom-router-certs -n openshift-authentication could be retrieved: secret "v4-0-config-system-router-certs" not found
     reason: AsExpected
     status: "False"
     type: Degraded
