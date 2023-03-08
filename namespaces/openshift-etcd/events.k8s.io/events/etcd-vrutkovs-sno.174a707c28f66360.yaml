@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:11:29Z"
+deprecatedLastTimestamp: "2023-03-08T12:11:29Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:12:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:12:00Z"
+  name: etcd-vrutkovs-sno.174a707c28f66360
+  namespace: openshift-etcd
+  resourceVersion: "6362"
+  uid: 819d0fe7-5d15-4e71-8fe4-aa5365fb37c1
+note: "Startup probe error: Get \"https://10.0.130.68:9980/readyz\": net/http: request
+  canceled (Client.Timeout exceeded while awaiting headers)\nbody: \n"
+reason: ProbeError
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{etcd}
+  kind: Pod
+  name: etcd-vrutkovs-sno
+  namespace: openshift-etcd
+  uid: 8e822ea2d7794ebaaa92c04a3cd44bac
+type: Warning
