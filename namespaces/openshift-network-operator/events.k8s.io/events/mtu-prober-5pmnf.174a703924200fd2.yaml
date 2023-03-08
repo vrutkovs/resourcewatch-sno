@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:06:41Z"
+deprecatedLastTimestamp: "2023-03-08T12:06:41Z"
+deprecatedSource:
+  component: default-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:06:41Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-08T12:06:41Z"
+  name: mtu-prober-5pmnf.174a703924200fd2
+  namespace: openshift-network-operator
+  resourceVersion: "2522"
+  uid: 50fbc3cd-daae-427a-bde1-1a668384ad48
+note: Successfully assigned openshift-network-operator/mtu-prober-5pmnf to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: mtu-prober-5pmnf
+  namespace: openshift-network-operator
+  resourceVersion: "2518"
+  uid: c3ecb55d-6949-4f13-bd59-415da1f8d741
+type: Normal
