@@ -30,7 +30,6 @@ metadata:
       f:status:
         .: {}
         f:extension: {}
-        f:relatedObjects: {}
     manager: cluster-version-operator
     operation: Update
     subresource: status
@@ -40,6 +39,7 @@ metadata:
     fieldsV1:
       f:status:
         f:conditions: {}
+        f:relatedObjects: {}
     manager: machine-api-operator
     operation: Update
     subresource: status
@@ -51,7 +51,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "17183"
+  resourceVersion: "17184"
   uid: 7ba72293-82db-4169-8de2-e0eb152c61c1
 spec: {}
 status:
@@ -77,15 +77,19 @@ status:
     resource: namespaces
   - group: machine.openshift.io
     name: ""
+    namespace: openshift-machine-api
     resource: machines
   - group: machine.openshift.io
     name: ""
+    namespace: openshift-machine-api
     resource: machinesets
   - group: machine.openshift.io
     name: ""
+    namespace: openshift-machine-api
     resource: machinehealthchecks
   - group: rbac.authorization.k8s.io
     name: ""
+    namespace: openshift-machine-api
     resource: roles
   - group: rbac.authorization.k8s.io
     name: machine-api-operator
@@ -95,4 +99,5 @@ status:
     resource: clusterroles
   - group: metal3.io
     name: ""
+    namespace: openshift-machine-api
     resource: baremetalhosts
