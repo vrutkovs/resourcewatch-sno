@@ -827,7 +827,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:15:06Z"
+    time: "2023-03-08T12:15:28Z"
   name: etcd-vrutkovs-sno
   namespace: openshift-etcd
   ownerReferences:
@@ -836,7 +836,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
-  resourceVersion: "6774"
+  resourceVersion: "7032"
   uid: cf9811a7-d4a2-4ed8-abb3-a531bdd2d072
 spec:
   containers:
@@ -1388,19 +1388,19 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:13:43Z"
+    lastTransitionTime: "2023-03-08T12:15:28Z"
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:13:55Z"
+    lastTransitionTime: "2023-03-08T12:15:28Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:13:55Z"
+    lastTransitionTime: "2023-03-08T12:15:28Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:10:25Z"
+    lastTransitionTime: "2023-03-08T12:15:28Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
@@ -1497,4 +1497,4 @@ status:
   podIPs:
   - ip: 10.0.130.68
   qosClass: Burstable
-  startTime: "2023-03-08T12:10:25Z"
+  startTime: "2023-03-08T12:15:28Z"
