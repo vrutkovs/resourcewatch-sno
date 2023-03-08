@@ -170,8 +170,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -184,8 +182,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -211,7 +207,7 @@ metadata:
     kind: ReplicaSet
     name: catalog-operator-744c7fcd54
     uid: f4c7982e-ac08-46eb-a520-94a65cff000b
-  resourceVersion: "15893"
+  resourceVersion: "15926"
   uid: bba22bf0-3ab5-409f-a7a4-d169da4f9831
 spec:
   containers:
@@ -360,16 +356,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:25:47Z"
-    message: 'containers with unready status: [catalog-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:25:50Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:25:47Z"
-    message: 'containers with unready status: [catalog-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:25:50Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:25:47Z"
@@ -381,7 +373,7 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f409a5e0f81915c2aed69504472ce5f54ba568f7bd73c5110388cb541ac66426
     lastState: {}
     name: catalog-operator
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
