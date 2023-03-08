@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:11:50Z"
+    time: "2023-03-08T12:11:51Z"
   name: kube-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,17 +52,51 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "6257"
+  resourceVersion: "6273"
   uid: 03522acc-29b6-46fb-bd37-7383fc37ffe9
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:08:27Z"
-    message: |-
-      NodeControllerDegraded: All master nodes are ready
-      TargetConfigControllerDegraded: "configmap/config": Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/configmaps/config": dial tcp 172.30.0.1:443: connect: connection refused
-      TargetConfigControllerDegraded: "configmap/kube-apiserver-pod": Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/configmaps/kube-apiserver-pod": dial tcp 172.30.0.1:443: connect: connection refused
-      TargetConfigControllerDegraded: "configmap/client-ca": Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/configmaps/client-ca": dial tcp 172.30.0.1:443: connect: connection refused
+    message: "NodeControllerDegraded: All master nodes are ready\nNodeInstallerDegraded:
+      1 nodes are failing on revision 2:\nNodeInstallerDegraded: installer: ng) (len=31)
+      \"check-endpoints-client-cert-key\",\nNodeInstallerDegraded:   (string) (len=14)
+      \"kubelet-client\",\nNodeInstallerDegraded:   (string) (len=16) \"node-kubeconfigs\"\nNodeInstallerDegraded:
+      \ },\nNodeInstallerDegraded:  OptionalCertSecretNamePrefixes: ([]string) (len=11
+      cap=16) {\nNodeInstallerDegraded:   (string) (len=17) \"user-serving-cert\",\nNodeInstallerDegraded:
+      \  (string) (len=21) \"user-serving-cert-000\",\nNodeInstallerDegraded:   (string)
+      (len=21) \"user-serving-cert-001\",\nNodeInstallerDegraded:   (string) (len=21)
+      \"user-serving-cert-002\",\nNodeInstallerDegraded:   (string) (len=21) \"user-serving-cert-003\",\nNodeInstallerDegraded:
+      \  (string) (len=21) \"user-serving-cert-004\",\nNodeInstallerDegraded:   (string)
+      (len=21) \"user-serving-cert-005\",\nNodeInstallerDegraded:   (string) (len=21)
+      \"user-serving-cert-006\",\nNodeInstallerDegraded:   (string) (len=21) \"user-serving-cert-007\",\nNodeInstallerDegraded:
+      \  (string) (len=21) \"user-serving-cert-008\",\nNodeInstallerDegraded:   (string)
+      (len=21) \"user-serving-cert-009\"\nNodeInstallerDegraded:  CertConfigMapNamePrefixes:
+      ([]string) (len=4 cap=4) {\nNodeInstallerDegraded:   (string) (len=20) \"aggregator-client-ca\",\nNodeInstallerDegraded:
+      \  (string) (len=9) \"client-ca\",\nNodeInstallerDegraded:   (string) (len=29)
+      \"control-plane-node-kubeconfig\",\nNodeInstallerDegraded:   (string) (len=26)
+      \"check-endpoints-kubeconfig\"\nNodeInstallerDegraded:  OptionalCertConfigMapNamePrefixes:
+      ([]string) (len=1 cap=1) {\nNodeInstallerDegraded:   (string) (len=17) \"trusted-ca-bundle\"\nNodeInstallerDegraded:
+      \ CertDir: (string) (len=57) \"/etc/kubernetes/static-pod-resources/kube-apiserver-certs\",\nNodeInstallerDegraded:
+      \ ResourceDir: (string) (len=36) \"/etc/kubernetes/static-pod-resources\",\nNodeInstallerDegraded:
+      \ PodManifestDir: (string) (len=25) \"/etc/kubernetes/manifests\",\nNodeInstallerDegraded:
+      \ Timeout: (time.Duration) 2m0s,\nNodeInstallerDegraded:  StaticPodManifestsLockFile:
+      (string) \"\",\nNodeInstallerDegraded:  PodMutationFns: ([]installerpod.PodMutationFunc)
+      <nil>,\nNodeInstallerDegraded:  KubeletVersion: (string) \"\"\nNodeInstallerDegraded:
+      })\nNodeInstallerDegraded: I0308 12:10:20.658712       1 cmd.go:410] Getting
+      controller reference for node vrutkovs-sno\nNodeInstallerDegraded: I0308 12:10:20.750851
+      \      1 cmd.go:423] Waiting for installer revisions to settle for node vrutkovs-sno\nNodeInstallerDegraded:
+      I0308 12:10:20.753233       1 cmd.go:515] Waiting additional period after revisions
+      have settled for node vrutkovs-sno\nNodeInstallerDegraded: I0308 12:10:50.753460
+      \      1 cmd.go:521] Getting installer pods for node vrutkovs-sno\nNodeInstallerDegraded:
+      F0308 12:11:04.757851       1 cmd.go:106] Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/pods?labelSelector=app%3Dinstaller\":
+      net/http: request canceled (Client.Timeout exceeded while awaiting headers)\nNodeInstallerDegraded:
+      \nTargetConfigControllerDegraded: \"configmap/config\": Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/configmaps/config\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nTargetConfigControllerDegraded:
+      \"configmap/kube-apiserver-pod\": Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/configmaps/kube-apiserver-pod\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nTargetConfigControllerDegraded:
+      \"configmap/client-ca\": Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/configmaps/client-ca\":
+      dial tcp 172.30.0.1:443: connect: connection refused"
     reason: AsExpected
     status: "False"
     type: Degraded
