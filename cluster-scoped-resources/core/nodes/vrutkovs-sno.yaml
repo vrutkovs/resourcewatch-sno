@@ -87,7 +87,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:20:33Z"
+    time: "2023-03-08T12:21:34Z"
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -116,7 +116,7 @@ metadata:
     operation: Update
     time: "2023-03-08T12:21:34Z"
   name: vrutkovs-sno
-  resourceVersion: "13440"
+  resourceVersion: "13441"
   uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
 spec:
   taints:
@@ -143,25 +143,25 @@ status:
     memory: 16342536Ki
     pods: "250"
   conditions:
-  - lastHeartbeatTime: "2023-03-08T12:20:33Z"
+  - lastHeartbeatTime: "2023-03-08T12:21:34Z"
     lastTransitionTime: "2023-03-08T12:06:32Z"
     message: kubelet has sufficient memory available
     reason: KubeletHasSufficientMemory
     status: "False"
     type: MemoryPressure
-  - lastHeartbeatTime: "2023-03-08T12:20:33Z"
+  - lastHeartbeatTime: "2023-03-08T12:21:34Z"
     lastTransitionTime: "2023-03-08T12:06:32Z"
     message: kubelet has no disk pressure
     reason: KubeletHasNoDiskPressure
     status: "False"
     type: DiskPressure
-  - lastHeartbeatTime: "2023-03-08T12:20:33Z"
+  - lastHeartbeatTime: "2023-03-08T12:21:34Z"
     lastTransitionTime: "2023-03-08T12:06:32Z"
     message: kubelet has sufficient PID available
     reason: KubeletHasSufficientPID
     status: "False"
     type: PIDPressure
-  - lastHeartbeatTime: "2023-03-08T12:20:33Z"
+  - lastHeartbeatTime: "2023-03-08T12:21:34Z"
     lastTransitionTime: "2023-03-08T12:15:38Z"
     message: kubelet is posting ready status
     reason: KubeletReady
@@ -225,6 +225,9 @@ status:
   - names:
     - quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e3c201c17dba67a00ba69b15c1bc1ed24a408c239746df507c78c8eb3a691f5f
     sizeBytes: 440635110
+  - names:
+    - quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a3883746d3a051fc71aafee3c7b958dd65f8c367fdb127dc398ad912dd802ade
+    sizeBytes: 438836482
   - names:
     - quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:89fa094c3e82b9f27e5e2d284021ad3f9ae9e022f7a4e8945446437cf81052f9
     sizeBytes: 438782402
@@ -318,9 +321,6 @@ status:
   - names:
     - quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3c97acac3647a99a40d57710a0ec697458c400421730e1a676111beda7caf958
     sizeBytes: 359419756
-  - names:
-    - quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5925f28a7682ef5cb91d4a3e3c9f6877ccc339ddb3533ad6376771314a79cb5a
-    sizeBytes: 353063937
   nodeInfo:
     architecture: amd64
     bootID: acb7d260-08da-4d99-a4ce-820458726afe
