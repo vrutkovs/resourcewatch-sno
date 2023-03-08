@@ -8,16 +8,49 @@ metadata:
     console.openshift.io/oauth-secret-version: "16955"
     console.openshift.io/oauth-serving-cert-config-version: "16821"
     console.openshift.io/proxy-config-version: "555"
-    console.openshift.io/service-ca-config-version: "16913"
-    console.openshift.io/trusted-ca-config-version: "16918"
+    console.openshift.io/service-ca-config-version: "16914"
+    console.openshift.io/trusted-ca-config-version: "16919"
     deployment.kubernetes.io/revision: "1"
-    operator.openshift.io/spec-hash: 7e9cc2c3c3efd6e26c05d352a25d2b8cf228dc326aa608d9e9d027786b957521
+    operator.openshift.io/spec-hash: c0dd87c616f0afbf9c46e19bea9f962ffd301016e42143c3ca2a987675695080
   creationTimestamp: "2023-03-08T12:26:08Z"
-  generation: 1
+  generation: 2
   labels:
     app: console
     component: ui
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:replicas: {}
+        f:unavailableReplicas: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:26:09Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -128,6 +161,11 @@ metadata:
                 f:terminationMessagePolicy: {}
                 f:volumeMounts:
                   .: {}
+                  k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
                   k:{"mountPath":"/var/console-config"}:
                     .: {}
                     f:mountPath: {}
@@ -205,45 +243,20 @@ metadata:
                   f:defaultMode: {}
                   f:name: {}
                 f:name: {}
+              k:{"name":"trusted-ca-bundle"}:
+                .: {}
+                f:configMap:
+                  .: {}
+                  f:defaultMode: {}
+                  f:items: {}
+                  f:name: {}
+                f:name: {}
     manager: console
     operation: Update
-    time: "2023-03-08T12:26:08Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:deployment.kubernetes.io/revision: {}
-      f:status:
-        f:conditions:
-          .: {}
-          k:{"type":"Available"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Progressing"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:observedGeneration: {}
-        f:replicas: {}
-        f:unavailableReplicas: {}
-        f:updatedReplicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:26:09Z"
+    time: "2023-03-08T12:26:13Z"
   name: console
   namespace: openshift-console
-  resourceVersion: "16983"
+  resourceVersion: "17104"
   uid: 8a031ddc-cef6-4b34-a5d4-692f8a8e2198
 spec:
   progressDeadlineSeconds: 600
@@ -267,8 +280,8 @@ spec:
         console.openshift.io/oauth-secret-version: "16955"
         console.openshift.io/oauth-serving-cert-config-version: "16821"
         console.openshift.io/proxy-config-version: "555"
-        console.openshift.io/service-ca-config-version: "16913"
-        console.openshift.io/trusted-ca-config-version: "16918"
+        console.openshift.io/service-ca-config-version: "16914"
+        console.openshift.io/trusted-ca-config-version: "16919"
         target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
       creationTimestamp: null
       labels:
@@ -343,6 +356,9 @@ spec:
         - mountPath: /var/oauth-serving-cert
           name: oauth-serving-cert
           readOnly: true
+        - mountPath: /etc/pki/ca-trust/extracted/pem
+          name: trusted-ca-bundle
+          readOnly: true
       dnsPolicy: ClusterFirst
       nodeSelector:
         node-role.kubernetes.io/master: ""
@@ -385,6 +401,13 @@ spec:
           defaultMode: 420
           name: oauth-serving-cert
         name: oauth-serving-cert
+      - configMap:
+          defaultMode: 420
+          items:
+          - key: ca-bundle.crt
+            path: tls-ca-bundle.pem
+          name: trusted-ca-bundle
+        name: trusted-ca-bundle
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:26:08Z"
