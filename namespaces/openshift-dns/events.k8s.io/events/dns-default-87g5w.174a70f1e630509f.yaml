@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:19:55Z"
+deprecatedLastTimestamp: "2023-03-08T12:19:55Z"
+deprecatedSource:
+  component: default-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:19:55Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-08T12:19:55Z"
+  name: dns-default-87g5w.174a70f1e630509f
+  namespace: openshift-dns
+  resourceVersion: "11920"
+  uid: fbb0e42d-2dee-45ed-911b-c79970141889
+note: Successfully assigned openshift-dns/dns-default-87g5w to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: dns-default-87g5w
+  namespace: openshift-dns
+  resourceVersion: "11912"
+  uid: 7718d547-6085-453d-accb-0f63242af132
+type: Normal
