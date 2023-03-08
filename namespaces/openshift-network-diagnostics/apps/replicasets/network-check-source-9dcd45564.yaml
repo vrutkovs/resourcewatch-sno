@@ -111,6 +111,24 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-08T12:07:10Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ReplicaFailure"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:07:30Z"
   name: network-check-source-9dcd45564
   namespace: openshift-network-diagnostics
   ownerReferences:
@@ -120,7 +138,7 @@ metadata:
     kind: Deployment
     name: network-check-source
     uid: a8f68cbe-8e59-4814-983d-24f08b7c11a8
-  resourceVersion: "2924"
+  resourceVersion: "2966"
   uid: fb49b17c-d3a9-4bb8-b46f-87ce483fafe5
 spec:
   replicas: 1
@@ -189,4 +207,12 @@ spec:
       serviceAccountName: network-diagnostics
       terminationGracePeriodSeconds: 30
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-08T12:07:30Z"
+    message: 'pods "network-check-source-9dcd45564-" is forbidden: error fetching
+      namespace "openshift-network-diagnostics": unable to find annotation openshift.io/sa.scc.uid-range'
+    reason: FailedCreate
+    status: "True"
+    type: ReplicaFailure
+  observedGeneration: 1
   replicas: 0
