@@ -180,8 +180,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -194,8 +192,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -211,7 +207,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:18:19Z"
+    time: "2023-03-08T12:18:20Z"
   name: openshift-controller-manager-operator-69f8746cfb-hfljd
   namespace: openshift-controller-manager-operator
   ownerReferences:
@@ -221,7 +217,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-controller-manager-operator-69f8746cfb
     uid: 50be6136-a813-42f8-b1f8-c13f90e301de
-  resourceVersion: "10935"
+  resourceVersion: "10946"
   uid: 1c78d5f0-7109-4889-aece-efd5cf4395df
 spec:
   containers:
@@ -344,31 +340,22 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:18:19Z"
-    message: 'containers with unready status: [openshift-controller-manager-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:18:20Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:18:19Z"
-    message: 'containers with unready status: [openshift-controller-manager-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:18:20Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:08:24Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://a33da4265a694f7b3b0af422eab901dfe13e626566e4652ab7113a0841a01dee
+  - containerID: cri-o://8acd5f3675ac2b1d13d4af64144e2f987858b1b7bd208258c059a9cd0c610e2c
     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:733cd2c1e9d2048fa9673bf33699fd49cbc9834577c2a605ca3f5e63d2786f4b
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:733cd2c1e9d2048fa9673bf33699fd49cbc9834577c2a605ca3f5e63d2786f4b
-    lastState: {}
-    name: openshift-controller-manager-operator
-    ready: false
-    restartCount: 0
-    started: false
-    state:
+    lastState:
       terminated:
         containerID: cri-o://a33da4265a694f7b3b0af422eab901dfe13e626566e4652ab7113a0841a01dee
         exitCode: 1
@@ -392,6 +379,13 @@ status:
           I0308 12:18:18.843083       1 base_controller.go:104] All ConfigObserver workers have been terminated
         reason: Error
         startedAt: "2023-03-08T12:08:33Z"
+    name: openshift-controller-manager-operator
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-08T12:18:19Z"
   hostIP: 10.0.130.68
   phase: Running
   podIP: 10.128.0.22
