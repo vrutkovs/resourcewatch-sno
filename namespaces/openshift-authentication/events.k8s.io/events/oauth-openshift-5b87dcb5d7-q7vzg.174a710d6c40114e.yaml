@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:21:53Z"
+deprecatedLastTimestamp: "2023-03-08T12:21:53Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:21:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:21:53Z"
+  name: oauth-openshift-5b87dcb5d7-q7vzg.174a710d6c40114e
+  namespace: openshift-authentication
+  resourceVersion: "14012"
+  uid: c3233dd0-3cf0-4e04-b9d9-3b42442e3f7d
+note: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:bb61838db60945373b49b1a0885d3404c87e06bbb6c7c19bc19402acf37349ff"
+reason: Pulling
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{oauth-openshift}
+  kind: Pod
+  name: oauth-openshift-5b87dcb5d7-q7vzg
+  namespace: openshift-authentication
+  resourceVersion: "13726"
+  uid: aa360de9-92ba-45f6-b15a-6a6cb1e22eaf
+type: Normal
