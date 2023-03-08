@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:06:46Z"
+deprecatedLastTimestamp: "2023-03-08T12:06:46Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:06:46Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:06:46Z"
+  name: assisted-installer-controller-vgqwd.174a703a28969676
+  namespace: assisted-installer
+  resourceVersion: "2555"
+  uid: e64d350a-7db4-439c-ac6c-835af452ffc3
+note: Started container assisted-installer-controller
+reason: Started
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{assisted-installer-controller}
+  kind: Pod
+  name: assisted-installer-controller-vgqwd
+  namespace: assisted-installer
+  resourceVersion: "2294"
+  uid: 173b810b-7fda-4f59-a37e-0a89b9deb93a
+type: Normal
