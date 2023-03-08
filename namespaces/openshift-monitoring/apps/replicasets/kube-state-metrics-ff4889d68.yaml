@@ -193,7 +193,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -207,7 +209,7 @@ metadata:
     kind: Deployment
     name: kube-state-metrics
     uid: 30fd2947-19d6-4fca-bd98-7f1baf196a1a
-  resourceVersion: "12462"
+  resourceVersion: "12487"
   uid: a276fa83-00de-4e2b-9dff-17c83204725a
 spec:
   replicas: 1
@@ -359,5 +361,6 @@ spec:
           defaultMode: 420
           secretName: kube-state-metrics-kube-rbac-proxy-config
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
