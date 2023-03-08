@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:08:36Z"
-deprecatedLastTimestamp: "2023-03-08T12:08:36Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:49Z"
 deprecatedSource:
   component: kube-controller-manager-operator-config-observer-configobserver
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-controller-manager-operator
     operation: Update
-    time: "2023-03-08T12:08:38Z"
+    time: "2023-03-08T12:08:51Z"
   name: kube-controller-manager-operator.174a7053da0b24f9
   namespace: openshift-kube-controller-manager-operator
-  resourceVersion: "4043"
+  resourceVersion: "4811"
   uid: fef6568d-7ef7-4718-9c59-659181a1da2e
 note: cipherSuites changed to ["TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256" "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
   "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384" "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
