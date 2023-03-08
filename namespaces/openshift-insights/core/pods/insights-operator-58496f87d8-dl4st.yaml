@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.86/23"],"mac_address":"0a:58:0a:80:00:56","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.86/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.86"
+          ],
+          "mac": "0a:58:0a:80:00:56",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-08T12:25:46Z"
@@ -185,6 +196,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-08T12:25:46Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:25:47Z"
   name: insights-operator-58496f87d8-dl4st
   namespace: openshift-insights
   ownerReferences:
@@ -194,7 +215,7 @@ metadata:
     kind: ReplicaSet
     name: insights-operator-58496f87d8
     uid: 916efdc6-0c0a-43ba-918a-5e4521d84d59
-  resourceVersion: "15675"
+  resourceVersion: "15765"
   uid: 599cc72f-35f6-4ef3-92d0-6a19bc0b4d17
 spec:
   containers:
