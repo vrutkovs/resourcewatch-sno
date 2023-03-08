@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.11/23"],"mac_address":"0a:58:0a:80:00:0b","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.11/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.11"
+          ],
+          "mac": "0a:58:0a:80:00:0b",
+          "default": true,
+          "dns": {}
+      }]
   creationTimestamp: "2023-03-08T12:06:33Z"
   generateName: openshift-kube-scheduler-operator-7965454467-
   labels:
@@ -192,6 +203,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-08T12:08:24Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:08:25Z"
   name: openshift-kube-scheduler-operator-7965454467-dq58n
   namespace: openshift-kube-scheduler-operator
   ownerReferences:
@@ -201,7 +222,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-kube-scheduler-operator-7965454467
     uid: 4e125cda-7c87-40f1-9614-1c6ccbb90e8b
-  resourceVersion: "3186"
+  resourceVersion: "3218"
   uid: 30e7cf20-dbb1-4ea1-b432-e793fb508198
 spec:
   automountServiceAccountToken: false
