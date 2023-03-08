@@ -169,15 +169,6 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:conditions:
-          .: {}
-          k:{"type":"ReplicaFailure"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
         f:observedGeneration: {}
     manager: kube-controller-manager
     operation: Update
@@ -192,7 +183,7 @@ metadata:
     kind: Deployment
     name: route-controller-manager
     uid: 9626b46e-97b8-4377-81b5-0e855aa9a633
-  resourceVersion: "5799"
+  resourceVersion: "7927"
   uid: 412e95e9-3dc9-4e3d-a020-294985a13b18
 spec:
   replicas: 1
@@ -314,12 +305,5 @@ spec:
           defaultMode: 420
           secretName: serving-cert
 status:
-  conditions:
-  - lastTransitionTime: "2023-03-08T12:09:57Z"
-    message: 'pods "route-controller-manager-7868f9fc6b-" is forbidden: error fetching
-      namespace "openshift-route-controller-manager": unable to find annotation openshift.io/sa.scc.uid-range'
-    reason: FailedCreate
-    status: "True"
-    type: ReplicaFailure
   observedGeneration: 2
   replicas: 0
