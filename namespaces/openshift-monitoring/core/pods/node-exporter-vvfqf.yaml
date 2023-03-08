@@ -245,8 +245,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -259,13 +257,12 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
         f:initContainerStatuses: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -276,7 +273,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:20:08Z"
+    time: "2023-03-08T12:20:09Z"
   name: node-exporter-vvfqf
   namespace: openshift-monitoring
   ownerReferences:
@@ -286,7 +283,7 @@ metadata:
     kind: DaemonSet
     name: node-exporter
     uid: 0735cd5e-5a22-4a81-ae5d-f8235c5d029c
-  resourceVersion: "12601"
+  resourceVersion: "12620"
   uid: e8c95668-9caf-49cf-8ca1-039ac0cb995e
 spec:
   affinity:
@@ -497,42 +494,40 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:20:05Z"
-    message: 'containers with unready status: [node-exporter kube-rbac-proxy]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:20:09Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:20:05Z"
-    message: 'containers with unready status: [node-exporter kube-rbac-proxy]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:20:09Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:20:05Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
-    imageID: ""
+  - containerID: cri-o://532ebcee67dc83200a06a6f0144889b63f4dfb79c2ce6c2b557679ae14d9fce5
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
     lastState: {}
     name: kube-rbac-proxy
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: PodInitializing
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3576c4bdb825087fc187266bfc13ac84c644ce18779fe864adc03303fab67063
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:20:08Z"
+  - containerID: cri-o://7d39b4dd7a2de00603ec8750157761683feae258bdf0aee7b2afaee9c07cb1ad
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3576c4bdb825087fc187266bfc13ac84c644ce18779fe864adc03303fab67063
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3576c4bdb825087fc187266bfc13ac84c644ce18779fe864adc03303fab67063
     lastState: {}
     name: node-exporter
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: PodInitializing
+      running:
+        startedAt: "2023-03-08T12:20:08Z"
   hostIP: 10.0.130.68
   initContainerStatuses:
   - containerID: cri-o://24bea4da357d60d5f19ebaa9caff9dbaab0d84b9ecaad3606bac83a529729748
@@ -549,7 +544,7 @@ status:
         finishedAt: "2023-03-08T12:20:07Z"
         reason: Completed
         startedAt: "2023-03-08T12:20:07Z"
-  phase: Pending
+  phase: Running
   podIP: 10.0.130.68
   podIPs:
   - ip: 10.0.130.68
