@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   annotations:
-    prometheus-operator-input-hash: "8108345036009359721"
+    prometheus-operator-input-hash: "15525807139945945274"
   creationTimestamp: "2023-03-08T12:21:29Z"
-  generation: 1
+  generation: 2
   labels:
     app.kubernetes.io/component: alert-router
     app.kubernetes.io/instance: main
@@ -12,6 +12,23 @@ metadata:
     app.kubernetes.io/part-of: openshift-monitoring
     app.kubernetes.io/version: 0.25.0
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:availableReplicas: {}
+        f:collisionCount: {}
+        f:currentReplicas: {}
+        f:currentRevision: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updateRevision: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:22:28Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -433,24 +450,7 @@ metadata:
           f:type: {}
     manager: PrometheusOperator
     operation: Update
-    time: "2023-03-08T12:21:29Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:availableReplicas: {}
-        f:collisionCount: {}
-        f:currentReplicas: {}
-        f:currentRevision: {}
-        f:observedGeneration: {}
-        f:readyReplicas: {}
-        f:replicas: {}
-        f:updateRevision: {}
-        f:updatedReplicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:22:28Z"
+    time: "2023-03-08T12:26:13Z"
   name: alertmanager-main
   namespace: openshift-monitoring
   ownerReferences:
@@ -460,7 +460,7 @@ metadata:
     kind: Alertmanager
     name: main
     uid: 88bd2cf9-8531-4ed0-afcc-9f12764e3378
-  resourceVersion: "14348"
+  resourceVersion: "17087"
   uid: 157b555d-b9f9-4bf6-8e9e-d13fe7c479d2
 spec:
   podManagementPolicy: Parallel
@@ -495,6 +495,7 @@ spec:
         - --data.retention=120h
         - --cluster.listen-address=
         - --web.listen-address=127.0.0.1:9093
+        - --web.external-url=https://console-openshift-console.apps.vrutkovs.choomba.one/monitoring
         - --web.route-prefix=/
         - --cluster.peer=alertmanager-main-0.alertmanager-operated:9094
         - --cluster.reconnect-timeout=5m
