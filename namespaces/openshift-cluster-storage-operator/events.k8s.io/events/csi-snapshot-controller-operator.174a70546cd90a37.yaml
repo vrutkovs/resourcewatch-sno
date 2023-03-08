@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:39Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:39Z"
+deprecatedSource:
+  component: csi-snapshot-controller-operator-status-controller-statussyncer_csi-snapshot-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:39Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: csi-snapshot-controller-operator
+    operation: Update
+    time: "2023-03-08T12:08:39Z"
+  name: csi-snapshot-controller-operator.174a70546cd90a37
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "4103"
+  uid: d1340791-d508-4b1f-9d32-f752f6f2bca1
+note: clusteroperator/csi-snapshot-controller version "operator" changed from "" to
+  "4.13.0-ec.4"
+reason: OperatorVersionChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: csi-snapshot-controller-operator
+  namespace: openshift-cluster-storage-operator
+  uid: fb0ac1ee-b184-48a0-8229-7274958e046b
+type: Normal
