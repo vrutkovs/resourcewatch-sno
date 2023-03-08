@@ -1,0 +1,40 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-08T12:25:50.046415Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:25:50Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-08T12:25:50Z"
+  name: certified-operators-fr6np.174a714478bee294
+  namespace: openshift-marketplace
+  resourceVersion: "15903"
+  uid: 3adb2521-5059-48b2-91ff-59342aea6866
+note: Successfully assigned openshift-marketplace/certified-operators-fr6np to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: certified-operators-fr6np
+  namespace: openshift-marketplace
+  resourceVersion: "15890"
+  uid: cd60beac-283c-40a9-9d25-41c311b91235
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
