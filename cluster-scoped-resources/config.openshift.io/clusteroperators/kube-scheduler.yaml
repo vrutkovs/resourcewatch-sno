@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:15:41Z"
+    time: "2023-03-08T12:16:16Z"
   name: kube-scheduler
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,13 +52,39 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "7271"
+  resourceVersion: "7453"
   uid: 22e29ce6-c07b-40ba-9194-b4b659d164c1
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:15:41Z"
-    message: 'NodeControllerDegraded: All master nodes are ready'
+    message: "NodeControllerDegraded: All master nodes are ready\nStaticPodsDegraded:
+      pod/openshift-kube-scheduler-vrutkovs-sno container \"kube-scheduler\" is terminated:
+      Completed: \nStaticPodsDegraded: pod/openshift-kube-scheduler-vrutkovs-sno container
+      \"kube-scheduler-cert-syncer\" is terminated: Error: bjectMeta{Name:\"openshift-kube-scheduler-vrutkovs-sno.174a70b43c015f9a\",
+      GenerateName:\"\", Namespace:\"openshift-kube-scheduler\", SelfLink:\"\", UID:\"\",
+      ResourceVersion:\"\", Generation:0, CreationTimestamp:time.Date(1, time.January,
+      1, 0, 0, 0, 0, time.UTC), DeletionTimestamp:<nil>, DeletionGracePeriodSeconds:(*int64)(nil),
+      Labels:map[string]string(nil), Annotations:map[string]string(nil), OwnerReferences:[]v1.OwnerReference(nil),
+      Finalizers:[]string(nil), ManagedFields:[]v1.ManagedFieldsEntry(nil)}, InvolvedObject:v1.ObjectReference{Kind:\"Pod\",
+      Namespace:\"openshift-kube-scheduler\", Name:\"openshift-kube-scheduler-vrutkovs-sno\",
+      UID:\"\", APIVersion:\"v1\", ResourceVersion:\"\", FieldPath:\"\"}, Reason:\"FastControllerResync\",
+      Message:\"Controller \\\"CertSyncController\\\" resync interval is set to 0s
+      which might lead to client request throttling\", Source:v1.EventSource{Component:\"cert-syncer-certsynccontroller\",
+      Host:\"\"}, FirstTimestamp:time.Date(2023, time.March, 8, 12, 15, 30, 552078234,
+      time.Local), LastTimestamp:time.Date(2023, time.March, 8, 12, 15, 30, 552078234,
+      time.Local), Count:1, Type:\"Warning\", EventTime:time.Date(1, time.January,
+      1, 0, 0, 0, 0, time.UTC), Series:(*v1.EventSeries)(nil), Action:\"\", Related:(*v1.ObjectReference)(nil),
+      ReportingController:\"\", ReportingInstance:\"\"}': 'Post \"https://localhost:6443/api/v1/namespaces/openshift-kube-scheduler/events\":
+      x509: certificate signed by unknown authority'(may retry after sleeping)\nStaticPodsDegraded:
+      W0308 12:16:14.301087       1 reflector.go:424] k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169:
+      failed to list *v1.Secret: Get \"https://localhost:6443/api/v1/namespaces/openshift-kube-scheduler/secrets?limit=500&resourceVersion=0\":
+      x509: certificate signed by unknown authority\nStaticPodsDegraded: E0308 12:16:14.301115
+      \      1 reflector.go:140] k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169:
+      Failed to watch *v1.Secret: failed to list *v1.Secret: Get \"https://localhost:6443/api/v1/namespaces/openshift-kube-scheduler/secrets?limit=500&resourceVersion=0\":
+      x509: certificate signed by unknown authority\nStaticPodsDegraded: \nStaticPodsDegraded:
+      pod/openshift-kube-scheduler-vrutkovs-sno container \"kube-scheduler-recovery-controller\"
+      is terminated: Completed: "
     reason: AsExpected
     status: "False"
     type: Degraded
