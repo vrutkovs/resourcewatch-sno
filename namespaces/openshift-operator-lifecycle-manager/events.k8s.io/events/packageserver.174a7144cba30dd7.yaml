@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:25:51Z"
+deprecatedLastTimestamp: "2023-03-08T12:25:51Z"
+deprecatedSource:
+  component: operator-lifecycle-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:25:51Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: olm
+    operation: Update
+    time: "2023-03-08T12:25:51Z"
+  name: packageserver.174a7144cba30dd7
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "16082"
+  uid: c1bcd3ae-e482-4c8b-a565-0e23964a7162
+note: all requirements found, attempting install
+reason: AllRequirementsMet
+regarding:
+  apiVersion: operators.coreos.com/v1alpha1
+  kind: ClusterServiceVersion
+  name: packageserver
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "16028"
+  uid: 622b616f-a7f6-40b9-b4a2-8fe70f1c3c21
+type: Normal
