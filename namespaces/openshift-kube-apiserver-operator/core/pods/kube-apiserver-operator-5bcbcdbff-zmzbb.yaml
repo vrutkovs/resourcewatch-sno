@@ -195,8 +195,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -209,8 +207,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -226,7 +222,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:19:16Z"
+    time: "2023-03-08T12:19:17Z"
   name: kube-apiserver-operator-5bcbcdbff-zmzbb
   namespace: openshift-kube-apiserver-operator
   ownerReferences:
@@ -236,7 +232,7 @@ metadata:
     kind: ReplicaSet
     name: kube-apiserver-operator-5bcbcdbff
     uid: 0d42a4b0-780b-44ee-bee0-72496d4cbb71
-  resourceVersion: "11306"
+  resourceVersion: "11333"
   uid: 5fc7c7c3-e9e9-4ef4-b942-0e7b4c1b1573
 spec:
   automountServiceAccountToken: false
@@ -354,37 +350,35 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:19:16Z"
-    message: 'containers with unready status: [kube-apiserver-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:19:17Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:19:16Z"
-    message: 'containers with unready status: [kube-apiserver-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:19:17Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:08:24Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://a1e2879175495af4fc47e9264d954911be43edb289c976eda507a16d6d5bf729
+  - containerID: cri-o://1724c01c75dfbbacd48892bab4dac82d548b67add8c650217b090e53914a40c5
     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
-    lastState: {}
-    name: kube-apiserver-operator
-    ready: false
-    restartCount: 0
-    started: false
-    state:
+    lastState:
       terminated:
         containerID: cri-o://a1e2879175495af4fc47e9264d954911be43edb289c976eda507a16d6d5bf729
         exitCode: 0
         finishedAt: "2023-03-08T12:19:16Z"
         reason: Completed
         startedAt: "2023-03-08T12:08:26Z"
+    name: kube-apiserver-operator
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-08T12:19:17Z"
   hostIP: 10.0.130.68
   phase: Running
   podIP: 10.128.0.4
