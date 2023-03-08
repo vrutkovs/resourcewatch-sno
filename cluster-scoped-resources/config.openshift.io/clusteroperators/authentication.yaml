@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:26:42Z"
+    time: "2023-03-08T12:26:44Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "17537"
+  resourceVersion: "17544"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
@@ -60,7 +60,6 @@ status:
   - lastTransitionTime: "2023-03-08T12:22:35Z"
     message: |-
       OAuthServerServiceEndpointAccessibleControllerDegraded: Get "https://172.30.76.170:443/healthz": dial tcp 172.30.76.170:443: connect: connection refused
-      IngressStateEndpointsDegraded: All 1 endpoints for oauth-server are reporting 'not ready'
       OAuthServerRouteEndpointAccessibleControllerDegraded: Get "https://oauth-openshift.apps.vrutkovs.choomba.one/healthz": EOF
       OAuthServerDeploymentDegraded: 1 of 1 requested instances are unavailable for oauth-openshift.openshift-authentication ()
     reason: AsExpected
