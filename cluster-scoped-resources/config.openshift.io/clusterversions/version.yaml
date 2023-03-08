@@ -36,9 +36,9 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:00:43Z"
+    time: "2023-03-08T12:00:44Z"
   name: version
-  resourceVersion: "643"
+  resourceVersion: "658"
   uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
 spec:
   channel: stable-4.13
@@ -205,4 +205,4 @@ status:
     verified: false
     version: 4.13.0-ec.4
   observedGeneration: 1
-  versionHash: ""
+  versionHash: 6NmX80aKvqw=
