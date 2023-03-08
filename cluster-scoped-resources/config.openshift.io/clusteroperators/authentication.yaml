@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "12108"
+  resourceVersion: "12116"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
@@ -67,14 +67,11 @@ status:
       status does not have a valid host address\nOAuthServerServiceEndpointAccessibleControllerDegraded:
       Get \"https://172.30.76.170:443/healthz\": dial tcp 172.30.76.170:443: connect:
       connection refused\nOAuthServerServiceEndpointsEndpointAccessibleControllerDegraded:
-      oauth service endpoints are not ready\nRouterCertsDegraded: neither the custom
-      secret/v4-0-config-system-router-certs -n openshift-authentication or default
-      secret/v4-0-config-system-custom-router-certs -n openshift-authentication could
-      be retrieved: secret \"v4-0-config-system-router-certs\" not found\nWellKnownReadyControllerDegraded:
-      failed to get oauth metadata from openshift-config-managed/oauth-openshift ConfigMap:
+      oauth service endpoints are not ready\nWellKnownReadyControllerDegraded: failed
+      to get oauth metadata from openshift-config-managed/oauth-openshift ConfigMap:
       configmap \"oauth-openshift\" not found (check authentication operator, it is
       supposed to create this)"
-    reason: IngressStateEndpoints_MissingSubsets::OAuthClientsController_SyncError::OAuthServerDeployment_PreconditionNotFulfilled::OAuthServerRouteEndpointAccessibleController_SyncError::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError::RouterCerts_NoRouterCertSecret::WellKnownReadyController_SyncError
+    reason: IngressStateEndpoints_MissingSubsets::OAuthClientsController_SyncError::OAuthServerDeployment_PreconditionNotFulfilled::OAuthServerRouteEndpointAccessibleController_SyncError::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError::WellKnownReadyController_SyncError
     status: "True"
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:17:48Z"
