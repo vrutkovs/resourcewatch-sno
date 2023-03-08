@@ -143,7 +143,7 @@ metadata:
     kind: Network
     name: cluster
     uid: 33106962-b4cb-47dc-aa0e-5f6b7299dae3
-  resourceVersion: "11966"
+  resourceVersion: "12020"
   uid: 57958d1a-d183-434f-8611-63ac05777daf
 spec:
   progressDeadlineSeconds: 600
@@ -247,7 +247,7 @@ spec:
           defaultMode: 420
           secretName: multus-admission-controller-secret
 status:
-  availableReplicas: 2
+  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-03-08T12:19:55Z"
     lastUpdateTime: "2023-03-08T12:19:55Z"
@@ -257,11 +257,11 @@ status:
     type: Available
   - lastTransitionTime: "2023-03-08T12:19:13Z"
     lastUpdateTime: "2023-03-08T12:19:55Z"
-    message: ReplicaSet "multus-admission-controller-7d4cfc4bd" is progressing.
-    reason: ReplicaSetUpdated
+    message: ReplicaSet "multus-admission-controller-7d4cfc4bd" has successfully progressed.
+    reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
   observedGeneration: 2
-  readyReplicas: 2
-  replicas: 2
+  readyReplicas: 1
+  replicas: 1
   updatedReplicas: 1
