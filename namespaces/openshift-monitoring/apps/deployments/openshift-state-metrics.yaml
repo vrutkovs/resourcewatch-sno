@@ -38,7 +38,9 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -202,7 +204,7 @@ metadata:
     time: "2023-03-08T12:20:05Z"
   name: openshift-state-metrics
   namespace: openshift-monitoring
-  resourceVersion: "12488"
+  resourceVersion: "12498"
   uid: 373323be-884a-4a34-9949-250400051049
 spec:
   progressDeadlineSeconds: 600
@@ -334,15 +336,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:20:05Z"
     lastUpdateTime: "2023-03-08T12:20:05Z"
-    message: Created new replica set "openshift-state-metrics-7f866c956b"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-08T12:20:05Z"
-    lastUpdateTime: "2023-03-08T12:20:05Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-08T12:20:05Z"
+    lastUpdateTime: "2023-03-08T12:20:05Z"
+    message: ReplicaSet "openshift-state-metrics-7f866c956b" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
