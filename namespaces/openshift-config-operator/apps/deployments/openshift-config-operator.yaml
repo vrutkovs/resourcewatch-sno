@@ -151,6 +151,7 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -170,13 +171,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:06:33Z"
+    time: "2023-03-08T12:08:37Z"
   name: openshift-config-operator
   namespace: openshift-config-operator
   ownerReferences:
@@ -185,7 +186,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "2394"
+  resourceVersion: "3955"
   uid: 0f3d0a19-b555-4b6b-8715-6ba5aa3885cb
 spec:
   progressDeadlineSeconds: 600
@@ -290,20 +291,21 @@ spec:
           optional: true
           secretName: config-operator-serving-cert
 status:
+  availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2023-03-08T12:01:18Z"
-    lastUpdateTime: "2023-03-08T12:01:18Z"
-    message: Deployment does not have minimum availability.
-    reason: MinimumReplicasUnavailable
-    status: "False"
+  - lastTransitionTime: "2023-03-08T12:08:37Z"
+    lastUpdateTime: "2023-03-08T12:08:37Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-08T12:01:18Z"
-    lastUpdateTime: "2023-03-08T12:06:33Z"
-    message: ReplicaSet "openshift-config-operator-59844477b6" is progressing.
-    reason: ReplicaSetUpdated
+    lastUpdateTime: "2023-03-08T12:08:37Z"
+    message: ReplicaSet "openshift-config-operator-59844477b6" has successfully progressed.
+    reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
