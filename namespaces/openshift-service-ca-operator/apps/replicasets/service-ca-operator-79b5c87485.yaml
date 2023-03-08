@@ -128,10 +128,8 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
@@ -146,7 +144,7 @@ metadata:
     kind: Deployment
     name: service-ca-operator
     uid: 2d92e597-e523-4158-95a0-2d91bbda0a57
-  resourceVersion: "3436"
+  resourceVersion: "9916"
   uid: 3e1895ba-82dd-4a8a-afe6-6177add00fb5
 spec:
   replicas: 1
@@ -233,8 +231,6 @@ spec:
           name: service-ca-operator-config
         name: config
 status:
-  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
-  readyReplicas: 1
   replicas: 1
