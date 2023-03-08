@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:09:24Z"
+deprecatedLastTimestamp: "2023-03-08T12:09:24Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:09:24Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-08T12:09:24Z"
+  name: etcd-operator.174a705f0e003e42
+  namespace: openshift-etcd-operator
+  resourceVersion: "5463"
+  uid: 3e11c296-fb26-437e-8b48-475bdea85da1
+note: 'Status for clusteroperator/etcd changed: Degraded message changed from "ScriptControllerDegraded:
+  \"configmap/etcd-pod\": missing env var values\nInstallerControllerDegraded: missing
+  required resources: [configmaps: etcd-endpoints-0,etcd-metrics-proxy-client-ca-0,etcd-metrics-proxy-serving-ca-0,etcd-peer-client-ca-0,etcd-pod-0,etcd-serving-ca-0,
+  secrets: etcd-all-certs-0]\nNodeControllerDegraded: All master nodes are ready"
+  to "InstallerControllerDegraded: missing required resources: [configmaps: etcd-endpoints-0,etcd-metrics-proxy-client-ca-0,etcd-metrics-proxy-serving-ca-0,etcd-peer-client-ca-0,etcd-pod-0,etcd-serving-ca-0,
+  secrets: etcd-all-certs-0]\nNodeControllerDegraded: All master nodes are ready"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 7c43379a-6a36-4015-adb4-fd13f2117c5e
+type: Normal
