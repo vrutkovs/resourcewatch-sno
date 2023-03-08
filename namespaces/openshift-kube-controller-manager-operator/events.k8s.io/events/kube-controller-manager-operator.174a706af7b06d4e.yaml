@@ -1,0 +1,46 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:10:15Z"
+deprecatedLastTimestamp: "2023-03-08T12:10:15Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-status-controller-statussyncer_kube-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:10:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:10:15Z"
+  name: kube-controller-manager-operator.174a706af7b06d4e
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "6040"
+  uid: 1cfcd51b-ad46-46f5-bf1e-ccd014e7c889
+note: 'Status for clusteroperator/kube-controller-manager changed: Degraded message
+  changed from "InstallerControllerDegraded: missing required resources: configmaps:
+  client-ca\nGarbageCollectorDegraded: error fetching rules: Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\":
+  dial tcp: lookup thanos-querier.openshift-monitoring.svc: i/o timeout\nNodeControllerDegraded:
+  All master nodes are ready" to "GarbageCollectorDegraded: error fetching rules:
+  Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\": dial
+  tcp: lookup thanos-querier.openshift-monitoring.svc: i/o timeout\nNodeControllerDegraded:
+  All master nodes are ready"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: 5df04b75-b8db-486d-812b-be3794a10710
+type: Normal
