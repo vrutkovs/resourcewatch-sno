@@ -1,0 +1,70 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:22:47Z"
+deprecatedLastTimestamp: "2023-03-08T12:22:47Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-status-controller-statussyncer_kube-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:22:47Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-08T12:22:47Z"
+  name: openshift-kube-scheduler-operator.174a711a13da176b
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "14479"
+  uid: 952d9f7d-7117-495a-ba20-b5ae73d63542
+note: 'Status for clusteroperator/kube-scheduler changed: Degraded message changed
+  from "NodeControllerDegraded: All master nodes are ready\nStaticPodsDegraded: pod/openshift-kube-scheduler-vrutkovs-sno
+  container \"kube-scheduler\" is terminated: Completed: \nStaticPodsDegraded: pod/openshift-kube-scheduler-vrutkovs-sno
+  container \"kube-scheduler-cert-syncer\" is terminated: Error: 1 certsync_controller.go:170]
+  Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded: I0308
+  12:21:53.998784       1 certsync_controller.go:66] Syncing configmaps: []\nStaticPodsDegraded:
+  I0308 12:21:53.998798       1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key
+  false}]\nStaticPodsDegraded: I0308 12:21:54.599874       1 certsync_controller.go:66]
+  Syncing configmaps: []\nStaticPodsDegraded: I0308 12:21:54.599891       1 certsync_controller.go:170]
+  Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded: I0308
+  12:21:55.197958       1 certsync_controller.go:66] Syncing configmaps: []\nStaticPodsDegraded:
+  I0308 12:21:55.197984       1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key
+  false}]\nStaticPodsDegraded: I0308 12:21:55.800472       1 certsync_controller.go:66]
+  Syncing configmaps: []\nStaticPodsDegraded: I0308 12:21:55.800499       1 certsync_controller.go:170]
+  Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded: I0308
+  12:21:56.402723       1 certsync_controller.go:66] Syncing configmaps: []\nStaticPodsDegraded:
+  I0308 12:21:56.402741       1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key
+  false}]\nStaticPodsDegraded: I0308 12:21:56.999884       1 certsync_controller.go:66]
+  Syncing configmaps: []\nStaticPodsDegraded: I0308 12:21:56.999907       1 certsync_controller.go:170]
+  Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded: I0308
+  12:21:57.611887       1 certsync_controller.go:66] Syncing configmaps: []\nStaticPodsDegraded:
+  I0308 12:21:57.611917       1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key
+  false}]\nStaticPodsDegraded: I0308 12:21:58.204420       1 certsync_controller.go:66]
+  Syncing configmaps: []\nStaticPodsDegraded: I0308 12:21:58.204437       1 certsync_controller.go:170]
+  Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded: I0308
+  12:22:13.463990       1 certsync_controller.go:66] Syncing configmaps: []\nStaticPodsDegraded:
+  I0308 12:22:13.464010       1 certsync_controller.go:170] Syncing secrets: [{kube-scheduler-client-cert-key
+  false}]\nStaticPodsDegraded: I0308 12:22:21.773096       1 certsync_controller.go:66]
+  Syncing configmaps: []\nStaticPodsDegraded: I0308 12:22:21.773117       1 certsync_controller.go:170]
+  Syncing secrets: [{kube-scheduler-client-cert-key false}]\nStaticPodsDegraded: \nStaticPodsDegraded:
+  pod/openshift-kube-scheduler-vrutkovs-sno container \"kube-scheduler-recovery-controller\"
+  is terminated: Completed: " to "NodeControllerDegraded: All master nodes are ready"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 1183c523-80da-4a75-bc3e-713792de34ff
+type: Normal
