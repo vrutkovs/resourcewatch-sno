@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:19:55Z"
+deprecatedLastTimestamp: "2023-03-08T12:19:55Z"
+deprecatedSource:
+  component: machine-config-operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:19:55Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: machine-config-operator
+    operation: Update
+    time: "2023-03-08T12:19:55Z"
+  name: machine-config-operator.174a70f20177e92e
+  namespace: openshift-machine-config-operator
+  resourceVersion: "12048"
+  uid: 1b9a507f-3b89-410a-b0aa-da6a097775c7
+note: Created RoleBinding.rbac.authorization.k8s.io/machine-config-controller-events
+  -n openshift-machine-config-operator because it was missing
+reason: RoleBindingCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: machine-config-operator
+  namespace: openshift-machine-config-operator
+type: Normal
