@@ -350,6 +350,55 @@ metadata:
     manager: kubelet
     operation: Update
     time: "2023-03-08T12:23:16Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.68"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:23:17Z"
   name: kube-apiserver-vrutkovs-sno
   namespace: openshift-kube-apiserver
   ownerReferences:
@@ -358,7 +407,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
-  resourceVersion: "14621"
+  resourceVersion: "14640"
   uid: c90b8aca-8de0-4b42-b897-1524357da77a
 spec:
   containers:
@@ -665,5 +714,102 @@ spec:
       type: ""
     name: audit-dir
 status:
-  phase: Pending
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:23:14Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:23:13Z"
+    message: 'containers with unready status: [kube-apiserver kube-apiserver-check-endpoints]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:23:13Z"
+    message: 'containers with unready status: [kube-apiserver kube-apiserver-check-endpoints]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:15:28Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://21bc7b73f043fb99b8ef41f7929d9fcccaa42e9b4756343387a61ee97c45b906
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
+    lastState: {}
+    name: kube-apiserver
+    ready: false
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-08T12:23:14Z"
+  - containerID: cri-o://55d6fbc0ce00b329ff4861704784297137a2462563aec8818d96e30528e3f945
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
+    lastState: {}
+    name: kube-apiserver-cert-regeneration-controller
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-08T12:23:14Z"
+  - containerID: cri-o://c62e0fa711fa92047b3427a37a117112f7c000370a62706893c117fd8c7661e4
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
+    lastState: {}
+    name: kube-apiserver-cert-syncer
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-08T12:23:14Z"
+  - containerID: cri-o://5d7b2eca696cb3db1ef0b650f33178b79098ffa6bec7971820271276850578d7
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
+    lastState: {}
+    name: kube-apiserver-check-endpoints
+    ready: false
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-08T12:23:15Z"
+  - containerID: cri-o://7be02c54e8c39f26f142ba668968912d3dfa3d49a691cbc6978cb8d3b9776d84
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
+    lastState: {}
+    name: kube-apiserver-insecure-readyz
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-08T12:23:15Z"
+  hostIP: 10.0.130.68
+  initContainerStatuses:
+  - containerID: cri-o://2906090b56700fef6d36b1c2bf474be720f7e1f2a6f1fee6695fd49d79dc7aea
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
+    lastState: {}
+    name: setup
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: cri-o://2906090b56700fef6d36b1c2bf474be720f7e1f2a6f1fee6695fd49d79dc7aea
+        exitCode: 0
+        finishedAt: "2023-03-08T12:23:14Z"
+        reason: Completed
+        startedAt: "2023-03-08T12:23:14Z"
+  phase: Running
+  podIP: 10.0.130.68
+  podIPs:
+  - ip: 10.0.130.68
   qosClass: Burstable
+  startTime: "2023-03-08T12:15:28Z"
