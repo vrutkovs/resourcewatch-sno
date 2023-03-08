@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:06:49Z"
+deprecatedLastTimestamp: "2023-03-08T12:06:49Z"
+deprecatedSource:
+  component: daemonset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:06:49Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:06:49Z"
+  name: multus-additional-cni-plugins.174a703adb6a102f
+  namespace: openshift-multus
+  resourceVersion: "2618"
+  uid: 8d7d4e16-ed9c-416f-add8-e96785234d1d
+note: 'Created pod: multus-additional-cni-plugins-2c5lb'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: DaemonSet
+  name: multus-additional-cni-plugins
+  namespace: openshift-multus
+  resourceVersion: "2615"
+  uid: f08f0ac3-7939-45c2-89c9-7310bf134fa1
+type: Normal
