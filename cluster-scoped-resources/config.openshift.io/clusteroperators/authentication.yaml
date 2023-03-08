@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:16:59Z"
+    time: "2023-03-08T12:17:02Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,35 +52,21 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "7731"
+  resourceVersion: "7755"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:11:40Z"
-    message: "IngressStateEndpointsDegraded: No subsets found for the endpoints of
-      oauth-server\nOAuthServerConfigObservationDegraded: secret \"v4-0-config-system-router-certs\"
-      not found\nOAuthServerServiceEndpointAccessibleControllerDegraded: \"service-ca.crt\"
-      key of the \"openshift-authentication/v4-0-config-system-service-ca\" CM is
-      empty\nOAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth
-      service endpoints are not ready\nOpenshiftAuthenticationStaticResourcesDegraded:
-      \"oauth-openshift/ns.yaml\" (string): Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-authentication\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftAuthenticationStaticResourcesDegraded:
-      \"oauth-openshift/authentication-clusterrolebinding.yaml\" (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/system:openshift:openshift-authentication\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftAuthenticationStaticResourcesDegraded:
-      \"oauth-openshift/serviceaccount.yaml\" (string): Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-authentication/serviceaccounts/oauth-openshift\":
-      dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftAuthenticationStaticResourcesDegraded:
-      \"oauth-openshift/oauth-service.yaml\" (string): services \"oauth-openshift\"
-      is forbidden: User \"system:serviceaccount:openshift-authentication-operator:authentication-operator\"
-      cannot get resource \"services\" in API group \"\" in the namespace \"openshift-authentication\"\nOpenshiftAuthenticationStaticResourcesDegraded:
-      \nRouterCertsDegraded: neither the custom secret/v4-0-config-system-router-certs
-      -n openshift-authentication or default secret/v4-0-config-system-custom-router-certs
-      -n openshift-authentication could be retrieved: secret \"v4-0-config-system-router-certs\"
-      not found\nSystemServiceCAConfigDegraded: Config \"v4-0-config-system-service-ca\"
-      has no service CA data\nWebhookAuthenticatorControllerDegraded: failed to read
-      service-ca crt bundle: open /var/run/configmaps/service-ca-bundle/service-ca.crt:
-      no such file or directory"
-    reason: IngressStateEndpoints_MissingSubsets::OAuthServerConfigObservation_Error::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError::OpenshiftAuthenticationStaticResources_SyncError::RouterCerts_NoRouterCertSecret::SystemServiceCAConfig_MissingCA::WebhookAuthenticatorController_SyncError
+    message: |-
+      IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
+      OAuthServerConfigObservationDegraded: secret "v4-0-config-system-router-certs" not found
+      OAuthServerServiceEndpointAccessibleControllerDegraded: "service-ca.crt" key of the "openshift-authentication/v4-0-config-system-service-ca" CM is empty
+      OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth service endpoints are not ready
+      RouterCertsDegraded: neither the custom secret/v4-0-config-system-router-certs -n openshift-authentication or default secret/v4-0-config-system-custom-router-certs -n openshift-authentication could be retrieved: secret "v4-0-config-system-router-certs" not found
+      SystemServiceCAConfigDegraded: Config "v4-0-config-system-service-ca" has no service CA data
+      WebhookAuthenticatorControllerDegraded: failed to read service-ca crt bundle: open /var/run/configmaps/service-ca-bundle/service-ca.crt: no such file or directory
+    reason: IngressStateEndpoints_MissingSubsets::OAuthServerConfigObservation_Error::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError::RouterCerts_NoRouterCertSecret::SystemServiceCAConfig_MissingCA::WebhookAuthenticatorController_SyncError
     status: "True"
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:09:23Z"
