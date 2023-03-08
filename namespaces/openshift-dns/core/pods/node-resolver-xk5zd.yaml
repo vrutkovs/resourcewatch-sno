@@ -92,6 +92,46 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-08T12:19:55Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.68"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:19:55Z"
   name: node-resolver-xk5zd
   namespace: openshift-dns
   ownerReferences:
@@ -101,7 +141,7 @@ metadata:
     kind: DaemonSet
     name: node-resolver
     uid: 2de761ea-9d60-4d2f-86d6-ed77b20ff944
-  resourceVersion: "11919"
+  resourceVersion: "11952"
   uid: 2dd07a2a-7025-48ea-8c5c-838bc0f77fc2
 spec:
   affinity:
@@ -258,6 +298,38 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:19:55Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:19:55Z"
+    message: 'containers with unready status: [dns-node-resolver]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:19:55Z"
+    message: 'containers with unready status: [dns-node-resolver]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:19:55Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9af4bd001d30fd00d89c5f199b970b820240d0959312c2fb8ea82597c8da24bb
+    imageID: ""
+    lastState: {}
+    name: dns-node-resolver
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.68
   phase: Pending
+  podIP: 10.0.130.68
+  podIPs:
+  - ip: 10.0.130.68
   qosClass: Burstable
+  startTime: "2023-03-08T12:19:55Z"
