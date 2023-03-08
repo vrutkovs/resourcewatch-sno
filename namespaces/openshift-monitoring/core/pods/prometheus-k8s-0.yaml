@@ -627,8 +627,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -641,8 +639,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -659,7 +655,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:22:07Z"
+    time: "2023-03-08T12:22:08Z"
   name: prometheus-k8s-0
   namespace: openshift-monitoring
   ownerReferences:
@@ -669,7 +665,7 @@ metadata:
     kind: StatefulSet
     name: prometheus-k8s
     uid: 89218df2-8aed-453f-8ef7-36e250c96478
-  resourceVersion: "14249"
+  resourceVersion: "14254"
   uid: f2ce078d-51ce-4628-8617-03c8c289feda
 spec:
   automountServiceAccountToken: true
@@ -1203,16 +1199,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:21:52Z"
-    message: 'containers with unready status: [prometheus]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:22:08Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:21:52Z"
-    message: 'containers with unready status: [prometheus]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:22:08Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:21:52Z"
@@ -1257,7 +1249,7 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b10ab06cd40456afe5f928c2642832ea92a8ad05b0636b9286b82d39a66eb2d4
     lastState: {}
     name: prometheus
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
