@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:26:19Z"
+deprecatedLastTimestamp: "2023-03-08T12:26:19Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:26:19Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:26:19Z"
+  name: certified-operators-fr6np.174a714b53329a43
+  namespace: openshift-marketplace
+  resourceVersion: "17205"
+  uid: 8582e995-1f7c-492f-abae-134aee9b8796
+note: Started container registry-server
+reason: Started
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{registry-server}
+  kind: Pod
+  name: certified-operators-fr6np
+  namespace: openshift-marketplace
+  resourceVersion: "15894"
+  uid: cd60beac-283c-40a9-9d25-41c311b91235
+type: Normal
