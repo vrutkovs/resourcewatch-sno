@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:20:08Z"
+deprecatedLastTimestamp: "2023-03-08T12:20:08Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:20:11Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:20:11Z"
+  name: prometheus-adapter-7b8677db6b-s9lv5.174a70f508c04562
+  namespace: openshift-monitoring
+  resourceVersion: "12682"
+  uid: 24d09115-2897-4385-bcbe-697b3f9a3de0
+note: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fcb29b9f062c78c73e0ec75c28e165465f12875d73fd205223a0948d87a5dfb8"
+reason: Pulling
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{prometheus-adapter}
+  kind: Pod
+  name: prometheus-adapter-7b8677db6b-s9lv5
+  namespace: openshift-monitoring
+  resourceVersion: "12589"
+  uid: b4fcb53a-cb62-4105-9372-d0c624634ca3
+type: Normal
