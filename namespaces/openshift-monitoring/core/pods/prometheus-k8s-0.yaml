@@ -648,6 +648,7 @@ metadata:
         f:containerStatuses: {}
         f:hostIP: {}
         f:initContainerStatuses: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -658,7 +659,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:21:54Z"
+    time: "2023-03-08T12:21:59Z"
   name: prometheus-k8s-0
   namespace: openshift-monitoring
   ownerReferences:
@@ -668,7 +669,7 @@ metadata:
     kind: StatefulSet
     name: prometheus-k8s
     uid: 89218df2-8aed-453f-8ef7-36e250c96478
-  resourceVersion: "14048"
+  resourceVersion: "14153"
   uid: f2ce078d-51ce-4628-8617-03c8c289feda
 spec:
   automountServiceAccountToken: true
@@ -1203,15 +1204,13 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:21:52Z"
-    message: 'containers with unready status: [prometheus config-reloader thanos-sidecar
-      prometheus-proxy kube-rbac-proxy kube-rbac-proxy-thanos]'
+    message: 'containers with unready status: [prometheus]'
     reason: ContainersNotReady
     status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:21:52Z"
-    message: 'containers with unready status: [prometheus config-reloader thanos-sidecar
-      prometheus-proxy kube-rbac-proxy kube-rbac-proxy-thanos]'
+    message: 'containers with unready status: [prometheus]'
     reason: ContainersNotReady
     status: "False"
     type: ContainersReady
@@ -1220,66 +1219,72 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3c97acac3647a99a40d57710a0ec697458c400421730e1a676111beda7caf958
-    imageID: ""
+  - containerID: cri-o://0223b6ca5a7fc5771d3779d20d2ac8b63cd8f81905a8a0b18b36bf843c7980dd
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3c97acac3647a99a40d57710a0ec697458c400421730e1a676111beda7caf958
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3c97acac3647a99a40d57710a0ec697458c400421730e1a676111beda7caf958
     lastState: {}
     name: config-reloader
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: PodInitializing
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:21:58Z"
+  - containerID: cri-o://1be72a5eaf1f7ccf53970263476d120f6ab46e6bc711011261397bb2ace69e31
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
     lastState: {}
     name: kube-rbac-proxy
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: PodInitializing
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:21:59Z"
+  - containerID: cri-o://d02fbbda9b40963361dda12dd0d476a4bdaa214dca3b812b67a3d208e68e39ae
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
     lastState: {}
     name: kube-rbac-proxy-thanos
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: PodInitializing
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b10ab06cd40456afe5f928c2642832ea92a8ad05b0636b9286b82d39a66eb2d4
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:21:59Z"
+  - containerID: cri-o://04f5f291401d357afbed3168a3fa8b1dabb792cbab67790918acdce3cdfd3f45
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b10ab06cd40456afe5f928c2642832ea92a8ad05b0636b9286b82d39a66eb2d4
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b10ab06cd40456afe5f928c2642832ea92a8ad05b0636b9286b82d39a66eb2d4
     lastState: {}
     name: prometheus
     ready: false
     restartCount: 0
     started: false
     state:
-      waiting:
-        reason: PodInitializing
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5925f28a7682ef5cb91d4a3e3c9f6877ccc339ddb3533ad6376771314a79cb5a
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:21:58Z"
+  - containerID: cri-o://acbf8e849c9cda1d5cbd3d9cad599f1436edb8f6b804ed2828233c2fb9dc92a9
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5925f28a7682ef5cb91d4a3e3c9f6877ccc339ddb3533ad6376771314a79cb5a
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5925f28a7682ef5cb91d4a3e3c9f6877ccc339ddb3533ad6376771314a79cb5a
     lastState: {}
     name: prometheus-proxy
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: PodInitializing
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b7eba12d8e64a5b5fca58ed447fd008f09bd83bcbab7421cf54128a700a20b86
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:21:59Z"
+  - containerID: cri-o://f69e248c22ac1060be387e7dd0df7aa87f2b6a65c2bf73bfe51e58f6014fe945
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b7eba12d8e64a5b5fca58ed447fd008f09bd83bcbab7421cf54128a700a20b86
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b7eba12d8e64a5b5fca58ed447fd008f09bd83bcbab7421cf54128a700a20b86
     lastState: {}
     name: thanos-sidecar
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: PodInitializing
+      running:
+        startedAt: "2023-03-08T12:21:58Z"
   hostIP: 10.0.130.68
   initContainerStatuses:
   - containerID: cri-o://8e0ec9704fd63f01519594c9af64c4e98cf3d83bb37739fccaaef1da37aa3454
@@ -1296,7 +1301,7 @@ status:
         finishedAt: "2023-03-08T12:21:53Z"
         reason: Completed
         startedAt: "2023-03-08T12:21:53Z"
-  phase: Pending
+  phase: Running
   podIP: 10.128.0.74
   podIPs:
   - ip: 10.128.0.74
