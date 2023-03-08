@@ -172,7 +172,7 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:06:33Z"
+    time: "2023-03-08T12:17:48Z"
   name: dns-operator
   namespace: openshift-dns-operator
   ownerReferences:
@@ -181,7 +181,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "2402"
+  resourceVersion: "7925"
   uid: eee701e6-538f-4f03-9589-fb18822673d3
 spec:
   progressDeadlineSeconds: 600
@@ -298,11 +298,11 @@ status:
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
-  - lastTransitionTime: "2023-03-08T12:01:06Z"
-    lastUpdateTime: "2023-03-08T12:06:33Z"
-    message: ReplicaSet "dns-operator-6cf6587b88" is progressing.
-    reason: ReplicaSetUpdated
-    status: "True"
+  - lastTransitionTime: "2023-03-08T12:17:48Z"
+    lastUpdateTime: "2023-03-08T12:17:48Z"
+    message: ReplicaSet "dns-operator-6cf6587b88" has timed out progressing.
+    reason: ProgressDeadlineExceeded
+    status: "False"
     type: Progressing
   observedGeneration: 1
   replicas: 1
