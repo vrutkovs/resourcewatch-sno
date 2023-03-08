@@ -15,8 +15,30 @@ metadata:
     manager: cluster-bootstrap
     operation: Update
     time: "2023-03-08T12:00:23Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:availableUpdates: {}
+        f:capabilities:
+          .: {}
+          f:enabledCapabilities: {}
+          f:knownCapabilities: {}
+        f:conditions: {}
+        f:desired:
+          .: {}
+          f:image: {}
+          f:version: {}
+        f:history: {}
+        f:observedGeneration: {}
+        f:versionHash: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:00:43Z"
   name: version
-  resourceVersion: "570"
+  resourceVersion: "643"
   uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
 spec:
   channel: stable-4.13
@@ -117,3 +139,70 @@ spec:
     name: openshift-install-manifests
     namespace: openshift-config
     unmanaged: true
+status:
+  availableUpdates: null
+  capabilities:
+    enabledCapabilities:
+    - CSISnapshot
+    - Console
+    - Insights
+    - NodeTuning
+    - Storage
+    - baremetal
+    - marketplace
+    - openshift-samples
+    knownCapabilities:
+    - CSISnapshot
+    - Console
+    - Insights
+    - NodeTuning
+    - Storage
+    - baremetal
+    - marketplace
+    - openshift-samples
+  conditions:
+  - lastTransitionTime: "2023-03-08T12:00:43Z"
+    message: 'Unable to retrieve available updates: currently reconciling cluster
+      version 4.13.0-ec.4 not found in the "stable-4.13" channel'
+    reason: VersionNotFound
+    status: "False"
+    type: RetrievedUpdates
+  - lastTransitionTime: "2023-03-08T12:00:43Z"
+    message: Disabling ownership via cluster version overrides prevents upgrades.
+      Please remove overrides before continuing.
+    reason: ClusterVersionOverridesSet
+    status: "False"
+    type: Upgradeable
+  - lastTransitionTime: "2023-03-08T12:00:43Z"
+    message: Capabilities match configured spec
+    reason: AsExpected
+    status: "False"
+    type: ImplicitlyEnabledCapabilities
+  - lastTransitionTime: "2023-03-08T12:00:43Z"
+    message: Payload loaded version="4.13.0-ec.4" image="quay.io/openshift-release-dev/ocp-release@sha256:6399a5480485a4fb425557280ce858b9d488d0bb65a0c258504197fcf24cd141"
+      architecture="amd64"
+    reason: PayloadLoaded
+    status: "True"
+    type: ReleaseAccepted
+  - lastTransitionTime: "2023-03-08T12:00:43Z"
+    status: "False"
+    type: Available
+  - lastTransitionTime: "2023-03-08T12:00:43Z"
+    status: "False"
+    type: Failing
+  - lastTransitionTime: "2023-03-08T12:00:43Z"
+    message: Working towards 4.13.0-ec.4
+    status: "True"
+    type: Progressing
+  desired:
+    image: quay.io/openshift-release-dev/ocp-release@sha256:6399a5480485a4fb425557280ce858b9d488d0bb65a0c258504197fcf24cd141
+    version: 4.13.0-ec.4
+  history:
+  - completionTime: null
+    image: quay.io/openshift-release-dev/ocp-release@sha256:6399a5480485a4fb425557280ce858b9d488d0bb65a0c258504197fcf24cd141
+    startedTime: "2023-03-08T12:00:43Z"
+    state: Partial
+    verified: false
+    version: 4.13.0-ec.4
+  observedGeneration: 1
+  versionHash: ""
