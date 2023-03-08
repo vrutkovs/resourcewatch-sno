@@ -125,6 +125,26 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-08T12:09:52Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:09:53Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           .: {}
@@ -132,8 +152,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -152,37 +170,22 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.28"}:
+            .: {}
+            f:ip: {}
         f:startTime: {}
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:09:52Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          .: {}
-          f:k8s.ovn.org/pod-networks: {}
-    manager: vrutkovs-sno
-    operation: Update
-    time: "2023-03-08T12:09:52Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.v1.cni.cncf.io/network-status: {}
-    manager: multus
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:09:53Z"
+    time: "2023-03-08T12:09:54Z"
   name: installer-2-vrutkovs-sno
   namespace: openshift-etcd
   ownerReferences:
@@ -190,7 +193,7 @@ metadata:
     kind: ConfigMap
     name: revision-status-2
     uid: b9d801ca-7afc-4c4c-b8af-f8243838770b
-  resourceVersion: "5761"
+  resourceVersion: "5774"
   uid: e90fa2af-13a3-4e21-97b8-e4e940356972
 spec:
   automountServiceAccountToken: false
@@ -303,33 +306,33 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:09:52Z"
-    message: 'containers with unready status: [installer]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:09:54Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:09:52Z"
-    message: 'containers with unready status: [installer]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:09:54Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:09:52Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4cb8a51c59a5bdc38bc97ea684f0bfebe240dede2f982a5b1f8baedeac1e0719
-    imageID: ""
+  - containerID: cri-o://d64d1c297f022b30e1f2810c943774ea3bc05e2eb8d5cfd0ca054d12d5eda7b3
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4cb8a51c59a5bdc38bc97ea684f0bfebe240dede2f982a5b1f8baedeac1e0719
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4cb8a51c59a5bdc38bc97ea684f0bfebe240dede2f982a5b1f8baedeac1e0719
     lastState: {}
     name: installer
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-08T12:09:53Z"
   hostIP: 10.0.130.68
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.28
+  podIPs:
+  - ip: 10.128.0.28
   qosClass: Guaranteed
   startTime: "2023-03-08T12:09:52Z"
