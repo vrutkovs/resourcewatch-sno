@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:11:47Z"
-deprecatedLastTimestamp: "2023-03-08T12:11:47Z"
+deprecatedLastTimestamp: "2023-03-08T12:11:50Z"
 deprecatedSource:
   component: openshift-cluster-kube-scheduler-operator-installer-controller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-scheduler-operator
     operation: Update
-    time: "2023-03-08T12:11:47Z"
+    time: "2023-03-08T12:11:50Z"
   name: openshift-kube-scheduler-operator.174a708062f49574
   namespace: openshift-kube-scheduler-operator
-  resourceVersion: "6224"
+  resourceVersion: "6253"
   uid: 4ca9dd0c-dee4-4407-a343-0d60ebfe1eb3
 note: |
   installer errors: installer: tes.Interface) <nil>,
