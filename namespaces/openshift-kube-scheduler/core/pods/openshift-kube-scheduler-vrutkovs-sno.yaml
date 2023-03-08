@@ -247,6 +247,7 @@ metadata:
         f:containerStatuses: {}
         f:hostIP: {}
         f:initContainerStatuses: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -257,7 +258,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:22:49Z"
+    time: "2023-03-08T12:22:50Z"
   name: openshift-kube-scheduler-vrutkovs-sno
   namespace: openshift-kube-scheduler
   ownerReferences:
@@ -266,7 +267,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
-  resourceVersion: "14487"
+  resourceVersion: "14515"
   uid: 539310a8-208f-4b75-9969-3488ba8871f7
 spec:
   containers:
@@ -436,15 +437,13 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:22:33Z"
-    message: 'containers with unready status: [kube-scheduler kube-scheduler-cert-syncer
-      kube-scheduler-recovery-controller]'
+    message: 'containers with unready status: [kube-scheduler]'
     reason: ContainersNotReady
     status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:22:33Z"
-    message: 'containers with unready status: [kube-scheduler kube-scheduler-cert-syncer
-      kube-scheduler-recovery-controller]'
+    message: 'containers with unready status: [kube-scheduler]'
     reason: ContainersNotReady
     status: "False"
     type: ContainersReady
@@ -453,36 +452,39 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
-    imageID: ""
+  - containerID: cri-o://c909ca3fff5ed6a0924b2036e5fc9e6d42e25d8ca5c398fa47906bfcd95c15d3
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
     lastState: {}
     name: kube-scheduler
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: PodInitializing
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9a26a8cedffe6ad1a77158ba9d87ad2b90e8076f7e6661201f6e8d838c1b8c2b
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:22:49Z"
+  - containerID: cri-o://8238c9d536f4039dece4e6e8efc43bb693f401d59471736d0638e17ca6d03d4c
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9a26a8cedffe6ad1a77158ba9d87ad2b90e8076f7e6661201f6e8d838c1b8c2b
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9a26a8cedffe6ad1a77158ba9d87ad2b90e8076f7e6661201f6e8d838c1b8c2b
     lastState: {}
     name: kube-scheduler-cert-syncer
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: PodInitializing
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9a26a8cedffe6ad1a77158ba9d87ad2b90e8076f7e6661201f6e8d838c1b8c2b
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:22:49Z"
+  - containerID: cri-o://832e880517de68327cca1a23976957e1de02a9fafbcf06457dfc08b6abec0f3c
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9a26a8cedffe6ad1a77158ba9d87ad2b90e8076f7e6661201f6e8d838c1b8c2b
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9a26a8cedffe6ad1a77158ba9d87ad2b90e8076f7e6661201f6e8d838c1b8c2b
     lastState: {}
     name: kube-scheduler-recovery-controller
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: PodInitializing
+      running:
+        startedAt: "2023-03-08T12:22:49Z"
   hostIP: 10.0.130.68
   initContainerStatuses:
   - containerID: cri-o://3f12a04fc0a62e34b387755e78d6fb8fa078fec69c67288d3948ca9194f73d3c
@@ -499,7 +501,7 @@ status:
         finishedAt: "2023-03-08T12:22:48Z"
         reason: Completed
         startedAt: "2023-03-08T12:22:48Z"
-  phase: Pending
+  phase: Running
   podIP: 10.0.130.68
   podIPs:
   - ip: 10.0.130.68
