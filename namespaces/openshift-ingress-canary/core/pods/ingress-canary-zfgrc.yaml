@@ -85,6 +85,40 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:21:21Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:metadata:
         f:annotations:
           f:k8s.ovn.org/pod-networks: {}
@@ -100,7 +134,7 @@ metadata:
     kind: DaemonSet
     name: ingress-canary
     uid: db79a768-0984-4028-93dd-ef00f14ebbc5
-  resourceVersion: "13184"
+  resourceVersion: "13188"
   uid: 50a5a2cc-90de-4245-a94c-cc44b990eccd
 spec:
   affinity:
@@ -213,6 +247,35 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:21:21Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:21:21Z"
+    message: 'containers with unready status: [serve-healthcheck-canary]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:21:21Z"
+    message: 'containers with unready status: [serve-healthcheck-canary]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:21:21Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ab9440cfb1a1cee8c97b9b5ca222c857d4ad1bc147f76c23c36727d9c9d3bfb5
+    imageID: ""
+    lastState: {}
+    name: serve-healthcheck-canary
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.68
   phase: Pending
   qosClass: Burstable
+  startTime: "2023-03-08T12:21:21Z"
