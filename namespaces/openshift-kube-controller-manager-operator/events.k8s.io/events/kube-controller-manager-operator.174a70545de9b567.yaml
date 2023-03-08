@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 28
+deprecatedCount: 29
 deprecatedFirstTimestamp: "2023-03-08T12:08:38Z"
-deprecatedLastTimestamp: "2023-03-08T12:11:49Z"
+deprecatedLastTimestamp: "2023-03-08T12:11:51Z"
 deprecatedSource:
   component: kube-controller-manager-operator-satokensignercontroller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-controller-manager-operator
     operation: Update
-    time: "2023-03-08T12:11:49Z"
+    time: "2023-03-08T12:11:51Z"
   name: kube-controller-manager-operator.174a70545de9b567
   namespace: openshift-kube-controller-manager-operator
-  resourceVersion: "6251"
+  resourceVersion: "6268"
   uid: 23374a04-a99f-4379-9218-18e8c5263666
 note: 'unexpected addresses: 10.0.130.68'
 reason: SATokenSignerControllerStuck
