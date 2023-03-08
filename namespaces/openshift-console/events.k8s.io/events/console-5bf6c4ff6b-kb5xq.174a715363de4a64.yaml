@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:26:54Z"
+deprecatedLastTimestamp: "2023-03-08T12:26:54Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:26:54Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:26:54Z"
+  name: console-5bf6c4ff6b-kb5xq.174a715363de4a64
+  namespace: openshift-console
+  resourceVersion: "17610"
+  uid: fd1596a4-dab9-4c91-af5b-6b55734af0ac
+note: Stopping container console
+reason: Killing
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{console}
+  kind: Pod
+  name: console-5bf6c4ff6b-kb5xq
+  namespace: openshift-console
+  resourceVersion: "16975"
+  uid: e48e6d56-a4e2-4160-b9a5-fa073cd01b47
+type: Normal
