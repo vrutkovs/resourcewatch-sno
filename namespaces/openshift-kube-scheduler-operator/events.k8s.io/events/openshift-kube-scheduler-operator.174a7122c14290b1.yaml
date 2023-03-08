@@ -1,0 +1,54 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:23:25Z"
+deprecatedLastTimestamp: "2023-03-08T12:23:25Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-status-controller-statussyncer_kube-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:23:25Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-08T12:23:25Z"
+  name: openshift-kube-scheduler-operator.174a7122c14290b1
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "14736"
+  uid: dc5658c2-83b9-49b3-b383-20eb7e512779
+note: 'Status for clusteroperator/kube-scheduler changed: Degraded message changed
+  from "NodeControllerDegraded: All master nodes are ready" to "NodeControllerDegraded:
+  All master nodes are ready\nTargetConfigControllerDegraded: \"configmap\": Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/configmaps/config\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nTargetConfigControllerDegraded:
+  \"configmap/serviceaccount-ca\": Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/configmaps/serviceaccount-ca\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nTargetConfigControllerDegraded:
+  \"serviceaccount/localhost-recovery-client\": Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/serviceaccounts/localhost-recovery-client\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nTargetConfigControllerDegraded:
+  \"configmap/scheduler-kubeconfig\": configmaps \"scheduler-kubeconfig\" is forbidden:
+  User \"system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator\"
+  cannot get resource \"configmaps\" in API group \"\" in the namespace \"openshift-kube-scheduler\":
+  RBAC: [clusterrole.rbac.authorization.k8s.io \"basic-user\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:basic-user\" not found, clusterrole.rbac.authorization.k8s.io \"cluster-admin\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:openshift:discovery\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:build-strategy-docker\"
+  not found]"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 1183c523-80da-4a75-bc3e-713792de34ff
+type: Normal
