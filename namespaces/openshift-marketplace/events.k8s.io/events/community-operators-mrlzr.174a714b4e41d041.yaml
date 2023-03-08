@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:26:19Z"
+deprecatedLastTimestamp: "2023-03-08T12:26:19Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:26:19Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:26:19Z"
+  name: community-operators-mrlzr.174a714b4e41d041
+  namespace: openshift-marketplace
+  resourceVersion: "17189"
+  uid: 1a91b2fb-ffda-497d-a89c-9b0f7cd969bd
+note: Started container registry-server
+reason: Started
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{registry-server}
+  kind: Pod
+  name: community-operators-mrlzr
+  namespace: openshift-marketplace
+  resourceVersion: "15896"
+  uid: 3dec0365-3cbf-4c2c-80fa-3ec078eca5fb
+type: Normal
