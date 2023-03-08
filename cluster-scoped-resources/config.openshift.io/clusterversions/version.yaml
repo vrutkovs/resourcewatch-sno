@@ -35,9 +35,9 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:25:55Z"
+    time: "2023-03-08T12:26:25Z"
   name: version
-  resourceVersion: "16193"
+  resourceVersion: "17351"
   uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
 spec:
   channel: stable-4.13
@@ -85,9 +85,7 @@ status:
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-08T12:25:55Z"
-    message: Cluster operators baremetal, cloud-controller-manager, cluster-autoscaler,
-      console, control-plane-machine-set, image-registry, insights, machine-api, machine-approver,
-      openshift-samples, operator-lifecycle-manager, storage are not available
+    message: Cluster operators cluster-autoscaler, console, machine-api are not available
     reason: ClusterOperatorsNotAvailable
     status: "True"
     type: Failing
