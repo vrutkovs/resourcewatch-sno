@@ -285,6 +285,54 @@ metadata:
     manager: kubelet
     operation: Update
     time: "2023-03-08T12:22:51Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.68"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:22:53Z"
   name: kube-controller-manager-vrutkovs-sno
   namespace: openshift-kube-controller-manager
   ownerReferences:
@@ -293,7 +341,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
-  resourceVersion: "14521"
+  resourceVersion: "14546"
   uid: aaa7d633-7870-4b6a-bcf9-a6f512462cc3
 spec:
   containers:
@@ -524,5 +572,76 @@ spec:
       type: ""
     name: cert-dir
 status:
-  phase: Pending
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:15:28Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:22:41Z"
+    message: 'containers with unready status: [kube-controller-manager cluster-policy-controller]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:22:41Z"
+    message: 'containers with unready status: [kube-controller-manager cluster-policy-controller]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:15:28Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://8e2fa1d527ae642650d765671536e0e1862b3d6dcd96bfecbd1f1ab88a2d9bcd
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:7b3d70b1257fa3291a5b364dec35289e3c7df523d69241c9bd01158d1f2141ac
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:7b3d70b1257fa3291a5b364dec35289e3c7df523d69241c9bd01158d1f2141ac
+    lastState: {}
+    name: cluster-policy-controller
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      running:
+        startedAt: "2023-03-08T12:22:52Z"
+  - containerID: cri-o://c5b889a9969eba4421251fb54a8cf80b58389e0ecd5e53e58cdc702edae65eb2
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
+    lastState: {}
+    name: kube-controller-manager
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      running:
+        startedAt: "2023-03-08T12:22:52Z"
+  - containerID: cri-o://d98cb827dc9d76afee54e525585bbc673a5c0f4cb20e0400363abea922766371
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e3c201c17dba67a00ba69b15c1bc1ed24a408c239746df507c78c8eb3a691f5f
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e3c201c17dba67a00ba69b15c1bc1ed24a408c239746df507c78c8eb3a691f5f
+    lastState: {}
+    name: kube-controller-manager-cert-syncer
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-08T12:22:52Z"
+  - containerID: cri-o://3815d22ecec07ff88fd15b8d821b9f2e1b919576c9d1e28cec04134f88272f0a
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e3c201c17dba67a00ba69b15c1bc1ed24a408c239746df507c78c8eb3a691f5f
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e3c201c17dba67a00ba69b15c1bc1ed24a408c239746df507c78c8eb3a691f5f
+    lastState: {}
+    name: kube-controller-manager-recovery-controller
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-08T12:22:52Z"
+  hostIP: 10.0.130.68
+  phase: Running
+  podIP: 10.0.130.68
+  podIPs:
+  - ip: 10.0.130.68
   qosClass: Burstable
+  startTime: "2023-03-08T12:15:28Z"
