@@ -8,7 +8,7 @@ metadata:
     operator.openshift.io/spec-hash: de1cc6b70d99ace260bba534e2f377f5bbce1ef26bbaad14580ce1be8a873191
     release.openshift.io/version: 4.13.0-ec.4
   creationTimestamp: "2023-03-08T12:17:48Z"
-  generation: 1
+  generation: 2
   labels:
     app: route-controller-manager
     openshift-route-controller-manager-anti-affinity: "true"
@@ -183,10 +183,10 @@ metadata:
     kind: Deployment
     name: route-controller-manager
     uid: 9626b46e-97b8-4377-81b5-0e855aa9a633
-  resourceVersion: "7946"
+  resourceVersion: "8008"
   uid: 9e12c928-aaf2-4964-8b06-ce5b2ed727d6
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: route-controller-manager
