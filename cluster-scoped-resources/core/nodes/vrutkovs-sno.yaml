@@ -13,7 +13,7 @@ metadata:
     machineconfiguration.openshift.io/currentConfig: rendered-master-ad65eb7af782515f818f50bde5963472
     machineconfiguration.openshift.io/desiredConfig: rendered-master-be5e47e2eccbe758bba1ddd35139f110
     machineconfiguration.openshift.io/desiredDrain: uncordon-rendered-master-be5e47e2eccbe758bba1ddd35139f110
-    machineconfiguration.openshift.io/lastAppliedDrain: uncordon-rendered-master-ad65eb7af782515f818f50bde5963472
+    machineconfiguration.openshift.io/lastAppliedDrain: uncordon-rendered-master-be5e47e2eccbe758bba1ddd35139f110
     machineconfiguration.openshift.io/reason: ""
     machineconfiguration.openshift.io/state: Working
     volumes.kubernetes.io/controller-managed-attach-detach: "true"
@@ -102,7 +102,7 @@ metadata:
         f:taints: {}
     manager: machine-config-controller
     operation: Update
-    time: "2023-03-08T12:21:29Z"
+    time: "2023-03-08T12:21:34Z"
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -116,7 +116,7 @@ metadata:
     operation: Update
     time: "2023-03-08T12:21:34Z"
   name: vrutkovs-sno
-  resourceVersion: "13435"
+  resourceVersion: "13440"
   uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
 spec:
   taints:
