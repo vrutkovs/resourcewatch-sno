@@ -44,7 +44,7 @@ metadata:
     manager: cluster-openshift-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:18:03Z"
+    time: "2023-03-08T12:23:24Z"
   name: openshift-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "9763"
+  resourceVersion: "14724"
   uid: a175ceaf-21f5-40ed-bd39-ec4fb39d7fb7
 spec: {}
 status:
@@ -67,10 +67,15 @@ status:
     reason: AsExpected
     status: "False"
     type: Progressing
-  - lastTransitionTime: "2023-03-08T12:18:03Z"
-    message: All is well
-    reason: AsExpected
-    status: "True"
+  - lastTransitionTime: "2023-03-08T12:23:24Z"
+    message: 'APIServicesAvailable: [Get "https://172.30.0.1:443/apis/apiregistration.k8s.io/v1/apiservices/v1.apps.openshift.io":
+      dial tcp 172.30.0.1:443: connect: connection refused, Get "https://172.30.0.1:443/apis/apiregistration.k8s.io/v1/apiservices/v1.authorization.openshift.io":
+      dial tcp 172.30.0.1:443: connect: connection refused, Get "https://172.30.0.1:443/apis/apiregistration.k8s.io/v1/apiservices/v1.build.openshift.io":
+      dial tcp 172.30.0.1:443: connect: connection refused, Get "https://172.30.0.1:443/apis/apiregistration.k8s.io/v1/apiservices/v1.image.openshift.io":
+      dial tcp 172.30.0.1:443: connect: connection refused, Get "https://172.30.0.1:443/apis/apiregistration.k8s.io/v1/apiservices/v1.project.openshift.io":
+      dial tcp 172.30.0.1:443: connect: connection refused]'
+    reason: APIServices_Error
+    status: "False"
     type: Available
   - lastTransitionTime: "2023-03-08T12:08:34Z"
     message: All is well
