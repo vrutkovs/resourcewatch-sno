@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:26:08Z"
 deprecatedLastTimestamp: "2023-03-08T12:26:08Z"
 deprecatedSource:
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-08T12:26:08Z"
+    time: "2023-03-08T12:26:09Z"
   name: authentication-operator.174a7148dd10697d
   namespace: openshift-authentication-operator
-  resourceVersion: "16966"
+  resourceVersion: "16982"
   uid: 9ea0e4bb-26e5-4877-b336-abd3e70dddbb
 note: assetPublicURL changed from  to https://console-openshift-console.apps.vrutkovs.choomba.one
 reason: ObserveConsoleURL
