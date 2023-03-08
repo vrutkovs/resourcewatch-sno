@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:29:04Z"
+deprecatedLastTimestamp: "2023-03-08T12:29:04Z"
+deprecatedSource:
+  component: cert-regeneration-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:29:04Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-08T12:29:04Z"
+  name: cert-regeneration-controller-lock.174a7171a63b8cb4
+  namespace: openshift-kube-apiserver
+  resourceVersion: "18066"
+  uid: cc0b5079-110b-4bea-8230-9b3c39064044
+note: vrutkovs-sno_ff705f19-b5e9-43ac-bc65-97a4ab758acc became leader
+reason: LeaderElection
+regarding:
+  apiVersion: v1
+  kind: ConfigMap
+  name: cert-regeneration-controller-lock
+  namespace: openshift-kube-apiserver
+  resourceVersion: "18063"
+  uid: a2df266f-5400-497a-9de5-8d97ce071f25
+type: Normal
