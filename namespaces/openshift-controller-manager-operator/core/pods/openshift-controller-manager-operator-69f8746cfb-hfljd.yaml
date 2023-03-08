@@ -180,6 +180,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -192,6 +194,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -207,7 +211,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:08:33Z"
+    time: "2023-03-08T12:18:19Z"
   name: openshift-controller-manager-operator-69f8746cfb-hfljd
   namespace: openshift-controller-manager-operator
   ownerReferences:
@@ -217,7 +221,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-controller-manager-operator-69f8746cfb
     uid: 50be6136-a813-42f8-b1f8-c13f90e301de
-  resourceVersion: "3416"
+  resourceVersion: "10935"
   uid: 1c78d5f0-7109-4889-aece-efd5cf4395df
 spec:
   containers:
@@ -340,12 +344,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:33Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:18:19Z"
+    message: 'containers with unready status: [openshift-controller-manager-operator]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:33Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:18:19Z"
+    message: 'containers with unready status: [openshift-controller-manager-operator]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:08:24Z"
@@ -357,11 +365,32 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:733cd2c1e9d2048fa9673bf33699fd49cbc9834577c2a605ca3f5e63d2786f4b
     lastState: {}
     name: openshift-controller-manager-operator
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://a33da4265a694f7b3b0af422eab901dfe13e626566e4652ab7113a0841a01dee
+        exitCode: 1
+        finishedAt: "2023-03-08T12:18:18Z"
+        message: |
+          r.go:227] Stopping reflector *v1.ServiceAccount (10m0s) from k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169
+          I0308 12:18:18.842891       1 genericapiserver.go:617] [graceful-termination] apiserver is exiting
+          I0308 12:18:18.842898       1 builder.go:293] server exited
+          I0308 12:18:18.842784       1 genericapiserver.go:547] "[graceful-termination] shutdown event" name="HTTPServerStoppedListening"
+          I0308 12:18:18.842916       1 operator.go:147] Shutting down OpenShiftControllerManagerOperator
+          I0308 12:18:18.842926       1 requestheader_controller.go:183] Shutting down RequestHeaderAuthRequestController
+          I0308 12:18:18.842915       1 reflector.go:227] Stopping reflector *v1.ConfigMap (12h0m0s) from k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169
+          I0308 12:18:18.842952       1 configmap_cafile_content.go:223] "Shutting down controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+          I0308 12:18:18.842948       1 reflector.go:227] Stopping reflector *v1.ConfigMap (10m0s) from k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169
+          I0308 12:18:18.842963       1 configmap_cafile_content.go:223] "Shutting down controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+          I0308 12:18:18.842982       1 reflector.go:227] Stopping reflector *v1.ConfigMap (12h0m0s) from k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169
+          I0308 12:18:18.842999       1 reflector.go:227] Stopping reflector *v1.ClusterRoleBinding (10m0s) from k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169
+          I0308 12:18:18.843074       1 reflector.go:227] Stopping reflector *v1.FeatureGate (10m0s) from k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169
+          I0308 12:18:18.843077       1 base_controller.go:114] Shutting down worker of ConfigObserver controller ...
+          W0308 12:18:18.843080       1 builder.go:106] graceful termination failed, controllers failed with error: stopped
+          I0308 12:18:18.843083       1 base_controller.go:104] All ConfigObserver workers have been terminated
+        reason: Error
         startedAt: "2023-03-08T12:08:33Z"
   hostIP: 10.0.130.68
   phase: Running
