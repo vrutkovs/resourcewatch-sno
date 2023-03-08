@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:26:00Z"
+deprecatedLastTimestamp: "2023-03-08T12:26:00Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:26:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:26:00Z"
+  name: console-operator-659d6784cb-zmlx2.174a7146f5903d1d
+  namespace: openshift-console-operator
+  resourceVersion: "16752"
+  uid: 17a1330b-a5b9-4985-9036-de2a6af8c8a0
+note: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4083a2bfa74413ef168f0f29d386b96a42a54730d31a52a14c53383ff4b5d934"
+  in 5.079793062s (5.079803388s including waiting)
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{console-operator}
+  kind: Pod
+  name: console-operator-659d6784cb-zmlx2
+  namespace: openshift-console-operator
+  resourceVersion: "15962"
+  uid: 587a13ee-868f-43f3-89b4-3b828ca2185f
+type: Normal
