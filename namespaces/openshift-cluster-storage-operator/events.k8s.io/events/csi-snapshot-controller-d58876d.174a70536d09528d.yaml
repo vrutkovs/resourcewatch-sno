@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:34Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:34Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:34Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:08:34Z"
+  name: csi-snapshot-controller-d58876d.174a70536d09528d
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "3634"
+  uid: b5469808-f308-424e-b22b-5883f73d0e5a
+note: 'Created pod: csi-snapshot-controller-d58876d-rlbh7'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: csi-snapshot-controller-d58876d
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "3606"
+  uid: 311b9790-4bcc-4b05-9c5f-2c26e9cf89be
+type: Normal
