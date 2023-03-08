@@ -11,14 +11,45 @@ metadata:
     operator.openshift.io/dep-openshift-apiserver.etcd-serving-ca.configmap: YGyp3g==
     operator.openshift.io/dep-openshift-apiserver.image-import-ca.configmap: OUXnWA==
     operator.openshift.io/dep-openshift-apiserver.trusted-ca-bundle.configmap: O1lK1A==
-    operator.openshift.io/spec-hash: 14e989fbb1339a682db2b0d29a649350752ccaedfc8d3e454fc9ecba1ef3e30c
+    operator.openshift.io/spec-hash: b799b1072355d491cf528f3c97cae3193ea685762fa2e4e70695c959a22d7c30
   creationTimestamp: "2023-03-08T12:08:44Z"
-  generation: 1
+  generation: 2
   labels:
     apiserver: "true"
     app: openshift-apiserver
-    revision: "0"
+    revision: "2"
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:unavailableReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:08:44Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -341,41 +372,10 @@ metadata:
                 f:name: {}
     manager: cluster-openshift-apiserver-operator
     operation: Update
-    time: "2023-03-08T12:08:44Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:deployment.kubernetes.io/revision: {}
-      f:status:
-        f:conditions:
-          .: {}
-          k:{"type":"Available"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Progressing"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:observedGeneration: {}
-        f:unavailableReplicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:08:44Z"
+    time: "2023-03-08T12:08:48Z"
   name: apiserver
   namespace: openshift-apiserver
-  resourceVersion: "4517"
+  resourceVersion: "4675"
   uid: 39c861b0-f670-4019-8902-338c30caa998
 spec:
   progressDeadlineSeconds: 600
@@ -405,7 +405,7 @@ spec:
         apiserver: "true"
         app: openshift-apiserver-a
         openshift-apiserver-anti-affinity: "true"
-        revision: "0"
+        revision: "2"
       name: openshift-apiserver
     spec:
       affinity:
@@ -592,7 +592,7 @@ spec:
         name: config
       - configMap:
           defaultMode: 420
-          name: audit-0
+          name: audit-2
         name: audit
       - name: etcd-client
         secret:
@@ -623,7 +623,7 @@ spec:
         secret:
           defaultMode: 384
           optional: true
-          secretName: encryption-config-0
+          secretName: encryption-config-2
       - hostPath:
           path: /var/log/openshift-apiserver
           type: ""
