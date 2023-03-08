@@ -360,8 +360,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -380,8 +378,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -407,7 +403,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
-  resourceVersion: "14765"
+  resourceVersion: "14766"
   uid: c90b8aca-8de0-4b42-b897-1524357da77a
 spec:
   containers:
@@ -720,16 +716,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:23:13Z"
-    message: 'containers with unready status: [kube-apiserver]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:23:27Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:23:13Z"
-    message: 'containers with unready status: [kube-apiserver]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:23:27Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:15:28Z"
@@ -741,7 +733,7 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
     lastState: {}
     name: kube-apiserver
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
