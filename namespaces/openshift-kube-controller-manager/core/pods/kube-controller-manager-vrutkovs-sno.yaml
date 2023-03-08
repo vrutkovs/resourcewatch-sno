@@ -328,7 +328,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:17:44Z"
+    time: "2023-03-08T12:19:43Z"
   name: kube-controller-manager-vrutkovs-sno
   namespace: openshift-kube-controller-manager
   ownerReferences:
@@ -337,7 +337,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
-  resourceVersion: "7894"
+  resourceVersion: "11540"
   uid: 1855f52b-8103-4cb1-a237-f58334c73140
 spec:
   containers:
@@ -574,11 +574,11 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:17:44Z"
+    lastTransitionTime: "2023-03-08T12:19:43Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:17:44Z"
+    lastTransitionTime: "2023-03-08T12:19:43Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
@@ -627,17 +627,41 @@ status:
     state:
       running:
         startedAt: "2023-03-08T12:17:34Z"
-  - containerID: cri-o://0a952b5fae22cafb86f72827fcf450f5054a564120e785f765550112e46cfb51
+  - containerID: cri-o://da430329c5e554c4d7deefba86d6fa52717e7880b29ad3419c2c543741454687
     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
-    lastState: {}
+    lastState:
+      terminated:
+        containerID: cri-o://0a952b5fae22cafb86f72827fcf450f5054a564120e785f765550112e46cfb51
+        exitCode: 1
+        finishedAt: "2023-03-08T12:19:30Z"
+        message: |
+          tc/kubernetes/static-pod-certs/secrets/csr-signer/tls.crt::/etc/kubernetes/static-pod-certs/secrets/csr-signer/tls.key"
+          I0308 12:19:30.774560       1 pv_controller_base.go:602] claim worker queue shutting down
+          I0308 12:19:30.774179       1 cronjob_controllerv2.go:149] "Shutting down cronjob controller v2"
+          I0308 12:19:30.774585       1 resource_quota_monitor.go:329] QuotaMonitor stopped 73 of 73 monitors
+          I0308 12:19:30.774589       1 resource_quota_monitor.go:330] QuotaMonitor stopping
+          I0308 12:19:30.774604       1 graph_builder.go:319] stopped 159 of 159 monitors
+          I0308 12:19:30.774281       1 certificate_controller.go:124] Shutting down certificate controller "csrsigning-kubelet-client"
+          I0308 12:19:30.774612       1 pv_controller_base.go:545] volume worker queue shutting down
+          I0308 12:19:30.774299       1 certificate_controller.go:124] Shutting down certificate controller "csrsigning-kube-apiserver-client"
+          I0308 12:19:30.774611       1 graph_builder.go:320] GraphBuilder stopping
+          I0308 12:19:30.774460       1 resource_quota_controller.go:264] resource quota controller worker shutting down
+          I0308 12:19:30.774636       1 dynamic_serving_content.go:146] "Shutting down controller" name="csr-controller::/etc/kubernetes/static-pod-certs/secrets/csr-signer/tls.crt::/etc/kubernetes/static-pod-certs/secrets/csr-signer/tls.key"
+          I0308 12:19:30.774650       1 horizontal.go:242] horizontal pod autoscaler controller worker shutting down
+          I0308 12:19:30.774658       1 horizontal.go:242] horizontal pod autoscaler controller worker shutting down
+          I0308 12:19:30.774662       1 horizontal.go:242] horizontal pod autoscaler controller worker shutting down
+          I0308 12:19:30.774665       1 horizontal.go:242] horizontal pod autoscaler controller worker shutting down
+          I0308 12:19:30.774106       1 event.go:294] "Event occurred" object="kube-system/kube-controller-manager" fieldPath="" kind="Lease" apiVersion="coordination.k8s.io/v1" type="Normal" reason="LeaderElection" message="vrutkovs-sno_a012d12f-1697-4b1c-91c7-23bce894d8d1 stopped leading"
+        reason: Error
+        startedAt: "2023-03-08T12:16:34Z"
     name: kube-controller-manager
     ready: true
-    restartCount: 0
+    restartCount: 1
     started: true
     state:
       running:
-        startedAt: "2023-03-08T12:16:34Z"
+        startedAt: "2023-03-08T12:19:31Z"
   - containerID: cri-o://6c865148bcc4def8e2d3a79713bd7be0f9c85895b3bc7a781ea7d3a6adeb312d
     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e3c201c17dba67a00ba69b15c1bc1ed24a408c239746df507c78c8eb3a691f5f
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e3c201c17dba67a00ba69b15c1bc1ed24a408c239746df507c78c8eb3a691f5f
