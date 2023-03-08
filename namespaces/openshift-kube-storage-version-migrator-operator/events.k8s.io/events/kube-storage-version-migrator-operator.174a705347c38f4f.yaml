@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:34Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:34Z"
+deprecatedSource:
+  component: openshift-kube-storage-version-migrator-operator-static-conditions-controller-staticconditionscontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:34Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-03-08T12:08:34Z"
+  name: kube-storage-version-migrator-operator.174a705347c38f4f
+  namespace: openshift-kube-storage-version-migrator-operator
+  resourceVersion: "3463"
+  uid: f1b7be4c-f96d-4479-ae19-3ed3a150a9fd
+note: Controller "StaticConditionsController" resync interval is set to 0s which might
+  lead to client request throttling
+reason: FastControllerResync
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-storage-version-migrator-operator
+  namespace: openshift-kube-storage-version-migrator-operator
+  uid: 51a70a1f-917f-4410-8fce-8f2067015f90
+type: Warning
