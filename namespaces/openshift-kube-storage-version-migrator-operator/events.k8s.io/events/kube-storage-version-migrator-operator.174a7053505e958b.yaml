@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:34Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:34Z"
+deprecatedSource:
+  component: openshift-kube-storage-version-migrator-operator-kubestorageversionmigratorstaticresources-staticresourcecontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:34Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-03-08T12:08:34Z"
+  name: kube-storage-version-migrator-operator.174a7053505e958b
+  namespace: openshift-kube-storage-version-migrator-operator
+  resourceVersion: "3480"
+  uid: fc9da442-3d91-4adf-9596-df47cd37cacc
+note: Created ClusterRoleBinding.rbac.authorization.k8s.io/storage-version-migration-migrator
+  because it was missing
+reason: ClusterRoleBindingCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-storage-version-migrator-operator
+  namespace: openshift-kube-storage-version-migrator-operator
+  uid: 51a70a1f-917f-4410-8fce-8f2067015f90
+type: Normal
