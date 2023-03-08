@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:19:53Z"
+deprecatedLastTimestamp: "2023-03-08T12:19:53Z"
+deprecatedSource:
+  component: certificate_controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:19:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: ingress-operator
+    operation: Update
+    time: "2023-03-08T12:19:53Z"
+  name: router-ca.174a70f185a308be
+  namespace: openshift-ingress-operator
+  resourceVersion: "11778"
+  uid: 63a33c15-6cc5-49a6-9f5e-f30898b98df7
+note: Created a default wildcard CA certificate
+reason: CreatedWildcardCACert
+regarding:
+  apiVersion: v1
+  kind: Secret
+  name: router-ca
+  namespace: openshift-ingress-operator
+  resourceVersion: "11777"
+  uid: b3f3de9c-e3de-4e61-87cc-311d7725c7fc
+type: Normal
