@@ -179,13 +179,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:06:33Z"
+    time: "2023-03-08T12:19:55Z"
   name: ingress-operator-98bd944c
   namespace: openshift-ingress-operator
   ownerReferences:
@@ -195,7 +197,7 @@ metadata:
     kind: Deployment
     name: ingress-operator
     uid: 51812f50-23e5-48d7-9e7a-d98f7f06e391
-  resourceVersion: "2418"
+  resourceVersion: "11886"
   uid: ccd3ef56-cf18-48dc-bbe4-dae40b86fa74
 spec:
   replicas: 1
@@ -333,6 +335,8 @@ spec:
               expirationSeconds: 3600
               path: token
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
