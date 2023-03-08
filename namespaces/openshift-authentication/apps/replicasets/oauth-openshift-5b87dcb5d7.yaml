@@ -8,12 +8,25 @@ metadata:
     operator.openshift.io/rvs-hash: J1SEA0fEos6bdqyfo0FaA1SCy3HYkvGkpzrDvj5rHl6d6EnbqG5_Oz40ANQR3OGAKchoy5Z_XHuNXnMalI_9cg
     operator.openshift.io/spec-hash: 2b8a3b0ecb0c4c7234728555f354b6f8ad6879ac6ecb0a84b15fa868521d48eb
   creationTimestamp: "2023-03-08T12:21:52Z"
-  generation: 1
+  generation: 2
   labels:
     app: oauth-openshift
     oauth-openshift-anti-affinity: "true"
     pod-template-hash: 5b87dcb5d7
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:availableReplicas: {}
+        f:fullyLabeledReplicas: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:22:28Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -276,20 +289,7 @@ metadata:
                   f:secretName: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-08T12:21:52Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:availableReplicas: {}
-        f:fullyLabeledReplicas: {}
-        f:observedGeneration: {}
-        f:readyReplicas: {}
-        f:replicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:22:28Z"
+    time: "2023-03-08T12:26:13Z"
   name: oauth-openshift-5b87dcb5d7
   namespace: openshift-authentication
   ownerReferences:
@@ -299,10 +299,10 @@ metadata:
     kind: Deployment
     name: oauth-openshift
     uid: e7557177-2d74-4c4d-9713-9102546c56ef
-  resourceVersion: "14369"
+  resourceVersion: "17061"
   uid: 8becf278-929d-4706-b21d-964c858d708b
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: oauth-openshift
