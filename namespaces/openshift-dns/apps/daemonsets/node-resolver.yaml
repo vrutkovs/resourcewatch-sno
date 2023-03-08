@@ -99,9 +99,11 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:currentNumberScheduled: {}
         f:desiredNumberScheduled: {}
         f:numberUnavailable: {}
         f:observedGeneration: {}
+        f:updatedNumberScheduled: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -114,7 +116,7 @@ metadata:
     kind: DNS
     name: default
     uid: 42f8d507-99c2-4c90-bbc4-baea9ef87e4a
-  resourceVersion: "11921"
+  resourceVersion: "11985"
   uid: 2de761ea-9d60-4d2f-86d6-ed77b20ff944
 spec:
   revisionHistoryLimit: 10
@@ -243,9 +245,10 @@ spec:
       maxUnavailable: 33%
     type: RollingUpdate
 status:
-  currentNumberScheduled: 0
+  currentNumberScheduled: 1
   desiredNumberScheduled: 1
   numberMisscheduled: 0
   numberReady: 0
   numberUnavailable: 1
   observedGeneration: 1
+  updatedNumberScheduled: 1
