@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:10:15Z"
+deprecatedLastTimestamp: "2023-03-08T12:10:15Z"
+deprecatedSource:
+  component: openshift-controller-manager-operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:10:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:10:15Z"
+  name: openshift-controller-manager-operator.174a706ac6082e69
+  namespace: openshift-controller-manager-operator
+  resourceVersion: "6019"
+  uid: e20f8e22-a16c-45ec-bdd9-c4a6f120ca39
+note: Created ConfigMap/client-ca -n openshift-route-controller-manager because it
+  was missing
+reason: ConfigMapCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-controller-manager-operator
+  namespace: openshift-controller-manager-operator
+  uid: 45a16873-2fe3-4bef-a950-df458d021470
+type: Normal
