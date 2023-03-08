@@ -1,0 +1,40 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-08T12:25:51.130176Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:25:51Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-08T12:25:51Z"
+  name: redhat-operators-h96f7.174a7144b957bfb6
+  namespace: openshift-marketplace
+  resourceVersion: "16031"
+  uid: 370f1dec-95c4-45f6-a6f4-d032437f1951
+note: Successfully assigned openshift-marketplace/redhat-operators-h96f7 to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: redhat-operators-h96f7
+  namespace: openshift-marketplace
+  resourceVersion: "16023"
+  uid: b990e713-1456-42b1-8ff5-26ae94db6f2d
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
