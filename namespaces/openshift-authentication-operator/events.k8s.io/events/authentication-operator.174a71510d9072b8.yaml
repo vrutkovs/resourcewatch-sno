@@ -1,0 +1,46 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:26:44Z"
+deprecatedLastTimestamp: "2023-03-08T12:26:44Z"
+deprecatedSource:
+  component: oauth-apiserver-status-controller-statussyncer_authentication
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:26:44Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-08T12:26:44Z"
+  name: authentication-operator.174a71510d9072b8
+  namespace: openshift-authentication-operator
+  resourceVersion: "17548"
+  uid: 013c0311-e396-4164-88f5-076781229bea
+note: 'Status for clusteroperator/authentication changed: Available message changed
+  from "OAuthServerDeploymentAvailable: no oauth-openshift.openshift-authentication
+  pods available on any node.\nOAuthServerRouteEndpointAccessibleControllerAvailable:
+  Get \"https://oauth-openshift.apps.vrutkovs.choomba.one/healthz\": EOF\nOAuthServerServiceEndpointAccessibleControllerAvailable:
+  Get \"https://172.30.76.170:443/healthz\": dial tcp 172.30.76.170:443: connect:
+  connection refused" to "OAuthServerDeploymentAvailable: no oauth-openshift.openshift-authentication
+  pods available on any node.\nOAuthServerRouteEndpointAccessibleControllerAvailable:
+  Get \"https://oauth-openshift.apps.vrutkovs.choomba.one/healthz\": EOF"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 0d9fc21a-8cec-4bfd-bab5-451303a4b438
+type: Normal
