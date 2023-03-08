@@ -109,6 +109,40 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:25:50Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:metadata:
         f:annotations:
           f:k8s.ovn.org/pod-networks: {}
@@ -124,7 +158,7 @@ metadata:
     kind: CatalogSource
     name: redhat-marketplace
     uid: 81aa62a2-4d66-4e9e-bff6-5061e56ed9dc
-  resourceVersion: "15983"
+  resourceVersion: "15985"
   uid: 1db89da3-c9a9-49e0-aee4-477216208aad
 spec:
   containers:
@@ -246,6 +280,35 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:25:50Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:25:50Z"
+    message: 'containers with unready status: [registry-server]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:25:50Z"
+    message: 'containers with unready status: [registry-server]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:25:50Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: registry.redhat.io/redhat/redhat-marketplace-index:v4.12
+    imageID: ""
+    lastState: {}
+    name: registry-server
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.68
   phase: Pending
   qosClass: Burstable
+  startTime: "2023-03-08T12:25:50Z"
