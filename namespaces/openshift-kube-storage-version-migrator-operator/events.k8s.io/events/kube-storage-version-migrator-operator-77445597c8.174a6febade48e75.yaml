@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-08T12:01:09Z"
 deprecatedLastTimestamp: "2023-03-08T12:01:09Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-08T12:01:09Z"
   name: kube-storage-version-migrator-operator-77445597c8.174a6febade48e75
   namespace: openshift-kube-storage-version-migrator-operator
-  resourceVersion: "1484"
+  resourceVersion: "1486"
   uid: e003960f-3502-4103-b1b6-ba09e1cb2931
 note: 'Error creating: pods "kube-storage-version-migrator-operator-77445597c8-" is
   forbidden: autoscaling.openshift.io/ManagementCPUsOverride the cluster does not
