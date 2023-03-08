@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.21/23"],"mac_address":"0a:58:0a:80:00:15","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.21/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.21"
+          ],
+          "mac": "0a:58:0a:80:00:15",
+          "default": true,
+          "dns": {}
+      }]
   creationTimestamp: "2023-03-08T12:06:33Z"
   generateName: dns-operator-6cf6587b88-
   labels:
@@ -188,6 +199,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-08T12:08:24Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:19:39Z"
   name: dns-operator-6cf6587b88-pbkzf
   namespace: openshift-dns-operator
   ownerReferences:
@@ -197,7 +218,7 @@ metadata:
     kind: ReplicaSet
     name: dns-operator-6cf6587b88
     uid: 1d03ac8e-8494-4b42-8930-672136ffa980
-  resourceVersion: "3188"
+  resourceVersion: "11479"
   uid: 1ac05946-0210-48d9-b571-ff31bb18b100
 spec:
   containers:
