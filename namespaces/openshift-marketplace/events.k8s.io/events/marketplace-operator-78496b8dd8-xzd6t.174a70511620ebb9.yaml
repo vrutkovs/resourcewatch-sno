@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:24Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:24Z"
+deprecatedSource:
+  component: default-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:24Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-08T12:08:24Z"
+  name: marketplace-operator-78496b8dd8-xzd6t.174a70511620ebb9
+  namespace: openshift-marketplace
+  resourceVersion: "3157"
+  uid: 0e09e400-1f80-45d6-9b07-a1013f892e57
+note: Successfully assigned openshift-marketplace/marketplace-operator-78496b8dd8-xzd6t
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: marketplace-operator-78496b8dd8-xzd6t
+  namespace: openshift-marketplace
+  resourceVersion: "2383"
+  uid: 45744ad7-0fa7-408a-8a8e-8f293004749e
+type: Normal
