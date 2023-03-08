@@ -1,0 +1,379 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    openshift.io/scc: privileged
+  creationTimestamp: "2023-03-08T12:19:55Z"
+  generateName: tuned-
+  labels:
+    controller-revision-hash: 66bb49f4b5
+    openshift-app: tuned
+    pod-template-generation: "1"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:controller-revision-hash: {}
+          f:openshift-app: {}
+          f:pod-template-generation: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"91ed5045-855a-485c-9153-5fee9f820926"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:nodeAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"tuned"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"OCP_NODE_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"RELEASE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RESYNC_PERIOD"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"WATCH_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:lifecycle:
+              .: {}
+              f:preStop:
+                .: {}
+                f:exec:
+                  .: {}
+                  f:command: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/modprobe.d"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:subPath: {}
+              k:{"mountPath":"/etc/sysconfig"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:subPath: {}
+              k:{"mountPath":"/etc/sysctl.conf"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+                f:subPath: {}
+              k:{"mountPath":"/etc/sysctl.d"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+                f:subPath: {}
+              k:{"mountPath":"/etc/systemd"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:subPath: {}
+              k:{"mountPath":"/host"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/lib/modules"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/run/systemd/system"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/sys"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/tuned/profiles-data"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/dbus"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostIPC: {}
+        f:hostNetwork: {}
+        f:hostPID: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"etc"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"host"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"lib-modules"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"run-systemd-system"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"sys"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"var-lib-tuned-profiles-data"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:name: {}
+              f:optional: {}
+            f:name: {}
+          k:{"name":"var-run-dbus"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:19:55Z"
+  name: tuned-6tzvc
+  namespace: openshift-cluster-node-tuning-operator
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: tuned
+    uid: 91ed5045-855a-485c-9153-5fee9f820926
+  resourceVersion: "11976"
+  uid: 290d7c96-2d17-45bc-ba39-f67a959a3a89
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - vrutkovs-sno
+  containers:
+  - command:
+    - /var/lib/tuned/bin/run
+    - start
+    env:
+    - name: WATCH_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: OCP_NODE_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.nodeName
+    - name: RESYNC_PERIOD
+      value: "600"
+    - name: RELEASE_VERSION
+      value: 4.13.0-ec.4
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3af649e0a61d233fe2e92b0220f8099870588baa36080159d806167b6b8b0c00
+    imagePullPolicy: IfNotPresent
+    lifecycle:
+      preStop:
+        exec:
+          command:
+          - /var/lib/tuned/bin/run
+          - stop
+    name: tuned
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/lib/tuned/profiles-data
+      name: var-lib-tuned-profiles-data
+    - mountPath: /etc/modprobe.d
+      name: etc
+      subPath: modprobe.d
+    - mountPath: /etc/sysconfig
+      name: etc
+      subPath: sysconfig
+    - mountPath: /etc/sysctl.d
+      name: etc
+      readOnly: true
+      subPath: sysctl.d
+    - mountPath: /etc/sysctl.conf
+      name: etc
+      readOnly: true
+      subPath: sysctl.conf
+    - mountPath: /etc/systemd
+      name: etc
+      subPath: systemd
+    - mountPath: /sys
+      name: sys
+    - mountPath: /var/run/dbus
+      name: var-run-dbus
+      readOnly: true
+    - mountPath: /run/systemd/system
+      name: run-systemd-system
+      readOnly: true
+    - mountPath: /lib/modules
+      name: lib-modules
+      readOnly: true
+    - mountPath: /host
+      name: host
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-6wbm9
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostIPC: true
+  hostNetwork: true
+  hostPID: true
+  imagePullSecrets:
+  - name: tuned-dockercfg-58lxn
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: tuned
+  serviceAccountName: tuned
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc
+      type: Directory
+    name: etc
+  - hostPath:
+      path: /sys
+      type: Directory
+    name: sys
+  - hostPath:
+      path: /var/run/dbus
+      type: Directory
+    name: var-run-dbus
+  - hostPath:
+      path: /run/systemd/system
+      type: Directory
+    name: run-systemd-system
+  - hostPath:
+      path: /lib/modules
+      type: Directory
+    name: lib-modules
+  - hostPath:
+      path: /
+      type: Directory
+    name: host
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: tuned-profiles-data
+        path: tuned-profiles.yaml
+      name: tuned-profiles
+      optional: true
+    name: var-lib-tuned-profiles-data
+  - name: kube-api-access-6wbm9
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  phase: Pending
+  qosClass: Burstable
