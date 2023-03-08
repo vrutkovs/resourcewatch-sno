@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "17129"
+  resourceVersion: "17132"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
@@ -61,6 +61,7 @@ status:
     message: |-
       OAuthServerServiceEndpointAccessibleControllerDegraded: Get "https://172.30.76.170:443/healthz": dial tcp 172.30.76.170:443: connect: connection refused
       OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth service endpoints are not ready
+      IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
       OAuthServerRouteEndpointAccessibleControllerDegraded: Get "https://oauth-openshift.apps.vrutkovs.choomba.one/healthz": EOF
     reason: AsExpected
     status: "False"
