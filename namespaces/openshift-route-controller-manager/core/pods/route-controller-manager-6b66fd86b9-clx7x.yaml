@@ -181,6 +181,15 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-08T12:18:08Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"ContainersReady"}:
@@ -207,20 +216,18 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.51"}:
+            .: {}
+            f:ip: {}
         f:startTime: {}
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:18:08Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.ovn.org/pod-networks: {}
-    manager: vrutkovs-sno
-    operation: Update
-    time: "2023-03-08T12:18:08Z"
+    time: "2023-03-08T12:18:09Z"
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -240,7 +247,7 @@ metadata:
     kind: ReplicaSet
     name: route-controller-manager-6b66fd86b9
     uid: 9e12c928-aaf2-4964-8b06-ce5b2ed727d6
-  resourceVersion: "10612"
+  resourceVersion: "10645"
   uid: 5f071262-13c1-48f1-8554-a9e7b93eeebf
 spec:
   affinity:
@@ -400,17 +407,21 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:7b288005c8c77daaad7536b802b94ddfab190584959eb5f86e2bb5fbb04f5ed7
-    imageID: ""
+  - containerID: cri-o://160eccbe2c40865feeb2fd4c63715d2408ef39e0c04258a50fff625bd52172f1
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:7b288005c8c77daaad7536b802b94ddfab190584959eb5f86e2bb5fbb04f5ed7
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:7b288005c8c77daaad7536b802b94ddfab190584959eb5f86e2bb5fbb04f5ed7
     lastState: {}
     name: route-controller-manager
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-08T12:18:09Z"
   hostIP: 10.0.130.68
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.51
+  podIPs:
+  - ip: 10.128.0.51
   qosClass: Burstable
   startTime: "2023-03-08T12:18:08Z"
