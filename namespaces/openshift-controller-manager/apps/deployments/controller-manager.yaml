@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    deployment.kubernetes.io/revision: "2"
+    deployment.kubernetes.io/revision: "3"
     operator.openshift.io/spec-hash: e523f167b552a17e53a276873cabbc867ecc5696a9b96505cf00d19d026371b7
     release.openshift.io/version: 4.13.0-ec.4
   creationTimestamp: "2023-03-08T12:08:34Z"
@@ -204,10 +204,10 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:09:35Z"
+    time: "2023-03-08T12:09:55Z"
   name: controller-manager
   namespace: openshift-controller-manager
-  resourceVersion: "5672"
+  resourceVersion: "5778"
   uid: a8efd566-f552-482c-bb79-dec1a75042e2
 spec:
   progressDeadlineSeconds: 600
