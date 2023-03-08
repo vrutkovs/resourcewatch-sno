@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:23:25Z"
+deprecatedLastTimestamp: "2023-03-08T12:23:25Z"
+deprecatedSource:
+  component: openshift-controller-manager-operator-status-controller-statussyncer_openshift-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:23:25Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:23:25Z"
+  name: openshift-controller-manager-operator.174a7122cde90178
+  namespace: openshift-controller-manager-operator
+  resourceVersion: "14744"
+  uid: 36154638-8ef3-48bf-89de-4f7239e667c1
+note: 'Status for clusteroperator/openshift-controller-manager changed: Progressing
+  changed from True to False ("All is well")'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-controller-manager-operator
+  namespace: openshift-controller-manager-operator
+  uid: 45a16873-2fe3-4bef-a950-df458d021470
+type: Normal
