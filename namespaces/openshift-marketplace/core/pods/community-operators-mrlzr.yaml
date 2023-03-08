@@ -120,6 +120,25 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-08T12:25:50Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:25:55Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"ContainersReady"}:
@@ -146,30 +165,18 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.90"}:
+            .: {}
+            f:ip: {}
         f:startTime: {}
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:25:50Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.ovn.org/pod-networks: {}
-    manager: vrutkovs-sno
-    operation: Update
-    time: "2023-03-08T12:25:50Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.v1.cni.cncf.io/network-status: {}
-    manager: multus
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:25:55Z"
+    time: "2023-03-08T12:26:19Z"
   name: community-operators-mrlzr
   namespace: openshift-marketplace
   ownerReferences:
@@ -179,7 +186,7 @@ metadata:
     kind: CatalogSource
     name: community-operators
     uid: c9cc1158-883b-4fd9-896c-76bd200c122d
-  resourceVersion: "16298"
+  resourceVersion: "17201"
   uid: 3dec0365-3cbf-4c2c-80fa-3ec078eca5fb
 spec:
   containers:
@@ -319,17 +326,21 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.redhat.io/redhat/community-operator-index:v4.12
-    imageID: ""
+  - containerID: cri-o://70174dc7e677416a35ddc3cd76cbd0a509eed9500f4d094c2181c55bb7f43356
+    image: registry.redhat.io/redhat/community-operator-index:v4.12
+    imageID: registry.redhat.io/redhat/community-operator-index@sha256:2b0de4bdf25acd6c9eb268045b192a844b1d4c392ed81c6d5d9c66d14c65f7cb
     lastState: {}
     name: registry-server
     ready: false
     restartCount: 0
     started: false
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-08T12:26:19Z"
   hostIP: 10.0.130.68
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.90
+  podIPs:
+  - ip: 10.128.0.90
   qosClass: Burstable
   startTime: "2023-03-08T12:25:50Z"
