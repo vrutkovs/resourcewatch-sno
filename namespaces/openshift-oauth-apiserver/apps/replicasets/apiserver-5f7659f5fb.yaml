@@ -247,6 +247,24 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-08T12:08:58Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ReplicaFailure"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:09:10Z"
   name: apiserver-5f7659f5fb
   namespace: openshift-oauth-apiserver
   ownerReferences:
@@ -256,7 +274,7 @@ metadata:
     kind: Deployment
     name: apiserver
     uid: 9f1c69da-0c8f-4247-852b-84e6f6d1c131
-  resourceVersion: "5037"
+  resourceVersion: "5304"
   uid: 1f3d3811-d94d-4c54-8be0-5e1501359417
 spec:
   replicas: 1
@@ -459,4 +477,12 @@ spec:
           type: ""
         name: audit-dir
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-08T12:09:10Z"
+    message: 'pods "apiserver-5f7659f5fb-" is forbidden: error fetching namespace
+      "openshift-oauth-apiserver": unable to find annotation openshift.io/sa.scc.uid-range'
+    reason: FailedCreate
+    status: "True"
+    type: ReplicaFailure
+  observedGeneration: 2
   replicas: 0
