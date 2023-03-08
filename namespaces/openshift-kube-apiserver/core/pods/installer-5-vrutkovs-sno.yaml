@@ -137,6 +137,16 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:21:47Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           .: {}
@@ -144,6 +154,7 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -162,6 +173,7 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -177,17 +189,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:21:47Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.v1.cni.cncf.io/network-status: {}
-    manager: multus
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:21:47Z"
+    time: "2023-03-08T12:22:19Z"
   name: installer-5-vrutkovs-sno
   namespace: openshift-kube-apiserver
   ownerReferences:
@@ -195,7 +197,7 @@ metadata:
     kind: ConfigMap
     name: revision-status-5
     uid: b3f9c1af-d5e8-40d3-8971-670291116f33
-  resourceVersion: "14173"
+  resourceVersion: "14320"
   uid: 296dc59d-ed89-4df7-8b66-bb254f5852b8
 spec:
   automountServiceAccountToken: false
@@ -338,12 +340,14 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:21:47Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:22:19Z"
+    reason: PodFailed
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:21:47Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:22:19Z"
+    reason: PodFailed
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:21:46Z"
@@ -355,14 +359,60 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
     lastState: {}
     name: installer
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://e74f55e39ac81d8f8822812695740d187d3b5db07a9ea6845cc53e5dd9cf0cc9
+        exitCode: 1
+        finishedAt: "2023-03-08T12:22:17Z"
+        message: |
+          -cert-key",
+            (string) (len=31) "check-endpoints-client-cert-key",
+            (string) (len=14) "kubelet-client",
+            (string) (len=16) "node-kubeconfigs"
+           },
+           OptionalCertSecretNamePrefixes: ([]string) (len=11 cap=16) {
+            (string) (len=17) "user-serving-cert",
+            (string) (len=21) "user-serving-cert-000",
+            (string) (len=21) "user-serving-cert-001",
+            (string) (len=21) "user-serving-cert-002",
+            (string) (len=21) "user-serving-cert-003",
+            (string) (len=21) "user-serving-cert-004",
+            (string) (len=21) "user-serving-cert-005",
+            (string) (len=21) "user-serving-cert-006",
+            (string) (len=21) "user-serving-cert-007",
+            (string) (len=21) "user-serving-cert-008",
+            (string) (len=21) "user-serving-cert-009"
+           },
+           CertConfigMapNamePrefixes: ([]string) (len=4 cap=4) {
+            (string) (len=20) "aggregator-client-ca",
+            (string) (len=9) "client-ca",
+            (string) (len=29) "control-plane-node-kubeconfig",
+            (string) (len=26) "check-endpoints-kubeconfig"
+           },
+           OptionalCertConfigMapNamePrefixes: ([]string) (len=1 cap=1) {
+            (string) (len=17) "trusted-ca-bundle"
+           },
+           CertDir: (string) (len=57) "/etc/kubernetes/static-pod-resources/kube-apiserver-certs",
+           ResourceDir: (string) (len=36) "/etc/kubernetes/static-pod-resources",
+           PodManifestDir: (string) (len=25) "/etc/kubernetes/manifests",
+           Timeout: (time.Duration) 2m0s,
+           StaticPodManifestsLockFile: (string) "",
+           PodMutationFns: ([]installerpod.PodMutationFunc) <nil>,
+           KubeletVersion: (string) ""
+          })
+          I0308 12:21:47.855972       1 cmd.go:410] Getting controller reference for node vrutkovs-sno
+          I0308 12:21:47.862096       1 cmd.go:423] Waiting for installer revisions to settle for node vrutkovs-sno
+          I0308 12:21:47.864317       1 cmd.go:515] Waiting additional period after revisions have settled for node vrutkovs-sno
+          I0308 12:22:01.593373       1 cmd.go:124] Received SIGTERM or SIGINT signal, shutting down the process.
+          I0308 12:22:17.864483       1 cmd.go:521] Getting installer pods for node vrutkovs-sno
+          F0308 12:22:17.864608       1 cmd.go:106] client rate limiter Wait returned an error: context canceled
+        reason: Error
         startedAt: "2023-03-08T12:21:47Z"
   hostIP: 10.0.130.68
-  phase: Running
+  phase: Failed
   podIP: 10.128.0.72
   podIPs:
   - ip: 10.128.0.72
