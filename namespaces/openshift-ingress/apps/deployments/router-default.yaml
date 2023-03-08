@@ -296,6 +296,7 @@ metadata:
           .: {}
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -317,15 +318,14 @@ metadata:
         f:observedGeneration: {}
         f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:21:52Z"
+    time: "2023-03-08T12:22:28Z"
   name: router-default
   namespace: openshift-ingress
-  resourceVersion: "13688"
+  resourceVersion: "14371"
   uid: e3477452-4082-4fb6-8c1d-6563d35863ab
 spec:
   minReadySeconds: 30
@@ -513,6 +513,7 @@ spec:
           defaultMode: 420
           secretName: router-metrics-certs-default
 status:
+  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-03-08T12:19:55Z"
     lastUpdateTime: "2023-03-08T12:19:55Z"
@@ -521,13 +522,12 @@ status:
     status: "True"
     type: Available
   - lastTransitionTime: "2023-03-08T12:19:55Z"
-    lastUpdateTime: "2023-03-08T12:21:52Z"
-    message: ReplicaSet "router-default-b5bb4646c" is progressing.
-    reason: ReplicaSetUpdated
+    lastUpdateTime: "2023-03-08T12:22:28Z"
+    message: ReplicaSet "router-default-b5bb4646c" has successfully progressed.
+    reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
   observedGeneration: 1
   readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
