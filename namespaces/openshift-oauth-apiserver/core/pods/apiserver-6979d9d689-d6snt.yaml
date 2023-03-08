@@ -227,6 +227,43 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:17:48Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:metadata:
         f:annotations:
           f:k8s.ovn.org/pod-networks: {}
@@ -242,7 +279,7 @@ metadata:
     kind: ReplicaSet
     name: apiserver-6979d9d689
     uid: 9063ff97-1a18-42e1-9aca-f6d23f96ad62
-  resourceVersion: "7999"
+  resourceVersion: "8073"
   uid: aceb1e36-2ac6-4e9e-a0df-5caa7e614acf
 spec:
   affinity:
@@ -463,7 +500,48 @@ status:
   conditions:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:17:48Z"
+    message: 'containers with incomplete status: [fix-audit-permissions]'
+    reason: ContainersNotInitialized
+    status: "False"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:17:48Z"
+    message: 'containers with unready status: [oauth-apiserver]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:17:48Z"
+    message: 'containers with unready status: [oauth-apiserver]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:17:48Z"
     status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b8b577f9e79318d8a58cd9f29dce8be3b0c6b8963c423d162da674e5424a1770
+    imageID: ""
+    lastState: {}
+    name: oauth-apiserver
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: PodInitializing
+  hostIP: 10.0.130.68
+  initContainerStatuses:
+  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b8b577f9e79318d8a58cd9f29dce8be3b0c6b8963c423d162da674e5424a1770
+    imageID: ""
+    lastState: {}
+    name: fix-audit-permissions
+    ready: false
+    restartCount: 0
+    state:
+      waiting:
+        reason: PodInitializing
   phase: Pending
   qosClass: Burstable
+  startTime: "2023-03-08T12:17:48Z"
