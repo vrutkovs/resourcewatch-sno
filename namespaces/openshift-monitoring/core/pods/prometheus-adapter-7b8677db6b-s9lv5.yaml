@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.67/23"],"mac_address":"0a:58:0a:80:00:43","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.67/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.67"
+          ],
+          "mac": "0a:58:0a:80:00:43",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-08T12:20:08Z"
@@ -219,6 +230,16 @@ metadata:
     fieldsV1:
       f:metadata:
         f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:20:08Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
           f:k8s.ovn.org/pod-networks: {}
     manager: vrutkovs-sno
     operation: Update
@@ -232,7 +253,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-adapter-7b8677db6b
     uid: e9a1d342-70ac-48b5-8831-33911ce6572b
-  resourceVersion: "12595"
+  resourceVersion: "12611"
   uid: b4fcb53a-cb62-4105-9372-d0c624634ca3
 spec:
   automountServiceAccountToken: true
