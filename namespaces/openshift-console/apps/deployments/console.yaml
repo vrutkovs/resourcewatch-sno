@@ -10,6 +10,7 @@ metadata:
     console.openshift.io/proxy-config-version: "555"
     console.openshift.io/service-ca-config-version: "16913"
     console.openshift.io/trusted-ca-config-version: "16918"
+    deployment.kubernetes.io/revision: "1"
     operator.openshift.io/spec-hash: 7e9cc2c3c3efd6e26c05d352a25d2b8cf228dc326aa608d9e9d027786b957521
   creationTimestamp: "2023-03-08T12:26:08Z"
   generation: 1
@@ -207,9 +208,30 @@ metadata:
     manager: console
     operation: Update
     time: "2023-03-08T12:26:08Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:26:08Z"
   name: console
   namespace: openshift-console
-  resourceVersion: "16959"
+  resourceVersion: "16971"
   uid: 8a031ddc-cef6-4b34-a5d4-692f8a8e2198
 spec:
   progressDeadlineSeconds: 600
@@ -351,4 +373,11 @@ spec:
           defaultMode: 420
           name: oauth-serving-cert
         name: oauth-serving-cert
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-08T12:26:08Z"
+    lastUpdateTime: "2023-03-08T12:26:08Z"
+    message: Created new replica set "console-5bf6c4ff6b"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
