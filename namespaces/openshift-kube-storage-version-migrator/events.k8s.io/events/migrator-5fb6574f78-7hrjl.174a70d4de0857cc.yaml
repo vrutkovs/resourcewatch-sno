@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:17:50Z"
+deprecatedLastTimestamp: "2023-03-08T12:17:50Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:17:50Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:17:50Z"
+  name: migrator-5fb6574f78-7hrjl.174a70d4de0857cc
+  namespace: openshift-kube-storage-version-migrator
+  resourceVersion: "8205"
+  uid: 198e1366-10f4-4f89-b226-0a818369717c
+note: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c92e23b27fe88164752a9233a6eade7bb7c82021bf7cee8933655d215ba6bdb0"
+  in 1.518762795s (1.518767554s including waiting)
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{migrator}
+  kind: Pod
+  name: migrator-5fb6574f78-7hrjl
+  namespace: openshift-kube-storage-version-migrator
+  resourceVersion: "7954"
+  uid: ffc2734c-2a23-45a7-8930-ca2718d3a35f
+type: Normal
