@@ -32,6 +32,17 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-08T12:00:44Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: olm
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:25:51Z"
   name: operator-lifecycle-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -39,8 +50,32 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "676"
+  resourceVersion: "16040"
   uid: 9b9cf028-7a3a-47c4-a33a-7b27cf275f88
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-08T12:25:51Z"
+    message: Deployed 0.19.0
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-03-08T12:25:51Z"
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-03-08T12:25:51Z"
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-03-08T12:25:51Z"
+    status: "True"
+    type: Upgradeable
   extension: null
+  relatedObjects:
+  - group: operators.coreos.com
+    name: packageserver
+    namespace: openshift-operator-lifecycle-manager
+    resource: clusterserviceversions
+  versions:
+  - name: operator
+    version: 4.13.0-ec.4
+  - name: operator-lifecycle-manager
+    version: 0.19.0
