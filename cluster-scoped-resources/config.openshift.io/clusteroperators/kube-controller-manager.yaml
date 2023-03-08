@@ -52,21 +52,13 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "14712"
+  resourceVersion: "14720"
   uid: ae28a46b-58e3-46e0-8654-d3f4cf5ab63c
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:22:34Z"
-    message: "NodeControllerDegraded: All master nodes are ready\nBackingResourceControllerDegraded:
-      \"manifests/installer-sa.yaml\" (string): serviceaccounts \"installer-sa\" is
-      forbidden: User \"system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator\"
-      cannot get resource \"serviceaccounts\" in API group \"\" in the namespace \"openshift-kube-controller-manager\":
-      RBAC: [clusterrole.rbac.authorization.k8s.io \"system:build-strategy-docker\"
-      not found, clusterrole.rbac.authorization.k8s.io \"basic-user\" not found, clusterrole.rbac.authorization.k8s.io
-      \"system:basic-user\" not found, clusterrole.rbac.authorization.k8s.io \"cluster-admin\"
-      not found, clusterrole.rbac.authorization.k8s.io \"system:openshift:discovery\"
-      not found]\nBackingResourceControllerDegraded: "
+    message: 'NodeControllerDegraded: All master nodes are ready'
     reason: AsExpected
     status: "False"
     type: Degraded
