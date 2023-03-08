@@ -10,11 +10,24 @@ metadata:
     kubernetes.io/description: The cluster-version operator manages OpenShift updates
       and reconciles core resources and cluster operators.
   creationTimestamp: "2023-03-08T12:00:35Z"
-  generation: 1
+  generation: 2
   labels:
     k8s-app: cluster-version-operator
     pod-template-hash: cb69d4c4c
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:availableReplicas: {}
+        f:fullyLabeledReplicas: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:19:55Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -159,20 +172,7 @@ metadata:
                   f:secretName: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-08T12:00:35Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:availableReplicas: {}
-        f:fullyLabeledReplicas: {}
-        f:observedGeneration: {}
-        f:readyReplicas: {}
-        f:replicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:19:55Z"
+    time: "2023-03-08T12:25:22Z"
   name: cluster-version-operator-cb69d4c4c
   namespace: openshift-cluster-version
   ownerReferences:
@@ -182,10 +182,10 @@ metadata:
     kind: Deployment
     name: cluster-version-operator
     uid: e1241ff1-ac12-470d-b069-ea2407285099
-  resourceVersion: "11890"
+  resourceVersion: "15213"
   uid: 1ead083c-1f3b-416f-a5f4-173cd9f2d7eb
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       k8s-app: cluster-version-operator
