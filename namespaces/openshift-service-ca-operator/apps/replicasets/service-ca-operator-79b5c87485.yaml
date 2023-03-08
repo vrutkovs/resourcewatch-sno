@@ -128,11 +128,13 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:01:08Z"
+    time: "2023-03-08T12:06:33Z"
   name: service-ca-operator-79b5c87485
   namespace: openshift-service-ca-operator
   ownerReferences:
@@ -142,7 +144,7 @@ metadata:
     kind: Deployment
     name: service-ca-operator
     uid: 2d92e597-e523-4158-95a0-2d91bbda0a57
-  resourceVersion: "2423"
+  resourceVersion: "2426"
   uid: 3e1895ba-82dd-4a8a-afe6-6177add00fb5
 spec:
   replicas: 1
@@ -229,5 +231,6 @@ spec:
           name: service-ca-operator-config
         name: config
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
