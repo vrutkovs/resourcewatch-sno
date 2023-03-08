@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:17:49Z"
+deprecatedLastTimestamp: "2023-03-08T12:17:49Z"
+deprecatedSource:
+  component: service-ca-operator-status-controller-statussyncer_service-ca
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:17:49Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-08T12:17:49Z"
+  name: service-ca-operator.174a70d49e7b2222
+  namespace: openshift-service-ca-operator
+  resourceVersion: "8145"
+  uid: fed0db0b-5527-4af4-bc11-573458dd4251
+note: 'Status for clusteroperator/service-ca changed: status.versions changed from
+  [] to [{"operator" "4.13.0-ec.4"}]'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: service-ca-operator
+  namespace: openshift-service-ca-operator
+  uid: 2d92e597-e523-4158-95a0-2d91bbda0a57
+type: Normal
