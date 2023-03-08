@@ -487,8 +487,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -501,8 +499,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -518,7 +514,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:08:18Z"
+    time: "2023-03-08T12:08:19Z"
   name: ovnkube-node-hx4k7
   namespace: openshift-ovn-kubernetes
   ownerReferences:
@@ -528,7 +524,7 @@ metadata:
     kind: DaemonSet
     name: ovnkube-node
     uid: 16059264-960d-4437-b3b2-317dcac3b621
-  resourceVersion: "3094"
+  resourceVersion: "3097"
   uid: 47fee63d-dd84-4f51-af5a-b36aabeaaa34
 spec:
   affinity:
@@ -1045,16 +1041,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:06:59Z"
-    message: 'containers with unready status: [ovn-controller]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:08:19Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:06:59Z"
-    message: 'containers with unready status: [ovn-controller]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:08:19Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:06:59Z"
@@ -1094,21 +1086,23 @@ status:
     state:
       running:
         startedAt: "2023-03-08T12:07:06Z"
-  - containerID: cri-o://42b5d6390cc054dcebc1b1249b101b7b68aa597813389cbecbfd1eecfef3b12a
+  - containerID: cri-o://84de2588f178a29229f1ce46f1fd45c4d2e7b19d5c5a0c299574fae513c62cbb
     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
-    lastState: {}
-    name: ovn-controller
-    ready: false
-    restartCount: 0
-    started: false
-    state:
+    lastState:
       terminated:
         containerID: cri-o://42b5d6390cc054dcebc1b1249b101b7b68aa597813389cbecbfd1eecfef3b12a
         exitCode: 0
         finishedAt: "2023-03-08T12:08:18Z"
         reason: Completed
         startedAt: "2023-03-08T12:07:06Z"
+    name: ovn-controller
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-08T12:08:18Z"
   - containerID: cri-o://3598106e67580292eca6124a2fb5de70bf65ffc4a068d5c3e92b33e9c9d2b3d9
     image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
