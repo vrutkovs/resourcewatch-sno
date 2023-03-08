@@ -129,14 +129,16 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:09:07Z"
+    time: "2023-03-08T12:17:48Z"
   name: service-ca
   namespace: openshift-service-ca
-  resourceVersion: "7955"
+  resourceVersion: "7974"
   uid: abda3c5e-9e3e-4293-93e9-9238b9318d64
 spec:
   progressDeadlineSeconds: 600
@@ -218,15 +220,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:08:57Z"
     lastUpdateTime: "2023-03-08T12:08:57Z"
-    message: Created new replica set "service-ca-787d97d7f8"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-08T12:08:57Z"
-    lastUpdateTime: "2023-03-08T12:08:57Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-08T12:08:57Z"
+    lastUpdateTime: "2023-03-08T12:17:48Z"
+    message: ReplicaSet "service-ca-787d97d7f8" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
