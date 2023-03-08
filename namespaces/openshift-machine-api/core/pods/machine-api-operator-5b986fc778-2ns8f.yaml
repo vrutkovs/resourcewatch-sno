@@ -1,0 +1,299 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubectl.kubernetes.io/default-container: machine-api-operator
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2023-03-08T12:25:50Z"
+  generateName: machine-api-operator-5b986fc778-
+  labels:
+    k8s-app: machine-api-operator
+    pod-template-hash: 5b986fc778
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/default-container: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:k8s-app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d9f199d7-5ffb-4ed0-940b-d01a59c729c5"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"kube-rbac-proxy"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kube-rbac-proxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"machine-api-operator"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"COMPONENT_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"METRICS_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELEASE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/machine-api-operator-config/images"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"config"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"images"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"machine-api-operator-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:25:50Z"
+  name: machine-api-operator-5b986fc778-2ns8f
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: machine-api-operator-5b986fc778
+    uid: d9f199d7-5ffb-4ed0-940b-d01a59c729c5
+  resourceVersion: "15905"
+  uid: 2b79606c-f455-455a-b0ad-8035b2347e98
+spec:
+  containers:
+  - args:
+    - --secure-listen-address=0.0.0.0:8443
+    - --upstream=http://localhost:8080/
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    - --config-file=/etc/kube-rbac-proxy/config-file.yaml
+    - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+    - --logtostderr=true
+    - --v=3
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy
+    ports:
+    - containerPort: 8443
+      name: https
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000480000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/kube-rbac-proxy
+      name: config
+    - mountPath: /etc/tls/private
+      name: machine-api-operator-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rfcmq
+      readOnly: true
+  - args:
+    - start
+    - --images-json=/etc/machine-api-operator-config/images/images.json
+    - --alsologtostderr
+    - --v=3
+    command:
+    - /machine-api-operator
+    env:
+    - name: RELEASE_VERSION
+      value: 4.13.0-ec.4
+    - name: COMPONENT_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: METRICS_PORT
+      value: "8080"
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:40cb5f17c261079cd460e5f3d685d39f1b858cc24da16da5bf8c5c4d75fec57b
+    imagePullPolicy: IfNotPresent
+    name: machine-api-operator
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000480000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/machine-api-operator-config/images
+      name: images
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rfcmq
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: machine-api-operator-dockercfg-qqcb5
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000480000
+    seLinuxOptions:
+      level: s0:c22,c9
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: machine-api-operator
+  serviceAccountName: machine-api-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - configMap:
+      defaultMode: 420
+      name: kube-rbac-proxy
+    name: config
+  - configMap:
+      defaultMode: 420
+      name: machine-api-operator-images
+    name: images
+  - name: machine-api-operator-tls
+    secret:
+      defaultMode: 420
+      secretName: machine-api-operator-tls
+  - name: kube-api-access-rfcmq
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  phase: Pending
+  qosClass: Burstable
