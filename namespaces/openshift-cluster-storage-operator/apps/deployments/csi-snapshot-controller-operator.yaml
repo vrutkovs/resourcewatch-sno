@@ -135,11 +135,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:01:23Z"
+    time: "2023-03-08T12:06:34Z"
   name: csi-snapshot-controller-operator
   namespace: openshift-cluster-storage-operator
   ownerReferences:
@@ -148,7 +150,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "2450"
+  resourceVersion: "2452"
   uid: fb0ac1ee-b184-48a0-8229-7274958e046b
 spec:
   progressDeadlineSeconds: 600
@@ -231,15 +233,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:01:23Z"
     lastUpdateTime: "2023-03-08T12:01:23Z"
-    message: Created new replica set "csi-snapshot-controller-operator-5d776fcb57"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-08T12:01:23Z"
-    lastUpdateTime: "2023-03-08T12:01:23Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-08T12:01:23Z"
+    lastUpdateTime: "2023-03-08T12:06:34Z"
+    message: ReplicaSet "csi-snapshot-controller-operator-5d776fcb57" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
