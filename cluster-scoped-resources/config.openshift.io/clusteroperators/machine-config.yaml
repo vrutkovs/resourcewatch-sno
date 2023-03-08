@@ -39,7 +39,6 @@ metadata:
         f:conditions: {}
         f:extension:
           .: {}
-          f:lastSyncError: {}
           f:master: {}
           f:worker: {}
         f:relatedObjects: {}
@@ -55,7 +54,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "13394"
+  resourceVersion: "13395"
   uid: e501aaa8-d09b-49d1-8151-5afbbc84111e
 spec: {}
 status:
@@ -72,13 +71,13 @@ status:
     reason: AsExpected
     status: "True"
     type: Available
-  - lastTransitionTime: "2023-03-08T12:21:20Z"
-    reason: AsExpected
-    status: "True"
+  - lastTransitionTime: "2023-03-08T12:21:30Z"
+    message: One or more machine config pools are updating, please see `oc get mcp`
+      for further details
+    reason: PoolUpdating
+    status: "False"
     type: Upgradeable
   extension:
-    lastSyncError: 'error required pool master is not ready, retrying. Status: (total:
-      1, ready 1, updated: 1, unavailable: 0, degraded: 0)'
     master: 0 (ready 0) out of 1 nodes are updating to latest configuration rendered-master-be5e47e2eccbe758bba1ddd35139f110
     worker: all 0 nodes are at latest configuration rendered-worker-f132443b03f869ada559821df693a4de
   relatedObjects:
