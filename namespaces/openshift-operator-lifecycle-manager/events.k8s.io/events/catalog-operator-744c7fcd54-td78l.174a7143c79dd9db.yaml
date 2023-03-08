@@ -1,0 +1,41 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-08T12:25:47.074685Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:25:47Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-08T12:25:47Z"
+  name: catalog-operator-744c7fcd54-td78l.174a7143c79dd9db
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "15697"
+  uid: 70bc78bd-10c3-42e1-980d-8f36dd1af322
+note: Successfully assigned openshift-operator-lifecycle-manager/catalog-operator-744c7fcd54-td78l
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: catalog-operator-744c7fcd54-td78l
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "15689"
+  uid: bba22bf0-3ab5-409f-a7a4-d169da4f9831
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
