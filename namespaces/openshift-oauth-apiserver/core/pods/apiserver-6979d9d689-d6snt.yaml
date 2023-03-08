@@ -284,6 +284,7 @@ metadata:
         f:containerStatuses: {}
         f:hostIP: {}
         f:initContainerStatuses: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -294,7 +295,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:17:59Z"
+    time: "2023-03-08T12:18:00Z"
   name: apiserver-6979d9d689-d6snt
   namespace: openshift-oauth-apiserver
   ownerReferences:
@@ -304,7 +305,7 @@ metadata:
     kind: ReplicaSet
     name: apiserver-6979d9d689
     uid: 9063ff97-1a18-42e1-9aca-f6d23f96ad62
-  resourceVersion: "8611"
+  resourceVersion: "8690"
   uid: aceb1e36-2ac6-4e9e-a0df-5caa7e614acf
 spec:
   affinity:
@@ -544,16 +545,17 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b8b577f9e79318d8a58cd9f29dce8be3b0c6b8963c423d162da674e5424a1770
-    imageID: ""
+  - containerID: cri-o://2bd1203a90fd039f93524c10076d60711e976b02e62d5b1f04be3527ee36edae
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b8b577f9e79318d8a58cd9f29dce8be3b0c6b8963c423d162da674e5424a1770
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b8b577f9e79318d8a58cd9f29dce8be3b0c6b8963c423d162da674e5424a1770
     lastState: {}
     name: oauth-apiserver
     ready: false
     restartCount: 0
     started: false
     state:
-      waiting:
-        reason: PodInitializing
+      running:
+        startedAt: "2023-03-08T12:17:59Z"
   hostIP: 10.0.130.68
   initContainerStatuses:
   - containerID: cri-o://4801d86eee8190e75cf5fcbbbcc2bb2bd5facf84e36cf7ca04457e6a05d745d3
@@ -570,7 +572,7 @@ status:
         finishedAt: "2023-03-08T12:17:59Z"
         reason: Completed
         startedAt: "2023-03-08T12:17:59Z"
-  phase: Pending
+  phase: Running
   podIP: 10.128.0.48
   podIPs:
   - ip: 10.128.0.48
