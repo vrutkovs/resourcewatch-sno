@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:28Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:28Z"
+deprecatedSource:
+  component: kube-apiserver-operator-status-controller-statussyncer_kube-apiserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:30Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-08T12:08:30Z"
+  name: kube-apiserver-operator.174a7051fc5fcb0f
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "3358"
+  uid: 3adecc99-e052-4c52-bf93-a36f960a89bf
+note: 'Status for clusteroperator/kube-apiserver changed: Upgradeable message changed
+  from "All is well" to "KubeletMinorVersionUpgradeable: Kubelet and API server minor
+  versions are synced."'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: 1fb52cdd-6ee0-4905-bac5-c1d2936c403a
+type: Normal
