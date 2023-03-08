@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:26:08Z"
 deprecatedLastTimestamp: "2023-03-08T12:26:08Z"
 deprecatedSource:
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-08T12:26:08Z"
+    time: "2023-03-08T12:26:09Z"
   name: authentication-operator.174a7148dd17d972
   namespace: openshift-authentication-operator
-  resourceVersion: "16970"
+  resourceVersion: "16987"
   uid: 50aa0353-06dc-4d89-a403-fa5f8bbe5410
 note: 'Writing updated section ("oauthServer") of observed config: "  map[string]interface{}{\n  \t\"corsAllowedOrigins\":
   []interface{}{string(`//127\\.0\\.0\\.1(:|$)`), string(\"//localhost(:|$)\")},\n  \t\"oauthConfig\":
