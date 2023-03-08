@@ -35,6 +35,15 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-08T12:00:44Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+    manager: cluster-samples-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:25:52Z"
   name: openshift-samples
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -42,10 +51,14 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "759"
+  resourceVersion: "16093"
   uid: d61f0214-84ba-49c6-b79a-3575ea7046de
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-08T12:25:52Z"
+    status: "False"
+    type: Degraded
   extension: null
   relatedObjects:
   - group: samples.operator.openshift.io
