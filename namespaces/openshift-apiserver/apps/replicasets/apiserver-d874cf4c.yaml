@@ -15,7 +15,7 @@ metadata:
     operator.openshift.io/dep-openshift-apiserver.trusted-ca-bundle.configmap: O1lK1A==
     operator.openshift.io/spec-hash: b799b1072355d491cf528f3c97cae3193ea685762fa2e4e70695c959a22d7c30
   creationTimestamp: "2023-03-08T12:08:48Z"
-  generation: 1
+  generation: 2
   labels:
     apiserver: "true"
     app: openshift-apiserver-a
@@ -365,10 +365,10 @@ metadata:
     kind: Deployment
     name: apiserver
     uid: 39c861b0-f670-4019-8902-338c30caa998
-  resourceVersion: "4680"
+  resourceVersion: "4688"
   uid: 46d58985-0a5c-4227-a165-9f030be2749f
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       apiserver: "true"
