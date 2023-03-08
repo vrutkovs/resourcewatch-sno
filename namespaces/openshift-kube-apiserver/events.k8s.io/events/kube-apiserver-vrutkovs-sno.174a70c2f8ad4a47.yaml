@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:16:33Z"
+deprecatedLastTimestamp: "2023-03-08T12:16:33Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:16:52Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:16:52Z"
+  name: kube-apiserver-vrutkovs-sno.174a70c2f8ad4a47
+  namespace: openshift-kube-apiserver
+  resourceVersion: "7669"
+  uid: fa441533-7c63-445d-a504-3002cd12ad22
+note: "Readiness probe error: Get \"https://10.0.130.68:17697/healthz\": dial tcp
+  10.0.130.68:17697: connect: connection refused\nbody: \n"
+reason: ProbeError
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-apiserver-check-endpoints}
+  kind: Pod
+  name: kube-apiserver-vrutkovs-sno
+  namespace: openshift-kube-apiserver
+  uid: 16105202fab99097c13d7fd29ac63298
+type: Warning
