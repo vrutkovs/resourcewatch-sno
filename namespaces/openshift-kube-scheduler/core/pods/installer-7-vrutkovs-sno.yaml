@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.64/23"],"mac_address":"0a:58:0a:80:00:40","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.64/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.64"
+          ],
+          "mac": "0a:58:0a:80:00:40",
+          "default": true,
+          "dns": {}
+      }]
   creationTimestamp: "2023-03-08T12:20:02Z"
   labels:
     app: installer
@@ -157,6 +168,16 @@ metadata:
     fieldsV1:
       f:metadata:
         f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:20:02Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
           .: {}
           f:k8s.ovn.org/pod-networks: {}
     manager: vrutkovs-sno
@@ -169,7 +190,7 @@ metadata:
     kind: ConfigMap
     name: revision-status-7
     uid: fa3c0541-96a4-4d78-84c8-e2da00f73114
-  resourceVersion: "12313"
+  resourceVersion: "12322"
   uid: 5d38a4b4-1fda-4591-b130-14bfea2f24bf
 spec:
   automountServiceAccountToken: false
