@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:06:54Z"
+deprecatedLastTimestamp: "2023-03-08T12:06:54Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:06:54Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:06:54Z"
+  name: multus-nsbwb.174a703bff0376d6
+  namespace: openshift-multus
+  resourceVersion: "2712"
+  uid: b1f6e031-0adf-4e78-8013-882d0ea98df9
+note: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2707aaf584e16db56c11804ac2671b1db8817ee67fa3ff67da0f7ccbf806ee1e"
+  in 4.748823569s (4.748836267s including waiting)
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-multus}
+  kind: Pod
+  name: multus-nsbwb
+  namespace: openshift-multus
+  resourceVersion: "2610"
+  uid: bb58a1ca-8540-4aba-9d85-8da4adce8f39
+type: Normal
