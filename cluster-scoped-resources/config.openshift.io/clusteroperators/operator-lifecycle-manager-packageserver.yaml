@@ -37,6 +37,7 @@ metadata:
     fieldsV1:
       f:status:
         f:conditions: {}
+        f:relatedObjects: {}
     manager: olm
     operation: Update
     subresource: status
@@ -48,7 +49,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "16010"
+  resourceVersion: "16019"
   uid: 709e7030-dd43-4b9f-be8a-772ccb4c54cb
 spec: {}
 status:
@@ -60,7 +61,19 @@ status:
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-08T12:25:51Z"
-    message: waiting for events - source=operator-lifecycle-manager-packageserver
+    message: Working toward 0.19.0
     status: "True"
     type: Progressing
+  - lastTransitionTime: "2023-03-08T12:25:51Z"
+    message: Safe to upgrade
+    status: "True"
+    type: Upgradeable
   extension: null
+  relatedObjects:
+  - group: ""
+    name: openshift-operator-lifecycle-manager
+    resource: namespaces
+  - group: operators.coreos.com
+    name: packageserver
+    namespace: openshift-operator-lifecycle-manager
+    resource: clusterserviceversions
