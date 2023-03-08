@@ -52,23 +52,28 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "3786"
+  resourceVersion: "3796"
   uid: ae28a46b-58e3-46e0-8654-d3f4cf5ab63c
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:08:35Z"
-    message: All is well
+    message: 'InstallerControllerDegraded: missing required resources: [configmaps:
+      aggregator-client-ca,client-ca, secrets: csr-signer,kube-controller-manager-client-cert-key,
+      configmaps: cluster-policy-controller-config-0,config-0,controller-manager-kubeconfig-0,kube-controller-cert-syncer-kubeconfig-0,kube-controller-manager-pod-0,recycler-config-0,service-ca-0,serviceaccount-ca-0,
+      secrets: localhost-recovery-client-token-0,service-account-private-key-0]'
     reason: AsExpected
     status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:08:35Z"
-    reason: NoData
-    status: Unknown
+    message: All is well
+    reason: AsExpected
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-08T12:08:35Z"
-    reason: NoData
-    status: Unknown
+    message: 'StaticPodsAvailable: 0 nodes are active; '
+    reason: StaticPods_ZeroNodesActive
+    status: "False"
     type: Available
   - lastTransitionTime: "2023-03-08T12:08:35Z"
     reason: NoData
