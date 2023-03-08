@@ -52,14 +52,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "3759"
+  resourceVersion: "3763"
   uid: 859f8f95-c126-4f53-be52-163fe96a7de6
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:08:35Z"
-    reason: NoData
-    status: Unknown
+    message: All is well
+    reason: AsExpected
+    status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:08:35Z"
     message: All is well
