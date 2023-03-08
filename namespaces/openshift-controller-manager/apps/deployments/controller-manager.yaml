@@ -199,15 +199,23 @@ metadata:
             f:reason: {}
             f:status: {}
             f:type: {}
+          k:{"type":"ReplicaFailure"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
         f:observedGeneration: {}
         f:unavailableReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:09:14Z"
+    time: "2023-03-08T12:09:25Z"
   name: controller-manager
   namespace: openshift-controller-manager
-  resourceVersion: "5363"
+  resourceVersion: "5468"
   uid: a8efd566-f552-482c-bb79-dec1a75042e2
 spec:
   progressDeadlineSeconds: 600
@@ -358,5 +366,12 @@ status:
     reason: MinimumReplicasAvailable
     status: "True"
     type: Available
-  observedGeneration: 1
+  - lastTransitionTime: "2023-03-08T12:09:04Z"
+    lastUpdateTime: "2023-03-08T12:09:04Z"
+    message: 'pods "controller-manager-678df56fb8-" is forbidden: error fetching namespace
+      "openshift-controller-manager": unable to find annotation openshift.io/sa.scc.uid-range'
+    reason: FailedCreate
+    status: "True"
+    type: ReplicaFailure
+  observedGeneration: 2
   unavailableReplicas: 1
