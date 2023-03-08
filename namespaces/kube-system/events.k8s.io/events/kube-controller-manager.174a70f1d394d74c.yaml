@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:19:55Z"
+deprecatedLastTimestamp: "2023-03-08T12:19:55Z"
+deprecatedSource:
+  component: kube-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:19:55Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:19:55Z"
+  name: kube-controller-manager.174a70f1d394d74c
+  namespace: kube-system
+  resourceVersion: "11845"
+  uid: 0b54a11e-ac68-4215-908a-220bdf7831a2
+note: vrutkovs-sno_b266e835-9c05-45f0-842c-c6c128b19a11 became leader
+reason: LeaderElection
+regarding:
+  apiVersion: v1
+  kind: ConfigMap
+  name: kube-controller-manager
+  namespace: kube-system
+  resourceVersion: "11843"
+  uid: 1e4ca81b-6ef8-4fcc-8176-85d22adcfdb8
+type: Normal
