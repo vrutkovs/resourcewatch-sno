@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "3328"
+  resourceVersion: "3333"
   uid: 03522acc-29b6-46fb-bd37-7383fc37ffe9
 spec: {}
 status:
@@ -72,7 +72,8 @@ status:
     status: Unknown
     type: Available
   - lastTransitionTime: "2023-03-08T12:08:27Z"
-    message: All is well
+    message: 'KubeletMinorVersionUpgradeable: Kubelet and API server minor versions
+      are synced.'
     reason: AsExpected
     status: "True"
     type: Upgradeable
