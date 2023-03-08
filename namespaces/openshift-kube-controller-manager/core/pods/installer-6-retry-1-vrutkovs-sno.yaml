@@ -1,0 +1,232 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2023-03-08T12:19:59Z"
+  labels:
+    app: installer
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"3a5ea52f-e117-4b5e-b68c-50a41a4ce823"}: {}
+      f:spec:
+        f:automountServiceAccountToken: {}
+        f:containers:
+          k:{"name":"installer"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"NODE_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+              f:runAsUser: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/lock"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/secrets/kubernetes.io/serviceaccount"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeName: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsUser: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"kube-api-access"}:
+            .: {}
+            f:name: {}
+            f:projected:
+              .: {}
+              f:defaultMode: {}
+              f:sources: {}
+          k:{"name":"kubelet-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"var-lock"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:19:59Z"
+  name: installer-6-retry-1-vrutkovs-sno
+  namespace: openshift-kube-controller-manager
+  ownerReferences:
+  - apiVersion: v1
+    kind: ConfigMap
+    name: revision-status-6
+    uid: 3a5ea52f-e117-4b5e-b68c-50a41a4ce823
+  resourceVersion: "12163"
+  uid: 431b29a7-4737-4c03-ad54-010d8a3fff53
+spec:
+  automountServiceAccountToken: false
+  containers:
+  - args:
+    - -v=2
+    - --revision=6
+    - --namespace=openshift-kube-controller-manager
+    - --pod=kube-controller-manager-pod
+    - --resource-dir=/etc/kubernetes/static-pod-resources
+    - --pod-manifest-dir=/etc/kubernetes/manifests
+    - --configmaps=kube-controller-manager-pod
+    - --configmaps=config
+    - --configmaps=cluster-policy-controller-config
+    - --configmaps=controller-manager-kubeconfig
+    - --optional-configmaps=cloud-config
+    - --configmaps=kube-controller-cert-syncer-kubeconfig
+    - --configmaps=serviceaccount-ca
+    - --configmaps=service-ca
+    - --configmaps=recycler-config
+    - --secrets=service-account-private-key
+    - --optional-secrets=serving-cert
+    - --secrets=localhost-recovery-client-token
+    - --cert-dir=/etc/kubernetes/static-pod-resources/kube-controller-manager-certs
+    - --cert-configmaps=aggregator-client-ca
+    - --cert-configmaps=client-ca
+    - --optional-cert-configmaps=trusted-ca-bundle
+    - --cert-secrets=kube-controller-manager-client-cert-key
+    - --cert-secrets=csr-signer
+    command:
+    - cluster-kube-controller-manager-operator
+    - installer
+    env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: NODE_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.nodeName
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e3c201c17dba67a00ba69b15c1bc1ed24a408c239746df507c78c8eb3a691f5f
+    imagePullPolicy: IfNotPresent
+    name: installer
+    resources:
+      limits:
+        cpu: 150m
+        memory: 200M
+      requests:
+        cpu: 150m
+        memory: 200M
+    securityContext:
+      privileged: true
+      runAsUser: 0
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kubernetes/
+      name: kubelet-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access
+      readOnly: true
+    - mountPath: /var/lock
+      name: var-lock
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: installer-sa-dockercfg-lx74r
+  nodeName: vrutkovs-sno
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Never
+  schedulerName: default-scheduler
+  securityContext:
+    runAsUser: 0
+  serviceAccount: installer-sa
+  serviceAccountName: installer-sa
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/kubernetes/
+      type: ""
+    name: kubelet-dir
+  - hostPath:
+      path: /var/lock
+      type: ""
+    name: var-lock
+  - name: kube-api-access
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3600
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  phase: Pending
+  qosClass: Guaranteed
