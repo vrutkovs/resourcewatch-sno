@@ -159,13 +159,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:25:46Z"
+    time: "2023-03-08T12:25:50Z"
   name: olm-operator-74bfbdf7c9
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -175,7 +177,7 @@ metadata:
     kind: Deployment
     name: olm-operator
     uid: abe7e63a-c8b7-4193-a3ac-25f27d4ce608
-  resourceVersion: "15637"
+  resourceVersion: "15946"
   uid: 964f857d-4cdc-4523-8dd8-555f04d656e1
 spec:
   replicas: 1
@@ -299,6 +301,8 @@ spec:
           defaultMode: 420
           secretName: pprof-cert
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
