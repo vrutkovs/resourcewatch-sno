@@ -1,0 +1,45 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:18:13Z"
+deprecatedLastTimestamp: "2023-03-08T12:18:13Z"
+deprecatedSource:
+  component: openshift-controller-manager-operator-status-controller-statussyncer_openshift-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:18:13Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:18:13Z"
+  name: openshift-controller-manager-operator.174a70da47dcae70
+  namespace: openshift-controller-manager-operator
+  resourceVersion: "10790"
+  uid: 757a2b33-5899-4722-a962-d8737f8839b6
+note: 'Status for clusteroperator/openshift-controller-manager changed: Progressing
+  message changed from "Progressing: deployment/controller-manager: available replicas
+  is 0, desired available replicas > 1\nProgressing: deployment/route-controller-manager:
+  available replicas is 0, desired available replicas > 1" to "Progressing: deployment/controller-manager:
+  observed generation is 4, desired generation is 5.\nProgressing: deployment/route-controller-manager:
+  observed generation is 3, desired generation is 4.",Available changed from False
+  to True ("All is well"),status.versions changed from [] to [{"operator" "4.13.0-ec.4"}]'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-controller-manager-operator
+  namespace: openshift-controller-manager-operator
+  uid: 45a16873-2fe3-4bef-a950-df458d021470
+type: Normal
