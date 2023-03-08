@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:34Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:34Z"
+deprecatedSource:
+  component: openshift-controller-manager-operator-config-observer-configobserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:34Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:08:34Z"
+  name: openshift-controller-manager-operator.174a7053621e7f50
+  namespace: openshift-controller-manager-operator
+  resourceVersion: "3548"
+  uid: 0124ed3e-25bb-42dc-81ec-d428143c234d
+note: "Writing updated observed config:   map[string]any{\n+ \t\"build\": map[string]any{\n+ \t\t\"buildDefaults\":
+  map[string]any{\"resources\": map[string]any{}},\n+ \t\t\"imageTemplateFormat\":
+  map[string]any{\n+ \t\t\t\"format\": string(\"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c1aae61e92\"...),\n+ \t\t},\n+ \t},\n+ \t\"deployer\":
+  map[string]any{\n+ \t\t\"imageTemplateFormat\": map[string]any{\n+ \t\t\t\"format\":
+  string(\"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6735d244ff\"...),\n+ \t\t},\n+ \t},\n+ \t\"featureGates\":
+  []any{},\n+ \t\"ingress\":      map[string]any{\"ingressIPNetworkCIDR\": string(\"\")},\n  }\n"
+reason: ObservedConfigChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-controller-manager-operator
+  namespace: openshift-controller-manager-operator
+  uid: 45a16873-2fe3-4bef-a950-df458d021470
+type: Normal
