@@ -209,7 +209,7 @@ metadata:
     time: "2023-03-08T12:17:48Z"
   name: controller-manager
   namespace: openshift-controller-manager
-  resourceVersion: "8052"
+  resourceVersion: "8057"
   uid: a8efd566-f552-482c-bb79-dec1a75042e2
 spec:
   progressDeadlineSeconds: 600
@@ -361,6 +361,6 @@ status:
     status: "True"
     type: Progressing
   observedGeneration: 4
-  replicas: 2
+  replicas: 1
   unavailableReplicas: 1
   updatedReplicas: 1
