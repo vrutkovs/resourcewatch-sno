@@ -52,60 +52,26 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "7212"
+  resourceVersion: "7224"
   uid: ae28a46b-58e3-46e0-8654-d3f4cf5ab63c
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:11:40Z"
-    message: "GarbageCollectorDegraded: error fetching rules: Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\":
-      dial tcp: lookup thanos-querier.openshift-monitoring.svc: i/o timeout\nNodeInstallerDegraded:
-      1 nodes are failing on revision 3:\nNodeInstallerDegraded: installer: ) (len=1
-      cap=1) {\nNodeInstallerDegraded:   (string) (len=12) \"serving-cert\"\nNodeInstallerDegraded:
-      \ },\nNodeInstallerDegraded:  ConfigMapNamePrefixes: ([]string) (len=8 cap=8)
-      {\nNodeInstallerDegraded:   (string) (len=27) \"kube-controller-manager-pod\",\nNodeInstallerDegraded:
-      \  (string) (len=6) \"config\",\nNodeInstallerDegraded:   (string) (len=32)
-      \"cluster-policy-controller-config\",\nNodeInstallerDegraded:   (string) (len=29)
-      \"controller-manager-kubeconfig\",\nNodeInstallerDegraded:   (string) (len=38)
-      \"kube-controller-cert-syncer-kubeconfig\",\nNodeInstallerDegraded:   (string)
-      (len=17) \"serviceaccount-ca\",\nNodeInstallerDegraded:   (string) (len=10)
-      \"service-ca\",\nNodeInstallerDegraded:   (string) (len=15) \"recycler-config\"\nNodeInstallerDegraded:
-      \ OptionalConfigMapNamePrefixes: ([]string) (len=1 cap=1) {\nNodeInstallerDegraded:
-      \  (string) (len=12) \"cloud-config\"\nNodeInstallerDegraded:  CertSecretNames:
-      ([]string) (len=2 cap=2) {\nNodeInstallerDegraded:   (string) (len=39) \"kube-controller-manager-client-cert-key\",\nNodeInstallerDegraded:
-      \  (string) (len=10) \"csr-signer\"\nNodeInstallerDegraded:  OptionalCertSecretNamePrefixes:
-      ([]string) <nil>,\nNodeInstallerDegraded:  CertConfigMapNamePrefixes: ([]string)
-      (len=2 cap=2) {\nNodeInstallerDegraded:   (string) (len=20) \"aggregator-client-ca\",\nNodeInstallerDegraded:
-      \  (string) (len=9) \"client-ca\"\nNodeInstallerDegraded:  OptionalCertConfigMapNamePrefixes:
-      ([]string) (len=1 cap=1) {\nNodeInstallerDegraded:   (string) (len=17) \"trusted-ca-bundle\"\nNodeInstallerDegraded:
-      \ CertDir: (string) (len=66) \"/etc/kubernetes/static-pod-resources/kube-controller-manager-certs\",\nNodeInstallerDegraded:
-      \ ResourceDir: (string) (len=36) \"/etc/kubernetes/static-pod-resources\",\nNodeInstallerDegraded:
-      \ PodManifestDir: (string) (len=25) \"/etc/kubernetes/manifests\",\nNodeInstallerDegraded:
-      \ Timeout: (time.Duration) 2m0s,\nNodeInstallerDegraded:  StaticPodManifestsLockFile:
-      (string) \"\",\nNodeInstallerDegraded:  PodMutationFns: ([]installerpod.PodMutationFunc)
-      <nil>,\nNodeInstallerDegraded:  KubeletVersion: (string) \"\"\nNodeInstallerDegraded:
-      })\nNodeInstallerDegraded: I0308 12:12:03.254701       1 cmd.go:410] Getting
-      controller reference for node vrutkovs-sno\nNodeInstallerDegraded: I0308 12:12:03.260611
-      \      1 cmd.go:423] Waiting for installer revisions to settle for node vrutkovs-sno\nNodeInstallerDegraded:
-      I0308 12:12:03.262477       1 cmd.go:515] Waiting additional period after revisions
-      have settled for node vrutkovs-sno\nNodeInstallerDegraded: I0308 12:12:33.262565
-      \      1 cmd.go:521] Getting installer pods for node vrutkovs-sno\nNodeInstallerDegraded:
-      F0308 12:12:47.263656       1 cmd.go:106] Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager/pods?labelSelector=app%3Dinstaller\":
-      net/http: request canceled (Client.Timeout exceeded while awaiting headers)\nNodeInstallerDegraded: "
-    reason: GarbageCollector_Error::NodeInstaller_InstallerPodFailed
+    message: 'GarbageCollectorDegraded: error fetching rules: Get "https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules":
+      dial tcp: lookup thanos-querier.openshift-monitoring.svc: i/o timeout'
+    reason: GarbageCollector_Error
     status: "True"
     type: Degraded
-  - lastTransitionTime: "2023-03-08T12:08:44Z"
-    message: 'NodeInstallerProgressing: 1 nodes are at revision 0; 0 nodes have achieved
-      new revision 3'
-    reason: NodeInstaller
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-08T12:08:35Z"
-    message: 'StaticPodsAvailable: 0 nodes are active; 1 nodes are at revision 0;
-      0 nodes have achieved new revision 3'
-    reason: StaticPods_ZeroNodesActive
+  - lastTransitionTime: "2023-03-08T12:15:38Z"
+    message: 'NodeInstallerProgressing: 1 nodes are at revision 3'
+    reason: AsExpected
     status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-03-08T12:15:38Z"
+    message: 'StaticPodsAvailable: 1 nodes are active; 1 nodes are at revision 3'
+    reason: AsExpected
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-08T12:08:35Z"
     message: All is well
