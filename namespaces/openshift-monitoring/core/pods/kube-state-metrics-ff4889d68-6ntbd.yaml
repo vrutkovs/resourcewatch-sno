@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.65/23"],"mac_address":"0a:58:0a:80:00:41","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.65/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.65"
+          ],
+          "mac": "0a:58:0a:80:00:41",
+          "default": true,
+          "dns": {}
+      }]
     kubectl.kubernetes.io/default-container: kube-state-metrics
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
@@ -217,6 +228,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-08T12:20:05Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:20:06Z"
   name: kube-state-metrics-ff4889d68-6ntbd
   namespace: openshift-monitoring
   ownerReferences:
@@ -226,7 +247,7 @@ metadata:
     kind: ReplicaSet
     name: kube-state-metrics-ff4889d68
     uid: a276fa83-00de-4e2b-9dff-17c83204725a
-  resourceVersion: "12475"
+  resourceVersion: "12544"
   uid: d647ec48-7e98-436f-9ffd-7c11be9f1ab2
 spec:
   automountServiceAccountToken: true
