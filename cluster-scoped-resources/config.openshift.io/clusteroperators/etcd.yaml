@@ -44,7 +44,7 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:09:19Z"
+    time: "2023-03-08T12:09:22Z"
   name: etcd
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "5413"
+  resourceVersion: "5437"
   uid: 88149466-b942-47f3-acfa-6cc1930e9bbe
 spec: {}
 status:
@@ -62,7 +62,6 @@ status:
       ScriptControllerDegraded: "configmap/etcd-pod": missing env var values
       InstallerControllerDegraded: missing required resources: [configmaps: etcd-endpoints-0,etcd-metrics-proxy-client-ca-0,etcd-metrics-proxy-serving-ca-0,etcd-peer-client-ca-0,etcd-pod-0,etcd-serving-ca-0, secrets: etcd-all-certs-0]
       NodeControllerDegraded: All master nodes are ready
-      ConfigObservationDegraded: error writing updated observed config: Operation cannot be fulfilled on etcds.operator.openshift.io "cluster": the object has been modified; please apply your changes to the latest version and try again
     reason: AsExpected
     status: "False"
     type: Degraded
