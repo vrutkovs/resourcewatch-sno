@@ -15,7 +15,7 @@ metadata:
     machineconfiguration.openshift.io/desiredDrain: uncordon-rendered-master-ad65eb7af782515f818f50bde5963472
     machineconfiguration.openshift.io/lastAppliedDrain: uncordon-rendered-master-ad65eb7af782515f818f50bde5963472
     machineconfiguration.openshift.io/reason: ""
-    machineconfiguration.openshift.io/state: Done
+    machineconfiguration.openshift.io/state: Working
     volumes.kubernetes.io/controller-managed-attach-detach: "true"
   creationTimestamp: "2023-03-08T12:06:32Z"
   labels:
@@ -93,18 +93,6 @@ metadata:
     fieldsV1:
       f:metadata:
         f:annotations:
-          f:machineconfiguration.openshift.io/currentConfig: {}
-          f:machineconfiguration.openshift.io/desiredDrain: {}
-          f:machineconfiguration.openshift.io/reason: {}
-          f:machineconfiguration.openshift.io/state: {}
-    manager: machine-config-daemon
-    operation: Update
-    time: "2023-03-08T12:21:14Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
           f:machineconfiguration.openshift.io/controlPlaneTopology: {}
           f:machineconfiguration.openshift.io/desiredConfig: {}
           f:machineconfiguration.openshift.io/lastAppliedDrain: {}
@@ -115,8 +103,20 @@ metadata:
     manager: machine-config-controller
     operation: Update
     time: "2023-03-08T12:21:29Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:machineconfiguration.openshift.io/currentConfig: {}
+          f:machineconfiguration.openshift.io/desiredDrain: {}
+          f:machineconfiguration.openshift.io/reason: {}
+          f:machineconfiguration.openshift.io/state: {}
+    manager: machine-config-daemon
+    operation: Update
+    time: "2023-03-08T12:21:31Z"
   name: vrutkovs-sno
-  resourceVersion: "13386"
+  resourceVersion: "13400"
   uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
 spec:
   taints:
