@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 8
+deprecatedCount: 9
 deprecatedFirstTimestamp: "2023-03-08T12:01:12Z"
 deprecatedLastTimestamp: "2023-03-08T12:01:13Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-08T12:01:13Z"
   name: authentication-operator-7f4d8bfc67.174a6fec804158ba
   namespace: openshift-authentication-operator
-  resourceVersion: "1615"
+  resourceVersion: "1620"
   uid: c859ed6f-528f-468d-a6ca-802636460a15
 note: 'Error creating: pods "authentication-operator-7f4d8bfc67-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
   the cluster does not have any nodes'
