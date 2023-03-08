@@ -34,6 +34,17 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-08T12:00:44Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: cluster-config-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:08:35Z"
   name: config-operator
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -41,8 +52,41 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "744"
+  resourceVersion: "3759"
   uid: 859f8f95-c126-4f53-be52-163fe96a7de6
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-08T12:08:35Z"
+    reason: NoData
+    status: Unknown
+    type: Degraded
+  - lastTransitionTime: "2023-03-08T12:08:35Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-03-08T12:08:35Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-03-08T12:08:35Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
   extension: null
+  relatedObjects:
+  - group: operator.openshift.io
+    name: cluster
+    resource: configs
+  - group: ""
+    name: openshift-config
+    resource: namespaces
+  - group: ""
+    name: openshift-config-operator
+    resource: namespaces
+  versions:
+  - name: operator
+    version: 4.13.0-ec.4
