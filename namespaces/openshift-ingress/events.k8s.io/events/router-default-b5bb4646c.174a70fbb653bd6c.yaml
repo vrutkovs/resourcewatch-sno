@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:20:37Z"
+deprecatedLastTimestamp: "2023-03-08T12:20:37Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:20:37Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:20:37Z"
+  name: router-default-b5bb4646c.174a70fbb653bd6c
+  namespace: openshift-ingress
+  resourceVersion: "12882"
+  uid: 41f5ec44-d652-4002-a255-e80c0649cf03
+note: 'Created pod: router-default-b5bb4646c-vb4tp'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: router-default-b5bb4646c
+  namespace: openshift-ingress
+  resourceVersion: "12373"
+  uid: 98616e62-0fac-4ca0-b0cb-5a0fc42675f6
+type: Normal
