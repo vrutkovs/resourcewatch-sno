@@ -175,15 +175,6 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:conditions:
-          .: {}
-          k:{"type":"ReplicaFailure"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
         f:observedGeneration: {}
     manager: kube-controller-manager
     operation: Update
@@ -198,7 +189,7 @@ metadata:
     kind: Deployment
     name: authentication-operator
     uid: 0d9fc21a-8cec-4bfd-bab5-451303a4b438
-  resourceVersion: "1597"
+  resourceVersion: "2441"
   uid: 9541e5d9-4291-4899-9b74-3d9bd109f7a6
 spec:
   replicas: 1
@@ -317,12 +308,5 @@ spec:
           optional: true
         name: service-ca-bundle
 status:
-  conditions:
-  - lastTransitionTime: "2023-03-08T12:01:12Z"
-    message: 'pods "authentication-operator-7f4d8bfc67-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
-      the cluster does not have any nodes'
-    reason: FailedCreate
-    status: "True"
-    type: ReplicaFailure
   observedGeneration: 1
   replicas: 0
