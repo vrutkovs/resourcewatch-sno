@@ -136,7 +136,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-operator-admission-webhook-85894b6996
     uid: 631775d6-f4cf-4a99-acb7-4e136ced9304
-  resourceVersion: "11962"
+  resourceVersion: "12101"
   uid: 39c46fc4-0e27-479e-b0bd-773e7e401dfc
 spec:
   automountServiceAccountToken: false
@@ -193,6 +193,7 @@ spec:
   enableServiceLinks: true
   imagePullSecrets:
   - name: prometheus-operator-admission-webhook-dockercfg-lth54
+  nodeName: vrutkovs-sno
   preemptionPolicy: PreemptLowerPriority
   priority: 2000000000
   priorityClassName: system-cluster-critical
@@ -232,11 +233,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:19:55Z"
-    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node-role.kubernetes.io/master:
-      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
-    reason: Unschedulable
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:19:57Z"
+    status: "True"
     type: PodScheduled
   phase: Pending
   qosClass: Burstable
