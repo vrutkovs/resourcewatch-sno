@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-08T12:18:01Z"
 deprecatedLastTimestamp: "2023-03-08T12:18:01Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-08T12:18:01Z"
   name: authentication-operator.174a70d76cf03ddb
   namespace: openshift-authentication-operator
-  resourceVersion: "8802"
+  resourceVersion: "8817"
   uid: 0e13b65a-7884-41c8-8ab3-db942a2c9e12
 note: '"user.openshift.io.v1" failed with an attempt failed with statusCode = 404,
   err = the server could not find the requested resource'
