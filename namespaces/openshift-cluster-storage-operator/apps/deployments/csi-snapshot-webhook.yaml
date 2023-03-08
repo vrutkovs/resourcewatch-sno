@@ -105,6 +105,7 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -124,16 +125,16 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:18:35Z"
+    time: "2023-03-08T12:19:55Z"
   name: csi-snapshot-webhook
   namespace: openshift-cluster-storage-operator
-  resourceVersion: "11082"
+  resourceVersion: "11947"
   uid: 7cae78ee-e422-4522-88bd-7930f241cf91
 spec:
   progressDeadlineSeconds: 600
@@ -220,6 +221,7 @@ spec:
           defaultMode: 420
           secretName: csi-snapshot-webhook-secret
 status:
+  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-03-08T12:08:34Z"
     lastUpdateTime: "2023-03-08T12:08:34Z"
@@ -227,13 +229,13 @@ status:
     reason: MinimumReplicasAvailable
     status: "True"
     type: Available
-  - lastTransitionTime: "2023-03-08T12:18:35Z"
-    lastUpdateTime: "2023-03-08T12:18:35Z"
-    message: ReplicaSet "csi-snapshot-webhook-6dfbbc59c5" has timed out progressing.
-    reason: ProgressDeadlineExceeded
-    status: "False"
+  - lastTransitionTime: "2023-03-08T12:19:55Z"
+    lastUpdateTime: "2023-03-08T12:19:55Z"
+    message: ReplicaSet "csi-snapshot-webhook-6dfbbc59c5" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
     type: Progressing
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
