@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:36Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:36Z"
+deprecatedSource:
+  component: kube-apiserver-operator-cert-rotation-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:46Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-08T12:08:46Z"
+  name: kube-apiserver-operator.174a7053f05337b0
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "4561"
+  uid: 5b360357-6bc4-429c-b28e-6bb496c4b94c
+note: 'Failed to create ConfigMap/loadbalancer-serving-ca -n openshift-kube-apiserver-operator:
+  configmaps "loadbalancer-serving-ca" already exists'
+reason: ConfigMapCreateFailed
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: 1fb52cdd-6ee0-4905-bac5-c1d2936c403a
+type: Warning
