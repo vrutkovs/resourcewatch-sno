@@ -93,6 +93,46 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-08T12:25:55Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.68"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:25:55Z"
   name: node-ca-pjsh8
   namespace: openshift-image-registry
   ownerReferences:
@@ -102,7 +142,7 @@ metadata:
     kind: DaemonSet
     name: node-ca
     uid: 07844cfe-8af3-4014-ac00-40d0da10e026
-  resourceVersion: "16284"
+  resourceVersion: "16295"
   uid: 9ab7f794-7d42-4f4d-a19b-518a7386d281
 spec:
   affinity:
@@ -222,6 +262,38 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:25:55Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:25:55Z"
+    message: 'containers with unready status: [node-ca]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:25:55Z"
+    message: 'containers with unready status: [node-ca]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:25:55Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1058c21dfa95b4dff642454b9831dd81db2d43125874c704594ddbc6ff060075
+    imageID: ""
+    lastState: {}
+    name: node-ca
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.68
   phase: Pending
+  podIP: 10.0.130.68
+  podIPs:
+  - ip: 10.0.130.68
   qosClass: Burstable
+  startTime: "2023-03-08T12:25:55Z"
