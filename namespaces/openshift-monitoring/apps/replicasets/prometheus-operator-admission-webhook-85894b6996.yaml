@@ -124,6 +124,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-08T12:19:55Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:19:55Z"
   name: prometheus-operator-admission-webhook-85894b6996
   namespace: openshift-monitoring
   ownerReferences:
@@ -133,7 +142,7 @@ metadata:
     kind: Deployment
     name: prometheus-operator-admission-webhook
     uid: 239390c2-46ea-4bc9-9b3b-60b364475a9b
-  resourceVersion: "11928"
+  resourceVersion: "11972"
   uid: 631775d6-f4cf-4a99-acb7-4e136ced9304
 spec:
   replicas: 1
@@ -218,4 +227,5 @@ spec:
             path: tls.key
           secretName: prometheus-operator-admission-webhook-tls
 status:
+  observedGeneration: 1
   replicas: 0
