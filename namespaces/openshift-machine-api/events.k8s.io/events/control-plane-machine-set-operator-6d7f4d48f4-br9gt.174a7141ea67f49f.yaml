@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:25:39Z"
+deprecatedLastTimestamp: "2023-03-08T12:25:39Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:25:39Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:25:39Z"
+  name: control-plane-machine-set-operator-6d7f4d48f4-br9gt.174a7141ea67f49f
+  namespace: openshift-machine-api
+  resourceVersion: "15378"
+  uid: 137b69b0-fb62-4418-81a1-00f395f7f85c
+note: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eb5f7b37a6232eb05b45859c71c7dcfad230dd8487504c87d4ec8e0e3fbef16f"
+  in 1.470163653s (1.470169793s including waiting)
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{control-plane-machine-set-operator}
+  kind: Pod
+  name: control-plane-machine-set-operator-6d7f4d48f4-br9gt
+  namespace: openshift-machine-api
+  resourceVersion: "15330"
+  uid: fd085ff7-c457-4f74-ad59-46c94000c97c
+type: Normal
