@@ -1,0 +1,37 @@
+apiVersion: config.openshift.io/v1
+kind: Build
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2023-03-08T12:01:03Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-08T12:01:03Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
+  resourceVersion: "1304"
+  uid: 2e8ac802-bc94-46f2-9b82-b524651fe3d0
+spec: {}
