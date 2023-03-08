@@ -18,15 +18,6 @@ metadata:
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        f:observedGeneration: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:09:17Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:metadata:
         f:annotations:
           .: {}
@@ -188,6 +179,24 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-08T12:09:25Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ReplicaFailure"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:09:47Z"
   name: controller-manager-677c459fc9
   namespace: openshift-controller-manager
   ownerReferences:
@@ -197,7 +206,7 @@ metadata:
     kind: Deployment
     name: controller-manager
     uid: a8efd566-f552-482c-bb79-dec1a75042e2
-  resourceVersion: "5572"
+  resourceVersion: "5695"
   uid: 78fbf9cc-34e4-4e72-9dd6-687808b7e551
 spec:
   replicas: 1
@@ -330,5 +339,12 @@ spec:
           name: openshift-global-ca
         name: proxy-ca-bundles
 status:
-  observedGeneration: 1
+  conditions:
+  - lastTransitionTime: "2023-03-08T12:09:47Z"
+    message: 'pods "controller-manager-677c459fc9-" is forbidden: error fetching namespace
+      "openshift-controller-manager": unable to find annotation openshift.io/sa.scc.uid-range'
+    reason: FailedCreate
+    status: "True"
+    type: ReplicaFailure
+  observedGeneration: 2
   replicas: 0
