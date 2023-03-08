@@ -1,0 +1,58 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-03-08T12:25:51Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"622b616f-a7f6-40b9-b4a2-8fe70f1c3c21"}: {}
+      f:spec:
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":5443,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: olm
+    operation: Update
+    time: "2023-03-08T12:25:51Z"
+  name: packageserver-service
+  namespace: openshift-operator-lifecycle-manager
+  ownerReferences:
+  - apiVersion: operators.coreos.com/v1alpha1
+    blockOwnerDeletion: false
+    controller: false
+    kind: ClusterServiceVersion
+    name: packageserver
+    uid: 622b616f-a7f6-40b9-b4a2-8fe70f1c3c21
+  resourceVersion: "16054"
+  uid: 4ee99053-c81c-4acd-afeb-9a39b92bd941
+spec:
+  clusterIP: 172.30.245.178
+  clusterIPs:
+  - 172.30.245.178
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: "5443"
+    port: 5443
+    protocol: TCP
+    targetPort: 5443
+  selector:
+    app: packageserver
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
