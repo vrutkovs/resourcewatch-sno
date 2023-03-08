@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:08:39Z"
-deprecatedLastTimestamp: "2023-03-08T12:08:39Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:40Z"
 deprecatedSource:
   component: openshift-apiserver-operator-revisioncontroller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-openshift-apiserver-operator
     operation: Update
-    time: "2023-03-08T12:08:39Z"
+    time: "2023-03-08T12:08:40Z"
   name: openshift-apiserver-operator.174a705483031ba2
   namespace: openshift-apiserver-operator
-  resourceVersion: "4134"
+  resourceVersion: "4184"
   uid: 443ddf28-441e-4b3e-a7d8-be4895d33ea4
 note: new revision 2 triggered by "configmap \"audit\" not found"
 reason: RevisionTriggered
