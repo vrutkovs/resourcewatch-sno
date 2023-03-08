@@ -63,7 +63,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "2797"
+  resourceVersion: "2801"
   uid: 9c5afb3c-849d-4f09-b16e-c210d3cf27a8
 spec: {}
 status:
@@ -87,7 +87,7 @@ status:
     message: |-
       DaemonSet "/openshift-multus/multus-additional-cni-plugins" is not available (awaiting 1 nodes)
       DaemonSet "/openshift-multus/network-metrics-daemon" is waiting for other operators to become ready
-      DaemonSet "/openshift-ovn-kubernetes/ovnkube-master" is not yet scheduled on any nodes
+      DaemonSet "/openshift-ovn-kubernetes/ovnkube-master" is not available (awaiting 1 nodes)
       Deployment "/openshift-multus/multus-admission-controller" is waiting for other operators to become ready
     reason: Deploying
     status: "True"
