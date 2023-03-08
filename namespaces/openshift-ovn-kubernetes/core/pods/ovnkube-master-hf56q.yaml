@@ -554,6 +554,46 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-08T12:06:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.68"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:06:59Z"
   name: ovnkube-master-hf56q
   namespace: openshift-ovn-kubernetes
   ownerReferences:
@@ -563,7 +603,7 @@ metadata:
     kind: DaemonSet
     name: ovnkube-master
     uid: 3028f449-b801-40d3-ab68-6b3606141543
-  resourceVersion: "2786"
+  resourceVersion: "2790"
   uid: 2fb62bbd-46b6-4a90-bda4-a5303cf8406e
 spec:
   affinity:
@@ -1439,6 +1479,90 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:06:59Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:06:59Z"
+    message: 'containers with unready status: [northd nbdb kube-rbac-proxy sbdb ovnkube-master
+      ovn-dbchecker]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:06:59Z"
+    message: 'containers with unready status: [northd nbdb kube-rbac-proxy sbdb ovnkube-master
+      ovn-dbchecker]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:06:59Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
+    imageID: ""
+    lastState: {}
+    name: kube-rbac-proxy
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
+    imageID: ""
+    lastState: {}
+    name: nbdb
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
+    imageID: ""
+    lastState: {}
+    name: northd
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
+    imageID: ""
+    lastState: {}
+    name: ovn-dbchecker
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
+    imageID: ""
+    lastState: {}
+    name: ovnkube-master
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
+    imageID: ""
+    lastState: {}
+    name: sbdb
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.68
   phase: Pending
+  podIP: 10.0.130.68
+  podIPs:
+  - ip: 10.0.130.68
   qosClass: Burstable
+  startTime: "2023-03-08T12:06:59Z"
