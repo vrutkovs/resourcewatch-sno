@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:23:17Z"
+    time: "2023-03-08T12:23:23Z"
   name: kube-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,18 +52,65 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "14637"
+  resourceVersion: "14715"
   uid: 03522acc-29b6-46fb-bd37-7383fc37ffe9
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:15:51Z"
-    message: |-
-      NodeControllerDegraded: All master nodes are ready
-      TargetConfigControllerDegraded: "configmap/config": Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/configmaps/config": dial tcp 172.30.0.1:443: connect: connection refused
-      TargetConfigControllerDegraded: "configmap/kube-apiserver-pod": Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/configmaps/kube-apiserver-pod": dial tcp 172.30.0.1:443: connect: connection refused
-      TargetConfigControllerDegraded: "configmap/client-ca": Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/configmaps/client-ca": dial tcp 172.30.0.1:443: connect: connection refused
-      TargetConfigControllerDegraded: "configmap/kube-apiserver-server-ca": configmaps "kube-apiserver-server-ca" is forbidden: User "system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator" cannot get resource "configmaps" in API group "" in the namespace "openshift-kube-apiserver": RBAC: [clusterrole.rbac.authorization.k8s.io "system:build-strategy-docker" not found, clusterrole.rbac.authorization.k8s.io "basic-user" not found, clusterrole.rbac.authorization.k8s.io "cluster-admin" not found, clusterrole.rbac.authorization.k8s.io "system:openshift:discovery" not found]
+    message: "NodeControllerDegraded: All master nodes are ready\nKubeAPIServerStaticResourcesDegraded:
+      \"assets/kube-apiserver/ns.yaml\" (string): Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nKubeAPIServerStaticResourcesDegraded:
+      \"assets/kube-apiserver/svc.yaml\" (string): Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/services/apiserver\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nKubeAPIServerStaticResourcesDegraded:
+      \"assets/kube-apiserver/check-endpoints-clusterrole.yaml\" (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterroles/system:openshift:controller:check-endpoints\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nKubeAPIServerStaticResourcesDegraded:
+      \"assets/kube-apiserver/check-endpoints-clusterrole-node-reader.yaml\" (string):
+      Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterroles/system:openshift:controller:check-endpoints-node-reader\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nKubeAPIServerStaticResourcesDegraded:
+      \"assets/kube-apiserver/check-endpoints-clusterrole-crd-reader.yaml\" (string):
+      Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterroles/system:openshift:controller:check-endpoints-crd-reader\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nKubeAPIServerStaticResourcesDegraded:
+      \"assets/kube-apiserver/check-endpoints-clusterrolebinding-auth-delegator.yaml\"
+      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/system:openshift:controller:kube-apiserver-check-endpoints-auth-delegator\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nKubeAPIServerStaticResourcesDegraded:
+      \"assets/kube-apiserver/check-endpoints-clusterrolebinding-node-reader.yaml\"
+      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/system:openshift:controller:kube-apiserver-check-endpoints-node-reader\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nKubeAPIServerStaticResourcesDegraded:
+      \"assets/kube-apiserver/check-endpoints-clusterrolebinding-crd-reader.yaml\"
+      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/system:openshift:controller:kube-apiserver-check-endpoints-crd-reader\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nKubeAPIServerStaticResourcesDegraded:
+      \"assets/kube-apiserver/check-endpoints-rolebinding-kube-system.yaml\" (string):
+      Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/rolebindings/system:openshift:controller:kube-apiserver-check-endpoints\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nKubeAPIServerStaticResourcesDegraded:
+      \"assets/kube-apiserver/check-endpoints-rolebinding.yaml\" (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/openshift-kube-apiserver/rolebindings/system:openshift:controller:check-endpoints\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nKubeAPIServerStaticResourcesDegraded:
+      \"assets/kube-apiserver/delegated-incluster-authentication-rolebinding.yaml\"
+      (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/rolebindings/authentication-reader-for-authenticated-users\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nKubeAPIServerStaticResourcesDegraded:
+      \"assets/kube-apiserver/localhost-recovery-client-crb.yaml\" (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/system:openshift:operator:kube-apiserver-recovery\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nKubeAPIServerStaticResourcesDegraded:
+      \"assets/kube-apiserver/localhost-recovery-sa.yaml\" (string): serviceaccounts
+      \"localhost-recovery-client\" is forbidden: User \"system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator\"
+      cannot get resource \"serviceaccounts\" in API group \"\" in the namespace \"openshift-kube-apiserver\":
+      RBAC: [clusterrole.rbac.authorization.k8s.io \"basic-user\" not found, clusterrole.rbac.authorization.k8s.io
+      \"cluster-admin\" not found, clusterrole.rbac.authorization.k8s.io \"system:basic-user\"
+      not found, clusterrole.rbac.authorization.k8s.io \"system:openshift:discovery\"
+      not found, clusterrole.rbac.authorization.k8s.io \"system:build-strategy-docker\"
+      not found]\nKubeAPIServerStaticResourcesDegraded: \nTargetConfigControllerDegraded:
+      \"configmap/config\": Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/configmaps/config\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nTargetConfigControllerDegraded:
+      \"configmap/kube-apiserver-pod\": Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/configmaps/kube-apiserver-pod\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nTargetConfigControllerDegraded:
+      \"configmap/client-ca\": Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/configmaps/client-ca\":
+      dial tcp 172.30.0.1:443: connect: connection refused\nTargetConfigControllerDegraded:
+      \"configmap/kube-apiserver-server-ca\": configmaps \"kube-apiserver-server-ca\"
+      is forbidden: User \"system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator\"
+      cannot get resource \"configmaps\" in API group \"\" in the namespace \"openshift-kube-apiserver\":
+      RBAC: [clusterrole.rbac.authorization.k8s.io \"system:build-strategy-docker\"
+      not found, clusterrole.rbac.authorization.k8s.io \"basic-user\" not found, clusterrole.rbac.authorization.k8s.io
+      \"cluster-admin\" not found, clusterrole.rbac.authorization.k8s.io \"system:openshift:discovery\"
+      not found]"
     reason: AsExpected
     status: "False"
     type: Degraded
