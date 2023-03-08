@@ -164,6 +164,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-08T12:25:46Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:25:46Z"
   name: insights-operator-58496f87d8
   namespace: openshift-insights
   ownerReferences:
@@ -173,7 +182,7 @@ metadata:
     kind: Deployment
     name: insights-operator
     uid: 185352e9-eaa1-4563-ac19-d97d134680f0
-  resourceVersion: "15663"
+  resourceVersion: "15669"
   uid: 916efdc6-0c0a-43ba-918a-5e4521d84d59
 spec:
   replicas: 1
@@ -282,4 +291,5 @@ spec:
           optional: true
           secretName: openshift-insights-serving-cert
 status:
+  observedGeneration: 1
   replicas: 0
