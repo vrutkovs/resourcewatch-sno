@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-08T12:19:23Z"
-deprecatedLastTimestamp: "2023-03-08T12:19:27Z"
+deprecatedLastTimestamp: "2023-03-08T12:19:32Z"
 deprecatedSource:
   component: kube-apiserver-operator-installer-controller
 eventTime: null
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-08T12:19:41Z"
   name: kube-apiserver-operator.174a70ea7734c221
   namespace: openshift-kube-apiserver-operator
-  resourceVersion: "11512"
+  resourceVersion: "11513"
   uid: e9f3b358-da19-4a7b-81a1-9520fd24e496
 note: 'Failed to create installer pod for revision 4 count 2 on node "vrutkovs-sno":
   Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/pods/installer-4-vrutkovs-sno":
