@@ -1,0 +1,103 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:19:51Z"
+deprecatedLastTimestamp: "2023-03-08T12:19:51Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-status-controller-statussyncer_kube-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:19:51Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:19:51Z"
+  name: kube-controller-manager-operator.174a70f10c6dd4d9
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "11736"
+  uid: af27f46b-f277-44f7-8e48-dfcd3ab9035e
+note: 'Status for clusteroperator/kube-controller-manager changed: Degraded message
+  changed from "GarbageCollectorDegraded: error fetching rules: Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\":
+  dial tcp: lookup thanos-querier.openshift-monitoring.svc on 172.30.0.10:53: read
+  udp 10.128.0.8:45748->172.30.0.10:53: read: connection refused\nNodeInstallerDegraded:
+  1 nodes are failing on revision 6:\nNodeInstallerDegraded: installer: cy-controller-config\",\nNodeInstallerDegraded:   (string)
+  (len=29) \"controller-manager-kubeconfig\",\nNodeInstallerDegraded:   (string) (len=38)
+  \"kube-controller-cert-syncer-kubeconfig\",\nNodeInstallerDegraded:   (string) (len=17)
+  \"serviceaccount-ca\",\nNodeInstallerDegraded:   (string) (len=10) \"service-ca\",\nNodeInstallerDegraded:   (string)
+  (len=15) \"recycler-config\"\nNodeInstallerDegraded:  },\nNodeInstallerDegraded:  OptionalConfigMapNamePrefixes:
+  ([]string) (len=1 cap=1) {\nNodeInstallerDegraded:   (string) (len=12) \"cloud-config\"\nNodeInstallerDegraded:  CertSecretNames:
+  ([]string) (len=2 cap=2) {\nNodeInstallerDegraded:   (string) (len=39) \"kube-controller-manager-client-cert-key\",\nNodeInstallerDegraded:   (string)
+  (len=10) \"csr-signer\"\nNodeInstallerDegraded:  OptionalCertSecretNamePrefixes:
+  ([]string) <nil>,\nNodeInstallerDegraded:  CertConfigMapNamePrefixes: ([]string)
+  (len=2 cap=2) {\nNodeInstallerDegraded:   (string) (len=20) \"aggregator-client-ca\",\nNodeInstallerDegraded:   (string)
+  (len=9) \"client-ca\"\nNodeInstallerDegraded:  OptionalCertConfigMapNamePrefixes:
+  ([]string) (len=1 cap=1) {\nNodeInstallerDegraded:   (string) (len=17) \"trusted-ca-bundle\"\nNodeInstallerDegraded:  CertDir:
+  (string) (len=66) \"/etc/kubernetes/static-pod-resources/kube-controller-manager-certs\",\nNodeInstallerDegraded:  ResourceDir:
+  (string) (len=36) \"/etc/kubernetes/static-pod-resources\",\nNodeInstallerDegraded:  PodManifestDir:
+  (string) (len=25) \"/etc/kubernetes/manifests\",\nNodeInstallerDegraded:  Timeout:
+  (time.Duration) 2m0s,\nNodeInstallerDegraded:  StaticPodManifestsLockFile: (string)
+  \"\",\nNodeInstallerDegraded:  PodMutationFns: ([]installerpod.PodMutationFunc)
+  <nil>,\nNodeInstallerDegraded:  KubeletVersion: (string) \"\"\nNodeInstallerDegraded:
+  })\nNodeInstallerDegraded: I0308 12:18:36.160898       1 cmd.go:410] Getting controller
+  reference for node vrutkovs-sno\nNodeInstallerDegraded: I0308 12:18:36.250882       1
+  cmd.go:423] Waiting for installer revisions to settle for node vrutkovs-sno\nNodeInstallerDegraded:
+  I0308 12:18:36.253468       1 cmd.go:503] Pod container: installer state for node
+  vrutkovs-sno is not terminated, waiting\nNodeInstallerDegraded: I0308 12:18:46.256860       1
+  cmd.go:503] Pod container: installer state for node vrutkovs-sno is not terminated,
+  waiting\nNodeInstallerDegraded: I0308 12:18:56.256193       1 cmd.go:515] Waiting
+  additional period after revisions have settled for node vrutkovs-sno\nNodeInstallerDegraded:
+  I0308 12:19:26.256587       1 cmd.go:521] Getting installer pods for node vrutkovs-sno\nNodeInstallerDegraded:
+  F0308 12:19:26.257825       1 cmd.go:106] Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager/pods?labelSelector=app%3Dinstaller\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nNodeInstallerDegraded: " to
+  "GarbageCollectorDegraded: error fetching rules: Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\":
+  dial tcp: lookup thanos-querier.openshift-monitoring.svc on 172.30.0.10:53: read
+  udp 10.128.0.8:49199->172.30.0.10:53: read: connection refused\nNodeInstallerDegraded:
+  1 nodes are failing on revision 6:\nNodeInstallerDegraded: installer: cy-controller-config\",\nNodeInstallerDegraded:   (string)
+  (len=29) \"controller-manager-kubeconfig\",\nNodeInstallerDegraded:   (string) (len=38)
+  \"kube-controller-cert-syncer-kubeconfig\",\nNodeInstallerDegraded:   (string) (len=17)
+  \"serviceaccount-ca\",\nNodeInstallerDegraded:   (string) (len=10) \"service-ca\",\nNodeInstallerDegraded:   (string)
+  (len=15) \"recycler-config\"\nNodeInstallerDegraded:  },\nNodeInstallerDegraded:  OptionalConfigMapNamePrefixes:
+  ([]string) (len=1 cap=1) {\nNodeInstallerDegraded:   (string) (len=12) \"cloud-config\"\nNodeInstallerDegraded:  CertSecretNames:
+  ([]string) (len=2 cap=2) {\nNodeInstallerDegraded:   (string) (len=39) \"kube-controller-manager-client-cert-key\",\nNodeInstallerDegraded:   (string)
+  (len=10) \"csr-signer\"\nNodeInstallerDegraded:  OptionalCertSecretNamePrefixes:
+  ([]string) <nil>,\nNodeInstallerDegraded:  CertConfigMapNamePrefixes: ([]string)
+  (len=2 cap=2) {\nNodeInstallerDegraded:   (string) (len=20) \"aggregator-client-ca\",\nNodeInstallerDegraded:   (string)
+  (len=9) \"client-ca\"\nNodeInstallerDegraded:  OptionalCertConfigMapNamePrefixes:
+  ([]string) (len=1 cap=1) {\nNodeInstallerDegraded:   (string) (len=17) \"trusted-ca-bundle\"\nNodeInstallerDegraded:  CertDir:
+  (string) (len=66) \"/etc/kubernetes/static-pod-resources/kube-controller-manager-certs\",\nNodeInstallerDegraded:  ResourceDir:
+  (string) (len=36) \"/etc/kubernetes/static-pod-resources\",\nNodeInstallerDegraded:  PodManifestDir:
+  (string) (len=25) \"/etc/kubernetes/manifests\",\nNodeInstallerDegraded:  Timeout:
+  (time.Duration) 2m0s,\nNodeInstallerDegraded:  StaticPodManifestsLockFile: (string)
+  \"\",\nNodeInstallerDegraded:  PodMutationFns: ([]installerpod.PodMutationFunc)
+  <nil>,\nNodeInstallerDegraded:  KubeletVersion: (string) \"\"\nNodeInstallerDegraded:
+  })\nNodeInstallerDegraded: I0308 12:18:36.160898       1 cmd.go:410] Getting controller
+  reference for node vrutkovs-sno\nNodeInstallerDegraded: I0308 12:18:36.250882       1
+  cmd.go:423] Waiting for installer revisions to settle for node vrutkovs-sno\nNodeInstallerDegraded:
+  I0308 12:18:36.253468       1 cmd.go:503] Pod container: installer state for node
+  vrutkovs-sno is not terminated, waiting\nNodeInstallerDegraded: I0308 12:18:46.256860       1
+  cmd.go:503] Pod container: installer state for node vrutkovs-sno is not terminated,
+  waiting\nNodeInstallerDegraded: I0308 12:18:56.256193       1 cmd.go:515] Waiting
+  additional period after revisions have settled for node vrutkovs-sno\nNodeInstallerDegraded:
+  I0308 12:19:26.256587       1 cmd.go:521] Getting installer pods for node vrutkovs-sno\nNodeInstallerDegraded:
+  F0308 12:19:26.257825       1 cmd.go:106] Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager/pods?labelSelector=app%3Dinstaller\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nNodeInstallerDegraded: "'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: 5df04b75-b8db-486d-812b-be3794a10710
+type: Normal
