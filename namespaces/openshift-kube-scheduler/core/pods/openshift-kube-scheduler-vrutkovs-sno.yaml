@@ -228,8 +228,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"PodScheduled"}:
@@ -259,7 +257,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:15:28Z"
+    time: "2023-03-08T12:15:30Z"
   name: openshift-kube-scheduler-vrutkovs-sno
   namespace: openshift-kube-scheduler
   ownerReferences:
@@ -268,7 +266,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
-  resourceVersion: "7031"
+  resourceVersion: "7067"
   uid: 4a93d30e-2399-4a9e-ad12-5ac0076cf18a
 spec:
   containers:
@@ -431,10 +429,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:15:28Z"
-    message: 'containers with incomplete status: [wait-for-host-port]'
-    reason: ContainersNotInitialized
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:15:30Z"
+    status: "True"
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:15:28Z"
@@ -487,15 +483,20 @@ status:
         reason: PodInitializing
   hostIP: 10.0.130.68
   initContainerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
-    imageID: ""
+  - containerID: cri-o://96711286eeb62226397bb39d05244743035f070d9980923fefbad84faa5343a8
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
     lastState: {}
     name: wait-for-host-port
-    ready: false
+    ready: true
     restartCount: 0
     state:
-      waiting:
-        reason: PodInitializing
+      terminated:
+        containerID: cri-o://96711286eeb62226397bb39d05244743035f070d9980923fefbad84faa5343a8
+        exitCode: 0
+        finishedAt: "2023-03-08T12:15:29Z"
+        reason: Completed
+        startedAt: "2023-03-08T12:15:29Z"
   phase: Pending
   podIP: 10.0.130.68
   podIPs:
