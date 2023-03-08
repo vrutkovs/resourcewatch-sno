@@ -25,6 +25,8 @@ metadata:
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-08T12:26:08Z"
+  deletionGracePeriodSeconds: 40
+  deletionTimestamp: "2023-03-08T12:27:34Z"
   generateName: console-5bf6c4ff6b-
   labels:
     app: console
@@ -267,7 +269,7 @@ metadata:
     kind: ReplicaSet
     name: console-5bf6c4ff6b
     uid: 0e74ac94-6e83-457a-b2a1-ddd5a9a1a292
-  resourceVersion: "17340"
+  resourceVersion: "17602"
   uid: e48e6d56-a4e2-4160-b9a5-fa073cd01b47
 spec:
   affinity: {}
