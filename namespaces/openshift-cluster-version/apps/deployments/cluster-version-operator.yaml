@@ -8,7 +8,7 @@ metadata:
     kubernetes.io/description: The cluster-version operator manages OpenShift updates
       and reconciles core resources and cluster operators.
   creationTimestamp: "2023-03-08T12:00:35Z"
-  generation: 1
+  generation: 2
   managedFields:
   - apiVersion: apps/v1
     fieldsType: FieldsV1
@@ -50,7 +50,6 @@ metadata:
                   k:{"name":"KUBERNETES_SERVICE_HOST"}:
                     .: {}
                     f:name: {}
-                    f:value: {}
                   k:{"name":"KUBERNETES_SERVICE_PORT"}:
                     .: {}
                     f:name: {}
@@ -182,9 +181,33 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-08T12:19:55Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757"}: {}
+      f:spec:
+        f:template:
+          f:spec:
+            f:containers:
+              k:{"name":"cluster-version-operator"}:
+                f:env:
+                  k:{"name":"KUBERNETES_SERVICE_HOST"}:
+                    f:value: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-08T12:25:22Z"
   name: cluster-version-operator
   namespace: openshift-cluster-version
-  resourceVersion: "11931"
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
+  resourceVersion: "15212"
   uid: e1241ff1-ac12-470d-b069-ea2407285099
 spec:
   progressDeadlineSeconds: 600
@@ -218,7 +241,7 @@ spec:
         - name: KUBERNETES_SERVICE_PORT
           value: "6443"
         - name: KUBERNETES_SERVICE_HOST
-          value: 127.0.0.1
+          value: api-int.vrutkovs.choomba.one
         - name: NODE_NAME
           valueFrom:
             fieldRef:
