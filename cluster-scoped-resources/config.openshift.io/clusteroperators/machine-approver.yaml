@@ -24,6 +24,17 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-08T12:00:44Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+        f:relatedObjects: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:00:44Z"
   name: machine-approver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -31,6 +42,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "674"
+  resourceVersion: "697"
   uid: 1deb99a4-3951-4514-995a-b45c83509172
 spec: {}
+status:
+  extension: null
+  relatedObjects:
+  - group: ""
+    name: openshift-cluster-machine-approver
+    resource: namespaces
+  - group: certificates.k8s.io
+    name: ""
+    resource: certificatesigningrequests
