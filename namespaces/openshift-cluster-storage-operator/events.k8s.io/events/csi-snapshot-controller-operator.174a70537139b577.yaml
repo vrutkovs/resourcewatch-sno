@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:34Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:34Z"
+deprecatedSource:
+  component: csi-snapshot-controller-operator-csisnapshotgueststaticresourcecontroller-csisnapshotgueststaticresourcecontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:34Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: csi-snapshot-controller-operator
+    operation: Update
+    time: "2023-03-08T12:08:34Z"
+  name: csi-snapshot-controller-operator.174a70537139b577
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "3673"
+  uid: 3bb629a1-4ddc-4cf5-a712-a7a6ba3308ad
+note: Created CustomResourceDefinition.apiextensions.k8s.io/volumesnapshotcontents.snapshot.storage.k8s.io
+  because it was missing
+reason: CustomResourceDefinitionCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: csi-snapshot-controller-operator
+  namespace: openshift-cluster-storage-operator
+  uid: fb0ac1ee-b184-48a0-8229-7274958e046b
+type: Normal
