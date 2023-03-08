@@ -9,6 +9,7 @@ metadata:
     k8s.ovn.org/node-mgmt-port-mac-address: b6:c1:3c:5d:24:d2
     k8s.ovn.org/node-primary-ifaddr: '{"ipv4":"10.0.130.68/24"}'
     k8s.ovn.org/node-subnets: '{"default":["10.128.0.0/23"]}'
+    machineconfiguration.openshift.io/controlPlaneTopology: SingleReplica
     machineconfiguration.openshift.io/currentConfig: rendered-master-ad65eb7af782515f818f50bde5963472
     machineconfiguration.openshift.io/desiredConfig: rendered-master-ad65eb7af782515f818f50bde5963472
     machineconfiguration.openshift.io/reason: machineconfig.machineconfiguration.openshift.io
@@ -77,15 +78,6 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:metadata:
-        f:labels:
-          f:node-role.kubernetes.io/worker: {}
-    manager: machine-config-controller
-    operation: Update
-    time: "2023-03-08T12:19:57Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:status:
         f:allocatable:
           f:ephemeral-storage: {}
@@ -107,8 +99,19 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-08T12:20:03Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:machineconfiguration.openshift.io/controlPlaneTopology: {}
+        f:labels:
+          f:node-role.kubernetes.io/worker: {}
+    manager: machine-config-controller
+    operation: Update
+    time: "2023-03-08T12:20:07Z"
   name: vrutkovs-sno
-  resourceVersion: "12324"
+  resourceVersion: "12569"
   uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
 spec: {}
 status:
