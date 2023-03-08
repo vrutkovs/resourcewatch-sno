@@ -54,9 +54,9 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:07:02Z"
+    time: "2023-03-08T12:07:33Z"
   name: vrutkovs-sno
-  resourceVersion: "2839"
+  resourceVersion: "2974"
   uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
 spec:
   taints:
@@ -85,25 +85,25 @@ status:
     memory: 16342536Ki
     pods: "250"
   conditions:
-  - lastHeartbeatTime: "2023-03-08T12:07:02Z"
+  - lastHeartbeatTime: "2023-03-08T12:07:33Z"
     lastTransitionTime: "2023-03-08T12:06:32Z"
     message: kubelet has sufficient memory available
     reason: KubeletHasSufficientMemory
     status: "False"
     type: MemoryPressure
-  - lastHeartbeatTime: "2023-03-08T12:07:02Z"
+  - lastHeartbeatTime: "2023-03-08T12:07:33Z"
     lastTransitionTime: "2023-03-08T12:06:32Z"
     message: kubelet has no disk pressure
     reason: KubeletHasNoDiskPressure
     status: "False"
     type: DiskPressure
-  - lastHeartbeatTime: "2023-03-08T12:07:02Z"
+  - lastHeartbeatTime: "2023-03-08T12:07:33Z"
     lastTransitionTime: "2023-03-08T12:06:32Z"
     message: kubelet has sufficient PID available
     reason: KubeletHasSufficientPID
     status: "False"
     type: PIDPressure
-  - lastHeartbeatTime: "2023-03-08T12:07:02Z"
+  - lastHeartbeatTime: "2023-03-08T12:07:33Z"
     lastTransitionTime: "2023-03-08T12:06:32Z"
     message: 'container runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady
       message:Network plugin returns error: No CNI configuration file in /etc/kubernetes/cni/net.d/.
@@ -115,6 +115,9 @@ status:
     kubeletEndpoint:
       Port: 10250
   images:
+  - names:
+    - quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
+    sizeBytes: 1139581150
   - names:
     - quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f88cd82b162343cd0e3455c1d39d0b2835e6a0e2ba99e640c12df2661d5595fd
     sizeBytes: 870344234
@@ -146,11 +149,20 @@ status:
     - quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4c1814ed9c062160a4e55c8b35cce9b9934348bb2522187a5781a05b9174df82
     sizeBytes: 424432411
   - names:
+    - quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a3b2252ca7ca2319daaecbed659b68d83feb62781a68e0d5a707df597e3bd83f
+    sizeBytes: 402026886
+  - names:
+    - quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
+    sizeBytes: 401214925
+  - names:
     - quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:895035ce1fd456d165c3ff5978bcb0b1a4331f4039fdd3a5527ebeb7d924def4
     sizeBytes: 352663171
   - names:
     - quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8863d0268479214bd3835fe0135e94780e13a15ba00afe55e168346da825628a
     sizeBytes: 350013782
+  - names:
+    - quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2087da527303d62a2359fea0ecbaef0be30303e9b9a988e15ef861fd1244215e
+    sizeBytes: 318125787
   - names:
     - registry.redhat.io/rhai-tech-preview/assisted-installer-reporter-rhel8@sha256:8c028c7c9f63a5a2b5e1cebd3c0db7414371bf162275d9bc169bd311fbc5343b
     - registry.redhat.io/rhai-tech-preview/assisted-installer-reporter-rhel8@sha256:c8d00d952137f08a870e3445f910d8d952bae1d00bc7398e7a8e7fdab4721a77
