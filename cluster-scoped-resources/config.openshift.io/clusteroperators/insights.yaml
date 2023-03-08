@@ -50,7 +50,7 @@ metadata:
     manager: insights-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:25:55Z"
+    time: "2023-03-08T12:26:31Z"
   name: insights
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -58,7 +58,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "16262"
+  resourceVersion: "17424"
   uid: ae47ccc3-db4b-4679-ba86-eae6d52f4d65
 spec: {}
 status:
@@ -68,8 +68,10 @@ status:
     reason: AsExpected
     status: "True"
     type: Available
-  - lastTransitionTime: "2023-03-08T12:25:55Z"
-    status: Unknown
+  - lastTransitionTime: "2023-03-08T12:26:31Z"
+    message: no available cluster transfer
+    reason: NoClusterTransfer
+    status: "False"
     type: ClusterTransferAvailable
   - lastTransitionTime: "2023-03-08T12:25:55Z"
     message: Insights works as expected
@@ -85,8 +87,10 @@ status:
     reason: AsExpected
     status: "False"
     type: Progressing
-  - lastTransitionTime: "2023-03-08T12:25:55Z"
-    status: Unknown
+  - lastTransitionTime: "2023-03-08T12:26:31Z"
+    message: SCA certs successfully updated in the etc-pki-entitlement secret
+    reason: Updated
+    status: "True"
     type: SCAAvailable
   - lastTransitionTime: "2023-03-08T12:25:55Z"
     message: Insights operator can be upgraded
@@ -94,7 +98,7 @@ status:
     status: "True"
     type: Upgradeable
   extension:
-    lastReportTime: null
+    lastReportTime: "2023-03-08T12:26:31Z"
   relatedObjects:
   - group: ""
     name: openshift-insights
