@@ -194,6 +194,25 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:20:08Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-08T12:20:08Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"ContainersReady"}:
@@ -220,30 +239,18 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.67"}:
+            .: {}
+            f:ip: {}
         f:startTime: {}
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:20:08Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.v1.cni.cncf.io/network-status: {}
-    manager: multus
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:20:08Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.ovn.org/pod-networks: {}
-    manager: vrutkovs-sno
-    operation: Update
-    time: "2023-03-08T12:20:08Z"
+    time: "2023-03-08T12:20:11Z"
   name: prometheus-adapter-7b8677db6b-s9lv5
   namespace: openshift-monitoring
   ownerReferences:
@@ -253,7 +260,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-adapter-7b8677db6b
     uid: e9a1d342-70ac-48b5-8831-33911ce6572b
-  resourceVersion: "12611"
+  resourceVersion: "12689"
   uid: b4fcb53a-cb62-4105-9372-d0c624634ca3
 spec:
   automountServiceAccountToken: true
@@ -448,17 +455,21 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fcb29b9f062c78c73e0ec75c28e165465f12875d73fd205223a0948d87a5dfb8
-    imageID: ""
+  - containerID: cri-o://68e0694f8bdbb0cd0601a53527d139e6e2e863eea12c1955795437a2cb96a9d8
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fcb29b9f062c78c73e0ec75c28e165465f12875d73fd205223a0948d87a5dfb8
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fcb29b9f062c78c73e0ec75c28e165465f12875d73fd205223a0948d87a5dfb8
     lastState: {}
     name: prometheus-adapter
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-08T12:20:10Z"
   hostIP: 10.0.130.68
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.67
+  podIPs:
+  - ip: 10.128.0.67
   qosClass: Burstable
   startTime: "2023-03-08T12:20:08Z"
