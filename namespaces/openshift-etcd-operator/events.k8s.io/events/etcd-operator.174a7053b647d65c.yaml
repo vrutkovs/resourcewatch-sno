@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:08:35Z"
-deprecatedLastTimestamp: "2023-03-08T12:08:35Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:58Z"
 deprecatedSource:
   component: openshift-cluster-etcd-operator-config-observer-configobserver
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-etcd-operator
     operation: Update
-    time: "2023-03-08T12:08:37Z"
+    time: "2023-03-08T12:08:58Z"
   name: etcd-operator.174a7053b647d65c
   namespace: openshift-etcd-operator
-  resourceVersion: "4000"
+  resourceVersion: "5048"
   uid: d5f8581c-5acc-4730-bc5d-3e4553a7ca4c
 note: "Writing updated observed config:   map[string]any{\n+ \t\"controlPlane\": map[string]any{\"replicas\":
   float64(1)},\n+ \t\"servingInfo\": map[string]any{\n+ \t\t\"cipherSuites\": []any{\n+ \t\t\tstring(\"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256\"),\n+ \t\t\tstring(\"TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256\"),\n+ \t\t\tstring(\"TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384\"),\n+ \t\t\tstring(\"TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384\"),\n+ \t\t\tstring(\"TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256\"),\n+ \t\t\tstring(\"TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256\"),\n+ \t\t},\n+ \t\t\"minTLSVersion\":
