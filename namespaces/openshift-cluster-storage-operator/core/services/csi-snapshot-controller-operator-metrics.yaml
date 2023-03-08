@@ -1,0 +1,75 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    capability.openshift.io/name: CSISnapshot
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    service.alpha.openshift.io/serving-cert-secret-name: serving-cert
+  creationTimestamp: "2023-03-08T12:00:54Z"
+  labels:
+    app: csi-snapshot-controller-operator
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:service.alpha.openshift.io/serving-cert-secret-name: {}
+        f:labels:
+          .: {}
+          f:app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757"}: {}
+      f:spec:
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":443,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-08T12:00:54Z"
+  name: csi-snapshot-controller-operator-metrics
+  namespace: openshift-cluster-storage-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
+  resourceVersion: "1121"
+  uid: 5464df37-84bd-4dd5-91bd-d953e64a2155
+spec:
+  clusterIP: 172.30.129.10
+  clusterIPs:
+  - 172.30.129.10
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: https
+    port: 443
+    protocol: TCP
+    targetPort: 8443
+  selector:
+    app: csi-snapshot-controller-operator
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
