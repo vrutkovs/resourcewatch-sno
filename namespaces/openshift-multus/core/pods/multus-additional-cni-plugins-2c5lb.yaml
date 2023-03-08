@@ -418,7 +418,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:06:58Z"
+    time: "2023-03-08T12:07:00Z"
   name: multus-additional-cni-plugins-2c5lb
   namespace: openshift-multus
   ownerReferences:
@@ -428,7 +428,7 @@ metadata:
     kind: DaemonSet
     name: multus-additional-cni-plugins
     uid: f08f0ac3-7939-45c2-89c9-7310bf134fa1
-  resourceVersion: "2777"
+  resourceVersion: "2833"
   uid: eff170c1-7fcb-4372-a881-26b187cdd535
 spec:
   affinity:
@@ -803,8 +803,7 @@ status:
   conditions:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:06:49Z"
-    message: 'containers with incomplete status: [routeoverride-cni whereabouts-cni-bincopy
-      whereabouts-cni]'
+    message: 'containers with incomplete status: [whereabouts-cni-bincopy whereabouts-cni]'
     reason: ContainersNotInitialized
     status: "False"
     type: Initialized
@@ -879,15 +878,20 @@ status:
         finishedAt: "2023-03-08T12:06:57Z"
         reason: Completed
         startedAt: "2023-03-08T12:06:57Z"
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2087da527303d62a2359fea0ecbaef0be30303e9b9a988e15ef861fd1244215e
-    imageID: ""
+  - containerID: cri-o://1fa60e9bd5ab315828170fc6f23c98910cfe6034db5a8861392f4bb8127e21a6
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2087da527303d62a2359fea0ecbaef0be30303e9b9a988e15ef861fd1244215e
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2087da527303d62a2359fea0ecbaef0be30303e9b9a988e15ef861fd1244215e
     lastState: {}
     name: routeoverride-cni
-    ready: false
+    ready: true
     restartCount: 0
     state:
-      waiting:
-        reason: PodInitializing
+      terminated:
+        containerID: cri-o://1fa60e9bd5ab315828170fc6f23c98910cfe6034db5a8861392f4bb8127e21a6
+        exitCode: 0
+        finishedAt: "2023-03-08T12:06:59Z"
+        reason: Completed
+        startedAt: "2023-03-08T12:06:59Z"
   - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a3b2252ca7ca2319daaecbed659b68d83feb62781a68e0d5a707df597e3bd83f
     imageID: ""
     lastState: {}
