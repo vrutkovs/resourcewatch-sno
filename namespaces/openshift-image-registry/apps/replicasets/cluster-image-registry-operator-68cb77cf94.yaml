@@ -160,7 +160,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -174,7 +176,7 @@ metadata:
     kind: Deployment
     name: cluster-image-registry-operator
     uid: ad2539e5-7cf3-4a0d-ba3d-5cb7d8a019c0
-  resourceVersion: "15612"
+  resourceVersion: "15616"
   uid: b5b13f58-ce71-4a01-b436-6141a4731a11
 spec:
   replicas: 1
@@ -283,5 +285,6 @@ spec:
               expirationSeconds: 3600
               path: token
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
