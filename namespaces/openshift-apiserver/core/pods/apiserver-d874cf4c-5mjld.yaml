@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.46/23"],"mac_address":"0a:58:0a:80:00:2e","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.46/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: privileged
     operator.openshift.io/dep-desired.generation: "2"
     operator.openshift.io/dep-openshift-apiserver.config.configmap: 1lYKhA==
@@ -317,6 +318,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-08T12:17:48Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-08T12:17:48Z"
   name: apiserver-d874cf4c-5mjld
   namespace: openshift-apiserver
   ownerReferences:
@@ -326,7 +336,7 @@ metadata:
     kind: ReplicaSet
     name: apiserver-d874cf4c
     uid: 46d58985-0a5c-4227-a165-9f030be2749f
-  resourceVersion: "7979"
+  resourceVersion: "7997"
   uid: 4cfb8494-a1dc-4527-abb8-5bbbef14950d
 spec:
   affinity:
