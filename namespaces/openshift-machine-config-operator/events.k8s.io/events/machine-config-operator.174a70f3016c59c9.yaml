@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:20:00Z"
+deprecatedLastTimestamp: "2023-03-08T12:20:00Z"
+deprecatedSource:
+  component: machine-config-operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:20:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: machine-config-operator
+    operation: Update
+    time: "2023-03-08T12:20:00Z"
+  name: machine-config-operator.174a70f3016c59c9
+  namespace: openshift-machine-config-operator
+  resourceVersion: "12219"
+  uid: 5ace0b60-5830-473a-bf58-d57f09896c42
+note: Created Secret/node-bootstrapper-token -n openshift-machine-config-operator
+  because it was missing
+reason: SecretCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: machine-config-operator
+  namespace: openshift-machine-config-operator
+type: Normal
