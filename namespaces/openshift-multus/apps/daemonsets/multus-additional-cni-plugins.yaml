@@ -317,6 +317,17 @@ metadata:
     manager: cluster-network-operator/operconfig
     operation: Apply
     time: "2023-03-08T12:06:49Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:desiredNumberScheduled: {}
+        f:numberUnavailable: {}
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:06:49Z"
   name: multus-additional-cni-plugins
   namespace: openshift-multus
   ownerReferences:
@@ -326,7 +337,7 @@ metadata:
     kind: Network
     name: cluster
     uid: 33106962-b4cb-47dc-aa0e-5f6b7299dae3
-  resourceVersion: "2615"
+  resourceVersion: "2620"
   uid: f08f0ac3-7939-45c2-89c9-7310bf134fa1
 spec:
   revisionHistoryLimit: 10
@@ -661,6 +672,8 @@ spec:
     type: RollingUpdate
 status:
   currentNumberScheduled: 0
-  desiredNumberScheduled: 0
+  desiredNumberScheduled: 1
   numberMisscheduled: 0
   numberReady: 0
+  numberUnavailable: 1
+  observedGeneration: 1
