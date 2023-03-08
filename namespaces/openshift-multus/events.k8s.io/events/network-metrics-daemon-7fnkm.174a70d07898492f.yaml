@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:17:31Z"
+deprecatedLastTimestamp: "2023-03-08T12:17:31Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:17:31Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:17:31Z"
+  name: network-metrics-daemon-7fnkm.174a70d07898492f
+  namespace: openshift-multus
+  resourceVersion: "7838"
+  uid: 5fff5271-3a81-46eb-88b5-d544625b91f0
+note: 'Unable to attach or mount volumes: unmounted volumes=[metrics-certs], unattached
+  volumes=[kube-api-access-hlxwt metrics-certs]: timed out waiting for the condition'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: network-metrics-daemon-7fnkm
+  namespace: openshift-multus
+  resourceVersion: "3066"
+  uid: 23e8095e-6099-47c5-ac25-494fb8aa3700
+type: Warning
