@@ -450,6 +450,17 @@ metadata:
     manager: cluster-network-operator/operconfig
     operation: Apply
     time: "2023-03-08T12:06:59Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:desiredNumberScheduled: {}
+        f:numberUnavailable: {}
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:06:59Z"
   name: ovnkube-master
   namespace: openshift-ovn-kubernetes
   ownerReferences:
@@ -459,7 +470,7 @@ metadata:
     kind: Network
     name: cluster
     uid: 33106962-b4cb-47dc-aa0e-5f6b7299dae3
-  resourceVersion: "2781"
+  resourceVersion: "2788"
   uid: 3028f449-b801-40d3-ab68-6b3606141543
 spec:
   revisionHistoryLimit: 10
@@ -1295,6 +1306,8 @@ spec:
     type: RollingUpdate
 status:
   currentNumberScheduled: 0
-  desiredNumberScheduled: 0
+  desiredNumberScheduled: 1
   numberMisscheduled: 0
   numberReady: 0
+  numberUnavailable: 1
+  observedGeneration: 1
