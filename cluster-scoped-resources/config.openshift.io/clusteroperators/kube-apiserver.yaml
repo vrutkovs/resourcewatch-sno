@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:22:01Z"
+    time: "2023-03-08T12:23:17Z"
   name: kube-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,13 +52,18 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "14175"
+  resourceVersion: "14637"
   uid: 03522acc-29b6-46fb-bd37-7383fc37ffe9
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:15:51Z"
-    message: 'NodeControllerDegraded: All master nodes are ready'
+    message: |-
+      NodeControllerDegraded: All master nodes are ready
+      TargetConfigControllerDegraded: "configmap/config": Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/configmaps/config": dial tcp 172.30.0.1:443: connect: connection refused
+      TargetConfigControllerDegraded: "configmap/kube-apiserver-pod": Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/configmaps/kube-apiserver-pod": dial tcp 172.30.0.1:443: connect: connection refused
+      TargetConfigControllerDegraded: "configmap/client-ca": Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver/configmaps/client-ca": dial tcp 172.30.0.1:443: connect: connection refused
+      TargetConfigControllerDegraded: "configmap/kube-apiserver-server-ca": configmaps "kube-apiserver-server-ca" is forbidden: User "system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator" cannot get resource "configmaps" in API group "" in the namespace "openshift-kube-apiserver": RBAC: [clusterrole.rbac.authorization.k8s.io "system:build-strategy-docker" not found, clusterrole.rbac.authorization.k8s.io "basic-user" not found, clusterrole.rbac.authorization.k8s.io "cluster-admin" not found, clusterrole.rbac.authorization.k8s.io "system:openshift:discovery" not found]
     reason: AsExpected
     status: "False"
     type: Degraded
