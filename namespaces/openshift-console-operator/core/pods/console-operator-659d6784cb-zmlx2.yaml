@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.93/23"],"mac_address":"0a:58:0a:80:00:5d","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.93/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.93"
+          ],
+          "mac": "0a:58:0a:80:00:5d",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-08T12:25:50Z"
@@ -259,6 +270,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-08T12:25:50Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:25:55Z"
   name: console-operator-659d6784cb-zmlx2
   namespace: openshift-console-operator
   ownerReferences:
@@ -268,7 +289,7 @@ metadata:
     kind: ReplicaSet
     name: console-operator-659d6784cb
     uid: 85ea6bec-acc2-4bf1-8442-d424d3648de8
-  resourceVersion: "15973"
+  resourceVersion: "16239"
   uid: 587a13ee-868f-43f3-89b4-3b828ca2185f
 spec:
   containers:
