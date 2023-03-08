@@ -1,0 +1,51 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:12:15Z"
+deprecatedLastTimestamp: "2023-03-08T12:12:15Z"
+deprecatedSource:
+  component: openshift-controller-manager-operator-status-controller-statussyncer_openshift-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:12:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:12:15Z"
+  name: openshift-controller-manager-operator.174a7086b90342f5
+  namespace: openshift-controller-manager-operator
+  resourceVersion: "6425"
+  uid: 2f22d410-0beb-47eb-841d-a8d3f592ccde
+note: 'Status for clusteroperator/openshift-controller-manager changed: Progressing
+  message changed from "Progressing: deployment/controller-manager: observed generation
+  is 2, desired generation is 3.\nProgressing: deployment/controller-manager: available
+  replicas is 0, desired available replicas > 1\nProgressing: deployment/controller-manager:
+  updated replicas is 0, desired replicas is 1\nProgressing: deployment/route-controller-manager:
+  available replicas is 0, desired available replicas > 1\nProgressing: deployment/route-controller-manager:
+  updated replicas is 0, desired replicas is 1" to "Progressing: deployment/controller-manager:
+  observed generation is 3, desired generation is 4.\nProgressing: deployment/controller-manager:
+  available replicas is 0, desired available replicas > 1\nProgressing: deployment/controller-manager:
+  updated replicas is 0, desired replicas is 1\nProgressing: deployment/route-controller-manager:
+  observed generation is 2, desired generation is 3.\nProgressing: deployment/route-controller-manager:
+  available replicas is 0, desired available replicas > 1\nProgressing: deployment/route-controller-manager:
+  updated replicas is 0, desired replicas is 1"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-controller-manager-operator
+  namespace: openshift-controller-manager-operator
+  uid: 45a16873-2fe3-4bef-a950-df458d021470
+type: Normal
