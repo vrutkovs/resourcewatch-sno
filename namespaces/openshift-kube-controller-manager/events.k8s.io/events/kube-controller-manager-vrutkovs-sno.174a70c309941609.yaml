@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:16:34Z"
-deprecatedLastTimestamp: "2023-03-08T12:16:34Z"
+deprecatedLastTimestamp: "2023-03-08T12:19:31Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-08T12:16:53Z"
+    time: "2023-03-08T12:19:35Z"
   name: kube-controller-manager-vrutkovs-sno.174a70c309941609
   namespace: openshift-kube-controller-manager
-  resourceVersion: "7673"
+  resourceVersion: "11446"
   uid: 14ce0df4-ac45-42e4-b863-4fc9324f0b43
 note: Started container kube-controller-manager
 reason: Started
