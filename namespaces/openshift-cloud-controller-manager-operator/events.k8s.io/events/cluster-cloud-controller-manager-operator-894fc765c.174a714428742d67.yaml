@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:25:48Z"
+deprecatedLastTimestamp: "2023-03-08T12:25:48Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:25:48Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:25:48Z"
+  name: cluster-cloud-controller-manager-operator-894fc765c.174a714428742d67
+  namespace: openshift-cloud-controller-manager-operator
+  resourceVersion: "15807"
+  uid: 8c4ec12d-e9d7-4b10-bf2a-48c5fbbad70e
+note: 'Created pod: cluster-cloud-controller-manager-operator-894fc765c-pv6m8'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: cluster-cloud-controller-manager-operator-894fc765c
+  namespace: openshift-cloud-controller-manager-operator
+  resourceVersion: "15802"
+  uid: 9a304169-5f1a-435b-972d-00a0be0cf15f
+type: Normal
