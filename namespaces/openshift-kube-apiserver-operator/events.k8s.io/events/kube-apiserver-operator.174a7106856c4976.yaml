@@ -1,0 +1,54 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:21:23Z"
+deprecatedLastTimestamp: "2023-03-08T12:21:23Z"
+deprecatedSource:
+  component: kube-apiserver-operator-config-observer-configobserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:21:23Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-08T12:21:23Z"
+  name: kube-apiserver-operator.174a7106856c4976
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "13250"
+  uid: 963aa6b3-b58a-43ac-9c46-7ade054da397
+note: "Writing updated observed config:   map[string]any{\n  \t\"admission\":          map[string]any{\"pluginConfig\":
+  map[string]any{\"PodSecurity\": map[string]any{\"configuration\": map[string]any{\"defaults\":
+  map[string]any{\"audit\": string(\"restricted\"), \"audit-version\": string(\"latest\"),
+  \"enforce\": string(\"restricted\"), \"enforce-version\": string(\"latest\"), ...}}},
+  \"network.openshift.io/ExternalIPRanger\": map[string]any{\"configuration\": map[string]any{\"allowIngressIP\":
+  bool(false), \"apiVersion\": string(\"network.openshift.io/v1\"), \"kind\": string(\"ExternalIPRangerAdmissionConfig\")}},
+  \"network.openshift.io/RestrictedEndpointsAdmission\": map[string]any{\"configuration\":
+  map[string]any{\"apiVersion\": string(\"network.openshift.io/v1\"), \"kind\": string(\"RestrictedEndpointsAdmissionConfig\"),
+  \"restrictedCIDRs\": []any{string(\"10.128.0.0/14\"), string(\"172.30.0.0/16\")}}}}},\n  \t\"apiServerArguments\":
+  map[string]any{\"api-audiences\": []any{string(\"https://kubernetes.default.svc\")},
+  \"authentication-token-webhook-config-file\": []any{string(\"/etc/kubernetes/static-pod-resources/secrets/webhook-authenticat\"...)},
+  \"authentication-token-webhook-version\": []any{string(\"v1\")}, \"etcd-servers\":
+  []any{string(\"https://10.0.130.68:2379\"), string(\"https://localhost:2379\")},
+  ...},\n+ \t\"authConfig\": map[string]any{\n+ \t\t\"oauthMetadataFile\": string(\"/etc/kubernetes/static-pod-resources/configmaps/oauth-metadata/oauthMetadata\"),\n+ \t},\n  \t\"corsAllowedOrigins\":
+  \         []any{string(`//127\\.0\\.0\\.1(:|$)`), string(\"//localhost(:|$)\")},\n  \t\"gracefulTerminationDuration\":
+  string(\"15\"),\n  \t... // 2 identical entries\n  }\n"
+reason: ObservedConfigChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: 1fb52cdd-6ee0-4905-bac5-c1d2936c403a
+type: Normal
