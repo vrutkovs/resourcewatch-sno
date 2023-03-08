@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:10:30Z"
-deprecatedLastTimestamp: "2023-03-08T12:10:30Z"
+deprecatedLastTimestamp: "2023-03-08T12:10:40Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -28,7 +28,7 @@ metadata:
     time: "2023-03-08T12:11:46Z"
   name: bootstrap-kube-apiserver-vrutkovs-sno.174a706e59e0e53a
   namespace: openshift-kube-apiserver
-  resourceVersion: "6195"
+  resourceVersion: "6212"
   uid: b8c3c6d1-3440-4dee-8fcb-36a4f908d861
 note: 'Liveness probe failed: HTTP probe failed with statuscode: 500'
 reason: Unhealthy
