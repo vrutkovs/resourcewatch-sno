@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:10:04Z"
+deprecatedLastTimestamp: "2023-03-08T12:10:04Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-status-controller-statussyncer_kube-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:10:04Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-08T12:10:04Z"
+  name: openshift-kube-scheduler-operator.174a70686f8747e5
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "5910"
+  uid: d81d81c5-9549-4989-bb06-87682ac758ec
+note: 'Status for clusteroperator/kube-scheduler changed: status.versions changed
+  from [{"raw-internal" "4.13.0-ec.4"}] to [{"raw-internal" "4.13.0-ec.4"} {"kube-scheduler"
+  "1.26.0"} {"operator" "4.13.0-ec.4"}]'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 1183c523-80da-4a75-bc3e-713792de34ff
+type: Normal
