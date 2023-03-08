@@ -44,7 +44,7 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:11:43Z"
+    time: "2023-03-08T12:11:45Z"
   name: etcd
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,15 +52,19 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "6161"
+  resourceVersion: "6178"
   uid: 88149466-b942-47f3-acfa-6cc1930e9bbe
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-08T12:11:37Z"
-    message: 'EtcdEndpointsDegraded: no etcd members are present'
-    reason: EtcdEndpoints_ErrorUpdatingEtcdEndpoints
-    status: "True"
+  - lastTransitionTime: "2023-03-08T12:11:45Z"
+    message: |-
+      NodeControllerDegraded: All master nodes are ready
+      TargetConfigControllerDegraded: "configmap/etcd-pod": Get "https://172.30.0.1:443/api/v1/namespaces/openshift-etcd/configmaps/etcd-pod": dial tcp 172.30.0.1:443: connect: connection refused
+      EtcdMembersDegraded: No unhealthy members found
+      StaticPodsDegraded: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-etcd/pods/etcd-vrutkovs-sno": dial tcp 172.30.0.1:443: connect: connection refused
+    reason: AsExpected
+    status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:09:41Z"
     message: 'NodeInstallerProgressing: 1 nodes are at revision 0; 0 nodes have achieved
