@@ -177,7 +177,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -191,7 +193,7 @@ metadata:
     kind: Deployment
     name: openshift-state-metrics
     uid: 373323be-884a-4a34-9949-250400051049
-  resourceVersion: "12480"
+  resourceVersion: "12486"
   uid: 73abad24-3cd8-4bcf-90ca-0533801ba413
 spec:
   replicas: 1
@@ -315,5 +317,6 @@ spec:
           name: metrics-client-ca
         name: metrics-client-ca
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
