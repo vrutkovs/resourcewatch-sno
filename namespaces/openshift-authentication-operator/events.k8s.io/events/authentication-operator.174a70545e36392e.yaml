@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:08:38Z"
-deprecatedLastTimestamp: "2023-03-08T12:08:38Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:54Z"
 deprecatedSource:
   component: cluster-authentication-operator-config-observer-configobserver
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-08T12:08:38Z"
+    time: "2023-03-08T12:08:54Z"
   name: authentication-operator.174a70545e36392e
   namespace: openshift-authentication-operator
-  resourceVersion: "4076"
+  resourceVersion: "4870"
   uid: a67e3831-f93b-4987-ba88-891ee897f3fb
 note: loginURL changed from  to https://api.vrutkovs.choomba.one:6443
 reason: ObserveAPIServerURL
