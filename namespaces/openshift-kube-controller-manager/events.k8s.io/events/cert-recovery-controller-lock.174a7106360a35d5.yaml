@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:21:22Z"
+deprecatedLastTimestamp: "2023-03-08T12:21:22Z"
+deprecatedSource:
+  component: cert-recovery-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:21:22Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:21:22Z"
+  name: cert-recovery-controller-lock.174a7106360a35d5
+  namespace: openshift-kube-controller-manager
+  resourceVersion: "13219"
+  uid: 5ee81763-cfdd-4acd-b5a8-737a15733dd5
+note: vrutkovs-sno_c548033e-1022-4dde-badb-31ced0705004 became leader
+reason: LeaderElection
+regarding:
+  apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  name: cert-recovery-controller-lock
+  namespace: openshift-kube-controller-manager
+  resourceVersion: "13217"
+  uid: 95cacd16-155f-475f-8230-170eac416827
+type: Normal
