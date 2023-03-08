@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "16292"
+  resourceVersion: "16300"
   uid: a64f0d57-1bdc-4d9f-a22b-c48a0ba1048f
 spec: {}
 status:
@@ -65,8 +65,8 @@ status:
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-08T12:25:55Z"
-    message: 'NodeCADaemonProgressing: The daemon set node-ca is updating node pods'
-    reason: NodeCADaemonProgressing
+    message: 'NodeCADaemonProgressing: The daemon set node-ca is deploying node pods'
+    reason: NodeCADaemonUnavailable
     status: "True"
     type: Progressing
   - lastTransitionTime: "2023-03-08T12:25:55Z"
