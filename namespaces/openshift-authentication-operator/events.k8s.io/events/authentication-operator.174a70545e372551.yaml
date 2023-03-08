@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:08:38Z"
-deprecatedLastTimestamp: "2023-03-08T12:08:38Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:54Z"
 deprecatedSource:
   component: cluster-authentication-operator-config-observer-configobserver
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-08T12:08:38Z"
+    time: "2023-03-08T12:08:54Z"
   name: authentication-operator.174a70545e372551
   namespace: openshift-authentication-operator
-  resourceVersion: "4077"
+  resourceVersion: "4874"
   uid: 0de9f0bb-c688-40fd-bf0b-afeecb7d8d8d
 note: AuditProfile changed from '%!s(<nil>)' to 'map[audit-log-format:[json] audit-log-maxbackup:[10]
   audit-log-maxsize:[100] audit-log-path:[/var/log/oauth-server/audit.log] audit-policy-file:[/var/run/configmaps/audit/audit.yaml]]'
