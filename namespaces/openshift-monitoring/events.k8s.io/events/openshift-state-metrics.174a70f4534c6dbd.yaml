@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:20:05Z"
+deprecatedLastTimestamp: "2023-03-08T12:20:05Z"
+deprecatedSource:
+  component: deployment-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:20:05Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:20:05Z"
+  name: openshift-state-metrics.174a70f4534c6dbd
+  namespace: openshift-monitoring
+  resourceVersion: "12463"
+  uid: cd74d51e-7290-49b9-990e-c8541f0a7565
+note: Scaled up replica set openshift-state-metrics-7f866c956b to 1
+reason: ScalingReplicaSet
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-state-metrics
+  namespace: openshift-monitoring
+  resourceVersion: "12453"
+  uid: 373323be-884a-4a34-9949-250400051049
+type: Normal
