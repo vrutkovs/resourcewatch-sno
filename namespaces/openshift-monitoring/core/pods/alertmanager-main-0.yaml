@@ -1,0 +1,842 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubectl.kubernetes.io/default-container: alertmanager
+    openshift.io/scc: nonroot
+  creationTimestamp: "2023-03-08T12:21:52Z"
+  generateName: alertmanager-main-
+  labels:
+    alertmanager: main
+    app.kubernetes.io/component: alert-router
+    app.kubernetes.io/instance: main
+    app.kubernetes.io/managed-by: prometheus-operator
+    app.kubernetes.io/name: alertmanager
+    app.kubernetes.io/part-of: openshift-monitoring
+    app.kubernetes.io/version: 0.25.0
+    controller-revision-hash: alertmanager-main-5b664d5f59
+    statefulset.kubernetes.io/pod-name: alertmanager-main-0
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/default-container: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:alertmanager: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:controller-revision-hash: {}
+          f:statefulset.kubernetes.io/pod-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"157b555d-b9f9-4bf6-8e9e-d13fe7c479d2"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"alertmanager"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"POD_IP"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9094,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":9094,"protocol":"UDP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/alertmanager"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/alertmanager/certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/alertmanager/config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/alertmanager/config_out"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/alertmanager/secrets/alertmanager-kube-rbac-proxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/alertmanager/secrets/alertmanager-kube-rbac-proxy-metric"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/alertmanager/secrets/alertmanager-main-proxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/alertmanager/secrets/alertmanager-main-tls"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/alertmanager/web_config/web-config.yaml"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+                f:subPath: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+          k:{"name":"alertmanager-proxy"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"HTTP_PROXY"}:
+                .: {}
+                f:name: {}
+              k:{"name":"HTTPS_PROXY"}:
+                .: {}
+                f:name: {}
+              k:{"name":"NO_PROXY"}:
+                .: {}
+                f:name: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9095,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/proxy/secrets"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"config-reloader"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"SHARD"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/alertmanager/config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/alertmanager/config_out"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/alertmanager/secrets/alertmanager-kube-rbac-proxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/alertmanager/secrets/alertmanager-kube-rbac-proxy-metric"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/alertmanager/secrets/alertmanager-main-proxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/alertmanager/secrets/alertmanager-main-tls"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+          k:{"name":"kube-rbac-proxy"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9092,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kube-rbac-proxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"kube-rbac-proxy-metric"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9097,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kube-rbac-proxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/tls/client"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+          k:{"name":"prom-label-proxy"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostname: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:fsGroup: {}
+          f:runAsNonRoot: {}
+          f:runAsUser: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:subdomain: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"alertmanager-main-db"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"alertmanager-trusted-ca-bundle"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:name: {}
+              f:optional: {}
+            f:name: {}
+          k:{"name":"config-out"}:
+            .: {}
+            f:emptyDir:
+              .: {}
+              f:medium: {}
+            f:name: {}
+          k:{"name":"config-volume"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"metrics-client-ca"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"secret-alertmanager-kube-rbac-proxy"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"secret-alertmanager-kube-rbac-proxy-metric"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"secret-alertmanager-main-proxy"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"secret-alertmanager-main-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"tls-assets"}:
+            .: {}
+            f:name: {}
+            f:projected:
+              .: {}
+              f:defaultMode: {}
+              f:sources: {}
+          k:{"name":"web-config"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:21:52Z"
+  name: alertmanager-main-0
+  namespace: openshift-monitoring
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: StatefulSet
+    name: alertmanager-main
+    uid: 157b555d-b9f9-4bf6-8e9e-d13fe7c479d2
+  resourceVersion: "13687"
+  uid: 71f9a3d0-635f-45d4-bc14-05e6d924068d
+spec:
+  containers:
+  - args:
+    - --config.file=/etc/alertmanager/config_out/alertmanager.env.yaml
+    - --storage.path=/alertmanager
+    - --data.retention=120h
+    - --cluster.listen-address=
+    - --web.listen-address=127.0.0.1:9093
+    - --web.route-prefix=/
+    - --cluster.peer=alertmanager-main-0.alertmanager-operated:9094
+    - --cluster.reconnect-timeout=5m
+    - --web.config.file=/etc/alertmanager/web_config/web-config.yaml
+    env:
+    - name: POD_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.podIP
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:aaa094ab3806e1688b381459841ace8bf528b4965f8791cb0353546a518ba543
+    imagePullPolicy: IfNotPresent
+    name: alertmanager
+    ports:
+    - containerPort: 9094
+      name: mesh-tcp
+      protocol: TCP
+    - containerPort: 9094
+      name: mesh-udp
+      protocol: UDP
+    resources:
+      requests:
+        cpu: 4m
+        memory: 40Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+      readOnlyRootFilesystem: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/alertmanager/config
+      name: config-volume
+    - mountPath: /etc/alertmanager/config_out
+      name: config-out
+      readOnly: true
+    - mountPath: /etc/alertmanager/certs
+      name: tls-assets
+      readOnly: true
+    - mountPath: /alertmanager
+      name: alertmanager-main-db
+    - mountPath: /etc/alertmanager/secrets/alertmanager-main-tls
+      name: secret-alertmanager-main-tls
+      readOnly: true
+    - mountPath: /etc/alertmanager/secrets/alertmanager-main-proxy
+      name: secret-alertmanager-main-proxy
+      readOnly: true
+    - mountPath: /etc/alertmanager/secrets/alertmanager-kube-rbac-proxy
+      name: secret-alertmanager-kube-rbac-proxy
+      readOnly: true
+    - mountPath: /etc/alertmanager/secrets/alertmanager-kube-rbac-proxy-metric
+      name: secret-alertmanager-kube-rbac-proxy-metric
+      readOnly: true
+    - mountPath: /etc/pki/ca-trust/extracted/pem/
+      name: alertmanager-trusted-ca-bundle
+      readOnly: true
+    - mountPath: /etc/alertmanager/web_config/web-config.yaml
+      name: web-config
+      readOnly: true
+      subPath: web-config.yaml
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-kt76t
+      readOnly: true
+  - args:
+    - --listen-address=localhost:8080
+    - --reload-url=http://localhost:9093/-/reload
+    - --config-file=/etc/alertmanager/config/alertmanager.yaml.gz
+    - --config-envsubst-file=/etc/alertmanager/config_out/alertmanager.env.yaml
+    - --watched-dir=/etc/alertmanager/secrets/alertmanager-main-tls
+    - --watched-dir=/etc/alertmanager/secrets/alertmanager-main-proxy
+    - --watched-dir=/etc/alertmanager/secrets/alertmanager-kube-rbac-proxy
+    - --watched-dir=/etc/alertmanager/secrets/alertmanager-kube-rbac-proxy-metric
+    command:
+    - /bin/prometheus-config-reloader
+    env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: SHARD
+      value: "-1"
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3c97acac3647a99a40d57710a0ec697458c400421730e1a676111beda7caf958
+    imagePullPolicy: IfNotPresent
+    name: config-reloader
+    resources:
+      requests:
+        cpu: 1m
+        memory: 10Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+      readOnlyRootFilesystem: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/alertmanager/config
+      name: config-volume
+      readOnly: true
+    - mountPath: /etc/alertmanager/config_out
+      name: config-out
+    - mountPath: /etc/alertmanager/secrets/alertmanager-main-tls
+      name: secret-alertmanager-main-tls
+      readOnly: true
+    - mountPath: /etc/alertmanager/secrets/alertmanager-main-proxy
+      name: secret-alertmanager-main-proxy
+      readOnly: true
+    - mountPath: /etc/alertmanager/secrets/alertmanager-kube-rbac-proxy
+      name: secret-alertmanager-kube-rbac-proxy
+      readOnly: true
+    - mountPath: /etc/alertmanager/secrets/alertmanager-kube-rbac-proxy-metric
+      name: secret-alertmanager-kube-rbac-proxy-metric
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-kt76t
+      readOnly: true
+  - args:
+    - -provider=openshift
+    - -https-address=:9095
+    - -http-address=
+    - -email-domain=*
+    - -upstream=http://localhost:9093
+    - '-openshift-sar=[{"resource": "namespaces", "verb": "get"}, {"resource": "alertmanagers",
+      "resourceAPIGroup": "monitoring.coreos.com", "namespace": "openshift-monitoring",
+      "verb": "patch", "resourceName": "non-existant"}]'
+    - '-openshift-delegate-urls={"/": {"resource": "namespaces", "verb": "get"}, "/":
+      {"resource":"alertmanagers", "group": "monitoring.coreos.com", "namespace":
+      "openshift-monitoring", "verb": "patch", "name": "non-existant"}}'
+    - -tls-cert=/etc/tls/private/tls.crt
+    - -tls-key=/etc/tls/private/tls.key
+    - -client-secret-file=/var/run/secrets/kubernetes.io/serviceaccount/token
+    - -cookie-secret-file=/etc/proxy/secrets/session_secret
+    - -openshift-service-account=alertmanager-main
+    - -openshift-ca=/etc/pki/tls/cert.pem
+    - -openshift-ca=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+    env:
+    - name: HTTP_PROXY
+    - name: HTTPS_PROXY
+    - name: NO_PROXY
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5925f28a7682ef5cb91d4a3e3c9f6877ccc339ddb3533ad6376771314a79cb5a
+    imagePullPolicy: IfNotPresent
+    name: alertmanager-proxy
+    ports:
+    - containerPort: 9095
+      name: web
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 1m
+        memory: 20Mi
+    securityContext:
+      capabilities:
+        drop:
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: secret-alertmanager-main-tls
+    - mountPath: /etc/proxy/secrets
+      name: secret-alertmanager-main-proxy
+    - mountPath: /etc/pki/ca-trust/extracted/pem/
+      name: alertmanager-trusted-ca-bundle
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-kt76t
+      readOnly: true
+  - args:
+    - --secure-listen-address=0.0.0.0:9092
+    - --upstream=http://127.0.0.1:9096
+    - --config-file=/etc/kube-rbac-proxy/config.yaml
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - --logtostderr=true
+    - --tls-min-version=VersionTLS12
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy
+    ports:
+    - containerPort: 9092
+      name: tenancy
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 1m
+        memory: 15Mi
+    securityContext:
+      capabilities:
+        drop:
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kube-rbac-proxy
+      name: secret-alertmanager-kube-rbac-proxy
+    - mountPath: /etc/tls/private
+      name: secret-alertmanager-main-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-kt76t
+      readOnly: true
+  - args:
+    - --secure-listen-address=0.0.0.0:9097
+    - --upstream=http://127.0.0.1:9093
+    - --config-file=/etc/kube-rbac-proxy/config.yaml
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - --client-ca-file=/etc/tls/client/client-ca.crt
+    - --logtostderr=true
+    - --allow-paths=/metrics
+    - --tls-min-version=VersionTLS12
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy-metric
+    ports:
+    - containerPort: 9097
+      name: metrics
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 1m
+        memory: 15Mi
+    securityContext:
+      capabilities:
+        drop:
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kube-rbac-proxy
+      name: secret-alertmanager-kube-rbac-proxy-metric
+      readOnly: true
+    - mountPath: /etc/tls/private
+      name: secret-alertmanager-main-tls
+      readOnly: true
+    - mountPath: /etc/tls/client
+      name: metrics-client-ca
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-kt76t
+      readOnly: true
+  - args:
+    - --insecure-listen-address=127.0.0.1:9096
+    - --upstream=http://127.0.0.1:9093
+    - --label=namespace
+    - --error-on-replace
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9a2f06206b2a3ff6fdd4d4d3a9b4b6ad43ec595fa8e765c47f5565633ba27ecf
+    imagePullPolicy: IfNotPresent
+    name: prom-label-proxy
+    resources:
+      requests:
+        cpu: 1m
+        memory: 20Mi
+    securityContext:
+      capabilities:
+        drop:
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-kt76t
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostname: alertmanager-main-0
+  imagePullSecrets:
+  - name: alertmanager-main-dockercfg-4pvf8
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 65534
+    runAsNonRoot: true
+    runAsUser: 65534
+    seLinuxOptions:
+      level: s0:c21,c10
+  serviceAccount: alertmanager-main
+  serviceAccountName: alertmanager-main
+  subdomain: alertmanager-operated
+  terminationGracePeriodSeconds: 120
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: config-volume
+    secret:
+      defaultMode: 420
+      secretName: alertmanager-main-generated
+  - name: tls-assets
+    projected:
+      defaultMode: 420
+      sources:
+      - secret:
+          name: alertmanager-main-tls-assets-0
+  - emptyDir:
+      medium: Memory
+    name: config-out
+  - name: secret-alertmanager-main-tls
+    secret:
+      defaultMode: 420
+      secretName: alertmanager-main-tls
+  - name: secret-alertmanager-main-proxy
+    secret:
+      defaultMode: 420
+      secretName: alertmanager-main-proxy
+  - name: secret-alertmanager-kube-rbac-proxy
+    secret:
+      defaultMode: 420
+      secretName: alertmanager-kube-rbac-proxy
+  - name: secret-alertmanager-kube-rbac-proxy-metric
+    secret:
+      defaultMode: 420
+      secretName: alertmanager-kube-rbac-proxy-metric
+  - name: web-config
+    secret:
+      defaultMode: 420
+      secretName: alertmanager-main-web-config
+  - emptyDir: {}
+    name: alertmanager-main-db
+  - configMap:
+      defaultMode: 420
+      name: metrics-client-ca
+    name: metrics-client-ca
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: ca-bundle.crt
+        path: tls-ca-bundle.pem
+      name: alertmanager-trusted-ca-bundle-c7nmestil7q08
+      optional: true
+    name: alertmanager-trusted-ca-bundle
+  - name: kube-api-access-kt76t
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  phase: Pending
+  qosClass: Burstable
