@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:19:39Z"
+deprecatedLastTimestamp: "2023-03-08T12:19:39Z"
+deprecatedSource:
+  component: multus
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:19:39Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: multus
+    operation: Update
+    time: "2023-03-08T12:19:39Z"
+  name: marketplace-operator-78496b8dd8-xzd6t.174a70ee3af48373
+  namespace: openshift-marketplace
+  resourceVersion: "11481"
+  uid: 116dc793-aab7-4e9e-bdda-56f0016ac7e9
+note: Add eth0 [10.128.0.9/23] from ovn-kubernetes
+reason: AddedInterface
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: marketplace-operator-78496b8dd8-xzd6t
+  namespace: openshift-marketplace
+  resourceVersion: "3180"
+  uid: 45744ad7-0fa7-408a-8a8e-8f293004749e
+type: Normal
