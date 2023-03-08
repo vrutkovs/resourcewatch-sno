@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:01:22Z"
+deprecatedLastTimestamp: "2023-03-08T12:01:22Z"
+deprecatedSource:
+  component: deployment-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:01:22Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:01:22Z"
+  name: cluster-monitoring-operator.174a6feee538488a
+  namespace: openshift-monitoring
+  resourceVersion: "1850"
+  uid: b6da3927-5aaf-4b23-87e2-ee11dfd5434f
+note: Scaled up replica set cluster-monitoring-operator-785dbb84c4 to 1
+reason: ScalingReplicaSet
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: cluster-monitoring-operator
+  namespace: openshift-monitoring
+  resourceVersion: "1847"
+  uid: 0227b773-3a3b-42b1-b3fb-56a3b6ae8996
+type: Normal
