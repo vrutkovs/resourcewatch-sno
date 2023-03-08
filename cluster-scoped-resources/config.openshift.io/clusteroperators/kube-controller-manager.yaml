@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:19:43Z"
+    time: "2023-03-08T12:19:50Z"
   name: kube-controller-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,14 +52,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "11535"
+  resourceVersion: "11701"
   uid: ae28a46b-58e3-46e0-8654-d3f4cf5ab63c
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:11:40Z"
     message: "GarbageCollectorDegraded: error fetching rules: Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\":
-      dial tcp: lookup thanos-querier.openshift-monitoring.svc: i/o timeout\nNodeInstallerDegraded:
+      dial tcp: lookup thanos-querier.openshift-monitoring.svc on 172.30.0.10:53:
+      read udp 10.128.0.8:51575->172.30.0.10:53: read: connection refused\nNodeInstallerDegraded:
       1 nodes are failing on revision 6:\nNodeInstallerDegraded: installer: cy-controller-config\",\nNodeInstallerDegraded:
       \  (string) (len=29) \"controller-manager-kubeconfig\",\nNodeInstallerDegraded:
       \  (string) (len=38) \"kube-controller-cert-syncer-kubeconfig\",\nNodeInstallerDegraded:
