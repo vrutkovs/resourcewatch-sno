@@ -583,6 +583,7 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -593,7 +594,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:06:59Z"
+    time: "2023-03-08T12:08:11Z"
   name: ovnkube-master-hf56q
   namespace: openshift-ovn-kubernetes
   ownerReferences:
@@ -603,7 +604,7 @@ metadata:
     kind: DaemonSet
     name: ovnkube-master
     uid: 3028f449-b801-40d3-ab68-6b3606141543
-  resourceVersion: "2790"
+  resourceVersion: "3061"
   uid: 2fb62bbd-46b6-4a90-bda4-a5303cf8406e
 spec:
   affinity:
@@ -1482,15 +1483,13 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:06:59Z"
-    message: 'containers with unready status: [northd nbdb kube-rbac-proxy sbdb ovnkube-master
-      ovn-dbchecker]'
+    message: 'containers with unready status: [nbdb sbdb]'
     reason: ContainersNotReady
     status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:06:59Z"
-    message: 'containers with unready status: [northd nbdb kube-rbac-proxy sbdb ovnkube-master
-      ovn-dbchecker]'
+    message: 'containers with unready status: [nbdb sbdb]'
     reason: ContainersNotReady
     status: "False"
     type: ContainersReady
@@ -1499,68 +1498,74 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
-    imageID: ""
+  - containerID: cri-o://f3498fb4f8c45f149d0b38c622b242ede7d63f025faf798a754668c058db4949
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
     lastState: {}
     name: kube-rbac-proxy
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:07:38Z"
+  - containerID: cri-o://6fe8f0c17b7c4d5ba4a67a196326044652d6cbb9f0514bd17c856af6ec0b49b3
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
     lastState: {}
     name: nbdb
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:07:06Z"
+  - containerID: cri-o://046e2c38eeefc89488e04036268177cda832c026b1c127dddb5f84c151542d28
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
     lastState: {}
     name: northd
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:07:06Z"
+  - containerID: cri-o://29ba4d7292aa1e6d4d704839cc7b2cb62ada9a9aff76a8c88ea5fd0dc4e6096d
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
     lastState: {}
     name: ovn-dbchecker
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:08:11Z"
+  - containerID: cri-o://921d2b1386aa8852d1f64ba2698af451885d879765ef0b338335e8dd121bd7cc
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
     lastState: {}
     name: ovnkube-master
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:08:11Z"
+  - containerID: cri-o://5e3f636f418a0e72b1d0af01b8df74994e234cea8c7a5b5146da042ab4225335
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
     lastState: {}
     name: sbdb
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-08T12:07:39Z"
   hostIP: 10.0.130.68
-  phase: Pending
+  phase: Running
   podIP: 10.0.130.68
   podIPs:
   - ip: 10.0.130.68
