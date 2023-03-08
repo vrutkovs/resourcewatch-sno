@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:09:47Z"
-deprecatedLastTimestamp: "2023-03-08T12:09:47Z"
+deprecatedLastTimestamp: "2023-03-08T12:10:00Z"
 deprecatedSource:
   component: replicaset-controller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-08T12:09:47Z"
+    time: "2023-03-08T12:10:00Z"
   name: controller-manager-677c459fc9.174a706451368d78
   namespace: openshift-controller-manager
-  resourceVersion: "5694"
+  resourceVersion: "5846"
   uid: 8358c83e-99a8-4b25-b509-b5de5b072b1c
 note: 'Error creating: pods "controller-manager-677c459fc9-" is forbidden: error fetching
   namespace "openshift-controller-manager": unable to find annotation openshift.io/sa.scc.uid-range'
