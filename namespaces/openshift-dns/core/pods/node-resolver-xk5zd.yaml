@@ -101,8 +101,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -115,12 +113,11 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -131,7 +128,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:19:55Z"
+    time: "2023-03-08T12:20:00Z"
   name: node-resolver-xk5zd
   namespace: openshift-dns
   ownerReferences:
@@ -141,7 +138,7 @@ metadata:
     kind: DaemonSet
     name: node-resolver
     uid: 2de761ea-9d60-4d2f-86d6-ed77b20ff944
-  resourceVersion: "11952"
+  resourceVersion: "12223"
   uid: 2dd07a2a-7025-48ea-8c5c-838bc0f77fc2
 spec:
   affinity:
@@ -300,34 +297,31 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:19:55Z"
-    message: 'containers with unready status: [dns-node-resolver]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:20:00Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:19:55Z"
-    message: 'containers with unready status: [dns-node-resolver]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:20:00Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:19:55Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9af4bd001d30fd00d89c5f199b970b820240d0959312c2fb8ea82597c8da24bb
-    imageID: ""
+  - containerID: cri-o://01313c8ea15343345b600124f43263e937b221293a283b621fdcc71d6fb7635f
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9af4bd001d30fd00d89c5f199b970b820240d0959312c2fb8ea82597c8da24bb
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9af4bd001d30fd00d89c5f199b970b820240d0959312c2fb8ea82597c8da24bb
     lastState: {}
     name: dns-node-resolver
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-08T12:19:59Z"
   hostIP: 10.0.130.68
-  phase: Pending
+  phase: Running
   podIP: 10.0.130.68
   podIPs:
   - ip: 10.0.130.68
