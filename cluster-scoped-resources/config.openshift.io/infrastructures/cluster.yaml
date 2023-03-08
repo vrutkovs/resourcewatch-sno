@@ -18,11 +18,40 @@ metadata:
     manager: cluster-bootstrap
     operation: Update
     time: "2023-03-08T12:00:17Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:apiServerInternalURI: {}
+        f:apiServerURL: {}
+        f:controlPlaneTopology: {}
+        f:etcdDiscoveryDomain: {}
+        f:infrastructureName: {}
+        f:infrastructureTopology: {}
+        f:platform: {}
+        f:platformStatus:
+          .: {}
+          f:type: {}
+    manager: cluster-bootstrap
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:00:17Z"
   name: cluster
-  resourceVersion: "536"
+  resourceVersion: "537"
   uid: 2d91c4e5-2c20-4a04-9d37-a8aeb53520e9
 spec:
   cloudConfig:
     name: ""
   platformSpec:
+    type: None
+status:
+  apiServerInternalURI: https://api-int.vrutkovs.choomba.one:6443
+  apiServerURL: https://api.vrutkovs.choomba.one:6443
+  controlPlaneTopology: SingleReplica
+  etcdDiscoveryDomain: ""
+  infrastructureName: vrutkovs-q974t
+  infrastructureTopology: SingleReplica
+  platform: None
+  platformStatus:
     type: None
