@@ -10,7 +10,7 @@ metadata:
     console.openshift.io/proxy-config-version: "555"
     console.openshift.io/service-ca-config-version: "16914"
     console.openshift.io/trusted-ca-config-version: "16919"
-    deployment.kubernetes.io/revision: "1"
+    deployment.kubernetes.io/revision: "2"
     operator.openshift.io/spec-hash: c0dd87c616f0afbf9c46e19bea9f962ffd301016e42143c3ca2a987675695080
   creationTimestamp: "2023-03-08T12:26:08Z"
   generation: 2
@@ -18,39 +18,6 @@ metadata:
     app: console
     component: ui
   managedFields:
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:deployment.kubernetes.io/revision: {}
-      f:status:
-        f:conditions:
-          .: {}
-          k:{"type":"Available"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Progressing"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:observedGeneration: {}
-        f:replicas: {}
-        f:unavailableReplicas: {}
-        f:updatedReplicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:26:09Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -254,9 +221,42 @@ metadata:
     manager: console
     operation: Update
     time: "2023-03-08T12:26:13Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:replicas: {}
+        f:unavailableReplicas: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:26:13Z"
   name: console
   namespace: openshift-console
-  resourceVersion: "17104"
+  resourceVersion: "17108"
   uid: 8a031ddc-cef6-4b34-a5d4-692f8a8e2198
 spec:
   progressDeadlineSeconds: 600
@@ -417,9 +417,9 @@ status:
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-08T12:26:08Z"
-    lastUpdateTime: "2023-03-08T12:26:09Z"
-    message: ReplicaSet "console-5bf6c4ff6b" is progressing.
-    reason: ReplicaSetUpdated
+    lastUpdateTime: "2023-03-08T12:26:13Z"
+    message: Created new replica set "console-5d687bf7f9"
+    reason: NewReplicaSetCreated
     status: "True"
     type: Progressing
   observedGeneration: 1
