@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 6
+deprecatedCount: 7
 deprecatedFirstTimestamp: "2023-03-08T12:01:09Z"
 deprecatedLastTimestamp: "2023-03-08T12:01:10Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-08T12:01:10Z"
   name: openshift-controller-manager-operator-69f8746cfb.174a6febdc32a9e6
   namespace: openshift-controller-manager-operator
-  resourceVersion: "1545"
+  resourceVersion: "1547"
   uid: 86a23c81-700f-4053-9f31-3b8ec7e18a40
 note: 'Error creating: pods "openshift-controller-manager-operator-69f8746cfb-" is
   forbidden: autoscaling.openshift.io/ManagementCPUsOverride the cluster does not
