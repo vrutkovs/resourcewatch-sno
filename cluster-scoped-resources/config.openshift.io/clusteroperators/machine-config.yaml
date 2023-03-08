@@ -39,11 +39,14 @@ metadata:
     fieldsV1:
       f:status:
         f:conditions: {}
-        f:extension: {}
+        f:extension:
+          .: {}
+          f:master: {}
+          f:worker: {}
     manager: machine-config-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:08:26Z"
+    time: "2023-03-08T12:18:27Z"
   name: machine-config
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -51,16 +54,26 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "3245"
+  resourceVersion: "10998"
   uid: e501aaa8-d09b-49d1-8151-5afbbc84111e
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:08:26Z"
-    message: Working towards 4.13.0-ec.4
+    message: Unable to apply 4.13.0-ec.4
     status: "True"
     type: Progressing
-  extension: {}
+  - lastTransitionTime: "2023-03-08T12:18:27Z"
+    message: 'Unable to apply 4.13.0-ec.4: failed to apply machine config daemon manifests:
+      error during waitForDaemonsetRollout: [timed out waiting for the condition,
+      daemonset machine-config-daemon is not ready. status: (desired: 1, updated:
+      1, ready: 0, unavailable: 1)]'
+    reason: MachineConfigDaemonFailed
+    status: "True"
+    type: Degraded
+  extension:
+    master: <unknown>
+    worker: <unknown>
   relatedObjects:
   - group: ""
     name: openshift-machine-config-operator
