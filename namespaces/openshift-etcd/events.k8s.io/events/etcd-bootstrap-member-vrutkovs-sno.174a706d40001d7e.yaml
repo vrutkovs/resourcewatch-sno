@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:10:25Z"
+deprecatedLastTimestamp: "2023-03-08T12:10:25Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:10:25Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:10:25Z"
+  name: etcd-bootstrap-member-vrutkovs-sno.174a706d40001d7e
+  namespace: openshift-etcd
+  resourceVersion: "6091"
+  uid: d0ae2add-4c41-4269-b34e-6cde009571e5
+note: Stopping container etcdctl
+reason: Killing
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{etcdctl}
+  kind: Pod
+  name: etcd-bootstrap-member-vrutkovs-sno
+  namespace: openshift-etcd
+  uid: 2ffcfe3d95865161175602b5c63f097c
+type: Normal
