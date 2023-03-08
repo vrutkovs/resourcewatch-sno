@@ -89,15 +89,12 @@ metadata:
     subresource: status
     time: "2023-03-08T12:08:46Z"
   name: vrutkovs-sno
-  resourceVersion: "4613"
+  resourceVersion: "4616"
   uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
 spec:
   taints:
   - effect: NoSchedule
     key: node-role.kubernetes.io/master
-  - effect: NoSchedule
-    key: node.kubernetes.io/not-ready
-    timeAdded: "2023-03-08T12:08:46Z"
 status:
   addresses:
   - address: 10.0.130.68
