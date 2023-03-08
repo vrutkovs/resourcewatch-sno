@@ -22,6 +22,14 @@ metadata:
       f:status:
         f:conditions:
           .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
           k:{"type":"Progressing"}:
             .: {}
             f:lastTransitionTime: {}
@@ -30,6 +38,8 @@ metadata:
             f:reason: {}
             f:status: {}
             f:type: {}
+        f:observedGeneration: {}
+        f:unavailableReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -170,7 +180,7 @@ metadata:
     time: "2023-03-08T12:20:01Z"
   name: prometheus-operator
   namespace: openshift-monitoring
-  resourceVersion: "12283"
+  resourceVersion: "12286"
   uid: df3572d8-b004-4cce-ad0a-f95f7d5164ac
 spec:
   progressDeadlineSeconds: 600
@@ -297,3 +307,11 @@ status:
     reason: NewReplicaSetCreated
     status: "True"
     type: Progressing
+  - lastTransitionTime: "2023-03-08T12:20:01Z"
+    lastUpdateTime: "2023-03-08T12:20:01Z"
+    message: Deployment does not have minimum availability.
+    reason: MinimumReplicasUnavailable
+    status: "False"
+    type: Available
+  observedGeneration: 1
+  unavailableReplicas: 1
