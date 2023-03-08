@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.42/23"],"mac_address":"0a:58:0a:80:00:2a","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.42/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.42"
+          ],
+          "mac": "0a:58:0a:80:00:2a",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-08T12:17:48Z"
@@ -137,6 +148,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-08T12:17:48Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:17:49Z"
   name: service-ca-787d97d7f8-knmt2
   namespace: openshift-service-ca
   ownerReferences:
@@ -146,7 +167,7 @@ metadata:
     kind: ReplicaSet
     name: service-ca-787d97d7f8
     uid: b7d3b186-5e32-48ee-9005-855d193a4233
-  resourceVersion: "8038"
+  resourceVersion: "8123"
   uid: b0d3bad7-374e-45b3-ad3a-f95eeda43a01
 spec:
   containers:
