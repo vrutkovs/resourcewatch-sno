@@ -183,7 +183,7 @@ metadata:
     kind: ReplicaSet
     name: ingress-operator-98bd944c
     uid: ccd3ef56-cf18-48dc-bbe4-dae40b86fa74
-  resourceVersion: "2415"
+  resourceVersion: "3130"
   uid: f37d5663-1b26-49ed-a3e9-7a891785ee00
 spec:
   containers:
@@ -270,6 +270,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     kubernetes.io/os: linux
     node-role.kubernetes.io/master: ""
@@ -349,11 +350,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:06:33Z"
-    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
-      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
-    reason: Unschedulable
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:08:24Z"
+    status: "True"
     type: PodScheduled
   phase: Pending
   qosClass: Burstable
