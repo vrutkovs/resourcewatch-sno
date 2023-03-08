@@ -110,13 +110,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:08:34Z"
+    time: "2023-03-08T12:19:55Z"
   name: csi-snapshot-webhook-6dfbbc59c5
   namespace: openshift-cluster-storage-operator
   ownerReferences:
@@ -126,7 +128,7 @@ metadata:
     kind: Deployment
     name: csi-snapshot-webhook
     uid: 7cae78ee-e422-4522-88bd-7930f241cf91
-  resourceVersion: "3661"
+  resourceVersion: "11887"
   uid: 0ee38d18-b3e8-400b-bda6-e3dd07180cbd
 spec:
   replicas: 1
@@ -208,6 +210,8 @@ spec:
           defaultMode: 420
           secretName: csi-snapshot-webhook-secret
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
