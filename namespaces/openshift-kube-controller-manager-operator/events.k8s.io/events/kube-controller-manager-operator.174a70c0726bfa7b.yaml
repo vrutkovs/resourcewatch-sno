@@ -1,0 +1,95 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:16:23Z"
+deprecatedLastTimestamp: "2023-03-08T12:16:23Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-status-controller-statussyncer_kube-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:16:23Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-08T12:16:23Z"
+  name: kube-controller-manager-operator.174a70c0726bfa7b
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "7474"
+  uid: cacb1192-02fc-4527-a72d-c85da1dda57f
+note: 'Status for clusteroperator/kube-controller-manager changed: Degraded message
+  changed from "GarbageCollectorDegraded: error fetching rules: Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\":
+  dial tcp: lookup thanos-querier.openshift-monitoring.svc: i/o timeout" to "GarbageCollectorDegraded:
+  error fetching rules: Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\":
+  dial tcp: lookup thanos-querier.openshift-monitoring.svc: i/o timeout\nStaticPodsDegraded:
+  pod/kube-controller-manager-vrutkovs-sno container \"cluster-policy-controller\"
+  is terminated: Completed: \nStaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno
+  container \"kube-controller-manager\" is terminated: Error: 0308 12:15:30.791362       1
+  controllermanager.go:674] Started \"ttl-after-finished\"\nStaticPodsDegraded: I0308
+  12:15:30.791405       1 controllermanager.go:645] Starting \"persistentvolume-expander\"\nStaticPodsDegraded:
+  I0308 12:15:30.791386       1 ttlafterfinished_controller.go:104] Starting TTL after
+  finished controller\nStaticPodsDegraded: I0308 12:15:30.791453       1 shared_informer.go:273]
+  Waiting for caches to sync for TTL after finished\nStaticPodsDegraded: I0308 12:15:30.792854       1
+  plugins.go:646] \"Loaded volume plugin\" pluginName=\"kubernetes.io/azure-disk\"\nStaticPodsDegraded:
+  I0308 12:15:30.792869       1 plugins.go:646] \"Loaded volume plugin\" pluginName=\"kubernetes.io/vsphere-volume\"\nStaticPodsDegraded:
+  I0308 12:15:30.792884       1 plugins.go:646] \"Loaded volume plugin\" pluginName=\"kubernetes.io/portworx-volume\"\nStaticPodsDegraded:
+  I0308 12:15:30.792891       1 plugins.go:646] \"Loaded volume plugin\" pluginName=\"kubernetes.io/rbd\"\nStaticPodsDegraded:
+  I0308 12:15:30.792898       1 plugins.go:646] \"Loaded volume plugin\" pluginName=\"kubernetes.io/aws-ebs\"\nStaticPodsDegraded:
+  I0308 12:15:30.792905       1 plugins.go:646] \"Loaded volume plugin\" pluginName=\"kubernetes.io/gce-pd\"\nStaticPodsDegraded:
+  I0308 12:15:30.792912       1 plugins.go:646] \"Loaded volume plugin\" pluginName=\"kubernetes.io/azure-file\"\nStaticPodsDegraded:
+  I0308 12:15:30.792919       1 plugins.go:646] \"Loaded volume plugin\" pluginName=\"kubernetes.io/fc\"\nStaticPodsDegraded:
+  I0308 12:15:30.793026       1 controllermanager.go:674] Started \"persistentvolume-expander\"\nStaticPodsDegraded:
+  I0308 12:15:30.793038       1 controllermanager.go:645] Starting \"namespace\"\nStaticPodsDegraded:
+  I0308 12:15:30.793048       1 expand_controller.go:340] Starting expand controller\nStaticPodsDegraded:
+  I0308 12:15:30.793058       1 shared_informer.go:273] Waiting for caches to sync
+  for expand\nStaticPodsDegraded: I0308 12:15:30.874185       1 shared_informer.go:280]
+  Caches are synced for tokens\nStaticPodsDegraded: E0308 12:16:20.829572       1
+  namespaced_resources_deleter.go:162] unable to get all supported resources from
+  server: the server has received too many requests and has asked us to try again
+  later\nStaticPodsDegraded: F0308 12:16:20.829587       1 namespaced_resources_deleter.go:165]
+  Unable to get any supported resources from server: the server has received too many
+  requests and has asked us to try again later\nStaticPodsDegraded: \nStaticPodsDegraded:
+  pod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager-cert-syncer\"
+  is terminated: Error: troller-manager/configmaps?limit=500&resourceVersion=0\":
+  x509: certificate signed by unknown authority\nStaticPodsDegraded: E0308 12:16:13.460253       1
+  reflector.go:140] k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169: Failed
+  to watch *v1.ConfigMap: failed to list *v1.ConfigMap: Get \"https://localhost:6443/api/v1/namespaces/openshift-kube-controller-manager/configmaps?limit=500&resourceVersion=0\":
+  x509: certificate signed by unknown authority\nStaticPodsDegraded: E0308 12:16:14.742498       1
+  event.go:276] Unable to write event: ''&v1.Event{TypeMeta:v1.TypeMeta{Kind:\"\",
+  APIVersion:\"\"}, ObjectMeta:v1.ObjectMeta{Name:\"kube-controller-manager-vrutkovs-sno.174a70b0200f07b7\",
+  GenerateName:\"\", Namespace:\"openshift-kube-controller-manager\", SelfLink:\"\",
+  UID:\"\", ResourceVersion:\"\", Generation:0, CreationTimestamp:time.Date(1, time.January,
+  1, 0, 0, 0, 0, time.UTC), DeletionTimestamp:<nil>, DeletionGracePeriodSeconds:(*int64)(nil),
+  Labels:map[string]string(nil), Annotations:map[string]string(nil), OwnerReferences:[]v1.OwnerReference(nil),
+  Finalizers:[]string(nil), ManagedFields:[]v1.ManagedFieldsEntry(nil)}, InvolvedObject:v1.ObjectReference{Kind:\"Pod\",
+  Namespace:\"openshift-kube-controller-manager\", Name:\"kube-controller-manager-vrutkovs-sno\",
+  UID:\"\", APIVersion:\"v1\", ResourceVersion:\"\", FieldPath:\"\"}, Reason:\"FastControllerResync\",
+  Message:\"Controller \\\"CertSyncController\\\" resync interval is set to 0s which
+  might lead to client request throttling\", Source:v1.EventSource{Component:\"cert-syncer-certsynccontroller\",
+  Host:\"\"}, FirstTimestamp:time.Date(2023, time.March, 8, 12, 15, 12, 903342007,
+  time.Local), LastTimestamp:time.Date(2023, time.March, 8, 12, 15, 12, 903342007,
+  time.Local), Count:1, Type:\"Warning\", EventTime:time.Date(1, time.January, 1,
+  0, 0, 0, 0, time.UTC), Series:(*v1.EventSeries)(nil), Action:\"\", Related:(*v1.ObjectReference)(nil),
+  ReportingController:\"\", ReportingInstance:\"\"}'': ''Post \"https://localhost:6443/api/v1/namespaces/openshift-kube-controller-manager/events\":
+  x509: certificate signed by unknown authority''(may retry after sleeping)\nStaticPodsDegraded:
+  pod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager-recovery-controller\"
+  is terminated: Completed: "'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: 5df04b75-b8db-486d-812b-be3794a10710
+type: Normal
