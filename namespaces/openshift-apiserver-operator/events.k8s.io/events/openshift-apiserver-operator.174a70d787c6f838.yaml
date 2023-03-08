@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:18:02Z"
+deprecatedLastTimestamp: "2023-03-08T12:18:02Z"
+deprecatedSource:
+  component: openshift-apiserver-operator-status-controller-statussyncer_openshift-apiserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:18:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2023-03-08T12:18:02Z"
+  name: openshift-apiserver-operator.174a70d787c6f838
+  namespace: openshift-apiserver-operator
+  resourceVersion: "9044"
+  uid: 38bcd467-b472-4e44-9f13-86bf8d921b9e
+note: 'Status for clusteroperator/openshift-apiserver changed: Available message changed
+  from "APIServicesAvailable: PreconditionNotReady" to "APIServicesAvailable: \"security.openshift.io.v1\"
+  is not ready: an attempt failed with statusCode = 503, err = the server is currently
+  unable to handle the request\nAPIServicesAvailable: \"template.openshift.io.v1\"
+  is not ready: an attempt failed with statusCode = 404, err = the server could not
+  find the requested resource"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-apiserver-operator
+  namespace: openshift-apiserver-operator
+  uid: 9a0bfab6-0f01-4cc5-b5e3-bffab49028c1
+type: Normal
