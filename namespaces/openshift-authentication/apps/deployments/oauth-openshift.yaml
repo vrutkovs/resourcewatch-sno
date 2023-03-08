@@ -279,6 +279,7 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -298,16 +299,16 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:21:52Z"
+    time: "2023-03-08T12:22:28Z"
   name: oauth-openshift
   namespace: openshift-authentication
-  resourceVersion: "13760"
+  resourceVersion: "14373"
   uid: e7557177-2d74-4c4d-9713-9102546c56ef
 spec:
   progressDeadlineSeconds: 600
@@ -513,6 +514,7 @@ spec:
           optional: true
         name: v4-0-config-system-trusted-ca-bundle
 status:
+  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-03-08T12:21:52Z"
     lastUpdateTime: "2023-03-08T12:21:52Z"
@@ -521,12 +523,12 @@ status:
     status: "True"
     type: Available
   - lastTransitionTime: "2023-03-08T12:21:52Z"
-    lastUpdateTime: "2023-03-08T12:21:52Z"
-    message: ReplicaSet "oauth-openshift-5b87dcb5d7" is progressing.
-    reason: ReplicaSetUpdated
+    lastUpdateTime: "2023-03-08T12:22:28Z"
+    message: ReplicaSet "oauth-openshift-5b87dcb5d7" has successfully progressed.
+    reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
