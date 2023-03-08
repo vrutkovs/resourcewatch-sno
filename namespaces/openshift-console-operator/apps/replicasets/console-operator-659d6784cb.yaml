@@ -240,7 +240,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -254,7 +256,7 @@ metadata:
     kind: Deployment
     name: console-operator
     uid: cd6675f2-37d9-47c1-ab17-048b428d3cd8
-  resourceVersion: "15963"
+  resourceVersion: "15969"
   uid: 85ea6bec-acc2-4bf1-8442-d424d3648de8
 spec:
   replicas: 1
@@ -422,5 +424,6 @@ spec:
           optional: true
           secretName: webhook-serving-cert
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
