@@ -316,8 +316,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -330,8 +328,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -347,7 +343,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:26:41Z"
+    time: "2023-03-08T12:26:42Z"
   name: oauth-openshift-546b8b8655-v64b8
   namespace: openshift-authentication
   ownerReferences:
@@ -357,7 +353,7 @@ metadata:
     kind: ReplicaSet
     name: oauth-openshift-546b8b8655
     uid: ed9a5ba0-ca67-4023-8298-6ba59774ad05
-  resourceVersion: "17522"
+  resourceVersion: "17531"
   uid: 81092f53-f0b2-4347-a380-56cb7105b327
 spec:
   affinity:
@@ -580,16 +576,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:26:39Z"
-    message: 'containers with unready status: [oauth-openshift]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:26:42Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:26:39Z"
-    message: 'containers with unready status: [oauth-openshift]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:26:42Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:26:39Z"
@@ -601,7 +593,7 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:bb61838db60945373b49b1a0885d3404c87e06bbb6c7c19bc19402acf37349ff
     lastState: {}
     name: oauth-openshift
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
