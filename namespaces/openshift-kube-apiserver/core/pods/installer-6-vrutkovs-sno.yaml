@@ -135,6 +135,16 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:22:05Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           .: {}
@@ -142,12 +152,14 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"PodScheduled"}:
@@ -160,6 +172,7 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -175,17 +188,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:22:05Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.v1.cni.cncf.io/network-status: {}
-    manager: multus
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:22:05Z"
+    time: "2023-03-08T12:23:17Z"
   name: installer-6-vrutkovs-sno
   namespace: openshift-kube-apiserver
   ownerReferences:
@@ -193,7 +196,7 @@ metadata:
     kind: ConfigMap
     name: revision-status-6
     uid: 5ce28385-10ff-4a9f-b7fa-eeb729e0f187
-  resourceVersion: "14227"
+  resourceVersion: "14641"
   uid: d1832f5c-fe38-4fff-ba00-8a9a79e88e46
 spec:
   automountServiceAccountToken: false
@@ -333,15 +336,18 @@ status:
   conditions:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:22:04Z"
+    reason: PodCompleted
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:22:05Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:23:04Z"
+    reason: PodCompleted
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:22:05Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:23:04Z"
+    reason: PodCompleted
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:22:04Z"
@@ -353,14 +359,18 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:650a4fe3a4a5c06f93cf133d92c9a65f2546c278d8d95a6b3e36615b935b4a43
     lastState: {}
     name: installer
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://2f8afe707b469ec9ff166227e3b753255733222a6c5c74fcf6b7a263c41670b2
+        exitCode: 0
+        finishedAt: "2023-03-08T12:23:03Z"
+        reason: Completed
         startedAt: "2023-03-08T12:22:05Z"
   hostIP: 10.0.130.68
-  phase: Running
+  phase: Succeeded
   podIP: 10.128.0.78
   podIPs:
   - ip: 10.128.0.78
