@@ -35,6 +35,16 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-08T12:00:44Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:versions: {}
+    manager: machine-approver
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:25:42Z"
   name: machine-approver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -42,10 +52,28 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "697"
+  resourceVersion: "15473"
   uid: 1deb99a4-3951-4514-995a-b45c83509172
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-08T12:25:42Z"
+    message: Cluster Machine Approver is available at 4.13.0-ec.4
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-03-08T12:25:42Z"
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-03-08T12:25:42Z"
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-03-08T12:25:42Z"
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
   extension: null
   relatedObjects:
   - group: ""
@@ -54,3 +82,6 @@ status:
   - group: certificates.k8s.io
     name: ""
     resource: certificatesigningrequests
+  versions:
+  - name: operator
+    version: 4.13.0-ec.4
