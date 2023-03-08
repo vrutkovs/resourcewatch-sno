@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:08:34Z"
+    time: "2023-03-08T12:08:35Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "3688"
+  resourceVersion: "3741"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
@@ -71,8 +71,9 @@ status:
     status: Unknown
     type: Available
   - lastTransitionTime: "2023-03-08T12:08:34Z"
-    reason: NoData
-    status: Unknown
+    message: All is well
+    reason: AsExpected
+    status: "True"
     type: Upgradeable
   extension: null
   relatedObjects:
