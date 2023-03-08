@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.84/23"],"mac_address":"0a:58:0a:80:00:54","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.84/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.84"
+          ],
+          "mac": "0a:58:0a:80:00:54",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-08T12:25:46Z"
@@ -184,6 +195,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-08T12:25:46Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:25:48Z"
   name: olm-operator-74bfbdf7c9-l8v6s
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -193,7 +214,7 @@ metadata:
     kind: ReplicaSet
     name: olm-operator-74bfbdf7c9
     uid: 964f857d-4cdc-4523-8dd8-555f04d656e1
-  resourceVersion: "15639"
+  resourceVersion: "15771"
   uid: 380d88ec-21fe-441f-9f7a-5ba1f6c9a2e2
 spec:
   containers:
