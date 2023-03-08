@@ -9,6 +9,17 @@ metadata:
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:status:
+        f:desiredNumberScheduled: {}
+        f:numberUnavailable: {}
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:20:00Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:metadata:
         f:annotations:
           .: {}
@@ -90,7 +101,7 @@ metadata:
     time: "2023-03-08T12:20:00Z"
   name: machine-config-server
   namespace: openshift-machine-config-operator
-  resourceVersion: "12227"
+  resourceVersion: "12237"
   uid: 867f35f1-bccc-4212-914a-bf66ebaeda86
 spec:
   revisionHistoryLimit: 10
@@ -160,6 +171,8 @@ spec:
     type: RollingUpdate
 status:
   currentNumberScheduled: 0
-  desiredNumberScheduled: 0
+  desiredNumberScheduled: 1
   numberMisscheduled: 0
   numberReady: 0
+  numberUnavailable: 1
+  observedGeneration: 1
