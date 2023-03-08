@@ -3,13 +3,47 @@ kind: Deployment
 metadata:
   annotations:
     deployment.kubernetes.io/revision: "1"
-    operator.openshift.io/rvs-hash: J1SEA0fEos6bdqyfo0FaA1SCy3HYkvGkpzrDvj5rHl6d6EnbqG5_Oz40ANQR3OGAKchoy5Z_XHuNXnMalI_9cg
-    operator.openshift.io/spec-hash: 2b8a3b0ecb0c4c7234728555f354b6f8ad6879ac6ecb0a84b15fa868521d48eb
+    operator.openshift.io/rvs-hash: -gB9piArlcZ5cbk4jhB22-d8k-FO-Y5V8ISaf1_VLNkblj4qM50ZFmhox8qRVtEDrJeFH7FL9o9jy2DnmSQUNQ
+    operator.openshift.io/spec-hash: 37e0e3a1e7012745245cd39e9098a251bdac1e08b659227879ca8a789de4fb63
   creationTimestamp: "2023-03-08T12:21:27Z"
-  generation: 1
+  generation: 2
   labels:
     app: oauth-openshift
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:availableReplicas: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:22:28Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -271,44 +305,10 @@ metadata:
                   f:secretName: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-08T12:21:27Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:deployment.kubernetes.io/revision: {}
-      f:status:
-        f:availableReplicas: {}
-        f:conditions:
-          .: {}
-          k:{"type":"Available"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Progressing"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:observedGeneration: {}
-        f:readyReplicas: {}
-        f:replicas: {}
-        f:updatedReplicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:22:28Z"
+    time: "2023-03-08T12:26:12Z"
   name: oauth-openshift
   namespace: openshift-authentication
-  resourceVersion: "14373"
+  resourceVersion: "17055"
   uid: e7557177-2d74-4c4d-9713-9102546c56ef
 spec:
   progressDeadlineSeconds: 600
@@ -326,7 +326,7 @@ spec:
     metadata:
       annotations:
         operator.openshift.io/bootstrap-user-exists: "true"
-        operator.openshift.io/rvs-hash: J1SEA0fEos6bdqyfo0FaA1SCy3HYkvGkpzrDvj5rHl6d6EnbqG5_Oz40ANQR3OGAKchoy5Z_XHuNXnMalI_9cg
+        operator.openshift.io/rvs-hash: -gB9piArlcZ5cbk4jhB22-d8k-FO-Y5V8ISaf1_VLNkblj4qM50ZFmhox8qRVtEDrJeFH7FL9o9jy2DnmSQUNQ
         target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
       creationTimestamp: null
       labels:
