@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:34Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:34Z"
+deprecatedSource:
+  component: service-ca-operator-loggingsyncer
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:34Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-08T12:08:34Z"
+  name: service-ca-operator.174a70537257d5d1
+  namespace: openshift-service-ca-operator
+  resourceVersion: "3679"
+  uid: 3d95c81a-47de-495e-88b9-6de458c05b74
+note: Controller "LoggingSyncer" resync interval is set to 0s which might lead to
+  client request throttling
+reason: FastControllerResync
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: service-ca-operator
+  namespace: openshift-service-ca-operator
+  uid: 2d92e597-e523-4158-95a0-2d91bbda0a57
+type: Warning
