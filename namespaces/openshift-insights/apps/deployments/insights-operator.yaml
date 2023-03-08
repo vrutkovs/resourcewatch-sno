@@ -181,7 +181,9 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -194,7 +196,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "15670"
+  resourceVersion: "15674"
   uid: 185352e9-eaa1-4563-ac19-d97d134680f0
 spec:
   progressDeadlineSeconds: 600
@@ -308,15 +310,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:25:46Z"
     lastUpdateTime: "2023-03-08T12:25:46Z"
-    message: Created new replica set "insights-operator-58496f87d8"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-08T12:25:46Z"
-    lastUpdateTime: "2023-03-08T12:25:46Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-08T12:25:46Z"
+    lastUpdateTime: "2023-03-08T12:25:46Z"
+    message: ReplicaSet "insights-operator-58496f87d8" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
