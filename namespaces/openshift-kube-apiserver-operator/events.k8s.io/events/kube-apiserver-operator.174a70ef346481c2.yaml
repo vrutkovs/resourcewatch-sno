@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:19:43Z"
+deprecatedLastTimestamp: "2023-03-08T12:19:43Z"
+deprecatedSource:
+  component: kube-apiserver-operator-status-controller-statussyncer_kube-apiserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:19:43Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-08T12:19:43Z"
+  name: kube-apiserver-operator.174a70ef346481c2
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "11539"
+  uid: a06170f9-4cf6-4014-a7a7-7ec3a1ced97e
+note: 'Status for clusteroperator/kube-apiserver changed: Degraded message changed
+  from "NodeControllerDegraded: All master nodes are ready\nInstallerControllerDegraded:
+  missing required resources: [configmaps: aggregator-client-ca,check-endpoints-kubeconfig,client-ca,control-plane-node-kubeconfig,
+  configmaps: bound-sa-token-signing-certs-4,config-4,etcd-serving-ca-4,kube-apiserver-audit-policies-4,kube-apiserver-cert-syncer-kubeconfig-4,kube-apiserver-pod-4,kubelet-serving-ca-4,sa-token-signing-certs-4]"
+  to "NodeControllerDegraded: All master nodes are ready"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: 1fb52cdd-6ee0-4905-bac5-c1d2936c403a
+type: Normal
