@@ -219,6 +219,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -231,6 +233,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -246,7 +250,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:08:34Z"
+    time: "2023-03-08T12:18:04Z"
   name: etcd-operator-74b9844765-rczws
   namespace: openshift-etcd-operator
   ownerReferences:
@@ -256,7 +260,7 @@ metadata:
     kind: ReplicaSet
     name: etcd-operator-74b9844765
     uid: f36d348d-acef-4624-ab12-ffa9322000a1
-  resourceVersion: "3443"
+  resourceVersion: "9917"
   uid: 59b5994f-39f8-450f-b664-cc0d06f71721
 spec:
   containers:
@@ -401,12 +405,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:33Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:18:04Z"
+    message: 'containers with unready status: [etcd-operator]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:33Z"
-    status: "True"
+    lastTransitionTime: "2023-03-08T12:18:04Z"
+    message: 'containers with unready status: [etcd-operator]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:08:24Z"
@@ -418,11 +426,15 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4cb8a51c59a5bdc38bc97ea684f0bfebe240dede2f982a5b1f8baedeac1e0719
     lastState: {}
     name: etcd-operator
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://8aabf20a325ddc3f40d0937f70f93a4d271ab040ea8181e3cddc9123f7becfdc
+        exitCode: 0
+        finishedAt: "2023-03-08T12:18:03Z"
+        reason: Completed
         startedAt: "2023-03-08T12:08:33Z"
   hostIP: 10.0.130.68
   phase: Running
