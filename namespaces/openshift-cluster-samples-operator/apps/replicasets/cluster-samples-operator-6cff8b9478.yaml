@@ -147,7 +147,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -161,7 +163,7 @@ metadata:
     kind: Deployment
     name: cluster-samples-operator
     uid: 093b1b45-f742-49a6-b645-ec0542dbb36a
-  resourceVersion: "15526"
+  resourceVersion: "15531"
   uid: 4e973bfa-4680-4d81-ba89-321bbbcc3a9c
 spec:
   replicas: 1
@@ -266,5 +268,6 @@ spec:
           defaultMode: 420
           secretName: samples-operator-tls
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
