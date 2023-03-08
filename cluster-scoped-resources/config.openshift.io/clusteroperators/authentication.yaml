@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:17:48Z"
+    time: "2023-03-08T12:17:51Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,14 +52,14 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "8032"
+  resourceVersion: "8216"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:11:40Z"
     message: |-
-      APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable for apiserver.openshift-oauth-apiserver ()
+      APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable for apiserver.openshift-oauth-apiserver (2 containers are waiting in pending apiserver-6979d9d689-d6snt pod)
       IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
       OAuthServerConfigObservationDegraded: secret "v4-0-config-system-router-certs" not found
       OAuthServerServiceEndpointAccessibleControllerDegraded: "service-ca.crt" key of the "openshift-authentication/v4-0-config-system-service-ca" CM is empty
