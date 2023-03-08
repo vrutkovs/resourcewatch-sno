@@ -210,6 +210,16 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:26:20Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"ContainersReady"}:
@@ -236,21 +246,18 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.98"}:
+            .: {}
+            f:ip: {}
         f:startTime: {}
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:26:09Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.v1.cni.cncf.io/network-status: {}
-    manager: multus
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:26:20Z"
+    time: "2023-03-08T12:26:24Z"
   name: console-5bf6c4ff6b-kb5xq
   namespace: openshift-console
   ownerReferences:
@@ -260,7 +267,7 @@ metadata:
     kind: ReplicaSet
     name: console-5bf6c4ff6b
     uid: 0e74ac94-6e83-457a-b2a1-ddd5a9a1a292
-  resourceVersion: "17252"
+  resourceVersion: "17340"
   uid: e48e6d56-a4e2-4160-b9a5-fa073cd01b47
 spec:
   affinity: {}
@@ -438,17 +445,21 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ebcd6dc9e9f71c347e752ee50b10b49f1f3aa3366eb2435f56840c4c7d955aa5
-    imageID: ""
+  - containerID: cri-o://87562672f0a69b2f821850953cdb1bd75d604af37bdcab7192f705f1b56e36cd
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ebcd6dc9e9f71c347e752ee50b10b49f1f3aa3366eb2435f56840c4c7d955aa5
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ebcd6dc9e9f71c347e752ee50b10b49f1f3aa3366eb2435f56840c4c7d955aa5
     lastState: {}
     name: console
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-08T12:26:23Z"
   hostIP: 10.0.130.68
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.98
+  podIPs:
+  - ip: 10.128.0.98
   qosClass: Burstable
   startTime: "2023-03-08T12:26:08Z"
