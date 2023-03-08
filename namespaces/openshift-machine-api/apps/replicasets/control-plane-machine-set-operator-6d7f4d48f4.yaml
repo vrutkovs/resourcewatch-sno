@@ -107,6 +107,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-08T12:25:36Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:25:36Z"
   name: control-plane-machine-set-operator-6d7f4d48f4
   namespace: openshift-machine-api
   ownerReferences:
@@ -116,7 +125,7 @@ metadata:
     kind: Deployment
     name: control-plane-machine-set-operator
     uid: 1fa74c7f-fa2c-4790-809b-105de38afef4
-  resourceVersion: "15324"
+  resourceVersion: "15331"
   uid: 53fb31d7-ba0b-4f1c-a2ef-c64119167843
 spec:
   replicas: 1
@@ -187,4 +196,5 @@ spec:
           defaultMode: 420
           secretName: control-plane-machine-set-operator-tls
 status:
+  observedGeneration: 1
   replicas: 0
