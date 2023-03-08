@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:21:20Z"
+    time: "2023-03-08T12:21:58Z"
   name: kube-controller-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,15 +52,49 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "13161"
+  resourceVersion: "14116"
   uid: ae28a46b-58e3-46e0-8654-d3f4cf5ab63c
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:11:40Z"
-    message: 'GarbageCollectorDegraded: error fetching rules: Get "https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules":
-      dial tcp 172.30.159.22:9091: connect: connection refused'
-    reason: GarbageCollector_Error
+    message: "GarbageCollectorDegraded: error fetching rules: Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\":
+      dial tcp 172.30.159.22:9091: connect: connection refused\nStaticPodsDegraded:
+      pod/kube-controller-manager-vrutkovs-sno container \"cluster-policy-controller\"
+      is terminated: Completed: \nStaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno
+      container \"kube-controller-manager\" is terminated: Completed: \nStaticPodsDegraded:
+      pod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager-cert-syncer\"
+      is terminated: Error: 7703       1 certsync_controller.go:170] Syncing secrets:
+      [{kube-controller-manager-client-cert-key false} {csr-signer false}]\nStaticPodsDegraded:
+      I0308 12:21:52.853819       1 certsync_controller.go:66] Syncing configmaps:
+      [{aggregator-client-ca false} {client-ca false} {trusted-ca-bundle true}]\nStaticPodsDegraded:
+      I0308 12:21:52.854064       1 certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
+      false} {csr-signer false}]\nStaticPodsDegraded: I0308 12:21:53.442123       1
+      certsync_controller.go:66] Syncing configmaps: [{aggregator-client-ca false}
+      {client-ca false} {trusted-ca-bundle true}]\nStaticPodsDegraded: I0308 12:21:53.444591
+      \      1 certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
+      false} {csr-signer false}]\nStaticPodsDegraded: I0308 12:21:53.576617       1
+      certsync_controller.go:66] Syncing configmaps: [{aggregator-client-ca false}
+      {client-ca false} {trusted-ca-bundle true}]\nStaticPodsDegraded: I0308 12:21:53.576870
+      \      1 certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
+      false} {csr-signer false}]\nStaticPodsDegraded: I0308 12:21:53.683144       1
+      certsync_controller.go:66] Syncing configmaps: [{aggregator-client-ca false}
+      {client-ca false} {trusted-ca-bundle true}]\nStaticPodsDegraded: I0308 12:21:53.683396
+      \      1 certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
+      false} {csr-signer false}]\nStaticPodsDegraded: I0308 12:21:54.041249       1
+      certsync_controller.go:66] Syncing configmaps: [{aggregator-client-ca false}
+      {client-ca false} {trusted-ca-bundle true}]\nStaticPodsDegraded: I0308 12:21:54.041892
+      \      1 certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
+      false} {csr-signer false}]\nStaticPodsDegraded: I0308 12:21:54.641101       1
+      certsync_controller.go:66] Syncing configmaps: [{aggregator-client-ca false}
+      {client-ca false} {trusted-ca-bundle true}]\nStaticPodsDegraded: I0308 12:21:54.641461
+      \      1 certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
+      false} {csr-signer false}]\nStaticPodsDegraded: I0308 12:21:54.886588       1
+      certsync_controller.go:66] Syncing configmaps: [{aggregator-client-ca false}
+      {client-ca false} {trusted-ca-bundle true}]\nStaticPodsDegraded: \nStaticPodsDegraded:
+      pod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager-recovery-controller\"
+      is terminated: Completed: "
+    reason: GarbageCollector_Error::StaticPods_Error
     status: "True"
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:18:16Z"
