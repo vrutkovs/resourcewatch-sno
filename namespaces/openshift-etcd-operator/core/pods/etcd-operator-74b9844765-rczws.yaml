@@ -182,6 +182,40 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:08:24Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:metadata:
         f:annotations:
           .: {}
@@ -198,7 +232,7 @@ metadata:
     kind: ReplicaSet
     name: etcd-operator-74b9844765
     uid: f36d348d-acef-4624-ab12-ffa9322000a1
-  resourceVersion: "3142"
+  resourceVersion: "3170"
   uid: 59b5994f-39f8-450f-b664-cc0d06f71721
 spec:
   containers:
@@ -341,6 +375,35 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:08:24Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:08:24Z"
+    message: 'containers with unready status: [etcd-operator]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:08:24Z"
+    message: 'containers with unready status: [etcd-operator]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:08:24Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4cb8a51c59a5bdc38bc97ea684f0bfebe240dede2f982a5b1f8baedeac1e0719
+    imageID: ""
+    lastState: {}
+    name: etcd-operator
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.68
   phase: Pending
   qosClass: Burstable
+  startTime: "2023-03-08T12:08:24Z"
