@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "13307"
+  resourceVersion: "13331"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
@@ -62,9 +62,9 @@ status:
       oauth-server\nOAuthServerDeploymentDegraded: waiting for the oauth-openshift
       route to contain an admitted ingress: no admitted ingress for route oauth-openshift
       in namespace openshift-authentication\nOAuthServerDeploymentDegraded: \nOAuthServerRouteEndpointAccessibleControllerDegraded:
-      route \"openshift-authentication/oauth-openshift\": status does not have a valid
-      host address\nOAuthServerServiceEndpointAccessibleControllerDegraded: Get \"https://172.30.76.170:443/healthz\":
-      dial tcp 172.30.76.170:443: connect: connection refused\nOAuthServerServiceEndpointsEndpointAccessibleControllerDegraded:
+      Get \"https://oauth-openshift.apps.vrutkovs.choomba.one/healthz\": EOF\nOAuthServerServiceEndpointAccessibleControllerDegraded:
+      Get \"https://172.30.76.170:443/healthz\": dial tcp 172.30.76.170:443: connect:
+      connection refused\nOAuthServerServiceEndpointsEndpointAccessibleControllerDegraded:
       oauth service endpoints are not ready"
     reason: IngressStateEndpoints_MissingSubsets::OAuthServerDeployment_PreconditionNotFulfilled::OAuthServerRouteEndpointAccessibleController_SyncError::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError
     status: "True"
