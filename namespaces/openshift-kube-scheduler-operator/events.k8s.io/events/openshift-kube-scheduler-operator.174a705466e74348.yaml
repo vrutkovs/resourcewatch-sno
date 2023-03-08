@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:38Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:38Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-kubecontrollermanagerstaticresources-kubecontrollermanagerstaticresources
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:39Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-08T12:08:39Z"
+  name: openshift-kube-scheduler-operator.174a705466e74348
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "4150"
+  uid: 705dd64e-9847-4ad5-b83a-bca29324acf8
+note: Created ConfigMap/kube-scheduler-cert-syncer-kubeconfig -n openshift-kube-scheduler
+  because it was missing
+reason: ConfigMapCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 1183c523-80da-4a75-bc3e-713792de34ff
+type: Normal
