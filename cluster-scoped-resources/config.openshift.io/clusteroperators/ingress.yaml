@@ -51,26 +51,31 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "11790"
+  resourceVersion: "11828"
   uid: 6cf1f6a5-d0d1-486f-b04b-616f17206457
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-08T12:19:53Z"
-    message: The "default" ingress controller is not reporting an Available status
-      condition.
-    reason: IngressDoesNotHaveAvailableCondition
-    status: Unknown
+  - lastTransitionTime: "2023-03-08T12:19:54Z"
+    message: 'The "default" ingress controller reports Available=False: IngressControllerUnavailable:
+      One or more status conditions indicate unavailable: DeploymentAvailable=Unknown
+      (DeploymentAvailabilityUnknown: The deployment has no Available status condition
+      set)'
+    reason: IngressUnavailable
+    status: "False"
     type: Available
-  - lastTransitionTime: "2023-03-08T12:19:53Z"
-    message: Not all ingress controllers are available.
+  - lastTransitionTime: "2023-03-08T12:19:54Z"
+    message: |-
+      ingresscontroller "default" is progressing: IngressControllerProgressing: One or more status conditions indicate progressing: DeploymentRollingOut=True (DeploymentRollingOut: Waiting for router deployment rollout to finish: 0 out of 1 new replica(s) have been updated...
+      ).
+      Not all ingress controllers are available.
     reason: Reconciling
     status: "True"
     type: Progressing
-  - lastTransitionTime: "2023-03-08T12:19:53Z"
-    message: The "default" ingress controller is not reporting a Degraded status condition.
-    reason: IngressDoesNotHaveDegradedCondition
-    status: Unknown
+  - lastTransitionTime: "2023-03-08T12:19:54Z"
+    message: The "default" ingress controller reports Degraded=False.
+    reason: IngressNotDegraded
+    status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:19:53Z"
     reason: IngressControllersUpgradeable
@@ -93,6 +98,9 @@ status:
     name: ""
     namespace: openshift-ingress-operator
     resource: dnsrecords
+  - group: ""
+    name: openshift-ingress
+    resource: namespaces
   - group: ""
     name: openshift-ingress-canary
     resource: namespaces
