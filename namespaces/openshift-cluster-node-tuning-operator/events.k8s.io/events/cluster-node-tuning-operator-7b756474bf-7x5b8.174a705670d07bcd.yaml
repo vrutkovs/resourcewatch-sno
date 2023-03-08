@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 3
+deprecatedCount: 4
 deprecatedFirstTimestamp: "2023-03-08T12:08:47Z"
-deprecatedLastTimestamp: "2023-03-08T12:08:49Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:51Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -28,7 +28,7 @@ metadata:
     time: "2023-03-08T12:08:53Z"
   name: cluster-node-tuning-operator-7b756474bf-7x5b8.174a705670d07bcd
   namespace: openshift-cluster-node-tuning-operator
-  resourceVersion: "4845"
+  resourceVersion: "4849"
   uid: 37338da0-1cfc-4141-8fb2-3be45b0d4840
 note: 'MountVolume.SetUp failed for volume "node-tuning-operator-tls" : secret "node-tuning-operator-tls"
   not found'
