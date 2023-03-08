@@ -1,0 +1,41 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-08T12:25:46.977679Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:25:46Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-08T12:25:46Z"
+  name: insights-operator-58496f87d8-dl4st.174a7143c1d5a544
+  namespace: openshift-insights
+  resourceVersion: "15671"
+  uid: ea908294-8925-4150-bb57-1719df0220a3
+note: Successfully assigned openshift-insights/insights-operator-58496f87d8-dl4st
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: insights-operator-58496f87d8-dl4st
+  namespace: openshift-insights
+  resourceVersion: "15666"
+  uid: 599cc72f-35f6-4ef3-92d0-6a19bc0b4d17
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
