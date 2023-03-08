@@ -36,8 +36,26 @@ metadata:
     manager: kubelet
     operation: Update
     time: "2023-03-08T12:06:32Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"DiskPressure"}:
+            f:lastHeartbeatTime: {}
+          k:{"type":"MemoryPressure"}:
+            f:lastHeartbeatTime: {}
+          k:{"type":"PIDPressure"}:
+            f:lastHeartbeatTime: {}
+          k:{"type":"Ready"}:
+            f:lastHeartbeatTime: {}
+            f:message: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:06:42Z"
   name: vrutkovs-sno
-  resourceVersion: "2293"
+  resourceVersion: "2530"
   uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
 spec:
   taints:
@@ -66,31 +84,29 @@ status:
     memory: 16342536Ki
     pods: "250"
   conditions:
-  - lastHeartbeatTime: "2023-03-08T12:06:32Z"
+  - lastHeartbeatTime: "2023-03-08T12:06:42Z"
     lastTransitionTime: "2023-03-08T12:06:32Z"
     message: kubelet has sufficient memory available
     reason: KubeletHasSufficientMemory
     status: "False"
     type: MemoryPressure
-  - lastHeartbeatTime: "2023-03-08T12:06:32Z"
+  - lastHeartbeatTime: "2023-03-08T12:06:42Z"
     lastTransitionTime: "2023-03-08T12:06:32Z"
     message: kubelet has no disk pressure
     reason: KubeletHasNoDiskPressure
     status: "False"
     type: DiskPressure
-  - lastHeartbeatTime: "2023-03-08T12:06:32Z"
+  - lastHeartbeatTime: "2023-03-08T12:06:42Z"
     lastTransitionTime: "2023-03-08T12:06:32Z"
     message: kubelet has sufficient PID available
     reason: KubeletHasSufficientPID
     status: "False"
     type: PIDPressure
-  - lastHeartbeatTime: "2023-03-08T12:06:32Z"
+  - lastHeartbeatTime: "2023-03-08T12:06:42Z"
     lastTransitionTime: "2023-03-08T12:06:32Z"
-    message: '[container runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady
+    message: 'container runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady
       message:Network plugin returns error: No CNI configuration file in /etc/kubernetes/cni/net.d/.
-      Has your network provider started?, failed to initialize CSINode: error updating
-      CSINode annotation: timed out waiting for the condition; caused by: nodes "vrutkovs-sno"
-      not found]'
+      Has your network provider started?'
     reason: KubeletNotReady
     status: "False"
     type: Ready
