@@ -120,14 +120,21 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-08T12:08:24Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"ContainersReady"}:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -140,26 +147,22 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.17"}:
+            .: {}
+            f:ip: {}
         f:startTime: {}
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:08:24Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.ovn.org/pod-networks: {}
-    manager: vrutkovs-sno
-    operation: Update
-    time: "2023-03-08T12:08:24Z"
+    time: "2023-03-08T12:08:26Z"
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -179,7 +182,7 @@ metadata:
     kind: ReplicaSet
     name: machine-config-operator-5747cb856b
     uid: ed599ae6-d7d0-47ac-ac42-31a43995b924
-  resourceVersion: "3229"
+  resourceVersion: "3259"
   uid: b6acb584-a548-4ed1-ba4c-51d030aca270
 spec:
   containers:
@@ -282,33 +285,33 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:24Z"
-    message: 'containers with unready status: [machine-config-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:08:26Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:08:24Z"
-    message: 'containers with unready status: [machine-config-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:08:26Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:08:24Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:cd809b4b9f05e02149e45956000e29f75db7c144a2275ead651b5fec951268f9
-    imageID: ""
+  - containerID: cri-o://e6a3fdd088fdca6f8d9cf210c3bcc13219e1cf7472d6697c71d5e55b392bfc7b
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:cd809b4b9f05e02149e45956000e29f75db7c144a2275ead651b5fec951268f9
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:cd809b4b9f05e02149e45956000e29f75db7c144a2275ead651b5fec951268f9
     lastState: {}
     name: machine-config-operator
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-08T12:08:26Z"
   hostIP: 10.0.130.68
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.17
+  podIPs:
+  - ip: 10.128.0.17
   qosClass: Burstable
   startTime: "2023-03-08T12:08:24Z"
