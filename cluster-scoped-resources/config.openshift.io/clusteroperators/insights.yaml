@@ -38,6 +38,19 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-08T12:00:44Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:extension:
+          f:lastReportTime: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: insights-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:25:55Z"
   name: insights
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -45,8 +58,78 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "764"
+  resourceVersion: "16262"
   uid: ae47ccc3-db4b-4679-ba86-eae6d52f4d65
 spec: {}
 status:
-  extension: null
+  conditions:
+  - lastTransitionTime: "2023-03-08T12:25:55Z"
+    message: Insights works as expected
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-03-08T12:25:55Z"
+    status: Unknown
+    type: ClusterTransferAvailable
+  - lastTransitionTime: "2023-03-08T12:25:55Z"
+    message: Insights works as expected
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-03-08T12:25:55Z"
+    reason: AsExpected
+    status: "False"
+    type: Disabled
+  - lastTransitionTime: "2023-03-08T12:25:55Z"
+    message: Monitoring the cluster
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-03-08T12:25:55Z"
+    status: Unknown
+    type: SCAAvailable
+  - lastTransitionTime: "2023-03-08T12:25:55Z"
+    message: Insights operator can be upgraded
+    reason: InsightsUpgradeable
+    status: "True"
+    type: Upgradeable
+  extension:
+    lastReportTime: null
+  relatedObjects:
+  - group: ""
+    name: openshift-insights
+    resource: namespaces
+  - group: apps
+    name: insights-operator
+    namespace: openshift-insights
+    resource: deployments
+  - group: ""
+    name: pull-secret
+    namespace: openshift-config
+    resource: secrets
+  - group: ""
+    name: support
+    namespace: openshift-config
+    resource: secrets
+  - group: ""
+    name: gather
+    namespace: openshift-insights
+    resource: serviceaccounts
+  - group: ""
+    name: operator
+    namespace: openshift-insights
+    resource: serviceaccounts
+  - group: ""
+    name: metrics
+    namespace: openshift-insights
+    resource: services
+  - group: ""
+    name: service-ca-bundle
+    namespace: openshift-insights
+    resource: configmaps
+  - group: operator.openshift.io
+    name: cluster
+    resource: insightsoperators
+  versions:
+  - name: operator
+    version: 4.13.0-ec.4
