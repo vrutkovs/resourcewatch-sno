@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:10:04Z"
+    time: "2023-03-08T12:10:09Z"
   name: kube-scheduler
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "5908"
+  resourceVersion: "5964"
   uid: 22e29ce6-c07b-40ba-9194-b4b659d164c1
 spec: {}
 status:
@@ -64,13 +64,13 @@ status:
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:08:36Z"
     message: 'NodeInstallerProgressing: 1 nodes are at revision 0; 0 nodes have achieved
-      new revision 3'
+      new revision 4'
     reason: NodeInstaller
     status: "True"
     type: Progressing
   - lastTransitionTime: "2023-03-08T12:08:35Z"
     message: 'StaticPodsAvailable: 0 nodes are active; 1 nodes are at revision 0;
-      0 nodes have achieved new revision 3'
+      0 nodes have achieved new revision 4'
     reason: StaticPods_ZeroNodesActive
     status: "False"
     type: Available
