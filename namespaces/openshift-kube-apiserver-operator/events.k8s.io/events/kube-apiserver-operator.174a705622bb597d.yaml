@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 4
+deprecatedCount: 5
 deprecatedFirstTimestamp: "2023-03-08T12:08:46Z"
 deprecatedLastTimestamp: "2023-03-08T12:08:46Z"
 deprecatedSource:
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-apiserver-operator
     operation: Update
-    time: "2023-03-08T12:08:55Z"
+    time: "2023-03-08T12:08:56Z"
   name: kube-apiserver-operator.174a705622bb597d
   namespace: openshift-kube-apiserver-operator
-  resourceVersion: "4944"
+  resourceVersion: "4963"
   uid: 95f5e72e-9114-4082-91b0-b75fae031cb0
 note: Created PrometheusRule.monitoring.coreos.com/v1 because it was missing
 reason: PrometheusRuleCreated
