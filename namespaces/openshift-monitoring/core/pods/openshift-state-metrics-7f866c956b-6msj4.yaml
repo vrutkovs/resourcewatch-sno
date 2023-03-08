@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.66/23"],"mac_address":"0a:58:0a:80:00:42","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.66/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.66"
+          ],
+          "mac": "0a:58:0a:80:00:42",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-08T12:20:05Z"
@@ -201,6 +212,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-08T12:20:05Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:20:06Z"
   name: openshift-state-metrics-7f866c956b-6msj4
   namespace: openshift-monitoring
   ownerReferences:
@@ -210,7 +231,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-state-metrics-7f866c956b
     uid: 73abad24-3cd8-4bcf-90ca-0533801ba413
-  resourceVersion: "12491"
+  resourceVersion: "12547"
   uid: 86783c82-133e-419c-ad40-3e31f239900b
 spec:
   containers:
