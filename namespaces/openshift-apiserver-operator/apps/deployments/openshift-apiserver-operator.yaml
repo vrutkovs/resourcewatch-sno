@@ -166,11 +166,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:01:09Z"
+    time: "2023-03-08T12:06:32Z"
   name: openshift-apiserver-operator
   namespace: openshift-apiserver-operator
   ownerReferences:
@@ -179,7 +181,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "2336"
+  resourceVersion: "2338"
   uid: 9a0bfab6-0f01-4cc5-b5e3-bffab49028c1
 spec:
   progressDeadlineSeconds: 600
@@ -279,15 +281,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-08T12:01:09Z"
     lastUpdateTime: "2023-03-08T12:01:09Z"
-    message: Created new replica set "openshift-apiserver-operator-845ff759fd"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-08T12:01:09Z"
-    lastUpdateTime: "2023-03-08T12:01:09Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-08T12:01:09Z"
+    lastUpdateTime: "2023-03-08T12:06:32Z"
+    message: ReplicaSet "openshift-apiserver-operator-845ff759fd" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
