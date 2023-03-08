@@ -1,0 +1,121 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:15:16Z"
+deprecatedLastTimestamp: "2023-03-08T12:15:16Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-status-controller-statussyncer_kube-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:15:16Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-08T12:15:16Z"
+  name: openshift-kube-scheduler-operator.174a70b102308edf
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "6851"
+  uid: 43929f4b-66f0-46f6-8a2c-e6c12ecef437
+note: 'Status for clusteroperator/kube-scheduler changed: Degraded message changed
+  from "NodeInstallerDegraded: 1 nodes are failing on revision 4:\nNodeInstallerDegraded:
+  installer: tes.Interface) <nil>,\nNodeInstallerDegraded:  Revision: (string) (len=1)
+  \"4\",\nNodeInstallerDegraded:  NodeName: (string) \"\",\nNodeInstallerDegraded:  Namespace:
+  (string) (len=24) \"openshift-kube-scheduler\",\nNodeInstallerDegraded:  PodConfigMapNamePrefix:
+  (string) (len=18) \"kube-scheduler-pod\",\nNodeInstallerDegraded:  SecretNamePrefixes:
+  ([]string) (len=1 cap=1) {\nNodeInstallerDegraded:   (string) (len=31) \"localhost-recovery-client-token\"\nNodeInstallerDegraded:  },\nNodeInstallerDegraded:  OptionalSecretNamePrefixes:
+  ([]string) (len=1 cap=1) {\nNodeInstallerDegraded:   (string) (len=12) \"serving-cert\"\nNodeInstallerDegraded:  ConfigMapNamePrefixes:
+  ([]string) (len=5 cap=8) {\nNodeInstallerDegraded:   (string) (len=18) \"kube-scheduler-pod\",\nNodeInstallerDegraded:   (string)
+  (len=6) \"config\",\nNodeInstallerDegraded:   (string) (len=17) \"serviceaccount-ca\",\nNodeInstallerDegraded:   (string)
+  (len=20) \"scheduler-kubeconfig\",\nNodeInstallerDegraded:   (string) (len=37) \"kube-scheduler-cert-syncer-kubeconfig\"\nNodeInstallerDegraded:  OptionalConfigMapNamePrefixes:
+  ([]string) (len=1 cap=1) {\nNodeInstallerDegraded:   (string) (len=16) \"policy-configmap\"\nNodeInstallerDegraded:  CertSecretNames:
+  ([]string) (len=1 cap=1) {\nNodeInstallerDegraded:   (string) (len=30) \"kube-scheduler-client-cert-key\"\nNodeInstallerDegraded:  OptionalCertSecretNamePrefixes:
+  ([]string) <nil>,\nNodeInstallerDegraded:  CertConfigMapNamePrefixes: ([]string)
+  <nil>,\nNodeInstallerDegraded:  OptionalCertConfigMapNamePrefixes: ([]string) <nil>,\nNodeInstallerDegraded:  CertDir:
+  (string) (len=57) \"/etc/kubernetes/static-pod-resources/kube-scheduler-certs\",\nNodeInstallerDegraded:  ResourceDir:
+  (string) (len=36) \"/etc/kubernetes/static-pod-resources\",\nNodeInstallerDegraded:  PodManifestDir:
+  (string) (len=25) \"/etc/kubernetes/manifests\",\nNodeInstallerDegraded:  Timeout:
+  (time.Duration) 2m0s,\nNodeInstallerDegraded:  StaticPodManifestsLockFile: (string)
+  \"\",\nNodeInstallerDegraded:  PodMutationFns: ([]installerpod.PodMutationFunc)
+  <nil>,\nNodeInstallerDegraded:  KubeletVersion: (string) \"\"\nNodeInstallerDegraded:
+  })\nNodeInstallerDegraded: I0308 12:12:06.156479       1 cmd.go:410] Getting controller
+  reference for node vrutkovs-sno\nNodeInstallerDegraded: I0308 12:12:06.162374       1
+  cmd.go:423] Waiting for installer revisions to settle for node vrutkovs-sno\nNodeInstallerDegraded:
+  I0308 12:12:06.164323       1 cmd.go:515] Waiting additional period after revisions
+  have settled for node vrutkovs-sno\nNodeInstallerDegraded: I0308 12:12:36.164671       1
+  cmd.go:521] Getting installer pods for node vrutkovs-sno\nNodeInstallerDegraded:
+  F0308 12:12:50.165420       1 cmd.go:106] Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/pods?labelSelector=app%3Dinstaller\":
+  net/http: request canceled (Client.Timeout exceeded while awaiting headers)\nNodeInstallerDegraded:
+  " to "NodeInstallerDegraded: 1 nodes are failing on revision 4:\nNodeInstallerDegraded:
+  installer: tes.Interface) <nil>,\nNodeInstallerDegraded:  Revision: (string) (len=1)
+  \"4\",\nNodeInstallerDegraded:  NodeName: (string) \"\",\nNodeInstallerDegraded:  Namespace:
+  (string) (len=24) \"openshift-kube-scheduler\",\nNodeInstallerDegraded:  PodConfigMapNamePrefix:
+  (string) (len=18) \"kube-scheduler-pod\",\nNodeInstallerDegraded:  SecretNamePrefixes:
+  ([]string) (len=1 cap=1) {\nNodeInstallerDegraded:   (string) (len=31) \"localhost-recovery-client-token\"\nNodeInstallerDegraded:  },\nNodeInstallerDegraded:  OptionalSecretNamePrefixes:
+  ([]string) (len=1 cap=1) {\nNodeInstallerDegraded:   (string) (len=12) \"serving-cert\"\nNodeInstallerDegraded:  ConfigMapNamePrefixes:
+  ([]string) (len=5 cap=8) {\nNodeInstallerDegraded:   (string) (len=18) \"kube-scheduler-pod\",\nNodeInstallerDegraded:   (string)
+  (len=6) \"config\",\nNodeInstallerDegraded:   (string) (len=17) \"serviceaccount-ca\",\nNodeInstallerDegraded:   (string)
+  (len=20) \"scheduler-kubeconfig\",\nNodeInstallerDegraded:   (string) (len=37) \"kube-scheduler-cert-syncer-kubeconfig\"\nNodeInstallerDegraded:  OptionalConfigMapNamePrefixes:
+  ([]string) (len=1 cap=1) {\nNodeInstallerDegraded:   (string) (len=16) \"policy-configmap\"\nNodeInstallerDegraded:  CertSecretNames:
+  ([]string) (len=1 cap=1) {\nNodeInstallerDegraded:   (string) (len=30) \"kube-scheduler-client-cert-key\"\nNodeInstallerDegraded:  OptionalCertSecretNamePrefixes:
+  ([]string) <nil>,\nNodeInstallerDegraded:  CertConfigMapNamePrefixes: ([]string)
+  <nil>,\nNodeInstallerDegraded:  OptionalCertConfigMapNamePrefixes: ([]string) <nil>,\nNodeInstallerDegraded:  CertDir:
+  (string) (len=57) \"/etc/kubernetes/static-pod-resources/kube-scheduler-certs\",\nNodeInstallerDegraded:  ResourceDir:
+  (string) (len=36) \"/etc/kubernetes/static-pod-resources\",\nNodeInstallerDegraded:  PodManifestDir:
+  (string) (len=25) \"/etc/kubernetes/manifests\",\nNodeInstallerDegraded:  Timeout:
+  (time.Duration) 2m0s,\nNodeInstallerDegraded:  StaticPodManifestsLockFile: (string)
+  \"\",\nNodeInstallerDegraded:  PodMutationFns: ([]installerpod.PodMutationFunc)
+  <nil>,\nNodeInstallerDegraded:  KubeletVersion: (string) \"\"\nNodeInstallerDegraded:
+  })\nNodeInstallerDegraded: I0308 12:12:06.156479       1 cmd.go:410] Getting controller
+  reference for node vrutkovs-sno\nNodeInstallerDegraded: I0308 12:12:06.162374       1
+  cmd.go:423] Waiting for installer revisions to settle for node vrutkovs-sno\nNodeInstallerDegraded:
+  I0308 12:12:06.164323       1 cmd.go:515] Waiting additional period after revisions
+  have settled for node vrutkovs-sno\nNodeInstallerDegraded: I0308 12:12:36.164671       1
+  cmd.go:521] Getting installer pods for node vrutkovs-sno\nNodeInstallerDegraded:
+  F0308 12:12:50.165420       1 cmd.go:106] Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/pods?labelSelector=app%3Dinstaller\":
+  net/http: request canceled (Client.Timeout exceeded while awaiting headers)\nNodeInstallerDegraded:
+  \nStaticPodsDegraded: pod/openshift-kube-scheduler-vrutkovs-sno container \"kube-scheduler\"
+  is terminated: Completed: \nStaticPodsDegraded: pod/openshift-kube-scheduler-vrutkovs-sno
+  container \"kube-scheduler-cert-syncer\" is terminated: Error: ult.svc, openshift.default.svc.cluster.local,
+  not localhost-recovery\nStaticPodsDegraded: W0308 12:14:49.813171       1 reflector.go:424]
+  k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169: failed to list *v1.ConfigMap:
+  Get \"https://localhost:6443/api/v1/namespaces/openshift-kube-scheduler/configmaps?limit=500&resourceVersion=0\":
+  x509: certificate is valid for kubernetes, kubernetes.default, kubernetes.default.svc,
+  kubernetes.default.svc.cluster.local, openshift, openshift.default, openshift.default.svc,
+  openshift.default.svc.cluster.local, not localhost-recovery\nStaticPodsDegraded:
+  E0308 12:14:49.813235       1 reflector.go:140] k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169:
+  Failed to watch *v1.ConfigMap: failed to list *v1.ConfigMap: Get \"https://localhost:6443/api/v1/namespaces/openshift-kube-scheduler/configmaps?limit=500&resourceVersion=0\":
+  x509: certificate is valid for kubernetes, kubernetes.default, kubernetes.default.svc,
+  kubernetes.default.svc.cluster.local, openshift, openshift.default, openshift.default.svc,
+  openshift.default.svc.cluster.local, not localhost-recovery\nStaticPodsDegraded:
+  W0308 12:15:15.835937       1 reflector.go:424] k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169:
+  failed to list *v1.Secret: Get \"https://localhost:6443/api/v1/namespaces/openshift-kube-scheduler/secrets?limit=500&resourceVersion=0\":
+  x509: certificate is valid for kubernetes, kubernetes.default, kubernetes.default.svc,
+  kubernetes.default.svc.cluster.local, openshift, openshift.default, openshift.default.svc,
+  openshift.default.svc.cluster.local, not localhost-recovery\nStaticPodsDegraded:
+  E0308 12:15:15.835962       1 reflector.go:140] k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169:
+  Failed to watch *v1.Secret: failed to list *v1.Secret: Get \"https://localhost:6443/api/v1/namespaces/openshift-kube-scheduler/secrets?limit=500&resourceVersion=0\":
+  x509: certificate is valid for kubernetes, kubernetes.default, kubernetes.default.svc,
+  kubernetes.default.svc.cluster.local, openshift, openshift.default, openshift.default.svc,
+  openshift.default.svc.cluster.local, not localhost-recovery\nStaticPodsDegraded:
+  \nStaticPodsDegraded: pod/openshift-kube-scheduler-vrutkovs-sno container \"kube-scheduler-recovery-controller\"
+  is terminated: Completed: "'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 1183c523-80da-4a75-bc3e-713792de34ff
+type: Normal
