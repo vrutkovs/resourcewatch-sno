@@ -90,7 +90,7 @@ metadata:
     kind: DaemonSet
     name: ingress-canary
     uid: db79a768-0984-4028-93dd-ef00f14ebbc5
-  resourceVersion: "12889"
+  resourceVersion: "13182"
   uid: 50a5a2cc-90de-4245-a94c-cc44b990eccd
 spec:
   affinity:
@@ -134,6 +134,7 @@ spec:
   enableServiceLinks: true
   imagePullSecrets:
   - name: default-dockercfg-4tfs2
+  nodeName: vrutkovs-sno
   nodeSelector:
     kubernetes.io/os: linux
   preemptionPolicy: PreemptLowerPriority
@@ -198,5 +199,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:21:21Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
