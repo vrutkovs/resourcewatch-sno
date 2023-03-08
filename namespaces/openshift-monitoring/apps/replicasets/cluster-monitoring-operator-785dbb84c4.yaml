@@ -1,0 +1,241 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "1"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-03-08T12:01:22Z"
+  generation: 1
+  labels:
+    app: cluster-monitoring-operator
+    app.kubernetes.io/name: cluster-monitoring-operator
+    pod-template-hash: 785dbb84c4
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deployment.kubernetes.io/desired-replicas: {}
+          f:deployment.kubernetes.io/max-replicas: {}
+          f:deployment.kubernetes.io/revision: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/name: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"0227b773-3a3b-42b1-b3fb-56a3b6ae8996"}: {}
+      f:spec:
+        f:replicas: {}
+        f:selector: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:target.workload.openshift.io/management: {}
+            f:labels:
+              .: {}
+              f:app: {}
+              f:app.kubernetes.io/name: {}
+              f:pod-template-hash: {}
+          f:spec:
+            f:containers:
+              k:{"name":"cluster-monitoring-operator"}:
+                .: {}
+                f:args: {}
+                f:env:
+                  .: {}
+                  k:{"name":"POD_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:fieldRef: {}
+                  k:{"name":"RELEASE_VERSION"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":8443,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                f:resources:
+                  .: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/etc/cluster-monitoring-operator/telemetry"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/etc/tls/private"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+            f:dnsPolicy: {}
+            f:nodeSelector: {}
+            f:priorityClassName: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:tolerations: {}
+            f:volumes:
+              .: {}
+              k:{"name":"cluster-monitoring-operator-tls"}:
+                .: {}
+                f:name: {}
+                f:secret:
+                  .: {}
+                  f:defaultMode: {}
+                  f:secretName: {}
+              k:{"name":"telemetry-config"}:
+                .: {}
+                f:configMap:
+                  .: {}
+                  f:defaultMode: {}
+                  f:name: {}
+                f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-08T12:01:22Z"
+  name: cluster-monitoring-operator-785dbb84c4
+  namespace: openshift-monitoring
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: cluster-monitoring-operator
+    uid: 0227b773-3a3b-42b1-b3fb-56a3b6ae8996
+  resourceVersion: "1849"
+  uid: 6a588ae4-6da1-49bc-ac6d-c3c99e377413
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cluster-monitoring-operator
+      pod-template-hash: 785dbb84c4
+  template:
+    metadata:
+      annotations:
+        target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+      creationTimestamp: null
+      labels:
+        app: cluster-monitoring-operator
+        app.kubernetes.io/name: cluster-monitoring-operator
+        pod-template-hash: 785dbb84c4
+    spec:
+      containers:
+      - args:
+        - -namespace=openshift-monitoring
+        - -namespace-user-workload=openshift-user-workload-monitoring
+        - -configmap=cluster-monitoring-config
+        - -release-version=$(RELEASE_VERSION)
+        - -logtostderr=true
+        - -v=2
+        - -cert-file=/etc/tls/private/tls.crt
+        - -key-file=/etc/tls/private/tls.key
+        - -images=prometheus-operator=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6fbfc2bc5e88c1873b0f349f06c53a53d3e6af61740c92b1c6034eec795aa4b3
+        - -images=prometheus-config-reloader=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3c97acac3647a99a40d57710a0ec697458c400421730e1a676111beda7caf958
+        - -images=prometheus-operator-admission-webhook=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9950a94aa6431101775e7494a808290262a893641b8ce4038a388dcff8d6e5b5
+        - -images=configmap-reloader=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4b4ca39a93e62682862c5bf7d8846476b001e481a22c0745654c69733e86d243
+        - -images=prometheus=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b10ab06cd40456afe5f928c2642832ea92a8ad05b0636b9286b82d39a66eb2d4
+        - -images=alertmanager=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:aaa094ab3806e1688b381459841ace8bf528b4965f8791cb0353546a518ba543
+        - -images=oauth-proxy=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5925f28a7682ef5cb91d4a3e3c9f6877ccc339ddb3533ad6376771314a79cb5a
+        - -images=node-exporter=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3576c4bdb825087fc187266bfc13ac84c644ce18779fe864adc03303fab67063
+        - -images=kube-state-metrics=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:16c13ffaa8a7730a23ee5cc3eb33a6f68c03e7b91094e268fc364ec79f79fbf3
+        - -images=openshift-state-metrics=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:5187f93fb888d3ea851c029034ad5deec7a3e259a7594e055a037fb1cf1bc5b5
+        - -images=kube-rbac-proxy=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
+        - -images=telemeter-client=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3913aff97167c9c482eedb6b3576595856f399550ab69efeb2d2287a5640bbdd
+        - -images=prom-label-proxy=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9a2f06206b2a3ff6fdd4d4d3a9b4b6ad43ec595fa8e765c47f5565633ba27ecf
+        - -images=k8s-prometheus-adapter=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fcb29b9f062c78c73e0ec75c28e165465f12875d73fd205223a0948d87a5dfb8
+        - -images=thanos=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b7eba12d8e64a5b5fca58ed447fd008f09bd83bcbab7421cf54128a700a20b86
+        env:
+        - name: RELEASE_VERSION
+          value: 4.13.0-ec.4
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:641a2fd2bc9881397dc0c7752096a213892002be44a9f9b9e0fc28848ec85442
+        imagePullPolicy: IfNotPresent
+        name: cluster-monitoring-operator
+        ports:
+        - containerPort: 8443
+          name: https
+          protocol: TCP
+        resources:
+          requests:
+            cpu: 10m
+            memory: 75Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+        volumeMounts:
+        - mountPath: /etc/tls/private
+          name: cluster-monitoring-operator-tls
+          readOnly: true
+        - mountPath: /etc/cluster-monitoring-operator/telemetry
+          name: telemetry-config
+          readOnly: true
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        kubernetes.io/os: linux
+        node-role.kubernetes.io/master: ""
+      priorityClassName: system-cluster-critical
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: cluster-monitoring-operator
+      serviceAccountName: cluster-monitoring-operator
+      terminationGracePeriodSeconds: 30
+      tolerations:
+      - effect: NoSchedule
+        key: node.kubernetes.io/memory-pressure
+        operator: Exists
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/master
+        operator: Exists
+      - effect: NoExecute
+        key: node.kubernetes.io/unreachable
+        operator: Exists
+        tolerationSeconds: 120
+      - effect: NoExecute
+        key: node.kubernetes.io/not-ready
+        operator: Exists
+        tolerationSeconds: 120
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: telemetry-config
+        name: telemetry-config
+      - name: cluster-monitoring-operator-tls
+        secret:
+          defaultMode: 420
+          secretName: cluster-monitoring-operator-tls
+status:
+  replicas: 0
