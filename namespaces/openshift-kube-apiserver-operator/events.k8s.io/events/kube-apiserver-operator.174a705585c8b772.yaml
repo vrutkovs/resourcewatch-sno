@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:43Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:43Z"
+deprecatedSource:
+  component: kube-apiserver-operator-resource-sync-controller-resourcesynccontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:44Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-08T12:08:44Z"
+  name: kube-apiserver-operator.174a705585c8b772
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "4486"
+  uid: 1c1c7dd5-d455-473a-81ed-af69d81d4006
+note: Created ConfigMap/etcd-serving-ca -n openshift-kube-apiserver because it was
+  missing
+reason: ConfigMapCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: 1fb52cdd-6ee0-4905-bac5-c1d2936c403a
+type: Normal
