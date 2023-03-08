@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    operator.openshift.io/spec-hash: 9c74227d7f96d723d980c50373a5e91f08c5893365bfd5a5040449b1b6585a23
+    service.alpha.openshift.io/serving-cert-secret-name: serving-cert
+  creationTimestamp: "2023-03-08T12:08:40Z"
+  labels:
+    prometheus: openshift-apiserver
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:operator.openshift.io/spec-hash: {}
+          f:service.alpha.openshift.io/serving-cert-secret-name: {}
+        f:labels:
+          .: {}
+          f:prometheus: {}
+      f:spec:
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":443,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2023-03-08T12:08:40Z"
+  name: api
+  namespace: openshift-apiserver
+  resourceVersion: "4210"
+  uid: 47ba66fe-abc9-499d-b1ba-7c0db4b66b76
+spec:
+  clusterIP: 172.30.212.147
+  clusterIPs:
+  - 172.30.212.147
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: https
+    port: 443
+    protocol: TCP
+    targetPort: 8443
+  selector:
+    apiserver: "true"
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
