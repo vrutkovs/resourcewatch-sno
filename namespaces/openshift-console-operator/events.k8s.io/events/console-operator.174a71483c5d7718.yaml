@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:26:06Z"
+deprecatedLastTimestamp: "2023-03-08T12:26:06Z"
+deprecatedSource:
+  component: console-operator-status-controller-statussyncer_console
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:26:06Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: console
+    operation: Update
+    time: "2023-03-08T12:26:06Z"
+  name: console-operator.174a71483c5d7718
+  namespace: openshift-console-operator
+  resourceVersion: "16921"
+  uid: 5ec0f755-9125-4fe0-b1d1-c31ee19c35ea
+note: 'Status for clusteroperator/console changed: Degraded message changed from "All
+  is well" to "RouteHealthDegraded: failed to read CA to check route health: configmaps
+  \"trusted-ca-bundle\" not found",Available changed from Unknown to False ("RouteHealthAvailable:
+  failed to read CA to check route health: configmaps \"trusted-ca-bundle\" not found")'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: console-operator
+  namespace: openshift-console-operator
+  uid: cd6675f2-37d9-47c1-ab17-048b428d3cd8
+type: Normal
