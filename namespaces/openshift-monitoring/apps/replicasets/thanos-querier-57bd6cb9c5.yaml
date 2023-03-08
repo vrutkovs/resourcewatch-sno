@@ -385,7 +385,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -399,7 +401,7 @@ metadata:
     kind: Deployment
     name: thanos-querier
     uid: b84c340e-ddeb-408d-90e1-a0326741aaea
-  resourceVersion: "13717"
+  resourceVersion: "13747"
   uid: d8a5bba0-5217-4d7c-aa82-bef5c63f6a95
 spec:
   replicas: 1
@@ -704,5 +706,6 @@ spec:
           defaultMode: 420
           secretName: thanos-querier-grpc-tls-f0ghseit3183
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
