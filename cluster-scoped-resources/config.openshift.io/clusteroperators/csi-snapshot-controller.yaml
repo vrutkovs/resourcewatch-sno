@@ -53,7 +53,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "3969"
+  resourceVersion: "3997"
   uid: 87ca8bc5-390a-4c36-9f6d-e66a0cf49868
 spec: {}
 status:
@@ -66,14 +66,17 @@ status:
     status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:08:34Z"
-    message: 'CSISnapshotWebhookControllerProgressing: Waiting for Deployment to deploy
-      pods'
-    reason: CSISnapshotWebhookController_Deploying
+    message: |-
+      CSISnapshotControllerProgressing: Waiting for Deployment to deploy pods
+      CSISnapshotWebhookControllerProgressing: Waiting for Deployment to deploy pods
+    reason: CSISnapshotController_Deploying::CSISnapshotWebhookController_Deploying
     status: "True"
     type: Progressing
   - lastTransitionTime: "2023-03-08T12:08:34Z"
-    message: 'CSISnapshotWebhookControllerAvailable: Waiting for Deployment'
-    reason: CSISnapshotWebhookController_Deploying
+    message: |-
+      CSISnapshotControllerAvailable: Waiting for Deployment
+      CSISnapshotWebhookControllerAvailable: Waiting for Deployment
+    reason: CSISnapshotController_Deploying::CSISnapshotWebhookController_Deploying
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-08T12:08:34Z"
