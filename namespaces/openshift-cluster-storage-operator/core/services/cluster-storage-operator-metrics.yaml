@@ -7,6 +7,8 @@ metadata:
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
     service.alpha.openshift.io/serving-cert-secret-name: cluster-storage-operator-serving-cert
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678277316
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678277316
   creationTimestamp: "2023-03-08T12:25:46Z"
   labels:
     app: cluster-storage-operator-metrics
@@ -44,6 +46,16 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-08T12:25:46Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-08T12:25:46Z"
   name: cluster-storage-operator-metrics
   namespace: openshift-cluster-storage-operator
   ownerReferences:
@@ -52,7 +64,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "15623"
+  resourceVersion: "15657"
   uid: 97916ccc-a668-419a-b0de-6a556cb55071
 spec:
   clusterIP: 172.30.196.55
