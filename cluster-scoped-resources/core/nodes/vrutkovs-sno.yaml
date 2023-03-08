@@ -11,7 +11,7 @@ metadata:
     k8s.ovn.org/node-subnets: '{"default":["10.128.0.0/23"]}'
     machineconfiguration.openshift.io/controlPlaneTopology: SingleReplica
     machineconfiguration.openshift.io/currentConfig: rendered-master-ad65eb7af782515f818f50bde5963472
-    machineconfiguration.openshift.io/desiredConfig: rendered-master-ad65eb7af782515f818f50bde5963472
+    machineconfiguration.openshift.io/desiredConfig: rendered-master-be5e47e2eccbe758bba1ddd35139f110
     machineconfiguration.openshift.io/desiredDrain: uncordon-rendered-master-ad65eb7af782515f818f50bde5963472
     machineconfiguration.openshift.io/lastAppliedDrain: uncordon-rendered-master-ad65eb7af782515f818f50bde5963472
     machineconfiguration.openshift.io/reason: ""
@@ -94,7 +94,6 @@ metadata:
       f:metadata:
         f:annotations:
           f:machineconfiguration.openshift.io/currentConfig: {}
-          f:machineconfiguration.openshift.io/desiredConfig: {}
           f:machineconfiguration.openshift.io/desiredDrain: {}
           f:machineconfiguration.openshift.io/reason: {}
           f:machineconfiguration.openshift.io/state: {}
@@ -107,6 +106,7 @@ metadata:
       f:metadata:
         f:annotations:
           f:machineconfiguration.openshift.io/controlPlaneTopology: {}
+          f:machineconfiguration.openshift.io/desiredConfig: {}
           f:machineconfiguration.openshift.io/lastAppliedDrain: {}
         f:labels:
           f:node-role.kubernetes.io/worker: {}
@@ -116,7 +116,7 @@ metadata:
     operation: Update
     time: "2023-03-08T12:21:29Z"
   name: vrutkovs-sno
-  resourceVersion: "13382"
+  resourceVersion: "13386"
   uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
 spec:
   taints:
