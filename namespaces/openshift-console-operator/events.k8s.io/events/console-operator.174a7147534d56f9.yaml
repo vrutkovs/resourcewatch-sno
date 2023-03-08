@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:26:02Z"
 deprecatedLastTimestamp: "2023-03-08T12:26:02Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-08T12:26:02Z"
   name: console-operator.174a7147534d56f9
   namespace: openshift-console-operator
-  resourceVersion: "16824"
+  resourceVersion: "16828"
   uid: 5e0e2e63-a709-494a-925d-76621e80d739
 note: clusteroperator/console version "operator" changed from "" to "4.13.0-ec.4"
 reason: OperatorVersionChanged
