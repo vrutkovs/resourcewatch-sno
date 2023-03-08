@@ -89,6 +89,46 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-08T12:20:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.68"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:20:00Z"
   name: machine-config-server-6xx2r
   namespace: openshift-machine-config-operator
   ownerReferences:
@@ -98,7 +138,7 @@ metadata:
     kind: DaemonSet
     name: machine-config-server
     uid: 867f35f1-bccc-4212-914a-bf66ebaeda86
-  resourceVersion: "12236"
+  resourceVersion: "12241"
   uid: 62d4218e-8ef7-443f-abc8-8f27117068c9
 spec:
   affinity:
@@ -229,6 +269,38 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:20:00Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:20:00Z"
+    message: 'containers with unready status: [machine-config-server]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:20:00Z"
+    message: 'containers with unready status: [machine-config-server]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:20:00Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:cd809b4b9f05e02149e45956000e29f75db7c144a2275ead651b5fec951268f9
+    imageID: ""
+    lastState: {}
+    name: machine-config-server
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.68
   phase: Pending
+  podIP: 10.0.130.68
+  podIPs:
+  - ip: 10.0.130.68
   qosClass: Burstable
+  startTime: "2023-03-08T12:20:00Z"
