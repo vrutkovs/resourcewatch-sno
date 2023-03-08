@@ -456,14 +456,14 @@ metadata:
       f:status:
         f:currentNumberScheduled: {}
         f:desiredNumberScheduled: {}
+        f:numberAvailable: {}
         f:numberReady: {}
-        f:numberUnavailable: {}
         f:observedGeneration: {}
         f:updatedNumberScheduled: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:08:55Z"
+    time: "2023-03-08T12:08:56Z"
   name: ovnkube-master
   namespace: openshift-ovn-kubernetes
   ownerReferences:
@@ -473,7 +473,7 @@ metadata:
     kind: Network
     name: cluster
     uid: 33106962-b4cb-47dc-aa0e-5f6b7299dae3
-  resourceVersion: "4940"
+  resourceVersion: "4980"
   uid: 3028f449-b801-40d3-ab68-6b3606141543
 spec:
   revisionHistoryLimit: 10
@@ -1310,8 +1310,8 @@ spec:
 status:
   currentNumberScheduled: 1
   desiredNumberScheduled: 1
+  numberAvailable: 1
   numberMisscheduled: 0
-  numberReady: 0
-  numberUnavailable: 1
+  numberReady: 1
   observedGeneration: 1
   updatedNumberScheduled: 1
