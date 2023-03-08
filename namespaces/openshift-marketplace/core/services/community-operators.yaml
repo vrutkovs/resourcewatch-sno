@@ -1,0 +1,63 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-03-08T12:25:50Z"
+  labels:
+    olm.service-spec-hash: 59d9c65745
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:olm.service-spec-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"c9cc1158-883b-4fd9-896c-76bd200c122d"}: {}
+      f:spec:
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":50051,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: catalog
+    operation: Update
+    time: "2023-03-08T12:25:50Z"
+  name: community-operators
+  namespace: openshift-marketplace
+  ownerReferences:
+  - apiVersion: operators.coreos.com/v1alpha1
+    blockOwnerDeletion: false
+    controller: false
+    kind: CatalogSource
+    name: community-operators
+    uid: c9cc1158-883b-4fd9-896c-76bd200c122d
+  resourceVersion: "15911"
+  uid: 972f25b4-b109-48e0-8e26-62a48f595dd7
+spec:
+  clusterIP: 172.30.209.81
+  clusterIPs:
+  - 172.30.209.81
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: grpc
+    port: 50051
+    protocol: TCP
+    targetPort: 50051
+  selector:
+    olm.catalogSource: community-operators
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
