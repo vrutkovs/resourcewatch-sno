@@ -112,9 +112,9 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:27:01Z"
+    time: "2023-03-08T12:32:07Z"
   name: vrutkovs-sno
-  resourceVersion: "17647"
+  resourceVersion: "18838"
   uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
 spec: {}
 status:
@@ -138,25 +138,25 @@ status:
     memory: 16342536Ki
     pods: "250"
   conditions:
-  - lastHeartbeatTime: "2023-03-08T12:27:01Z"
+  - lastHeartbeatTime: "2023-03-08T12:32:07Z"
     lastTransitionTime: "2023-03-08T12:06:32Z"
     message: kubelet has sufficient memory available
     reason: KubeletHasSufficientMemory
     status: "False"
     type: MemoryPressure
-  - lastHeartbeatTime: "2023-03-08T12:27:01Z"
+  - lastHeartbeatTime: "2023-03-08T12:32:07Z"
     lastTransitionTime: "2023-03-08T12:06:32Z"
     message: kubelet has no disk pressure
     reason: KubeletHasNoDiskPressure
     status: "False"
     type: DiskPressure
-  - lastHeartbeatTime: "2023-03-08T12:27:01Z"
+  - lastHeartbeatTime: "2023-03-08T12:32:07Z"
     lastTransitionTime: "2023-03-08T12:06:32Z"
     message: kubelet has sufficient PID available
     reason: KubeletHasSufficientPID
     status: "False"
     type: PIDPressure
-  - lastHeartbeatTime: "2023-03-08T12:27:01Z"
+  - lastHeartbeatTime: "2023-03-08T12:32:07Z"
     lastTransitionTime: "2023-03-08T12:15:38Z"
     message: kubelet is posting ready status
     reason: KubeletReady
