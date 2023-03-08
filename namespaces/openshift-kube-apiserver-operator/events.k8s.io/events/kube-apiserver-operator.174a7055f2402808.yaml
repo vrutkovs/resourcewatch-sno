@@ -1,0 +1,53 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:45Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:45Z"
+deprecatedSource:
+  component: kube-apiserver-operator-status-controller-statussyncer_kube-apiserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:46Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-08T12:08:46Z"
+  name: kube-apiserver-operator.174a7055f2402808
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "4603"
+  uid: b89680d3-c374-43e8-b8b9-31f7417f7346
+note: 'Status for clusteroperator/kube-apiserver changed: Degraded message changed
+  from "NodeControllerDegraded: All master nodes are ready\nNodeKubeconfigControllerDegraded:
+  \"secret/node-kubeconfigs\": secret \"node-system-admin-client\" not found\nCertRotation_KubeControllerManagerClient_Degraded:
+  configmaps \"kube-control-plane-signer-ca\" already exists\nInstallerControllerDegraded:
+  missing required resources: [configmaps: aggregator-client-ca,check-endpoints-kubeconfig,client-ca,control-plane-node-kubeconfig,
+  secrets: check-endpoints-client-cert-key,control-plane-node-admin-client-cert-key,external-loadbalancer-serving-certkey,kubelet-client,localhost-serving-cert-certkey,node-kubeconfigs,service-network-serving-certkey,
+  configmaps: bound-sa-token-signing-certs-0,config-0,etcd-serving-ca-0,kube-apiserver-audit-policies-0,kube-apiserver-cert-syncer-kubeconfig-0,kube-apiserver-pod-0,kubelet-serving-ca-0,sa-token-signing-certs-0,
+  secrets: etcd-client-0,localhost-recovery-client-token-0,localhost-recovery-serving-certkey-0]"
+  to "NodeControllerDegraded: All master nodes are ready\nNodeKubeconfigControllerDegraded:
+  \"secret/node-kubeconfigs\": secret \"node-system-admin-client\" not found\nCertRotation_KubeControllerManagerClient_Degraded:
+  configmaps \"kube-control-plane-signer-ca\" already exists\nInstallerControllerDegraded:
+  missing required resources: [configmaps: aggregator-client-ca,client-ca,control-plane-node-kubeconfig,
+  secrets: check-endpoints-client-cert-key,control-plane-node-admin-client-cert-key,external-loadbalancer-serving-certkey,node-kubeconfigs,
+  configmaps: bound-sa-token-signing-certs-0,config-0,etcd-serving-ca-0,kube-apiserver-audit-policies-0,kube-apiserver-cert-syncer-kubeconfig-0,kube-apiserver-pod-0,kubelet-serving-ca-0,sa-token-signing-certs-0,
+  secrets: etcd-client-0,localhost-recovery-client-token-0,localhost-recovery-serving-certkey-0]"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: 1fb52cdd-6ee0-4905-bac5-c1d2936c403a
+type: Normal
