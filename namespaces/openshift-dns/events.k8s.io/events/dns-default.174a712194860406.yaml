@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-08T12:23:20Z"
-deprecatedLastTimestamp: "2023-03-08T12:23:21Z"
+deprecatedLastTimestamp: "2023-03-08T12:33:20Z"
 deprecatedSource:
   component: endpoint-slice-controller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-08T12:23:21Z"
+    time: "2023-03-08T12:33:20Z"
   name: dns-default.174a712194860406
   namespace: openshift-dns
-  resourceVersion: "14678"
+  resourceVersion: "19036"
   uid: 1961e250-fc5e-4f9a-8d77-7b9c9555f39a
 note: 'Insufficient Node information: allocatable CPU or zone not specified on one
   or more nodes, addressType: IPv4'
