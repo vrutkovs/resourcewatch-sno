@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:20:05Z"
+deprecatedLastTimestamp: "2023-03-08T12:20:05Z"
+deprecatedSource:
+  component: cluster-monitoring-operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:20:05Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: operator
+    operation: Update
+    time: "2023-03-08T12:20:05Z"
+  name: cluster-monitoring-operator.174a70f4487bf0bf
+  namespace: openshift-monitoring
+  resourceVersion: "12386"
+  uid: c93423f1-4bbe-4fef-8685-5f1a2bb1b9f6
+note: Created ServiceAccount/kube-state-metrics -n openshift-monitoring because it
+  was missing
+reason: ServiceAccountCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: cluster-monitoring-operator
+  namespace: openshift-monitoring
+  uid: 0227b773-3a3b-42b1-b3fb-56a3b6ae8996
+type: Normal
