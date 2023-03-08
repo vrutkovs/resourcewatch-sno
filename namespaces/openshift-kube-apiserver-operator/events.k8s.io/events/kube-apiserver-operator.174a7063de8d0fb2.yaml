@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-08T12:09:45Z"
 deprecatedLastTimestamp: "2023-03-08T12:09:52Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-08T12:09:52Z"
   name: kube-apiserver-operator.174a7063de8d0fb2
   namespace: openshift-kube-apiserver-operator
-  resourceVersion: "5753"
+  resourceVersion: "5755"
   uid: 391de3ed-1ddd-408e-ab23-004429e636d5
 note: new revision 2 triggered by "configmap \"kube-apiserver-pod\" not found"
 reason: RevisionTriggered
