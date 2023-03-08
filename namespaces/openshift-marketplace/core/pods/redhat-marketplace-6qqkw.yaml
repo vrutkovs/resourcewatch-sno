@@ -145,8 +145,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -159,8 +157,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -176,7 +172,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:26:21Z"
+    time: "2023-03-08T12:26:31Z"
   name: redhat-marketplace-6qqkw
   namespace: openshift-marketplace
   ownerReferences:
@@ -186,7 +182,7 @@ metadata:
     kind: CatalogSource
     name: redhat-marketplace
     uid: 81aa62a2-4d66-4e9e-bff6-5061e56ed9dc
-  resourceVersion: "17283"
+  resourceVersion: "17410"
   uid: 1db89da3-c9a9-49e0-aee4-477216208aad
 spec:
   containers:
@@ -310,16 +306,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:25:50Z"
-    message: 'containers with unready status: [registry-server]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:26:30Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:25:50Z"
-    message: 'containers with unready status: [registry-server]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:26:30Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:25:50Z"
@@ -331,7 +323,7 @@ status:
     imageID: registry.redhat.io/redhat/redhat-marketplace-index@sha256:5b32b791552c600a0dd74377ef6f62f65833fa7f898dd4bc8cf3f18a879cd71c
     lastState: {}
     name: registry-server
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
