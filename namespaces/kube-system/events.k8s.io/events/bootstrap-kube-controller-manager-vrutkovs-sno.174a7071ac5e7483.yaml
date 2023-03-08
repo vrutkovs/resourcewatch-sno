@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:10:44Z"
+deprecatedLastTimestamp: "2023-03-08T12:10:44Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:11:47Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:11:47Z"
+  name: bootstrap-kube-controller-manager-vrutkovs-sno.174a7071ac5e7483
+  namespace: kube-system
+  resourceVersion: "6213"
+  uid: a65fde01-535f-4c1a-9920-ed5831ac1e00
+note: 'Startup probe failed: Get "https://10.0.130.68:10257/healthz": net/http: request
+  canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)'
+reason: Unhealthy
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-controller-manager}
+  kind: Pod
+  name: bootstrap-kube-controller-manager-vrutkovs-sno
+  namespace: kube-system
+  uid: fd20a8c3c9a3aec4c2b1a2b78405cbbe
+type: Warning
