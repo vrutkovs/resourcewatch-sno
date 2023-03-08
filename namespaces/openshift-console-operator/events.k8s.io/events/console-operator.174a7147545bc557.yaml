@@ -1,0 +1,47 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:26:02Z"
+deprecatedLastTimestamp: "2023-03-08T12:26:02Z"
+deprecatedSource:
+  component: console-operator-status-controller-statussyncer_console
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:26:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: console
+    operation: Update
+    time: "2023-03-08T12:26:02Z"
+  name: console-operator.174a7147545bc557
+  namespace: openshift-console-operator
+  resourceVersion: "16826"
+  uid: a13bc66b-72c1-4bbb-aaec-775542206ecf
+note: 'Status for clusteroperator/console changed: Degraded set to Unknown (""),Progressing
+  set to Unknown (""),Available set to Unknown (""),Upgradeable set to Unknown (""),status.relatedObjects
+  changed from [] to [{"operator.openshift.io" "consoles" "" "cluster"} {"config.openshift.io"
+  "consoles" "" "cluster"} {"config.openshift.io" "infrastructures" "" "cluster"}
+  {"config.openshift.io" "proxies" "" "cluster"} {"config.openshift.io" "oauths" ""
+  "cluster"} {"oauth.openshift.io" "oauthclients" "" "console"} {"" "namespaces" ""
+  "openshift-console-operator"} {"" "namespaces" "" "openshift-console"} {"" "configmaps"
+  "openshift-config-managed" "console-public"}],status.versions changed from [] to
+  [{"operator" "4.13.0-ec.4"}]'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: console-operator
+  namespace: openshift-console-operator
+  uid: cd6675f2-37d9-47c1-ab17-048b428d3cd8
+type: Normal
