@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-08T12:08:28Z"
 deprecatedLastTimestamp: "2023-03-08T12:08:28Z"
 deprecatedSource:
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-apiserver-operator
     operation: Update
-    time: "2023-03-08T12:08:32Z"
+    time: "2023-03-08T12:08:33Z"
   name: kube-apiserver-operator.174a7051fd3357f7
   namespace: openshift-kube-apiserver-operator
-  resourceVersion: "3389"
+  resourceVersion: "3405"
   uid: c2b94567-1d95-42f1-a345-9b2206df2ab9
 note: '"kube-control-plane-signer-ca" in "openshift-kube-apiserver-operator" requires
   a new cert'
