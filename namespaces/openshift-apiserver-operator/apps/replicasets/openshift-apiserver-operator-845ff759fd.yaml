@@ -148,10 +148,8 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
@@ -166,7 +164,7 @@ metadata:
     kind: Deployment
     name: openshift-apiserver-operator
     uid: 9a0bfab6-0f01-4cc5-b5e3-bffab49028c1
-  resourceVersion: "3426"
+  resourceVersion: "11141"
   uid: 20e203d8-6c68-442c-903d-9f91d98902d6
 spec:
   replicas: 1
@@ -261,8 +259,6 @@ spec:
           name: openshift-apiserver-operator-config
         name: config
 status:
-  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
-  readyReplicas: 1
   replicas: 1
