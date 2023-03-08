@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:21:23Z"
-deprecatedLastTimestamp: "2023-03-08T12:21:23Z"
+deprecatedLastTimestamp: "2023-03-08T12:21:24Z"
 deprecatedSource:
   component: kube-apiserver-operator-config-observer-configobserver
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-apiserver-operator
     operation: Update
-    time: "2023-03-08T12:21:23Z"
+    time: "2023-03-08T12:21:24Z"
   name: kube-apiserver-operator.174a7106856c4976
   namespace: openshift-kube-apiserver-operator
-  resourceVersion: "13250"
+  resourceVersion: "13259"
   uid: 963aa6b3-b58a-43ac-9c46-7ade054da397
 note: "Writing updated observed config:   map[string]any{\n  \t\"admission\":          map[string]any{\"pluginConfig\":
   map[string]any{\"PodSecurity\": map[string]any{\"configuration\": map[string]any{\"defaults\":
