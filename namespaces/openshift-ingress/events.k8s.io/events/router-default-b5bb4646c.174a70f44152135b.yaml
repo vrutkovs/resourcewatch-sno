@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-08T12:20:05Z"
-deprecatedLastTimestamp: "2023-03-08T12:20:05Z"
+deprecatedLastTimestamp: "2023-03-08T12:20:15Z"
 deprecatedSource:
   component: replicaset-controller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-08T12:20:05Z"
+    time: "2023-03-08T12:20:15Z"
   name: router-default-b5bb4646c.174a70f44152135b
   namespace: openshift-ingress
-  resourceVersion: "12372"
+  resourceVersion: "12742"
   uid: d38b68bb-4de6-405f-b72f-6e736c957a3d
 note: 'Error creating: pods "router-default-b5bb4646c-" is forbidden: error fetching
   namespace "openshift-ingress": unable to find annotation openshift.io/sa.scc.uid-range'
