@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:19:47Z"
+deprecatedLastTimestamp: "2023-03-08T12:19:47Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:19:48Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-08T12:19:48Z"
+  name: network-metrics-daemon-7fnkm.174a70eff4e3ec89
+  namespace: openshift-multus
+  resourceVersion: "11609"
+  uid: 3e47a3bb-bf4a-48fd-b7d7-f8176d177965
+note: Created container network-metrics-daemon
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{network-metrics-daemon}
+  kind: Pod
+  name: network-metrics-daemon-7fnkm
+  namespace: openshift-multus
+  resourceVersion: "3066"
+  uid: 23e8095e-6099-47c5-ac25-494fb8aa3700
+type: Normal
