@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-08T12:08:34Z"
+deprecatedLastTimestamp: "2023-03-08T12:08:34Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-nodecontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-08T12:08:35Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-08T12:08:35Z"
+  name: etcd-operator.174a70536ffbd383
+  namespace: openshift-etcd-operator
+  resourceVersion: "3780"
+  uid: 51199526-bbe2-4c4b-9021-d18be7c2d56a
+note: Observed new master node vrutkovs-sno
+reason: MasterNodeObserved
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 7c43379a-6a36-4015-adb4-fd13f2117c5e
+type: Normal
