@@ -295,8 +295,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -315,8 +313,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -332,7 +328,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:17:43Z"
+    time: "2023-03-08T12:17:44Z"
   name: kube-controller-manager-vrutkovs-sno
   namespace: openshift-kube-controller-manager
   ownerReferences:
@@ -341,7 +337,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 7ba64a87-d15f-47ca-ae90-36dfe6a9c47e
-  resourceVersion: "7893"
+  resourceVersion: "7894"
   uid: 1855f52b-8103-4cb1-a237-f58334c73140
 spec:
   containers:
@@ -578,16 +574,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:16:22Z"
-    message: 'containers with unready status: [cluster-policy-controller]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:17:44Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:16:22Z"
-    message: 'containers with unready status: [cluster-policy-controller]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:17:44Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:15:28Z"
@@ -629,7 +621,7 @@ status:
         reason: Error
         startedAt: "2023-03-08T12:16:34Z"
     name: cluster-policy-controller
-    ready: false
+    ready: true
     restartCount: 1
     started: true
     state:
