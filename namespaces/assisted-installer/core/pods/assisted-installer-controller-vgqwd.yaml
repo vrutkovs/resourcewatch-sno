@@ -172,6 +172,43 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-08T12:00:22Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.68"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:06:46Z"
   name: assisted-installer-controller-vgqwd
   namespace: assisted-installer
   ownerReferences:
@@ -181,7 +218,7 @@ metadata:
     kind: Job
     name: assisted-installer-controller
     uid: a77f09c5-73a7-48c2-84ab-2b1c0412b81d
-  resourceVersion: "568"
+  resourceVersion: "2556"
   uid: 173b810b-7fda-4f59-a37e-0a89b9deb93a
 spec:
   containers:
@@ -263,6 +300,7 @@ spec:
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
   hostNetwork: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -337,10 +375,37 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:00:22Z"
-    message: no nodes available to schedule pods
-    reason: Unschedulable
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:06:38Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:06:46Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:06:46Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-08T12:06:32Z"
+    status: "True"
     type: PodScheduled
-  phase: Pending
+  containerStatuses:
+  - containerID: cri-o://ff59c9fa366122a6d6a13ec8eb8499ef26372dad40f9b4d2eca215ab142313e9
+    image: registry.redhat.io/rhai-tech-preview/assisted-installer-reporter-rhel8:v1.0.0-320
+    imageID: registry.redhat.io/rhai-tech-preview/assisted-installer-reporter-rhel8@sha256:8c028c7c9f63a5a2b5e1cebd3c0db7414371bf162275d9bc169bd311fbc5343b
+    lastState: {}
+    name: assisted-installer-controller
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-08T12:06:46Z"
+  hostIP: 10.0.130.68
+  phase: Running
+  podIP: 10.0.130.68
+  podIPs:
+  - ip: 10.0.130.68
   qosClass: BestEffort
+  startTime: "2023-03-08T12:06:38Z"
