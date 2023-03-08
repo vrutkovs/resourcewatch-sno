@@ -228,40 +228,6 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"ContainersReady"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Initialized"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Ready"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:containerStatuses: {}
-        f:hostIP: {}
-        f:startTime: {}
-    manager: kubelet
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:20:11Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:metadata:
         f:annotations:
           f:k8s.v1.cni.cncf.io/network-status: {}
@@ -278,6 +244,43 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-08T12:20:11Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.68"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:20:15Z"
   name: telemeter-client-78868b7d66-8r8kh
   namespace: openshift-monitoring
   ownerReferences:
@@ -287,7 +290,7 @@ metadata:
     kind: ReplicaSet
     name: telemeter-client-78868b7d66
     uid: 48683240-83e3-48c3-8870-c8bdf9930063
-  resourceVersion: "12697"
+  resourceVersion: "12737"
   uid: 71f3f94f-b482-4116-b08b-76938e3e6703
 spec:
   containers:
@@ -652,53 +655,55 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:20:11Z"
-    message: 'containers with unready status: [telemeter-client reload kube-rbac-proxy]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:20:15Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:20:11Z"
-    message: 'containers with unready status: [telemeter-client reload kube-rbac-proxy]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:20:15Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:20:11Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
-    imageID: ""
+  - containerID: cri-o://850f1d8d88954afa76da21283337cff87691dfeab45fa14248378d37abf03380
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:eef3d1894656818ad393df61d3713115dce777e113b781c1d01bc285ee56ca2c
     lastState: {}
     name: kube-rbac-proxy
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3c97acac3647a99a40d57710a0ec697458c400421730e1a676111beda7caf958
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:20:14Z"
+  - containerID: cri-o://a653238484e6aba62649f004caec24cc8966e16f6b61af154903451d4b481e64
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3c97acac3647a99a40d57710a0ec697458c400421730e1a676111beda7caf958
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3c97acac3647a99a40d57710a0ec697458c400421730e1a676111beda7caf958
     lastState: {}
     name: reload
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3913aff97167c9c482eedb6b3576595856f399550ab69efeb2d2287a5640bbdd
-    imageID: ""
+      running:
+        startedAt: "2023-03-08T12:20:14Z"
+  - containerID: cri-o://4bce5d4ecd40cbe93ef7cd56f5ea463023e93e968e8639302ebc0982558a23ce
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3913aff97167c9c482eedb6b3576595856f399550ab69efeb2d2287a5640bbdd
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:3913aff97167c9c482eedb6b3576595856f399550ab69efeb2d2287a5640bbdd
     lastState: {}
     name: telemeter-client
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-08T12:20:13Z"
   hostIP: 10.0.130.68
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.68
+  podIPs:
+  - ip: 10.128.0.68
   qosClass: Burstable
   startTime: "2023-03-08T12:20:11Z"
