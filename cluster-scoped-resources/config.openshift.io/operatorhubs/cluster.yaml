@@ -37,18 +37,21 @@ metadata:
     manager: marketplace-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:19:53Z"
+    time: "2023-03-08T12:23:27Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "11773"
+  resourceVersion: "14754"
   uid: 8e4ff39a-30c7-4d85-b2c3-c0d971bcc48c
 spec: {}
 status:
   sources:
+  - disabled: false
+    name: redhat-marketplace
+    status: Success
   - disabled: false
     name: redhat-operators
     status: Success
@@ -57,7 +60,4 @@ status:
     status: Success
   - disabled: false
     name: community-operators
-    status: Success
-  - disabled: false
-    name: redhat-marketplace
     status: Success
