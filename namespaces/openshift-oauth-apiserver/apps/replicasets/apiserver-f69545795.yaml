@@ -8,7 +8,7 @@ metadata:
     openshiftapiservers.operator.openshift.io/operator-pull-spec: ""
     operator.openshift.io/spec-hash: 21baffca36f8f3a33b1dff61f2a0c3afe6fa9c6471d692824aea32c9cf9902af
   creationTimestamp: "2023-03-08T12:08:43Z"
-  generation: 1
+  generation: 2
   labels:
     apiserver: "true"
     app: openshift-oauth-apiserver
@@ -16,6 +16,24 @@ metadata:
     pod-template-hash: f69545795
     revision: "0"
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ReplicaFailure"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-08T12:08:43Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -240,25 +258,7 @@ metadata:
                 f:name: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-08T12:08:43Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          .: {}
-          k:{"type":"ReplicaFailure"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:observedGeneration: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-08T12:08:43Z"
+    time: "2023-03-08T12:08:58Z"
   name: apiserver-f69545795
   namespace: openshift-oauth-apiserver
   ownerReferences:
@@ -268,10 +268,10 @@ metadata:
     kind: Deployment
     name: apiserver
     uid: 9f1c69da-0c8f-4247-852b-84e6f6d1c131
-  resourceVersion: "4400"
+  resourceVersion: "5035"
   uid: 0ffb262b-14c4-4d45-bf0d-769eff255d4c
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       apiserver: "true"
