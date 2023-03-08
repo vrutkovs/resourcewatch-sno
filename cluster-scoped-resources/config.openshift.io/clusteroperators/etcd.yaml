@@ -44,7 +44,7 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-08T12:09:43Z"
+    time: "2023-03-08T12:09:44Z"
   name: etcd
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "5639"
+  resourceVersion: "5654"
   uid: 88149466-b942-47f3-acfa-6cc1930e9bbe
 spec: {}
 status:
@@ -64,7 +64,6 @@ status:
       EtcdMembersControllerDegraded: Operation cannot be fulfilled on etcds.operator.openshift.io "cluster": the object has been modified; please apply your changes to the latest version and try again
       EtcdMembersDegraded: No unhealthy members found
       EtcdEndpointsDegraded: no etcd members are present
-      BootstrapTeardownDegraded: error while updating NotEnoughEtcdMembers: Operation cannot be fulfilled on etcds.operator.openshift.io "cluster": the object has been modified; please apply your changes to the latest version and try again
     reason: AsExpected
     status: "False"
     type: Degraded
