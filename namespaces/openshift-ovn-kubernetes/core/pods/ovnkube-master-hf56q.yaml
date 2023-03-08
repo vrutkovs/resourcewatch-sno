@@ -563,8 +563,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -577,8 +575,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -594,7 +590,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-08T12:08:11Z"
+    time: "2023-03-08T12:08:12Z"
   name: ovnkube-master-hf56q
   namespace: openshift-ovn-kubernetes
   ownerReferences:
@@ -604,7 +600,7 @@ metadata:
     kind: DaemonSet
     name: ovnkube-master
     uid: 3028f449-b801-40d3-ab68-6b3606141543
-  resourceVersion: "3063"
+  resourceVersion: "3073"
   uid: 2fb62bbd-46b6-4a90-bda4-a5303cf8406e
 spec:
   affinity:
@@ -1482,16 +1478,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:06:59Z"
-    message: 'containers with unready status: [nbdb]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:08:12Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-08T12:06:59Z"
-    message: 'containers with unready status: [nbdb]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-08T12:08:12Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-08T12:06:59Z"
@@ -1514,7 +1506,7 @@ status:
     imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:732998187682349eafb8e4bc5cbc11a0d87609a9ee5c6ad5aff27f8ced333373
     lastState: {}
     name: nbdb
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
