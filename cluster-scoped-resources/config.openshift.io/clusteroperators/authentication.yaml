@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: df6fb9e8-7fcf-4dfa-9adc-ffb076bfb757
-  resourceVersion: "8326"
+  resourceVersion: "8336"
   uid: 8ccbce32-2dad-4f2c-a1aa-bb1c9755f3f9
 spec: {}
 status:
@@ -65,9 +65,9 @@ status:
       OAuthServerServiceEndpointAccessibleControllerDegraded: Get "https://172.30.76.170:443/healthz": dial tcp 172.30.76.170:443: connect: connection refused
       OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth service endpoints are not ready
       RouterCertsDegraded: neither the custom secret/v4-0-config-system-router-certs -n openshift-authentication or default secret/v4-0-config-system-custom-router-certs -n openshift-authentication could be retrieved: secret "v4-0-config-system-router-certs" not found
-      SystemServiceCAConfigDegraded: Config "v4-0-config-system-service-ca" has no service CA data
+      SystemServiceCAConfigDegraded: Failed to get system serving cert secret "v4-0-config-system-serving-cert": secret "v4-0-config-system-serving-cert" not found
       WebhookAuthenticatorControllerDegraded: failed to read service-ca crt bundle: open /var/run/configmaps/service-ca-bundle/service-ca.crt: no such file or directory
-    reason: APIServerDeployment_UnavailablePod::IngressStateEndpoints_MissingSubsets::OAuthServerConfigObservation_Error::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError::RouterCerts_NoRouterCertSecret::SystemServiceCAConfig_MissingCA::WebhookAuthenticatorController_SyncError
+    reason: APIServerDeployment_UnavailablePod::IngressStateEndpoints_MissingSubsets::OAuthServerConfigObservation_Error::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError::RouterCerts_NoRouterCertSecret::SystemServiceCAConfig_MissingSystemServingCert::WebhookAuthenticatorController_SyncError
     status: "True"
     type: Degraded
   - lastTransitionTime: "2023-03-08T12:17:48Z"
