@@ -183,13 +183,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-08T12:17:48Z"
+    time: "2023-03-08T12:18:01Z"
   name: controller-manager-748bb6cfc8
   namespace: openshift-controller-manager
   ownerReferences:
@@ -199,7 +201,7 @@ metadata:
     kind: Deployment
     name: controller-manager
     uid: a8efd566-f552-482c-bb79-dec1a75042e2
-  resourceVersion: "8048"
+  resourceVersion: "8738"
   uid: 40959c94-e6da-424a-bab0-58c109cb90d4
 spec:
   replicas: 1
@@ -332,6 +334,8 @@ spec:
           name: openshift-global-ca
         name: proxy-ca-bundles
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 2
+  readyReplicas: 1
   replicas: 1
