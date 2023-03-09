@@ -489,7 +489,7 @@ metadata:
     kind: DaemonSet
     name: ovnkube-node
     uid: 8b6ad0dc-8208-4b89-9ad9-f44d3b557593
-  resourceVersion: "2767"
+  resourceVersion: "2768"
   uid: db94c2b8-7410-40a2-990d-f725713e7562
 spec:
   affinity:
@@ -887,6 +887,7 @@ spec:
   enableServiceLinks: true
   hostNetwork: true
   hostPID: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     beta.kubernetes.io/os: linux
   preemptionPolicy: PreemptLowerPriority
@@ -999,5 +1000,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:33Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
