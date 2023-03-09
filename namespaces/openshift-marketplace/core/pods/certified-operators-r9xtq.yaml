@@ -149,6 +149,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -161,6 +163,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -176,7 +180,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:33:55Z"
+    time: "2023-03-09T14:33:59Z"
   name: certified-operators-r9xtq
   namespace: openshift-marketplace
   ownerReferences:
@@ -186,7 +190,7 @@ metadata:
     kind: CatalogSource
     name: certified-operators
     uid: 7b4ab0f1-7ce4-4a55-8456-68080033fbee
-  resourceVersion: "16679"
+  resourceVersion: "16701"
   uid: 43488ef5-2973-4f49-85e9-9bfc59f6f35b
 spec:
   containers:
@@ -312,12 +316,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:33:55Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:33:59Z"
+    message: 'containers with unready status: [registry-server]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:33:55Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:33:59Z"
+    message: 'containers with unready status: [registry-server]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:33:44Z"
@@ -329,11 +337,15 @@ status:
     imageID: registry.redhat.io/redhat/certified-operator-index@sha256:3bb1c8f2f14003577ac4a2a1aa5f4ae0fb2f1c07c37c06070cb8273b4bf26f2c
     lastState: {}
     name: registry-server
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://b911214962655baa1f1f069a7d127a61d490fa35a8876a5f748901f6958027bb
+        exitCode: 0
+        finishedAt: "2023-03-09T14:33:58Z"
+        reason: Completed
         startedAt: "2023-03-09T14:33:48Z"
   hostIP: 10.0.130.93
   phase: Running
