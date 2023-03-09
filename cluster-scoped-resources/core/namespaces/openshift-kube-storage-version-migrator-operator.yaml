@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    openshift.io/node-selector: ""
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2023-03-09T14:14:44Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-kube-storage-version-migrator-operator
+    openshift.io/cluster-monitoring: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/cluster-monitoring: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b7590f0c-c37f-44e0-80d3-7b5df1e0e187"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-09T14:14:44Z"
+  name: openshift-kube-storage-version-migrator-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
+  resourceVersion: "1053"
+  uid: 0c38c7c9-acbc-48da-8f7b-bfbcd8e05d86
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
