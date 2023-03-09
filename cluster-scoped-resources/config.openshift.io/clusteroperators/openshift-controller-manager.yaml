@@ -40,10 +40,11 @@ metadata:
       f:status:
         f:conditions: {}
         f:relatedObjects: {}
+        f:versions: {}
     manager: cluster-openshift-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:30:45Z"
+    time: "2023-03-09T14:31:24Z"
   name: openshift-controller-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -51,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10769"
+  resourceVersion: "13004"
   uid: cb36378d-79fb-4403-a457-c380addd90d6
 spec: {}
 status:
@@ -61,17 +62,15 @@ status:
     reason: AsExpected
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:23:01Z"
-    message: |-
-      Progressing: deployment/controller-manager: available replicas is 0, desired available replicas > 1
-      Progressing: deployment/route-controller-manager: available replicas is 0, desired available replicas > 1
-    reason: _DesiredStateNotYetAchieved
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-09T14:23:01Z"
-    message: 'Available: no pods available on any node.'
-    reason: _NoPodsAvailable
+  - lastTransitionTime: "2023-03-09T14:31:24Z"
+    message: All is well
+    reason: AsExpected
     status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-03-09T14:31:24Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:23:01Z"
     message: All is well
@@ -98,3 +97,6 @@ status:
   - group: ""
     name: openshift-route-controller-manager
     resource: namespaces
+  versions:
+  - name: operator
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
