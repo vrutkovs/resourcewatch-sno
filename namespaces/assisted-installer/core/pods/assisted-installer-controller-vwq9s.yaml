@@ -1,0 +1,321 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    openshift.io/scc: hostaccess
+  creationTimestamp: "2023-03-09T14:14:30Z"
+  finalizers:
+  - batch.kubernetes.io/job-tracking
+  generateName: assisted-installer-controller-
+  labels:
+    app: assisted-installer-controller
+    controller-uid: f5a4e959-715f-4436-8272-3a0acf078c12
+    job-name: assisted-installer-controller
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"batch.kubernetes.io/job-tracking": {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:controller-uid: {}
+          f:job-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f5a4e959-715f-4436-8272-3a0acf078c12"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"assisted-installer-controller"}:
+            .: {}
+            f:env:
+              .: {}
+              k:{"name":"CA_CERT_PATH"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:configMapKeyRef: {}
+              k:{"name":"CHECK_CLUSTER_VERSION"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:configMapKeyRef: {}
+              k:{"name":"CLUSTER_ID"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:configMapKeyRef: {}
+              k:{"name":"HIGH_AVAILABILITY_MODE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:configMapKeyRef: {}
+              k:{"name":"INVENTORY_URL"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:configMapKeyRef: {}
+              k:{"name":"MUST_GATHER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:configMapKeyRef: {}
+              k:{"name":"OPENSHIFT_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PULL_SECRET_TOKEN"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:secretKeyRef: {}
+              k:{"name":"SKIP_CERT_VERIFICATION"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:configMapKeyRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/pki"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/tmp/bootstrap-secrets"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/tmp/host-resolv.conf"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/tmp/var-run-resolv.conf"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:nodeSelector: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"host-ca-bundle"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"host-resolv-conf"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"host-var-run-resolv-conf"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"sno-bootstrap-files"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:14:30Z"
+  name: assisted-installer-controller-vwq9s
+  namespace: assisted-installer
+  ownerReferences:
+  - apiVersion: batch/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Job
+    name: assisted-installer-controller
+    uid: f5a4e959-715f-4436-8272-3a0acf078c12
+  resourceVersion: "576"
+  uid: bf338db4-906a-4d43-be22-8959360a0341
+spec:
+  containers:
+  - env:
+    - name: CLUSTER_ID
+      valueFrom:
+        configMapKeyRef:
+          key: cluster-id
+          name: assisted-installer-controller-config
+    - name: INVENTORY_URL
+      valueFrom:
+        configMapKeyRef:
+          key: inventory-url
+          name: assisted-installer-controller-config
+    - name: PULL_SECRET_TOKEN
+      valueFrom:
+        secretKeyRef:
+          key: pull-secret-token
+          name: assisted-installer-controller-secret
+    - name: CA_CERT_PATH
+      valueFrom:
+        configMapKeyRef:
+          key: ca-cert-path
+          name: assisted-installer-controller-config
+          optional: true
+    - name: SKIP_CERT_VERIFICATION
+      valueFrom:
+        configMapKeyRef:
+          key: skip-cert-verification
+          name: assisted-installer-controller-config
+          optional: true
+    - name: OPENSHIFT_VERSION
+      value: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+    - name: HIGH_AVAILABILITY_MODE
+      valueFrom:
+        configMapKeyRef:
+          key: high-availability-mode
+          name: assisted-installer-controller-config
+          optional: true
+    - name: CHECK_CLUSTER_VERSION
+      valueFrom:
+        configMapKeyRef:
+          key: check-cluster-version
+          name: assisted-installer-controller-config
+          optional: true
+    - name: MUST_GATHER_IMAGE
+      valueFrom:
+        configMapKeyRef:
+          key: must-gather-image
+          name: assisted-installer-controller-config
+          optional: true
+    image: quay.io/edge-infrastructure/assisted-installer-controller:latest
+    imagePullPolicy: IfNotPresent
+    name: assisted-installer-controller
+    resources: {}
+    securityContext:
+      capabilities:
+        drop:
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+      runAsNonRoot: true
+      runAsUser: 1000120000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/pki
+      name: host-ca-bundle
+    - mountPath: /tmp/var-run-resolv.conf
+      name: host-var-run-resolv-conf
+    - mountPath: /tmp/host-resolv.conf
+      name: host-resolv-conf
+    - mountPath: /tmp/bootstrap-secrets
+      name: sno-bootstrap-files
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-6m65r
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: OnFailure
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000120000
+    seLinuxOptions:
+      level: s0:c11,c5
+  serviceAccount: assisted-installer-controller
+  serviceAccountName: assisted-installer-controller
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/network-unavailable
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - hostPath:
+      path: /etc/pki
+      type: ""
+    name: host-ca-bundle
+  - hostPath:
+      path: /var/run/NetworkManager/resolv.conf
+      type: ""
+    name: host-var-run-resolv-conf
+  - hostPath:
+      path: /etc/resolv.conf
+      type: ""
+    name: host-resolv-conf
+  - hostPath:
+      path: /etc/kubernetes/bootstrap-secrets
+      type: ""
+    name: sno-bootstrap-files
+  - name: kube-api-access-6m65r
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  phase: Pending
+  qosClass: BestEffort
