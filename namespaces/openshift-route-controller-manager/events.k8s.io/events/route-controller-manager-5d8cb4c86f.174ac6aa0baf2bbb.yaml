@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:30:44Z"
+deprecatedLastTimestamp: "2023-03-09T14:30:44Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:30:44Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:30:44Z"
+  name: route-controller-manager-5d8cb4c86f.174ac6aa0baf2bbb
+  namespace: openshift-route-controller-manager
+  resourceVersion: "10674"
+  uid: 419593dc-8e82-4951-bc63-f631d5c30c9b
+note: 'Created pod: route-controller-manager-5d8cb4c86f-hqcjk'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: route-controller-manager-5d8cb4c86f
+  namespace: openshift-route-controller-manager
+  resourceVersion: "10659"
+  uid: 3236f8a6-c684-4a31-bf11-af2c7573d287
+type: Normal
