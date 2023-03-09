@@ -1,0 +1,83 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    service.beta.openshift.io/serving-cert-secret-name: cluster-autoscaler-operator-cert
+  creationTimestamp: "2023-03-09T14:28:45Z"
+  labels:
+    k8s-app: cluster-autoscaler-operator
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:service.beta.openshift.io/serving-cert-secret-name: {}
+        f:labels:
+          .: {}
+          f:k8s-app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b7590f0c-c37f-44e0-80d3-7b5df1e0e187"}: {}
+      f:spec:
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":443,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+          k:{"port":9192,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-09T14:28:45Z"
+  name: cluster-autoscaler-operator
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
+  resourceVersion: "8313"
+  uid: 15ffab68-874c-479b-9fc3-0eaa12765adf
+spec:
+  clusterIP: 172.30.140.225
+  clusterIPs:
+  - 172.30.140.225
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: https
+    port: 443
+    protocol: TCP
+    targetPort: 8443
+  - name: metrics
+    port: 9192
+    protocol: TCP
+    targetPort: metrics
+  selector:
+    k8s-app: cluster-autoscaler-operator
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
