@@ -123,7 +123,7 @@ metadata:
     kind: DaemonSet
     name: network-metrics-daemon
     uid: b9694f0c-0704-4642-ba1c-a72a1e8215fd
-  resourceVersion: "2601"
+  resourceVersion: "2602"
   uid: 775eae44-5277-44da-82fb-8e276826522c
 spec:
   affinity:
@@ -189,6 +189,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     kubernetes.io/os: linux
   preemptionPolicy: PreemptLowerPriority
@@ -233,5 +234,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:24Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
