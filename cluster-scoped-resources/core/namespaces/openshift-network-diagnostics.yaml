@@ -10,6 +10,7 @@ metadata:
   creationTimestamp: "2023-03-09T14:20:33Z"
   labels:
     kubernetes.io/metadata.name: openshift-network-diagnostics
+    olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: ""
     openshift.io/cluster-monitoring: "true"
   managedFields:
   - apiVersion: v1
@@ -37,6 +38,15 @@ metadata:
     manager: cluster-policy-controller
     operation: Update
     time: "2023-03-09T14:20:33Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: {}
+    manager: olm
+    operation: Update
+    time: "2023-03-09T14:29:17Z"
   name: openshift-network-diagnostics
   ownerReferences:
   - apiVersion: operator.openshift.io/v1
@@ -45,7 +55,7 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "2782"
+  resourceVersion: "9606"
   uid: cd484595-4da7-430c-a766-e47d147256cb
 spec:
   finalizers:
