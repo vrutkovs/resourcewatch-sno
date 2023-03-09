@@ -28,15 +28,35 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:42Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:readyReplicas: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:00Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1008"
+  resourceVersion: "3633"
   uid: e3da0174-daf2-4d9e-b232-e5e61f76793b
 spec:
   logLevel: Normal
   managementState: Managed
   operatorLogLevel: Normal
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    message: 'getting cache client could not retrieve endpoints: configmaps lister
+      not synced'
+    reason: ErrorUpdatingReportEtcdMembers
+    status: "True"
+    type: EtcdMembersControllerDegraded
+  readyReplicas: 0
