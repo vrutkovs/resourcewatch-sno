@@ -176,10 +176,8 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
@@ -194,7 +192,7 @@ metadata:
     kind: Deployment
     name: marketplace-operator
     uid: 7561a895-f4b0-46ea-874b-45dc970b87c6
-  resourceVersion: "9425"
+  resourceVersion: "13588"
   uid: 6de7f729-4467-44a0-b559-6acd49abfed5
 spec:
   replicas: 1
@@ -319,8 +317,6 @@ spec:
           defaultMode: 420
           secretName: marketplace-operator-metrics
 status:
-  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
-  readyReplicas: 1
   replicas: 1
