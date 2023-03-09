@@ -10,6 +10,8 @@ metadata:
     openshift.io/run-level: "0"
     target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
   creationTimestamp: "2023-03-09T14:21:13Z"
+  deletionGracePeriodSeconds: 0
+  deletionTimestamp: "2023-03-09T14:32:06Z"
   labels:
     openshift.io/component: api
     openshift.io/control-plane: "true"
@@ -274,7 +276,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "13279"
+  resourceVersion: "14183"
   uid: 00279aac-3656-425a-b5a5-9da5a4f966b1
 spec:
   containers:
