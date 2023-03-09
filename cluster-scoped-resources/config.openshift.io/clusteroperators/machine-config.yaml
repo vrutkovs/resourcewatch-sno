@@ -46,7 +46,7 @@ metadata:
     manager: machine-config-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:30:05Z"
+    time: "2023-03-09T14:32:08Z"
   name: machine-config
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -54,7 +54,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10368"
+  resourceVersion: "14442"
   uid: a2677b7f-e3c9-4360-88a8-42c47852f1d4
 spec: {}
 status:
@@ -64,9 +64,7 @@ status:
     status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:30:05Z"
-    message: 'An error occurred when checking kubelet version skew: kube-apiserver
-      does not yet have a version'
-    reason: KubeletSkewUnchecked
+    reason: AsExpected
     status: "True"
     type: Upgradeable
   - lastTransitionTime: "2023-03-09T14:29:29Z"
