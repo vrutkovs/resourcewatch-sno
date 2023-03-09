@@ -145,10 +145,7 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:availableReplicas: {}
-        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
@@ -163,7 +160,7 @@ metadata:
     kind: Deployment
     name: multus-admission-controller
     uid: 3f577280-a91b-42dc-8ed6-a9b403637b32
-  resourceVersion: "5780"
+  resourceVersion: "5784"
   uid: 7a585df6-dad3-48d7-b274-879569445ab4
 spec:
   replicas: 0
@@ -262,8 +259,5 @@ spec:
           defaultMode: 420
           secretName: multus-admission-controller-secret
 status:
-  availableReplicas: 1
-  fullyLabeledReplicas: 1
   observedGeneration: 2
-  readyReplicas: 1
-  replicas: 1
+  replicas: 0
