@@ -831,7 +831,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:10Z"
+    time: "2023-03-09T14:32:11Z"
   name: etcd-vrutkovs-sno
   namespace: openshift-etcd
   ownerReferences:
@@ -840,7 +840,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "14675"
+  resourceVersion: "14720"
   uid: 1b51edb2-8be2-46cd-9527-085464eea3b7
 spec:
   containers:
@@ -1419,7 +1419,7 @@ status:
     name: etcd
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
       running:
         startedAt: "2023-03-09T14:26:45Z"
