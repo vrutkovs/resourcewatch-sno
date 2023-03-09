@@ -1,0 +1,38 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:32Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:32Z"
+deprecatedSource:
+  component: cluster-authentication-operator-config-observer-configobserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:32Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:32:32Z"
+  name: openshift-authentication-operator.174ac6c3160a5863
+  namespace: openshift-authentication-operator
+  resourceVersion: "15397"
+  uid: 9291cc88-bf97-4a78-b9ae-79262ecab781
+note: assetPublicURL changed from  to https://console-openshift-console.apps.ocp.choomba.one
+reason: ObserveConsoleURL
+regarding:
+  apiVersion: v1
+  kind: Namespace
+  name: openshift-authentication-operator
+  namespace: openshift-authentication-operator
+type: Normal
