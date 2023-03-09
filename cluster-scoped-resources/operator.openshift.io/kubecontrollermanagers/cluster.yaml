@@ -50,7 +50,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3647"
+  resourceVersion: "3667"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -82,6 +82,15 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     status: "False"
     type: NodeInstallerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    reason: ProfileEmpty
+    status: "False"
+    type: WorkerLatencyProfileProgressing
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    message: latency profile not set on cluster
+    reason: ProfileEmpty
+    status: "True"
+    type: WorkerLatencyProfileComplete
   latestAvailableRevision: 0
   latestAvailableRevisionReason: ""
   readyReplicas: 0
