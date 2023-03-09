@@ -1,6 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
   creationTimestamp: "2023-03-09T14:27:46Z"
   generation: 1
   labels:
@@ -221,9 +223,31 @@ metadata:
     manager: operator
     operation: Update
     time: "2023-03-09T14:27:46Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:25Z"
   name: telemeter-client
   namespace: openshift-monitoring
-  resourceVersion: "7868"
+  resourceVersion: "7982"
   uid: 08f8fbb9-af1b-499b-a1db-e123e8a5a590
 spec:
   progressDeadlineSeconds: 600
@@ -529,4 +553,11 @@ spec:
           name: telemeter-trusted-ca-bundle-c7nmestil7q08
           optional: true
         name: telemeter-trusted-ca-bundle
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:28:25Z"
+    lastUpdateTime: "2023-03-09T14:28:25Z"
+    message: Created new replica set "telemeter-client-7f96fcfc64"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
