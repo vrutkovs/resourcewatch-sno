@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:32:04Z"
-deprecatedLastTimestamp: "2023-03-09T14:32:04Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:06Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:32:12Z"
+    time: "2023-03-09T14:32:13Z"
   name: console-operator-5cb6dc7685-cgzvf.174ac6bca914b9e5
   namespace: openshift-console-operator
-  resourceVersion: "14814"
+  resourceVersion: "14874"
   uid: de9ac3c3-f955-48aa-8609-0b4b127e1957
 note: 'MountVolume.SetUp failed for volume "serving-cert" : failed to sync secret
   cache: timed out waiting for the condition'
