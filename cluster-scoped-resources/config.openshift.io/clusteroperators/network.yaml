@@ -52,6 +52,7 @@ metadata:
       f:status:
         f:conditions: {}
         f:relatedObjects: {}
+        f:versions: {}
     manager: cluster-network-operator
     operation: Update
     subresource: status
@@ -63,7 +64,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3099"
+  resourceVersion: "3101"
   uid: efc0e65e-4103-4be7-8a5a-99dd46b6df53
 spec: {}
 status:
@@ -86,10 +87,8 @@ status:
     reason: Deploying
     status: "True"
     type: Progressing
-  - lastTransitionTime: "2023-03-09T14:20:23Z"
-    message: The network is starting up
-    reason: Startup
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:21:47Z"
+    status: "True"
     type: Available
   extension: null
   relatedObjects:
@@ -407,3 +406,6 @@ status:
   - group: ""
     name: openshift-cloud-network-config-controller
     resource: namespaces
+  versions:
+  - name: operator
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
