@@ -1,0 +1,22 @@
+apiVersion: v1
+data:
+  reason: configmap/etcd-endpoints has changed
+  revision: "3"
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:24:45Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:reason: {}
+        f:revision: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-09T14:24:45Z"
+  name: revision-status-3
+  namespace: openshift-etcd
+  resourceVersion: "7185"
+  uid: 64e9208a-ec73-49b5-b2c8-e76d55a80825
