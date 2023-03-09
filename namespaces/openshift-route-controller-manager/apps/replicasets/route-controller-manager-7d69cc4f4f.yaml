@@ -169,7 +169,6 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
         f:replicas: {}
     manager: kube-controller-manager
@@ -185,7 +184,7 @@ metadata:
     kind: Deployment
     name: route-controller-manager
     uid: ad9d7992-335d-4009-a433-f1dc108a6d16
-  resourceVersion: "10657"
+  resourceVersion: "10662"
   uid: 5fb8ad78-30f0-4c6a-b57c-0bfcc090e47f
 spec:
   replicas: 0
@@ -307,6 +306,5 @@ spec:
           defaultMode: 420
           secretName: serving-cert
 status:
-  fullyLabeledReplicas: 1
   observedGeneration: 3
-  replicas: 1
+  replicas: 0
