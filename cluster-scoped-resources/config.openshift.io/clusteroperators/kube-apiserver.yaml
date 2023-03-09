@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:30:17Z"
+    time: "2023-03-09T14:30:55Z"
   name: kube-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10477"
+  resourceVersion: "10865"
   uid: 44fa5a7d-2a86-4650-a833-6e25b487f945
 spec: {}
 status:
@@ -60,17 +60,19 @@ status:
   - lastTransitionTime: "2023-03-09T14:28:54Z"
     message: |-
       NodeControllerDegraded: All master nodes are ready
-      InstallerControllerDegraded: missing required resources: [configmaps: aggregator-client-ca,check-endpoints-kubeconfig,client-ca,control-plane-node-kubeconfig, secrets: aggregator-client,check-endpoints-client-cert-key,control-plane-node-admin-client-cert-key,external-loadbalancer-serving-certkey,internal-loadbalancer-serving-certkey,kubelet-client,localhost-serving-cert-certkey,node-kubeconfigs,service-network-serving-certkey, configmaps: bound-sa-token-signing-certs-0,config-0,etcd-serving-ca-0,kube-apiserver-audit-policies-0,kube-apiserver-cert-syncer-kubeconfig-0,kube-apiserver-pod-0,kubelet-serving-ca-0,sa-token-signing-certs-0, secrets: etcd-client-0,localhost-recovery-client-token-0,localhost-recovery-serving-certkey-0]
+      InstallerControllerDegraded: missing required resources: [configmaps: bound-sa-token-signing-certs-1,config-1,etcd-serving-ca-1,kube-apiserver-audit-policies-1,kube-apiserver-cert-syncer-kubeconfig-1,kube-apiserver-pod-1,kubelet-serving-ca-1,sa-token-signing-certs-1, secrets: etcd-client-1,localhost-recovery-client-token-1,localhost-recovery-serving-certkey-1]
     reason: AsExpected
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:28:55Z"
-    message: 'NodeInstallerProgressing: 1 nodes are at revision 0'
-    reason: AsExpected
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:30:55Z"
+    message: 'NodeInstallerProgressing: 1 nodes are at revision 0; 0 nodes have achieved
+      new revision 1'
+    reason: NodeInstaller
+    status: "True"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:28:59Z"
-    message: 'StaticPodsAvailable: 0 nodes are active; 1 nodes are at revision 0'
+    message: 'StaticPodsAvailable: 0 nodes are active; 1 nodes are at revision 0;
+      0 nodes have achieved new revision 1'
     reason: StaticPods_ZeroNodesActive
     status: "False"
     type: Available
