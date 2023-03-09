@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:01Z"
+    time: "2023-03-09T14:32:02Z"
   name: kube-controller-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,16 +52,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "13507"
+  resourceVersion: "13953"
   uid: fc4da80c-8238-45f0-831b-b76abd6e6070
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:24:40Z"
-    message: |-
-      GarbageCollectorDegraded: error fetching rules: Get "https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules": dial tcp 172.30.121.173:9091: connect: connection refused
-      NodeControllerDegraded: The master nodes not ready: node "vrutkovs-sno" not ready since 2023-03-09 14:32:01 +0000 UTC because KubeletNotReady (container runtime status check may not have completed yet)
-    reason: GarbageCollector_Error::NodeController_MasterNodesReady
+    message: 'GarbageCollectorDegraded: error fetching rules: Get "https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules":
+      dial tcp 172.30.121.173:9091: connect: connection refused'
+    reason: GarbageCollector_Error
     status: "True"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:32:01Z"
