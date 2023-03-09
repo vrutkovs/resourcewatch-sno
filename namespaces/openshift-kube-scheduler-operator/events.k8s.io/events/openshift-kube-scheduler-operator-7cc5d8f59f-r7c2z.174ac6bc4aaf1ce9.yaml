@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:03Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:03Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:03Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:03Z"
+  name: openshift-kube-scheduler-operator-7cc5d8f59f-r7c2z.174ac6bc4aaf1ce9
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "14071"
+  uid: 65a1994d-f8b8-4cc3-9aec-13664d7d1309
+note: 'MountVolume.SetUp failed for volume "config" : object "openshift-kube-scheduler-operator"/"openshift-kube-scheduler-operator-config"
+  not registered'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: openshift-kube-scheduler-operator-7cc5d8f59f-r7c2z
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "6781"
+  uid: 1606b883-c96d-441c-8e75-977ff1bb9b7c
+type: Warning
