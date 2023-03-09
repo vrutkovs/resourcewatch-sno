@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:15:18Z"
+deprecatedLastTimestamp: "2023-03-09T14:15:18Z"
+deprecatedSource:
+  component: deployment-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:15:18Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:15:18Z"
+  name: ingress-operator.174ac5d27268f22b
+  namespace: openshift-ingress-operator
+  resourceVersion: "1993"
+  uid: a224da19-e12d-462e-bebc-81c23fc51b74
+note: Scaled up replica set ingress-operator-55684fdfd8 to 1
+reason: ScalingReplicaSet
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: ingress-operator
+  namespace: openshift-ingress-operator
+  resourceVersion: "1991"
+  uid: 13ff7095-b051-46f7-9746-4f6b178a682e
+type: Normal
