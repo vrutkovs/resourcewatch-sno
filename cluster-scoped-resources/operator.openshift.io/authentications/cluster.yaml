@@ -31,21 +31,6 @@ metadata:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        .: {}
-        f:conditions: {}
-        f:generations: {}
-        f:oauthAPIServer:
-          .: {}
-          f:latestAvailableRevision: {}
-        f:readyReplicas: {}
-    manager: authentication-operator
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:30Z"
-  - apiVersion: operator.openshift.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:spec:
         f:observedConfig:
           .: {}
@@ -93,13 +78,28 @@ metadata:
     manager: authentication-operator
     operation: Update
     time: "2023-03-09T14:32:32Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:generations: {}
+        f:oauthAPIServer:
+          .: {}
+          f:latestAvailableRevision: {}
+        f:readyReplicas: {}
+    manager: authentication-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:32Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15403"
+  resourceVersion: "15434"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -203,10 +203,9 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:01Z"
     status: "False"
     type: SystemServiceCAConfigDegraded
-  - lastTransitionTime: "2023-03-09T14:22:02Z"
-    message: endpoints "oauth-openshift" not found
-    reason: ResourceNotFound
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:32:32Z"
+    reason: AsExpected
+    status: "True"
     type: OAuthServerServiceEndpointsEndpointAccessibleControllerAvailable
   - lastTransitionTime: "2023-03-09T14:22:27Z"
     message: oauth service endpoints are not ready
