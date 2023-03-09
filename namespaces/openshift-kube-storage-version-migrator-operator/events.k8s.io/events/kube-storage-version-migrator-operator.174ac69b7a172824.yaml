@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:42Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:42Z"
+deprecatedSource:
+  component: openshift-kube-storage-version-migrator-operator-loggingsyncer
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:42Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-03-09T14:29:42Z"
+  name: kube-storage-version-migrator-operator.174ac69b7a172824
+  namespace: openshift-kube-storage-version-migrator-operator
+  resourceVersion: "10170"
+  uid: 2af0ce08-9695-44a7-8fe5-c1c3dc4c12ad
+note: Controller "LoggingSyncer" resync interval is set to 0s which might lead to
+  client request throttling
+reason: FastControllerResync
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-storage-version-migrator-operator
+  namespace: openshift-kube-storage-version-migrator-operator
+  uid: e175c73d-fd16-4746-ae1b-5ca4d30312d9
+type: Warning
