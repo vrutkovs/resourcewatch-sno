@@ -92,14 +92,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:34:41Z"
+    time: "2023-03-09T14:34:46Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16845"
+  resourceVersion: "16868"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -186,8 +186,8 @@ status:
     status: "False"
     type: WebhookAuthenticatorControllerDegraded
   - lastTransitionTime: "2023-03-09T14:33:56Z"
-    message: 'Get "https://172.30.70.249:443/healthz": context deadline exceeded (Client.Timeout
-      exceeded while awaiting headers)'
+    message: 'Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443:
+      i/o timeout (Client.Timeout exceeded while awaiting headers)'
     reason: EndpointUnavailable
     status: "False"
     type: OAuthServerServiceEndpointAccessibleControllerAvailable
