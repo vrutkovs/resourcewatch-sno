@@ -1,0 +1,41 @@
+apiVersion: v1
+data:
+  builderImage: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:0094601b9ace07d517ea9445853bf10bc91087445cb86cac469466a062dc119f
+  deployerImage: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:0514c00d6cb55a348561044e5c2d2de0005963e427ac72613be54ccb9d038549
+kind: ConfigMap
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-03-09T14:14:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:builderImage: {}
+        f:deployerImage: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b7590f0c-c37f-44e0-80d3-7b5df1e0e187"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-09T14:14:53Z"
+  name: openshift-controller-manager-images
+  namespace: openshift-controller-manager-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
+  resourceVersion: "1268"
+  uid: db3f52d8-91fb-42b7-bd00-2f6d2f665ab7
