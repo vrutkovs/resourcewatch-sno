@@ -489,8 +489,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -503,8 +501,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -520,7 +516,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:21:45Z"
+    time: "2023-03-09T14:21:46Z"
   name: ovnkube-node-d88ws
   namespace: openshift-ovn-kubernetes
   ownerReferences:
@@ -530,7 +526,7 @@ metadata:
     kind: DaemonSet
     name: ovnkube-node
     uid: 8b6ad0dc-8208-4b89-9ad9-f44d3b557593
-  resourceVersion: "3090"
+  resourceVersion: "3094"
   uid: db94c2b8-7410-40a2-990d-f725713e7562
 spec:
   affinity:
@@ -1047,16 +1043,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:33Z"
-    message: 'containers with unready status: [ovn-controller]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:21:46Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:33Z"
-    message: 'containers with unready status: [ovn-controller]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:21:46Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:33Z"
@@ -1096,21 +1088,23 @@ status:
     state:
       running:
         startedAt: "2023-03-09T14:20:42Z"
-  - containerID: cri-o://cc0917812832d19d81b16b44b594bc36151c6af143552035bc314256622eb67a
+  - containerID: cri-o://33ad21b35ab64ab634ce2f6afbed61b2f424ea8c9def641cbd38450e6f28e063
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
-    lastState: {}
-    name: ovn-controller
-    ready: false
-    restartCount: 0
-    started: false
-    state:
+    lastState:
       terminated:
         containerID: cri-o://cc0917812832d19d81b16b44b594bc36151c6af143552035bc314256622eb67a
         exitCode: 0
         finishedAt: "2023-03-09T14:21:45Z"
         reason: Completed
         startedAt: "2023-03-09T14:20:41Z"
+    name: ovn-controller
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-09T14:21:46Z"
   - containerID: cri-o://56cf9a5c331d3b14d47c5fedd1140220775ce3ba747798fa7422231c05857c63
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
