@@ -2,7 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
     service.beta.openshift.io/serving-cert-secret-name: alertmanager-main-tls
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
   creationTimestamp: "2023-03-09T14:32:46Z"
   labels:
     app.kubernetes.io/component: alert-router
@@ -58,9 +60,19 @@ metadata:
     manager: operator
     operation: Update
     time: "2023-03-09T14:32:46Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:32:46Z"
   name: alertmanager-main
   namespace: openshift-monitoring
-  resourceVersion: "15909"
+  resourceVersion: "15918"
   uid: 03d32a1f-d1bb-4ea3-ae2f-422e9a4c0f30
 spec:
   clusterIP: 172.30.234.70
