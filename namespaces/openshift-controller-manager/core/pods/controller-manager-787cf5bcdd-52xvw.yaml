@@ -222,6 +222,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -234,6 +236,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -249,7 +253,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:08Z"
+    time: "2023-03-09T14:32:10Z"
   name: controller-manager-787cf5bcdd-52xvw
   namespace: openshift-controller-manager
   ownerReferences:
@@ -259,7 +263,7 @@ metadata:
     kind: ReplicaSet
     name: controller-manager-787cf5bcdd
     uid: 761246e2-2c0e-421a-95d2-b29b44d0b4cf
-  resourceVersion: "14443"
+  resourceVersion: "14644"
   uid: c20e9e21-134f-40a9-a4d3-f929ce4b42f3
 spec:
   affinity:
@@ -412,12 +416,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:31:17Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:06Z"
+    message: 'containers with unready status: [controller-manager]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:31:17Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:06Z"
+    message: 'containers with unready status: [controller-manager]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:31:12Z"
@@ -429,7 +437,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e948b40220b7cdb7b4bf51bcd34f6182d63a302d688a593bf1d6100754cedec0
     lastState: {}
     name: controller-manager
-    ready: true
+    ready: false
     restartCount: 0
     started: true
     state:
