@@ -64,7 +64,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4429"
+  resourceVersion: "4494"
   uid: 48eb058e-3e1d-45d9-baa8-cf6a53778010
 spec:
   logLevel: Normal
@@ -147,6 +147,10 @@ status:
     reason: AsExpected
     status: "False"
     type: GuardControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:11Z"
+    reason: AsExpected
+    status: "False"
+    type: KubeControllerManagerStaticResourcesDegraded
   latestAvailableRevision: 1
   latestAvailableRevisionReason: ""
   nodeStatuses:
