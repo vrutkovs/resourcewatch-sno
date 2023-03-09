@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:09Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:09Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-kubecontrollermanagerstaticresources-kubecontrollermanagerstaticresources
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:22:15Z"
+  name: kube-controller-manager-operator.174ac63209c7498e
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "4685"
+  uid: ef643aa4-551a-453f-a0d5-49ca9f8e9f40
+note: Created ClusterRoleBinding.rbac.authorization.k8s.io/system:openshift:controller:cluster-csr-approver-controller
+  because it was missing
+reason: ClusterRoleBindingCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Normal
