@@ -5,6 +5,17 @@ metadata:
     include.release.openshift.io/ibm-cloud-managed: "true"
     include.release.openshift.io/self-managed-high-availability: "true"
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.62/23"],"mac_address":"0a:58:0a:80:00:3e","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.62/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.62"
+          ],
+          "mac": "0a:58:0a:80:00:3e",
+          "default": true,
+          "dns": {}
+      }]
     olm.operatorGroup: olm-operators
     olm.operatorNamespace: openshift-operator-lifecycle-manager
     olm.targetNamespaces: openshift-operator-lifecycle-manager
@@ -193,6 +204,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-09T14:29:22Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:29:23Z"
   name: packageserver-65ffbd8b4d-dvkjv
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -202,7 +223,7 @@ metadata:
     kind: ReplicaSet
     name: packageserver-65ffbd8b4d
     uid: 339a1e91-3d6d-4eda-8612-df2805c26ea5
-  resourceVersion: "9815"
+  resourceVersion: "9835"
   uid: f596f7f8-174a-4dab-9079-9621f7175acc
 spec:
   affinity: {}
