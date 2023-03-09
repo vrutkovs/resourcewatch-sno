@@ -135,8 +135,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -149,12 +147,11 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -165,7 +162,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:39Z"
+    time: "2023-03-09T14:28:43Z"
   name: machine-approver-6c6b895bd4-xzs2j
   namespace: openshift-cluster-machine-approver
   ownerReferences:
@@ -175,7 +172,7 @@ metadata:
     kind: ReplicaSet
     name: machine-approver-6c6b895bd4
     uid: 70e3e743-4ec7-4b6c-9c85-eb1baf9cae1d
-  resourceVersion: "8238"
+  resourceVersion: "8286"
   uid: 8a5f7f73-b903-47bb-b429-248a6cbac921
 spec:
   containers:
@@ -316,44 +313,42 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:28:39Z"
-    message: 'containers with unready status: [kube-rbac-proxy machine-approver-controller]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:28:43Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:28:39Z"
-    message: 'containers with unready status: [kube-rbac-proxy machine-approver-controller]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:28:43Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:28:39Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
-    imageID: ""
+  - containerID: cri-o://ad17019d95d9330d69c9b1cd15ad8e1bc9955d438ce93e57e5522fdc12e1d2ab
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
     lastState: {}
     name: kube-rbac-proxy
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:df80aa07467d1c6f59a39f3c00e00e130a6b25308b1419264565ca7cd8a76407
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:28:40Z"
+  - containerID: cri-o://11a9b4f92a15abeb9d7c9f52e379bf67a0cbe82c06f8daad0a2d3a5f54227596
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:df80aa07467d1c6f59a39f3c00e00e130a6b25308b1419264565ca7cd8a76407
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:df80aa07467d1c6f59a39f3c00e00e130a6b25308b1419264565ca7cd8a76407
     lastState: {}
     name: machine-approver-controller
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:28:42Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
   podIP: 10.0.130.93
   podIPs:
   - ip: 10.0.130.93
