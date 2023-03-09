@@ -157,6 +157,19 @@ metadata:
     manager: dns-operator
     operation: Update
     time: "2023-03-09T14:22:11Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:currentNumberScheduled: {}
+        f:desiredNumberScheduled: {}
+        f:numberUnavailable: {}
+        f:observedGeneration: {}
+        f:updatedNumberScheduled: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:11Z"
   name: dns-default
   namespace: openshift-dns
   ownerReferences:
@@ -165,7 +178,7 @@ metadata:
     kind: DNS
     name: default
     uid: 5229bf4f-ffc6-4d6c-8729-5bb065d5cba1
-  resourceVersion: "4452"
+  resourceVersion: "4461"
   uid: 5dcfb4ec-c80c-463b-b4b2-44c23caada97
 spec:
   revisionHistoryLimit: 10
@@ -282,7 +295,10 @@ spec:
       maxUnavailable: 10%
     type: RollingUpdate
 status:
-  currentNumberScheduled: 0
-  desiredNumberScheduled: 0
+  currentNumberScheduled: 1
+  desiredNumberScheduled: 1
   numberMisscheduled: 0
   numberReady: 0
+  numberUnavailable: 1
+  observedGeneration: 1
+  updatedNumberScheduled: 1
