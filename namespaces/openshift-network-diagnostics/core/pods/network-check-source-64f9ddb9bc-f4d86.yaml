@@ -1,0 +1,203 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2023-03-09T14:20:34Z"
+  generateName: network-check-source-64f9ddb9bc-
+  labels:
+    app: network-check-source
+    kubernetes.io/os: linux
+    pod-template-hash: 64f9ddb9bc
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:kubernetes.io/os: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"9ca97f0a-aa3d-454a-8513-79784e29c223"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"check-endpoints"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"POD_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":17698,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:20:34Z"
+  name: network-check-source-64f9ddb9bc-f4d86
+  namespace: openshift-network-diagnostics
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: network-check-source-64f9ddb9bc
+    uid: 9ca97f0a-aa3d-454a-8513-79784e29c223
+  resourceVersion: "2805"
+  uid: 166eef67-e958-43da-aa04-fad994e58b58
+spec:
+  containers:
+  - args:
+    - --listen
+    - 0.0.0.0:17698
+    - --namespace
+    - $(POD_NAMESPACE)
+    command:
+    - cluster-network-check-endpoints
+    env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: POD_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6f674d54345ba8ce675df69db58531f41a18deac6bcaec530b634cc54a38ab2c
+    imagePullPolicy: IfNotPresent
+    name: check-endpoints
+    ports:
+    - containerPort: 17698
+      name: check-endpoints
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 40Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000520000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-5j6hx
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeSelector:
+    beta.kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 1000000000
+  priorityClassName: openshift-user-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000520000
+    runAsNonRoot: true
+    seLinuxOptions:
+      level: s0:c23,c7
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: network-diagnostics
+  serviceAccountName: network-diagnostics
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: kube-api-access-5j6hx
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  phase: Pending
+  qosClass: Burstable
