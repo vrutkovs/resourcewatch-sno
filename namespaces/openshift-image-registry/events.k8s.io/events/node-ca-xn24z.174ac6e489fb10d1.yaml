@@ -1,0 +1,40 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:34:56.018702Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:34:56Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:34:56Z"
+  name: node-ca-xn24z.174ac6e489fb10d1
+  namespace: openshift-image-registry
+  resourceVersion: "16925"
+  uid: e0f10361-ef60-45fa-b569-62a1d38b1234
+note: Successfully assigned openshift-image-registry/node-ca-xn24z to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: node-ca-xn24z
+  namespace: openshift-image-registry
+  resourceVersion: "16921"
+  uid: fef2b105-4db4-4000-81c7-8b8797bd2808
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
