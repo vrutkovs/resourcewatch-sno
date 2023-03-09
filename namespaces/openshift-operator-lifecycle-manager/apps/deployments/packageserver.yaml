@@ -38,7 +38,9 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -201,7 +203,7 @@ metadata:
     kind: ClusterServiceVersion
     name: packageserver
     uid: fa1b9c20-b2c7-42ff-9444-df28f49c3e6f
-  resourceVersion: "9808"
+  resourceVersion: "9812"
   uid: 60bb2626-4e10-403c-8b3c-428e9227e322
 spec:
   progressDeadlineSeconds: 600
@@ -334,15 +336,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:29:22Z"
     lastUpdateTime: "2023-03-09T14:29:22Z"
-    message: Created new replica set "packageserver-65ffbd8b4d"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-09T14:29:22Z"
-    lastUpdateTime: "2023-03-09T14:29:22Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-09T14:29:22Z"
+    lastUpdateTime: "2023-03-09T14:29:22Z"
+    message: ReplicaSet "packageserver-65ffbd8b4d" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
