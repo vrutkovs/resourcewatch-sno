@@ -24,6 +24,17 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:35Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+        f:relatedObjects: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:14:35Z"
   name: kube-controller-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -31,6 +42,33 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "623"
+  resourceVersion: "670"
   uid: fc4da80c-8238-45f0-831b-b76abd6e6070
 spec: {}
+status:
+  extension: null
+  relatedObjects:
+  - group: operator.openshift.io
+    name: cluster
+    resource: kubecontrollermanagers
+  - group: ""
+    name: openshift-config
+    resource: namespaces
+  - group: ""
+    name: openshift-config-managed
+    resource: namespaces
+  - group: ""
+    name: openshift-kube-controller-manager
+    resource: namespaces
+  - group: ""
+    name: openshift-kube-controller-manager-operator
+    resource: namespaces
+  - group: ""
+    name: kube-system
+    resource: namespaces
+  - group: ""
+    name: ""
+    resource: nodes
+  - group: certificates.k8s.io
+    name: ""
+    resource: certificatesigningrequests
