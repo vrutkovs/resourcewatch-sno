@@ -4,7 +4,7 @@ metadata:
   annotations:
     networkoperator.openshift.io/ovn-cluster-initiator: 10.0.130.93
   creationTimestamp: "2023-03-09T14:20:15Z"
-  generation: 7
+  generation: 8
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -69,7 +69,7 @@ metadata:
     operation: Update
     time: "2023-03-09T14:20:23Z"
   name: cluster
-  resourceVersion: "2571"
+  resourceVersion: "2591"
   uid: e6519524-ef16-4ee8-82f1-2faa42688032
 spec:
   clusterNetwork:
@@ -117,7 +117,7 @@ status:
     status: "True"
     type: Upgradeable
   - lastTransitionTime: "2023-03-09T14:20:23Z"
-    message: DaemonSet "/openshift-multus/multus" is not yet scheduled on any nodes
+    message: DaemonSet "/openshift-multus/multus" is not available (awaiting 1 nodes)
     reason: Deploying
     status: "True"
     type: Progressing
