@@ -7,6 +7,8 @@ metadata:
     kubernetes.io/config.seen: "2023-03-09T14:31:51.882930511Z"
     kubernetes.io/config.source: file
   creationTimestamp: "2023-03-09T14:31:55Z"
+  deletionGracePeriodSeconds: 0
+  deletionTimestamp: "2023-03-09T14:32:27Z"
   labels:
     revision: "2"
   managedFields:
@@ -182,7 +184,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "15221"
+  resourceVersion: "15236"
   uid: 5f544849-07c2-47a7-9479-e6b5b3024dc7
 spec:
   containers:
