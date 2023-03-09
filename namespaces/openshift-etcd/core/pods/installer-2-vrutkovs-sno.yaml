@@ -152,12 +152,14 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"PodScheduled"}:
@@ -170,6 +172,7 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -185,7 +188,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:58Z"
+    time: "2023-03-09T14:24:42Z"
   name: installer-2-vrutkovs-sno
   namespace: openshift-etcd
   ownerReferences:
@@ -193,7 +196,7 @@ metadata:
     kind: ConfigMap
     name: revision-status-2
     uid: 35c2b4e8-eb9c-4e78-b9f6-d2836b7e2338
-  resourceVersion: "6097"
+  resourceVersion: "7092"
   uid: 9d9ec838-19dd-42ab-9023-0e80611d82f9
 spec:
   automountServiceAccountToken: false
@@ -303,15 +306,18 @@ status:
   conditions:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:56Z"
+    reason: PodCompleted
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:58Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:23:44Z"
+    reason: PodCompleted
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:58Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:23:44Z"
+    reason: PodCompleted
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:56Z"
@@ -323,14 +329,18 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2948a32ac6e029f093ecf20b3bcd87105bfa7ec549d01203ab9592ed062ce7fa
     lastState: {}
     name: installer
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://5ff9a94a7f66d09bd2d9c3dedc7a81f5d6cac161fe2eaa97da7c4b0e779ba670
+        exitCode: 0
+        finishedAt: "2023-03-09T14:23:44Z"
+        reason: Completed
         startedAt: "2023-03-09T14:22:58Z"
   hostIP: 10.0.130.93
-  phase: Running
+  phase: Succeeded
   podIP: 10.128.0.37
   podIPs:
   - ip: 10.128.0.37
