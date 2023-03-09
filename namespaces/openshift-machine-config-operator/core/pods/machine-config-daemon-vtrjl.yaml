@@ -157,8 +157,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -174,6 +172,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:22:19Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:02Z"
   name: machine-config-daemon-vtrjl
   namespace: openshift-machine-config-operator
   ownerReferences:
@@ -183,7 +193,7 @@ metadata:
     kind: DaemonSet
     name: machine-config-daemon
     uid: 58eb863c-67e0-453b-b99f-f0077a684bea
-  resourceVersion: "4849"
+  resourceVersion: "13901"
   uid: a1a21787-fe16-4e6e-80ab-90fd428b2b45
 spec:
   affinity:
@@ -317,8 +327,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:19Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:02Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:19Z"
