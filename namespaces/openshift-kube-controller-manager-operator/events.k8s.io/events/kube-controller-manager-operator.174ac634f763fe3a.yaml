@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 3
+deprecatedCount: 4
 deprecatedFirstTimestamp: "2023-03-09T14:22:21Z"
-deprecatedLastTimestamp: "2023-03-09T14:22:22Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:24Z"
 deprecatedSource:
   component: kube-controller-manager-operator-installer-controller
 eventTime: null
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:22:30Z"
   name: kube-controller-manager-operator.174ac634f763fe3a
   namespace: openshift-kube-controller-manager-operator
-  resourceVersion: "5297"
+  resourceVersion: "5309"
   uid: 7070351a-4832-4c85-9afb-013dd49bc132
 note: 'configmaps: aggregator-client-ca,client-ca, secrets: kube-controller-manager-client-cert-key,
   configmaps: cluster-policy-controller-config-1,config-1,controller-manager-kubeconfig-1,kube-controller-cert-syncer-kubeconfig-1,kube-controller-manager-pod-1,recycler-config-1,service-ca-1,serviceaccount-ca-1,
