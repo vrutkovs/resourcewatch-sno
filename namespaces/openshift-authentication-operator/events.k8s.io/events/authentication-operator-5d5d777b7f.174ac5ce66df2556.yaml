@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 7
+deprecatedCount: 8
 deprecatedFirstTimestamp: "2023-03-09T14:15:01Z"
-deprecatedLastTimestamp: "2023-03-09T14:15:01Z"
+deprecatedLastTimestamp: "2023-03-09T14:15:02Z"
 deprecatedSource:
   component: replicaset-controller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-09T14:15:01Z"
+    time: "2023-03-09T14:15:02Z"
   name: authentication-operator-5d5d777b7f.174ac5ce66df2556
   namespace: openshift-authentication-operator
-  resourceVersion: "1538"
+  resourceVersion: "1547"
   uid: 4eb49b8e-db99-4054-897d-e2260a032f20
 note: 'Error creating: pods "authentication-operator-5d5d777b7f-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
   the cluster does not have any nodes'
