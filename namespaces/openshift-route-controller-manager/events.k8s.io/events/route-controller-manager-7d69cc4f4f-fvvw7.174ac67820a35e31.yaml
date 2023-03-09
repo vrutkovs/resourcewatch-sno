@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:27:10Z"
+deprecatedLastTimestamp: "2023-03-09T14:27:10Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:27:20Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:27:20Z"
+  name: route-controller-manager-7d69cc4f4f-fvvw7.174ac67820a35e31
+  namespace: openshift-route-controller-manager
+  resourceVersion: "7786"
+  uid: f2d445ce-418d-475b-a8dd-d33fd3bc4f88
+note: 'Unable to attach or mount volumes: unmounted volumes=[client-ca], unattached
+  volumes=[config client-ca serving-cert kube-api-access-v6vpg]: timed out waiting
+  for the condition'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: route-controller-manager-7d69cc4f4f-fvvw7
+  namespace: openshift-route-controller-manager
+  resourceVersion: "7465"
+  uid: bf3af406-bfe7-484b-80e5-6deb0f8b0025
+type: Warning
