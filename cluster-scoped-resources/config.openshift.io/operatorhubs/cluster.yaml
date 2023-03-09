@@ -44,11 +44,14 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4727"
+  resourceVersion: "4729"
   uid: 9c72dbdf-dfa6-4091-92ae-1431f40537e4
 spec: {}
 status:
   sources:
+  - disabled: false
+    name: community-operators
+    status: Success
   - disabled: false
     name: redhat-marketplace
     status: Success
@@ -57,7 +60,4 @@ status:
     status: Success
   - disabled: false
     name: certified-operators
-    status: Success
-  - disabled: false
-    name: community-operators
     status: Success
