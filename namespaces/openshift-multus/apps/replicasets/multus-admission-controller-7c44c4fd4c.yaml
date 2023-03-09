@@ -141,6 +141,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:20:26Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:26Z"
   name: multus-admission-controller-7c44c4fd4c
   namespace: openshift-multus
   ownerReferences:
@@ -150,7 +159,7 @@ metadata:
     kind: Deployment
     name: multus-admission-controller
     uid: 3f577280-a91b-42dc-8ed6-a9b403637b32
-  resourceVersion: "2634"
+  resourceVersion: "2640"
   uid: 7a585df6-dad3-48d7-b274-879569445ab4
 spec:
   replicas: 1
@@ -249,4 +258,5 @@ spec:
           defaultMode: 420
           secretName: multus-admission-controller-secret
 status:
+  observedGeneration: 1
   replicas: 0
