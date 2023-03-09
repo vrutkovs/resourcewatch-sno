@@ -146,15 +146,6 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:conditions:
-          .: {}
-          k:{"type":"ReplicaFailure"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
         f:observedGeneration: {}
     manager: kube-controller-manager
     operation: Update
@@ -169,7 +160,7 @@ metadata:
     kind: Deployment
     name: openshift-controller-manager-operator
     uid: 79e5a595-58b3-4198-82cc-8e7f0f9cd29e
-  resourceVersion: "1454"
+  resourceVersion: "2334"
   uid: c66b1581-929b-4ff8-9bc4-9204a04611ff
 spec:
   replicas: 1
@@ -266,13 +257,5 @@ spec:
           name: openshift-controller-manager-operator-config
         name: config
 status:
-  conditions:
-  - lastTransitionTime: "2023-03-09T14:14:59Z"
-    message: 'pods "openshift-controller-manager-operator-97cb7c58c-" is forbidden:
-      autoscaling.openshift.io/ManagementCPUsOverride the cluster does not have any
-      nodes'
-    reason: FailedCreate
-    status: "True"
-    type: ReplicaFailure
   observedGeneration: 1
   replicas: 0
