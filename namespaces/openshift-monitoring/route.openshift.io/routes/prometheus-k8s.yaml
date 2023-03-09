@@ -1,0 +1,45 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: "2023-03-09T14:32:45Z"
+  managedFields:
+  - apiVersion: route.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:path: {}
+        f:port:
+          .: {}
+          f:targetPort: {}
+        f:tls:
+          .: {}
+          f:insecureEdgeTerminationPolicy: {}
+          f:termination: {}
+        f:to:
+          f:kind: {}
+          f:name: {}
+          f:weight: {}
+        f:wildcardPolicy: {}
+    manager: operator
+    operation: Update
+    time: "2023-03-09T14:32:45Z"
+  name: prometheus-k8s
+  namespace: openshift-monitoring
+  resourceVersion: "15862"
+  uid: d308f944-7808-40b2-af24-355f8af904b6
+spec:
+  host: prometheus-k8s-openshift-monitoring.apps.ocp.choomba.one
+  path: /api
+  port:
+    targetPort: web
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: reencrypt
+  to:
+    kind: Service
+    name: prometheus-k8s
+    weight: 100
+  wildcardPolicy: None
+status: {}
