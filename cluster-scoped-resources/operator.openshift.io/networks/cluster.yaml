@@ -4,7 +4,7 @@ metadata:
   annotations:
     networkoperator.openshift.io/ovn-cluster-initiator: 10.0.130.93
   creationTimestamp: "2023-03-09T14:20:15Z"
-  generation: 36
+  generation: 37
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -67,9 +67,9 @@ metadata:
         f:version: {}
     manager: cluster-network-operator
     operation: Update
-    time: "2023-03-09T14:29:19Z"
+    time: "2023-03-09T14:29:20Z"
   name: cluster
-  resourceVersion: "9680"
+  resourceVersion: "9729"
   uid: e6519524-ef16-4ee8-82f1-2faa42688032
 spec:
   clusterNetwork:
@@ -110,11 +110,8 @@ status:
   - lastTransitionTime: "2023-03-09T14:20:15Z"
     status: "True"
     type: Upgradeable
-  - lastTransitionTime: "2023-03-09T14:29:13Z"
-    message: DaemonSet "/openshift-ovn-kubernetes/ovnkube-node" is not available (awaiting
-      1 nodes)
-    reason: Deploying
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:29:20Z"
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:21:47Z"
     status: "True"
