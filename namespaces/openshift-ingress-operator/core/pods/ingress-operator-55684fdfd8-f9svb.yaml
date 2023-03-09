@@ -156,6 +156,24 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:20:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:00Z"
   name: ingress-operator-55684fdfd8-f9svb
   namespace: openshift-ingress-operator
   ownerReferences:
@@ -165,7 +183,7 @@ metadata:
     kind: ReplicaSet
     name: ingress-operator-55684fdfd8
     uid: 506330a6-6445-4b53-bc78-33b1bd4aaf6b
-  resourceVersion: "2339"
+  resourceVersion: "2343"
   uid: 8586aeeb-8734-4698-adcd-01ee23ee37ca
 spec:
   containers:
@@ -329,5 +347,13 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:00Z"
+    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
+    reason: Unschedulable
+    status: "False"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
