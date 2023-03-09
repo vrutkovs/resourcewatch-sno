@@ -5,6 +5,7 @@ metadata:
     include.release.openshift.io/ibm-cloud-managed: "true"
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
+    network.operator.openshift.io/relatedClusterObjects: ""
   creationTimestamp: "2023-03-09T14:14:35Z"
   generation: 1
   managedFields:
@@ -43,6 +44,15 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:20:21Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:network.operator.openshift.io/relatedClusterObjects: {}
+    manager: cluster-network-operator
+    operation: Update
+    time: "2023-03-09T14:20:23Z"
   name: network
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -50,7 +60,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "2533"
+  resourceVersion: "2567"
   uid: efc0e65e-4103-4be7-8a5a-99dd46b6df53
 spec: {}
 status:
