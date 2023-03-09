@@ -1,0 +1,202 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2023-03-09T14:20:01Z"
+  generateName: csi-snapshot-controller-operator-6f7d895c88-
+  labels:
+    app: csi-snapshot-controller-operator
+    pod-template-hash: 6f7d895c88
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"df4e4a3f-c794-44ac-bcba-aa2afa912a40"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"csi-snapshot-controller-operator"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"OPERAND_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERAND_IMAGE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_IMAGE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"WEBHOOK_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:20:01Z"
+  name: csi-snapshot-controller-operator-6f7d895c88-9c5xt
+  namespace: openshift-cluster-storage-operator
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: csi-snapshot-controller-operator-6f7d895c88
+    uid: df4e4a3f-c794-44ac-bcba-aa2afa912a40
+  resourceVersion: "2412"
+  uid: 5b9b5dc9-f3f3-4d99-8d75-9b1a5e511a26
+spec:
+  containers:
+  - args:
+    - start
+    - -v=2
+    env:
+    - name: OPERAND_IMAGE
+      value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9ea15ecbb6c5cf3fde797915699919c1e6285edfdacf748b3a717b87ef6510fb
+    - name: WEBHOOK_IMAGE
+      value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:50beb6dcf8e67cfa10be580b40883e76ac23448d13739e2ebe3a273566109b8b
+    - name: OPERATOR_IMAGE_VERSION
+      value: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+    - name: OPERAND_IMAGE_VERSION
+      value: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:906376adc0b8bc6664986af642be2b1c740da454523ae3a8020b87e890d409d5
+    imagePullPolicy: IfNotPresent
+    name: csi-snapshot-controller-operator
+    resources:
+      requests:
+        cpu: 10m
+        memory: 65Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000150000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-tfwsz
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000150000
+    runAsNonRoot: true
+    seLinuxOptions:
+      level: s0:c12,c9
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: csi-snapshot-controller-operator
+  serviceAccountName: csi-snapshot-controller-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: kube-api-access-tfwsz
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  phase: Pending
+  qosClass: Burstable
