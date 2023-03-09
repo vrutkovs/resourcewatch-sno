@@ -8,13 +8,24 @@ metadata:
     operator.openshift.io/spec-hash: 64433da62b80908a75bd1d18d3e3e472be8471b2f5cd9be5f87b3f4b6c110017
     release.openshift.io/version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
   creationTimestamp: "2023-03-09T14:23:01Z"
-  generation: 2
+  generation: 3
   labels:
     app: route-controller-manager
     openshift-route-controller-manager-anti-affinity: "true"
     pod-template-hash: 7d69cc4f4f
     route-controller-manager: "true"
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:fullyLabeledReplicas: {}
+        f:observedGeneration: {}
+        f:replicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:23:01Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -164,18 +175,7 @@ metadata:
                   f:secretName: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-09T14:23:01Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:fullyLabeledReplicas: {}
-        f:observedGeneration: {}
-        f:replicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:23:01Z"
+    time: "2023-03-09T14:30:44Z"
   name: route-controller-manager-7d69cc4f4f
   namespace: openshift-route-controller-manager
   ownerReferences:
@@ -185,10 +185,10 @@ metadata:
     kind: Deployment
     name: route-controller-manager
     uid: ad9d7992-335d-4009-a433-f1dc108a6d16
-  resourceVersion: "6243"
+  resourceVersion: "10642"
   uid: 5fb8ad78-30f0-4c6a-b57c-0bfcc090e47f
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: route-controller-manager
