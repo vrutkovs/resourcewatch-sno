@@ -13,6 +13,7 @@ metadata:
   creationTimestamp: "2023-03-09T14:14:37Z"
   labels:
     kubernetes.io/metadata.name: openshift-cluster-machine-approver
+    olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: ""
     openshift.io/cluster-monitoring: "true"
     openshift.io/run-level: "0"
     pod-security.kubernetes.io/audit: privileged
@@ -55,6 +56,15 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:37Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: {}
+    manager: olm
+    operation: Update
+    time: "2023-03-09T14:29:17Z"
   name: openshift-cluster-machine-approver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -62,7 +72,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "757"
+  resourceVersion: "9585"
   uid: 02e8d423-c095-4cf9-8883-1a4903cc0a7a
 spec:
   finalizers:
