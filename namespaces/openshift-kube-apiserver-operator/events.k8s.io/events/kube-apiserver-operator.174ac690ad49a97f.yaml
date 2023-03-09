@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:28:55Z"
-deprecatedLastTimestamp: "2023-03-09T14:28:55Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:59Z"
 deprecatedSource:
   component: kube-apiserver-operator-installer-controller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-apiserver-operator
     operation: Update
-    time: "2023-03-09T14:28:56Z"
+    time: "2023-03-09T14:29:00Z"
   name: kube-apiserver-operator.174ac690ad49a97f
   namespace: openshift-kube-apiserver-operator
-  resourceVersion: "8708"
+  resourceVersion: "8854"
   uid: e94860e0-4899-416f-8282-59b0c60be40f
 note: 'configmaps: aggregator-client-ca,check-endpoints-kubeconfig,client-ca,control-plane-node-kubeconfig,
   secrets: aggregator-client,bound-service-account-signing-key,check-endpoints-client-cert-key,control-plane-node-admin-client-cert-key,external-loadbalancer-serving-certkey,internal-loadbalancer-serving-certkey,kubelet-client,localhost-serving-cert-certkey,node-kubeconfigs,service-network-serving-certkey,
