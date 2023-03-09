@@ -149,6 +149,14 @@ metadata:
       f:status:
         f:conditions:
           .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
           k:{"type":"Progressing"}:
             .: {}
             f:lastTransitionTime: {}
@@ -157,6 +165,16 @@ metadata:
             f:reason: {}
             f:status: {}
             f:type: {}
+          k:{"type":"ReplicaFailure"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:unavailableReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -169,7 +187,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1415"
+  resourceVersion: "1419"
   uid: 530eeba4-aef9-4df0-ae56-9d11f342c90a
 spec:
   progressDeadlineSeconds: 600
@@ -286,3 +304,18 @@ status:
     reason: NewReplicaSetCreated
     status: "True"
     type: Progressing
+  - lastTransitionTime: "2023-03-09T14:14:58Z"
+    lastUpdateTime: "2023-03-09T14:14:58Z"
+    message: Deployment does not have minimum availability.
+    reason: MinimumReplicasUnavailable
+    status: "False"
+    type: Available
+  - lastTransitionTime: "2023-03-09T14:14:58Z"
+    lastUpdateTime: "2023-03-09T14:14:58Z"
+    message: 'pods "dns-operator-5f6b454875-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+      the cluster does not have any nodes'
+    reason: FailedCreate
+    status: "True"
+    type: ReplicaFailure
+  observedGeneration: 1
+  unavailableReplicas: 1
