@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 9
+deprecatedFirstTimestamp: "2023-03-09T14:19:53Z"
+deprecatedLastTimestamp: "2023-03-09T14:19:58Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:19:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:19:58Z"
+  name: cluster-node-tuning-operator-84595cd48f.174ac61276451a6b
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "2255"
+  uid: 3490e3fb-c2ab-4573-86f8-8d65aa8eed86
+note: 'Error creating: pods "cluster-node-tuning-operator-84595cd48f-" is forbidden:
+  autoscaling.openshift.io/ManagementCPUsOverride the cluster does not have any nodes'
+reason: FailedCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: cluster-node-tuning-operator-84595cd48f
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "1974"
+  uid: 5a224cf2-d5d8-4189-a9d6-c72b78f27ed8
+type: Warning
