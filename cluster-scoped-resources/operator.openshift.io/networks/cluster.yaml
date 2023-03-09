@@ -4,7 +4,7 @@ metadata:
   annotations:
     networkoperator.openshift.io/ovn-cluster-initiator: 10.0.130.93
   creationTimestamp: "2023-03-09T14:20:15Z"
-  generation: 16
+  generation: 17
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -67,9 +67,9 @@ metadata:
         f:version: {}
     manager: cluster-network-operator
     operation: Update
-    time: "2023-03-09T14:20:35Z"
+    time: "2023-03-09T14:20:36Z"
   name: cluster
-  resourceVersion: "2817"
+  resourceVersion: "2845"
   uid: e6519524-ef16-4ee8-82f1-2faa42688032
 spec:
   clusterNetwork:
@@ -122,8 +122,9 @@ status:
       DaemonSet "/openshift-multus/network-metrics-daemon" is waiting for other operators to become ready
       DaemonSet "/openshift-ovn-kubernetes/ovnkube-master" is not available (awaiting 1 nodes)
       DaemonSet "/openshift-ovn-kubernetes/ovnkube-node" is not available (awaiting 1 nodes)
-      Deployment "/openshift-network-diagnostics/network-check-source" is not yet scheduled on any nodes
+      DaemonSet "/openshift-network-diagnostics/network-check-target" is waiting for other operators to become ready
       Deployment "/openshift-multus/multus-admission-controller" is waiting for other operators to become ready
+      Deployment "/openshift-network-diagnostics/network-check-source" is waiting for other operators to become ready
     reason: Deploying
     status: "True"
     type: Progressing
