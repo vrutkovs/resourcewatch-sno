@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:21:59Z"
-deprecatedLastTimestamp: "2023-03-09T14:21:59Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:04Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:22:04Z"
+    time: "2023-03-09T14:23:04Z"
   name: kube-storage-version-migrator-operator-77b5d98c74-9qsht.174ac62fa03ac001
   namespace: openshift-kube-storage-version-migrator-operator
-  resourceVersion: "3973"
+  resourceVersion: "6327"
   uid: feaba48a-75e1-4c94-821a-af91fed60858
 note: Started container kube-storage-version-migrator-operator
 reason: Started
