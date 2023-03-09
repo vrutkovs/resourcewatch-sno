@@ -181,7 +181,7 @@ metadata:
     kind: Job
     name: assisted-installer-controller
     uid: f5a4e959-715f-4436-8272-3a0acf078c12
-  resourceVersion: "581"
+  resourceVersion: "2261"
   uid: bf338db4-906a-4d43-be22-8959360a0341
 spec:
   containers:
@@ -263,6 +263,7 @@ spec:
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
   hostNetwork: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -337,10 +338,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:14:30Z"
-    message: no nodes available to schedule pods
-    reason: Unschedulable
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:19:59Z"
+    status: "True"
     type: PodScheduled
   phase: Pending
   qosClass: BestEffort
