@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:29Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:29Z"
+deprecatedSource:
+  component: cluster-monitoring-operator-openshiftmonitoringclientcertrequester
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:29Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: operator
+    operation: Update
+    time: "2023-03-09T14:22:29Z"
+  name: cluster-monitoring-operator.174ac636a801ea5b
+  namespace: openshift-monitoring
+  resourceVersion: "5215"
+  uid: a5233310-426f-4f04-a6af-531c9a770a37
+note: 'No valid client certificate for OpenShiftMonitoringClientCertRequester is found:
+  unable to parse certificate: data does not contain any valid RSA or ECDSA certificates'
+reason: NoValidCertificateFound
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: cluster-monitoring-operator
+  namespace: openshift-monitoring
+  uid: 3fbddbae-91a0-49f3-9def-60d43a684e07
+type: Normal
