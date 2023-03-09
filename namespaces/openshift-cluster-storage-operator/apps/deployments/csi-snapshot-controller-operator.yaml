@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     capability.openshift.io/name: CSISnapshot
+    deployment.kubernetes.io/revision: "1"
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
   creationTimestamp: "2023-03-09T14:15:14Z"
@@ -108,6 +109,27 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:15:14Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:15:14Z"
   name: csi-snapshot-controller-operator
   namespace: openshift-cluster-storage-operator
   ownerReferences:
@@ -116,7 +138,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1892"
+  resourceVersion: "1895"
   uid: 79d88ae3-4366-475b-9556-f0485be3cce2
 spec:
   progressDeadlineSeconds: 600
@@ -195,4 +217,11 @@ spec:
       - effect: NoSchedule
         key: node-role.kubernetes.io/master
         operator: Exists
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:15:14Z"
+    lastUpdateTime: "2023-03-09T14:15:14Z"
+    message: Created new replica set "csi-snapshot-controller-operator-6f7d895c88"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
