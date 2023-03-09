@@ -297,6 +297,46 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:22:19Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.93"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:21Z"
   name: router-default-7c6dfd9fb7-jthnw
   namespace: openshift-ingress
   ownerReferences:
@@ -306,7 +346,7 @@ metadata:
     kind: ReplicaSet
     name: router-default-7c6dfd9fb7
     uid: 60060897-6bbe-4498-872f-27825dcdc46a
-  resourceVersion: "4959"
+  resourceVersion: "4964"
   uid: 25f9052f-edeb-4f6b-a4da-f714b6374bdb
 spec:
   containers:
@@ -532,6 +572,38 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:21Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:22:21Z"
+    message: 'containers with unready status: [router]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:22:21Z"
+    message: 'containers with unready status: [router]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:22:21Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:af5fed62790f3da5a9b7d32374331539ab531f17d006a69ea501622d946a07fe
+    imageID: ""
+    lastState: {}
+    name: router
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.93
   phase: Pending
+  podIP: 10.0.130.93
+  podIPs:
+  - ip: 10.0.130.93
   qosClass: Burstable
+  startTime: "2023-03-09T14:22:21Z"
