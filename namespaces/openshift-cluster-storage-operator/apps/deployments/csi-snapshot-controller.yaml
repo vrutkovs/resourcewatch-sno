@@ -85,6 +85,7 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -104,16 +105,16 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:00Z"
+    time: "2023-03-09T14:22:03Z"
   name: csi-snapshot-controller
   namespace: openshift-cluster-storage-operator
-  resourceVersion: "3544"
+  resourceVersion: "3879"
   uid: 9a5c2c2e-ce99-4436-9c0a-479980f226bc
 spec:
   progressDeadlineSeconds: 600
@@ -192,6 +193,7 @@ spec:
         key: node-role.kubernetes.io/master
         operator: Exists
 status:
+  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     lastUpdateTime: "2023-03-09T14:22:00Z"
@@ -200,12 +202,12 @@ status:
     status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    lastUpdateTime: "2023-03-09T14:22:00Z"
-    message: ReplicaSet "csi-snapshot-controller-74f6d7449" is progressing.
-    reason: ReplicaSetUpdated
+    lastUpdateTime: "2023-03-09T14:22:03Z"
+    message: ReplicaSet "csi-snapshot-controller-74f6d7449" has successfully progressed.
+    reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
