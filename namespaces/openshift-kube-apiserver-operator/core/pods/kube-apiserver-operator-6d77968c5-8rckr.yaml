@@ -1,6 +1,8 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.51/23"],"mac_address":"0a:58:0a:80:00:33","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.51/23","gateway_ip":"10.128.0.1"}}'
   creationTimestamp: "2023-03-09T14:28:51Z"
   generateName: kube-apiserver-operator-6d77968c5-
   labels:
@@ -12,7 +14,6 @@ metadata:
     fieldsV1:
       f:metadata:
         f:annotations:
-          .: {}
           f:target.workload.openshift.io/management: {}
         f:generateName: {}
         f:labels:
@@ -136,6 +137,16 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:28:51Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:28:51Z"
   name: kube-apiserver-operator-6d77968c5-8rckr
   namespace: openshift-kube-apiserver-operator
   ownerReferences:
@@ -145,7 +156,7 @@ metadata:
     kind: ReplicaSet
     name: kube-apiserver-operator-6d77968c5
     uid: 3cf064f7-aa35-4adc-ade7-1b426ed490b9
-  resourceVersion: "8453"
+  resourceVersion: "8457"
   uid: c46105cd-3ca0-40d7-accb-d09ed5679fe8
 spec:
   automountServiceAccountToken: false
