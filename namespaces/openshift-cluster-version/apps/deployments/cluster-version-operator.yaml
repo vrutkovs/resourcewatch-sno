@@ -172,7 +172,6 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
-        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -192,8 +191,6 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
-        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -206,7 +203,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8025"
+  resourceVersion: "8033"
   uid: aac71004-72e0-4099-a4c0-18313331c859
 spec:
   progressDeadlineSeconds: 600
@@ -336,20 +333,17 @@ spec:
                   fieldPath: metadata.namespace
                 path: namespace
 status:
-  availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2023-03-09T14:22:29Z"
-    lastUpdateTime: "2023-03-09T14:22:29Z"
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
-    type: Available
   - lastTransitionTime: "2023-03-09T14:14:43Z"
     lastUpdateTime: "2023-03-09T14:22:29Z"
     message: ReplicaSet "cluster-version-operator-c4f49bf9f" has successfully progressed.
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
+  - lastTransitionTime: "2023-03-09T14:28:26Z"
+    lastUpdateTime: "2023-03-09T14:28:26Z"
+    message: Deployment does not have minimum availability.
+    reason: MinimumReplicasUnavailable
+    status: "False"
+    type: Available
   observedGeneration: 2
-  readyReplicas: 1
-  replicas: 1
