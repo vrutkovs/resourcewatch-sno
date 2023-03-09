@@ -315,7 +315,6 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
         f:unavailableReplicas: {}
         f:updatedReplicas: {}
@@ -325,7 +324,7 @@ metadata:
     time: "2023-03-09T14:29:12Z"
   name: router-default
   namespace: openshift-ingress
-  resourceVersion: "9124"
+  resourceVersion: "9365"
   uid: 455f2d3e-7299-414a-8476-22ae647963b2
 spec:
   minReadySeconds: 30
@@ -527,7 +526,6 @@ status:
     status: "True"
     type: Progressing
   observedGeneration: 1
-  readyReplicas: 1
   replicas: 1
   unavailableReplicas: 1
   updatedReplicas: 1
