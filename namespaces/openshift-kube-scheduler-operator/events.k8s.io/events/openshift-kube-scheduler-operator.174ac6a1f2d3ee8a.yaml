@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:30:10Z"
+deprecatedLastTimestamp: "2023-03-09T14:30:10Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-status-controller-statussyncer_kube-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:30:10Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:30:10Z"
+  name: openshift-kube-scheduler-operator.174ac6a1f2d3ee8a
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "10389"
+  uid: 263f4f9f-de21-4f84-8d74-4b432d73ba8a
+note: clusteroperator/kube-scheduler version "kube-scheduler" changed from "" to "1.26.2"
+reason: OperatorVersionChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 63ed6034-26ff-494c-bb49-f929f1f6a34d
+type: Normal
