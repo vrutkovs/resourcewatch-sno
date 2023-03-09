@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:33:02Z"
+deprecatedLastTimestamp: "2023-03-09T14:33:02Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:33:04Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:33:04Z"
+  name: prometheus-k8s-0.174ac6ca1842cd4c
+  namespace: openshift-monitoring
+  resourceVersion: "16255"
+  uid: 9154a065-22d4-475e-8943-6746f914cf2e
+note: Started container thanos-sidecar
+reason: Started
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{thanos-sidecar}
+  kind: Pod
+  name: prometheus-k8s-0
+  namespace: openshift-monitoring
+  resourceVersion: "16100"
+  uid: a079c200-a6fa-4bd9-aa4c-a968e63115ee
+type: Normal
