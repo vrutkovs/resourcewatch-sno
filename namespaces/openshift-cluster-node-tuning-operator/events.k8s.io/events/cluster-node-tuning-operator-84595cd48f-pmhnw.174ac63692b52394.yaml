@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:28Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:28Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:30Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:22:30Z"
+  name: cluster-node-tuning-operator-84595cd48f-pmhnw.174ac63692b52394
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "5300"
+  uid: d428bf23-5b98-4d34-9d95-193ac3123355
+note: Successfully pulled image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:f70e0e3bbcb375e3829fd9b16ae1b85953fb2f285af3047073aa13f20daeca87"
+  in 5.278772181s (5.278779702s including waiting)
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{cluster-node-tuning-operator}
+  kind: Pod
+  name: cluster-node-tuning-operator-84595cd48f-pmhnw
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "3127"
+  uid: 5eb0d1b7-2449-4479-93aa-eda071f39d77
+type: Normal
