@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:15:18Z"
+deprecatedLastTimestamp: "2023-03-09T14:15:18Z"
+deprecatedSource:
+  component: deployment-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:15:18Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:15:18Z"
+  name: cluster-node-tuning-operator.174ac5d263632248
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "1971"
+  uid: bb31a13f-26f7-43b5-8048-ccc506bfeffe
+note: Scaled up replica set cluster-node-tuning-operator-84595cd48f to 1
+reason: ScalingReplicaSet
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: cluster-node-tuning-operator
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "1969"
+  uid: 443a883d-67cb-4a54-a3df-1e4be3a342f1
+type: Normal
