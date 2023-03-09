@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:52Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:52Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:52Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:32:52Z"
+  name: thanos-querier-6787f89f54.174ac6c7c83c0976
+  namespace: openshift-monitoring
+  resourceVersion: "16052"
+  uid: df6b6b28-26bb-4a4d-b9e1-11c84ad862d1
+note: 'Created pod: thanos-querier-6787f89f54-zj8rm'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: thanos-querier-6787f89f54
+  namespace: openshift-monitoring
+  resourceVersion: "16048"
+  uid: e40551e7-3785-4683-ac07-1dc8a1d9d9de
+type: Normal
