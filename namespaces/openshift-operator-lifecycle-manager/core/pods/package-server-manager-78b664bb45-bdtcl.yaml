@@ -151,8 +151,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -165,8 +163,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -182,7 +178,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:10Z"
+    time: "2023-03-09T14:32:14Z"
   name: package-server-manager-78b664bb45-bdtcl
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -192,7 +188,7 @@ metadata:
     kind: ReplicaSet
     name: package-server-manager-78b664bb45
     uid: 994dbae6-c5b3-48d8-bf0c-7f45bf4c6b00
-  resourceVersion: "14679"
+  resourceVersion: "14898"
   uid: 18739b54-a4d2-41ac-8582-5e88f4aa3bb7
 spec:
   containers:
@@ -322,16 +318,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:06Z"
-    message: 'containers with unready status: [package-server-manager]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:32:14Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:06Z"
-    message: 'containers with unready status: [package-server-manager]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:32:14Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:28:53Z"
@@ -343,7 +335,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:70c02853f645d8d0e82db73c738d51ace951044ac4e98e35d1db4f7cd75a3e71
     lastState: {}
     name: package-server-manager
-    ready: false
+    ready: true
     restartCount: 1
     started: true
     state:
