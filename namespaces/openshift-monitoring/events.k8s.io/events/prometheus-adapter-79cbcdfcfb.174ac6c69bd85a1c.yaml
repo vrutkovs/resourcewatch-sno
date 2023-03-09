@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:47Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:47Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:47Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:32:47Z"
+  name: prometheus-adapter-79cbcdfcfb.174ac6c69bd85a1c
+  namespace: openshift-monitoring
+  resourceVersion: "15945"
+  uid: c43383cd-9d86-4dd4-8e98-ee53fe1f4831
+note: 'Created pod: prometheus-adapter-79cbcdfcfb-k4gsn'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: prometheus-adapter-79cbcdfcfb
+  namespace: openshift-monitoring
+  resourceVersion: "15939"
+  uid: 90f3ce22-2467-4c26-a73b-b0809c59c454
+type: Normal
