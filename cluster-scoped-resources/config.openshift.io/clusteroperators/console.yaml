@@ -36,6 +36,17 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:14:35Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: console
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:12Z"
   name: console
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -43,8 +54,57 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "629"
+  resourceVersion: "14783"
   uid: 515b351d-ea5a-461b-89c7-b327405f0155
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:32:12Z"
+    reason: NoData
+    status: Unknown
+    type: Degraded
+  - lastTransitionTime: "2023-03-09T14:32:12Z"
+    reason: NoData
+    status: Unknown
+    type: Progressing
+  - lastTransitionTime: "2023-03-09T14:32:12Z"
+    reason: NoData
+    status: Unknown
+    type: Available
+  - lastTransitionTime: "2023-03-09T14:32:12Z"
+    reason: NoData
+    status: Unknown
+    type: Upgradeable
   extension: null
+  relatedObjects:
+  - group: operator.openshift.io
+    name: cluster
+    resource: consoles
+  - group: config.openshift.io
+    name: cluster
+    resource: consoles
+  - group: config.openshift.io
+    name: cluster
+    resource: infrastructures
+  - group: config.openshift.io
+    name: cluster
+    resource: proxies
+  - group: config.openshift.io
+    name: cluster
+    resource: oauths
+  - group: oauth.openshift.io
+    name: console
+    resource: oauthclients
+  - group: ""
+    name: openshift-console-operator
+    resource: namespaces
+  - group: ""
+    name: openshift-console
+    resource: namespaces
+  - group: ""
+    name: console-public
+    namespace: openshift-config-managed
+    resource: configmaps
+  versions:
+  - name: operator
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
