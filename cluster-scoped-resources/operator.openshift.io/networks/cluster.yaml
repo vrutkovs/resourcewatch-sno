@@ -58,7 +58,7 @@ metadata:
         f:readyReplicas: {}
     manager: cluster-network-operator/clusterconfig
     operation: Apply
-    time: "2023-03-09T14:20:36Z"
+    time: "2023-03-09T14:22:32Z"
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -69,7 +69,7 @@ metadata:
     operation: Update
     time: "2023-03-09T14:22:29Z"
   name: cluster
-  resourceVersion: "5277"
+  resourceVersion: "5367"
   uid: e6519524-ef16-4ee8-82f1-2faa42688032
 spec:
   clusterNetwork:
