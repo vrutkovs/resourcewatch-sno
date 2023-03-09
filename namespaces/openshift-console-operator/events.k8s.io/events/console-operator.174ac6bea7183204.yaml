@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:13Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:13Z"
+deprecatedSource:
+  component: console-operator-console-service-controller-consoleservicecontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:13Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: console
+    operation: Update
+    time: "2023-03-09T14:32:13Z"
+  name: console-operator.174ac6bea7183204
+  namespace: openshift-console-operator
+  resourceVersion: "14848"
+  uid: 648e7317-43ba-44d3-b2fa-6c836a5a95ce
+note: Created Service/downloads -n openshift-console because it was missing
+reason: ServiceCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: console-operator
+  namespace: openshift-console-operator
+  uid: 96b3e259-2eaa-49a3-8a5e-54df68da1860
+type: Normal
