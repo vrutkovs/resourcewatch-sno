@@ -66,14 +66,14 @@ metadata:
     manager: cluster-openshift-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:04Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "14002"
+  resourceVersion: "14142"
   uid: 745e26c2-906b-4bfc-8835-c7ba9c167c7b
 spec:
   logLevel: Normal
@@ -108,13 +108,16 @@ status:
     reason: PreconditionNotReady
     status: "False"
     type: APIServicesAvailable
-  - lastTransitionTime: "2023-03-09T14:29:20Z"
-    reason: AsExpected
-    status: "True"
-    type: APIServerDeploymentAvailable
-  - lastTransitionTime: "2023-03-09T14:29:20Z"
-    reason: AsExpected
+  - lastTransitionTime: "2023-03-09T14:32:04Z"
+    message: no apiserver.openshift-apiserver pods available on any node.
+    reason: NoPod
     status: "False"
+    type: APIServerDeploymentAvailable
+  - lastTransitionTime: "2023-03-09T14:32:04Z"
+    message: 1 of 1 requested instances are unavailable for apiserver.openshift-apiserver
+      ()
+    reason: UnavailablePod
+    status: "True"
     type: APIServerDeploymentDegraded
   - lastTransitionTime: "2023-03-09T14:23:07Z"
     reason: AsExpected
