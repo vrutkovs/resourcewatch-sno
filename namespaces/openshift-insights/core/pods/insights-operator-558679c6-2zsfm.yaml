@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.47/23"],"mac_address":"0a:58:0a:80:00:2f","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.47/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:28:48Z"
@@ -141,6 +142,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:28:48Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:28:48Z"
   name: insights-operator-558679c6-2zsfm
   namespace: openshift-insights
   ownerReferences:
@@ -150,7 +160,7 @@ metadata:
     kind: ReplicaSet
     name: insights-operator-558679c6
     uid: 676c392a-9c6b-4895-9a89-2500abfa49c6
-  resourceVersion: "8356"
+  resourceVersion: "8359"
   uid: 005bb3a4-6468-4232-a227-5fd234462534
 spec:
   containers:
