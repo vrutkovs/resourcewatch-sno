@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-09T14:23:35Z"
-deprecatedLastTimestamp: "2023-03-09T14:23:36Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:40Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -28,7 +28,7 @@ metadata:
     time: "2023-03-09T14:24:44Z"
   name: apiserver-5974c8c8bd-7zfsh.174ac6460e6a6a54
   namespace: openshift-apiserver
-  resourceVersion: "7112"
+  resourceVersion: "7114"
   uid: f5965081-45e2-4dd9-9823-3b1f33ba0b44
 note: "Readiness probe error: Get \"https://10.128.0.40:8443/readyz\": net/http: request
   canceled (Client.Timeout exceeded while awaiting headers)\nbody: \n"
