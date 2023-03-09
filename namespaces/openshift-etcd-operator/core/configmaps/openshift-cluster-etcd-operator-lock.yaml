@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"etcd-operator-7897669d79-nhcph_e276ffa2-8afc-4101-a810-7cd81004c3b6","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:22:00Z","renewTime":"2023-03-09T14:22:00Z","leaderTransitions":0}'
+  creationTimestamp: "2023-03-09T14:22:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:control-plane.alpha.kubernetes.io/leader: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
+  name: openshift-cluster-etcd-operator-lock
+  namespace: openshift-etcd-operator
+  resourceVersion: "3604"
+  uid: 7b55e017-ba1c-4e2c-896e-ddac2352804e
