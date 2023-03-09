@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-09T14:34:06Z"
-deprecatedLastTimestamp: "2023-03-09T14:34:21Z"
+deprecatedLastTimestamp: "2023-03-09T14:34:36Z"
 deprecatedSource:
   component: oauth-apiserver-status-controller-statussyncer_authentication
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-09T14:34:21Z"
+    time: "2023-03-09T14:34:36Z"
   name: openshift-authentication-operator.174ac6d8eb04094d
   namespace: openshift-authentication-operator
-  resourceVersion: "16782"
+  resourceVersion: "16821"
   uid: e463e3ae-0518-46ea-a6a6-041df2563d93
 note: 'Status for clusteroperator/authentication changed: Degraded message changed
   from "OAuthServerServiceEndpointAccessibleControllerDegraded: Get \"https://172.30.70.249:443/healthz\":
