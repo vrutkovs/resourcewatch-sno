@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:21Z"
+    time: "2023-03-09T14:32:24Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15018"
+  resourceVersion: "15051"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
@@ -73,11 +73,11 @@ status:
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
-      OAuthServerRouteEndpointAccessibleControllerAvailable: failed to retrieve route from cache: route.route.openshift.io "oauth-openshift" not found
+      OAuthServerRouteEndpointAccessibleControllerAvailable: Get "https://oauth-openshift.apps.ocp.choomba.one/healthz": EOF
       OAuthServerServiceEndpointAccessibleControllerAvailable: Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443: connect: connection refused
       OAuthServerServiceEndpointsEndpointAccessibleControllerAvailable: endpoints "oauth-openshift" not found
       WellKnownAvailable: The well-known endpoint is not yet available: failed to get oauth metadata from openshift-config-managed/oauth-openshift ConfigMap: configmap "oauth-openshift" not found (check authentication operator, it is supposed to create this)
-    reason: OAuthServerRouteEndpointAccessibleController_ResourceNotFound::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound::WellKnown_NotReady
+    reason: OAuthServerRouteEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound::WellKnown_NotReady
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
