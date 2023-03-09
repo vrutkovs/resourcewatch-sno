@@ -6,7 +6,7 @@ metadata:
     include.release.openshift.io/single-node-developer: "true"
     release.openshift.io/create-only: "true"
   creationTimestamp: "2023-03-09T14:14:46Z"
-  generation: 1
+  generation: 2
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -40,18 +40,96 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:22:03Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          .: {}
+          f:oauthServer:
+            .: {}
+            f:corsAllowedOrigins: {}
+            f:oauthConfig:
+              .: {}
+              f:assetPublicURL: {}
+              f:loginURL: {}
+              f:templates:
+                .: {}
+                f:error: {}
+                f:login: {}
+                f:providerSelection: {}
+              f:tokenConfig:
+                .: {}
+                f:accessTokenMaxAgeSeconds: {}
+                f:authorizeTokenMaxAgeSeconds: {}
+            f:serverArguments:
+              .: {}
+              f:audit-log-format: {}
+              f:audit-log-maxbackup: {}
+              f:audit-log-maxsize: {}
+              f:audit-log-path: {}
+              f:audit-policy-file: {}
+            f:servingInfo:
+              .: {}
+              f:cipherSuites: {}
+              f:minTLSVersion: {}
+            f:volumesToMount:
+              .: {}
+              f:identityProviders: {}
+        f:unsupportedConfigOverrides: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:22:04Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3880"
+  resourceVersion: "3982"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
   managementState: Managed
+  observedConfig:
+    oauthServer:
+      corsAllowedOrigins:
+      - //127\.0\.0\.1(:|$)
+      - //localhost(:|$)
+      oauthConfig:
+        assetPublicURL: ""
+        loginURL: https://api.ocp.choomba.one:6443
+        templates:
+          error: /var/config/system/secrets/v4-0-config-system-ocp-branding-template/errors.html
+          login: /var/config/system/secrets/v4-0-config-system-ocp-branding-template/login.html
+          providerSelection: /var/config/system/secrets/v4-0-config-system-ocp-branding-template/providers.html
+        tokenConfig:
+          accessTokenMaxAgeSeconds: 86400
+          authorizeTokenMaxAgeSeconds: 300
+      serverArguments:
+        audit-log-format:
+        - json
+        audit-log-maxbackup:
+        - "10"
+        audit-log-maxsize:
+        - "100"
+        audit-log-path:
+        - /var/log/oauth-server/audit.log
+        audit-policy-file:
+        - /var/run/configmaps/audit/audit.yaml
+      servingInfo:
+        cipherSuites:
+        - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+        - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+        - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+        - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+        - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+        - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+        minTLSVersion: VersionTLS12
+      volumesToMount:
+        identityProviders: '{}'
   operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
