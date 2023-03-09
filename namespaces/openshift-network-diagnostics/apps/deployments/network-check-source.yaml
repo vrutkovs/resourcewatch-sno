@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
+    deployment.kubernetes.io/revision: "1"
     kubernetes.io/description: |
       This deployment deploys the network-check-source pod that performs
       pod network connectivity checks
@@ -81,6 +82,27 @@ metadata:
     manager: cluster-network-operator/operconfig
     operation: Apply
     time: "2023-03-09T14:20:34Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:34Z"
   name: network-check-source
   namespace: openshift-network-diagnostics
   ownerReferences:
@@ -90,7 +112,7 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "2801"
+  resourceVersion: "2804"
   uid: 2812ba40-8fdc-4a88-bfa0-33acb6798e77
 spec:
   progressDeadlineSeconds: 600
@@ -160,4 +182,11 @@ spec:
       serviceAccount: network-diagnostics
       serviceAccountName: network-diagnostics
       terminationGracePeriodSeconds: 30
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:20:34Z"
+    lastUpdateTime: "2023-03-09T14:20:34Z"
+    message: Created new replica set "network-check-source-64f9ddb9bc"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
