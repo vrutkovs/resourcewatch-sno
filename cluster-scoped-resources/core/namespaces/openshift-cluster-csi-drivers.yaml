@@ -14,6 +14,7 @@ metadata:
   creationTimestamp: "2023-03-09T14:14:38Z"
   labels:
     kubernetes.io/metadata.name: openshift-cluster-csi-drivers
+    olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: ""
     openshift.io/cluster-monitoring: "true"
     pod-security.kubernetes.io/audit: privileged
     pod-security.kubernetes.io/enforce: privileged
@@ -55,6 +56,15 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:38Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: {}
+    manager: olm
+    operation: Update
+    time: "2023-03-09T14:29:17Z"
   name: openshift-cluster-csi-drivers
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -62,7 +72,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "810"
+  resourceVersion: "9570"
   uid: 85483b22-a0d3-449f-b6da-9c4ff489eb68
 spec:
   finalizers:
