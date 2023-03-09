@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:04Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:04Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:04Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:04Z"
+  name: prometheus-operator-admission-webhook-b5c544574-qvght.174ac6bc8ce175a4
+  namespace: openshift-monitoring
+  resourceVersion: "14138"
+  uid: 29c2b037-8bd1-433e-9682-076681442350
+note: 'MountVolume.SetUp failed for volume "tls-certificates" : failed to sync secret
+  cache: timed out waiting for the condition'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: prometheus-operator-admission-webhook-b5c544574-qvght
+  namespace: openshift-monitoring
+  resourceVersion: "9197"
+  uid: 6be02a99-8e3b-4979-beb8-0c3206b2773d
+type: Warning
