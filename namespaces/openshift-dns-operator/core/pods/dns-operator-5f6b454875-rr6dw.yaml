@@ -195,6 +195,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -209,19 +211,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:10Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:07Z"
   name: dns-operator-5f6b454875-rr6dw
   namespace: openshift-dns-operator
   ownerReferences:
@@ -231,7 +221,7 @@ metadata:
     kind: ReplicaSet
     name: dns-operator-5f6b454875
     uid: b3f0bc55-85fe-4f4c-a7a2-2f5aa8e08d61
-  resourceVersion: "13652"
+  resourceVersion: "14299"
   uid: 75faecd8-af6d-4744-8fa4-36fccee2e4ba
 spec:
   containers:
@@ -365,8 +355,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:22:10Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:10Z"
