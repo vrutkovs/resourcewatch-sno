@@ -99,7 +99,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16309"
+  resourceVersion: "16316"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -203,9 +203,10 @@ status:
     reason: AsExpected
     status: "True"
     type: OAuthServerServiceEndpointsEndpointAccessibleControllerAvailable
-  - lastTransitionTime: "2023-03-09T14:33:03Z"
-    reason: AsExpected
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:33:06Z"
+    message: oauth service endpoints are not ready
+    reason: SyncError
+    status: "True"
     type: OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded
   - lastTransitionTime: "2023-03-09T14:32:09Z"
     reason: AsExpected
