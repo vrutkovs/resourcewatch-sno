@@ -28,11 +28,24 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:31:56Z"
+  - apiVersion: oauth.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:redirectURIs:
+        .: {}
+        v:"https://console-openshift-console.apps.ocp.choomba.one/auth/callback": {}
+      f:secret: {}
+    manager: console
+    operation: Update
+    time: "2023-03-09T14:32:32Z"
   name: console
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "13301"
+  resourceVersion: "15392"
   uid: 4241cdb0-60a0-413e-a756-941a24074795
+redirectURIs:
+- https://console-openshift-console.apps.ocp.choomba.one/auth/callback
+secret: mDXlDyULBAn22TaY7Xe6znGilrjT1Tdj8-6V7xzTENc
