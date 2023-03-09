@@ -1,0 +1,28 @@
+apiVersion: config.openshift.io/v1
+kind: Infrastructure
+metadata:
+  creationTimestamp: "2023-03-09T14:14:25Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:cloudConfig:
+          .: {}
+          f:name: {}
+        f:platformSpec:
+          .: {}
+          f:type: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:14:25Z"
+  name: cluster
+  resourceVersion: "551"
+  uid: d2d95d83-76b4-4bb6-b834-dd99d17bae7f
+spec:
+  cloudConfig:
+    name: ""
+  platformSpec:
+    type: None
