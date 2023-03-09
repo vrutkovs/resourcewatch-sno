@@ -42,7 +42,7 @@ metadata:
     manager: catalog
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:12Z"
+    time: "2023-03-09T14:34:17Z"
   name: operator-lifecycle-manager-catalog
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -50,7 +50,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "9096"
+  resourceVersion: "16758"
   uid: 5bee8d4d-9999-4415-a8f6-a7f87294e9bf
 spec: {}
 status:
@@ -58,9 +58,9 @@ status:
   - lastTransitionTime: "2023-03-09T14:29:12Z"
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:29:12Z"
+  - lastTransitionTime: "2023-03-09T14:34:17Z"
     message: Deployed 0.0.0-d4219045431cb6a35ad0d1b5d5fdb0b09adf1430
-    status: "True"
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:29:12Z"
     status: "True"
