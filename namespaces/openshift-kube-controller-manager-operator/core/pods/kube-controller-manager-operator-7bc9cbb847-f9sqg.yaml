@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.16/23"],"mac_address":"0a:58:0a:80:00:10","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.16/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.16"
+          ],
+          "mac": "0a:58:0a:80:00:10",
+          "default": true,
+          "dns": {}
+      }]
   creationTimestamp: "2023-03-09T14:20:00Z"
   generateName: kube-controller-manager-operator-7bc9cbb847-
   labels:
@@ -202,6 +213,16 @@ metadata:
     fieldsV1:
       f:metadata:
         f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:21:51Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
           .: {}
           f:k8s.ovn.org/pod-networks: {}
     manager: vrutkovs-sno
@@ -216,7 +237,7 @@ metadata:
     kind: ReplicaSet
     name: kube-controller-manager-operator-7bc9cbb847
     uid: c0d92894-0d4a-459c-85e6-a2fc1f4a0848
-  resourceVersion: "3171"
+  resourceVersion: "3215"
   uid: 80e0e446-fc1d-4cde-8a91-ccfee062c600
 spec:
   automountServiceAccountToken: false
