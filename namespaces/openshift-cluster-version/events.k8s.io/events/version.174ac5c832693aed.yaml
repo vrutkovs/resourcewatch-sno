@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:14:34Z"
+deprecatedLastTimestamp: "2023-03-09T14:14:34Z"
+deprecatedSource:
+  component: openshift-cluster-version
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:14:34Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-09T14:14:34Z"
+  name: version.174ac5c832693aed
+  namespace: openshift-cluster-version
+  resourceVersion: "588"
+  uid: b138f6bb-c49c-4c66-a4ba-cf4a260180e0
+note: Retrieving and verifying payload version="4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest"
+  image="registry.build05.ci.openshift.org/ci-ln-88xnydk/release@sha256:d1680bbb0440b5ecad41a725943ea1feaeea72eaed97943964572ba8dc00367e"
+reason: RetrievePayload
+regarding:
+  apiVersion: config.openshift.io/v1
+  kind: ClusterVersion
+  name: version
+  namespace: openshift-cluster-version
+type: Normal
