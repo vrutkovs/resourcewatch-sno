@@ -418,7 +418,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:23Z"
+    time: "2023-03-09T14:20:26Z"
   name: multus-additional-cni-plugins-tfc7q
   namespace: openshift-multus
   ownerReferences:
@@ -428,7 +428,7 @@ metadata:
     kind: DaemonSet
     name: multus-additional-cni-plugins
     uid: f298fd66-e9c3-44fd-bc7d-4aca53e76970
-  resourceVersion: "2586"
+  resourceVersion: "2651"
   uid: c744a2d1-8bd9-4403-8cb9-bed2ff64ddff
 spec:
   affinity:
@@ -803,8 +803,8 @@ status:
   conditions:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:23Z"
-    message: 'containers with incomplete status: [egress-router-binary-copy cni-plugins
-      bond-cni-plugin routeoverride-cni whereabouts-cni-bincopy whereabouts-cni]'
+    message: 'containers with incomplete status: [cni-plugins bond-cni-plugin routeoverride-cni
+      whereabouts-cni-bincopy whereabouts-cni]'
     reason: ContainersNotInitialized
     status: "False"
     type: Initialized
@@ -837,15 +837,20 @@ status:
         reason: PodInitializing
   hostIP: 10.0.130.93
   initContainerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:1a3fb5eda79c9e3a3b9368a2f923c2ed63fffccba20502b718b8d1afb7675897
-    imageID: ""
+  - containerID: cri-o://457792669eecb90d90f0747332f0774ea8334cd18f4f7cf53a3631c4608a7845
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:1a3fb5eda79c9e3a3b9368a2f923c2ed63fffccba20502b718b8d1afb7675897
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:1a3fb5eda79c9e3a3b9368a2f923c2ed63fffccba20502b718b8d1afb7675897
     lastState: {}
     name: egress-router-binary-copy
-    ready: false
+    ready: true
     restartCount: 0
     state:
-      waiting:
-        reason: PodInitializing
+      terminated:
+        containerID: cri-o://457792669eecb90d90f0747332f0774ea8334cd18f4f7cf53a3631c4608a7845
+        exitCode: 0
+        finishedAt: "2023-03-09T14:20:25Z"
+        reason: Completed
+        startedAt: "2023-03-09T14:20:25Z"
   - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4e4bafb1e5f5b396d308ee8a7e49c4fd8b13597134c5887db0dd9d9c2d4e0e40
     imageID: ""
     lastState: {}
