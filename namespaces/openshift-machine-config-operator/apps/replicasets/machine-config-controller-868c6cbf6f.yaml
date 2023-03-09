@@ -120,13 +120,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:22Z"
+    time: "2023-03-09T14:32:08Z"
   name: machine-config-controller-868c6cbf6f
   namespace: openshift-machine-config-operator
   ownerReferences:
@@ -136,7 +138,7 @@ metadata:
     kind: Deployment
     name: machine-config-controller
     uid: cf0f9088-c800-466f-9217-2099d6dea337
-  resourceVersion: "13855"
+  resourceVersion: "14452"
   uid: 19ae2290-65e0-4e2e-963d-b6c254373b2e
 spec:
   replicas: 1
@@ -229,6 +231,8 @@ spec:
           defaultMode: 420
           secretName: cookie-secret
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
