@@ -18,19 +18,6 @@ metadata:
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        f:availableReplicas: {}
-        f:fullyLabeledReplicas: {}
-        f:observedGeneration: {}
-        f:readyReplicas: {}
-        f:replicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:22:29Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:metadata:
         f:annotations:
           .: {}
@@ -173,6 +160,19 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:28:26Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:availableReplicas: {}
+        f:fullyLabeledReplicas: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:26Z"
   name: cluster-version-operator-c4f49bf9f
   namespace: openshift-cluster-version
   ownerReferences:
@@ -182,7 +182,7 @@ metadata:
     kind: Deployment
     name: cluster-version-operator
     uid: aac71004-72e0-4099-a4c0-18313331c859
-  resourceVersion: "8022"
+  resourceVersion: "8029"
   uid: fecf325a-68c4-4c40-90b9-720005fcd7de
 spec:
   replicas: 0
@@ -312,6 +312,6 @@ spec:
 status:
   availableReplicas: 1
   fullyLabeledReplicas: 1
-  observedGeneration: 1
+  observedGeneration: 2
   readyReplicas: 1
   replicas: 1
