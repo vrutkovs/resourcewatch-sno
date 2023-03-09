@@ -223,6 +223,24 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:14:55Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ReplicaFailure"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:14:55Z"
   name: network-operator-5556ffc66
   namespace: openshift-network-operator
   ownerReferences:
@@ -232,7 +250,7 @@ metadata:
     kind: Deployment
     name: network-operator
     uid: fa931036-6675-4cee-8fe6-6b11b9af8ad6
-  resourceVersion: "1307"
+  resourceVersion: "1311"
   uid: 18aad614-008f-4452-91c3-1e80ca9007b7
 spec:
   replicas: 1
@@ -380,4 +398,12 @@ spec:
           optional: true
           secretName: metrics-tls
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:14:55Z"
+    message: 'pods "network-operator-5556ffc66-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+      the cluster does not have any nodes'
+    reason: FailedCreate
+    status: "True"
+    type: ReplicaFailure
+  observedGeneration: 1
   replicas: 0
