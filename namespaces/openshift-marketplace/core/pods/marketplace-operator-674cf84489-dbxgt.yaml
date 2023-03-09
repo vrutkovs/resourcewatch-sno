@@ -178,7 +178,7 @@ metadata:
     kind: ReplicaSet
     name: marketplace-operator-674cf84489
     uid: 6de7f729-4467-44a0-b559-6acd49abfed5
-  resourceVersion: "2285"
+  resourceVersion: "3117"
   uid: e0c97e17-7e07-4da5-9587-dcabc1819678
 spec:
   containers:
@@ -256,6 +256,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -327,11 +328,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:19:59Z"
-    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
-      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
-    reason: Unschedulable
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:21:51Z"
+    status: "True"
     type: PodScheduled
   phase: Pending
   qosClass: Burstable
