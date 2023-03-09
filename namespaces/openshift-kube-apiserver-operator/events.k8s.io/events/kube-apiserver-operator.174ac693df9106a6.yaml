@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:09Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:09Z"
+deprecatedSource:
+  component: kube-apiserver-operator-kubeapiserverstaticresources-kubeapiserverstaticresources
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:29:15Z"
+  name: kube-apiserver-operator.174ac693df9106a6
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "9465"
+  uid: e29b34b7-0ba9-44a2-bbea-04537a83856d
+note: Created RoleBinding.rbac.authorization.k8s.io/authentication-reader-for-authenticated-users
+  -n kube-system because it was missing
+reason: RoleBindingCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Normal
