@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2023-03-09T14:21:59Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-kube-storage-version-migrator
+    openshift.io/cluster-monitoring: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/cluster-monitoring: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-03-09T14:21:59Z"
+  name: openshift-kube-storage-version-migrator
+  resourceVersion: "3346"
+  uid: cdd9f5cb-afe4-4e13-b7ec-09c62539225d
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
