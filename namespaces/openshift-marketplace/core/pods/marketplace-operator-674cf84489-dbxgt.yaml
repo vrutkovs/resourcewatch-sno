@@ -236,7 +236,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:09Z"
+    time: "2023-03-09T14:32:10Z"
   name: marketplace-operator-674cf84489-dbxgt
   namespace: openshift-marketplace
   ownerReferences:
@@ -246,7 +246,7 @@ metadata:
     kind: ReplicaSet
     name: marketplace-operator-674cf84489
     uid: 6de7f729-4467-44a0-b559-6acd49abfed5
-  resourceVersion: "14516"
+  resourceVersion: "14635"
   uid: e0c97e17-7e07-4da5-9587-dcabc1819678
 spec:
   containers:
@@ -400,11 +400,11 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:14Z"
+    lastTransitionTime: "2023-03-09T14:32:06Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:14Z"
+    lastTransitionTime: "2023-03-09T14:32:06Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
