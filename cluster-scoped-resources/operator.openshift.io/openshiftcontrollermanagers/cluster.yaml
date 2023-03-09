@@ -69,14 +69,14 @@ metadata:
     manager: cluster-openshift-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:30:44Z"
+    time: "2023-03-09T14:30:45Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10635"
+  resourceVersion: "10736"
   uid: b34d6810-68f9-4135-9afc-798b3c845c22
 spec:
   logLevel: Normal
@@ -114,9 +114,9 @@ status:
     type: Available
   - lastTransitionTime: "2023-03-09T14:23:01Z"
     message: |-
-      deployment/controller-manager: observed generation is 2, desired generation is 3.
+      deployment/controller-manager: observed generation is 3, desired generation is 4.
       deployment/controller-manager: available replicas is 0, desired available replicas > 1
-      deployment/route-controller-manager: observed generation is 2, desired generation is 3.
+      deployment/route-controller-manager: observed generation is 3, desired generation is 4.
       deployment/route-controller-manager: available replicas is 0, desired available replicas > 1
     reason: DesiredStateNotYetAchieved
     status: "True"
@@ -130,13 +130,13 @@ status:
   generations:
   - group: apps
     hash: ""
-    lastGeneration: 3
+    lastGeneration: 4
     name: controller-manager
     namespace: openshift-controller-manager
     resource: deployments
   - group: apps
     hash: ""
-    lastGeneration: 3
+    lastGeneration: 4
     name: route-controller-manager
     namespace: openshift-route-controller-manager
     resource: deployments
