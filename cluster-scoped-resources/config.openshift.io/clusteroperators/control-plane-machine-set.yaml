@@ -33,6 +33,16 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:14:36Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:versions: {}
+    manager: manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:46Z"
   name: control-plane-machine-set
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -40,10 +50,29 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "695"
+  resourceVersion: "8334"
   uid: 0df12db6-daa8-4e63-899c-7a03347fdc45
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:28:46Z"
+    message: cluster operator is available
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-03-09T14:28:46Z"
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-03-09T14:28:46Z"
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-03-09T14:28:46Z"
+    message: cluster operator is upgradable
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
   extension: null
   relatedObjects:
   - group: ""
@@ -55,3 +84,6 @@ status:
   - group: machine.openshift.io
     name: ""
     resource: machines
+  versions:
+  - name: operator
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
