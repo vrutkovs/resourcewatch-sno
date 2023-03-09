@@ -17,6 +17,9 @@ data:
       branding: ocp
       documentationBaseURL: https://access.redhat.com/documentation/en-us/openshift_container_platform/4.13/
     kind: ConsoleConfig
+    monitoringInfo:
+      alertmanagerTenancyHost: alertmanager-main.openshift-monitoring.svc:9092
+      alertmanagerUserWorkloadHost: alertmanager-main.openshift-monitoring.svc:9094
     providers: {}
     servingInfo:
       bindAddress: https://[::]:8443
@@ -40,8 +43,8 @@ metadata:
           f:app: {}
     manager: console
     operation: Update
-    time: "2023-03-09T14:32:28Z"
+    time: "2023-03-09T14:34:58Z"
   name: console-config
   namespace: openshift-console
-  resourceVersion: "15275"
+  resourceVersion: "16949"
   uid: fe543672-441b-4b7a-a3ae-18bfc5aaaa59
