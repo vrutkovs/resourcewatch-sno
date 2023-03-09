@@ -150,7 +150,7 @@ metadata:
     kind: ReplicaSet
     name: insights-operator-558679c6
     uid: 676c392a-9c6b-4895-9a89-2500abfa49c6
-  resourceVersion: "8354"
+  resourceVersion: "8356"
   uid: 005bb3a4-6468-4232-a227-5fd234462534
 spec:
   containers:
@@ -206,6 +206,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     beta.kubernetes.io/os: linux
     node-role.kubernetes.io/master: ""
@@ -281,5 +282,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:28:48Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
