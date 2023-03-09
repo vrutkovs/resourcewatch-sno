@@ -52,21 +52,22 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6408"
+  resourceVersion: "6410"
   uid: 554eb8d5-f8a6-4fb8-afb7-e4785239d130
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:02Z"
-    message: All is well
+    message: 'APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable
+      for apiserver.openshift-apiserver (3 containers are waiting in pending apiserver-5974c8c8bd-7zfsh
+      pod)'
     reason: AsExpected
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:23:03Z"
-    message: 'APIServerDeploymentProgressing: deployment/apiserver.openshift-apiserver:
-      observed generation is 0, desired generation is 1.'
-    reason: APIServerDeployment_NewGeneration
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:23:07Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
