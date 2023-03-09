@@ -15,40 +15,6 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:metadata:
-        f:annotations:
-          .: {}
-          f:deployment.kubernetes.io/revision: {}
-      f:status:
-        f:conditions:
-          .: {}
-          k:{"type":"Available"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Progressing"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:observedGeneration: {}
-        f:replicas: {}
-        f:unavailableReplicas: {}
-        f:updatedReplicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:22:38Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
         f:labels:
           .: {}
           f:app.kubernetes.io/component: {}
@@ -202,9 +168,44 @@ metadata:
     manager: operator
     operation: Update
     time: "2023-03-09T14:22:38Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:availableReplicas: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:43Z"
   name: openshift-state-metrics
   namespace: openshift-monitoring
-  resourceVersion: "5697"
+  resourceVersion: "5876"
   uid: 18c35d70-790f-4a4e-bfd7-e16c964f3997
 spec:
   progressDeadlineSeconds: 600
@@ -333,20 +334,21 @@ spec:
           name: metrics-client-ca
         name: metrics-client-ca
 status:
+  availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2023-03-09T14:22:38Z"
-    lastUpdateTime: "2023-03-09T14:22:38Z"
-    message: Deployment does not have minimum availability.
-    reason: MinimumReplicasUnavailable
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:22:43Z"
+    lastUpdateTime: "2023-03-09T14:22:43Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:38Z"
-    lastUpdateTime: "2023-03-09T14:22:38Z"
-    message: ReplicaSet "openshift-state-metrics-6546f7bbd5" is progressing.
-    reason: ReplicaSetUpdated
+    lastUpdateTime: "2023-03-09T14:22:43Z"
+    message: ReplicaSet "openshift-state-metrics-6546f7bbd5" has successfully progressed.
+    reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
