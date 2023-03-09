@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:38:22Z"
+    time: "2023-03-09T14:38:23Z"
   name: kube-controller-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,20 +52,13 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "17690"
+  resourceVersion: "17708"
   uid: fc4da80c-8238-45f0-831b-b76abd6e6070
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:33:47Z"
-    message: "StaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno container
-      \"cluster-policy-controller\" is waiting: ContainerCreating: \nStaticPodsDegraded:
-      pod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager\"
-      is waiting: ContainerCreating: \nStaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno
-      container \"kube-controller-manager-cert-syncer\" is waiting: ContainerCreating:
-      \nStaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager-recovery-controller\"
-      is waiting: ContainerCreating: \nNodeControllerDegraded: All master nodes are
-      ready"
+    message: 'NodeControllerDegraded: All master nodes are ready'
     reason: AsExpected
     status: "False"
     type: Degraded
