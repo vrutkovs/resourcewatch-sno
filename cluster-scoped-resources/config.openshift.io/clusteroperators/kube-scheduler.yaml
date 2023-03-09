@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:30:47Z"
+    time: "2023-03-09T14:31:23Z"
   name: kube-scheduler
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,13 +52,40 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10797"
+  resourceVersion: "12968"
   uid: 441925ee-aa23-4d3c-937b-d1809e7a63de
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:29:35Z"
-    message: 'NodeControllerDegraded: All master nodes are ready'
+    message: "NodeControllerDegraded: All master nodes are ready\nStaticPodsDegraded:
+      pod/openshift-kube-scheduler-vrutkovs-sno container \"kube-scheduler\" is terminated:
+      Completed: \nStaticPodsDegraded: pod/openshift-kube-scheduler-vrutkovs-sno container
+      \"kube-scheduler-cert-syncer\" is terminated: Error: : x509: certificate is
+      valid for kubernetes, kubernetes.default, kubernetes.default.svc, kubernetes.default.svc.cluster.local,
+      openshift, openshift.default, openshift.default.svc, openshift.default.svc.cluster.local,
+      not localhost-recovery'(may retry after sleeping)\nStaticPodsDegraded: E0309
+      14:31:21.376105       1 event.go:276] Unable to write event: '&v1.Event{TypeMeta:v1.TypeMeta{Kind:\"\",
+      APIVersion:\"\"}, ObjectMeta:v1.ObjectMeta{Name:\"openshift-kube-scheduler-vrutkovs-sno.174ac6a23ff3f29c\",
+      GenerateName:\"\", Namespace:\"openshift-kube-scheduler\", SelfLink:\"\", UID:\"\",
+      ResourceVersion:\"\", Generation:0, CreationTimestamp:time.Date(1, time.January,
+      1, 0, 0, 0, 0, time.UTC), DeletionTimestamp:<nil>, DeletionGracePeriodSeconds:(*int64)(nil),
+      Labels:map[string]string(nil), Annotations:map[string]string(nil), OwnerReferences:[]v1.OwnerReference(nil),
+      Finalizers:[]string(nil), ManagedFields:[]v1.ManagedFieldsEntry(nil)}, InvolvedObject:v1.ObjectReference{Kind:\"Pod\",
+      Namespace:\"openshift-kube-scheduler\", Name:\"openshift-kube-scheduler-vrutkovs-sno\",
+      UID:\"\", APIVersion:\"v1\", ResourceVersion:\"\", FieldPath:\"\"}, Reason:\"FastControllerResync\",
+      Message:\"Controller \\\"CertSyncController\\\" resync interval is set to 0s
+      which might lead to client request throttling\", Source:v1.EventSource{Component:\"cert-syncer-certsynccontroller\",
+      Host:\"\"}, FirstTimestamp:time.Date(2023, time.March, 9, 14, 30, 11, 308884636,
+      time.Local), LastTimestamp:time.Date(2023, time.March, 9, 14, 30, 11, 308884636,
+      time.Local), Count:1, Type:\"Warning\", EventTime:time.Date(1, time.January,
+      1, 0, 0, 0, 0, time.UTC), Series:(*v1.EventSeries)(nil), Action:\"\", Related:(*v1.ObjectReference)(nil),
+      ReportingController:\"\", ReportingInstance:\"\"}': 'Post \"https://localhost:6443/api/v1/namespaces/openshift-kube-scheduler/events\":
+      x509: certificate is valid for kubernetes, kubernetes.default, kubernetes.default.svc,
+      kubernetes.default.svc.cluster.local, openshift, openshift.default, openshift.default.svc,
+      openshift.default.svc.cluster.local, not localhost-recovery'(may retry after
+      sleeping)\nStaticPodsDegraded: \nStaticPodsDegraded: pod/openshift-kube-scheduler-vrutkovs-sno
+      container \"kube-scheduler-recovery-controller\" is terminated: Completed: "
     reason: AsExpected
     status: "False"
     type: Degraded
