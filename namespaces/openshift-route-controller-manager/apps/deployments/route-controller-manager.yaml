@@ -187,15 +187,13 @@ metadata:
             f:type: {}
         f:observedGeneration: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
-        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
     time: "2023-03-09T14:30:45Z"
   name: route-controller-manager
   namespace: openshift-route-controller-manager
-  resourceVersion: "10741"
+  resourceVersion: "10752"
   uid: ad9d7992-335d-4009-a433-f1dc108a6d16
 spec:
   progressDeadlineSeconds: 600
@@ -335,7 +333,5 @@ status:
     reason: NewReplicaSetCreated
     status: "True"
     type: Progressing
-  observedGeneration: 3
+  observedGeneration: 4
   replicas: 1
-  unavailableReplicas: 1
-  updatedReplicas: 1
