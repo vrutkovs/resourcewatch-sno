@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:25Z"
+  name: postgresql13-for-sso76-openshift-rhel8
+  namespace: openshift-cluster-samples-operator
+  resourceVersion: "15099"
+  uid: 85f555f9-4cba-4a84-b9d0-f1a3fb2971ba
