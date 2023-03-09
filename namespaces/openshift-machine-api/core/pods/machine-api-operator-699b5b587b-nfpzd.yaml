@@ -174,8 +174,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -188,12 +186,11 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -204,7 +201,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:12Z"
+    time: "2023-03-09T14:29:13Z"
   name: machine-api-operator-699b5b587b-nfpzd
   namespace: openshift-machine-api
   ownerReferences:
@@ -214,7 +211,7 @@ metadata:
     kind: ReplicaSet
     name: machine-api-operator-699b5b587b
     uid: a56a3e03-3cdd-46bf-b286-35bf2388494d
-  resourceVersion: "9164"
+  resourceVersion: "9310"
   uid: 2a4685ce-b771-4ac9-ad76-3f5cb5a7e7c3
 spec:
   containers:
@@ -371,16 +368,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:28:58Z"
-    message: 'containers with unready status: [machine-api-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:11Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:28:58Z"
-    message: 'containers with unready status: [machine-api-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:11Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:28:58Z"
@@ -398,18 +391,19 @@ status:
     state:
       running:
         startedAt: "2023-03-09T14:28:59Z"
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c1db3ebb7641418424cad11ba60d0016687f7e0810770e2b222f0ccfc05e090e
-    imageID: ""
+  - containerID: cri-o://50ef152770834914140d0ae605e0221ac2c3e22112edca76fa3cc2fa9029183b
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c1db3ebb7641418424cad11ba60d0016687f7e0810770e2b222f0ccfc05e090e
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c1db3ebb7641418424cad11ba60d0016687f7e0810770e2b222f0ccfc05e090e
     lastState: {}
     name: machine-api-operator
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:29:11Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
   podIP: 10.128.0.57
   podIPs:
   - ip: 10.128.0.57
