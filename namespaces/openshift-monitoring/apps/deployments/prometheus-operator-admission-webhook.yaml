@@ -127,6 +127,7 @@ metadata:
           .: {}
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -146,16 +147,16 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:09Z"
   name: prometheus-operator-admission-webhook
   namespace: openshift-monitoring
-  resourceVersion: "13921"
+  resourceVersion: "14503"
   uid: 20ed236b-4b5d-462e-a76a-6ea9ca496175
 spec:
   progressDeadlineSeconds: 600
@@ -245,6 +246,7 @@ spec:
             path: tls.key
           secretName: prometheus-operator-admission-webhook-tls
 status:
+  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:29Z"
     lastUpdateTime: "2023-03-09T14:22:29Z"
@@ -260,6 +262,6 @@ status:
     status: "True"
     type: Progressing
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
