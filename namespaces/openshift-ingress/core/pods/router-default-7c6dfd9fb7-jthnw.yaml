@@ -337,7 +337,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:14Z"
+    time: "2023-03-09T14:32:09Z"
   name: router-default-7c6dfd9fb7-jthnw
   namespace: openshift-ingress
   ownerReferences:
@@ -347,7 +347,7 @@ metadata:
     kind: ReplicaSet
     name: router-default-7c6dfd9fb7
     uid: 60060897-6bbe-4498-872f-27825dcdc46a
-  resourceVersion: "9358"
+  resourceVersion: "14491"
   uid: 25f9052f-edeb-4f6b-a4da-f714b6374bdb
 spec:
   containers:
@@ -606,7 +606,38 @@ status:
     restartCount: 2
     started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://e509ddb571e9db8f8b8d736573c648d729ddc70a011d50547ed679bdf557a004
+        exitCode: 137
+        finishedAt: "2023-03-09T14:31:56Z"
+        message: ": healthz\n[-]backend-http failed: backend reported failure\n[-]has-synced
+          failed: Router not synced\nI0309 14:31:08.475751       1 healthz.go:261]
+          backend-http,has-synced check failed: healthz\n[-]backend-http failed: backend
+          reported failure\n[-]has-synced failed: Router not synced\nW0309 14:31:08.989239
+          \      1 reflector.go:424] github.com/openshift/router/pkg/router/controller/factory/factory.go:124:
+          failed to list *v1.Route: the server is currently unable to handle the request
+          (get routes.route.openshift.io)\nE0309 14:31:08.989316       1 reflector.go:140]
+          github.com/openshift/router/pkg/router/controller/factory/factory.go:124:
+          Failed to watch *v1.Route: failed to list *v1.Route: the server is currently
+          unable to handle the request (get routes.route.openshift.io)\nI0309 14:31:09.475529
+          \      1 healthz.go:261] backend-http,has-synced check failed: healthz\n[-]backend-http
+          failed: backend reported failure\n[-]has-synced failed: Router not synced\nI0309
+          14:31:10.475610       1 healthz.go:261] backend-http,has-synced check failed:
+          healthz\n[-]backend-http failed: backend reported failure\n[-]has-synced
+          failed: Router not synced\nI0309 14:31:10.487238       1 shared_informer.go:299]
+          stop requested\nE0309 14:31:10.487329       1 factory.go:130] failed to
+          sync cache for *v1.Route shared informer\nI0309 14:31:10.488473       1
+          template.go:704] router \"msg\"=\"Shutdown requested, waiting 45s for new
+          connections to cease\" \nE0309 14:31:10.489660       1 haproxy.go:418] can't
+          scrape HAProxy: dial unix /var/lib/haproxy/run/haproxy.sock: connect: no
+          such file or directory\nI0309 14:31:10.533485       1 router.go:618] template
+          \"msg\"=\"router reloaded\" \"output\"=\" - Checking http://localhost:80
+          ...\\n - Health check ok : 0 retry attempt(s).\\n\"\nI0309 14:31:55.490637
+          \      1 template.go:706] router \"msg\"=\"Instructing the template router
+          to terminate\" \nI0309 14:31:55.525201       1 router.go:618] template \"msg\"=\"router
+          reloaded\" \"output\"=\" - Shutting down\\n\"\nI0309 14:31:55.525288       1
+          template.go:710] router \"msg\"=\"Shutdown complete, exiting\" \n"
+        reason: Error
         startedAt: "2023-03-09T14:28:09Z"
   hostIP: 10.0.130.93
   phase: Running
