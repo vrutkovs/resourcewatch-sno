@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:24:39Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:39Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:58Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:24:58Z"
+  name: ingress-operator-55684fdfd8-f9svb.174ac654e4d611e8
+  namespace: openshift-ingress-operator
+  resourceVersion: "7379"
+  uid: e24b224e-9e41-45e2-be9f-39b4b948f021
+note: Back-off restarting failed container ingress-operator in pod ingress-operator-55684fdfd8-f9svb_openshift-ingress-operator(8586aeeb-8734-4698-adcd-01ee23ee37ca)
+reason: BackOff
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{ingress-operator}
+  kind: Pod
+  name: ingress-operator-55684fdfd8-f9svb
+  namespace: openshift-ingress-operator
+  resourceVersion: "3120"
+  uid: 8586aeeb-8734-4698-adcd-01ee23ee37ca
+type: Warning
