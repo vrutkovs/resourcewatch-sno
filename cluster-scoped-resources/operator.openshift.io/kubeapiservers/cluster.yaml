@@ -7,7 +7,7 @@ metadata:
     include.release.openshift.io/single-node-developer: "true"
     release.openshift.io/create-only: "true"
   creationTimestamp: "2023-03-09T14:15:16Z"
-  generation: 1
+  generation: 2
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -45,18 +45,152 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:29:23Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          .: {}
+          f:admission:
+            .: {}
+            f:pluginConfig:
+              .: {}
+              f:PodSecurity:
+                .: {}
+                f:configuration:
+                  .: {}
+                  f:defaults:
+                    .: {}
+                    f:audit: {}
+                    f:audit-version: {}
+                    f:enforce: {}
+                    f:enforce-version: {}
+                    f:warn: {}
+                    f:warn-version: {}
+              f:network.openshift.io/ExternalIPRanger:
+                .: {}
+                f:configuration:
+                  .: {}
+                  f:allowIngressIP: {}
+                  f:apiVersion: {}
+                  f:kind: {}
+              f:network.openshift.io/RestrictedEndpointsAdmission:
+                .: {}
+                f:configuration:
+                  .: {}
+                  f:apiVersion: {}
+                  f:kind: {}
+                  f:restrictedCIDRs: {}
+          f:apiServerArguments:
+            .: {}
+            f:api-audiences: {}
+            f:authentication-token-webhook-config-file: {}
+            f:authentication-token-webhook-version: {}
+            f:etcd-servers: {}
+            f:feature-gates: {}
+            f:service-account-issuer: {}
+            f:service-account-jwks-uri: {}
+            f:shutdown-delay-duration: {}
+          f:corsAllowedOrigins: {}
+          f:gracefulTerminationDuration: {}
+          f:servicesSubnet: {}
+          f:servingInfo:
+            .: {}
+            f:bindAddress: {}
+            f:bindNetwork: {}
+            f:cipherSuites: {}
+            f:minTLSVersion: {}
+            f:namedCertificates: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:29:28Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "9822"
+  resourceVersion: "9944"
   uid: c0c6917e-93dd-43c7-a907-55546729e305
 spec:
   logLevel: Normal
   managementState: Managed
+  observedConfig:
+    admission:
+      pluginConfig:
+        PodSecurity:
+          configuration:
+            defaults:
+              audit: restricted
+              audit-version: latest
+              enforce: restricted
+              enforce-version: latest
+              warn: restricted
+              warn-version: latest
+        network.openshift.io/ExternalIPRanger:
+          configuration:
+            allowIngressIP: false
+            apiVersion: network.openshift.io/v1
+            kind: ExternalIPRangerAdmissionConfig
+        network.openshift.io/RestrictedEndpointsAdmission:
+          configuration:
+            apiVersion: network.openshift.io/v1
+            kind: RestrictedEndpointsAdmissionConfig
+            restrictedCIDRs:
+            - 10.128.0.0/14
+            - 172.30.0.0/16
+    apiServerArguments:
+      api-audiences:
+      - https://kubernetes.default.svc
+      authentication-token-webhook-config-file:
+      - /etc/kubernetes/static-pod-resources/secrets/webhook-authenticator/kubeConfig
+      authentication-token-webhook-version:
+      - v1
+      etcd-servers:
+      - https://10.0.130.93:2379
+      - https://localhost:2379
+      feature-gates:
+      - APIPriorityAndFairness=true
+      - RotateKubeletServerCertificate=true
+      - DownwardAPIHugePages=true
+      - OpenShiftPodSecurityAdmission=true
+      - RetroactiveDefaultStorageClass=false
+      service-account-issuer:
+      - https://kubernetes.default.svc
+      service-account-jwks-uri:
+      - https://api-int.ocp.choomba.one:6443/openid/v1/jwks
+      shutdown-delay-duration:
+      - 0s
+    corsAllowedOrigins:
+    - //127\.0\.0\.1(:|$)
+    - //localhost(:|$)
+    gracefulTerminationDuration: "15"
+    servicesSubnet: 172.30.0.0/16
+    servingInfo:
+      bindAddress: 0.0.0.0:6443
+      bindNetwork: tcp4
+      cipherSuites:
+      - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+      - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      minTLSVersion: VersionTLS12
+      namedCertificates:
+      - certFile: /etc/kubernetes/static-pod-certs/secrets/localhost-serving-cert-certkey/tls.crt
+        keyFile: /etc/kubernetes/static-pod-certs/secrets/localhost-serving-cert-certkey/tls.key
+      - certFile: /etc/kubernetes/static-pod-certs/secrets/service-network-serving-certkey/tls.crt
+        keyFile: /etc/kubernetes/static-pod-certs/secrets/service-network-serving-certkey/tls.key
+      - certFile: /etc/kubernetes/static-pod-certs/secrets/external-loadbalancer-serving-certkey/tls.crt
+        keyFile: /etc/kubernetes/static-pod-certs/secrets/external-loadbalancer-serving-certkey/tls.key
+      - certFile: /etc/kubernetes/static-pod-certs/secrets/internal-loadbalancer-serving-certkey/tls.crt
+        keyFile: /etc/kubernetes/static-pod-certs/secrets/internal-loadbalancer-serving-certkey/tls.key
+      - certFile: /etc/kubernetes/static-pod-resources/secrets/localhost-recovery-serving-certkey/tls.crt
+        keyFile: /etc/kubernetes/static-pod-resources/secrets/localhost-recovery-serving-certkey/tls.key
   operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:28:53Z"
