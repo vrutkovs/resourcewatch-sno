@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 5
+deprecatedCount: 6
 deprecatedFirstTimestamp: "2023-03-09T14:31:55Z"
 deprecatedLastTimestamp: "2023-03-09T14:31:56Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:31:56Z"
   name: kube-apiserver-operator.174ac6ba97b48fa4
   namespace: openshift-kube-apiserver-operator
-  resourceVersion: "13296"
+  resourceVersion: "13302"
   uid: 95df4ca3-0d0b-4d18-a6e4-b61baaa70e1f
 note: clusteroperator/kube-apiserver version "kube-apiserver" changed from "" to "1.26.2"
 reason: OperatorVersionChanged
