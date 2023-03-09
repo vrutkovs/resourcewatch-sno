@@ -1,0 +1,36 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:24:13Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:13Z"
+deprecatedSource:
+  component: controlplane
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:42Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:24:42Z"
+  name: .174ac64ed584e46a
+  namespace: default
+  resourceVersion: "7084"
+  uid: 105fefd0-38d9-4d30-967a-f9fe09daf674
+note: vrutkovs-sno stopped leading
+reason: LeaderElection
+regarding:
+  apiVersion: coordination.k8s.io/v1
+  kind: Lease
+type: Normal
