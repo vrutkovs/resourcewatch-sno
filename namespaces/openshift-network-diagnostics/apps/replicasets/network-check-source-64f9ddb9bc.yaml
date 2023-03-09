@@ -115,10 +115,8 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
@@ -133,7 +131,7 @@ metadata:
     kind: Deployment
     name: network-check-source
     uid: 2812ba40-8fdc-4a88-bfa0-33acb6798e77
-  resourceVersion: "5026"
+  resourceVersion: "13721"
   uid: 9ca97f0a-aa3d-454a-8513-79784e29c223
 spec:
   replicas: 1
@@ -202,8 +200,6 @@ spec:
       serviceAccountName: network-diagnostics
       terminationGracePeriodSeconds: 30
 status:
-  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
-  readyReplicas: 1
   replicas: 1
