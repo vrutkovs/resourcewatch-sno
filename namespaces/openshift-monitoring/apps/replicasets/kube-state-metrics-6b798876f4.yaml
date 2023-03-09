@@ -1,0 +1,353 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2023-03-09T14:22:38Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: exporter
+    app.kubernetes.io/managed-by: cluster-monitoring-operator
+    app.kubernetes.io/name: kube-state-metrics
+    app.kubernetes.io/part-of: openshift-monitoring
+    app.kubernetes.io/version: 2.8.1
+    pod-template-hash: 6b798876f4
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deployment.kubernetes.io/desired-replicas: {}
+          f:deployment.kubernetes.io/max-replicas: {}
+          f:deployment.kubernetes.io/revision: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"99b0f757-5c92-49f2-ac93-2eb4407d7bda"}: {}
+      f:spec:
+        f:replicas: {}
+        f:selector: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:kubectl.kubernetes.io/default-container: {}
+              f:target.workload.openshift.io/management: {}
+            f:labels:
+              .: {}
+              f:app.kubernetes.io/component: {}
+              f:app.kubernetes.io/managed-by: {}
+              f:app.kubernetes.io/name: {}
+              f:app.kubernetes.io/part-of: {}
+              f:app.kubernetes.io/version: {}
+              f:pod-template-hash: {}
+          f:spec:
+            f:automountServiceAccountToken: {}
+            f:containers:
+              k:{"name":"kube-rbac-proxy-main"}:
+                .: {}
+                f:args: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":8443,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                f:resources:
+                  .: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:securityContext: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/etc/kube-rbac-policy"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/etc/tls/client"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/etc/tls/private"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+              k:{"name":"kube-rbac-proxy-self"}:
+                .: {}
+                f:args: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":9443,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                f:resources:
+                  .: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:securityContext: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/etc/kube-rbac-policy"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/etc/tls/client"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/etc/tls/private"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+              k:{"name":"kube-state-metrics"}:
+                .: {}
+                f:args: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:resources:
+                  .: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:securityContext: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/tmp"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+            f:dnsPolicy: {}
+            f:nodeSelector: {}
+            f:priorityClassName: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:volumes:
+              .: {}
+              k:{"name":"kube-state-metrics-kube-rbac-proxy-config"}:
+                .: {}
+                f:name: {}
+                f:secret:
+                  .: {}
+                  f:defaultMode: {}
+                  f:secretName: {}
+              k:{"name":"kube-state-metrics-tls"}:
+                .: {}
+                f:name: {}
+                f:secret:
+                  .: {}
+                  f:defaultMode: {}
+                  f:secretName: {}
+              k:{"name":"metrics-client-ca"}:
+                .: {}
+                f:configMap:
+                  .: {}
+                  f:defaultMode: {}
+                  f:name: {}
+                f:name: {}
+              k:{"name":"volume-directive-shadow"}:
+                .: {}
+                f:emptyDir: {}
+                f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:22:38Z"
+  name: kube-state-metrics-6b798876f4
+  namespace: openshift-monitoring
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: kube-state-metrics
+    uid: 99b0f757-5c92-49f2-ac93-2eb4407d7bda
+  resourceVersion: "5647"
+  uid: bc5c952d-e573-4eac-9ea1-7415cb669294
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: exporter
+      app.kubernetes.io/name: kube-state-metrics
+      app.kubernetes.io/part-of: openshift-monitoring
+      pod-template-hash: 6b798876f4
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/default-container: kube-state-metrics
+        target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/component: exporter
+        app.kubernetes.io/managed-by: cluster-monitoring-operator
+        app.kubernetes.io/name: kube-state-metrics
+        app.kubernetes.io/part-of: openshift-monitoring
+        app.kubernetes.io/version: 2.8.1
+        pod-template-hash: 6b798876f4
+    spec:
+      automountServiceAccountToken: true
+      containers:
+      - args:
+        - --host=127.0.0.1
+        - --port=8081
+        - --telemetry-host=127.0.0.1
+        - --telemetry-port=8082
+        - |
+          --metric-denylist=
+          ^kube_secret_labels$,
+          ^kube_.+_annotations$
+        - --metric-labels-allowlist=pods=[*],nodes=[*],namespaces=[*],persistentvolumes=[*],persistentvolumeclaims=[*],poddisruptionbudgets=[*]
+        - |
+          --metric-denylist=
+          ^kube_.+_created$,
+          ^kube_.+_metadata_resource_version$,
+          ^kube_replicaset_metadata_generation$,
+          ^kube_replicaset_status_observed_generation$,
+          ^kube_pod_restart_policy$,
+          ^kube_pod_init_container_status_terminated$,
+          ^kube_pod_init_container_status_running$,
+          ^kube_pod_container_status_terminated$,
+          ^kube_pod_container_status_running$,
+          ^kube_pod_completion_time$,
+          ^kube_pod_status_scheduled$
+        image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ab9d97fb12c8627fa29ec4d54844da65da1c7cf2be317311b62950cc5d2e5a56
+        imagePullPolicy: IfNotPresent
+        name: kube-state-metrics
+        resources:
+          requests:
+            cpu: 2m
+            memory: 80Mi
+        securityContext: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /tmp
+          name: volume-directive-shadow
+      - args:
+        - --logtostderr
+        - --secure-listen-address=:8443
+        - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+        - --upstream=http://127.0.0.1:8081/
+        - --tls-cert-file=/etc/tls/private/tls.crt
+        - --tls-private-key-file=/etc/tls/private/tls.key
+        - --client-ca-file=/etc/tls/client/client-ca.crt
+        - --config-file=/etc/kube-rbac-policy/config.yaml
+        - --tls-min-version=VersionTLS12
+        image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+        imagePullPolicy: IfNotPresent
+        name: kube-rbac-proxy-main
+        ports:
+        - containerPort: 8443
+          name: https-main
+          protocol: TCP
+        resources:
+          requests:
+            cpu: 1m
+            memory: 15Mi
+        securityContext: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+        volumeMounts:
+        - mountPath: /etc/tls/private
+          name: kube-state-metrics-tls
+        - mountPath: /etc/tls/client
+          name: metrics-client-ca
+        - mountPath: /etc/kube-rbac-policy
+          name: kube-state-metrics-kube-rbac-proxy-config
+          readOnly: true
+      - args:
+        - --logtostderr
+        - --secure-listen-address=:9443
+        - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+        - --upstream=http://127.0.0.1:8082/
+        - --tls-cert-file=/etc/tls/private/tls.crt
+        - --tls-private-key-file=/etc/tls/private/tls.key
+        - --client-ca-file=/etc/tls/client/client-ca.crt
+        - --config-file=/etc/kube-rbac-policy/config.yaml
+        - --tls-min-version=VersionTLS12
+        image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+        imagePullPolicy: IfNotPresent
+        name: kube-rbac-proxy-self
+        ports:
+        - containerPort: 9443
+          name: https-self
+          protocol: TCP
+        resources:
+          requests:
+            cpu: 1m
+            memory: 15Mi
+        securityContext: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+        volumeMounts:
+        - mountPath: /etc/tls/private
+          name: kube-state-metrics-tls
+        - mountPath: /etc/tls/client
+          name: metrics-client-ca
+        - mountPath: /etc/kube-rbac-policy
+          name: kube-state-metrics-kube-rbac-proxy-config
+          readOnly: true
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        kubernetes.io/os: linux
+      priorityClassName: system-cluster-critical
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: kube-state-metrics
+      serviceAccountName: kube-state-metrics
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - emptyDir: {}
+        name: volume-directive-shadow
+      - name: kube-state-metrics-tls
+        secret:
+          defaultMode: 420
+          secretName: kube-state-metrics-tls
+      - configMap:
+          defaultMode: 420
+          name: metrics-client-ca
+        name: metrics-client-ca
+      - name: kube-state-metrics-kube-rbac-proxy-config
+        secret:
+          defaultMode: 420
+          secretName: kube-state-metrics-kube-rbac-proxy-config
+status:
+  replicas: 0
