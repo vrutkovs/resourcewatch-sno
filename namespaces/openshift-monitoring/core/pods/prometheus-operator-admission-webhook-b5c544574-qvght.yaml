@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.31/23"],"mac_address":"0a:58:0a:80:00:1f","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.31/23","gateway_ip":"10.128.0.1"}}'
     kubectl.kubernetes.io/default-container: prometheus-operator-admission-webhook
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
@@ -109,6 +110,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:22:29Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:22:29Z"
   name: prometheus-operator-admission-webhook-b5c544574-qvght
   namespace: openshift-monitoring
   ownerReferences:
@@ -118,7 +128,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-operator-admission-webhook-b5c544574
     uid: e40c1494-47dc-4440-9bf3-73a7f1ea3faa
-  resourceVersion: "5243"
+  resourceVersion: "5248"
   uid: 6be02a99-8e3b-4979-beb8-0c3206b2773d
 spec:
   automountServiceAccountToken: false
