@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15374"
+  resourceVersion: "15380"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
@@ -66,17 +66,20 @@ status:
     reason: IngressStateEndpoints_MissingSubsets::OAuthServerRouteEndpointAccessibleController_SyncError::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError
     status: "True"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:23:14Z"
-    message: 'AuthenticatorCertKeyProgressing: All is well'
-    reason: AsExpected
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:32:30Z"
+    message: 'WellKnownReadyControllerProgressing: kube-apiserver oauth endpoint https://10.0.130.93:6443/.well-known/oauth-authorization-server
+      is not yet served and authentication operator keeps waiting (check kube-apiserver
+      operator, and check that instances roll out successfully, which can take several
+      minutes per instance)'
+    reason: WellKnownReadyController_OAuthMetadataNotYetServed
+    status: "True"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
       OAuthServerRouteEndpointAccessibleControllerAvailable: Get "https://oauth-openshift.apps.ocp.choomba.one/healthz": EOF
       OAuthServerServiceEndpointAccessibleControllerAvailable: Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443: connect: connection refused
       OAuthServerServiceEndpointsEndpointAccessibleControllerAvailable: endpoints "oauth-openshift" not found
-      WellKnownAvailable: The well-known endpoint is not yet available: failed to get oauth metadata from openshift-config-managed/oauth-openshift ConfigMap: configmap "oauth-openshift" not found (check authentication operator, it is supposed to create this)
+      WellKnownAvailable: The well-known endpoint is not yet available: kube-apiserver oauth endpoint https://10.0.130.93:6443/.well-known/oauth-authorization-server is not yet served and authentication operator keeps waiting (check kube-apiserver operator, and check that instances roll out successfully, which can take several minutes per instance)
     reason: OAuthServerRouteEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound::WellKnown_NotReady
     status: "False"
     type: Available
