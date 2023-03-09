@@ -36,9 +36,9 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:14:35Z"
+    time: "2023-03-09T14:14:50Z"
   name: version
-  resourceVersion: "635"
+  resourceVersion: "1209"
   uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
 spec:
   channel: stable-4.13
@@ -193,7 +193,8 @@ status:
     status: "False"
     type: Failing
   - lastTransitionTime: "2023-03-09T14:14:35Z"
-    message: Working towards 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+    message: 'Working towards 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest:
+      200 of 840 done (23% complete)'
     status: "True"
     type: Progressing
   desired:
