@@ -11,6 +11,17 @@ metadata:
     console.openshift.io/service-ca-config-version: "15279"
     console.openshift.io/trusted-ca-config-version: "15306"
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.88/23"],"mac_address":"0a:58:0a:80:00:58","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.88/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.88"
+          ],
+          "mac": "0a:58:0a:80:00:58",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:34:59Z"
@@ -243,6 +254,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-09T14:34:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:35:00Z"
   name: console-5879b645d5-gp5sl
   namespace: openshift-console
   ownerReferences:
@@ -252,7 +273,7 @@ metadata:
     kind: ReplicaSet
     name: console-5879b645d5
     uid: 0f354b94-b053-4264-af8f-a4995b7f4b27
-  resourceVersion: "16991"
+  resourceVersion: "17003"
   uid: 754ab60f-03ca-4e0a-ac8e-9f4708990007
 spec:
   affinity: {}
