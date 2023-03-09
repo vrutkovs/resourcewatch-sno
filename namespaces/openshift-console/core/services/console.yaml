@@ -3,7 +3,9 @@ kind: Service
 metadata:
   annotations:
     operator.openshift.io/spec-hash: 5a95972a23c40ab49ce88af0712f389072cea6a9798f6e5350b856d92bc3bd6d
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
     service.beta.openshift.io/serving-cert-secret-name: console-serving-cert
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
   creationTimestamp: "2023-03-09T14:32:12Z"
   labels:
     app: console
@@ -35,9 +37,19 @@ metadata:
     manager: console
     operation: Update
     time: "2023-03-09T14:32:12Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:32:12Z"
   name: console
   namespace: openshift-console
-  resourceVersion: "14810"
+  resourceVersion: "14816"
   uid: cd46bded-b565-434d-bf1a-fba2476d0d7d
 spec:
   clusterIP: 172.30.69.12
