@@ -75,7 +75,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6070"
+  resourceVersion: "6074"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -170,8 +170,10 @@ status:
     reason: MasterNodesReady
     status: "False"
     type: NodeControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:22:45Z"
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:22:57Z"
+    message: conflicting latestAvailableRevision 3
+    reason: Error
+    status: "True"
     type: RevisionControllerDegraded
   - lastTransitionTime: "2023-03-09T14:22:04Z"
     status: "False"
