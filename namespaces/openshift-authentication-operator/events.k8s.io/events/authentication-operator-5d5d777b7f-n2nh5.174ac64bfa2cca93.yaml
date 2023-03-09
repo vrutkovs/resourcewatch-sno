@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:24:00Z"
-deprecatedLastTimestamp: "2023-03-09T14:24:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:01Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:24:50Z"
+    time: "2023-03-09T14:24:51Z"
   name: authentication-operator-5d5d777b7f-n2nh5.174ac64bfa2cca93
   namespace: openshift-authentication-operator
-  resourceVersion: "7285"
+  resourceVersion: "7287"
   uid: 03ffe2a1-5550-40c5-98ae-0784076fdc22
 note: Back-off restarting failed container authentication-operator in pod authentication-operator-5d5d777b7f-n2nh5_openshift-authentication-operator(11698cce-3094-4d93-8221-8d619bf2ecd8)
 reason: BackOff
