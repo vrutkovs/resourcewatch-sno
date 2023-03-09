@@ -1,0 +1,46 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:04Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:04Z"
+deprecatedSource:
+  component: cluster-authentication-operator-config-observer-configobserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:04Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:22:04Z"
+  name: authentication-operator.174ac630ea042b28
+  namespace: openshift-authentication-operator
+  resourceVersion: "3993"
+  uid: c1c397c7-6e48-4410-a0ee-b4902dd87f17
+note: 'Writing updated section ("oauthAPIServer") of observed config: "  map[string]any(\n-
+  \tnil,\n+ \t{\n+ \t\t\"apiServerArguments\": map[string]any{\n+ \t\t\t\"api-audiences\":        []any{string(\"https://kubernetes.default.svc\")},\n+
+  \t\t\t\"cors-allowed-origins\": []any{string(`//127\\.0\\.0\\.1(:|$)`), string(\"//localhost(:|$)\")},\n+
+  \t\t\t\"etcd-servers\":         []any{string(\"https://10.0.130.93:2379\")},\n+
+  \t\t\t\"tls-cipher-suites\": []any{\n+ \t\t\t\tstring(\"TLS_ECDHE_ECDSA_WITH_AES_128_GCM\"...),\n+
+  \t\t\t\tstring(\"TLS_ECDHE_RSA_WITH_AES_128_GCM_S\"...),\n+ \t\t\t\tstring(\"TLS_ECDHE_ECDSA_WITH_AES_256_GCM\"...),\n+
+  \t\t\t\tstring(\"TLS_ECDHE_RSA_WITH_AES_256_GCM_S\"...), ...,\n+ \t\t\t},\n+ \t\t\t\"tls-min-version\":
+  string(\"VersionTLS12\"),\n+ \t\t},\n+ \t},\n  )\n"'
+reason: ObservedConfigChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
+type: Normal
