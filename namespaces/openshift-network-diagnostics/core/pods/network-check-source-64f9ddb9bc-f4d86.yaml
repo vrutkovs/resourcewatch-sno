@@ -158,8 +158,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -175,6 +173,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:22:23Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:02Z"
   name: network-check-source-64f9ddb9bc-f4d86
   namespace: openshift-network-diagnostics
   ownerReferences:
@@ -184,7 +194,7 @@ metadata:
     kind: ReplicaSet
     name: network-check-source-64f9ddb9bc
     uid: 9ca97f0a-aa3d-454a-8513-79784e29c223
-  resourceVersion: "5022"
+  resourceVersion: "13674"
   uid: 166eef67-e958-43da-aa04-fad994e58b58
 spec:
   containers:
@@ -292,8 +302,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:23Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:02Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:23Z"
