@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"vrutkovs-sno_2fb449dc-b5af-4be2-a290-a72afd9d3a78","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:19:39Z","renewTime":"2023-03-09T14:19:39Z","leaderTransitions":1}'
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"vrutkovs-sno_2fb449dc-b5af-4be2-a290-a72afd9d3a78","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:19:39Z","renewTime":"2023-03-09T14:20:39Z","leaderTransitions":1}'
   creationTimestamp: "2023-03-09T14:13:45Z"
   managedFields:
   - apiVersion: v1
@@ -14,8 +14,8 @@ metadata:
           f:control-plane.alpha.kubernetes.io/leader: {}
     manager: cluster-policy-controller
     operation: Update
-    time: "2023-03-09T14:19:39Z"
+    time: "2023-03-09T14:20:39Z"
   name: cluster-policy-controller-lock
   namespace: kube-system
-  resourceVersion: "2055"
+  resourceVersion: "2865"
   uid: b89a3f42-60bb-48b6-a4e5-375d7a866b3f
