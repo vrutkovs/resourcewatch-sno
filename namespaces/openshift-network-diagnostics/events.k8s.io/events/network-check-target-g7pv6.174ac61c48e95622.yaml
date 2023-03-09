@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:20:35Z"
+deprecatedLastTimestamp: "2023-03-09T14:20:35Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:35Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:20:35Z"
+  name: network-check-target-g7pv6.174ac61c48e95622
+  namespace: openshift-network-diagnostics
+  resourceVersion: "2832"
+  uid: 90f1c5a2-1b7d-4199-acd2-6e20e8b46be9
+note: 'network is not ready: container runtime network not ready: NetworkReady=false
+  reason:NetworkPluginNotReady message:Network plugin returns error: No CNI configuration
+  file in /etc/kubernetes/cni/net.d/. Has your network provider started?'
+reason: NetworkNotReady
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: network-check-target-g7pv6
+  namespace: openshift-network-diagnostics
+  resourceVersion: "2829"
+  uid: 8889968e-1c5d-4445-b108-fe901317fa94
+type: Warning
