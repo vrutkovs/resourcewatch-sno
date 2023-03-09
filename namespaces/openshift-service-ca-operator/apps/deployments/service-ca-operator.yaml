@@ -131,6 +131,7 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -150,13 +151,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:00Z"
+    time: "2023-03-09T14:21:59Z"
   name: service-ca-operator
   namespace: openshift-service-ca-operator
   ownerReferences:
@@ -165,7 +166,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "2362"
+  resourceVersion: "3322"
   uid: 4278fbc3-b3a7-4276-bef7-7a9632b54a52
 spec:
   progressDeadlineSeconds: 600
@@ -257,20 +258,21 @@ spec:
           name: service-ca-operator-config
         name: config
 status:
+  availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2023-03-09T14:14:58Z"
-    lastUpdateTime: "2023-03-09T14:14:58Z"
-    message: Deployment does not have minimum availability.
-    reason: MinimumReplicasUnavailable
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:21:59Z"
+    lastUpdateTime: "2023-03-09T14:21:59Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:14:58Z"
-    lastUpdateTime: "2023-03-09T14:20:00Z"
-    message: ReplicaSet "service-ca-operator-5b79975495" is progressing.
-    reason: ReplicaSetUpdated
+    lastUpdateTime: "2023-03-09T14:21:59Z"
+    message: ReplicaSet "service-ca-operator-5b79975495" has successfully progressed.
+    reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
