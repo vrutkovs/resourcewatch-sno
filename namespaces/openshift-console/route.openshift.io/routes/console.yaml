@@ -29,9 +29,18 @@ metadata:
     manager: console
     operation: Update
     time: "2023-03-09T14:32:12Z"
+  - apiVersion: route.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:ingress: {}
+    manager: openshift-router
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:15Z"
   name: console
   namespace: openshift-console
-  resourceVersion: "14778"
+  resourceVersion: "14914"
   uid: 2d3f8827-23dc-44b3-af36-a47c7da44b65
 spec:
   host: console-openshift-console.apps.ocp.choomba.one
@@ -45,4 +54,13 @@ spec:
     name: console
     weight: 100
   wildcardPolicy: None
-status: {}
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: "2023-03-09T14:32:15Z"
+      status: "True"
+      type: Admitted
+    host: console-openshift-console.apps.ocp.choomba.one
+    routerCanonicalHostname: router-default.apps.ocp.choomba.one
+    routerName: default
+    wildcardPolicy: None
