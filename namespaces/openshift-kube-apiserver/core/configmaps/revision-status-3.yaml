@@ -1,0 +1,22 @@
+apiVersion: v1
+data:
+  reason: configmap/sa-token-signing-certs has changed
+  revision: "3"
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:08Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:reason: {}
+        f:revision: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:32:08Z"
+  name: revision-status-3
+  namespace: openshift-kube-apiserver
+  resourceVersion: "14328"
+  uid: f06bc464-3667-4031-8d8a-db59cf974c2c
