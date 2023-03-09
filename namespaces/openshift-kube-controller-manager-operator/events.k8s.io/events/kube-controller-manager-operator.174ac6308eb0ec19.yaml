@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:03Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:03Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-status-controller-statussyncer_kube-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:04Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:22:04Z"
+  name: kube-controller-manager-operator.174ac6308eb0ec19
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "3975"
+  uid: 956d7cdf-d66d-491b-b13f-eae5d603529e
+note: 'Status for clusteroperator/kube-controller-manager changed: Progressing message
+  changed from "All is well" to "NodeInstallerProgressing: 1 nodes are at revision
+  0",Available message changed from "StaticPodsAvailable: 0 nodes are active; " to
+  "StaticPodsAvailable: 0 nodes are active; 1 nodes are at revision 0"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Normal
