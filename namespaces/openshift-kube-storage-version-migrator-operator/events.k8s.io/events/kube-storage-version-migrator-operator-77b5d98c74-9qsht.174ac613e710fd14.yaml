@@ -1,0 +1,41 @@
+action: Scheduling
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:19:59.932257Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:19:59Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:19:59Z"
+  name: kube-storage-version-migrator-operator-77b5d98c74-9qsht.174ac613e710fd14
+  namespace: openshift-kube-storage-version-migrator-operator
+  resourceVersion: "2317"
+  uid: 47ad7fe9-36ea-4a56-a34c-3adb2795063a
+note: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+  }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
+reason: FailedScheduling
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: kube-storage-version-migrator-operator-77b5d98c74-9qsht
+  namespace: openshift-kube-storage-version-migrator-operator
+  resourceVersion: "2315"
+  uid: b63fa47c-1d22-4f70-ad4e-693f9fda121d
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Warning
