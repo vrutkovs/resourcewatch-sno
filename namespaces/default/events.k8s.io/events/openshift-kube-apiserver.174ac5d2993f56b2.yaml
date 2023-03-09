@@ -1,0 +1,22 @@
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource:
+  component: apiserver
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:15:19Z"
+  name: openshift-kube-apiserver.174ac5d2993f56b2
+  namespace: default
+  resourceVersion: "2039"
+  uid: 8adcb988-9e01-418c-bf67-0c6aa423f0d6
+note: All non long-running request(s) in-flight have drained
+reason: InFlightRequestsDrained
+regarding:
+  apiVersion: v1
+  kind: Namespace
+  name: openshift-kube-apiserver
+  namespace: default
+type: Normal
