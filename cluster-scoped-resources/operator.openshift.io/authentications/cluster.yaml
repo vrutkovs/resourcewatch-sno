@@ -92,14 +92,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:18Z"
+    time: "2023-03-09T14:32:20Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "14969"
+  resourceVersion: "15001"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -317,6 +317,11 @@ status:
     reason: PrereqsNotReady
     status: "False"
     type: WellKnownAvailable
+  - lastTransitionTime: "2023-03-09T14:32:18Z"
+    message: route.route.openshift.io "oauth-openshift" not found
+    reason: SyncError
+    status: "True"
+    type: WellKnownReadyControllerDegraded
   generations:
   - group: apps
     hash: ""
