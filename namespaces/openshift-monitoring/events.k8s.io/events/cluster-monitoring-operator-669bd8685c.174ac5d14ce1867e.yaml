@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 7
+deprecatedCount: 8
 deprecatedFirstTimestamp: "2023-03-09T14:15:13Z"
 deprecatedLastTimestamp: "2023-03-09T14:15:14Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:15:14Z"
   name: cluster-monitoring-operator-669bd8685c.174ac5d14ce1867e
   namespace: openshift-monitoring
-  resourceVersion: "1878"
+  resourceVersion: "1886"
   uid: c6423fb6-a146-483a-b197-9c794f9f3ba9
 note: 'Error creating: pods "cluster-monitoring-operator-669bd8685c-" is forbidden:
   autoscaling.openshift.io/ManagementCPUsOverride the cluster does not have any nodes'
