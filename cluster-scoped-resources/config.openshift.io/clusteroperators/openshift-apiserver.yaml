@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "9433"
+  resourceVersion: "9437"
   uid: 554eb8d5-f8a6-4fb8-afb7-e4785239d130
 spec: {}
 status:
@@ -68,17 +68,8 @@ status:
     status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: |-
-      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.apps.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/apps.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/apps.openshift.io/v1: 401
-      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.authorization.openshift.io: not available: endpoints for service/api in "openshift-apiserver" have no addresses with port name "https"
-      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.build.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/build.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/build.openshift.io/v1: 401
-      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.image.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/image.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/image.openshift.io/v1: 401
-      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.project.openshift.io: not available: endpoints for service/api in "openshift-apiserver" have no addresses with port name "https"
-      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.quota.openshift.io: not available: endpoints for service/api in "openshift-apiserver" have no addresses with port name "https"
-      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.route.openshift.io: not available: endpoints for service/api in "openshift-apiserver" have no addresses with port name "https"
-      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.security.openshift.io: not available: endpoints for service/api in "openshift-apiserver" have no addresses with port name "https"
-      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.template.openshift.io: not available: endpoints for service/api in "openshift-apiserver" have no addresses with port name "https"
-    reason: APIServices_Error
+    message: 'APIServicesAvailable: PreconditionNotReady'
+    reason: APIServices_PreconditionNotReady
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
