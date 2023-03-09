@@ -16,9 +16,11 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:currentNumberScheduled: {}
         f:desiredNumberScheduled: {}
         f:numberUnavailable: {}
         f:observedGeneration: {}
+        f:updatedNumberScheduled: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -255,7 +257,7 @@ metadata:
     time: "2023-03-09T14:22:38Z"
   name: node-exporter
   namespace: openshift-monitoring
-  resourceVersion: "5668"
+  resourceVersion: "5676"
   uid: 719fd696-9e6f-4b15-9718-b5de9defc5c1
 spec:
   revisionHistoryLimit: 10
@@ -439,9 +441,10 @@ spec:
       maxUnavailable: 10%
     type: RollingUpdate
 status:
-  currentNumberScheduled: 0
+  currentNumberScheduled: 1
   desiredNumberScheduled: 1
   numberMisscheduled: 0
   numberReady: 0
   numberUnavailable: 1
   observedGeneration: 1
+  updatedNumberScheduled: 1
