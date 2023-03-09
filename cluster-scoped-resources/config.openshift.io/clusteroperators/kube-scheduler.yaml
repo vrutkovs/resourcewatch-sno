@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:10Z"
+    time: "2023-03-09T14:22:12Z"
   name: kube-scheduler
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4395"
+  resourceVersion: "4506"
   uid: 441925ee-aa23-4d3c-937b-d1809e7a63de
 spec: {}
 status:
@@ -62,6 +62,7 @@ status:
       InstallerControllerDegraded: missing required resources: [secrets: kube-scheduler-client-cert-key, configmaps: config-1,kube-scheduler-cert-syncer-kubeconfig-1,kube-scheduler-pod-1,scheduler-kubeconfig-1,serviceaccount-ca-1, secrets: localhost-recovery-client-token-1]
       NodeControllerDegraded: All master nodes are ready
       RevisionControllerDegraded: configmaps "kube-scheduler-pod" not found
+      TargetConfigControllerDegraded: "serviceaccount/localhost-recovery-client": serviceaccounts "localhost-recovery-client" not found
     reason: AsExpected
     status: "False"
     type: Degraded
