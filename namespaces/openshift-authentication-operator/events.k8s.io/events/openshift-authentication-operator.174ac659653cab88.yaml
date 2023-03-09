@@ -1,0 +1,50 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:24:58Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:58Z"
+deprecatedSource:
+  component: oauth-apiserver-status-controller-statussyncer_authentication
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:58Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:24:58Z"
+  name: openshift-authentication-operator.174ac659653cab88
+  namespace: openshift-authentication-operator
+  resourceVersion: "7381"
+  uid: 990c7465-2f0d-4491-892a-6d8b87be8ff3
+note: 'Status for clusteroperator/authentication changed: Degraded message changed
+  from "APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable for
+  apiserver.openshift-oauth-apiserver ()\nIngressStateEndpointsDegraded: No subsets
+  found for the endpoints of oauth-server\nOAuthServerServiceEndpointAccessibleControllerDegraded:
+  Get \"https://172.30.70.249:443/healthz\": dial tcp 172.30.70.249:443: connect:
+  connection refused\nOAuthServerServiceEndpointsEndpointAccessibleControllerDegraded:
+  oauth service endpoints are not ready" to "APIServerDeploymentDegraded: 1 of 1 requested
+  instances are unavailable for apiserver.openshift-oauth-apiserver (2 containers
+  are waiting in pending apiserver-7f975bf8c6-fc59r pod)\nIngressStateEndpointsDegraded:
+  No subsets found for the endpoints of oauth-server\nOAuthServerServiceEndpointAccessibleControllerDegraded:
+  Get \"https://172.30.70.249:443/healthz\": dial tcp 172.30.70.249:443: connect:
+  connection refused\nOAuthServerServiceEndpointsEndpointAccessibleControllerDegraded:
+  oauth service endpoints are not ready"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: v1
+  kind: Namespace
+  name: openshift-authentication-operator
+  namespace: openshift-authentication-operator
+type: Normal
