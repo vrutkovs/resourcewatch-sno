@@ -174,6 +174,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -188,19 +190,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:47Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:09Z"
   name: certified-operators-cw8tr
   namespace: openshift-marketplace
   ownerReferences:
@@ -210,7 +200,7 @@ metadata:
     kind: CatalogSource
     name: certified-operators
     uid: 7b4ab0f1-7ce4-4a55-8456-68080033fbee
-  resourceVersion: "13640"
+  resourceVersion: "14549"
   uid: cb6d2235-6d17-4775-a8f5-1e586e9b2f17
 spec:
   containers:
@@ -334,8 +324,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:47Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:47Z"
