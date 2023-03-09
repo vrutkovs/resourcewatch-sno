@@ -298,14 +298,16 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
     time: "2023-03-09T14:32:25Z"
   name: oauth-openshift
   namespace: openshift-authentication
-  resourceVersion: "15137"
+  resourceVersion: "15142"
   uid: 28c413a6-04a7-4cae-8efd-4240ba332c8e
 spec:
   progressDeadlineSeconds: 600
@@ -514,15 +516,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:32:25Z"
     lastUpdateTime: "2023-03-09T14:32:25Z"
-    message: Created new replica set "oauth-openshift-7749b8f584"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-09T14:32:25Z"
-    lastUpdateTime: "2023-03-09T14:32:25Z"
     message: Deployment has minimum availability.
     reason: MinimumReplicasAvailable
     status: "True"
     type: Available
+  - lastTransitionTime: "2023-03-09T14:32:25Z"
+    lastUpdateTime: "2023-03-09T14:32:25Z"
+    message: ReplicaSet "oauth-openshift-7749b8f584" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
