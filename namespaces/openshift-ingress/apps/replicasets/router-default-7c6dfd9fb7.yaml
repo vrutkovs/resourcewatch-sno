@@ -301,7 +301,6 @@ metadata:
       f:status:
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
@@ -316,7 +315,7 @@ metadata:
     kind: Deployment
     name: router-default
     uid: 455f2d3e-7299-414a-8476-22ae647963b2
-  resourceVersion: "9121"
+  resourceVersion: "9364"
   uid: 60060897-6bbe-4498-872f-27825dcdc46a
 spec:
   minReadySeconds: 30
@@ -501,5 +500,4 @@ spec:
 status:
   fullyLabeledReplicas: 1
   observedGeneration: 1
-  readyReplicas: 1
   replicas: 1
