@@ -92,14 +92,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:05Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "13896"
+  resourceVersion: "14159"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -215,13 +215,16 @@ status:
     reason: SyncError
     status: "True"
     type: OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:29:16Z"
-    reason: AsExpected
-    status: "True"
-    type: APIServerDeploymentAvailable
-  - lastTransitionTime: "2023-03-09T14:29:16Z"
-    reason: AsExpected
+  - lastTransitionTime: "2023-03-09T14:32:05Z"
+    message: no apiserver.openshift-oauth-apiserver pods available on any node.
+    reason: NoPod
     status: "False"
+    type: APIServerDeploymentAvailable
+  - lastTransitionTime: "2023-03-09T14:32:05Z"
+    message: 1 of 1 requested instances are unavailable for apiserver.openshift-oauth-apiserver
+      ()
+    reason: UnavailablePod
+    status: "True"
     type: APIServerDeploymentDegraded
   - lastTransitionTime: "2023-03-09T14:23:14Z"
     reason: AsExpected
