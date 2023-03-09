@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:34Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:34Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:37Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:22:37Z"
+  name: tuned-sz7v5.174ac637d3feaafa
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "5558"
+  uid: d1b330f9-c741-45e6-bc4e-c0fbb45c55ee
+note: Created container tuned
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{tuned}
+  kind: Pod
+  name: tuned-sz7v5
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "5473"
+  uid: b68a5e0b-e530-48e1-b392-8e4113fd4d24
+type: Normal
