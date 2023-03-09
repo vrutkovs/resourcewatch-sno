@@ -227,13 +227,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:00Z"
+    time: "2023-03-09T14:20:15Z"
   name: network-operator-5556ffc66
   namespace: openshift-network-operator
   ownerReferences:
@@ -243,7 +245,7 @@ metadata:
     kind: Deployment
     name: network-operator
     uid: fa931036-6675-4cee-8fe6-6b11b9af8ad6
-  resourceVersion: "2392"
+  resourceVersion: "2474"
   uid: 18aad614-008f-4452-91c3-1e80ca9007b7
 spec:
   replicas: 1
@@ -391,6 +393,8 @@ spec:
           optional: true
           secretName: metrics-tls
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
