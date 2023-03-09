@@ -35,6 +35,16 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:14:35Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:versions: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:00Z"
   name: etcd
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -42,10 +52,29 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "675"
+  resourceVersion: "3665"
   uid: 5b689e62-691b-4fc1-86d9-fed9d5250955
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    message: 'EtcdMembersControllerDegraded: getting cache client could not retrieve
+      endpoints: configmaps lister not synced'
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    reason: NoData
+    status: Unknown
+    type: Progressing
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    reason: NoData
+    status: Unknown
+    type: Available
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    reason: NoData
+    status: Unknown
+    type: Upgradeable
   extension: null
   relatedObjects:
   - group: operator.openshift.io
@@ -63,3 +92,6 @@ status:
   - group: ""
     name: openshift-etcd
     resource: namespaces
+  versions:
+  - name: raw-internal
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
