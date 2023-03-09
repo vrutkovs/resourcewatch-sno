@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:28:39Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:39Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:39Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:28:39Z"
+  name: machine-approver-6c6b895bd4.174ac68cf9eaba92
+  namespace: openshift-cluster-machine-approver
+  resourceVersion: "8231"
+  uid: 38db3fa7-c727-40ff-888c-e0dd8556e7a2
+note: 'Created pod: machine-approver-6c6b895bd4-xzs2j'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: machine-approver-6c6b895bd4
+  namespace: openshift-cluster-machine-approver
+  resourceVersion: "8227"
+  uid: 70e3e743-4ec7-4b6c-9c85-eb1baf9cae1d
+type: Normal
