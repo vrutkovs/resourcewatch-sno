@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 3
+deprecatedCount: 4
 deprecatedFirstTimestamp: "2023-03-09T14:32:44Z"
-deprecatedLastTimestamp: "2023-03-09T14:32:51Z"
+deprecatedLastTimestamp: "2023-03-09T14:33:01Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:32:51Z"
+    time: "2023-03-09T14:33:02Z"
   name: console-644696f6c4-nf77c.174ac6c5d8610323
   namespace: openshift-console
-  resourceVersion: "16020"
+  resourceVersion: "16214"
   uid: 54ab201a-08ae-4d64-ae99-b404355576ab
 note: "Readiness probe error: Get \"https://10.128.0.76:8443/health\": dial tcp 10.128.0.76:8443:
   connect: connection refused\nbody: \n"
