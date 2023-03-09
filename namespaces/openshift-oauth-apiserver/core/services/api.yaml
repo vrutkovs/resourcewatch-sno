@@ -6,6 +6,8 @@ metadata:
     prometheus.io/scheme: https
     prometheus.io/scrape: "true"
     service.alpha.openshift.io/serving-cert-secret-name: serving-cert
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
   creationTimestamp: "2023-03-09T14:22:08Z"
   managedFields:
   - apiVersion: v1
@@ -34,9 +36,19 @@ metadata:
     manager: authentication-operator
     operation: Update
     time: "2023-03-09T14:22:08Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:22:17Z"
   name: api
   namespace: openshift-oauth-apiserver
-  resourceVersion: "4291"
+  resourceVersion: "4761"
   uid: ec2643f8-cf91-4e88-92f0-192df09c017f
 spec:
   clusterIP: 172.30.49.177
