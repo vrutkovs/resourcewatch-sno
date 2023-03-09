@@ -44,14 +44,14 @@ metadata:
     manager: cluster-kube-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:12Z"
+    time: "2023-03-09T14:29:17Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "9113"
+  resourceVersion: "9594"
   uid: c0c6917e-93dd-43c7-a907-55546729e305
 spec:
   logLevel: Normal
@@ -157,10 +157,8 @@ status:
   - lastTransitionTime: "2023-03-09T14:29:04Z"
     status: "False"
     type: InstallerPodNetworkingDegraded
-  - lastTransitionTime: "2023-03-09T14:29:08Z"
-    message: configmaps "kube-control-plane-signer-ca" already exists
-    reason: RotationError
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:29:12Z"
+    status: "False"
     type: CertRotation_ControlPlaneNodeAdminClient_Degraded
   latestAvailableRevision: 0
   latestAvailableRevisionReason: ""
