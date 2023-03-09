@@ -105,6 +105,7 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -124,16 +125,16 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:07Z"
   name: csi-snapshot-webhook
   namespace: openshift-cluster-storage-operator
-  resourceVersion: "13671"
+  resourceVersion: "14252"
   uid: 0c80ccd2-e84e-4819-b3c8-5db290e25126
 spec:
   progressDeadlineSeconds: 600
@@ -220,6 +221,7 @@ spec:
           defaultMode: 420
           secretName: csi-snapshot-webhook-secret
 status:
+  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     lastUpdateTime: "2023-03-09T14:22:00Z"
@@ -234,6 +236,6 @@ status:
     status: "True"
     type: Progressing
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
