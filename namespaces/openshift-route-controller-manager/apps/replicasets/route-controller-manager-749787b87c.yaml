@@ -169,13 +169,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:30:45Z"
+    time: "2023-03-09T14:31:21Z"
   name: route-controller-manager-749787b87c
   namespace: openshift-route-controller-manager
   ownerReferences:
@@ -185,7 +187,7 @@ metadata:
     kind: Deployment
     name: route-controller-manager
     uid: ad9d7992-335d-4009-a433-f1dc108a6d16
-  resourceVersion: "10760"
+  resourceVersion: "12529"
   uid: 2b4606aa-d51a-4e5e-8290-62ada7748898
 spec:
   replicas: 1
@@ -307,6 +309,8 @@ spec:
           defaultMode: 420
           secretName: serving-cert
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 2
+  readyReplicas: 1
   replicas: 1
