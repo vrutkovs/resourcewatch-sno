@@ -203,7 +203,7 @@ metadata:
     kind: ClusterServiceVersion
     name: packageserver
     uid: fa1b9c20-b2c7-42ff-9444-df28f49c3e6f
-  resourceVersion: "14098"
+  resourceVersion: "14103"
   uid: 60bb2626-4e10-403c-8b3c-428e9227e322
 spec:
   progressDeadlineSeconds: 600
@@ -346,7 +346,7 @@ status:
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
-  observedGeneration: 1
+  observedGeneration: 2
   replicas: 1
   unavailableReplicas: 1
   updatedReplicas: 1
