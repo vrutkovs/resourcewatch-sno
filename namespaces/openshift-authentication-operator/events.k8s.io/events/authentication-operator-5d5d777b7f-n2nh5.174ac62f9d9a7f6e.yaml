@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-09T14:21:58Z"
-deprecatedLastTimestamp: "2023-03-09T14:23:29Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:37Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:23:29Z"
+    time: "2023-03-09T14:24:57Z"
   name: authentication-operator-5d5d777b7f-n2nh5.174ac62f9d9a7f6e
   namespace: openshift-authentication-operator
-  resourceVersion: "7000"
+  resourceVersion: "7364"
   uid: 9481cc5c-7cc2-4095-9fd9-d0b750df11ee
 note: Started container authentication-operator
 reason: Started
