@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:21:59Z"
 deprecatedLastTimestamp: "2023-03-09T14:21:59Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:21:59Z"
   name: kube-storage-version-migrator-operator.174ac62fc982e3b7
   namespace: openshift-kube-storage-version-migrator-operator
-  resourceVersion: "3347"
+  resourceVersion: "3360"
   uid: 3990798a-17c5-4176-bc83-8dfd42c97711
 note: clusteroperator/kube-storage-version-migrator version "operator" changed from
   "" to "4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest"
