@@ -1,0 +1,48 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: "2023-03-09T14:32:12Z"
+  labels:
+    app: console
+  managedFields:
+  - apiVersion: route.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+      f:spec:
+        f:host: {}
+        f:port:
+          .: {}
+          f:targetPort: {}
+        f:tls:
+          .: {}
+          f:insecureEdgeTerminationPolicy: {}
+          f:termination: {}
+        f:to:
+          f:kind: {}
+          f:name: {}
+          f:weight: {}
+        f:wildcardPolicy: {}
+    manager: console
+    operation: Update
+    time: "2023-03-09T14:32:12Z"
+  name: console
+  namespace: openshift-console
+  resourceVersion: "14778"
+  uid: 2d3f8827-23dc-44b3-af36-a47c7da44b65
+spec:
+  host: console-openshift-console.apps.ocp.choomba.one
+  port:
+    targetPort: https
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: reencrypt
+  to:
+    kind: Service
+    name: console
+    weight: 100
+  wildcardPolicy: None
+status: {}
