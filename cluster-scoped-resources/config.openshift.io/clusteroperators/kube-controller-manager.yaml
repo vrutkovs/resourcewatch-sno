@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:20Z"
+    time: "2023-03-09T14:22:21Z"
   name: kube-controller-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4926"
+  resourceVersion: "4938"
   uid: fc4da80c-8238-45f0-831b-b76abd6e6070
 spec: {}
 status:
@@ -63,7 +63,6 @@ status:
       GarbageCollectorDegraded: error fetching rules: Get "https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules": dial tcp: lookup thanos-querier.openshift-monitoring.svc on 172.30.0.10:53: read udp 10.128.0.16:48881->172.30.0.10:53: read: connection refused
       NodeControllerDegraded: All master nodes are ready
       RevisionControllerDegraded: configmaps "kube-controller-manager-pod" not found
-      ConfigObservationDegraded: error writing updated observed config: Operation cannot be fulfilled on kubecontrollermanagers.operator.openshift.io "cluster": the object has been modified; please apply your changes to the latest version and try again
     reason: AsExpected
     status: "False"
     type: Degraded
