@@ -51,7 +51,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16734"
+  resourceVersion: "16735"
   uid: 220131d0-1fdb-4e14-a9b0-f123fc3fa77f
 spec:
   logLevel: Normal
@@ -102,7 +102,7 @@ status:
   - lastTransitionTime: "2023-03-09T14:32:37Z"
     status: "False"
     type: SyncLoopRefreshDegraded
-  - lastTransitionTime: "2023-03-09T14:34:08Z"
+  - lastTransitionTime: "2023-03-09T14:34:11Z"
     message: Working toward version 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest,
       0 replicas available
     reason: InProgress
