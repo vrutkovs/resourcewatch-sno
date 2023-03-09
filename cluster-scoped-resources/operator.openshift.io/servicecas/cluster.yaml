@@ -41,14 +41,14 @@ metadata:
     manager: Go-http-client
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:03Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "13998"
+  resourceVersion: "14088"
   uid: f7813b7b-6e7f-47b6-9ac4-0ca5ffe3197e
 spec:
   logLevel: Normal
@@ -70,7 +70,7 @@ status:
     reason: ManagedDeploymentsAvailable
     status: "True"
     type: Progressing
-  - lastTransitionTime: "2023-03-09T14:32:02Z"
+  - lastTransitionTime: "2023-03-09T14:32:03Z"
     reason: ManagedDeploymentsAvailable
     status: "True"
     type: Available
