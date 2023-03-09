@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:28:53Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:53Z"
+deprecatedSource:
+  component: kube-apiserver-operator-connectivity-check-controller-connectivitycheckcontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:28:53Z"
+  name: kube-apiserver-operator.174ac690105c3d58
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "8546"
+  uid: 65456d23-1249-4614-97af-687666679d91
+note: Controller "ConnectivityCheckController" resync interval is set to 0s which
+  might lead to client request throttling
+reason: FastControllerResync
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Warning
