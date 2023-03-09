@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:30:01Z"
+deprecatedLastTimestamp: "2023-03-09T14:30:01Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:30:01Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:30:01Z"
+  name: collect-profiles-27972870-5zk5k.174ac69fead989ec
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "10329"
+  uid: bb240a9e-6cfe-42fc-a5c9-31ebb9b34912
+note: Started container collect-profiles
+reason: Started
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{collect-profiles}
+  kind: Pod
+  name: collect-profiles-27972870-5zk5k
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "10315"
+  uid: 58131f07-d25b-4b26-b3d0-dbe5170f8612
+type: Normal
