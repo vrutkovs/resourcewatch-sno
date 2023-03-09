@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:10Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:10Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-installer-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:16Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:22:16Z"
+  name: kube-controller-manager-operator.174ac6326073ba87
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "4701"
+  uid: bd55268f-b5f4-4c5b-8d72-0d243e38bbc8
+note: 'configmaps: aggregator-client-ca,client-ca, secrets: csr-signer,kube-controller-manager-client-cert-key,
+  configmaps: cluster-policy-controller-config-1,config-1,controller-manager-kubeconfig-1,kube-controller-cert-syncer-kubeconfig-1,kube-controller-manager-pod-1,recycler-config-1,service-ca-1,serviceaccount-ca-1,
+  secrets: localhost-recovery-client-token-1,service-account-private-key-1'
+reason: RequiredInstallerResourcesMissing
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Warning
