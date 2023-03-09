@@ -5,7 +5,7 @@ metadata:
     include.release.openshift.io/ibm-cloud-managed: "true"
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
-    network.operator.openshift.io/last-seen-state: '{"DaemonsetStates":[{"ClusterName":"","Namespace":"openshift-multus","Name":"multus","LastSeenStatus":{"currentNumberScheduled":0,"numberMisscheduled":0,"desiredNumberScheduled":0,"numberReady":0},"LastChangeTime":"2023-03-09T14:20:23.123495247Z"}],"DeploymentStates":[],"StatefulsetStates":[]}'
+    network.operator.openshift.io/last-seen-state: '{"DaemonsetStates":[{"ClusterName":"","Namespace":"openshift-multus","Name":"multus","LastSeenStatus":{"currentNumberScheduled":1,"numberMisscheduled":0,"desiredNumberScheduled":1,"numberReady":0,"observedGeneration":1,"updatedNumberScheduled":1,"numberUnavailable":1},"LastChangeTime":"2023-03-09T14:20:23.201734335Z"}],"DeploymentStates":[],"StatefulsetStates":[]}'
     network.operator.openshift.io/relatedClusterObjects: ""
   creationTimestamp: "2023-03-09T14:14:35Z"
   generation: 1
@@ -63,7 +63,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "2576"
+  resourceVersion: "2590"
   uid: efc0e65e-4103-4be7-8a5a-99dd46b6df53
 spec: {}
 status:
