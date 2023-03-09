@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:39:36Z"
+deprecatedLastTimestamp: "2023-03-09T14:39:36Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-prunecontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:39:36Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:39:36Z"
+  name: kube-controller-manager-operator.174ac725f1b96191
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "17988"
+  uid: 4e89513e-2b16-46a0-aeb9-bc5aca80707f
+note: Created Pod/revision-pruner-6-vrutkovs-sno -n openshift-kube-controller-manager
+  because it was missing
+reason: PodCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Normal
