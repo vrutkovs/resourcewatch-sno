@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:02Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:02Z"
+deprecatedSource:
+  component: oauth-apiserver-status-controller-statussyncer_authentication
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:32:02Z"
+  name: openshift-authentication-operator.174ac6bc3a288cf2
+  namespace: openshift-authentication-operator
+  resourceVersion: "13974"
+  uid: 323ee6c0-3d6c-47d6-a10b-dba65215d9b3
+note: 'Status for clusteroperator/authentication changed: Available message changed
+  from "OAuthServerServiceEndpointAccessibleControllerAvailable: Get \"https://172.30.70.249:443/healthz\":
+  dial tcp 172.30.70.249:443: connect: connection refused\nOAuthServerServiceEndpointsEndpointAccessibleControllerAvailable:
+  endpoints \"oauth-openshift\" not found" to "APIServicesAvailable: PreconditionNotReady\nOAuthServerServiceEndpointAccessibleControllerAvailable:
+  Get \"https://172.30.70.249:443/healthz\": dial tcp 172.30.70.249:443: connect:
+  connection refused\nOAuthServerServiceEndpointsEndpointAccessibleControllerAvailable:
+  endpoints \"oauth-openshift\" not found"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: v1
+  kind: Namespace
+  name: openshift-authentication-operator
+  namespace: openshift-authentication-operator
+type: Normal
