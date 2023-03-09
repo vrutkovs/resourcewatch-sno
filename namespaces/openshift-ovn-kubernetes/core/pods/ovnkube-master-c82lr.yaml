@@ -585,6 +585,7 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -595,7 +596,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:33Z"
+    time: "2023-03-09T14:21:43Z"
   name: ovnkube-master-c82lr
   namespace: openshift-ovn-kubernetes
   ownerReferences:
@@ -605,7 +606,7 @@ metadata:
     kind: DaemonSet
     name: ovnkube-master
     uid: 5e54e35f-7fe1-4309-a412-ba71c74af3ed
-  resourceVersion: "2755"
+  resourceVersion: "3072"
   uid: 9e75d9d6-b616-493a-90a5-773d93d969d6
 spec:
   affinity:
@@ -1484,15 +1485,13 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:33Z"
-    message: 'containers with unready status: [northd nbdb kube-rbac-proxy sbdb ovnkube-master
-      ovn-dbchecker]'
+    message: 'containers with unready status: [nbdb sbdb]'
     reason: ContainersNotReady
     status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:33Z"
-    message: 'containers with unready status: [northd nbdb kube-rbac-proxy sbdb ovnkube-master
-      ovn-dbchecker]'
+    message: 'containers with unready status: [nbdb sbdb]'
     reason: ContainersNotReady
     status: "False"
     type: ContainersReady
@@ -1501,68 +1500,74 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
-    imageID: ""
+  - containerID: cri-o://a2502c8c88714483030d39767b166f8a05c0de561a1ddcdc484ade081bcee9dd
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
     lastState: {}
     name: kube-rbac-proxy
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:21:12Z"
+  - containerID: cri-o://b32b18f7d3e40201e029b8a202725d798392cb243f6f0b9e39c2b2e72f26213c
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
     lastState: {}
     name: nbdb
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:20:42Z"
+  - containerID: cri-o://84db6fa3de69f9b52492386a3d8944f290ac365e23d0ae723f02abfb2658c285
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
     lastState: {}
     name: northd
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:20:41Z"
+  - containerID: cri-o://8e572ecdc073f5897bda58e9fe8f1d9e113b1f2f596226445538c4eb4ca76009
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
     lastState: {}
     name: ovn-dbchecker
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:21:43Z"
+  - containerID: cri-o://527f77d123c6a3e91257286ade8bb864cb2cba6a03c8eee789ad905f6d127663
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
     lastState: {}
     name: ovnkube-master
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:21:42Z"
+  - containerID: cri-o://a27d8aeb7829bddebe34fc495f854ad5eb6149b832e8e11d4bdcb8f9b1a40725
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
     lastState: {}
     name: sbdb
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:21:12Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
   podIP: 10.0.130.93
   podIPs:
   - ip: 10.0.130.93
