@@ -1,0 +1,45 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-status-controller-statussyncer_kube-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:22:02Z"
+  name: openshift-kube-scheduler-operator.174ac62fe7745aec
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "3776"
+  uid: 968b5222-f487-415d-baa3-089d1d397d17
+note: 'Status for clusteroperator/kube-scheduler changed: Degraded message changed
+  from "InstallerControllerDegraded: missing required resources: [secrets: kube-scheduler-client-cert-key,
+  configmaps: config-0,kube-scheduler-cert-syncer-kubeconfig-0,kube-scheduler-pod-0,scheduler-kubeconfig-0,serviceaccount-ca-0,
+  secrets: localhost-recovery-client-token-0]" to "InstallerControllerDegraded: missing
+  required resources: [secrets: kube-scheduler-client-cert-key, configmaps: config-0,kube-scheduler-cert-syncer-kubeconfig-0,kube-scheduler-pod-0,scheduler-kubeconfig-0,serviceaccount-ca-0,
+  secrets: localhost-recovery-client-token-0]\nNodeControllerDegraded: All master
+  nodes are ready"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 63ed6034-26ff-494c-bb49-f929f1f6a34d
+type: Normal
