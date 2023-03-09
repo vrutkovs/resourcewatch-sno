@@ -3,6 +3,9 @@ kind: Namespace
 metadata:
   annotations:
     openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c23,c22
+    openshift.io/sa.scc.supplemental-groups: 1000550000/10000
+    openshift.io/sa.scc.uid-range: 1000550000/10000
     workload.openshift.io/allowed: management
   creationTimestamp: "2023-03-09T14:22:00Z"
   labels:
@@ -26,8 +29,19 @@ metadata:
     manager: cluster-openshift-controller-manager-operator
     operation: Update
     time: "2023-03-09T14:22:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
   name: openshift-route-controller-manager
-  resourceVersion: "3640"
+  resourceVersion: "3648"
   uid: 6444b484-52b2-4bbf-b846-4fffcae7185c
 spec:
   finalizers:
