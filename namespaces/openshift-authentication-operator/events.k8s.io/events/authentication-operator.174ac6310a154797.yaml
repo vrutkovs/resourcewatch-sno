@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:05Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:05Z"
+deprecatedSource:
+  component: oauth-apiserver-openshiftauthenticatorcertrequester
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:05Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:22:05Z"
+  name: authentication-operator.174ac6310a154797
+  namespace: openshift-authentication-operator
+  resourceVersion: "4080"
+  uid: c56111d1-56bc-4a28-b350-125ff9a2af96
+note: A csr "system:openshift:openshift-authenticator-zqkg2" is created for OpenShiftAuthenticatorCertRequester
+reason: CSRCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
+type: Normal
