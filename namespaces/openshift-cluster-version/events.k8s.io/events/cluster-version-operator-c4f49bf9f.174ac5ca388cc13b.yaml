@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 7
+deprecatedCount: 8
 deprecatedFirstTimestamp: "2023-03-09T14:14:43Z"
-deprecatedLastTimestamp: "2023-03-09T14:14:43Z"
+deprecatedLastTimestamp: "2023-03-09T14:14:44Z"
 deprecatedSource:
   component: replicaset-controller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-09T14:14:43Z"
+    time: "2023-03-09T14:14:44Z"
   name: cluster-version-operator-c4f49bf9f.174ac5ca388cc13b
   namespace: openshift-cluster-version
-  resourceVersion: "1044"
+  resourceVersion: "1048"
   uid: 029a3326-5a6b-43cf-885e-0e12c89d2f26
 note: 'Error creating: pods "cluster-version-operator-c4f49bf9f-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
   the cluster does not have any nodes'
