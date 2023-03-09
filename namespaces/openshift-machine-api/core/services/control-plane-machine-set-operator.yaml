@@ -5,6 +5,8 @@ metadata:
     exclude.release.openshift.io/internal-openshift-hosted: "true"
     include.release.openshift.io/self-managed-high-availability: "true"
     service.alpha.openshift.io/serving-cert-secret-name: control-plane-machine-set-operator-tls
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
   creationTimestamp: "2023-03-09T14:28:36Z"
   labels:
     k8s-app: control-plane-machine-set-operator
@@ -40,6 +42,16 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:28:36Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:28:36Z"
   name: control-plane-machine-set-operator
   namespace: openshift-machine-api
   ownerReferences:
@@ -48,7 +60,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8139"
+  resourceVersion: "8143"
   uid: 90d141f0-33b8-4a11-bc5b-0bcbf14d1b48
 spec:
   clusterIP: 172.30.10.1
