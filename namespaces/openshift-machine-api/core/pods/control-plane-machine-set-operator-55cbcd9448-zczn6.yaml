@@ -141,8 +141,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -158,6 +156,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:28:41Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:01Z"
   name: control-plane-machine-set-operator-55cbcd9448-zczn6
   namespace: openshift-machine-api
   ownerReferences:
@@ -167,7 +177,7 @@ metadata:
     kind: ReplicaSet
     name: control-plane-machine-set-operator-55cbcd9448
     uid: 46a4ab56-f8ac-4331-941d-f2c8accfcf72
-  resourceVersion: "8260"
+  resourceVersion: "13549"
   uid: 51423c38-33e8-40c1-a206-a72518e3c693
 spec:
   containers:
@@ -283,8 +293,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:28:41Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:01Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:28:41Z"
