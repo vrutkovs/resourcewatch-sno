@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3883"
+  resourceVersion: "3906"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
@@ -76,7 +76,8 @@ status:
       APIServicesAvailable: endpoints "api" not found
       OAuthServerServiceEndpointAccessibleControllerAvailable: service "oauth-openshift" not found
       OAuthServerServiceEndpointsEndpointAccessibleControllerAvailable: endpoints "oauth-openshift" not found
-    reason: APIServerDeployment_PreconditionNotFulfilled::APIServices_ErrorCheckingPrecondition::OAuthServerServiceEndpointAccessibleController_ResourceNotFound::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound
+      ReadyIngressNodesAvailable: Authentication requires functional ingress which requires at least one schedulable and ready node. Got 0 worker nodes, 1 master nodes, 0 custom target nodes (none are schedulable or ready for ingress pods).
+    reason: APIServerDeployment_PreconditionNotFulfilled::APIServices_ErrorCheckingPrecondition::OAuthServerServiceEndpointAccessibleController_ResourceNotFound::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound::ReadyIngressNodes_NoReadyIngressNodes
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
