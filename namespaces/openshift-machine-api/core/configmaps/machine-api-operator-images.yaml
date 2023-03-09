@@ -1,0 +1,55 @@
+apiVersion: v1
+data:
+  images.json: |
+    {
+      "machineAPIOperator": "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c1db3ebb7641418424cad11ba60d0016687f7e0810770e2b222f0ccfc05e090e",
+      "kubeRBACProxy": "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747",
+      "clusterAPIControllerAWS": "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:dd6003fa66eab7415637433be511e82317b91377b938f8c75a7bf62080052729",
+      "clusterAPIControllerAlibaba": "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8d4e2c6d64424bc4471eb75cc0e46edc57ac4d4fe8d63ab68cd6ecb50756b16c",
+      "clusterAPIControllerOpenStack": "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4aea3c6f5117cbcd7b5583a975d5e55322d5ec545ea0f0a7f352c31bcedf3809",
+      "clusterAPIControllerLibvirt": "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8f9ec571534501726028787ecf932301a126315b595c3161901b0e3b900ebc11",
+      "clusterAPIControllerBareMetal": "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:58a1ecc246e21c65e38a68edf4e792a1de6a9ee7dd629164d74311c949d6f935",
+      "clusterAPIControllerAzure": "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:587fa2b96f8654273b7bcd0c558ebe4e320ffa8f10ca0f9d87260466ee239d2b",
+      "clusterAPIControllerGCP": "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:107481adbc801763aa6624896384de8d37e8cf2ee1e445703479be4643c7e506",
+      "clusterAPIControllerIBMCloud": "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:83ec47eb677a486a1d11cd3a4fab0351bbc6a87fd95b7ac382117af87592971e",
+      "clusterAPIControllerNutanix": "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:31ebce1517b8120bf0524876883c9a2ed76065f6ae3c7d38d34fbc99fc76d7bd",
+      "clusterAPIControllerOvirt": "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6a133f16c527f7cd0c71766e9d52f1fa5d2fe9b7b1469a3822c7d9af1e2beedc",
+      "clusterAPIControllerPowerVS": "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:f308fb4b224cb416b8d93402372bdd153ac614d65a2c239e6e993ef6e6f4636f",
+      "clusterAPIControllerVSphere": "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c1db3ebb7641418424cad11ba60d0016687f7e0810770e2b222f0ccfc05e090e"
+    }
+kind: ConfigMap
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-03-09T14:15:14Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:images.json: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b7590f0c-c37f-44e0-80d3-7b5df1e0e187"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-09T14:15:14Z"
+  name: machine-api-operator-images
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
+  resourceVersion: "1889"
+  uid: 00ca712f-4659-49a7-bbb2-2727f0965876
