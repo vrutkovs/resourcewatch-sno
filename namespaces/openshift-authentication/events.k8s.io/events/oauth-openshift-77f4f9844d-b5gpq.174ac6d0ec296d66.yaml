@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:33:31Z"
+deprecatedLastTimestamp: "2023-03-09T14:33:31Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:33:42Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:33:42Z"
+  name: oauth-openshift-77f4f9844d-b5gpq.174ac6d0ec296d66
+  namespace: openshift-authentication
+  resourceVersion: "16480"
+  uid: f149ad09-1e9c-4f88-a62e-88f4de3cd682
+note: 'Readiness probe failed: Get "https://10.128.0.82:6443/healthz": dial tcp 10.128.0.82:6443:
+  connect: connection refused'
+reason: Unhealthy
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{oauth-openshift}
+  kind: Pod
+  name: oauth-openshift-77f4f9844d-b5gpq
+  namespace: openshift-authentication
+  resourceVersion: "16191"
+  uid: ec12560d-2f21-4566-9005-6af288f5f89f
+type: Warning
