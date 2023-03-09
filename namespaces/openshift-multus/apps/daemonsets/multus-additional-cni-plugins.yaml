@@ -321,9 +321,11 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:currentNumberScheduled: {}
         f:desiredNumberScheduled: {}
         f:numberUnavailable: {}
         f:observedGeneration: {}
+        f:updatedNumberScheduled: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -337,7 +339,7 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "2583"
+  resourceVersion: "2585"
   uid: f298fd66-e9c3-44fd-bc7d-4aca53e76970
 spec:
   revisionHistoryLimit: 10
@@ -671,9 +673,10 @@ spec:
       maxUnavailable: 10%
     type: RollingUpdate
 status:
-  currentNumberScheduled: 0
+  currentNumberScheduled: 1
   desiredNumberScheduled: 1
   numberMisscheduled: 0
   numberReady: 0
   numberUnavailable: 1
   observedGeneration: 1
+  updatedNumberScheduled: 1
