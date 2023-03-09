@@ -1,0 +1,23 @@
+apiVersion: v1
+data:
+  reason: configmap/config has changed,configmap/cluster-policy-controller-config
+    has changed
+  revision: "3"
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:22:46Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:reason: {}
+        f:revision: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:22:46Z"
+  name: revision-status-3
+  namespace: openshift-kube-controller-manager
+  resourceVersion: "5948"
+  uid: fc2e143a-3b39-4401-bc5b-90591e62c384
