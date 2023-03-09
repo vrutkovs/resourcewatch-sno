@@ -185,8 +185,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -202,6 +200,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:29:13Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:02Z"
   name: machine-api-operator-699b5b587b-nfpzd
   namespace: openshift-machine-api
   ownerReferences:
@@ -211,7 +221,7 @@ metadata:
     kind: ReplicaSet
     name: machine-api-operator-699b5b587b
     uid: a56a3e03-3cdd-46bf-b286-35bf2388494d
-  resourceVersion: "9310"
+  resourceVersion: "13832"
   uid: 2a4685ce-b771-4ac9-ad76-3f5cb5a7e7c3
 spec:
   containers:
@@ -368,8 +378,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:11Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:02Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:11Z"
