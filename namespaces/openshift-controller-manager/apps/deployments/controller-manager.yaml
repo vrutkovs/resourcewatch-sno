@@ -200,14 +200,16 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
     time: "2023-03-09T14:30:44Z"
   name: controller-manager
   namespace: openshift-controller-manager
-  resourceVersion: "10672"
+  resourceVersion: "10691"
   uid: 7e15c298-15ea-44ed-8230-72efb092b45c
 spec:
   progressDeadlineSeconds: 600
@@ -359,4 +361,6 @@ status:
     status: "True"
     type: Progressing
   observedGeneration: 3
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
