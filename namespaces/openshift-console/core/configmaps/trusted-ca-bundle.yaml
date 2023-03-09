@@ -1,0 +1,26 @@
+apiVersion: v1
+data:
+  ca-bundle.crt: ""
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:28Z"
+  labels:
+    config.openshift.io/inject-trusted-cabundle: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:ca-bundle.crt: {}
+      f:metadata:
+        f:labels:
+          .: {}
+          f:config.openshift.io/inject-trusted-cabundle: {}
+    manager: console
+    operation: Update
+    time: "2023-03-09T14:32:28Z"
+  name: trusted-ca-bundle
+  namespace: openshift-console
+  resourceVersion: "15299"
+  uid: 8019a8b0-e5be-466a-9188-a5dead399322
