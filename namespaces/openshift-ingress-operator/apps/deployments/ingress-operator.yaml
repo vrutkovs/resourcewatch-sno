@@ -192,11 +192,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:15:18Z"
+    time: "2023-03-09T14:20:00Z"
   name: ingress-operator
   namespace: openshift-ingress-operator
   ownerReferences:
@@ -205,7 +207,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "2344"
+  resourceVersion: "2346"
   uid: 13ff7095-b051-46f7-9746-4f6b178a682e
 spec:
   progressDeadlineSeconds: 600
@@ -348,15 +350,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:15:18Z"
     lastUpdateTime: "2023-03-09T14:15:18Z"
-    message: Created new replica set "ingress-operator-55684fdfd8"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-09T14:15:18Z"
-    lastUpdateTime: "2023-03-09T14:15:18Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-09T14:15:18Z"
+    lastUpdateTime: "2023-03-09T14:20:00Z"
+    message: ReplicaSet "ingress-operator-55684fdfd8" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
