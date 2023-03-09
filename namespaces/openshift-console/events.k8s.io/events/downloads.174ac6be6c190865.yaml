@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:32:12Z"
 deprecatedLastTimestamp: "2023-03-09T14:32:12Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:32:12Z"
   name: downloads.174ac6be6c190865
   namespace: openshift-console
-  resourceVersion: "14789"
+  resourceVersion: "14793"
   uid: 0cd0a79f-b36e-47d3-a11d-667e5be82730
 note: No matching pods found
 reason: NoPods
