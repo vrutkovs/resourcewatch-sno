@@ -199,7 +199,7 @@ metadata:
     kind: Deployment
     name: controller-manager
     uid: 7e15c298-15ea-44ed-8230-72efb092b45c
-  resourceVersion: "10718"
+  resourceVersion: "10724"
   uid: dc349867-8354-4969-abc1-8550d246155b
 spec:
   replicas: 0
@@ -333,5 +333,5 @@ spec:
         name: proxy-ca-bundles
 status:
   fullyLabeledReplicas: 1
-  observedGeneration: 2
+  observedGeneration: 3
   replicas: 1
