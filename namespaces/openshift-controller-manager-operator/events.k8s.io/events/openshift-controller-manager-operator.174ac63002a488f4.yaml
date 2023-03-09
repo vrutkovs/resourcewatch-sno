@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedSource:
+  component: openshift-controller-manager-operator-openshiftcontrollermanagerstaticresources-openshiftcontrollermanagerstaticresources
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:22:02Z"
+  name: openshift-controller-manager-operator.174ac63002a488f4
+  namespace: openshift-controller-manager-operator
+  resourceVersion: "3777"
+  uid: ff2d7902-e2f2-4076-8a5b-99f8dd41a051
+note: Created RoleBinding.rbac.authorization.k8s.io/prometheus-k8s -n openshift-route-controller-manager
+  because it was missing
+reason: RoleBindingCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-controller-manager-operator
+  namespace: openshift-controller-manager-operator
+  uid: 79e5a595-58b3-4198-82cc-8e7f0f9cd29e
+type: Normal
