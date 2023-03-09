@@ -47,7 +47,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3582"
+  resourceVersion: "3688"
   uid: 745e26c2-906b-4bfc-8835-c7ba9c167c7b
 spec:
   logLevel: Normal
@@ -59,4 +59,9 @@ status:
     reason: NoUnsupportedConfigOverrides
     status: "True"
     type: UnsupportedConfigOverridesUpgradeable
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    message: endpoints "api" not found
+    reason: ErrorCheckingPrecondition
+    status: "False"
+    type: APIServicesAvailable
   readyReplicas: 0
