@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.7/23"],"mac_address":"0a:58:0a:80:00:07","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.7/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: nonroot-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:19:59Z"
@@ -146,6 +147,15 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:19:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:21:51Z"
   name: openshift-config-operator-8449b66df4-w82fl
   namespace: openshift-config-operator
   ownerReferences:
@@ -155,7 +165,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-config-operator-8449b66df4
     uid: a7ce20a1-22ae-4404-ae6c-14fa8404ad0f
-  resourceVersion: "3115"
+  resourceVersion: "3159"
   uid: 74e4983a-fd7b-4f4b-8dd6-8714bbf9ecbf
 spec:
   containers:
