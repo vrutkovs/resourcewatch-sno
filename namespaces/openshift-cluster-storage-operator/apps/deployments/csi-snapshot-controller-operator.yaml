@@ -134,14 +134,6 @@ metadata:
             f:reason: {}
             f:status: {}
             f:type: {}
-          k:{"type":"ReplicaFailure"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
         f:observedGeneration: {}
         f:unavailableReplicas: {}
     manager: kube-controller-manager
@@ -156,7 +148,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1899"
+  resourceVersion: "2418"
   uid: 79d88ae3-4366-475b-9556-f0485be3cce2
 spec:
   progressDeadlineSeconds: 600
@@ -249,12 +241,5 @@ status:
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
-  - lastTransitionTime: "2023-03-09T14:15:14Z"
-    lastUpdateTime: "2023-03-09T14:15:14Z"
-    message: 'pods "csi-snapshot-controller-operator-6f7d895c88-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
-      the cluster does not have any nodes'
-    reason: FailedCreate
-    status: "True"
-    type: ReplicaFailure
   observedGeneration: 1
   unavailableReplicas: 1
