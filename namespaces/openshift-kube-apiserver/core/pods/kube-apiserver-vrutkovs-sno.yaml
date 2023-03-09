@@ -360,8 +360,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -380,8 +378,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -407,7 +403,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "16653"
+  resourceVersion: "16654"
   uid: ee448b79-9aa6-4890-a3b4-1f4517c1a204
 spec:
   containers:
@@ -720,16 +716,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:33:34Z"
-    message: 'containers with unready status: [kube-apiserver-check-endpoints]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:33:54Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:33:34Z"
-    message: 'containers with unready status: [kube-apiserver-check-endpoints]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:33:54Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:03Z"
@@ -774,7 +766,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
     lastState: {}
     name: kube-apiserver-check-endpoints
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
