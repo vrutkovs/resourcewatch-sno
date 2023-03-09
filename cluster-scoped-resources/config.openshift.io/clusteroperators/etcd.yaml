@@ -44,7 +44,7 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:11Z"
+    time: "2023-03-09T14:32:12Z"
   name: etcd
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "14703"
+  resourceVersion: "14805"
   uid: 5b689e62-691b-4fc1-86d9-fed9d5250955
 spec: {}
 status:
@@ -60,7 +60,6 @@ status:
   - lastTransitionTime: "2023-03-09T14:24:45Z"
     message: |-
       NodeControllerDegraded: All master nodes are ready
-      StaticPodsDegraded: pod/etcd-vrutkovs-sno container "etcd" started at 2023-03-09 14:26:45 +0000 UTC is still not ready
       EtcdMembersDegraded: No unhealthy members found
     reason: AsExpected
     status: "False"
