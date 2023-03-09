@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/node-selector: ""
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2023-03-09T14:22:11Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-dns
+    openshift.io/cluster-monitoring: "true"
+    openshift.io/run-level: "0"
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/warn: privileged
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/cluster-monitoring: {}
+          f:openshift.io/run-level: {}
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/enforce: {}
+          f:pod-security.kubernetes.io/warn: {}
+    manager: dns-operator
+    operation: Update
+    time: "2023-03-09T14:22:11Z"
+  name: openshift-dns
+  resourceVersion: "4435"
+  uid: 5fd28822-991f-45fb-b868-5e4a253d1cfe
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
