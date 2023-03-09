@@ -2,6 +2,9 @@ apiVersion: v1
 kind: Namespace
 metadata:
   annotations:
+    openshift.io/sa.scc.mcs: s0:c6,c5
+    openshift.io/sa.scc.supplemental-groups: 1000040000/10000
+    openshift.io/sa.scc.uid-range: 1000040000/10000
     workload.openshift.io/allowed: management
   creationTimestamp: "2023-03-09T14:13:55Z"
   labels:
@@ -26,8 +29,19 @@ metadata:
     manager: cluster-bootstrap
     operation: Update
     time: "2023-03-09T14:13:55Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:14:21Z"
   name: openshift-infra
-  resourceVersion: "222"
+  resourceVersion: "494"
   uid: 28ab4869-1ed4-4078-b443-a3d26cf95156
 spec:
   finalizers:
