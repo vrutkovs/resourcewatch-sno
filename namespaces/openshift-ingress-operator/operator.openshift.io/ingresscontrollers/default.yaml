@@ -60,10 +60,10 @@ metadata:
     manager: ingress-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:19Z"
+    time: "2023-03-09T14:32:01Z"
   name: default
   namespace: openshift-ingress-operator
-  resourceVersion: "4854"
+  resourceVersion: "13486"
   uid: 581ce6e7-0dc9-460c-b609-a8d3a1b3ae1f
 spec:
   clientTLS:
@@ -145,6 +145,11 @@ status:
     reason: NoEvaluationCondition
     status: "False"
     type: EvaluationConditionsDetected
+  - lastTransitionTime: "2023-03-09T14:32:01Z"
+    message: Canary route is not admitted by the default ingress controller
+    reason: CanaryRouteNotAdmitted
+    status: Unknown
+    type: CanaryChecksSucceeding
   domain: apps.ocp.choomba.one
   endpointPublishingStrategy:
     hostNetwork:
