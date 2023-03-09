@@ -19,6 +19,8 @@ metadata:
     operatorframework.io/managed-by: marketplace-operator
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:33:43Z"
+  deletionGracePeriodSeconds: 1
+  deletionTimestamp: "2023-03-09T14:33:56Z"
   generateName: redhat-marketplace-
   labels:
     catalogsource.operators.coreos.com/update: redhat-marketplace
@@ -184,7 +186,7 @@ metadata:
     kind: CatalogSource
     name: redhat-marketplace
     uid: b1e096c1-9aee-45b4-9c8a-7a7145b2ad1d
-  resourceVersion: "16665"
+  resourceVersion: "16667"
   uid: 0e7deaef-7337-4e96-a239-719afb9fdacb
 spec:
   containers:
