@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:33:21Z"
-deprecatedLastTimestamp: "2023-03-09T14:33:21Z"
+deprecatedLastTimestamp: "2023-03-09T14:33:25Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:33:21Z"
+    time: "2023-03-09T14:33:42Z"
   name: kube-apiserver-vrutkovs-sno.174ac6cea51126d3
   namespace: openshift-kube-apiserver
-  resourceVersion: "16388"
+  resourceVersion: "16476"
   uid: 1a9444cd-7e0a-4fd1-ad55-377cf895e941
 note: Stopping container kube-apiserver
 reason: Killing
