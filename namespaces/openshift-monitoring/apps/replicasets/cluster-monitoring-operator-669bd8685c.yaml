@@ -126,10 +126,8 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
@@ -144,7 +142,7 @@ metadata:
     kind: Deployment
     name: cluster-monitoring-operator
     uid: 3fbddbae-91a0-49f3-9def-60d43a684e07
-  resourceVersion: "5263"
+  resourceVersion: "13887"
   uid: 194c53a2-cea2-42a0-b075-8030a374606f
 spec:
   replicas: 1
@@ -251,8 +249,6 @@ spec:
           defaultMode: 420
           secretName: cluster-monitoring-operator-tls
 status:
-  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
-  readyReplicas: 1
   replicas: 1
