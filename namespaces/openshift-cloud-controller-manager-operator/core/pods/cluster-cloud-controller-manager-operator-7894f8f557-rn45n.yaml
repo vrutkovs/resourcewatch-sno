@@ -147,8 +147,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -161,12 +159,11 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -177,7 +174,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:51Z"
+    time: "2023-03-09T14:28:56Z"
   name: cluster-cloud-controller-manager-operator-7894f8f557-rn45n
   namespace: openshift-cloud-controller-manager-operator
   ownerReferences:
@@ -187,7 +184,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-cloud-controller-manager-operator-7894f8f557
     uid: d7869efa-d36a-45be-b1c7-23d573ab3e1d
-  resourceVersion: "8479"
+  resourceVersion: "8748"
   uid: d54af4b9-81e8-464d-a839-358cf83ee658
 spec:
   containers:
@@ -358,44 +355,42 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:28:51Z"
-    message: 'containers with unready status: [cluster-cloud-controller-manager config-sync-controllers]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:28:56Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:28:51Z"
-    message: 'containers with unready status: [cluster-cloud-controller-manager config-sync-controllers]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:28:56Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:28:51Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:096113738f7d95b71e8ff0a39996ba5d6b9d25648764d3ba4f3625f01982c821
-    imageID: ""
+  - containerID: cri-o://92134b4e18de0fdd3d677654a34d446b2011a4f50a49f669a182b4c307541ef9
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:096113738f7d95b71e8ff0a39996ba5d6b9d25648764d3ba4f3625f01982c821
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:096113738f7d95b71e8ff0a39996ba5d6b9d25648764d3ba4f3625f01982c821
     lastState: {}
     name: cluster-cloud-controller-manager
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:096113738f7d95b71e8ff0a39996ba5d6b9d25648764d3ba4f3625f01982c821
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:28:55Z"
+  - containerID: cri-o://346f0a1a20c7c943fa61845c778563ae77f9f4ae1434461597752b216dbcf8d6
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:096113738f7d95b71e8ff0a39996ba5d6b9d25648764d3ba4f3625f01982c821
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:096113738f7d95b71e8ff0a39996ba5d6b9d25648764d3ba4f3625f01982c821
     lastState: {}
     name: config-sync-controllers
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:28:56Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
   podIP: 10.0.130.93
   podIPs:
   - ip: 10.0.130.93
