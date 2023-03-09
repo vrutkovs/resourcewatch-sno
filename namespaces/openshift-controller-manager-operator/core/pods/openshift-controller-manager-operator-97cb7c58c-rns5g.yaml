@@ -180,8 +180,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -194,8 +192,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -211,7 +207,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:19Z"
+    time: "2023-03-09T14:23:20Z"
   name: openshift-controller-manager-operator-97cb7c58c-rns5g
   namespace: openshift-controller-manager-operator
   ownerReferences:
@@ -221,7 +217,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-controller-manager-operator-97cb7c58c
     uid: c66b1581-929b-4ff8-9bc4-9204a04611ff
-  resourceVersion: "6889"
+  resourceVersion: "6901"
   uid: 39bc9e34-f28d-4685-b8d6-f43878797f30
 spec:
   containers:
@@ -344,31 +340,22 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:23:19Z"
-    message: 'containers with unready status: [openshift-controller-manager-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:23:20Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:23:19Z"
-    message: 'containers with unready status: [openshift-controller-manager-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:23:20Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:21:51Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://91eaa2a2d356137a0ef30f8bce8d0f953246459c75d82eebccd3d212ea3e6857
+  - containerID: cri-o://674eb5affa605045899785cb280eb98612fae10d8d1d9fd6293379dd1cd6f1fc
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4349a340ad6752856159937ab2c2c8fa737b44e4103113cc1c3d88b74ad137c3
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4349a340ad6752856159937ab2c2c8fa737b44e4103113cc1c3d88b74ad137c3
-    lastState: {}
-    name: openshift-controller-manager-operator
-    ready: false
-    restartCount: 0
-    started: false
-    state:
+    lastState:
       terminated:
         containerID: cri-o://91eaa2a2d356137a0ef30f8bce8d0f953246459c75d82eebccd3d212ea3e6857
         exitCode: 1
@@ -392,6 +379,13 @@ status:
           W0309 14:23:19.456443       1 builder.go:106] graceful termination failed, controllers failed with error: stopped
         reason: Error
         startedAt: "2023-03-09T14:21:59Z"
+    name: openshift-controller-manager-operator
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-09T14:23:19Z"
   hostIP: 10.0.130.93
   phase: Running
   podIP: 10.128.0.10
