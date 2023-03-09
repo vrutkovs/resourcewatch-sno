@@ -192,6 +192,7 @@ metadata:
           .: {}
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -211,16 +212,16 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:08Z"
   name: kube-state-metrics
   namespace: openshift-monitoring
-  resourceVersion: "13854"
+  resourceVersion: "14334"
   uid: 99b0f757-5c92-49f2-ac93-2eb4407d7bda
 spec:
   progressDeadlineSeconds: 600
@@ -377,6 +378,7 @@ spec:
           defaultMode: 420
           secretName: kube-state-metrics-kube-rbac-proxy-config
 status:
+  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:38Z"
     lastUpdateTime: "2023-03-09T14:22:44Z"
@@ -384,13 +386,13 @@ status:
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
-  - lastTransitionTime: "2023-03-09T14:32:02Z"
-    lastUpdateTime: "2023-03-09T14:32:02Z"
-    message: Deployment does not have minimum availability.
-    reason: MinimumReplicasUnavailable
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:32:08Z"
+    lastUpdateTime: "2023-03-09T14:32:08Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
     type: Available
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
