@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:31:55Z"
+deprecatedLastTimestamp: "2023-03-09T14:31:55Z"
+deprecatedSource:
+  component: check-endpoint-checkendpointsstop
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:31:55Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:31:55Z"
+  name: vrutkovs-sno.174ac6ba96d3bd1d
+  namespace: openshift-kube-apiserver
+  resourceVersion: "13284"
+  uid: 74430bbd-1f58-4b4a-8915-7b2fdc9aa42b
+note: Controller "CheckEndpointsStop" resync interval is set to 0s which might lead
+  to client request throttling
+reason: FastControllerResync
+regarding:
+  kind: Node
+  name: vrutkovs-sno
+  namespace: openshift-kube-apiserver
+  uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
+type: Warning
