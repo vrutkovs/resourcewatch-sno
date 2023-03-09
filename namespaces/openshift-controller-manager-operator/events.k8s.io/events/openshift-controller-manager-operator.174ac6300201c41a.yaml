@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedSource:
+  component: openshift-controller-manager-operator-openshiftcontrollermanagerstaticresources-openshiftcontrollermanagerstaticresources
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:01Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:22:01Z"
+  name: openshift-controller-manager-operator.174ac6300201c41a
+  namespace: openshift-controller-manager-operator
+  resourceVersion: "3761"
+  uid: e8819e98-196e-42c9-aa4f-238a43c603c5
+note: Created RoleBinding.rbac.authorization.k8s.io/system:openshift:sa-creating-route-controller-manager
+  -n openshift-infra because it was missing
+reason: RoleBindingCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-controller-manager-operator
+  namespace: openshift-controller-manager-operator
+  uid: 79e5a595-58b3-4198-82cc-8e7f0f9cd29e
+type: Normal
