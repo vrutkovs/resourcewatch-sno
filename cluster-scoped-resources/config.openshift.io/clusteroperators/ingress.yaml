@@ -43,7 +43,7 @@ metadata:
     manager: ingress-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:18Z"
+    time: "2023-03-09T14:22:19Z"
   name: ingress
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -51,26 +51,31 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4792"
+  resourceVersion: "4844"
   uid: c55987a1-3a24-4225-a426-155e472cf5db
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-09T14:22:18Z"
-    message: The "default" ingress controller is not reporting an Available status
-      condition.
-    reason: IngressDoesNotHaveAvailableCondition
-    status: Unknown
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    message: 'The "default" ingress controller reports Available=False: IngressControllerUnavailable:
+      One or more status conditions indicate unavailable: DeploymentAvailable=Unknown
+      (DeploymentAvailabilityUnknown: The deployment has no Available status condition
+      set)'
+    reason: IngressUnavailable
+    status: "False"
     type: Available
-  - lastTransitionTime: "2023-03-09T14:22:18Z"
-    message: Not all ingress controllers are available.
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    message: |-
+      ingresscontroller "default" is progressing: IngressControllerProgressing: One or more status conditions indicate progressing: DeploymentRollingOut=True (DeploymentRollingOut: Waiting for router deployment rollout to finish: 0 out of 1 new replica(s) have been updated...
+      ).
+      Not all ingress controllers are available.
     reason: Reconciling
     status: "True"
     type: Progressing
-  - lastTransitionTime: "2023-03-09T14:22:18Z"
-    message: The "default" ingress controller is not reporting a Degraded status condition.
-    reason: IngressDoesNotHaveDegradedCondition
-    status: Unknown
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    message: The "default" ingress controller reports Degraded=False.
+    reason: IngressNotDegraded
+    status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:22:18Z"
     reason: IngressControllersUpgradeable
@@ -93,3 +98,6 @@ status:
     name: ""
     namespace: openshift-ingress-operator
     resource: dnsrecords
+  - group: ""
+    name: openshift-ingress
+    resource: namespaces
