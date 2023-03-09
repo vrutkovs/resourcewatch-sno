@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:20:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:20:00Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:20:00Z"
+  name: cluster-node-tuning-operator-84595cd48f.174ac61416b1d4fa
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "2380"
+  uid: 714d8af9-64e9-4413-a787-a736c5b9c80c
+note: 'Created pod: cluster-node-tuning-operator-84595cd48f-pmhnw'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: cluster-node-tuning-operator-84595cd48f
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "1974"
+  uid: 5a224cf2-d5d8-4189-a9d6-c72b78f27ed8
+type: Normal
