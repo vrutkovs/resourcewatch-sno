@@ -44,14 +44,14 @@ metadata:
     manager: cluster-kube-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:57Z"
+    time: "2023-03-09T14:28:59Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8783"
+  resourceVersion: "8841"
   uid: c0c6917e-93dd-43c7-a907-55546729e305
 spec:
   logLevel: Normal
@@ -121,6 +121,27 @@ status:
   - lastTransitionTime: "2023-03-09T14:28:56Z"
     status: "False"
     type: VirtualResourceAdmissionError
+  - lastTransitionTime: "2023-03-09T14:28:58Z"
+    message: 'missing required resources: [configmaps: aggregator-client-ca,check-endpoints-kubeconfig,client-ca,control-plane-node-kubeconfig,
+      secrets: aggregator-client,bound-service-account-signing-key,check-endpoints-client-cert-key,control-plane-node-admin-client-cert-key,external-loadbalancer-serving-certkey,internal-loadbalancer-serving-certkey,kubelet-client,localhost-serving-cert-certkey,node-kubeconfigs,service-network-serving-certkey,
+      configmaps: bound-sa-token-signing-certs-0,config-0,etcd-serving-ca-0,kube-apiserver-audit-policies-0,kube-apiserver-cert-syncer-kubeconfig-0,kube-apiserver-pod-0,kubelet-serving-ca-0,sa-token-signing-certs-0,
+      secrets: etcd-client-0,localhost-recovery-client-token-0,localhost-recovery-serving-certkey-0]'
+    reason: Error
+    status: "True"
+    type: InstallerControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:28:58Z"
+    message: 0 nodes are active; 1 nodes are at revision 0
+    reason: ZeroNodesActive
+    status: "False"
+    type: StaticPodsAvailable
+  - lastTransitionTime: "2023-03-09T14:28:58Z"
+    message: 1 nodes are at revision 0
+    reason: AllNodesAtLatestRevision
+    status: "False"
+    type: NodeInstallerProgressing
+  - lastTransitionTime: "2023-03-09T14:28:58Z"
+    status: "False"
+    type: NodeInstallerDegraded
   latestAvailableRevision: 0
   latestAvailableRevisionReason: ""
   nodeStatuses:
