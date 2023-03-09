@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"vrutkovs-sno_b6dadad7-6bcf-4bf7-ac1f-b60cddb6063d","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:31:55Z","renewTime":"2023-03-09T14:32:55Z","leaderTransitions":0}'
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"","leaseDurationSeconds":1,"acquireTime":"2023-03-09T14:33:21Z","renewTime":"2023-03-09T14:33:21Z","leaderTransitions":0}'
   creationTimestamp: "2023-03-09T14:31:55Z"
   managedFields:
   - apiVersion: v1
@@ -14,8 +14,8 @@ metadata:
           f:control-plane.alpha.kubernetes.io/leader: {}
     manager: cluster-kube-apiserver-operator
     operation: Update
-    time: "2023-03-09T14:32:55Z"
+    time: "2023-03-09T14:33:22Z"
   name: cert-regeneration-controller-lock
   namespace: openshift-kube-apiserver
-  resourceVersion: "16109"
+  resourceVersion: "16391"
   uid: b0581e7b-fe4d-4fc0-97a9-1864466083ec
