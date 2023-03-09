@@ -332,43 +332,6 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"ContainersReady"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Initialized"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Ready"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:containerStatuses: {}
-        f:hostIP: {}
-        f:initContainerStatuses: {}
-        f:startTime: {}
-    manager: kubelet
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:23:04Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:metadata:
         f:annotations:
           f:k8s.v1.cni.cncf.io/network-status: {}
@@ -385,6 +348,47 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-09T14:23:04Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.40"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:23:08Z"
   name: apiserver-5974c8c8bd-7zfsh
   namespace: openshift-apiserver
   ownerReferences:
@@ -394,7 +398,7 @@ metadata:
     kind: ReplicaSet
     name: apiserver-5974c8c8bd
     uid: 0508d21e-7e56-41f5-a005-71a0a68a7b95
-  resourceVersion: "6315"
+  resourceVersion: "6427"
   uid: fa39b23c-acc9-42e0-9490-bf2e465ae9ad
 spec:
   affinity:
@@ -660,10 +664,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:23:04Z"
-    message: 'containers with incomplete status: [fix-audit-permissions]'
-    reason: ContainersNotInitialized
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:23:08Z"
+    status: "True"
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:23:04Z"
@@ -704,15 +706,23 @@ status:
         reason: PodInitializing
   hostIP: 10.0.130.93
   initContainerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:356e58bdd42aeefdbc76f72b93b6e9e9930cd6abe19ab7163f2c6e354b6b7cbf
-    imageID: ""
+  - containerID: cri-o://3d1dfecb271c3050c479aed264178811770ee895c6fa3b3dbea1ccc56054f8ab
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:356e58bdd42aeefdbc76f72b93b6e9e9930cd6abe19ab7163f2c6e354b6b7cbf
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:356e58bdd42aeefdbc76f72b93b6e9e9930cd6abe19ab7163f2c6e354b6b7cbf
     lastState: {}
     name: fix-audit-permissions
-    ready: false
+    ready: true
     restartCount: 0
     state:
-      waiting:
-        reason: PodInitializing
+      terminated:
+        containerID: cri-o://3d1dfecb271c3050c479aed264178811770ee895c6fa3b3dbea1ccc56054f8ab
+        exitCode: 0
+        finishedAt: "2023-03-09T14:23:08Z"
+        reason: Completed
+        startedAt: "2023-03-09T14:23:08Z"
   phase: Pending
+  podIP: 10.128.0.40
+  podIPs:
+  - ip: 10.128.0.40
   qosClass: Burstable
   startTime: "2023-03-09T14:23:04Z"
