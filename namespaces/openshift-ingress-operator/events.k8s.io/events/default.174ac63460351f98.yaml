@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:19Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:19Z"
+deprecatedSource:
+  component: certificate_controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:19Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: ingress-operator
+    operation: Update
+    time: "2023-03-09T14:22:19Z"
+  name: default.174ac63460351f98
+  namespace: openshift-ingress-operator
+  resourceVersion: "4859"
+  uid: f334fef7-588f-4b81-b2c0-b8e82d327c22
+note: Created default wildcard certificate "router-certs-default"
+reason: CreatedDefaultCertificate
+regarding:
+  apiVersion: operator.openshift.io/v1
+  kind: IngressController
+  name: default
+  namespace: openshift-ingress-operator
+  resourceVersion: "4843"
+  uid: 581ce6e7-0dc9-460c-b609-a8d3a1b3ae1f
+type: Normal
