@@ -155,13 +155,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:29Z"
+    time: "2023-03-09T14:32:06Z"
   name: cluster-node-tuning-operator-84595cd48f
   namespace: openshift-cluster-node-tuning-operator
   ownerReferences:
@@ -171,7 +173,7 @@ metadata:
     kind: Deployment
     name: cluster-node-tuning-operator
     uid: 443a883d-67cb-4a54-a3df-1e4be3a342f1
-  resourceVersion: "13898"
+  resourceVersion: "14190"
   uid: 5a224cf2-d5d8-4189-a9d6-c72b78f27ed8
 spec:
   replicas: 1
@@ -277,6 +279,8 @@ spec:
           optional: true
         name: trusted-ca
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
