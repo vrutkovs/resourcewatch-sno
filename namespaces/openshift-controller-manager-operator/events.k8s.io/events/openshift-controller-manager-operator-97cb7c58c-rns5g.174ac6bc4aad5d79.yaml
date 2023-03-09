@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:03Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:03Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:03Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:03Z"
+  name: openshift-controller-manager-operator-97cb7c58c-rns5g.174ac6bc4aad5d79
+  namespace: openshift-controller-manager-operator
+  resourceVersion: "14062"
+  uid: bb2725db-3948-4aad-b031-b1d3a40a356a
+note: 'MountVolume.SetUp failed for volume "config" : object "openshift-controller-manager-operator"/"openshift-controller-manager-operator-config"
+  not registered'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: openshift-controller-manager-operator-97cb7c58c-rns5g
+  namespace: openshift-controller-manager-operator
+  resourceVersion: "6901"
+  uid: 39bc9e34-f28d-4685-b8d6-f43878797f30
+type: Warning
