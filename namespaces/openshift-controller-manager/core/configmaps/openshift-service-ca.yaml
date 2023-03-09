@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    service.beta.openshift.io/inject-cabundle: "true"
+  creationTimestamp: "2023-03-09T14:23:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:service.beta.openshift.io/inject-cabundle: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:23:00Z"
+  name: openshift-service-ca
+  namespace: openshift-controller-manager
+  resourceVersion: "6124"
+  uid: 4d8e8bd7-0a70-493c-b463-6bbc6862f182
