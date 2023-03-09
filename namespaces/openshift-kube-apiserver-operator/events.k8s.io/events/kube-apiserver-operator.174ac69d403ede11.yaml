@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:49Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:49Z"
+deprecatedSource:
+  component: kube-apiserver-operator-installer-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:49Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:29:49Z"
+  name: kube-apiserver-operator.174ac69d403ede11
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "10259"
+  uid: caba0c09-8502-4e06-961a-ce8a64c01f26
+note: 'configmaps: bound-sa-token-signing-certs-0,config-0,etcd-serving-ca-0,kube-apiserver-audit-policies-0,kube-apiserver-cert-syncer-kubeconfig-0,kube-apiserver-pod-0,kubelet-serving-ca-0,sa-token-signing-certs-0,
+  secrets: etcd-client-0,localhost-recovery-client-token-0,localhost-recovery-serving-certkey-0'
+reason: RequiredInstallerResourcesMissing
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Warning
