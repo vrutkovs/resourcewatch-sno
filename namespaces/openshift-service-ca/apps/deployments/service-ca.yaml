@@ -1,0 +1,185 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    operator.openshift.io/spec-hash: 27f0ec1860447a4d913fd9430587fe8dbfd490d62468b86d7bbea2b91c79d324
+  creationTimestamp: "2023-03-09T14:22:02Z"
+  generation: 1
+  labels:
+    app: service-ca
+    service-ca: "true"
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:operator.openshift.io/spec-hash: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:service-ca: {}
+      f:spec:
+        f:progressDeadlineSeconds: {}
+        f:replicas: {}
+        f:revisionHistoryLimit: {}
+        f:selector: {}
+        f:strategy:
+          f:type: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:target.workload.openshift.io/management: {}
+            f:labels:
+              .: {}
+              f:app: {}
+              f:service-ca: {}
+            f:name: {}
+          f:spec:
+            f:containers:
+              k:{"name":"service-ca-controller"}:
+                .: {}
+                f:args: {}
+                f:command: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":8443,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:protocol: {}
+                f:resources:
+                  .: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:securityContext:
+                  .: {}
+                  f:runAsNonRoot: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/var/run/configmaps/signing-cabundle"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/var/run/secrets/signing-key"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+            f:dnsPolicy: {}
+            f:nodeSelector: {}
+            f:priorityClassName: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:tolerations: {}
+            f:volumes:
+              .: {}
+              k:{"name":"signing-cabundle"}:
+                .: {}
+                f:configMap:
+                  .: {}
+                  f:defaultMode: {}
+                  f:name: {}
+                f:name: {}
+              k:{"name":"signing-key"}:
+                .: {}
+                f:name: {}
+                f:secret:
+                  .: {}
+                  f:defaultMode: {}
+                  f:secretName: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:22:02Z"
+  name: service-ca
+  namespace: openshift-service-ca
+  resourceVersion: "3836"
+  uid: 9202bf82-fe2e-4cb4-b621-e9cc589d5fa4
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: service-ca
+      service-ca: "true"
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+      creationTimestamp: null
+      labels:
+        app: service-ca
+        service-ca: "true"
+      name: service-ca
+    spec:
+      containers:
+      - args:
+        - -v=2
+        command:
+        - service-ca-operator
+        - controller
+        image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d3648efe735c9568c314bb8502c95f97d6356595a0623d64cba3bedbff8a9951
+        imagePullPolicy: IfNotPresent
+        name: service-ca-controller
+        ports:
+        - containerPort: 8443
+          protocol: TCP
+        resources:
+          requests:
+            cpu: 10m
+            memory: 120Mi
+        securityContext:
+          runAsNonRoot: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/run/secrets/signing-key
+          name: signing-key
+        - mountPath: /var/run/configmaps/signing-cabundle
+          name: signing-cabundle
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        node-role.kubernetes.io/master: ""
+      priorityClassName: system-cluster-critical
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: service-ca
+      serviceAccountName: service-ca
+      terminationGracePeriodSeconds: 30
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/master
+        operator: Exists
+      - effect: NoExecute
+        key: node.kubernetes.io/unreachable
+        operator: Exists
+        tolerationSeconds: 120
+      - effect: NoExecute
+        key: node.kubernetes.io/not-ready
+        operator: Exists
+        tolerationSeconds: 120
+      volumes:
+      - name: signing-key
+        secret:
+          defaultMode: 420
+          secretName: signing-key
+      - configMap:
+          defaultMode: 420
+          name: signing-cabundle
+        name: signing-cabundle
+status: {}
