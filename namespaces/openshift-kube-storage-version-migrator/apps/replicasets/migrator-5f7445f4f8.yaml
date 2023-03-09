@@ -81,6 +81,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:21:59Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:21:59Z"
   name: migrator-5f7445f4f8
   namespace: openshift-kube-storage-version-migrator
   ownerReferences:
@@ -90,7 +99,7 @@ metadata:
     kind: Deployment
     name: migrator
     uid: 16b51955-0b35-4bb1-a910-cc77e75384b6
-  resourceVersion: "3374"
+  resourceVersion: "3387"
   uid: d2311d9c-6acd-47b6-956e-6451e24bc679
 spec:
   replicas: 1
@@ -151,4 +160,5 @@ spec:
         operator: Exists
         tolerationSeconds: 120
 status:
+  observedGeneration: 1
   replicas: 0
