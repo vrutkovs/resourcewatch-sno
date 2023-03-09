@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:38:32Z"
-deprecatedLastTimestamp: "2023-03-09T14:38:32Z"
+deprecatedLastTimestamp: "2023-03-09T14:38:42Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:38:32Z"
+    time: "2023-03-09T14:38:42Z"
   name: kube-controller-manager-vrutkovs-sno.174ac7170655c44d
   namespace: openshift-kube-controller-manager
-  resourceVersion: "17728"
+  resourceVersion: "17774"
   uid: 5626b7ec-07df-4a3b-bc2a-97e750ac8eaa
 note: "Startup probe error: Get \"https://10.0.130.93:10357/healthz\": dial tcp 10.0.130.93:10357:
   connect: connection refused\nbody: \n"
