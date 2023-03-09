@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:49Z"
+  labels:
+    config.openshift.io/inject-trusted-cabundle: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:config.openshift.io/inject-trusted-cabundle: {}
+    manager: operator
+    operation: Update
+    time: "2023-03-09T14:32:49Z"
+  name: prometheus-trusted-ca-bundle
+  namespace: openshift-monitoring
+  resourceVersion: "16004"
+  uid: 6a9e3d59-7133-425e-8658-076d34046568
