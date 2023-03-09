@@ -44,7 +44,7 @@ metadata:
     manager: cluster-openshift-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:00Z"
+    time: "2023-03-09T14:22:02Z"
   name: openshift-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,22 +52,25 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3711"
+  resourceVersion: "3783"
   uid: 554eb8d5-f8a6-4fb8-afb7-e4785239d130
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-09T14:22:00Z"
-    reason: NoData
-    status: Unknown
+  - lastTransitionTime: "2023-03-09T14:22:02Z"
+    message: "APIServerDeploymentDegraded: waiting for observed configuration to be
+      available\nAPIServerDeploymentDegraded: "
+    reason: AsExpected
+    status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:22:00Z"
-    reason: NoData
-    status: Unknown
+  - lastTransitionTime: "2023-03-09T14:22:02Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: 'APIServicesAvailable: endpoints "api" not found'
-    reason: APIServices_ErrorCheckingPrecondition
+    reason: APIServerDeployment_PreconditionNotFulfilled::APIServices_ErrorCheckingPrecondition
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
