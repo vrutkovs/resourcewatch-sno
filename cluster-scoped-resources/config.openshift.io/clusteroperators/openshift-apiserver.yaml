@@ -44,7 +44,7 @@ metadata:
     manager: cluster-openshift-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:18Z"
+    time: "2023-03-09T14:29:20Z"
   name: openshift-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,15 +52,13 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "9642"
+  resourceVersion: "9707"
   uid: 554eb8d5-f8a6-4fb8-afb7-e4785239d130
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:02Z"
-    message: 'APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable
-      for apiserver.openshift-apiserver (container is crashlooping in apiserver-5974c8c8bd-7zfsh
-      pod)'
+    message: All is well
     reason: AsExpected
     status: "False"
     type: Degraded
@@ -71,7 +69,6 @@ status:
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
-      APIServerDeploymentAvailable: no apiserver.openshift-apiserver pods available on any node.
       APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.apps.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/apps.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/apps.openshift.io/v1: 401
       APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.authorization.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/authorization.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/authorization.openshift.io/v1: 401
       APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.build.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/build.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/build.openshift.io/v1: 401
@@ -81,7 +78,7 @@ status:
       APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.route.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/route.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/route.openshift.io/v1: 401
       APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.security.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/security.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/security.openshift.io/v1: 401
       APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.template.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/template.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/template.openshift.io/v1: 401
-    reason: APIServerDeployment_NoPod::APIServices_Error
+    reason: APIServices_Error
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
