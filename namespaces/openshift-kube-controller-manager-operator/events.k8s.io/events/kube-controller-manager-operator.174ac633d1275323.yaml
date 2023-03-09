@@ -1,0 +1,56 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:17Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:17Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-status-controller-statussyncer_kube-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:19Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:22:19Z"
+  name: kube-controller-manager-operator.174ac633d1275323
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "4871"
+  uid: 606c0ba7-b4b9-45c3-bf97-f83994b30395
+note: 'Status for clusteroperator/kube-controller-manager changed: Degraded message
+  changed from "InstallerControllerDegraded: missing required resources: [configmaps:
+  aggregator-client-ca,client-ca, secrets: csr-signer,kube-controller-manager-client-cert-key,
+  configmaps: cluster-policy-controller-config-1,config-1,controller-manager-kubeconfig-1,kube-controller-cert-syncer-kubeconfig-1,kube-controller-manager-pod-1,recycler-config-1,service-ca-1,serviceaccount-ca-1,
+  secrets: localhost-recovery-client-token-1,service-account-private-key-1]\nGarbageCollectorDegraded:
+  error fetching rules: Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\":
+  dial tcp: lookup thanos-querier.openshift-monitoring.svc on 172.30.0.10:53: read
+  udp 10.128.0.16:36403->172.30.0.10:53: read: connection refused\nNodeControllerDegraded:
+  All master nodes are ready\nRevisionControllerDegraded: configmaps \"kube-controller-manager-pod\"
+  not found" to "InstallerControllerDegraded: missing required resources: [configmaps:
+  aggregator-client-ca,client-ca, secrets: csr-signer,kube-controller-manager-client-cert-key,
+  configmaps: cluster-policy-controller-config-1,config-1,controller-manager-kubeconfig-1,kube-controller-cert-syncer-kubeconfig-1,kube-controller-manager-pod-1,recycler-config-1,service-ca-1,serviceaccount-ca-1,
+  secrets: localhost-recovery-client-token-1,service-account-private-key-1]\nGarbageCollectorDegraded:
+  error fetching rules: Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\":
+  dial tcp: lookup thanos-querier.openshift-monitoring.svc on 172.30.0.10:53: read
+  udp 10.128.0.16:47865->172.30.0.10:53: read: connection refused\nNodeControllerDegraded:
+  All master nodes are ready\nRevisionControllerDegraded: configmaps \"kube-controller-manager-pod\"
+  not found"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Normal
