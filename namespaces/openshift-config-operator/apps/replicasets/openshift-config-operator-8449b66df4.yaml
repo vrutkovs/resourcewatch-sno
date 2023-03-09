@@ -152,11 +152,13 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:15:09Z"
+    time: "2023-03-09T14:19:59Z"
   name: openshift-config-operator-8449b66df4
   namespace: openshift-config-operator
   ownerReferences:
@@ -166,7 +168,7 @@ metadata:
     kind: Deployment
     name: openshift-config-operator
     uid: c51fd9ff-49e7-444b-94c2-e61b79149f61
-  resourceVersion: "2309"
+  resourceVersion: "2312"
   uid: a7ce20a1-22ae-4404-ae6c-14fa8404ad0f
 spec:
   replicas: 1
@@ -269,5 +271,6 @@ spec:
           optional: true
           secretName: config-operator-serving-cert
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
