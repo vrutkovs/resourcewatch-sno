@@ -4,7 +4,7 @@ metadata:
   annotations:
     networkoperator.openshift.io/ovn-cluster-initiator: 10.0.130.93
   creationTimestamp: "2023-03-09T14:20:15Z"
-  generation: 5
+  generation: 6
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -54,7 +54,6 @@ metadata:
         f:unsupportedConfigOverrides: {}
         f:useMultiNetworkPolicy: {}
       f:status:
-        f:conditions: {}
         f:readyReplicas: {}
         f:version: {}
     manager: cluster-network-operator/operconfig
@@ -68,9 +67,9 @@ metadata:
         f:version: {}
     manager: cluster-network-operator
     operation: Update
-    time: "2023-03-09T14:20:20Z"
+    time: "2023-03-09T14:20:21Z"
   name: cluster
-  resourceVersion: "2531"
+  resourceVersion: "2532"
   uid: e6519524-ef16-4ee8-82f1-2faa42688032
 spec:
   clusterNetwork:
@@ -117,5 +116,8 @@ status:
   - lastTransitionTime: "2023-03-09T14:20:15Z"
     status: "True"
     type: Upgradeable
+  - lastTransitionTime: "2023-03-09T14:20:21Z"
+    status: "False"
+    type: Progressing
   readyReplicas: 0
   version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
