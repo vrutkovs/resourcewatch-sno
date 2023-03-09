@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:01Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:01Z"
+deprecatedSource:
+  component: service-ca-operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:01Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:22:01Z"
+  name: service-ca-operator.174ac63040e83018
+  namespace: openshift-service-ca-operator
+  resourceVersion: "3765"
+  uid: 56a60a98-965c-4ff8-b478-15202bcb18d9
+note: Created ServiceAccount/service-ca -n openshift-service-ca because it was missing
+reason: ServiceAccountCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: service-ca-operator
+  namespace: openshift-service-ca-operator
+  uid: 4278fbc3-b3a7-4276-bef7-7a9632b54a52
+type: Normal
