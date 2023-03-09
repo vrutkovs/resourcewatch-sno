@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2023-03-09T14:14:20Z"
+  labels:
+    kubernetes.io/metadata.name: assisted-installer
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/warn: privileged
+    security.openshift.io/scc.podSecurityLabelSync: "false"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/enforce: {}
+          f:pod-security.kubernetes.io/warn: {}
+          f:security.openshift.io/scc.podSecurityLabelSync: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:14:20Z"
+  name: assisted-installer
+  resourceVersion: "469"
+  uid: 55e9efa6-ef1d-4d59-a1a5-1d554b86b117
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
