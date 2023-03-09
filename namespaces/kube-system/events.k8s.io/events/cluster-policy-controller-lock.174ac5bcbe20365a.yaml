@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:13:45Z"
+deprecatedLastTimestamp: "2023-03-09T14:13:45Z"
+deprecatedSource:
+  component: cluster-policy-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:13:45Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:13:45Z"
+  name: cluster-policy-controller-lock.174ac5bcbe20365a
+  namespace: kube-system
+  resourceVersion: "134"
+  uid: 56b13a6b-da8e-4577-b0a5-54f42d77acb3
+note: vrutkovs-sno_75da02c2-dffb-4ed1-86e0-b8711e835827 became leader
+reason: LeaderElection
+regarding:
+  apiVersion: v1
+  kind: ConfigMap
+  name: cluster-policy-controller-lock
+  namespace: kube-system
+  resourceVersion: "131"
+  uid: b89a3f42-60bb-48b6-a4e5-375d7a866b3f
+type: Normal
