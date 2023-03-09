@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.65/23"],"mac_address":"0a:58:0a:80:00:41","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.65/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:30:00Z"
@@ -96,6 +97,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:30:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:30:00Z"
   name: collect-profiles-27972870-5zk5k
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -105,7 +115,7 @@ metadata:
     kind: Job
     name: collect-profiles-27972870
     uid: 759d7395-7ae5-440a-b37a-7922d6e077d4
-  resourceVersion: "10315"
+  resourceVersion: "10318"
   uid: 58131f07-d25b-4b26-b3d0-dbe5170f8612
 spec:
   containers:
