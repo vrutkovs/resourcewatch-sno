@@ -1,0 +1,26 @@
+apiVersion: v1
+data:
+  service-ca.crt: ""
+kind: ConfigMap
+metadata:
+  annotations:
+    service.beta.openshift.io/inject-cabundle: "true"
+  creationTimestamp: "2023-03-09T14:14:58Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:service-ca.crt: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:service.beta.openshift.io/inject-cabundle: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:14:58Z"
+  name: openshift-service-ca.crt
+  namespace: openshift-monitoring
+  resourceVersion: "1427"
+  uid: 558fc876-810d-47a1-a814-0b3743c13b2e
