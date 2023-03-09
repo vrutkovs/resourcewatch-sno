@@ -480,6 +480,46 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:20:33Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.93"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:33Z"
   name: ovnkube-node-d88ws
   namespace: openshift-ovn-kubernetes
   ownerReferences:
@@ -489,7 +529,7 @@ metadata:
     kind: DaemonSet
     name: ovnkube-node
     uid: 8b6ad0dc-8208-4b89-9ad9-f44d3b557593
-  resourceVersion: "2768"
+  resourceVersion: "2773"
   uid: db94c2b8-7410-40a2-990d-f725713e7562
 spec:
   affinity:
@@ -1004,6 +1044,80 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:33Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:33Z"
+    message: 'containers with unready status: [ovn-controller ovn-acl-logging kube-rbac-proxy
+      kube-rbac-proxy-ovn-metrics ovnkube-node]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:33Z"
+    message: 'containers with unready status: [ovn-controller ovn-acl-logging kube-rbac-proxy
+      kube-rbac-proxy-ovn-metrics ovnkube-node]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:33Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+    imageID: ""
+    lastState: {}
+    name: kube-rbac-proxy
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+    imageID: ""
+    lastState: {}
+    name: kube-rbac-proxy-ovn-metrics
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
+    imageID: ""
+    lastState: {}
+    name: ovn-acl-logging
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
+    imageID: ""
+    lastState: {}
+    name: ovn-controller
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
+    imageID: ""
+    lastState: {}
+    name: ovnkube-node
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.93
   phase: Pending
+  podIP: 10.0.130.93
+  podIPs:
+  - ip: 10.0.130.93
   qosClass: Burstable
+  startTime: "2023-03-09T14:20:33Z"
