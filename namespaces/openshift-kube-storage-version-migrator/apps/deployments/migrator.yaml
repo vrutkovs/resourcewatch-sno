@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
+    deployment.kubernetes.io/revision: "1"
     operator.openshift.io/spec-hash: 142cb9fcbb66da1f3a834233b78eefee9ca032aba1df342eda43c0ac3ddb70ab
   creationTimestamp: "2023-03-09T14:21:59Z"
   generation: 1
@@ -77,9 +78,30 @@ metadata:
     manager: Go-http-client
     operation: Update
     time: "2023-03-09T14:21:59Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:21:59Z"
   name: migrator
   namespace: openshift-kube-storage-version-migrator
-  resourceVersion: "3373"
+  resourceVersion: "3376"
   uid: 16b51955-0b35-4bb1-a910-cc77e75384b6
 spec:
   progressDeadlineSeconds: 600
@@ -144,4 +166,11 @@ spec:
         key: node.kubernetes.io/not-ready
         operator: Exists
         tolerationSeconds: 120
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:21:59Z"
+    lastUpdateTime: "2023-03-09T14:21:59Z"
+    message: Created new replica set "migrator-5f7445f4f8"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
