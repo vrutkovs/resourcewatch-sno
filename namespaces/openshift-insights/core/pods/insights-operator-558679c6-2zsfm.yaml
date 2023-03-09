@@ -192,8 +192,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -209,6 +207,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:29:14Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:02Z"
   name: insights-operator-558679c6-2zsfm
   namespace: openshift-insights
   ownerReferences:
@@ -218,7 +228,7 @@ metadata:
     kind: ReplicaSet
     name: insights-operator-558679c6
     uid: 676c392a-9c6b-4895-9a89-2500abfa49c6
-  resourceVersion: "9388"
+  resourceVersion: "13859"
   uid: 005bb3a4-6468-4232-a227-5fd234462534
 spec:
   containers:
@@ -356,8 +366,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:12Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:02Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:12Z"
