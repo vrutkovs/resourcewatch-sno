@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3672"
+  resourceVersion: "3692"
   uid: 5b689e62-691b-4fc1-86d9-fed9d5250955
 spec: {}
 status:
@@ -76,6 +76,12 @@ status:
     reason: AsExpected
     status: "True"
     type: Upgradeable
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    message: The etcd backup controller is starting, and will decide if recent backups
+      are available or if a backup is required
+    reason: ControllerStarted
+    status: Unknown
+    type: RecentBackup
   extension: null
   relatedObjects:
   - group: operator.openshift.io
