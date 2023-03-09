@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:38Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:38Z"
+deprecatedSource:
+  component: daemonset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:38Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:22:38Z"
+  name: node-exporter.174ac638db7928d5
+  namespace: openshift-monitoring
+  resourceVersion: "5667"
+  uid: 7b43aa74-56dd-45a3-8690-618549083ad4
+note: 'Created pod: node-exporter-dj9kl'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: DaemonSet
+  name: node-exporter
+  namespace: openshift-monitoring
+  resourceVersion: "5651"
+  uid: 719fd696-9e6f-4b15-9718-b5de9defc5c1
+type: Normal
