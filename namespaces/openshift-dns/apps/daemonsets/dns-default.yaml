@@ -1,0 +1,288 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  annotations:
+    deprecated.daemonset.template.generation: "1"
+  creationTimestamp: "2023-03-09T14:22:11Z"
+  generation: 1
+  labels:
+    dns.operator.openshift.io/owning-dns: default
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deprecated.daemonset.template.generation: {}
+        f:labels:
+          .: {}
+          f:dns.operator.openshift.io/owning-dns: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5229bf4f-ffc6-4d6c-8729-5bb065d5cba1"}: {}
+      f:spec:
+        f:revisionHistoryLimit: {}
+        f:selector: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:cluster-autoscaler.kubernetes.io/enable-ds-eviction: {}
+              f:target.workload.openshift.io/management: {}
+            f:labels:
+              .: {}
+              f:dns.operator.openshift.io/daemonset-dns: {}
+          f:spec:
+            f:containers:
+              k:{"name":"dns"}:
+                .: {}
+                f:args: {}
+                f:command: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:livenessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:initialDelaySeconds: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":5353,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                  k:{"containerPort":5353,"protocol":"UDP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                f:readinessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:initialDelaySeconds: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:resources:
+                  .: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/etc/coredns"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+              k:{"name":"kube-rbac-proxy"}:
+                .: {}
+                f:args: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":9154,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                f:resources:
+                  .: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/etc/tls/private"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+            f:dnsPolicy: {}
+            f:nodeSelector: {}
+            f:priorityClassName: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:tolerations: {}
+            f:volumes:
+              .: {}
+              k:{"name":"config-volume"}:
+                .: {}
+                f:configMap:
+                  .: {}
+                  f:defaultMode: {}
+                  f:items: {}
+                  f:name: {}
+                f:name: {}
+              k:{"name":"metrics-tls"}:
+                .: {}
+                f:name: {}
+                f:secret:
+                  .: {}
+                  f:defaultMode: {}
+                  f:secretName: {}
+        f:updateStrategy:
+          f:rollingUpdate:
+            .: {}
+            f:maxSurge: {}
+            f:maxUnavailable: {}
+          f:type: {}
+    manager: dns-operator
+    operation: Update
+    time: "2023-03-09T14:22:11Z"
+  name: dns-default
+  namespace: openshift-dns
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    controller: true
+    kind: DNS
+    name: default
+    uid: 5229bf4f-ffc6-4d6c-8729-5bb065d5cba1
+  resourceVersion: "4452"
+  uid: 5dcfb4ec-c80c-463b-b4b2-44c23caada97
+spec:
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      dns.operator.openshift.io/daemonset-dns: default
+  template:
+    metadata:
+      annotations:
+        cluster-autoscaler.kubernetes.io/enable-ds-eviction: "true"
+        target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+      creationTimestamp: null
+      labels:
+        dns.operator.openshift.io/daemonset-dns: default
+    spec:
+      containers:
+      - args:
+        - -conf
+        - /etc/coredns/Corefile
+        command:
+        - coredns
+        image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9b5859648ff4466d9c2dc97ff9bf12044132c11f33d92183d171ca253a6984ee
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 5
+          httpGet:
+            path: /health
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+        name: dns
+        ports:
+        - containerPort: 5353
+          name: dns
+          protocol: UDP
+        - containerPort: 5353
+          name: dns-tcp
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /ready
+            port: 8181
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 3
+          successThreshold: 1
+          timeoutSeconds: 3
+        resources:
+          requests:
+            cpu: 50m
+            memory: 70Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+        volumeMounts:
+        - mountPath: /etc/coredns
+          name: config-volume
+          readOnly: true
+      - args:
+        - --logtostderr
+        - --secure-listen-address=:9154
+        - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+        - --upstream=http://127.0.0.1:9153/
+        - --tls-cert-file=/etc/tls/private/tls.crt
+        - --tls-private-key-file=/etc/tls/private/tls.key
+        image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+        imagePullPolicy: IfNotPresent
+        name: kube-rbac-proxy
+        ports:
+        - containerPort: 9154
+          name: metrics
+          protocol: TCP
+        resources:
+          requests:
+            cpu: 10m
+            memory: 40Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /etc/tls/private
+          name: metrics-tls
+          readOnly: true
+      dnsPolicy: Default
+      nodeSelector:
+        kubernetes.io/os: linux
+      priorityClassName: system-node-critical
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: dns
+      serviceAccountName: dns
+      terminationGracePeriodSeconds: 30
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        operator: Exists
+      volumes:
+      - configMap:
+          defaultMode: 420
+          items:
+          - key: Corefile
+            path: Corefile
+          name: dns-default
+        name: config-volume
+      - name: metrics-tls
+        secret:
+          defaultMode: 420
+          secretName: dns-default-metrics-tls
+  updateStrategy:
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 10%
+    type: RollingUpdate
+status:
+  currentNumberScheduled: 0
+  desiredNumberScheduled: 0
+  numberMisscheduled: 0
+  numberReady: 0
