@@ -2,7 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
     service.beta.openshift.io/serving-cert-secret-name: prometheus-k8s-thanos-sidecar-tls
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
   creationTimestamp: "2023-03-09T14:32:47Z"
   labels:
     app.kubernetes.io/component: thanos-sidecar
@@ -42,9 +44,19 @@ metadata:
     manager: operator
     operation: Update
     time: "2023-03-09T14:32:47Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:32:48Z"
   name: prometheus-k8s-thanos-sidecar
   namespace: openshift-monitoring
-  resourceVersion: "15982"
+  resourceVersion: "15986"
   uid: 6ede9cd3-7f6f-4844-9883-4825e692f475
 spec:
   clusterIP: None
