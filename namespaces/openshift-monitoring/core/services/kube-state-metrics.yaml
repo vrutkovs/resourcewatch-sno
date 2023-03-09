@@ -2,7 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
     service.beta.openshift.io/serving-cert-secret-name: kube-state-metrics-tls
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
   creationTimestamp: "2023-03-09T14:22:38Z"
   labels:
     app.kubernetes.io/component: exporter
@@ -46,9 +48,19 @@ metadata:
     manager: operator
     operation: Update
     time: "2023-03-09T14:22:38Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:22:38Z"
   name: kube-state-metrics
   namespace: openshift-monitoring
-  resourceVersion: "5637"
+  resourceVersion: "5721"
   uid: 356f15a5-657d-4a00-90b0-2fed10957b16
 spec:
   clusterIP: None
