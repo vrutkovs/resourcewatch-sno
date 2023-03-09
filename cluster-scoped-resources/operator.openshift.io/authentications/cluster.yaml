@@ -92,14 +92,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:33:50Z"
+    time: "2023-03-09T14:33:51Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16615"
+  resourceVersion: "16624"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -189,9 +189,13 @@ status:
     reason: AsExpected
     status: "True"
     type: OAuthServerServiceEndpointAccessibleControllerAvailable
-  - lastTransitionTime: "2023-03-09T14:33:04Z"
-    reason: AsExpected
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:33:50Z"
+    message: '[Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443:
+      i/o timeout (Client.Timeout exceeded while awaiting headers), Operation cannot
+      be fulfilled on authentications.operator.openshift.io "cluster": the object
+      has been modified; please apply your changes to the latest version and try again]'
+    reason: SyncError
+    status: "True"
     type: OAuthServerServiceEndpointAccessibleControllerDegraded
   - lastTransitionTime: "2023-03-09T14:22:40Z"
     status: "False"
