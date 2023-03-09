@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:21:59Z"
-deprecatedLastTimestamp: "2023-03-09T14:21:59Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:14Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:22:05Z"
+    time: "2023-03-09T14:23:14Z"
   name: openshift-kube-scheduler-operator-7cc5d8f59f-r7c2z.174ac62fa7f5604a
   namespace: openshift-kube-scheduler-operator
-  resourceVersion: "4144"
+  resourceVersion: "6746"
   uid: a1a339cb-8210-4156-8a47-411bee322f54
 note: Started container kube-scheduler-operator-container
 reason: Started
