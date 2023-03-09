@@ -7,7 +7,7 @@ metadata:
     include.release.openshift.io/single-node-developer: "true"
     release.openshift.io/create-only: "true"
   creationTimestamp: "2023-03-09T14:14:46Z"
-  generation: 1
+  generation: 2
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -41,18 +41,58 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:22:01Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          .: {}
+          f:build:
+            .: {}
+            f:buildDefaults:
+              .: {}
+              f:resources: {}
+            f:imageTemplateFormat:
+              .: {}
+              f:format: {}
+          f:deployer:
+            .: {}
+            f:imageTemplateFormat:
+              .: {}
+              f:format: {}
+          f:featureGates: {}
+          f:ingress:
+            .: {}
+            f:ingressIPNetworkCIDR: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:23:00Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3723"
+  resourceVersion: "6114"
   uid: b34d6810-68f9-4135-9afc-798b3c845c22
 spec:
   logLevel: Normal
   managementState: Managed
+  observedConfig:
+    build:
+      buildDefaults:
+        resources: {}
+      imageTemplateFormat:
+        format: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:0094601b9ace07d517ea9445853bf10bc91087445cb86cac469466a062dc119f
+    deployer:
+      imageTemplateFormat:
+        format: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:0514c00d6cb55a348561044e5c2d2de0005963e427ac72613be54ccb9d038549
+    featureGates: []
+    ingress:
+      ingressIPNetworkCIDR: ""
   operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:01Z"
