@@ -1,0 +1,29 @@
+apiVersion: v1
+data:
+  service-account-001.pub: |
+    -----BEGIN RSA PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvLmB+2oyZbJQZ7bdWqSL
+    yENDLyTGZEm5rrCTnTsOa1k0HHEqb1qLejFOrLxYVWhzfq3ZF02PdockNJbR1xFE
+    U0M0DZb+qPtFLcql7/+7BH3JYGo7JC359Nfll4k4sAMk1QDCbkiyJDKvOssd/VTt
+    fxFcstb9iBxKxcjtvySa/eGlrdh9yLMqIXhx5Gv0K0tqyJDQDKxuEUHkiPsuhgvW
+    E6TasM4oqnM7aD0u3kvldF+2vhW6NXjWlX2yJI1iHSmnS9LfYtAsA7dtH5PVSk8H
+    oqLl7DMYry3f5bQbHIMFqf9xnh8lSW+ul2GqibjI9G5mYUVptxvZk6yEWvhjFpe5
+    8wIDAQAB
+    -----END RSA PUBLIC KEY-----
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:15:17Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:service-account-001.pub: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:15:17Z"
+  name: sa-token-signing-certs
+  namespace: openshift-config-managed
+  resourceVersion: "1955"
+  uid: 0767da2e-13b0-4b69-83e3-560de44c0136
