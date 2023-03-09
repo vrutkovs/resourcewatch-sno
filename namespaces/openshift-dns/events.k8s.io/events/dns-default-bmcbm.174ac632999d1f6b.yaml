@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 3
+deprecatedCount: 4
 deprecatedFirstTimestamp: "2023-03-09T14:22:11Z"
-deprecatedLastTimestamp: "2023-03-09T14:22:13Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:15Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:22:18Z"
+    time: "2023-03-09T14:22:20Z"
   name: dns-default-bmcbm.174ac632999d1f6b
   namespace: openshift-dns
-  resourceVersion: "4798"
+  resourceVersion: "4911"
   uid: f3e5e033-c30c-497d-a6dc-fd952849a97f
 note: 'MountVolume.SetUp failed for volume "metrics-tls" : secret "dns-default-metrics-tls"
   not found'
