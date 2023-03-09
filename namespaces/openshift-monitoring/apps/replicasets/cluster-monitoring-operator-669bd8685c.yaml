@@ -126,11 +126,13 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:15:13Z"
+    time: "2023-03-09T14:20:00Z"
   name: cluster-monitoring-operator-669bd8685c
   namespace: openshift-monitoring
   ownerReferences:
@@ -140,7 +142,7 @@ metadata:
     kind: Deployment
     name: cluster-monitoring-operator
     uid: 3fbddbae-91a0-49f3-9def-60d43a684e07
-  resourceVersion: "2366"
+  resourceVersion: "2368"
   uid: 194c53a2-cea2-42a0-b075-8030a374606f
 spec:
   replicas: 1
@@ -247,5 +249,6 @@ spec:
           defaultMode: 420
           secretName: cluster-monitoring-operator-tls
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
