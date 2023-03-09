@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.5/23"],"mac_address":"0a:58:0a:80:00:05","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.5/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.5"
+          ],
+          "mac": "0a:58:0a:80:00:05",
+          "default": true,
+          "dns": {}
+      }]
   creationTimestamp: "2023-03-09T14:19:59Z"
   generateName: etcd-operator-7897669d79-
   labels:
@@ -218,6 +229,16 @@ metadata:
     fieldsV1:
       f:metadata:
         f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:21:51Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
           .: {}
           f:k8s.ovn.org/pod-networks: {}
     manager: vrutkovs-sno
@@ -232,7 +253,7 @@ metadata:
     kind: ReplicaSet
     name: etcd-operator-7897669d79
     uid: e176b871-584e-4519-89f0-3385169cda9c
-  resourceVersion: "3160"
+  resourceVersion: "3194"
   uid: 9d9aa1ac-3740-4d62-8c9c-a417c1fd40be
 spec:
   containers:
