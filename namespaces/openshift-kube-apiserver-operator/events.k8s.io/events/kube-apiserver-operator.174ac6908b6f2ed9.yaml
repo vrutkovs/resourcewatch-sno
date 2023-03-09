@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:28:55Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:55Z"
+deprecatedSource:
+  component: kube-apiserver-operator-status-controller-statussyncer_kube-apiserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:56Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:28:56Z"
+  name: kube-apiserver-operator.174ac6908b6f2ed9
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "8686"
+  uid: 24d016dd-2f44-4896-b36d-f471228ddb55
+note: 'Status for clusteroperator/kube-apiserver changed: Degraded message changed
+  from "NodeControllerDegraded: All master nodes are ready" to "NodeControllerDegraded:
+  All master nodes are ready\nNodeKubeconfigControllerDegraded: \"secret/node-kubeconfigs\":
+  secret \"node-system-admin-client\" not found"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Normal
