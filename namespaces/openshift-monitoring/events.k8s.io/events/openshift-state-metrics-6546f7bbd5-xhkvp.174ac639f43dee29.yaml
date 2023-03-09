@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:43Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:43Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:45Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:22:45Z"
+  name: openshift-state-metrics-6546f7bbd5-xhkvp.174ac639f43dee29
+  namespace: openshift-monitoring
+  resourceVersion: "5940"
+  uid: cc258421-2925-46e2-b42c-01f94264ae05
+note: Created container openshift-state-metrics
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{openshift-state-metrics}
+  kind: Pod
+  name: openshift-state-metrics-6546f7bbd5-xhkvp
+  namespace: openshift-monitoring
+  resourceVersion: "5681"
+  uid: 38622ac5-a3af-44f2-8e23-f27add10741b
+type: Normal
