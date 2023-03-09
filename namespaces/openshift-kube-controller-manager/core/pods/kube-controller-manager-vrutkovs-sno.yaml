@@ -295,6 +295,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -313,6 +315,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -328,7 +332,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:12Z"
+    time: "2023-03-09T14:33:37Z"
   name: kube-controller-manager-vrutkovs-sno
   namespace: openshift-kube-controller-manager
   ownerReferences:
@@ -337,7 +341,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "14794"
+  resourceVersion: "16445"
   uid: 86e446f4-0641-4bea-b0ad-6118d837a124
 spec:
   containers:
@@ -574,12 +578,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:12Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:33:36Z"
+    message: 'containers with unready status: [kube-controller-manager]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:12Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:33:36Z"
+    message: 'containers with unready status: [kube-controller-manager]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:03Z"
@@ -597,17 +605,34 @@ status:
     state:
       running:
         startedAt: "2023-03-09T14:31:41Z"
-  - containerID: cri-o://3987831546b7f88681726b1064527930434bf8bf75695e9bbb12bcab842e35d4
+  - containerID: cri-o://cddee4e97973c36d676791ba346638eab1ad1b077aacb174332ae3b1c94159b9
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
-    lastState: {}
+    lastState:
+      terminated:
+        containerID: cri-o://3987831546b7f88681726b1064527930434bf8bf75695e9bbb12bcab842e35d4
+        exitCode: 1
+        finishedAt: "2023-03-09T14:33:35Z"
+        message: |
+          t" apiVersion="apps/v1" type="Normal" reason="SuccessfulCreate" message="Created pod: oauth-openshift-55cc54fd65-jkwn4"
+          E0309 14:33:23.861978       1 leaderelection.go:330] error retrieving resource lock kube-system/kube-controller-manager: Get "https://api-int.ocp.choomba.one:6443/api/v1/namespaces/kube-system/configmaps/kube-controller-manager?timeout=6s": dial tcp 10.0.130.93:6443: connect: connection refused
+          E0309 14:33:26.863281       1 leaderelection.go:330] error retrieving resource lock kube-system/kube-controller-manager: Get "https://api-int.ocp.choomba.one:6443/api/v1/namespaces/kube-system/configmaps/kube-controller-manager?timeout=6s": dial tcp 10.0.130.93:6443: connect: connection refused
+          E0309 14:33:29.863366       1 leaderelection.go:330] error retrieving resource lock kube-system/kube-controller-manager: Get "https://api-int.ocp.choomba.one:6443/api/v1/namespaces/kube-system/configmaps/kube-controller-manager?timeout=6s": dial tcp 10.0.130.93:6443: connect: connection refused
+          E0309 14:33:32.862656       1 leaderelection.go:330] error retrieving resource lock kube-system/kube-controller-manager: Get "https://api-int.ocp.choomba.one:6443/api/v1/namespaces/kube-system/configmaps/kube-controller-manager?timeout=6s": dial tcp 10.0.130.93:6443: connect: connection refused
+          E0309 14:33:32.915554       1 resource_quota_controller.go:417] failed to discover resources: Get "https://api-int.ocp.choomba.one:6443/api": dial tcp 10.0.130.93:6443: connect: connection refused
+          W0309 14:33:33.395140       1 garbagecollector.go:754] failed to discover preferred resources: Get "https://api-int.ocp.choomba.one:6443/api": dial tcp 10.0.130.93:6443: connect: connection refused
+          I0309 14:33:33.395167       1 garbagecollector.go:189] no resources reported by discovery, skipping garbage collector sync
+          I0309 14:33:35.861968       1 leaderelection.go:283] failed to renew lease kube-system/kube-controller-manager: timed out waiting for the condition
+          E0309 14:33:35.862049       1 controllermanager.go:328] "leaderelection lost"
+        reason: Error
+        startedAt: "2023-03-09T14:31:41Z"
     name: kube-controller-manager
-    ready: true
-    restartCount: 0
-    started: true
+    ready: false
+    restartCount: 1
+    started: false
     state:
       running:
-        startedAt: "2023-03-09T14:31:41Z"
+        startedAt: "2023-03-09T14:33:36Z"
   - containerID: cri-o://2759a91fd24d43ea6f2e6868f133155c47e1ec55bd126fbb8ffb1f50cac2bb7e
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d32df39b960a3d0fd95bb8269b5f82f104c4834d44ce0e86605741fe6546ff3d
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d32df39b960a3d0fd95bb8269b5f82f104c4834d44ce0e86605741fe6546ff3d
