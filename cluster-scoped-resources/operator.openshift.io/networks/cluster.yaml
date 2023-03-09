@@ -4,7 +4,7 @@ metadata:
   annotations:
     networkoperator.openshift.io/ovn-cluster-initiator: 10.0.130.93
   creationTimestamp: "2023-03-09T14:20:15Z"
-  generation: 22
+  generation: 23
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -69,7 +69,7 @@ metadata:
     operation: Update
     time: "2023-03-09T14:21:47Z"
   name: cluster
-  resourceVersion: "3098"
+  resourceVersion: "3100"
   uid: e6519524-ef16-4ee8-82f1-2faa42688032
 spec:
   clusterNetwork:
@@ -119,10 +119,8 @@ status:
     reason: Deploying
     status: "True"
     type: Progressing
-  - lastTransitionTime: "2023-03-09T14:20:23Z"
-    message: The network is starting up
-    reason: Startup
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:21:47Z"
+    status: "True"
     type: Available
   readyReplicas: 0
   version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
