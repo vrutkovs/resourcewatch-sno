@@ -129,7 +129,7 @@ metadata:
         f:observedGeneration: {}
         f:readyReplicas: {}
         f:replicas: {}
-        f:updatedReplicas: {}
+        f:unavailableReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -143,7 +143,7 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "5578"
+  resourceVersion: "5583"
   uid: 3f577280-a91b-42dc-8ed6-a9b403637b32
 spec:
   progressDeadlineSeconds: 600
@@ -261,7 +261,7 @@ status:
     reason: NewReplicaSetCreated
     status: "True"
     type: Progressing
-  observedGeneration: 1
+  observedGeneration: 2
   readyReplicas: 1
   replicas: 1
-  updatedReplicas: 1
+  unavailableReplicas: 1
