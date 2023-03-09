@@ -206,8 +206,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -220,8 +218,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -237,7 +233,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:29Z"
+    time: "2023-03-09T14:24:39Z"
   name: authentication-operator-5d5d777b7f-n2nh5
   namespace: openshift-authentication-operator
   ownerReferences:
@@ -247,7 +243,7 @@ metadata:
     kind: ReplicaSet
     name: authentication-operator-5d5d777b7f
     uid: 9d663e46-1f08-41c1-94e5-3d0d46f7e93e
-  resourceVersion: "6994"
+  resourceVersion: "7049"
   uid: 11698cce-3094-4d93-8221-8d619bf2ecd8
 spec:
   containers:
@@ -395,37 +391,44 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:23:29Z"
-    message: 'containers with unready status: [authentication-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:24:39Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:23:29Z"
-    message: 'containers with unready status: [authentication-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:24:39Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:21:51Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://8d1bdaa7e65897d85ca959d117e518ad55c177bfb362eb102150d4fe419def90
+  - containerID: cri-o://090edecdd4bc1e5bec8aa21d2041a8cb23a1e681c9dd1a74e007586daaee15c4
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:911863c370cd31453bc66d3df7571aa87cdbc21d6c064d53541f3c594a2ea504
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:911863c370cd31453bc66d3df7571aa87cdbc21d6c064d53541f3c594a2ea504
-    lastState: {}
-    name: authentication-operator
-    ready: false
-    restartCount: 0
-    started: false
-    state:
+    lastState:
       terminated:
-        containerID: cri-o://8d1bdaa7e65897d85ca959d117e518ad55c177bfb362eb102150d4fe419def90
-        exitCode: 0
-        finishedAt: "2023-03-09T14:23:29Z"
-        reason: Completed
-        startedAt: "2023-03-09T14:21:58Z"
+        containerID: cri-o://23f296f7ee7aba92159f2d6a840e88c0610ce2540d739a1fb82d2e378ed2b054
+        exitCode: 255
+        finishedAt: "2023-03-09T14:24:00Z"
+        message: |
+          Copying system trust bundle
+          W0309 14:23:29.875889       1 cmd.go:123] Unable to read initial content of "/tmp/terminate": open /tmp/terminate: no such file or directory
+          I0309 14:23:29.876747       1 observer_polling.go:159] Starting file observer
+          I0309 14:23:29.876945       1 cmd.go:209] Using service-serving-cert provided certificates
+          I0309 14:23:29.877169       1 observer_polling.go:159] Starting file observer
+          I0309 14:23:29.891036       1 builder.go:262] cluster-authentication-operator version v0.0.2-986-g453de14-
+          I0309 14:23:29.891606       1 dynamic_serving_content.go:113] "Loaded a new cert/key pair" name="serving-cert::/var/run/secrets/serving-cert/tls.crt::/var/run/secrets/serving-cert/tls.key"
+          F0309 14:24:00.075045       1 cmd.go:138] failed checking apiserver connectivity: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-authentication-operator/leases/cluster-authentication-operator-lock": context deadline exceeded
+        reason: Error
+        startedAt: "2023-03-09T14:23:29Z"
+    name: authentication-operator
+    ready: true
+    restartCount: 2
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-09T14:24:37Z"
   hostIP: 10.0.130.93
   phase: Running
   podIP: 10.128.0.21
