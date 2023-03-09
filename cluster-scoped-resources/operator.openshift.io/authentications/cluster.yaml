@@ -92,14 +92,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:16Z"
+    time: "2023-03-09T14:31:56Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "9543"
+  resourceVersion: "13299"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -174,12 +174,8 @@ status:
     reason: NoUnsupportedConfigOverrides
     status: "True"
     type: UnsupportedConfigOverridesUpgradeable
-  - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: |-
-      apiservices.apiregistration.k8s.io/v1.oauth.openshift.io: not available: failing or missing response from https://10.128.0.41:8443/apis/oauth.openshift.io/v1: bad status from https://10.128.0.41:8443/apis/oauth.openshift.io/v1: 401
-      apiservices.apiregistration.k8s.io/v1.user.openshift.io: not available: failing or missing response from https://10.128.0.41:8443/apis/user.openshift.io/v1: bad status from https://10.128.0.41:8443/apis/user.openshift.io/v1: 401
-    reason: Error
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:31:56Z"
+    status: "True"
     type: APIServicesAvailable
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     reason: AsExpected
