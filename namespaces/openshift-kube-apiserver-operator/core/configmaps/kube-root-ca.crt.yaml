@@ -1,0 +1,89 @@
+apiVersion: v1
+data:
+  ca.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIDQDCCAiigAwIBAgIIP98l+SDqxdEwDQYJKoZIhvcNAQELBQAwPjESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+    c2lnbmVyMB4XDTIzMDMwOTE0MTAxNloXDTMzMDMwNjE0MTAxNlowPjESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+    c2lnbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6bBAPMRw9zHl
+    CvTa8NwNT8v5TGQXEZiOXKy0R8c2HM54EMtYMwYC1kjsAizyrirMZfRB4c9WTuEp
+    gNwJQKTllBs6G1ZnEbSx4SMwtBNe91L39/FXaygLrbirKvnh7D5yOOdbp5P2vOd+
+    HgiNVR0igkL4TW4Zx1S4rRhLhnvBOTjs0M18OLUJCi0bnmj4THRAi5u/29QDTQhL
+    dXTKgSJ4igy3j21N1j36zWldX6QfjZVWycbBNrZtC7pzJCL5OVelJM0e16Hy33ck
+    d+Nw2hWAWhu/68urKNDXB9ZKBI4LBbhzNGq4ClaMgL+3GyS+6IYAoc0sa03CLgUw
+    zUUVUfhhxQIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/BAUwAwEB
+    /zAdBgNVHQ4EFgQU99fX4oC3DkPafLj71Mn+bmavA2wwDQYJKoZIhvcNAQELBQAD
+    ggEBALES6X4nmeoLpKNhvHYU+ILs0qV6gFzAu2ElreiLb6mYHLX72XMNy6bo8iLB
+    DgjkDUoucOC/ofJtKfMuUcRqukE3Aql0hXxBi5dZqId2nVTRywww4mpbcH0rtWNl
+    TNxj/TOtpAuAJMNmwa4ODbll9fjioOJcXez7YiSkwDmrFzKr5SQNZYYIcyKNTFax
+    Lcdc6vf8JMwtxKLnDbURUFQuIG0eMqCGSd6PbuLx37D9W+k3SzTEr27/gxIEtlf5
+    mCtzYN11aL2xtN7zE5aBtIUfaGvNKo21bQxnxDIEXUHztoghuBIdffcGG7rWMzKW
+    dEuNdtWXmlCLXE+riqidXkk6atk=
+    -----END CERTIFICATE-----
+    -----BEGIN CERTIFICATE-----
+    MIIDTDCCAjSgAwIBAgIIWghdF9lyqxUwDQYJKoZIhvcNAQELBQAwRDESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MS4wLAYDVQQDEyVrdWJlLWFwaXNlcnZlci1zZXJ2aWNlLW5l
+    dHdvcmstc2lnbmVyMB4XDTIzMDMwOTE0MTAxNloXDTMzMDMwNjE0MTAxNlowRDES
+    MBAGA1UECxMJb3BlbnNoaWZ0MS4wLAYDVQQDEyVrdWJlLWFwaXNlcnZlci1zZXJ2
+    aWNlLW5ldHdvcmstc2lnbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+    AQEAzbcs9qsmuCMtk84vZd8oP6jso8CO/+5s+t4vjpJlRcn0Ml/auOfBtbpi/x81
+    pjLkygyzafyYHAyjlTrS9nPZ7SU7qfk20oISzKjlIhy/YxqEugB6qYGsN/vR8FcM
+    tKBCDCXU/+S00M0rJi9R/HL3l1q6hElilcuLuEpYlZqxND7TsJWGuwK1jApVDeM+
+    aVWMzlUtLVs3yVuUGD3W8jIYXi9XNcqWsAwLym7jIbwJF1L3oGZ0D2E8cjQq3upH
+    sQPRKv3to/9RskTJwtJMEfFdpR6q4fetBkG2u2VECJzDSWe6sGd0EpZ1O0QkciNV
+    /bauXcO8Jk3T30w/eui4G9KIhwIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYD
+    VR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUfm+tgBNUbtCQsHfm1j4VD7L6jgIwDQYJ
+    KoZIhvcNAQELBQADggEBAG9zRFpibBEuT5OOAbj9S7R3N8wHedL6aY7Ljeye48I3
+    UokbUw6zhnWF4EkFJOc9vhg66neNdA3IAKYYioHgZWpDvZAkc9B8cDAk9HQuNyYi
+    AdsHfiticlXWhC/bNEK5oGmxfj0opUI86GSynTpByu9AzGFcZXJCBlJhXnwKq6Ya
+    4KIDt8s64HNeK/gkoUjnXJitPtxTBZ3BXfI9dUt/wlc8RyB1rqV5PiK3CzpDGZxJ
+    VEJ4rQ8dQngqtkb9MbCa1I++sFsuUh8J0xclQ6tpDg3lCwKllINon1+/VO6m43ET
+    L6rPuQIPOfb3LyPoniKtX58s4uqeBvKyHcxLdmLdo8s=
+    -----END CERTIFICATE-----
+    -----BEGIN CERTIFICATE-----
+    MIIDMjCCAhqgAwIBAgIIZKwSwwIkBgUwDQYJKoZIhvcNAQELBQAwNzESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MSEwHwYDVQQDExhrdWJlLWFwaXNlcnZlci1sYi1zaWduZXIw
+    HhcNMjMwMzA5MTQxMDE2WhcNMzMwMzA2MTQxMDE2WjA3MRIwEAYDVQQLEwlvcGVu
+    c2hpZnQxITAfBgNVBAMTGGt1YmUtYXBpc2VydmVyLWxiLXNpZ25lcjCCASIwDQYJ
+    KoZIhvcNAQEBBQADggEPADCCAQoCggEBAK9JksvUq0SvxChXYvOE0OoEFRXhBK2J
+    eynGjQUJax7xaiY1HFJlAKt3DEo4dLKYrw06kDZ4+jxJvvm0V7MTsvnAYx6Dv0Ft
+    hRdNqs+cD8xi9qhyfhL/6xQmiu42UVYg/W9bJaHLzGrYnm80Dk20kOmgHnXRvFAt
+    YkJm/PoB+6LTCNKNa+gi6eoV+i7NAMcHgFnVPvRO3ejBdXGd73i2iyFPwacxRGwU
+    OdvSyFu26jBNwX8rSPoSbPcsgKOVMnJKeQ58D0Ofo0ONw1AGGiELlvjww9OqFxT/
+    HHdx44cq6l30hP6QCzfdfFTC/Gte2LkES6uluWR1thK4FT07V8xY8e8CAwEAAaNC
+    MEAwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFP1n
+    t4RnO7FvClI9ccGk4g/sbefAMA0GCSqGSIb3DQEBCwUAA4IBAQBZ7B2wUgz8i8rg
+    K6xv07ZVal54RsxvgCfk/Q4Le5biFAt6PwyGHG0w2iO4f4EeCClPizGDGIK1aUA9
+    5el4CBmVtW6DS6zAXn0Ocv6jbDDpI8WDOQJ6csPXvTCe9kppab6UKh09314athEZ
+    tmqw9cB3NKdgV+IEsuvHkqwX/j7oDgPeZHoVG1oUuFK/HMj7dY/SwHFsHqVF5Nkg
+    BB+Wfldm+95WVm63MD1NQCeJEdO2hi7xCyk/qSNyU0YdWpTacEuhmdf5oq+FueVX
+    9hmwG/m4ARBh4LUdW8Xy74i2B4760iI41i4d7gxcuJIONDbvL5f8aAdJbKDgYe9K
+    l3jOtL0Z
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  annotations:
+    kubernetes.io/description: Contains a CA bundle that can be used to verify the
+      kube-apiserver when using internal endpoints such as the internal service IP
+      or kubernetes.default.svc. No other usage is guaranteed across distributions
+      of Kubernetes clusters.
+  creationTimestamp: "2023-03-09T14:14:14Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:ca.crt: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubernetes.io/description: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:14:14Z"
+  name: kube-root-ca.crt
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "438"
+  uid: 0e893507-b87a-4fe1-8d24-9c1a04c06d43
