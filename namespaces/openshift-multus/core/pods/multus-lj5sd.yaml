@@ -171,8 +171,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -188,6 +186,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:20:31Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:02Z"
   name: multus-lj5sd
   namespace: openshift-multus
   ownerReferences:
@@ -197,7 +207,7 @@ metadata:
     kind: DaemonSet
     name: multus
     uid: 5132994f-a471-445f-8f61-19331bc66668
-  resourceVersion: "2723"
+  resourceVersion: "13725"
   uid: 55c10e01-75bd-4df8-a384-e5f87c2eab03
 spec:
   affinity:
@@ -321,8 +331,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:31Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:02Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:31Z"
