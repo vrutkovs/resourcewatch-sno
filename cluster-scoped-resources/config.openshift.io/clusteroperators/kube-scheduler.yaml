@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:06Z"
+    time: "2023-03-09T14:22:08Z"
   name: kube-scheduler
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4199"
+  resourceVersion: "4302"
   uid: 441925ee-aa23-4d3c-937b-d1809e7a63de
 spec: {}
 status:
@@ -75,9 +75,10 @@ status:
     reason: StaticPods_ZeroNodesActive
     status: "False"
     type: Available
-  - lastTransitionTime: "2023-03-09T14:22:00Z"
-    reason: NoData
-    status: Unknown
+  - lastTransitionTime: "2023-03-09T14:22:08Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
     type: Upgradeable
   extension: null
   relatedObjects:
