@@ -53,7 +53,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3451"
+  resourceVersion: "3467"
   uid: e0331be3-eea0-4389-ad97-427d46033c20
 spec: {}
 status:
@@ -71,8 +71,9 @@ status:
     status: Unknown
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    reason: NoData
-    status: Unknown
+    message: All is well
+    reason: AsExpected
+    status: "True"
     type: Upgradeable
   extension: null
   relatedObjects:
