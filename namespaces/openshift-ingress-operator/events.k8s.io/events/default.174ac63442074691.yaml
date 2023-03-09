@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:18Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:18Z"
+deprecatedSource:
+  component: ingress_controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:18Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: ingress-operator
+    operation: Update
+    time: "2023-03-09T14:22:18Z"
+  name: default.174ac63442074691
+  namespace: openshift-ingress-operator
+  resourceVersion: "4795"
+  uid: 7658ebfc-1cfc-46c6-966d-2666e2391936
+note: ingresscontroller passed validation
+reason: Admitted
+regarding:
+  apiVersion: operator.openshift.io/v1
+  kind: IngressController
+  name: default
+  namespace: openshift-ingress-operator
+  resourceVersion: "4721"
+  uid: 581ce6e7-0dc9-460c-b609-a8d3a1b3ae1f
+type: Normal
