@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:31:19Z"
+deprecatedLastTimestamp: "2023-03-09T14:31:19Z"
+deprecatedSource:
+  component: route-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:31:19Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: route-controller-manager
+    operation: Update
+    time: "2023-03-09T14:31:19Z"
+  name: openshift-route-controllers.174ac6b238e1f038
+  namespace: openshift-route-controller-manager
+  resourceVersion: "12259"
+  uid: 3866eab8-5742-48b4-99c7-89d0c51de03c
+note: route-controller-manager-749787b87c-p6r7p became leader
+reason: LeaderElection
+regarding:
+  apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  name: openshift-route-controllers
+  namespace: openshift-route-controller-manager
+  resourceVersion: "12257"
+  uid: 486839c4-8ddd-4837-921a-0c867d539f5d
+type: Normal
