@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.56/23"],"mac_address":"0a:58:0a:80:00:38","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.56/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:28:56Z"
@@ -171,6 +172,15 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:28:56Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:28:56Z"
   name: cluster-image-registry-operator-77f7dc4fc4-jcn7n
   namespace: openshift-image-registry
   ownerReferences:
@@ -180,7 +190,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-image-registry-operator-77f7dc4fc4
     uid: 0b33e420-b3fe-4d39-874f-ee40deaced68
-  resourceVersion: "8738"
+  resourceVersion: "8740"
   uid: 81cbee3b-44bb-43cc-8de8-f36011505ee6
 spec:
   containers:
