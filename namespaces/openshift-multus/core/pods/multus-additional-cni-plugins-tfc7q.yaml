@@ -385,8 +385,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -399,13 +397,12 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
         f:initContainerStatuses: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -416,7 +413,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:43Z"
+    time: "2023-03-09T14:20:44Z"
   name: multus-additional-cni-plugins-tfc7q
   namespace: openshift-multus
   ownerReferences:
@@ -426,7 +423,7 @@ metadata:
     kind: DaemonSet
     name: multus-additional-cni-plugins
     uid: f298fd66-e9c3-44fd-bc7d-4aca53e76970
-  resourceVersion: "2898"
+  resourceVersion: "2908"
   uid: c744a2d1-8bd9-4403-8cb9-bed2ff64ddff
 spec:
   affinity:
@@ -804,32 +801,29 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:23Z"
-    message: 'containers with unready status: [kube-multus-additional-cni-plugins]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:20:44Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:23Z"
-    message: 'containers with unready status: [kube-multus-additional-cni-plugins]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:20:44Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:23Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ebb2140174c027ad75a9f06f0d6f82ed82d20e871877b7504fd95d4b56acdff2
-    imageID: ""
+  - containerID: cri-o://7f527cd3a7b30712e56be7000e96e04d60af59b398491b4d646a1ac8fff8311f
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ebb2140174c027ad75a9f06f0d6f82ed82d20e871877b7504fd95d4b56acdff2
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ebb2140174c027ad75a9f06f0d6f82ed82d20e871877b7504fd95d4b56acdff2
     lastState: {}
     name: kube-multus-additional-cni-plugins
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: PodInitializing
+      running:
+        startedAt: "2023-03-09T14:20:44Z"
   hostIP: 10.0.130.93
   initContainerStatuses:
   - containerID: cri-o://457792669eecb90d90f0747332f0774ea8334cd18f4f7cf53a3631c4608a7845
@@ -916,7 +910,7 @@ status:
         finishedAt: "2023-03-09T14:20:43Z"
         reason: Completed
         startedAt: "2023-03-09T14:20:43Z"
-  phase: Pending
+  phase: Running
   podIP: 10.0.130.93
   podIPs:
   - ip: 10.0.130.93
