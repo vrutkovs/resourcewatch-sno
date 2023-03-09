@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:02Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:02Z"
+deprecatedSource:
+  component: node-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:03Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:32:03Z"
+  name: dns-default-bmcbm.174ac6bc1d36398a
+  namespace: openshift-dns
+  resourceVersion: "14030"
+  uid: 91f332ec-24a0-4c96-ba6f-e9970e1203fe
+note: Node is not ready
+reason: NodeNotReady
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: dns-default-bmcbm
+  namespace: openshift-dns
+  resourceVersion: "9214"
+  uid: 53f53fd4-d73a-4693-b74f-978bc7aff7f6
+type: Warning
