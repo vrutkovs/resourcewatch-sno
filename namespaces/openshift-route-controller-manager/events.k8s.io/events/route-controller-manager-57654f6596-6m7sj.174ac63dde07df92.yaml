@@ -1,0 +1,41 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:23:00.169290Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:23:00Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:23:00Z"
+  name: route-controller-manager-57654f6596-6m7sj.174ac63dde07df92
+  namespace: openshift-route-controller-manager
+  resourceVersion: "6153"
+  uid: b2d0ab09-4c90-472f-b2f9-d0dd40e3cba2
+note: Successfully assigned openshift-route-controller-manager/route-controller-manager-57654f6596-6m7sj
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: route-controller-manager-57654f6596-6m7sj
+  namespace: openshift-route-controller-manager
+  resourceVersion: "6141"
+  uid: 73058960-10e6-492d-aa88-3527fe751cfe
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
