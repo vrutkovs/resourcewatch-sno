@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 3
+deprecatedCount: 4
 deprecatedFirstTimestamp: "2023-03-09T14:22:12Z"
-deprecatedLastTimestamp: "2023-03-09T14:22:14Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:16Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:22:19Z"
+    time: "2023-03-09T14:22:20Z"
   name: apiserver-6fb9dd7b7-rjbtg.174ac632d5bd586f
   namespace: openshift-oauth-apiserver
-  resourceVersion: "4870"
+  resourceVersion: "4931"
   uid: e303de8c-cc30-4ea3-9b4a-96271c004cf1
 note: 'MountVolume.SetUp failed for volume "etcd-serving-ca" : configmap "etcd-serving-ca"
   not found'
