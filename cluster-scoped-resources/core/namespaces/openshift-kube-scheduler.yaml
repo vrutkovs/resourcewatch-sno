@@ -10,6 +10,7 @@ metadata:
   creationTimestamp: "2023-03-09T14:14:15Z"
   labels:
     kubernetes.io/metadata.name: openshift-kube-scheduler
+    olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: ""
     openshift.io/cluster-monitoring: "true"
     openshift.io/run-level: "0"
     pod-security.kubernetes.io/audit: privileged
@@ -54,8 +55,17 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     time: "2023-03-09T14:22:02Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: {}
+    manager: olm
+    operation: Update
+    time: "2023-03-09T14:29:18Z"
   name: openshift-kube-scheduler
-  resourceVersion: "3830"
+  resourceVersion: "9619"
   uid: b87b1308-5f7d-494e-a2bc-bcaa1d7a7778
 spec:
   finalizers:
