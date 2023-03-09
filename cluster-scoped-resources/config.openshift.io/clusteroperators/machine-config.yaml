@@ -39,7 +39,6 @@ metadata:
         f:conditions: {}
         f:extension:
           .: {}
-          f:lastSyncError: {}
           f:master: {}
           f:worker: {}
         f:relatedObjects: {}
@@ -55,7 +54,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10187"
+  resourceVersion: "10188"
   uid: a2677b7f-e3c9-4360-88a8-42c47852f1d4
 spec: {}
 status:
@@ -64,11 +63,11 @@ status:
     message: Cluster version is 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
     status: "False"
     type: Progressing
-  - lastTransitionTime: "2023-03-09T14:29:23Z"
-    message: 'An error occurred when checking kubelet version skew: kube-apiserver
-      does not yet have a version'
-    reason: KubeletSkewUnchecked
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:29:43Z"
+    message: One or more machine config pools are updating, please see `oc get mcp`
+      for further details
+    reason: PoolUpdating
+    status: "False"
     type: Upgradeable
   - lastTransitionTime: "2023-03-09T14:29:29Z"
     status: "False"
@@ -79,8 +78,6 @@ status:
     status: "True"
     type: Available
   extension:
-    lastSyncError: 'error required pool master is not ready, retrying. Status: (total:
-      1, ready 1, updated: 1, unavailable: 0, degraded: 0)'
     master: 0 (ready 0) out of 1 nodes are updating to latest configuration rendered-master-488a5071a7880577f352cdd858a32b9d
     worker: all 0 nodes are at latest configuration rendered-worker-2e463c75460f403575457174050c6a47
   relatedObjects:
