@@ -98,6 +98,19 @@ metadata:
     manager: cluster-network-operator/operconfig
     operation: Apply
     time: "2023-03-09T14:20:24Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:currentNumberScheduled: {}
+        f:desiredNumberScheduled: {}
+        f:numberUnavailable: {}
+        f:observedGeneration: {}
+        f:updatedNumberScheduled: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:24Z"
   name: network-metrics-daemon
   namespace: openshift-multus
   ownerReferences:
@@ -107,7 +120,7 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "2599"
+  resourceVersion: "2604"
   uid: b9694f0c-0704-4642-ba1c-a72a1e8215fd
 spec:
   revisionHistoryLimit: 10
@@ -204,7 +217,10 @@ spec:
       maxUnavailable: 33%
     type: RollingUpdate
 status:
-  currentNumberScheduled: 0
-  desiredNumberScheduled: 0
+  currentNumberScheduled: 1
+  desiredNumberScheduled: 1
   numberMisscheduled: 0
   numberReady: 0
+  numberUnavailable: 1
+  observedGeneration: 1
+  updatedNumberScheduled: 1
