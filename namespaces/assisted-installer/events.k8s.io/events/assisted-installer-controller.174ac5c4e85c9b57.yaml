@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:14:20Z"
+deprecatedLastTimestamp: "2023-03-09T14:14:20Z"
+deprecatedSource:
+  component: job-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:14:20Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:14:20Z"
+  name: assisted-installer-controller.174ac5c4e85c9b57
+  namespace: assisted-installer
+  resourceVersion: "475"
+  uid: 4d8aa0b7-cd9e-4257-81b0-79073f6338a2
+note: 'Error creating: pods "assisted-installer-controller-" is forbidden: error looking
+  up service account assisted-installer/assisted-installer-controller: serviceaccount
+  "assisted-installer-controller" not found'
+reason: FailedCreate
+regarding:
+  apiVersion: batch/v1
+  kind: Job
+  name: assisted-installer-controller
+  namespace: assisted-installer
+  resourceVersion: "473"
+  uid: f5a4e959-715f-4436-8272-3a0acf078c12
+type: Warning
