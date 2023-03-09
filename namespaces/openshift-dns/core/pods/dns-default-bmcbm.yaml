@@ -191,6 +191,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -203,6 +205,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -218,7 +222,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:31Z"
+    time: "2023-03-09T14:29:13Z"
   name: dns-default-bmcbm
   namespace: openshift-dns
   ownerReferences:
@@ -228,7 +232,7 @@ metadata:
     kind: DaemonSet
     name: dns-default
     uid: 5dcfb4ec-c80c-463b-b4b2-44c23caada97
-  resourceVersion: "5330"
+  resourceVersion: "9207"
   uid: 53f53fd4-d73a-4693-b74f-978bc7aff7f6
 spec:
   affinity:
@@ -393,12 +397,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:31Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:29:10Z"
+    message: 'containers with unready status: [dns]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:31Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:29:10Z"
+    message: 'containers with unready status: [dns]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:11Z"
@@ -410,7 +418,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9b5859648ff4466d9c2dc97ff9bf12044132c11f33d92183d171ca253a6984ee
     lastState: {}
     name: dns
-    ready: true
+    ready: false
     restartCount: 0
     started: true
     state:
