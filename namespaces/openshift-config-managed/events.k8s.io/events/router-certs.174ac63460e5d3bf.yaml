@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:19Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:19Z"
+deprecatedSource:
+  component: certificate_publisher_controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:19Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: ingress-operator
+    operation: Update
+    time: "2023-03-09T14:22:19Z"
+  name: router-certs.174ac63460e5d3bf
+  namespace: openshift-config-managed
+  resourceVersion: "4861"
+  uid: a269821f-fbbd-407b-b356-7dd082f62308
+note: Published router certificates
+reason: PublishedRouterCertificates
+regarding:
+  apiVersion: v1
+  kind: Secret
+  name: router-certs
+  namespace: openshift-config-managed
+  resourceVersion: "4860"
+  uid: 0517307a-9a08-4c0c-99a0-a34435955979
+type: Normal
