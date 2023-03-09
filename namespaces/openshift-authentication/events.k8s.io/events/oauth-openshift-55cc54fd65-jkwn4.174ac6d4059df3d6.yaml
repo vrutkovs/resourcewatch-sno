@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:33:45Z"
+deprecatedLastTimestamp: "2023-03-09T14:33:45Z"
+deprecatedSource:
+  component: controlplane
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:33:45Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:33:45Z"
+  name: oauth-openshift-55cc54fd65-jkwn4.174ac6d4059df3d6
+  namespace: openshift-authentication
+  resourceVersion: "16542"
+  uid: e464ef6e-b112-4d7c-94a4-d39c19bf7266
+note: 'addLogicalPort failed for openshift-authentication/oauth-openshift-55cc54fd65-jkwn4:
+  failed to update SNAT for pods of router: GR_vrutkovs-sno, error: unable to get
+  NAT entries for router &{UUID:828f3f17-9ede-4f5f-abba-e570adde9eac Copp:<nil> Enabled:<nil>
+  ExternalIDs:map[] LoadBalancer:[] LoadBalancerGroup:[] Name:GR_vrutkovs-sno Nat:[]
+  Options:map[] Policies:[] Ports:[] StaticRoutes:[]}: object not found'
+reason: ErrorUpdatingResource
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: oauth-openshift-55cc54fd65-jkwn4
+  namespace: openshift-authentication
+  resourceVersion: "16528"
+  uid: a3e3549b-7bfb-41f9-bdcf-0dec52865318
+type: Warning
