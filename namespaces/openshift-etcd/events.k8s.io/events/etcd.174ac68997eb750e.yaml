@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:28:25Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:25Z"
+deprecatedSource:
+  component: endpoint-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:25Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:28:25Z"
+  name: etcd.174ac68997eb750e
+  namespace: openshift-etcd
+  resourceVersion: "7973"
+  uid: 157b8f89-4f00-4b42-9cf0-cdf698c930d8
+note: 'Failed to update endpoint openshift-etcd/etcd: Operation cannot be fulfilled
+  on endpoints "etcd": the object has been modified; please apply your changes to
+  the latest version and try again'
+reason: FailedToUpdateEndpoint
+regarding:
+  apiVersion: v1
+  kind: Endpoints
+  name: etcd
+  namespace: openshift-etcd
+  resourceVersion: "796"
+  uid: 3ed55d91-5e70-425b-8b68-152ce56d9ebb
+type: Warning
