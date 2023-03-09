@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:22Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:22Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:26Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:22:26Z"
+  name: network-check-source-64f9ddb9bc-f4d86.174ac63512abce56
+  namespace: openshift-network-diagnostics
+  resourceVersion: "5134"
+  uid: d1226755-4d54-434e-a457-d475b68cc571
+note: Container image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6f674d54345ba8ce675df69db58531f41a18deac6bcaec530b634cc54a38ab2c"
+  already present on machine
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{check-endpoints}
+  kind: Pod
+  name: network-check-source-64f9ddb9bc-f4d86
+  namespace: openshift-network-diagnostics
+  resourceVersion: "4958"
+  uid: 166eef67-e958-43da-aa04-fad994e58b58
+type: Normal
