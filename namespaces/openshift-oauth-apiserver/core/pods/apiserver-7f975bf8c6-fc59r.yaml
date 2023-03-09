@@ -302,6 +302,7 @@ metadata:
         f:containerStatuses: {}
         f:hostIP: {}
         f:initContainerStatuses: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -312,7 +313,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:25:02Z"
+    time: "2023-03-09T14:25:03Z"
   name: apiserver-7f975bf8c6-fc59r
   namespace: openshift-oauth-apiserver
   ownerReferences:
@@ -322,7 +323,7 @@ metadata:
     kind: ReplicaSet
     name: apiserver-7f975bf8c6
     uid: b7001c83-c153-495e-9c27-b54d5e5a0c46
-  resourceVersion: "7422"
+  resourceVersion: "7432"
   uid: 12b283d0-81f3-4ae5-a5f7-9a42e72a57aa
 spec:
   affinity:
@@ -562,16 +563,17 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:5a2b43418ecaae507b49eede5bd621226eb19cc148792870139c8c28402fec71
-    imageID: ""
+  - containerID: cri-o://e850167c265183a969fcb76bfd5c049b0e26090ae0ba2cdf5fe6bf46bf795200
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:5a2b43418ecaae507b49eede5bd621226eb19cc148792870139c8c28402fec71
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:5a2b43418ecaae507b49eede5bd621226eb19cc148792870139c8c28402fec71
     lastState: {}
     name: oauth-apiserver
     ready: false
     restartCount: 0
     started: false
     state:
-      waiting:
-        reason: PodInitializing
+      running:
+        startedAt: "2023-03-09T14:25:02Z"
   hostIP: 10.0.130.93
   initContainerStatuses:
   - containerID: cri-o://2d5e1583c21a0342f2b0400a9f398bf344258166fce6334b86dc512b0e787365
@@ -588,7 +590,7 @@ status:
         finishedAt: "2023-03-09T14:25:01Z"
         reason: Completed
         startedAt: "2023-03-09T14:25:01Z"
-  phase: Pending
+  phase: Running
   podIP: 10.128.0.41
   podIPs:
   - ip: 10.128.0.41
