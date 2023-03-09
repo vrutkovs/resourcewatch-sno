@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:20:25Z"
+deprecatedLastTimestamp: "2023-03-09T14:20:25Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:25Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:20:25Z"
+  name: multus-additional-cni-plugins-tfc7q.174ac619f005c113
+  namespace: openshift-multus
+  resourceVersion: "2630"
+  uid: e69763b2-f5d9-4023-839b-babab0cd99f3
+note: Started container egress-router-binary-copy
+reason: Started
+regarding:
+  apiVersion: v1
+  fieldPath: spec.initContainers{egress-router-binary-copy}
+  kind: Pod
+  name: multus-additional-cni-plugins-tfc7q
+  namespace: openshift-multus
+  resourceVersion: "2581"
+  uid: c744a2d1-8bd9-4403-8cb9-bed2ff64ddff
+type: Normal
