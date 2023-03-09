@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  creationTimestamp: "2023-03-09T14:32:25Z"
-  name: jboss-datagrid73-openshift
-  namespace: openshift-cluster-samples-operator
-  resourceVersion: "15092"
-  uid: 3b67a10f-bc5c-46db-a722-c2dc8ffd03b2
