@@ -197,11 +197,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:15:01Z"
+    time: "2023-03-09T14:20:01Z"
   name: authentication-operator
   namespace: openshift-authentication-operator
   ownerReferences:
@@ -210,7 +212,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "2410"
+  resourceVersion: "2411"
   uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
 spec:
   progressDeadlineSeconds: 600
@@ -337,15 +339,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:15:01Z"
     lastUpdateTime: "2023-03-09T14:15:01Z"
-    message: Created new replica set "authentication-operator-5d5d777b7f"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-09T14:15:01Z"
-    lastUpdateTime: "2023-03-09T14:15:01Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-09T14:15:01Z"
+    lastUpdateTime: "2023-03-09T14:20:01Z"
+    message: ReplicaSet "authentication-operator-5d5d777b7f" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
