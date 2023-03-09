@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:28:40Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:40Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:40Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:28:40Z"
+  name: machine-approver-6c6b895bd4-xzs2j.174ac68d1cf98a5f
+  namespace: openshift-cluster-machine-approver
+  resourceVersion: "8251"
+  uid: 2e69cf49-f3cf-4f1f-b576-df91e31f5429
+note: Pulling image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:df80aa07467d1c6f59a39f3c00e00e130a6b25308b1419264565ca7cd8a76407"
+reason: Pulling
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{machine-approver-controller}
+  kind: Pod
+  name: machine-approver-6c6b895bd4-xzs2j
+  namespace: openshift-cluster-machine-approver
+  resourceVersion: "8233"
+  uid: 8a5f7f73-b903-47bb-b429-248a6cbac921
+type: Normal
