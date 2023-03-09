@@ -1,0 +1,43 @@
+apiVersion: v1
+data:
+  allowlist.conf: |-
+    ^net.ipv4.conf.IFNAME.accept_redirects$
+    ^net.ipv4.conf.IFNAME.accept_source_route$
+    ^net.ipv4.conf.IFNAME.arp_accept$
+    ^net.ipv4.conf.IFNAME.arp_notify$
+    ^net.ipv4.conf.IFNAME.disable_policy$
+    ^net.ipv4.conf.IFNAME.secure_redirects$
+    ^net.ipv4.conf.IFNAME.send_redirects$
+    ^net.ipv6.conf.IFNAME.accept_ra$
+    ^net.ipv6.conf.IFNAME.accept_redirects$
+    ^net.ipv6.conf.IFNAME.accept_source_route$
+    ^net.ipv6.conf.IFNAME.arp_accept$
+    ^net.ipv6.conf.IFNAME.arp_notify$
+    ^net.ipv6.neigh.IFNAME.base_reachable_time_ms$
+    ^net.ipv6.neigh.IFNAME.retrans_time_ms$
+kind: ConfigMap
+metadata:
+  annotations:
+    kubernetes.io/description: |
+      Sysctl allowlist for nodes.
+    release.openshift.io/version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+  creationTimestamp: "2023-03-09T14:20:22Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:allowlist.conf: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubernetes.io/description: {}
+          f:release.openshift.io/version: {}
+    manager: cluster-network-operator
+    operation: Update
+    time: "2023-03-09T14:20:22Z"
+  name: cni-sysctl-allowlist
+  namespace: openshift-multus
+  resourceVersion: "2559"
+  uid: 0a157513-7016-4beb-93bc-bd5b4fb0271a
