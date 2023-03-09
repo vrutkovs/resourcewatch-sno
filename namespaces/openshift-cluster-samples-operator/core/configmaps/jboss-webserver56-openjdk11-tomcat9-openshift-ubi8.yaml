@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:25Z"
+  name: jboss-webserver56-openjdk11-tomcat9-openshift-ubi8
+  namespace: openshift-cluster-samples-operator
+  resourceVersion: "15103"
+  uid: e645c86b-3fb9-45a3-b0f0-a1d3038ef1f6
