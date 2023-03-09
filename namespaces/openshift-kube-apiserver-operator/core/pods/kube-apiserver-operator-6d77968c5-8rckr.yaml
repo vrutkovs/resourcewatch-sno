@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.51/23"],"mac_address":"0a:58:0a:80:00:33","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.51/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.51"
+          ],
+          "mac": "0a:58:0a:80:00:33",
+          "default": true,
+          "dns": {}
+      }]
   creationTimestamp: "2023-03-09T14:28:51Z"
   generateName: kube-apiserver-operator-6d77968c5-
   labels:
@@ -181,6 +192,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-09T14:28:51Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:52Z"
   name: kube-apiserver-operator-6d77968c5-8rckr
   namespace: openshift-kube-apiserver-operator
   ownerReferences:
@@ -190,7 +211,7 @@ metadata:
     kind: ReplicaSet
     name: kube-apiserver-operator-6d77968c5
     uid: 3cf064f7-aa35-4adc-ade7-1b426ed490b9
-  resourceVersion: "8460"
+  resourceVersion: "8494"
   uid: c46105cd-3ca0-40d7-accb-d09ed5679fe8
 spec:
   automountServiceAccountToken: false
