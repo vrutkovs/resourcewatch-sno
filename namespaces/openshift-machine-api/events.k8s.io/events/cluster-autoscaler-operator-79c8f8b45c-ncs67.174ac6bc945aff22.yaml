@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:04Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:04Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:06Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:06Z"
+  name: cluster-autoscaler-operator-79c8f8b45c-ncs67.174ac6bc945aff22
+  namespace: openshift-machine-api
+  resourceVersion: "14167"
+  uid: cb03e5a3-1009-4773-a804-cd1c32985e3c
+note: 'MountVolume.SetUp failed for volume "cert" : failed to sync secret cache: timed
+  out waiting for the condition'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: cluster-autoscaler-operator-79c8f8b45c-ncs67
+  namespace: openshift-machine-api
+  resourceVersion: "8595"
+  uid: 45789d7d-44e4-4ed4-be30-6bbd8d5edaaa
+type: Warning
