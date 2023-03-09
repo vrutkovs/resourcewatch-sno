@@ -51,14 +51,14 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "9072"
+  resourceVersion: "9073"
   uid: f9027f2b-91b7-48e8-972b-4c1557f470e4
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:29:11Z"
-    message: Operator is initializing
-    reason: Initializing
+    message: 'Progressing towards operator: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest'
+    reason: SyncingResources
     status: "True"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:29:11Z"
@@ -70,6 +70,9 @@ status:
     reason: Initializing
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-09T14:29:11Z"
+    status: "True"
+    type: Upgradeable
   extension: null
   relatedObjects:
   - group: ""
