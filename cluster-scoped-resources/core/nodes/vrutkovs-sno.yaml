@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Node
 metadata:
   annotations:
+    k8s.ovn.org/host-addresses: '["10.0.130.93"]'
     k8s.ovn.org/l3-gateway-config: '{"default":{"mode":"shared","interface-id":"br-ex_vrutkovs-sno","mac-address":"50:6b:8d:8b:c4:49","ip-addresses":["10.0.130.93/24"],"ip-address":"10.0.130.93/24","next-hops":["10.0.130.1"],"next-hop":"10.0.130.1","node-port-enable":"true","vlan-id":"0"}}'
     k8s.ovn.org/node-chassis-id: c24afddb-69b2-4f3b-b6d7-aadb539173a2
     k8s.ovn.org/node-gateway-router-lrp-ifaddr: '{"ipv4":"100.64.0.2/16"}'
@@ -66,6 +67,7 @@ metadata:
     fieldsV1:
       f:metadata:
         f:annotations:
+          f:k8s.ovn.org/host-addresses: {}
           f:k8s.ovn.org/l3-gateway-config: {}
           f:k8s.ovn.org/node-chassis-id: {}
           f:k8s.ovn.org/node-gateway-router-lrp-ifaddr: {}
@@ -74,9 +76,9 @@ metadata:
           f:k8s.ovn.org/node-subnets: {}
     manager: vrutkovs-sno
     operation: Update
-    time: "2023-03-09T14:21:44Z"
+    time: "2023-03-09T14:21:45Z"
   name: vrutkovs-sno
-  resourceVersion: "3083"
+  resourceVersion: "3087"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
 spec:
   taints:
