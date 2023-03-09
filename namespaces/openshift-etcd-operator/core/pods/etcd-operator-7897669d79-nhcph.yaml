@@ -230,6 +230,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -244,19 +246,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:06Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:07Z"
   name: etcd-operator-7897669d79-nhcph
   namespace: openshift-etcd-operator
   ownerReferences:
@@ -266,7 +256,7 @@ metadata:
     kind: ReplicaSet
     name: etcd-operator-7897669d79
     uid: e176b871-584e-4519-89f0-3385169cda9c
-  resourceVersion: "13885"
+  resourceVersion: "14294"
   uid: 9d9aa1ac-3740-4d62-8c9c-a417c1fd40be
 spec:
   containers:
@@ -411,8 +401,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:23:06Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:23:06Z"
