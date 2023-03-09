@@ -68,14 +68,14 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:24:47Z"
+    time: "2023-03-09T14:24:52Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "7224"
+  resourceVersion: "7317"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -202,12 +202,9 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:18Z"
     status: "False"
     type: InstallerPodNetworkingDegraded
-  - lastTransitionTime: "2023-03-09T14:24:47Z"
-    message: |
-      "assets/kube-controller-manager/namespace-openshift-infra.yaml" (string): Get "https://172.30.0.1:443/api/v1/namespaces/openshift-infra": net/http: TLS handshake timeout - error from a previous attempt: unexpected EOF
-      "assets/kube-controller-manager/svc.yaml" (string): Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager/services/kube-controller-manager": dial tcp 172.30.0.1:443: connect: connection refused
-    reason: SyncError
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:24:52Z"
+    reason: AsExpected
+    status: "False"
     type: KubeControllerManagerStaticResourcesDegraded
   - lastTransitionTime: "2023-03-09T14:22:33Z"
     status: "True"
