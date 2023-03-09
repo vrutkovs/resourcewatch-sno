@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"openshift-kube-scheduler-operator-7cc5d8f59f-r7c2z_2997e120-2038-45ee-863f-64492c8b783d","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:23:15Z","renewTime":"2023-03-09T14:32:39Z","leaderTransitions":1}'
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"openshift-kube-scheduler-operator-7cc5d8f59f-r7c2z_2997e120-2038-45ee-863f-64492c8b783d","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:23:15Z","renewTime":"2023-03-09T14:33:39Z","leaderTransitions":1}'
   creationTimestamp: "2023-03-09T14:21:59Z"
   managedFields:
   - apiVersion: v1
@@ -14,8 +14,8 @@ metadata:
           f:control-plane.alpha.kubernetes.io/leader: {}
     manager: cluster-kube-scheduler-operator
     operation: Update
-    time: "2023-03-09T14:32:39Z"
+    time: "2023-03-09T14:33:39Z"
   name: openshift-cluster-kube-scheduler-operator-lock
   namespace: openshift-kube-scheduler-operator
-  resourceVersion: "15589"
+  resourceVersion: "16457"
   uid: bff6dd85-8d61-411b-9f61-3c9e511cef2e
