@@ -33,6 +33,16 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:14:35Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:versions: {}
+    manager: Go-http-client
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:21:59Z"
   name: kube-storage-version-migrator
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -40,10 +50,27 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "652"
+  resourceVersion: "3345"
   uid: a9cb0768-73a3-4312-8d2e-bf9cd2e9860c
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:21:59Z"
+    reason: NoData
+    status: Unknown
+    type: Degraded
+  - lastTransitionTime: "2023-03-09T14:21:59Z"
+    reason: NoData
+    status: Unknown
+    type: Progressing
+  - lastTransitionTime: "2023-03-09T14:21:59Z"
+    reason: NoData
+    status: Unknown
+    type: Available
+  - lastTransitionTime: "2023-03-09T14:21:59Z"
+    reason: NoData
+    status: Unknown
+    type: Upgradeable
   extension: null
   relatedObjects:
   - group: operator.openshift.io
@@ -58,3 +85,6 @@ status:
   - group: ""
     name: openshift-kube-storage-version-migrator-operator
     resource: namespaces
+  versions:
+  - name: operator
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
