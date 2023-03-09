@@ -88,14 +88,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:20Z"
+    time: "2023-03-09T14:22:23Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4889"
+  resourceVersion: "5045"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -185,9 +185,10 @@ status:
     reason: ResourceNotFound
     status: "False"
     type: OAuthServerServiceEndpointAccessibleControllerAvailable
-  - lastTransitionTime: "2023-03-09T14:22:01Z"
-    reason: AsExpected
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:22:20Z"
+    message: configmap "v4-0-config-system-service-ca" not found
+    reason: SyncError
+    status: "True"
     type: OAuthServerServiceEndpointAccessibleControllerDegraded
   - lastTransitionTime: "2023-03-09T14:22:01Z"
     message: 'Unable to get oauth server service: service "oauth-openshift" not found'
