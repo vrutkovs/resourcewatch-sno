@@ -46,7 +46,7 @@ metadata:
     manager: csi-snapshot-controller-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:22Z"
+    time: "2023-03-09T14:24:46Z"
   name: csi-snapshot-controller
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -54,7 +54,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4995"
+  resourceVersion: "7203"
   uid: e0331be3-eea0-4389-ad97-427d46033c20
 spec: {}
 status:
