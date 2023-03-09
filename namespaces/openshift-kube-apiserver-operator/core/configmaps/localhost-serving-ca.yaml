@@ -1,0 +1,46 @@
+apiVersion: v1
+data:
+  ca-bundle.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIDQDCCAiigAwIBAgIIP98l+SDqxdEwDQYJKoZIhvcNAQELBQAwPjESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+    c2lnbmVyMB4XDTIzMDMwOTE0MTAxNloXDTMzMDMwNjE0MTAxNlowPjESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+    c2lnbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6bBAPMRw9zHl
+    CvTa8NwNT8v5TGQXEZiOXKy0R8c2HM54EMtYMwYC1kjsAizyrirMZfRB4c9WTuEp
+    gNwJQKTllBs6G1ZnEbSx4SMwtBNe91L39/FXaygLrbirKvnh7D5yOOdbp5P2vOd+
+    HgiNVR0igkL4TW4Zx1S4rRhLhnvBOTjs0M18OLUJCi0bnmj4THRAi5u/29QDTQhL
+    dXTKgSJ4igy3j21N1j36zWldX6QfjZVWycbBNrZtC7pzJCL5OVelJM0e16Hy33ck
+    d+Nw2hWAWhu/68urKNDXB9ZKBI4LBbhzNGq4ClaMgL+3GyS+6IYAoc0sa03CLgUw
+    zUUVUfhhxQIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/BAUwAwEB
+    /zAdBgNVHQ4EFgQU99fX4oC3DkPafLj71Mn+bmavA2wwDQYJKoZIhvcNAQELBQAD
+    ggEBALES6X4nmeoLpKNhvHYU+ILs0qV6gFzAu2ElreiLb6mYHLX72XMNy6bo8iLB
+    DgjkDUoucOC/ofJtKfMuUcRqukE3Aql0hXxBi5dZqId2nVTRywww4mpbcH0rtWNl
+    TNxj/TOtpAuAJMNmwa4ODbll9fjioOJcXez7YiSkwDmrFzKr5SQNZYYIcyKNTFax
+    Lcdc6vf8JMwtxKLnDbURUFQuIG0eMqCGSd6PbuLx37D9W+k3SzTEr27/gxIEtlf5
+    mCtzYN11aL2xtN7zE5aBtIUfaGvNKo21bQxnxDIEXUHztoghuBIdffcGG7rWMzKW
+    dEuNdtWXmlCLXE+riqidXkk6atk=
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:29:03Z"
+  labels:
+    auth.openshift.io/managed-certificate-type: ca-bundle
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:ca-bundle.crt: {}
+      f:metadata:
+        f:labels:
+          .: {}
+          f:auth.openshift.io/managed-certificate-type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:29:03Z"
+  name: localhost-serving-ca
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "8888"
+  uid: 7ef221ec-f18e-406a-9268-3bd693a828e5
