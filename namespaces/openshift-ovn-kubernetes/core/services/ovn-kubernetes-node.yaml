@@ -1,0 +1,76 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    service.beta.openshift.io/serving-cert-secret-name: ovn-node-metrics-cert
+  creationTimestamp: "2023-03-09T14:20:32Z"
+  labels:
+    app: ovnkube-node
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.beta.openshift.io/serving-cert-secret-name: {}
+        f:labels:
+          f:app: {}
+        f:ownerReferences:
+          k:{"uid":"e6519524-ef16-4ee8-82f1-2faa42688032"}: {}
+      f:spec:
+        f:clusterIP: {}
+        f:ports:
+          k:{"port":9103,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+          k:{"port":9105,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:publishNotReadyAddresses: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-03-09T14:20:32Z"
+  name: ovn-kubernetes-node
+  namespace: openshift-ovn-kubernetes
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: e6519524-ef16-4ee8-82f1-2faa42688032
+  resourceVersion: "2731"
+  uid: d5fa4451-3b5b-4212-b443-c0d1302203a9
+spec:
+  clusterIP: None
+  clusterIPs:
+  - None
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: metrics
+    port: 9103
+    protocol: TCP
+    targetPort: 9103
+  - name: ovn-metrics
+    port: 9105
+    protocol: TCP
+    targetPort: 9105
+  publishNotReadyAddresses: true
+  selector:
+    app: ovnkube-node
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
