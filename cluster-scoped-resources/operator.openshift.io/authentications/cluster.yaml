@@ -92,14 +92,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:27:12Z"
+    time: "2023-03-09T14:28:25Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "7700"
+  resourceVersion: "7991"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -175,8 +175,10 @@ status:
     status: "True"
     type: UnsupportedConfigOverridesUpgradeable
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: PreconditionNotReady
-    reason: PreconditionNotReady
+    message: |-
+      "oauth.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+      "user.openshift.io.v1" is not ready: an attempt failed with statusCode = 404, err = the server could not find the requested resource
+    reason: Error
     status: "False"
     type: APIServicesAvailable
   - lastTransitionTime: "2023-03-09T14:22:00Z"
