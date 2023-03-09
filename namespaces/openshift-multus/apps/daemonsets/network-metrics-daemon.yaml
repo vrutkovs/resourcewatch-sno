@@ -104,14 +104,14 @@ metadata:
       f:status:
         f:currentNumberScheduled: {}
         f:desiredNumberScheduled: {}
-        f:numberAvailable: {}
         f:numberReady: {}
+        f:numberUnavailable: {}
         f:observedGeneration: {}
         f:updatedNumberScheduled: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:34Z"
+    time: "2023-03-09T14:32:02Z"
   name: network-metrics-daemon
   namespace: openshift-multus
   ownerReferences:
@@ -121,7 +121,7 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "5502"
+  resourceVersion: "13872"
   uid: b9694f0c-0704-4642-ba1c-a72a1e8215fd
 spec:
   revisionHistoryLimit: 10
@@ -220,8 +220,8 @@ spec:
 status:
   currentNumberScheduled: 1
   desiredNumberScheduled: 1
-  numberAvailable: 1
   numberMisscheduled: 0
-  numberReady: 1
+  numberReady: 0
+  numberUnavailable: 1
   observedGeneration: 1
   updatedNumberScheduled: 1
