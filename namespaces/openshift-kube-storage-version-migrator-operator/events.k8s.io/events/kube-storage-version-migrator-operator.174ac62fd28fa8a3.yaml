@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:21:59Z"
+deprecatedLastTimestamp: "2023-03-09T14:21:59Z"
+deprecatedSource:
+  component: openshift-kube-storage-version-migrator-operator-status-controller-statussyncer_kube-storage-version-migrator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
+  name: kube-storage-version-migrator-operator.174ac62fd28fa8a3
+  namespace: openshift-kube-storage-version-migrator-operator
+  resourceVersion: "3574"
+  uid: cd8a6cc2-a0ee-4eee-9d41-22f821233e46
+note: 'Status for clusteroperator/kube-storage-version-migrator changed: Progressing
+  changed from Unknown to True ("KubeStorageVersionMigratorProgressing: Waiting for
+  Deployment to act on changes"),Available changed from Unknown to False ("KubeStorageVersionMigratorAvailable:
+  Waiting for Deployment")'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-storage-version-migrator-operator
+  namespace: openshift-kube-storage-version-migrator-operator
+  uid: e175c73d-fd16-4746-ae1b-5ca4d30312d9
+type: Normal
