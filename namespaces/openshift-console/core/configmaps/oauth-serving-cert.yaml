@@ -1,0 +1,62 @@
+apiVersion: v1
+data:
+  ca-bundle.crt: |2
+
+    -----BEGIN CERTIFICATE-----
+    MIIDYzCCAkugAwIBAgIIFn129riQe1AwDQYJKoZIhvcNAQELBQAwJjEkMCIGA1UE
+    AwwbaW5ncmVzcy1vcGVyYXRvckAxNjc4MzcxNzM4MB4XDTIzMDMwOTE0MjIxOFoX
+    DTI1MDMwODE0MjIxOVowITEfMB0GA1UEAwwWKi5hcHBzLm9jcC5jaG9vbWJhLm9u
+    ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKho4pc9s84aTlczMHWl
+    uFkOFqJCQUGAdzIt2+wL/BXfGPyNVSWODXi3RtdENdTjRTrYf5rMIfzKEywXO3Pd
+    ilXE9Uo6HsDt4QoBLbW2PQ5V58wYsV+vEFyUsoFmQGAGPtgIpPKuMFnPc9AL6QIt
+    ktipu9EoFyE53RGfdNmUeiOK/v3FqkakPdUhcVbc5ui5hjeRuLYg+O3jcp1esnVu
+    C5o7OHGq03xlTlNpC1jghWNQsWWQ1WiquIwtlzw1ZqIOL6QyCvRRolFCQKU125v4
+    A+i5FCcVUQs1jQS4UTCZWvr015tkysx3PEsSbbcN8sFkcqIT4WIZQJwUfgg9Da+8
+    TX0CAwEAAaOBmTCBljAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUH
+    AwEwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQU0a8UNWtT4Jes+BAt6azJQChrqGgw
+    HwYDVR0jBBgwFoAUMCZehODH8IWU5aJqgUj0UHmtoI4wIQYDVR0RBBowGIIWKi5h
+    cHBzLm9jcC5jaG9vbWJhLm9uZTANBgkqhkiG9w0BAQsFAAOCAQEA36loqf5ZKcSH
+    v35I/fKQhIkGq2b1u7RmeswUSZDl1TkIv24+nqOUUKjopnsVSLDmktAdLl2Z5SNf
+    w4fjUQXaEWjADRd1iw3Kk/5AeFHFNnNfYnh3jcdDxUFBm6aIO/vCgdsottV7iw+G
+    0XA+qaI6bCt/vnK/wkOpEy8kNsovucXCBG3qupQT+jykhoWfGVOL7VCAy/o09j9m
+    uJKCn35RRySjXlehom8lT3O3iEt8oWsdyWwDesyvyIwQt3WfSH8Ju9joAPDsP7VF
+    7ExuVSm20TLYJgG8t8j5Abity3ZZ77cxb9H6f7CrNJLLZSrvN2yBbyc6ehUknido
+    g0QA3BSTaA==
+    -----END CERTIFICATE-----
+
+    -----BEGIN CERTIFICATE-----
+    MIIDDDCCAfSgAwIBAgIBATANBgkqhkiG9w0BAQsFADAmMSQwIgYDVQQDDBtpbmdy
+    ZXNzLW9wZXJhdG9yQDE2NzgzNzE3MzgwHhcNMjMwMzA5MTQyMjE3WhcNMjUwMzA4
+    MTQyMjE4WjAmMSQwIgYDVQQDDBtpbmdyZXNzLW9wZXJhdG9yQDE2NzgzNzE3Mzgw
+    ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDogmcWbgUKg5gSL5fgJ3ZR
+    9cLnZmz8q3gw5HPpH/cFRriKXNuk894Z+jyrhSOO2ZNdQgH9EQoaOgL7ov5iwW1J
+    DRkpR2u6Qo/Kf18wpl5Z6VZQi7INNuh8ANOQaM+c/UpkLT9THsb+NNz1yNPwSPQ5
+    mP5wYI9iHyTZxWgOx9EMhRv65Tabqt6sHCnOl9zXlMBjHJBk50YaxfQSwGOLdP67
+    g/cYhLBEfggqPXCCjXtWjsd3R+vq3AGeeFnZTLFGAQZtc7ePnV5XKi9CAGit2uMk
+    nIyTug2MauWihHOdENsPDqn9yEzlR5vwlWRA1w2UlhlejMU+WvL3GtsRjJ7+AEh9
+    AgMBAAGjRTBDMA4GA1UdDwEB/wQEAwICpDASBgNVHRMBAf8ECDAGAQH/AgEAMB0G
+    A1UdDgQWBBQwJl6E4MfwhZTlomqBSPRQea2gjjANBgkqhkiG9w0BAQsFAAOCAQEA
+    4zqjJcoIZHIiE2E1lZWQ61k1em6BHqnoN/OIHz0zovf6l4fComwitZoOOWN1jm5L
+    0MQsSIuQWvLilZRrMGN5frvQPH2gc8VnWbM44S5gvpfawkZzrRMFVnXYsTJJ7pp1
+    eu8vsTqBBgTyXsC2rvVNu17vaIwovD9AzQyYb4Whp2rMkc3xENiedQMkP/GZlFHP
+    u3pHCP5s7vM+XnLLx2wmR9s0q/7qwJmz4KSJ55G6HUCssijI631VgPGUS7YMIvWH
+    k+n2Oyip4zA3N0zBr1O3Bj4IzAiJB7fRu110GekS+FvNXnB6I/xZm8ApyFjgj5+e
+    K0TtS1y8ZfLEMCetfySD0g==
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:12Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:ca-bundle.crt: {}
+    manager: console
+    operation: Update
+    time: "2023-03-09T14:32:12Z"
+  name: oauth-serving-cert
+  namespace: openshift-console
+  resourceVersion: "14771"
+  uid: 1746a8d5-cd6e-4a84-8e0d-282f83086bfd
