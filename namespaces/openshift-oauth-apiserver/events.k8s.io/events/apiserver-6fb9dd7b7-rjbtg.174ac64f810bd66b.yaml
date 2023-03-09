@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:24:15Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:15Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:24:53Z"
+  name: apiserver-6fb9dd7b7-rjbtg.174ac64f810bd66b
+  namespace: openshift-oauth-apiserver
+  resourceVersion: "7324"
+  uid: a860721e-40a4-49ef-8af9-1a7a3d128282
+note: 'Unable to attach or mount volumes: unmounted volumes=[audit-policies], unattached
+  volumes=[audit-policies etcd-client etcd-serving-ca trusted-ca-bundle serving-cert
+  encryption-config audit-dir kube-api-access-5wgcn]: timed out waiting for the condition'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: apiserver-6fb9dd7b7-rjbtg
+  namespace: openshift-oauth-apiserver
+  resourceVersion: "4548"
+  uid: 55a83382-2c01-473e-b952-0d3de004e919
+type: Warning
