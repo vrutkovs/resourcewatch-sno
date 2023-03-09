@@ -1,0 +1,76 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:27:15Z"
+deprecatedLastTimestamp: "2023-03-09T14:27:15Z"
+deprecatedSource:
+  component: openshift-apiserver-operator-status-controller-statussyncer_openshift-apiserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:27:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:27:15Z"
+  name: openshift-apiserver-operator.174ac6795c5dc535
+  namespace: openshift-apiserver-operator
+  resourceVersion: "7738"
+  uid: 02ac26f2-8549-4493-aa58-55822751a58a
+note: 'Status for clusteroperator/openshift-apiserver changed: Degraded message changed
+  from "APIServerStaticResourcesDegraded: \"v3.11.0/openshift-apiserver/ns.yaml\"
+  (string): namespaces \"openshift-apiserver\" is forbidden: User \"system:serviceaccount:openshift-apiserver-operator:openshift-apiserver-operator\"
+  cannot get resource \"namespaces\" in API group \"\" in the namespace \"openshift-apiserver\":
+  RBAC: [clusterrole.rbac.authorization.k8s.io \"basic-user\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:openshift:public-info-viewer\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:build-strategy-source\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:scope-impersonation\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:service-account-issuer-discovery\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:build-strategy-docker\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:webhook\" not found, clusterrole.rbac.authorization.k8s.io \"cluster-status\"
+  not found, clusterrole.rbac.authorization.k8s.io \"self-access-reviewer\" not found,
+  clusterrole.rbac.authorization.k8s.io \"system:openshift:scc:restricted-v2\" not
+  found, clusterrole.rbac.authorization.k8s.io \"system:public-info-viewer\" not found,
+  clusterrole.rbac.authorization.k8s.io \"system:openshift:discovery\" not found,
+  clusterrole.rbac.authorization.k8s.io \"system:discovery\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:basic-user\" not found, clusterrole.rbac.authorization.k8s.io \"system:oauth-token-deleter\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:build-strategy-jenkinspipeline\"
+  not found, clusterrole.rbac.authorization.k8s.io \"cluster-admin\" not found]\nAPIServerStaticResourcesDegraded:
+  \"v3.11.0/openshift-apiserver/apiserver-clusterrolebinding.yaml\" (string): clusterrolebindings.rbac.authorization.k8s.io
+  \"system:openshift:openshift-apiserver\" is forbidden: User \"system:serviceaccount:openshift-apiserver-operator:openshift-apiserver-operator\"
+  cannot get resource \"clusterrolebindings\" in API group \"rbac.authorization.k8s.io\"
+  at the cluster scope: RBAC: [clusterrole.rbac.authorization.k8s.io \"system:basic-user\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:oauth-token-deleter\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:build-strategy-jenkinspipeline\"
+  not found, clusterrole.rbac.authorization.k8s.io \"cluster-admin\" not found, clusterrole.rbac.authorization.k8s.io
+  \"basic-user\" not found, clusterrole.rbac.authorization.k8s.io \"system:openshift:public-info-viewer\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:build-strategy-source\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:scope-impersonation\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:service-account-issuer-discovery\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:webhook\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:build-strategy-docker\" not found, clusterrole.rbac.authorization.k8s.io
+  \"cluster-status\" not found, clusterrole.rbac.authorization.k8s.io \"self-access-reviewer\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:openshift:scc:restricted-v2\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:openshift:discovery\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:public-info-viewer\" not
+  found, clusterrole.rbac.authorization.k8s.io \"system:discovery\" not found]\nAPIServerStaticResourcesDegraded:
+  " to "All is well"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-apiserver-operator
+  namespace: openshift-apiserver-operator
+  uid: a2161746-31b9-4c81-9d80-ec57dac3c48f
+type: Normal
