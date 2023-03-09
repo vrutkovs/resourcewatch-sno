@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:15Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:15Z"
+deprecatedSource:
+  component: oauth-apiserver-revisioncontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:22:15Z"
+  name: authentication-operator.174ac63371423c50
+  namespace: openshift-authentication-operator
+  resourceVersion: "4681"
+  uid: f09c3462-bb78-4d14-bce5-443cbfd819ff
+note: 'Failed to create revision 1: namespaces "openshift-oauth-apiserver" not found'
+reason: RevisionCreateFailed
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
+type: Warning
