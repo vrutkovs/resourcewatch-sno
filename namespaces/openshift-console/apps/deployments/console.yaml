@@ -249,13 +249,14 @@ metadata:
         f:observedGeneration: {}
         f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
     time: "2023-03-09T14:32:41Z"
   name: console
   namespace: openshift-console
-  resourceVersion: "15696"
+  resourceVersion: "15700"
   uid: 8cf32543-ad95-4aa3-8d4f-21c433364acd
 spec:
   progressDeadlineSeconds: 600
@@ -417,10 +418,11 @@ status:
     type: Available
   - lastTransitionTime: "2023-03-09T14:32:32Z"
     lastUpdateTime: "2023-03-09T14:32:41Z"
-    message: Created new replica set "console-644696f6c4"
-    reason: NewReplicaSetCreated
+    message: ReplicaSet "console-644696f6c4" is progressing.
+    reason: ReplicaSetUpdated
     status: "True"
     type: Progressing
   observedGeneration: 2
-  replicas: 1
+  replicas: 2
   unavailableReplicas: 2
+  updatedReplicas: 1
