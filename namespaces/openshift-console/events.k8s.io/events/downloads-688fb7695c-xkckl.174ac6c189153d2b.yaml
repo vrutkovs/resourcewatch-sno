@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:25Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:25Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:25Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:25Z"
+  name: downloads-688fb7695c-xkckl.174ac6c189153d2b
+  namespace: openshift-console
+  resourceVersion: "15088"
+  uid: 11ca0e77-ce28-4d79-807e-0ea76fd9bbd7
+note: Successfully pulled image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6d46f731cbe328e293f88842f97b2dd6bfe8e9a82a1b0cf8cfc63cb2bf33f52c"
+  in 11.7674437s (11.767467768s including waiting)
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{download-server}
+  kind: Pod
+  name: downloads-688fb7695c-xkckl
+  namespace: openshift-console
+  resourceVersion: "14824"
+  uid: 02157f75-7110-43df-87d1-40bcaeaf5461
+type: Normal
