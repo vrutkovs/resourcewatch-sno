@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedSource:
+  component: service-ca-operator-status-controller-statussyncer_service-ca
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
+  name: service-ca-operator.174ac62ffff91e78
+  namespace: openshift-service-ca-operator
+  resourceVersion: "3643"
+  uid: 40d61fc2-827e-4d0e-9379-b842ab6e235c
+note: 'Status for clusteroperator/service-ca changed: Degraded set to Unknown (""),Progressing
+  set to Unknown (""),Available set to Unknown (""),Upgradeable set to Unknown (""),status.relatedObjects
+  changed from [] to [{"operator.openshift.io" "servicecas" "" "cluster"} {"" "namespaces"
+  "" "openshift-config"} {"" "namespaces" "" "openshift-config-managed"} {"" "namespaces"
+  "" "openshift-service-ca-operator"} {"" "namespaces" "" "openshift-service-ca"}]'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: service-ca-operator
+  namespace: openshift-service-ca-operator
+  uid: 4278fbc3-b3a7-4276-bef7-7a9632b54a52
+type: Normal
