@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:29Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:29Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:32Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:22:32Z"
+  name: multus-admission-controller-7c44c4fd4c-fmsb4.174ac636a279cd83
+  namespace: openshift-multus
+  resourceVersion: "5368"
+  uid: f92a0eaf-6845-4c6f-8403-9a743c4c4a52
+note: Started container multus-admission-controller
+reason: Started
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{multus-admission-controller}
+  kind: Pod
+  name: multus-admission-controller-7c44c4fd4c-fmsb4
+  namespace: openshift-multus
+  resourceVersion: "3130"
+  uid: 8ed3c998-db5a-4b2d-8aef-ef8476242060
+type: Normal
