@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:23Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:23Z"
+deprecatedSource:
+  component: multus
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:23Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: multus
+    operation: Update
+    time: "2023-03-09T14:22:23Z"
+  name: cluster-node-tuning-operator-84595cd48f-pmhnw.174ac635568014f9
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "5040"
+  uid: a1234214-223c-4147-9d1c-4527b7bdf3be
+note: Add eth0 [10.128.0.19/23] from ovn-kubernetes
+reason: AddedInterface
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: cluster-node-tuning-operator-84595cd48f-pmhnw
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "3182"
+  uid: 5eb0d1b7-2449-4479-93aa-eda071f39d77
+type: Normal
