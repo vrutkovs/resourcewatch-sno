@@ -4,7 +4,7 @@ metadata:
   annotations:
     networkoperator.openshift.io/ovn-cluster-initiator: 10.0.130.93
   creationTimestamp: "2023-03-09T14:20:15Z"
-  generation: 9
+  generation: 10
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -67,9 +67,9 @@ metadata:
         f:version: {}
     manager: cluster-network-operator
     operation: Update
-    time: "2023-03-09T14:20:24Z"
+    time: "2023-03-09T14:20:26Z"
   name: cluster
-  resourceVersion: "2615"
+  resourceVersion: "2645"
   uid: e6519524-ef16-4ee8-82f1-2faa42688032
 spec:
   clusterNetwork:
@@ -118,9 +118,10 @@ status:
     type: Upgradeable
   - lastTransitionTime: "2023-03-09T14:20:23Z"
     message: |-
+      DaemonSet "/openshift-multus/multus-additional-cni-plugins" is not available (awaiting 1 nodes)
       DaemonSet "/openshift-multus/network-metrics-daemon" is waiting for other operators to become ready
       DaemonSet "/openshift-multus/multus" is not available (awaiting 1 nodes)
-      DaemonSet "/openshift-multus/multus-additional-cni-plugins" is not available (awaiting 1 nodes)
+      Deployment "/openshift-multus/multus-admission-controller" is not yet scheduled on any nodes
     reason: Deploying
     status: "True"
     type: Progressing
