@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 3
+deprecatedCount: 4
 deprecatedFirstTimestamp: "2023-03-09T14:14:55Z"
 deprecatedLastTimestamp: "2023-03-09T14:14:55Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:14:55Z"
   name: network-operator-5556ffc66.174ac5cd192495dc
   namespace: openshift-network-operator
-  resourceVersion: "1314"
+  resourceVersion: "1318"
   uid: d370c6c5-04f7-4b77-a21a-fda125632873
 note: 'Error creating: pods "network-operator-5556ffc66-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
   the cluster does not have any nodes'
