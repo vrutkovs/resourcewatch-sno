@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:21:59Z"
+deprecatedLastTimestamp: "2023-03-09T14:21:59Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-revisioncontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
+  name: openshift-kube-scheduler-operator.174ac62fdb01ea37
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "3411"
+  uid: df57a797-0b02-4386-82d9-50ad5e0239f1
+note: Controller "RevisionController" resync interval is set to 0s which might lead
+  to client request throttling
+reason: FastControllerResync
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 63ed6034-26ff-494c-bb49-f929f1f6a34d
+type: Warning
