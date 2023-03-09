@@ -6,6 +6,9 @@ metadata:
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
     openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c18,c12
+    openshift.io/sa.scc.supplemental-groups: 1000330000/10000
+    openshift.io/sa.scc.uid-range: 1000330000/10000
     workload.openshift.io/allowed: management
   creationTimestamp: "2023-03-09T14:14:41Z"
   labels:
@@ -13,6 +16,17 @@ metadata:
     openshift.io/cluster-monitoring: "true"
     openshift.io/run-level: ""
   managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:14:41Z"
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -42,7 +56,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "950"
+  resourceVersion: "955"
   uid: c7ca4f58-c4c4-4df0-9952-56c4a2051156
 spec:
   finalizers:
