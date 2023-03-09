@@ -1,0 +1,66 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-03-09T14:20:30Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"e6519524-ef16-4ee8-82f1-2faa42688032"}: {}
+      f:spec:
+        f:clusterIP: {}
+        f:ports:
+          k:{"port":9641,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+          k:{"port":9642,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-03-09T14:20:30Z"
+  name: ovnkube-db
+  namespace: openshift-ovn-kubernetes
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: e6519524-ef16-4ee8-82f1-2faa42688032
+  resourceVersion: "2694"
+  uid: 27a2f0da-70a8-425b-9775-db1d449a9981
+spec:
+  clusterIP: None
+  clusterIPs:
+  - None
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: north
+    port: 9641
+    protocol: TCP
+    targetPort: 9641
+  - name: south
+    port: 9642
+    protocol: TCP
+    targetPort: 9642
+  selector:
+    app: ovnkube-master
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
