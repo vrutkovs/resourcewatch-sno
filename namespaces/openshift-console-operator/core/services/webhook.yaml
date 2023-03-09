@@ -6,7 +6,9 @@ metadata:
     include.release.openshift.io/ibm-cloud-managed: "true"
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
     service.beta.openshift.io/serving-cert-secret-name: webhook-serving-cert
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
   creationTimestamp: "2023-03-09T14:32:01Z"
   labels:
     name: console-operator
@@ -44,6 +46,16 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:32:01Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:32:02Z"
   name: webhook
   namespace: openshift-console-operator
   ownerReferences:
@@ -52,7 +64,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "13480"
+  resourceVersion: "13563"
   uid: 25071c98-d676-4ed4-8567-cdda90828232
 spec:
   clusterIP: 172.30.42.138
