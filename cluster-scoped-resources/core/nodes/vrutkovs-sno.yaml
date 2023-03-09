@@ -9,7 +9,10 @@ metadata:
     k8s.ovn.org/node-mgmt-port-mac-address: 82:76:de:b7:45:ab
     k8s.ovn.org/node-primary-ifaddr: '{"ipv4":"10.0.130.93/24"}'
     k8s.ovn.org/node-subnets: '{"default":["10.128.0.0/23"]}'
+    machineconfiguration.openshift.io/currentConfig: rendered-master-b84983722a8f041fcce35c8e28efcb54
+    machineconfiguration.openshift.io/desiredConfig: rendered-master-b84983722a8f041fcce35c8e28efcb54
     machineconfiguration.openshift.io/ssh: accessed
+    machineconfiguration.openshift.io/state: Done
     volumes.kubernetes.io/controller-managed-attach-detach: "true"
   creationTimestamp: "2023-03-09T14:19:59Z"
   labels:
@@ -92,12 +95,15 @@ metadata:
     fieldsV1:
       f:metadata:
         f:annotations:
+          f:machineconfiguration.openshift.io/currentConfig: {}
+          f:machineconfiguration.openshift.io/desiredConfig: {}
           f:machineconfiguration.openshift.io/ssh: {}
+          f:machineconfiguration.openshift.io/state: {}
     manager: machine-config-daemon
     operation: Update
-    time: "2023-03-09T14:22:13Z"
+    time: "2023-03-09T14:22:15Z"
   name: vrutkovs-sno
-  resourceVersion: "4569"
+  resourceVersion: "4661"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
 spec:
   taints:
