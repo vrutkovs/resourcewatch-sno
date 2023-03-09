@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.35/23"],"mac_address":"0a:58:0a:80:00:23","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.35/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:22:38Z"
@@ -157,6 +158,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:22:38Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:22:38Z"
   name: openshift-state-metrics-6546f7bbd5-xhkvp
   namespace: openshift-monitoring
   ownerReferences:
@@ -166,7 +176,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-state-metrics-6546f7bbd5
     uid: 38d47adb-1409-4a44-a470-f9b6c0ff7ba7
-  resourceVersion: "5681"
+  resourceVersion: "5688"
   uid: 38622ac5-a3af-44f2-8e23-f27add10741b
 spec:
   containers:
