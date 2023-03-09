@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:24:37Z"
-deprecatedLastTimestamp: "2023-03-09T14:24:37Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:51Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:24:56Z"
+    time: "2023-03-09T14:25:00Z"
   name: ingress-operator-55684fdfd8-f9svb.174ac6547aeec471
   namespace: openshift-ingress-operator
-  resourceVersion: "7357"
+  resourceVersion: "7411"
   uid: 33376ae7-5541-41c0-99bc-bd00de6f978f
 note: Container image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c85de6de3820e7ef13625ef4ceda1ec350d93fc924138ff8ef7717948f908d73"
   already present on machine
