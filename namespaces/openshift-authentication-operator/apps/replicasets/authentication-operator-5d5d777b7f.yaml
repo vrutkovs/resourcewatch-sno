@@ -1,0 +1,302 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    config.openshift.io/inject-proxy: authentication-operator
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "1"
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-03-09T14:15:01Z"
+  generation: 1
+  labels:
+    app: authentication-operator
+    pod-template-hash: 5d5d777b7f
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:config.openshift.io/inject-proxy: {}
+          f:deployment.kubernetes.io/desired-replicas: {}
+          f:deployment.kubernetes.io/max-replicas: {}
+          f:deployment.kubernetes.io/revision: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"936d3c28-188a-4425-81a5-c7e9e2f6000c"}: {}
+      f:spec:
+        f:replicas: {}
+        f:selector: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:target.workload.openshift.io/management: {}
+            f:labels:
+              .: {}
+              f:app: {}
+              f:pod-template-hash: {}
+            f:name: {}
+          f:spec:
+            f:containers:
+              k:{"name":"authentication-operator"}:
+                .: {}
+                f:args: {}
+                f:command: {}
+                f:env:
+                  .: {}
+                  k:{"name":"IMAGE_OAUTH_APISERVER"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"IMAGE_OAUTH_SERVER"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"OPERAND_OAUTH_SERVER_IMAGE_VERSION"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"OPERATOR_IMAGE_VERSION"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"POD_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:fieldRef: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:livenessProbe:
+                  .: {}
+                  f:failureThreshold: {}
+                  f:httpGet:
+                    .: {}
+                    f:path: {}
+                    f:port: {}
+                    f:scheme: {}
+                  f:initialDelaySeconds: {}
+                  f:periodSeconds: {}
+                  f:successThreshold: {}
+                  f:timeoutSeconds: {}
+                f:name: {}
+                f:resources:
+                  .: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:securityContext:
+                  .: {}
+                  f:readOnlyRootFilesystem: {}
+                  f:runAsUser: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/var/run/configmaps/config"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/var/run/configmaps/service-ca-bundle"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/var/run/configmaps/trusted-ca-bundle"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/var/run/secrets/serving-cert"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+            f:dnsPolicy: {}
+            f:nodeSelector: {}
+            f:priorityClassName: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:tolerations: {}
+            f:volumes:
+              .: {}
+              k:{"name":"config"}:
+                .: {}
+                f:configMap:
+                  .: {}
+                  f:defaultMode: {}
+                  f:name: {}
+                f:name: {}
+              k:{"name":"service-ca-bundle"}:
+                .: {}
+                f:configMap:
+                  .: {}
+                  f:defaultMode: {}
+                  f:name: {}
+                  f:optional: {}
+                f:name: {}
+              k:{"name":"serving-cert"}:
+                .: {}
+                f:name: {}
+                f:secret:
+                  .: {}
+                  f:defaultMode: {}
+                  f:optional: {}
+                  f:secretName: {}
+              k:{"name":"trusted-ca-bundle"}:
+                .: {}
+                f:configMap:
+                  .: {}
+                  f:defaultMode: {}
+                  f:name: {}
+                  f:optional: {}
+                f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:15:01Z"
+  name: authentication-operator-5d5d777b7f
+  namespace: openshift-authentication-operator
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: authentication-operator
+    uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
+  resourceVersion: "1516"
+  uid: 9d663e46-1f08-41c1-94e5-3d0d46f7e93e
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: authentication-operator
+      pod-template-hash: 5d5d777b7f
+  template:
+    metadata:
+      annotations:
+        target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+      creationTimestamp: null
+      labels:
+        app: authentication-operator
+        pod-template-hash: 5d5d777b7f
+      name: authentication-operator
+    spec:
+      containers:
+      - args:
+        - |
+          if [ -s /var/run/configmaps/trusted-ca-bundle/ca-bundle.crt ]; then
+              echo "Copying system trust bundle"
+              cp -f /var/run/configmaps/trusted-ca-bundle/ca-bundle.crt /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+          fi
+          exec authentication-operator operator --config=/var/run/configmaps/config/operator-config.yaml --v=2 --terminate-on-files=/var/run/configmaps/trusted-ca-bundle/ca-bundle.crt --terminate-on-files=/tmp/terminate
+        command:
+        - /bin/bash
+        - -ec
+        env:
+        - name: IMAGE_OAUTH_SERVER
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:15e21cbe2bb0386ae5b03e5029a4e41668d16e52862bbeb297ec6e4aaaa2493f
+        - name: IMAGE_OAUTH_APISERVER
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:5a2b43418ecaae507b49eede5bd621226eb19cc148792870139c8c28402fec71
+        - name: OPERATOR_IMAGE_VERSION
+          value: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+        - name: OPERAND_OAUTH_SERVER_IMAGE_VERSION
+          value: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest_openshift
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:911863c370cd31453bc66d3df7571aa87cdbc21d6c064d53541f3c594a2ea504
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: healthz
+            port: 8443
+            scheme: HTTPS
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: authentication-operator
+        resources:
+          requests:
+            cpu: 20m
+            memory: 200Mi
+        securityContext:
+          readOnlyRootFilesystem: false
+          runAsUser: 0
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+        volumeMounts:
+        - mountPath: /var/run/configmaps/config
+          name: config
+        - mountPath: /var/run/secrets/serving-cert
+          name: serving-cert
+        - mountPath: /var/run/configmaps/trusted-ca-bundle
+          name: trusted-ca-bundle
+          readOnly: true
+        - mountPath: /var/run/configmaps/service-ca-bundle
+          name: service-ca-bundle
+          readOnly: true
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        node-role.kubernetes.io/master: ""
+      priorityClassName: system-cluster-critical
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: authentication-operator
+      serviceAccountName: authentication-operator
+      terminationGracePeriodSeconds: 30
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/master
+        operator: Exists
+      - effect: NoExecute
+        key: node.kubernetes.io/unreachable
+        operator: Exists
+        tolerationSeconds: 120
+      - effect: NoExecute
+        key: node.kubernetes.io/not-ready
+        operator: Exists
+        tolerationSeconds: 120
+      volumes:
+      - configMap:
+          defaultMode: 440
+          name: authentication-operator-config
+        name: config
+      - configMap:
+          defaultMode: 420
+          name: trusted-ca-bundle
+          optional: true
+        name: trusted-ca-bundle
+      - name: serving-cert
+        secret:
+          defaultMode: 420
+          optional: true
+          secretName: serving-cert
+      - configMap:
+          defaultMode: 420
+          name: service-ca-bundle
+          optional: true
+        name: service-ca-bundle
+status:
+  replicas: 0
