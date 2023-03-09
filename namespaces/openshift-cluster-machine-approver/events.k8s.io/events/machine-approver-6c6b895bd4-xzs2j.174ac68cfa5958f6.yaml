@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:28:39Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:39Z"
+deprecatedSource:
+  component: default-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:39Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:28:39Z"
+  name: machine-approver-6c6b895bd4-xzs2j.174ac68cfa5958f6
+  namespace: openshift-cluster-machine-approver
+  resourceVersion: "8235"
+  uid: c8779db3-080e-4a7d-92be-6212efee0bd4
+note: Successfully assigned openshift-cluster-machine-approver/machine-approver-6c6b895bd4-xzs2j
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: machine-approver-6c6b895bd4-xzs2j
+  namespace: openshift-cluster-machine-approver
+  resourceVersion: "8230"
+  uid: 8a5f7f73-b903-47bb-b429-248a6cbac921
+type: Normal
