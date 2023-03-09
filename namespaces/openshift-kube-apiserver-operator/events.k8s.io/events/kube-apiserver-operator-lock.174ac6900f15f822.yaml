@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:28:53Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:53Z"
+deprecatedSource:
+  component: kube-apiserver-operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:28:53Z"
+  name: kube-apiserver-operator-lock.174ac6900f15f822
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "8534"
+  uid: c4856b6a-6e79-4559-a821-744cb77b3a36
+note: kube-apiserver-operator-6d77968c5-8rckr_1aaba359-9ff3-42e9-950c-2fb50d7a4978
+  became leader
+reason: LeaderElection
+regarding:
+  apiVersion: v1
+  kind: ConfigMap
+  name: kube-apiserver-operator-lock
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "8529"
+  uid: bdbf5487-157e-40e4-8458-739812e59d3d
+type: Normal
