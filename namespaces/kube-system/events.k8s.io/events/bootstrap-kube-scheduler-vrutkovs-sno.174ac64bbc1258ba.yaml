@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:23:59Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:59Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:49Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:24:49Z"
+  name: bootstrap-kube-scheduler-vrutkovs-sno.174ac64bbc1258ba
+  namespace: kube-system
+  resourceVersion: "7276"
+  uid: 10132c38-d2cb-47d3-b6ca-78bc050b9d33
+note: Container image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4"
+  already present on machine
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-scheduler}
+  kind: Pod
+  name: bootstrap-kube-scheduler-vrutkovs-sno
+  namespace: kube-system
+  uid: 6f5867e7cd79c22abcfac150232a4c91
+type: Normal
