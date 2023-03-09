@@ -1,0 +1,20 @@
+apiVersion: config.openshift.io/v1
+kind: DNS
+metadata:
+  creationTimestamp: "2023-03-09T14:14:25Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:baseDomain: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:14:25Z"
+  name: cluster
+  resourceVersion: "549"
+  uid: 73190572-ca56-4fc1-bbb3-deec4bba34f4
+spec:
+  baseDomain: ocp.choomba.one
