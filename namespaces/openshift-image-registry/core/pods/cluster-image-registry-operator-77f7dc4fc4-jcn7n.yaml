@@ -137,6 +137,40 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:28:56Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:56Z"
   name: cluster-image-registry-operator-77f7dc4fc4-jcn7n
   namespace: openshift-image-registry
   ownerReferences:
@@ -146,7 +180,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-image-registry-operator-77f7dc4fc4
     uid: 0b33e420-b3fe-4d39-874f-ee40deaced68
-  resourceVersion: "8732"
+  resourceVersion: "8738"
   uid: 81cbee3b-44bb-43cc-8de8-f36011505ee6
 spec:
   containers:
@@ -290,6 +324,35 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:28:56Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:28:56Z"
+    message: 'containers with unready status: [cluster-image-registry-operator]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:28:56Z"
+    message: 'containers with unready status: [cluster-image-registry-operator]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:28:56Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:30419fc4a520a205aae457b512bab0a1a0f51d7e0885413f2e8637d0732b962e
+    imageID: ""
+    lastState: {}
+    name: cluster-image-registry-operator
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.93
   phase: Pending
   qosClass: Burstable
+  startTime: "2023-03-09T14:28:56Z"
