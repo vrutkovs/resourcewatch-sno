@@ -1,0 +1,20 @@
+apiVersion: v1
+data:
+  config.yaml: '{"apiServerArguments":{"audit-log-format":["json"],"audit-log-maxbackup":["10"],"audit-log-maxsize":["100"],"audit-log-path":["/var/log/openshift-apiserver/audit.log"],"audit-policy-file":["/var/run/configmaps/audit/policy.yaml"],"shutdown-delay-duration":["15s"],"shutdown-send-retry-after":["true"]},"apiVersion":"openshiftcontrolplane.config.openshift.io/v1","kind":"OpenShiftAPIServerConfig","projectConfig":{"projectRequestMessage":""},"routingConfig":{"subdomain":"apps.ocp.choomba.one"},"servingInfo":{"bindNetwork":"tcp","cipherSuites":["TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256","TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256","TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384","TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384","TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256","TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"],"minTLSVersion":"VersionTLS12"},"storageConfig":{"urls":["https://10.0.130.93:2379"]}}'
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:23:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:config.yaml: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:23:00Z"
+  name: config
+  namespace: openshift-apiserver
+  resourceVersion: "6177"
+  uid: f34ac4ce-d7b2-4d91-b9a8-497af970bd0e
