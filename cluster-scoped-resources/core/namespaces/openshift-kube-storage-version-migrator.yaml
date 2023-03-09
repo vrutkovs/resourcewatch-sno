@@ -9,6 +9,7 @@ metadata:
   creationTimestamp: "2023-03-09T14:21:59Z"
   labels:
     kubernetes.io/metadata.name: openshift-kube-storage-version-migrator
+    olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: ""
     openshift.io/cluster-monitoring: "true"
   managedFields:
   - apiVersion: v1
@@ -36,8 +37,17 @@ metadata:
     manager: cluster-policy-controller
     operation: Update
     time: "2023-03-09T14:21:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: {}
+    manager: olm
+    operation: Update
+    time: "2023-03-09T14:29:17Z"
   name: openshift-kube-storage-version-migrator
-  resourceVersion: "3356"
+  resourceVersion: "9573"
   uid: cdd9f5cb-afe4-4e13-b7ec-09c62539225d
 spec:
   finalizers:
