@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 5
+deprecatedCount: 6
 deprecatedFirstTimestamp: "2023-03-09T14:24:33Z"
 deprecatedLastTimestamp: "2023-03-09T14:26:54Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:27:03Z"
   name: etcd-operator.174ac6537b6514ea
   namespace: openshift-etcd-operator
-  resourceVersion: "7618"
+  resourceVersion: "7619"
   uid: 2d6ca196-6740-4edc-870e-1feb64b49e43
 note: 'Put "https://172.30.0.1:443/apis/operator.openshift.io/v1/etcds/cluster/status":
   dial tcp 172.30.0.1:443: connect: connection refused'
