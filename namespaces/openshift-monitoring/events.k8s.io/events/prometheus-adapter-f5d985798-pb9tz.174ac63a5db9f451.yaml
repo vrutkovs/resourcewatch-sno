@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:45Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:45Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:47Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:22:47Z"
+  name: prometheus-adapter-f5d985798-pb9tz.174ac63a5db9f451
+  namespace: openshift-monitoring
+  resourceVersion: "5963"
+  uid: 2808c167-fffb-4350-8fcd-c521b0f49de6
+note: Successfully pulled image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:86d474263af96d19f25f530fef4aa2ee8bc02e3c5202c1ecc74841626ded2852"
+  in 3.464669245s (3.464679597s including waiting)
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{prometheus-adapter}
+  kind: Pod
+  name: prometheus-adapter-f5d985798-pb9tz
+  namespace: openshift-monitoring
+  resourceVersion: "5809"
+  uid: 4b3a2d80-8ba4-47c0-8a5d-948e31e9ab57
+type: Normal
