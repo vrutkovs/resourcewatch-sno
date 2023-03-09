@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:25:47Z"
+deprecatedLastTimestamp: "2023-03-09T14:25:47Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:27:11Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:27:11Z"
+  name: bootstrap-kube-controller-manager-vrutkovs-sno.174ac664c1e55ae9
+  namespace: kube-system
+  resourceVersion: "7694"
+  uid: 63ee0d53-2b26-41e3-abbd-834e206eedbe
+note: Back-off restarting failed container kube-controller-manager in pod bootstrap-kube-controller-manager-vrutkovs-sno_kube-system(50e2c0aeaac98cd51b394121844a05b8)
+reason: BackOff
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-controller-manager}
+  kind: Pod
+  name: bootstrap-kube-controller-manager-vrutkovs-sno
+  namespace: kube-system
+  uid: 50e2c0aeaac98cd51b394121844a05b8
+type: Warning
