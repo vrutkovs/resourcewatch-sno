@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   creationTimestamp: "2023-03-09T14:20:15Z"
+  deletionGracePeriodSeconds: 0
+  deletionTimestamp: "2023-03-09T14:20:20Z"
   generateName: mtu-prober-
   labels:
     controller-uid: db7d7933-5153-400a-a756-a012e41bd310
@@ -109,7 +111,7 @@ metadata:
     kind: Job
     name: mtu-prober
     uid: db7d7933-5153-400a-a756-a012e41bd310
-  resourceVersion: "2517"
+  resourceVersion: "2525"
   uid: 921f35b3-628d-4f61-8af9-88f3a1ba4c45
 spec:
   containers:
