@@ -1,0 +1,41 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:33:01.397147Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:33:01Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:33:01Z"
+  name: oauth-openshift-77f4f9844d-b5gpq.174ac6c9da00fc4f
+  namespace: openshift-authentication
+  resourceVersion: "16192"
+  uid: fae2c605-3678-43c6-9801-045993994a3e
+note: Successfully assigned openshift-authentication/oauth-openshift-77f4f9844d-b5gpq
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: oauth-openshift-77f4f9844d-b5gpq
+  namespace: openshift-authentication
+  resourceVersion: "15462"
+  uid: ec12560d-2f21-4566-9005-6af288f5f89f
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
