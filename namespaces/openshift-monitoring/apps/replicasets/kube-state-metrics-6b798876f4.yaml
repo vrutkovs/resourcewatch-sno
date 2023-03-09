@@ -193,13 +193,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:44Z"
+    time: "2023-03-09T14:32:08Z"
   name: kube-state-metrics-6b798876f4
   namespace: openshift-monitoring
   ownerReferences:
@@ -209,7 +211,7 @@ metadata:
     kind: Deployment
     name: kube-state-metrics
     uid: 99b0f757-5c92-49f2-ac93-2eb4407d7bda
-  resourceVersion: "13823"
+  resourceVersion: "14333"
   uid: bc5c952d-e573-4eac-9ea1-7415cb669294
 spec:
   replicas: 1
@@ -361,6 +363,8 @@ spec:
           defaultMode: 420
           secretName: kube-state-metrics-kube-rbac-proxy-config
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
