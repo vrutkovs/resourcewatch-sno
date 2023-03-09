@@ -162,8 +162,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -179,6 +177,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:29:49Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:01Z"
   name: package-server-manager-78b664bb45-bdtcl
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -188,7 +198,7 @@ metadata:
     kind: ReplicaSet
     name: package-server-manager-78b664bb45
     uid: 994dbae6-c5b3-48d8-bf0c-7f45bf4c6b00
-  resourceVersion: "10249"
+  resourceVersion: "13489"
   uid: 18739b54-a4d2-41ac-8582-5e88f4aa3bb7
 spec:
   containers:
@@ -318,8 +328,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:49Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:01Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:49Z"
