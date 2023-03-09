@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    console.openshift.io/console-config-version: "15275"
+    console.openshift.io/console-config-version: "16949"
     console.openshift.io/image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:56b0668235191f7a5cf04912684788ce1ca0a8e36f7eaae7b016f1de8485de74
     console.openshift.io/infrastructure-config-version: "552"
     console.openshift.io/oauth-secret-version: "15390"
@@ -11,13 +11,46 @@ metadata:
     console.openshift.io/service-ca-config-version: "15279"
     console.openshift.io/trusted-ca-config-version: "15306"
     deployment.kubernetes.io/revision: "2"
-    operator.openshift.io/spec-hash: 8b6baade2b1a72a22223ea0e0699904cec12bea1e3b56dd2d299f56e653ed044
+    operator.openshift.io/spec-hash: d5ea8cd50ce5d54b55d6ff565ee4b990c7116884d5c1216ad48900fcc625c765
   creationTimestamp: "2023-03-09T14:32:32Z"
-  generation: 2
+  generation: 3
   labels:
     app: console
     component: ui
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:replicas: {}
+        f:unavailableReplicas: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:41Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -220,43 +253,10 @@ metadata:
                 f:name: {}
     manager: console
     operation: Update
-    time: "2023-03-09T14:32:41Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:deployment.kubernetes.io/revision: {}
-      f:status:
-        f:conditions:
-          .: {}
-          k:{"type":"Available"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Progressing"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:observedGeneration: {}
-        f:replicas: {}
-        f:unavailableReplicas: {}
-        f:updatedReplicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:41Z"
+    time: "2023-03-09T14:34:59Z"
   name: console
   namespace: openshift-console
-  resourceVersion: "15700"
+  resourceVersion: "16966"
   uid: 8cf32543-ad95-4aa3-8d4f-21c433364acd
 spec:
   progressDeadlineSeconds: 600
@@ -274,7 +274,7 @@ spec:
   template:
     metadata:
       annotations:
-        console.openshift.io/console-config-version: "15275"
+        console.openshift.io/console-config-version: "16949"
         console.openshift.io/image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:56b0668235191f7a5cf04912684788ce1ca0a8e36f7eaae7b016f1de8485de74
         console.openshift.io/infrastructure-config-version: "552"
         console.openshift.io/oauth-secret-version: "15390"
