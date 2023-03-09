@@ -3,6 +3,9 @@ kind: Namespace
 metadata:
   annotations:
     openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c9,c4
+    openshift.io/sa.scc.supplemental-groups: 1000080000/10000
+    openshift.io/sa.scc.uid-range: 1000080000/10000
     workload.openshift.io/allowed: management
   creationTimestamp: "2023-03-09T14:14:14Z"
   labels:
@@ -26,8 +29,19 @@ metadata:
     manager: cluster-bootstrap
     operation: Update
     time: "2023-03-09T14:14:14Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:14:22Z"
   name: openshift-kube-apiserver-operator
-  resourceVersion: "437"
+  resourceVersion: "507"
   uid: 109c1e6d-8939-4644-983a-5c812002db7f
 spec:
   finalizers:
