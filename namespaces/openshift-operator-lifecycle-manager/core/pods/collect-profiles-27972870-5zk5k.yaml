@@ -166,7 +166,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:30:03Z"
+    time: "2023-03-09T14:30:05Z"
   name: collect-profiles-27972870-5zk5k
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -176,7 +176,7 @@ metadata:
     kind: Job
     name: collect-profiles-27972870
     uid: 759d7395-7ae5-440a-b37a-7922d6e077d4
-  resourceVersion: "10351"
+  resourceVersion: "10369"
   uid: 58131f07-d25b-4b26-b3d0-dbe5170f8612
 spec:
   containers:
@@ -314,7 +314,7 @@ status:
         reason: Completed
         startedAt: "2023-03-09T14:30:01Z"
   hostIP: 10.0.130.93
-  phase: Running
+  phase: Succeeded
   podIP: 10.128.0.65
   podIPs:
   - ip: 10.128.0.65
