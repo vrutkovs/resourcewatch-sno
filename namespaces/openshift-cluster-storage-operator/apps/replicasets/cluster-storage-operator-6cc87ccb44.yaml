@@ -1,0 +1,437 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    capability.openshift.io/name: Storage
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "1"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-03-09T14:28:56Z"
+  generation: 1
+  labels:
+    name: cluster-storage-operator
+    pod-template-hash: 6cc87ccb44
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:deployment.kubernetes.io/desired-replicas: {}
+          f:deployment.kubernetes.io/max-replicas: {}
+          f:deployment.kubernetes.io/revision: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:labels:
+          .: {}
+          f:name: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d9e8da67-2983-44db-871a-8dc3a31254fd"}: {}
+      f:spec:
+        f:replicas: {}
+        f:selector: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:target.workload.openshift.io/management: {}
+            f:labels:
+              .: {}
+              f:name: {}
+              f:pod-template-hash: {}
+          f:spec:
+            f:containers:
+              k:{"name":"cluster-storage-operator"}:
+                .: {}
+                f:args: {}
+                f:command: {}
+                f:env:
+                  .: {}
+                  k:{"name":"ALIBABA_CLOUD_DRIVER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"ALIBABA_DISK_DRIVER_OPERATOR_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"ATTACHER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"AWS_EBS_DRIVER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"AWS_EBS_DRIVER_OPERATOR_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"AZURE_DISK_DRIVER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"AZURE_DISK_DRIVER_OPERATOR_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"AZURE_FILE_DRIVER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"AZURE_FILE_DRIVER_OPERATOR_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"CLUSTER_CLOUD_CONTROLLER_MANAGER_OPERATOR_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"GCP_PD_DRIVER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"GCP_PD_DRIVER_OPERATOR_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"IBM_VPC_BLOCK_DRIVER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"IBM_VPC_BLOCK_DRIVER_OPERATOR_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"IBM_VPC_NODE_LABEL_UPDATER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"KUBE_RBAC_PROXY_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"LIVENESS_PROBE_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"MANILA_DRIVER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"MANILA_DRIVER_OPERATOR_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"MANILA_NFS_DRIVER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"NODE_DRIVER_REGISTRAR_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"OPENSTACK_CINDER_DRIVER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"OPENSTACK_CINDER_DRIVER_OPERATOR_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"OPERAND_IMAGE_VERSION"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"OPERATOR_IMAGE_VERSION"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"OVIRT_DRIVER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"OVIRT_DRIVER_OPERATOR_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"POWERVS_BLOCK_CSI_DRIVER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"POWERVS_BLOCK_CSI_DRIVER_OPERATOR_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"PROVISIONER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"RESIZER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"SHARED_RESOURCE_DRIVER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"SHARED_RESOURCE_DRIVER_OPERATOR_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"SHARED_RESOURCE_DRIVER_WEBHOOK_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"SNAPSHOTTER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"VMWARE_VSPHERE_DRIVER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"VMWARE_VSPHERE_DRIVER_OPERATOR_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"VMWARE_VSPHERE_SYNCER_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"VSPHERE_PROBLEM_DETECTOR_OPERATOR_IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":8443,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                f:resources:
+                  .: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:securityContext:
+                  .: {}
+                  f:allowPrivilegeEscalation: {}
+                  f:capabilities:
+                    .: {}
+                    f:drop: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/var/run/secrets/serving-cert"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+            f:dnsPolicy: {}
+            f:nodeSelector: {}
+            f:priorityClassName: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext:
+              .: {}
+              f:runAsNonRoot: {}
+              f:runAsUser: {}
+              f:seccompProfile:
+                .: {}
+                f:type: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:tolerations: {}
+            f:volumes:
+              .: {}
+              k:{"name":"cluster-storage-operator-serving-cert"}:
+                .: {}
+                f:name: {}
+                f:secret:
+                  .: {}
+                  f:defaultMode: {}
+                  f:optional: {}
+                  f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:28:56Z"
+  name: cluster-storage-operator-6cc87ccb44
+  namespace: openshift-cluster-storage-operator
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: cluster-storage-operator
+    uid: d9e8da67-2983-44db-871a-8dc3a31254fd
+  resourceVersion: "8707"
+  uid: 2219d148-0295-4ea0-852f-f2ff523b21e6
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: cluster-storage-operator
+      pod-template-hash: 6cc87ccb44
+  template:
+    metadata:
+      annotations:
+        target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+      creationTimestamp: null
+      labels:
+        name: cluster-storage-operator
+        pod-template-hash: 6cc87ccb44
+    spec:
+      containers:
+      - args:
+        - start
+        - -v=2
+        command:
+        - cluster-storage-operator
+        - start
+        env:
+        - name: OPERATOR_IMAGE_VERSION
+          value: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+        - name: OPERAND_IMAGE_VERSION
+          value: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+        - name: AWS_EBS_DRIVER_OPERATOR_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:0188cc910f888d7528f7444da2475344a1c13ac11c8a50e3dd64258dfea782f7
+        - name: AWS_EBS_DRIVER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d6d4b9f4c72b0fa525cd274dbf3f667025b932e696bddf828692d83f49ad9231
+        - name: GCP_PD_DRIVER_OPERATOR_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9573250b5f079861edd957615fbe93388827d340af1378922aabcd32b6f35b5a
+        - name: GCP_PD_DRIVER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:1e8a8d9f309c2d7a8a5d01e036fd16fb79125f63162a917c79031b2940de0590
+        - name: OPENSTACK_CINDER_DRIVER_OPERATOR_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8944bf8866333ef7f48843a5cd0ca91b0f4522946cd83f5605e44eccc4ed3b3f
+        - name: OPENSTACK_CINDER_DRIVER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:30801cd4c2aab15f85ae71495c09b370924748d73874891b24870fe6891e97ea
+        - name: OVIRT_DRIVER_OPERATOR_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2717c62eacc306113c034237941814b1bdf25ba4793f0ca1b7ac4a86ac5fef85
+        - name: OVIRT_DRIVER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4f9cfa8f799b869ee93e05c4bd9adb0aa4706f199cafb2097abe0156b53a64db
+        - name: MANILA_DRIVER_OPERATOR_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:f2604b9940089a822dc9af105448bc35d92b27d5d6ea406096702262158ab3f9
+        - name: MANILA_DRIVER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:813119c4d88f1b2e363685fb8500df42d9ae7341ce205e7079d0f2ee869def51
+        - name: MANILA_NFS_DRIVER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:816c0eaa0564906bc8d22f5b8d6e328b2af8f28b8ff7eaa26818e4afc25645ed
+        - name: PROVISIONER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:54abd6f5bd6f0a2e590eb751f369af47fc78e243777b74f3aa94ca20d11dba91
+        - name: ATTACHER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:37d63003dc265731dd31ee332982e691d071d8255ea1bc4f1a7aa8ff16672fd9
+        - name: RESIZER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:b5ab9119338fccbf34b66f25c9636020dbaf8797d7986a37a4494d7acbdda0b3
+        - name: SNAPSHOTTER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9dd11d0b2109898561780016bf214cc706d56436e097599d465726b396f31a9b
+        - name: NODE_DRIVER_REGISTRAR_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c40704cbcee782b7629fcbe26b96c42b11444076c53ecd28f0e50f7e5efeb4d7
+        - name: LIVENESS_PROBE_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:a70c56affa754b4a0cd72b5e6870bdedef0ea5b68a9252a43615fdfadc6f0986
+        - name: VSPHERE_PROBLEM_DETECTOR_OPERATOR_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:0354912ff3fc834c1db5f32d5de482610ab95d07da4660e6edd68e499dde9a84
+        - name: AZURE_DISK_DRIVER_OPERATOR_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d955535fe5b5858d1fedb7b0bfc3c2b255541a48f4faa3a347657b7b5c832857
+        - name: AZURE_DISK_DRIVER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:5117536528a7d6f8de618eb18476860b83dc6990bad5f3e08a4e4c571f01e002
+        - name: AZURE_FILE_DRIVER_OPERATOR_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6f00e53fcb8026fc0a9c7f3cd66badd7fa0671ae2d32a3c2acf14a6f5f386681
+        - name: AZURE_FILE_DRIVER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:5cd07dced3a671d11a972f3e3fedd3d118e5668429c92852a5eb5d1ca77449fa
+        - name: KUBE_RBAC_PROXY_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+        - name: VMWARE_VSPHERE_DRIVER_OPERATOR_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:f019bfcda29761e938aa9b43d61969d5adbb001421ae060700abbf6e5fe910bc
+        - name: VMWARE_VSPHERE_DRIVER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:02c7c5d94d311af50ba63cc92065be2911444d162b22613371b2efea00e36d40
+        - name: VMWARE_VSPHERE_SYNCER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:1458d3dfe84a2a0b914afa64e9894db5b376c23004c5818151dfaf22c8f2c74b
+        - name: CLUSTER_CLOUD_CONTROLLER_MANAGER_OPERATOR_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:096113738f7d95b71e8ff0a39996ba5d6b9d25648764d3ba4f3625f01982c821
+        - name: SHARED_RESOURCE_DRIVER_OPERATOR_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:490b48c57bce2e8598a2375eea0d7408ab08741ce61dfb95fd021fce4c9b7168
+        - name: SHARED_RESOURCE_DRIVER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6ab3165fb94ded1cdba4150e3ef8d2fe0b34500816e1c6c46ee3efdb82d92fb0
+        - name: SHARED_RESOURCE_DRIVER_WEBHOOK_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9417f8d6c510a44e57139649652f5ac8480bccd53bd3fedf7306e92bc0a77ea6
+        - name: ALIBABA_DISK_DRIVER_OPERATOR_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4c8e7a66760175295fab236f703c5723f3849c03a0982b723bdc377e138e1275
+        - name: ALIBABA_CLOUD_DRIVER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:b31e0bf2941ed5e4b2d1472f9c1ee14e4708ede2614b8bc9b12ff20a2c837f03
+        - name: IBM_VPC_BLOCK_DRIVER_OPERATOR_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:abb9a5601951819743da63efdd236af8b1a75edd85edfd8d80e20d16b1305596
+        - name: IBM_VPC_BLOCK_DRIVER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:34ce4ac07b49f349aaa8c0c1af63a184f69e48c57267813d91dbc22fe17070af
+        - name: IBM_VPC_NODE_LABEL_UPDATER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:13a7681dcf42d4c019b31cc7e7e6f33d3e55d6c8426f5d9f25423a91cc86f32f
+        - name: POWERVS_BLOCK_CSI_DRIVER_OPERATOR_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:1ffec55c7fdefb5cc3916ece6d5ae829c480dd86448f965b29111fd1b08ead56
+        - name: POWERVS_BLOCK_CSI_DRIVER_IMAGE
+          value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:f7595e3d00f89060c6f2bb65d531ed5eb9b2c2f845f22ba64588f95851058710
+        image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:45f1547cfa949f8ebd4b3e910359ce9f194e1ebb99ae7a829d3b8016248b431a
+        imagePullPolicy: IfNotPresent
+        name: cluster-storage-operator
+        ports:
+        - containerPort: 8443
+          name: metrics
+          protocol: TCP
+        resources:
+          requests:
+            cpu: 10m
+            memory: 20Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+        volumeMounts:
+        - mountPath: /var/run/secrets/serving-cert
+          name: cluster-storage-operator-serving-cert
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        node-role.kubernetes.io/master: ""
+      priorityClassName: system-cluster-critical
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 11411
+        seccompProfile:
+          type: RuntimeDefault
+      serviceAccount: cluster-storage-operator
+      serviceAccountName: cluster-storage-operator
+      terminationGracePeriodSeconds: 30
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/master
+        operator: Exists
+      - effect: NoExecute
+        key: node.kubernetes.io/unreachable
+        operator: Exists
+        tolerationSeconds: 120
+      - effect: NoExecute
+        key: node.kubernetes.io/not-ready
+        operator: Exists
+        tolerationSeconds: 120
+      volumes:
+      - name: cluster-storage-operator-serving-cert
+        secret:
+          defaultMode: 420
+          optional: true
+          secretName: cluster-storage-operator-serving-cert
+status:
+  replicas: 0
