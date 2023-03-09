@@ -219,8 +219,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -233,8 +231,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -260,7 +256,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-adapter-f5d985798
     uid: 00aafcc8-1f59-40dd-81f8-296659b61ac5
-  resourceVersion: "9281"
+  resourceVersion: "9303"
   uid: 4b3a2d80-8ba4-47c0-8a5d-948e31e9ab57
 spec:
   automountServiceAccountToken: true
@@ -438,15 +434,11 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:11Z"
-    message: 'containers with unready status: [prometheus-adapter]'
-    reason: ContainersNotReady
-    status: "False"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:11Z"
-    message: 'containers with unready status: [prometheus-adapter]'
-    reason: ContainersNotReady
-    status: "False"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:40Z"
@@ -458,7 +450,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:86d474263af96d19f25f530fef4aa2ee8bc02e3c5202c1ecc74841626ded2852
     lastState: {}
     name: prometheus-adapter
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
