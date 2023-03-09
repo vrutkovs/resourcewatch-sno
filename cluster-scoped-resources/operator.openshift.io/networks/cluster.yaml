@@ -1,8 +1,10 @@
 apiVersion: operator.openshift.io/v1
 kind: Network
 metadata:
+  annotations:
+    networkoperator.openshift.io/ovn-cluster-initiator: 10.0.130.93
   creationTimestamp: "2023-03-09T14:20:15Z"
-  generation: 4
+  generation: 5
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -24,6 +26,43 @@ metadata:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:networkoperator.openshift.io/ovn-cluster-initiator: {}
+      f:spec:
+        f:clusterNetwork: {}
+        f:defaultNetwork:
+          f:ovnKubernetesConfig:
+            f:egressIPConfig: {}
+            f:gatewayConfig: {}
+            f:genevePort: {}
+            f:mtu: {}
+            f:policyAuditConfig:
+              f:destination: {}
+              f:maxFileSize: {}
+              f:rateLimit: {}
+              f:syslogFacility: {}
+          f:type: {}
+        f:deployKubeProxy: {}
+        f:disableMultiNetwork: {}
+        f:disableNetworkDiagnostics: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:observedConfig: {}
+        f:operatorLogLevel: {}
+        f:serviceNetwork: {}
+        f:unsupportedConfigOverrides: {}
+        f:useMultiNetworkPolicy: {}
+      f:status:
+        f:conditions: {}
+        f:readyReplicas: {}
+        f:version: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-03-09T14:20:21Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions: {}
         f:version: {}
@@ -31,14 +70,27 @@ metadata:
     operation: Update
     time: "2023-03-09T14:20:20Z"
   name: cluster
-  resourceVersion: "2529"
+  resourceVersion: "2531"
   uid: e6519524-ef16-4ee8-82f1-2faa42688032
 spec:
   clusterNetwork:
   - cidr: 10.128.0.0/14
     hostPrefix: 23
   defaultNetwork:
+    ovnKubernetesConfig:
+      egressIPConfig: {}
+      gatewayConfig:
+        routingViaHost: false
+      genevePort: 6081
+      mtu: 1400
+      policyAuditConfig:
+        destination: "null"
+        maxFileSize: 50
+        rateLimit: 20
+        syslogFacility: local0
     type: OVNKubernetes
+  deployKubeProxy: false
+  disableMultiNetwork: false
   disableNetworkDiagnostics: false
   logLevel: Normal
   managementState: Managed
@@ -47,6 +99,7 @@ spec:
   serviceNetwork:
   - 172.30.0.0/16
   unsupportedConfigOverrides: null
+  useMultiNetworkPolicy: false
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:20:15Z"
