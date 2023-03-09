@@ -110,7 +110,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -124,7 +126,7 @@ metadata:
     kind: Deployment
     name: csi-snapshot-webhook
     uid: 0c80ccd2-e84e-4819-b3c8-5db290e25126
-  resourceVersion: "3512"
+  resourceVersion: "3538"
   uid: 703d13bc-cabb-4215-a8cb-62dd95b636d0
 spec:
   replicas: 1
@@ -206,5 +208,6 @@ spec:
           defaultMode: 420
           secretName: csi-snapshot-webhook-secret
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
