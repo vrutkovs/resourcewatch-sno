@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"kube-storage-version-migrator-operator-77b5d98c74-9qsht_32785a2d-ef32-4306-9279-e01fe48c9a29","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:21:59Z","renewTime":"2023-03-09T14:21:59Z","leaderTransitions":0}'
+  creationTimestamp: "2023-03-09T14:21:59Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:control-plane.alpha.kubernetes.io/leader: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-03-09T14:21:59Z"
+  name: openshift-kube-storage-version-migrator-operator-lock
+  namespace: openshift-kube-storage-version-migrator-operator
+  resourceVersion: "3326"
+  uid: c927697f-f7bb-4a6e-b04b-1753385654de
