@@ -2,7 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
     service.beta.openshift.io/serving-cert-secret-name: ovn-master-metrics-cert
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
   creationTimestamp: "2023-03-09T14:20:31Z"
   labels:
     app: ovnkube-master
@@ -33,6 +35,16 @@ metadata:
     manager: cluster-network-operator/operconfig
     operation: Apply
     time: "2023-03-09T14:20:31Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:22:08Z"
   name: ovn-kubernetes-master
   namespace: openshift-ovn-kubernetes
   ownerReferences:
@@ -42,7 +54,7 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "2718"
+  resourceVersion: "4297"
   uid: 0809d4e9-c4f1-468f-af65-a3193e04eb69
 spec:
   clusterIP: None
