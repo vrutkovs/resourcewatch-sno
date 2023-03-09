@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 9
+deprecatedCount: 10
 deprecatedFirstTimestamp: "2023-03-09T14:14:58Z"
-deprecatedLastTimestamp: "2023-03-09T14:14:59Z"
+deprecatedLastTimestamp: "2023-03-09T14:15:00Z"
 deprecatedSource:
   component: replicaset-controller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-09T14:14:59Z"
+    time: "2023-03-09T14:15:00Z"
   name: service-ca-operator-5b79975495.174ac5cdb102b253
   namespace: openshift-service-ca-operator
-  resourceVersion: "1496"
+  resourceVersion: "1508"
   uid: bb84ee75-175d-4036-bf50-7a1c3a28aa7b
 note: 'Error creating: pods "service-ca-operator-5b79975495-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
   the cluster does not have any nodes'
