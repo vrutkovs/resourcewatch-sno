@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/node-selector: ""
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2023-03-09T14:22:08Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-authentication
+    openshift.io/cluster-monitoring: "true"
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/warn: privileged
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/cluster-monitoring: {}
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/enforce: {}
+          f:pod-security.kubernetes.io/warn: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:22:08Z"
+  name: openshift-authentication
+  resourceVersion: "4273"
+  uid: b6f8e98b-7179-4ae4-b218-93d7b3a6f5c2
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
