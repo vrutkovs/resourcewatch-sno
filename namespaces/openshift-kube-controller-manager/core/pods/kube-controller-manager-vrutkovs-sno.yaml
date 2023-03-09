@@ -295,6 +295,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -313,6 +315,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -328,7 +332,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:30:36Z"
+    time: "2023-03-09T14:31:31Z"
   name: kube-controller-manager-vrutkovs-sno
   namespace: openshift-kube-controller-manager
   ownerReferences:
@@ -337,7 +341,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "10523"
+  resourceVersion: "13051"
   uid: b26a2787-debb-4287-8897-76b5d75deb45
 spec:
   containers:
@@ -574,12 +578,18 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:30:36Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:31:31Z"
+    message: 'containers with unready status: [kube-controller-manager cluster-policy-controller
+      kube-controller-manager-cert-syncer kube-controller-manager-recovery-controller]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:30:36Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:31:31Z"
+    message: 'containers with unready status: [kube-controller-manager cluster-policy-controller
+      kube-controller-manager-cert-syncer kube-controller-manager-recovery-controller]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:30:15Z"
@@ -591,44 +601,63 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4a17a5edd33292beb6a274a3d484c8464a8f9291058107b4cb2cf6181058b1cd
     lastState: {}
     name: cluster-policy-controller
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://8cb43efcd7aebe5c3f9755caafb92512cb936f045004b9f1663fbe130bf2b6dc
+        exitCode: 0
+        finishedAt: "2023-03-09T14:31:30Z"
+        reason: Completed
         startedAt: "2023-03-09T14:30:16Z"
   - containerID: cri-o://a78967b955c93fe7eec38af83451505f7bbcea0eddb2178ce153f091ce6f3863
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
     lastState: {}
     name: kube-controller-manager
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://a78967b955c93fe7eec38af83451505f7bbcea0eddb2178ce153f091ce6f3863
+        exitCode: 0
+        finishedAt: "2023-03-09T14:31:30Z"
+        reason: Completed
         startedAt: "2023-03-09T14:30:16Z"
   - containerID: cri-o://0359d31bd2452bc2930c46124ad018c530c0946aa5029d3dfddef1f5b7950d96
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d32df39b960a3d0fd95bb8269b5f82f104c4834d44ce0e86605741fe6546ff3d
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d32df39b960a3d0fd95bb8269b5f82f104c4834d44ce0e86605741fe6546ff3d
     lastState: {}
     name: kube-controller-manager-cert-syncer
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://0359d31bd2452bc2930c46124ad018c530c0946aa5029d3dfddef1f5b7950d96
+        exitCode: 2
+        finishedAt: "2023-03-09T14:31:30Z"
+        message: |
+          lid for kubernetes, kubernetes.default, kubernetes.default.svc, kubernetes.default.svc.cluster.local, openshift, openshift.default, openshift.default.svc, openshift.default.svc.cluster.local, not localhost-recovery'(may retry after sleeping)
+          E0309 14:31:27.456320       1 event.go:276] Unable to write event: '&v1.Event{TypeMeta:v1.TypeMeta{Kind:"", APIVersion:""}, ObjectMeta:v1.ObjectMeta{Name:"kube-controller-manager-vrutkovs-sno.174ac6a3904c1c99", GenerateName:"", Namespace:"openshift-kube-controller-manager", SelfLink:"", UID:"", ResourceVersion:"", Generation:0, CreationTimestamp:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), DeletionTimestamp:<nil>, DeletionGracePeriodSeconds:(*int64)(nil), Labels:map[string]string(nil), Annotations:map[string]string(nil), OwnerReferences:[]v1.OwnerReference(nil), Finalizers:[]string(nil), ManagedFields:[]v1.ManagedFieldsEntry(nil)}, InvolvedObject:v1.ObjectReference{Kind:"Pod", Namespace:"openshift-kube-controller-manager", Name:"kube-controller-manager-vrutkovs-sno", UID:"", APIVersion:"v1", ResourceVersion:"", FieldPath:""}, Reason:"FastControllerResync", Message:"Controller \"CertSyncController\" resync interval is set to 0s which might lead to client request throttling", Source:v1.EventSource{Component:"cert-syncer-certsynccontroller", Host:""}, FirstTimestamp:time.Date(2023, time.March, 9, 14, 30, 16, 951807129, time.Local), LastTimestamp:time.Date(2023, time.March, 9, 14, 30, 16, 951807129, time.Local), Count:1, Type:"Warning", EventTime:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Series:(*v1.EventSeries)(nil), Action:"", Related:(*v1.ObjectReference)(nil), ReportingController:"", ReportingInstance:""}': 'Post "https://localhost:6443/api/v1/namespaces/openshift-kube-controller-manager/events": x509: certificate is valid for kubernetes, kubernetes.default, kubernetes.default.svc, kubernetes.default.svc.cluster.local, openshift, openshift.default, openshift.default.svc, openshift.default.svc.cluster.local, not localhost-recovery'(may retry after sleeping)
+        reason: Error
         startedAt: "2023-03-09T14:30:16Z"
   - containerID: cri-o://84734b6e50edb3d6e3adff9830f58c3f4ba4bbd10ab30dc33096c1f6b0921bf8
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d32df39b960a3d0fd95bb8269b5f82f104c4834d44ce0e86605741fe6546ff3d
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d32df39b960a3d0fd95bb8269b5f82f104c4834d44ce0e86605741fe6546ff3d
     lastState: {}
     name: kube-controller-manager-recovery-controller
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://84734b6e50edb3d6e3adff9830f58c3f4ba4bbd10ab30dc33096c1f6b0921bf8
+        exitCode: 0
+        finishedAt: "2023-03-09T14:31:30Z"
+        reason: Completed
         startedAt: "2023-03-09T14:30:17Z"
   hostIP: 10.0.130.93
   phase: Running
