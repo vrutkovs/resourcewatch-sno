@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:33:47Z"
+deprecatedLastTimestamp: "2023-03-09T14:33:47Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:33:48Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:33:48Z"
+  name: community-operators-lgl4m.174ac6d4962e6b51
+  namespace: openshift-marketplace
+  resourceVersion: "16598"
+  uid: 79014cbc-90d7-4bae-9888-c5d2a002b51e
+note: Pulling image "registry.redhat.io/redhat/community-operator-index:v4.12"
+reason: Pulling
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{registry-server}
+  kind: Pod
+  name: community-operators-lgl4m
+  namespace: openshift-marketplace
+  resourceVersion: "16525"
+  uid: 64ecf658-c926-47c1-abe8-538c356360a6
+type: Normal
