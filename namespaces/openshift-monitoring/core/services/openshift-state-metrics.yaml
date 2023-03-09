@@ -2,7 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
     service.beta.openshift.io/serving-cert-secret-name: openshift-state-metrics-tls
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
   creationTimestamp: "2023-03-09T14:22:38Z"
   labels:
     k8s-app: openshift-state-metrics
@@ -40,9 +42,19 @@ metadata:
     manager: operator
     operation: Update
     time: "2023-03-09T14:22:38Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:22:38Z"
   name: openshift-state-metrics
   namespace: openshift-monitoring
-  resourceVersion: "5646"
+  resourceVersion: "5720"
   uid: 2a3723fc-fc2b-48bd-9381-dafde8509318
 spec:
   clusterIP: None
