@@ -292,6 +292,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -307,19 +309,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:14Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:08Z"
   name: apiserver-7f975bf8c6-fc59r
   namespace: openshift-oauth-apiserver
   ownerReferences:
@@ -329,7 +319,7 @@ metadata:
     kind: ReplicaSet
     name: apiserver-7f975bf8c6
     uid: b7001c83-c153-495e-9c27-b54d5e5a0c46
-  resourceVersion: "13869"
+  resourceVersion: "14389"
   uid: 12b283d0-81f3-4ae5-a5f7-9a42e72a57aa
 spec:
   affinity:
@@ -553,8 +543,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:14Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:14Z"
