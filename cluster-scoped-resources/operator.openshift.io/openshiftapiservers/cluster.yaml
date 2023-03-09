@@ -66,14 +66,14 @@ metadata:
     manager: cluster-openshift-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:04Z"
+    time: "2023-03-09T14:23:07Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6305"
+  resourceVersion: "6406"
   uid: 745e26c2-906b-4bfc-8835-c7ba9c167c7b
 spec:
   logLevel: Normal
@@ -160,11 +160,9 @@ status:
   - lastTransitionTime: "2023-03-09T14:23:00Z"
     status: "False"
     type: ConfigObservationDegraded
-  - lastTransitionTime: "2023-03-09T14:23:03Z"
-    message: 'openshiftapiserveroperatorconfigs/instance: observed generation is 0,
-      desired generation is 2.'
-    reason: NewGeneration
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:23:07Z"
+    reason: AsExpected
+    status: "False"
     type: OperatorConfigProgressing
   generations:
   - group: apps
