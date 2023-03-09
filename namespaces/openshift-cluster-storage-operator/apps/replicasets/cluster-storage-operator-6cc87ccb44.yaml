@@ -268,6 +268,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:28:56Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:56Z"
   name: cluster-storage-operator-6cc87ccb44
   namespace: openshift-cluster-storage-operator
   ownerReferences:
@@ -277,7 +286,7 @@ metadata:
     kind: Deployment
     name: cluster-storage-operator
     uid: d9e8da67-2983-44db-871a-8dc3a31254fd
-  resourceVersion: "8707"
+  resourceVersion: "8720"
   uid: 2219d148-0295-4ea0-852f-f2ff523b21e6
 spec:
   replicas: 1
@@ -434,4 +443,5 @@ spec:
           optional: true
           secretName: cluster-storage-operator-serving-cert
 status:
+  observedGeneration: 1
   replicas: 0
