@@ -1,0 +1,22 @@
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource:
+  component: apiserver
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:15:19Z"
+  name: openshift-kube-apiserver.174ac5d29993eec4
+  namespace: default
+  resourceVersion: "2041"
+  uid: 967ccc19-532f-442f-ba4b-47eb7d6d8715
+note: HTTP Server has stopped listening
+reason: HTTPServerStoppedListening
+regarding:
+  apiVersion: v1
+  kind: Namespace
+  name: openshift-kube-apiserver
+  namespace: default
+type: Normal
