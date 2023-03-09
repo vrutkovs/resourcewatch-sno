@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:27:10Z"
+deprecatedLastTimestamp: "2023-03-09T14:27:10Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-installer-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:27:10Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-09T14:27:10Z"
+  name: etcd-operator.174ac6782fbfebbe
+  namespace: openshift-etcd-operator
+  resourceVersion: "7679"
+  uid: 0b3f7229-5aaf-455d-9b06-408eed622d64
+note: Updated node "vrutkovs-sno" from revision 2 to 3 because static pod is ready
+reason: NodeCurrentRevisionChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 83b0ee74-72c5-4b95-9e21-87b97e13fab6
+type: Normal
