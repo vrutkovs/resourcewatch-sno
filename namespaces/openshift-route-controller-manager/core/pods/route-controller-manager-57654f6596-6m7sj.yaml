@@ -4,6 +4,7 @@ metadata:
   annotations:
     configmaps/client-ca: "0"
     configmaps/config: "6129"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.38/23"],"mac_address":"0a:58:0a:80:00:26","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.38/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: restricted-v2
     openshiftcontrollermanagers.operator.openshift.io/cluster: "1"
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
@@ -148,6 +149,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:23:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:23:00Z"
   name: route-controller-manager-57654f6596-6m7sj
   namespace: openshift-route-controller-manager
   ownerReferences:
@@ -157,7 +167,7 @@ metadata:
     kind: ReplicaSet
     name: route-controller-manager-57654f6596
     uid: 1f001f68-eb3d-48f7-99f9-0b548788cb92
-  resourceVersion: "6143"
+  resourceVersion: "6151"
   uid: 73058960-10e6-492d-aa88-3527fe751cfe
 spec:
   affinity:
