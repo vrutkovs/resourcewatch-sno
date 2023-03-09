@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:07Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:07Z"
+deprecatedSource:
+  component: kube-apiserver-operator-kubeapiserverstaticresources-kubeapiserverstaticresources
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:09Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:29:09Z"
+  name: kube-apiserver-operator.174ac6938019bbba
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "9020"
+  uid: d560c55f-80e7-4fc3-84a4-bca5dd969d5d
+note: Created ClusterRole.rbac.authorization.k8s.io/system:openshift:controller:check-endpoints
+  because it was missing
+reason: ClusterRoleCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Normal
