@@ -186,8 +186,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -200,8 +198,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -227,7 +223,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-config-operator-8449b66df4
     uid: a7ce20a1-22ae-4404-ae6c-14fa8404ad0f
-  resourceVersion: "9243"
+  resourceVersion: "9254"
   uid: 74e4983a-fd7b-4f4b-8dd6-8714bbf9ecbf
 spec:
   containers:
@@ -357,15 +353,11 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:11Z"
-    message: 'containers with unready status: [openshift-config-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:11Z"
-    message: 'containers with unready status: [openshift-config-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:21:51Z"
@@ -383,7 +375,7 @@ status:
         reason: Completed
         startedAt: "2023-03-09T14:21:58Z"
     name: openshift-config-operator
-    ready: false
+    ready: true
     restartCount: 1
     started: true
     state:
