@@ -270,7 +270,6 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
-        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -290,13 +289,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
+        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:13Z"
+    time: "2023-03-09T14:32:02Z"
   name: cluster-storage-operator
   namespace: openshift-cluster-storage-operator
   ownerReferences:
@@ -305,7 +304,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "9325"
+  resourceVersion: "13628"
   uid: d9e8da67-2983-44db-871a-8dc3a31254fd
 spec:
   progressDeadlineSeconds: 600
@@ -467,21 +466,20 @@ spec:
           optional: true
           secretName: cluster-storage-operator-serving-cert
 status:
-  availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2023-03-09T14:29:13Z"
-    lastUpdateTime: "2023-03-09T14:29:13Z"
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
-    type: Available
   - lastTransitionTime: "2023-03-09T14:28:56Z"
     lastUpdateTime: "2023-03-09T14:29:13Z"
     message: ReplicaSet "cluster-storage-operator-6cc87ccb44" has successfully progressed.
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
+  - lastTransitionTime: "2023-03-09T14:32:02Z"
+    lastUpdateTime: "2023-03-09T14:32:02Z"
+    message: Deployment does not have minimum availability.
+    reason: MinimumReplicasUnavailable
+    status: "False"
+    type: Available
   observedGeneration: 1
-  readyReplicas: 1
   replicas: 1
+  unavailableReplicas: 1
   updatedReplicas: 1
