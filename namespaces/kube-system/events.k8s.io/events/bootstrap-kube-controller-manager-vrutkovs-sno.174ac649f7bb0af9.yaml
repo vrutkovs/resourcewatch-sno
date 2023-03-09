@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 3
+deprecatedCount: 4
 deprecatedFirstTimestamp: "2023-03-09T14:23:52Z"
-deprecatedLastTimestamp: "2023-03-09T14:24:12Z"
+deprecatedLastTimestamp: "2023-03-09T14:26:22Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:24:53Z"
+    time: "2023-03-09T14:27:15Z"
   name: bootstrap-kube-controller-manager-vrutkovs-sno.174ac649f7bb0af9
   namespace: kube-system
-  resourceVersion: "7323"
+  resourceVersion: "7743"
   uid: b2c3902a-f38a-444d-b172-74a69c0c5893
 note: 'Startup probe failed: Get "https://10.0.130.93:10257/healthz": net/http: request
   canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)'
