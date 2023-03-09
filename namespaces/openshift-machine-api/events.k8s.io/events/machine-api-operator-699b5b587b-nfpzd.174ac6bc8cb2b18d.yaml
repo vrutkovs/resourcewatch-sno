@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:04Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:04Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:04Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:04Z"
+  name: machine-api-operator-699b5b587b-nfpzd.174ac6bc8cb2b18d
+  namespace: openshift-machine-api
+  resourceVersion: "14135"
+  uid: e73a3705-699c-48c1-9e83-988cf0c78087
+note: 'MountVolume.SetUp failed for volume "machine-api-operator-tls" : failed to
+  sync secret cache: timed out waiting for the condition'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: machine-api-operator-699b5b587b-nfpzd
+  namespace: openshift-machine-api
+  resourceVersion: "9310"
+  uid: 2a4685ce-b771-4ac9-ad76-3f5cb5a7e7c3
+type: Warning
