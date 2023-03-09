@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 10
+deprecatedCount: 11
 deprecatedFirstTimestamp: "2023-03-09T14:23:15Z"
 deprecatedLastTimestamp: "2023-03-09T14:24:40Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:24:47Z"
   name: openshift-kube-scheduler-operator.174ac6418c129290
   namespace: openshift-kube-scheduler-operator
-  resourceVersion: "7232"
+  resourceVersion: "7234"
   uid: e52c33df-8f6f-4fca-8482-a208e635f786
 note: 'secrets: kube-scheduler-client-cert-key'
 reason: RequiredInstallerResourcesMissing
