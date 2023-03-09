@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-09T14:25:47Z"
 deprecatedLastTimestamp: "2023-03-09T14:25:49Z"
 deprecatedSource:
@@ -28,7 +28,7 @@ metadata:
     time: "2023-03-09T14:27:12Z"
   name: bootstrap-kube-controller-manager-vrutkovs-sno.174ac664c1e55ae9
   namespace: kube-system
-  resourceVersion: "7697"
+  resourceVersion: "7701"
   uid: 63ee0d53-2b26-41e3-abbd-834e206eedbe
 note: Back-off restarting failed container kube-controller-manager in pod bootstrap-kube-controller-manager-vrutkovs-sno_kube-system(50e2c0aeaac98cd51b394121844a05b8)
 reason: BackOff
