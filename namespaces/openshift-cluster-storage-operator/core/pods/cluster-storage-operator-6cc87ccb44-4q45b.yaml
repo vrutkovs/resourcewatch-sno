@@ -258,7 +258,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-storage-operator-6cc87ccb44
     uid: 2219d148-0295-4ea0-852f-f2ff523b21e6
-  resourceVersion: "8713"
+  resourceVersion: "8715"
   uid: d9aa9251-c5bb-4a0c-ab9d-548580a57bc4
 spec:
   containers:
@@ -373,6 +373,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -435,5 +436,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:28:56Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
