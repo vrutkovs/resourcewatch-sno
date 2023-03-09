@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 10
+deprecatedCount: 11
 deprecatedFirstTimestamp: "2023-03-09T14:14:55Z"
-deprecatedLastTimestamp: "2023-03-09T14:14:58Z"
+deprecatedLastTimestamp: "2023-03-09T14:15:00Z"
 deprecatedSource:
   component: replicaset-controller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-09T14:14:58Z"
+    time: "2023-03-09T14:15:00Z"
   name: network-operator-5556ffc66.174ac5cd192495dc
   namespace: openshift-network-operator
-  resourceVersion: "1409"
+  resourceVersion: "1509"
   uid: d370c6c5-04f7-4b77-a21a-fda125632873
 note: 'Error creating: pods "network-operator-5556ffc66-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
   the cluster does not have any nodes'
