@@ -147,6 +147,7 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -166,13 +167,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:19:59Z"
+    time: "2023-03-09T14:22:10Z"
   name: dns-operator
   namespace: openshift-dns-operator
   ownerReferences:
@@ -181,7 +182,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "2297"
+  resourceVersion: "4388"
   uid: 530eeba4-aef9-4df0-ae56-9d11f342c90a
 spec:
   progressDeadlineSeconds: 600
@@ -291,20 +292,21 @@ spec:
           defaultMode: 420
           secretName: metrics-tls
 status:
+  availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2023-03-09T14:14:58Z"
-    lastUpdateTime: "2023-03-09T14:14:58Z"
-    message: Deployment does not have minimum availability.
-    reason: MinimumReplicasUnavailable
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:22:10Z"
+    lastUpdateTime: "2023-03-09T14:22:10Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:14:58Z"
-    lastUpdateTime: "2023-03-09T14:19:59Z"
-    message: ReplicaSet "dns-operator-5f6b454875" is progressing.
-    reason: ReplicaSetUpdated
+    lastUpdateTime: "2023-03-09T14:22:10Z"
+    message: ReplicaSet "dns-operator-5f6b454875" has successfully progressed.
+    reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
