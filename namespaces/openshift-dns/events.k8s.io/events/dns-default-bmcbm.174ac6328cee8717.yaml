@@ -1,0 +1,40 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:22:11.564029Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:11Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:22:11Z"
+  name: dns-default-bmcbm.174ac6328cee8717
+  namespace: openshift-dns
+  resourceVersion: "4464"
+  uid: cf404deb-08ce-452b-b760-8eec6c91e4ae
+note: Successfully assigned openshift-dns/dns-default-bmcbm to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: dns-default-bmcbm
+  namespace: openshift-dns
+  resourceVersion: "4456"
+  uid: 53f53fd4-d73a-4693-b74f-978bc7aff7f6
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
