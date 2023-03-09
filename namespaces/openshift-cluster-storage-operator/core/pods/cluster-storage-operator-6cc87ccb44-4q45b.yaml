@@ -264,6 +264,25 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:28:56Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:57Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"ContainersReady"}:
@@ -290,30 +309,17 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.55"}:
+            .: {}
+            f:ip: {}
         f:startTime: {}
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:56Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.ovn.org/pod-networks: {}
-    manager: vrutkovs-sno
-    operation: Update
-    time: "2023-03-09T14:28:56Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.v1.cni.cncf.io/network-status: {}
-    manager: multus
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:28:57Z"
+    time: "2023-03-09T14:29:12Z"
   name: cluster-storage-operator-6cc87ccb44-4q45b
   namespace: openshift-cluster-storage-operator
   ownerReferences:
@@ -323,7 +329,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-storage-operator-6cc87ccb44
     uid: 2219d148-0295-4ea0-852f-f2ff523b21e6
-  resourceVersion: "8769"
+  resourceVersion: "9161"
   uid: d9aa9251-c5bb-4a0c-ab9d-548580a57bc4
 spec:
   containers:
@@ -535,5 +541,8 @@ status:
         reason: ContainerCreating
   hostIP: 10.0.130.93
   phase: Pending
+  podIP: 10.128.0.55
+  podIPs:
+  - ip: 10.128.0.55
   qosClass: Burstable
   startTime: "2023-03-09T14:28:56Z"
