@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:21:43Z"
+deprecatedLastTimestamp: "2023-03-09T14:21:43Z"
+deprecatedSource:
+  component: controlplane
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:21:43Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:21:43Z"
+  name: ovn-kubernetes-master.174ac62be707654c
+  namespace: openshift-ovn-kubernetes
+  resourceVersion: "3058"
+  uid: 0bc4294f-9374-4f07-9dce-640add2c9e48
+note: vrutkovs-sno became leader
+reason: LeaderElection
+regarding:
+  apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  name: ovn-kubernetes-master
+  namespace: openshift-ovn-kubernetes
+  resourceVersion: "3056"
+  uid: 196db140-b918-4d4b-9e23-9271250b1336
+type: Normal
