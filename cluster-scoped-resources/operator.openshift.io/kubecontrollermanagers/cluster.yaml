@@ -44,14 +44,14 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:03Z"
+    time: "2023-03-09T14:22:05Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3936"
+  resourceVersion: "4097"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -118,6 +118,9 @@ status:
     reason: ContentCreationError
     status: "True"
     type: RevisionControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:04Z"
+    status: "False"
+    type: CertRotation_CSRSigningCert_Degraded
   latestAvailableRevision: 0
   latestAvailableRevisionReason: ""
   nodeStatuses:
