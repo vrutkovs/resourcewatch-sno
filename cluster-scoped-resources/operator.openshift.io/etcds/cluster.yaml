@@ -58,14 +58,14 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:51Z"
+    time: "2023-03-09T14:22:52Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6000"
+  resourceVersion: "6011"
   uid: e3da0174-daf2-4d9e-b232-e5e61f76793b
 spec:
   logLevel: Normal
@@ -182,6 +182,10 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:50Z"
     status: "False"
     type: StaticPodsDegraded
+  - lastTransitionTime: "2023-03-09T14:22:51Z"
+    reason: AsExpected
+    status: "False"
+    type: UpgradeBackupControllerDegraded
   latestAvailableRevision: 1
   latestAvailableRevisionReason: ""
   nodeStatuses:
