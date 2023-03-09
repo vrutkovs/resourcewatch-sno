@@ -58,14 +58,14 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:09Z"
+    time: "2023-03-09T14:24:49Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6464"
+  resourceVersion: "7268"
   uid: e3da0174-daf2-4d9e-b232-e5e61f76793b
 spec:
   logLevel: Normal
@@ -115,10 +115,9 @@ status:
     reason: MasterNodesReady
     status: "False"
     type: NodeControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:22:07Z"
-    message: no etcd members are present
-    reason: ErrorUpdatingEtcdEndpoints
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:24:42Z"
+    reason: EtcdEndpointsUpdated
+    status: "False"
     type: EtcdEndpointsDegraded
   - lastTransitionTime: "2023-03-09T14:22:10Z"
     reason: AsExpected
@@ -134,15 +133,14 @@ status:
   - lastTransitionTime: "2023-03-09T14:23:09Z"
     status: "False"
     type: InstallerControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:22:24Z"
-    message: 0 nodes are active; 1 nodes are at revision 0; 0 nodes have achieved
-      new revision 2
-    reason: ZeroNodesActive
-    status: "False"
-    type: StaticPodsAvailable
-  - lastTransitionTime: "2023-03-09T14:22:24Z"
-    message: 1 nodes are at revision 0; 0 nodes have achieved new revision 2
+  - lastTransitionTime: "2023-03-09T14:24:49Z"
+    message: 1 nodes are active; 1 nodes are at revision 2
     status: "True"
+    type: StaticPodsAvailable
+  - lastTransitionTime: "2023-03-09T14:24:49Z"
+    message: 1 nodes are at revision 2
+    reason: AllNodesAtLatestRevision
+    status: "False"
     type: NodeInstallerProgressing
   - lastTransitionTime: "2023-03-09T14:22:24Z"
     status: "False"
@@ -192,12 +190,12 @@ status:
     reason: AsExpected
     status: "False"
     type: ClusterMemberControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:23:02Z"
-    message: still waiting for three healthy etcd members
-    reason: NotEnoughEtcdMembers
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:24:46Z"
+    message: etcd-bootstrap member is already removed
+    reason: BootstrapAlreadyRemoved
+    status: "True"
     type: EtcdRunningInCluster
-  - lastTransitionTime: "2023-03-09T14:23:02Z"
+  - lastTransitionTime: "2023-03-09T14:24:47Z"
     reason: AsExpected
     status: "False"
     type: BootstrapTeardownDegraded
@@ -216,10 +214,14 @@ status:
     reason: EtcdQuorate
     status: "True"
     type: EtcdMembersAvailable
+  - lastTransitionTime: "2023-03-09T14:24:46Z"
+    message: etcd bootstrap member is removed
+    reason: BootstrapMemberRemoved
+    status: "True"
+    type: EtcdBoostrapMemberRemoved
   latestAvailableRevision: 2
   latestAvailableRevisionReason: ""
   nodeStatuses:
-  - currentRevision: 0
+  - currentRevision: 2
     nodeName: vrutkovs-sno
-    targetRevision: 2
   readyReplicas: 0
