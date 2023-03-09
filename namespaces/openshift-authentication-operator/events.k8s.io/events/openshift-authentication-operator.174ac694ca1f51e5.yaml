@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:29:13Z"
-deprecatedLastTimestamp: "2023-03-09T14:29:13Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:08Z"
 deprecatedSource:
   component: oauth-apiserver-status-controller-statussyncer_authentication
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-09T14:29:13Z"
+    time: "2023-03-09T14:32:08Z"
   name: openshift-authentication-operator.174ac694ca1f51e5
   namespace: openshift-authentication-operator
-  resourceVersion: "9257"
+  resourceVersion: "14405"
   uid: 76714b3d-2c3d-458c-80f3-f4bc38348342
 note: 'Status for clusteroperator/authentication changed: Available message changed
   from "APIServerDeploymentAvailable: no apiserver.openshift-oauth-apiserver pods
