@@ -1,0 +1,54 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedSource:
+  component: openshift-apiserver-operator-status-controller-statussyncer_openshift-apiserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
+  name: openshift-apiserver-operator.174ac62ffb5cfb7b
+  namespace: openshift-apiserver-operator
+  resourceVersion: "3613"
+  uid: e947dfdb-8a8c-4bfc-895c-a852d01aa41d
+note: 'Status for clusteroperator/openshift-apiserver changed: Degraded set to Unknown
+  (""),Progressing set to Unknown (""),Available set to Unknown (""),Upgradeable set
+  to Unknown (""),status.relatedObjects changed from [] to [{"operator.openshift.io"
+  "openshiftapiservers" "" "cluster"} {"" "namespaces" "" "openshift-config"} {""
+  "namespaces" "" "openshift-config-managed"} {"" "namespaces" "" "openshift-apiserver-operator"}
+  {"" "namespaces" "" "openshift-apiserver"} {"" "namespaces" "" "openshift-etcd-operator"}
+  {"" "endpoints" "openshift-etcd" "host-etcd-2"} {"controlplane.operator.openshift.io"
+  "podnetworkconnectivitychecks" "openshift-apiserver" ""} {"apiregistration.k8s.io"
+  "apiservices" "" "v1.apps.openshift.io"} {"apiregistration.k8s.io" "apiservices"
+  "" "v1.authorization.openshift.io"} {"apiregistration.k8s.io" "apiservices" "" "v1.build.openshift.io"}
+  {"apiregistration.k8s.io" "apiservices" "" "v1.image.openshift.io"} {"apiregistration.k8s.io"
+  "apiservices" "" "v1.project.openshift.io"} {"apiregistration.k8s.io" "apiservices"
+  "" "v1.quota.openshift.io"} {"apiregistration.k8s.io" "apiservices" "" "v1.route.openshift.io"}
+  {"apiregistration.k8s.io" "apiservices" "" "v1.security.openshift.io"} {"apiregistration.k8s.io"
+  "apiservices" "" "v1.template.openshift.io"}],status.versions changed from [] to
+  [{"operator" "4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest"}]'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-apiserver-operator
+  namespace: openshift-apiserver-operator
+  uid: a2161746-31b9-4c81-9d80-ec57dac3c48f
+type: Normal
