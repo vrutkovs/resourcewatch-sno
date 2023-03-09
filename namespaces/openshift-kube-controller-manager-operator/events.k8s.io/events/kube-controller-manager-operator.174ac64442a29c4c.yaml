@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 13
+deprecatedCount: 14
 deprecatedFirstTimestamp: "2023-03-09T14:23:27Z"
-deprecatedLastTimestamp: "2023-03-09T14:25:03Z"
+deprecatedLastTimestamp: "2023-03-09T14:27:07Z"
 deprecatedSource:
   component: kube-controller-manager-operator-installer-controller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-controller-manager-operator
     operation: Update
-    time: "2023-03-09T14:25:03Z"
+    time: "2023-03-09T14:27:07Z"
   name: kube-controller-manager-operator.174ac64442a29c4c
   namespace: openshift-kube-controller-manager-operator
-  resourceVersion: "7436"
+  resourceVersion: "7667"
   uid: f7056b2f-3574-4349-b062-5282ad682c7f
 note: 'configmaps: aggregator-client-ca,client-ca, secrets: kube-controller-manager-client-cert-key'
 reason: RequiredInstallerResourcesMissing
