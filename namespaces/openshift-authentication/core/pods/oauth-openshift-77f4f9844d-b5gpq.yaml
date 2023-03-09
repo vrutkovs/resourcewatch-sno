@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.82/23"],"mac_address":"0a:58:0a:80:00:52","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.82/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.82"
+          ],
+          "mac": "0a:58:0a:80:00:52",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: node-exporter
     operator.openshift.io/bootstrap-user-exists: "true"
     operator.openshift.io/rvs-hash: Sapc_RK9rFrZQJ0M4RBOjSI2EqtQTf8dkGzZwfkaQycMJMHnpUAAdn4N2NHXKWXJ8UevwkonOyHBE_yqci-Oew
@@ -320,6 +331,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-09T14:33:01Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:33:02Z"
   name: oauth-openshift-77f4f9844d-b5gpq
   namespace: openshift-authentication
   ownerReferences:
@@ -329,7 +350,7 @@ metadata:
     kind: ReplicaSet
     name: oauth-openshift-77f4f9844d
     uid: cd292924-3c49-4427-846c-440dc342bad4
-  resourceVersion: "16194"
+  resourceVersion: "16218"
   uid: ec12560d-2f21-4566-9005-6af288f5f89f
 spec:
   affinity:
