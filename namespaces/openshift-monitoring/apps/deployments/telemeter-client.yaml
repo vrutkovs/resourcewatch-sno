@@ -250,14 +250,16 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
     time: "2023-03-09T14:28:25Z"
   name: telemeter-client
   namespace: openshift-monitoring
-  resourceVersion: "7999"
+  resourceVersion: "8007"
   uid: 08f8fbb9-af1b-499b-a1db-e123e8a5a590
 spec:
   progressDeadlineSeconds: 600
@@ -567,15 +569,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:28:25Z"
     lastUpdateTime: "2023-03-09T14:28:25Z"
-    message: Created new replica set "telemeter-client-7f96fcfc64"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-09T14:28:25Z"
-    lastUpdateTime: "2023-03-09T14:28:25Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-09T14:28:25Z"
+    lastUpdateTime: "2023-03-09T14:28:25Z"
+    message: ReplicaSet "telemeter-client-7f96fcfc64" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
