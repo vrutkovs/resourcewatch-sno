@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:38:56Z"
+deprecatedLastTimestamp: "2023-03-09T14:38:56Z"
+deprecatedSource:
+  component: cluster-policy-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:38:56Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:38:56Z"
+  name: cluster-policy-controller-lock.174ac71c6ff92397
+  namespace: openshift-kube-controller-manager
+  resourceVersion: "17821"
+  uid: ea54d050-82f5-4498-8002-acf5da2f360f
+note: vrutkovs-sno_d792f973-a50e-4b9a-8479-be2fedfe8b1a became leader
+reason: LeaderElection
+regarding:
+  apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  name: cluster-policy-controller-lock
+  namespace: openshift-kube-controller-manager
+  resourceVersion: "17819"
+  uid: 0a480803-1a3e-4a39-a5b6-df01e0988e6d
+type: Normal
