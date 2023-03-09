@@ -1,0 +1,41 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:20:23.330369Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:23Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:20:23Z"
+  name: multus-additional-cni-plugins-tfc7q.174ac61959b482d7
+  namespace: openshift-multus
+  resourceVersion: "2584"
+  uid: b0ae78ee-c4e0-4a1d-a83b-0311c4efd89c
+note: Successfully assigned openshift-multus/multus-additional-cni-plugins-tfc7q to
+  vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: multus-additional-cni-plugins-tfc7q
+  namespace: openshift-multus
+  resourceVersion: "2580"
+  uid: c744a2d1-8bd9-4403-8cb9-bed2ff64ddff
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
