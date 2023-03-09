@@ -295,7 +295,7 @@ metadata:
     kind: Deployment
     name: oauth-openshift
     uid: 28c413a6-04a7-4cae-8efd-4240ba332c8e
-  resourceVersion: "16295"
+  resourceVersion: "16302"
   uid: 97c55886-f755-4cd7-8710-71d24ef8a077
 spec:
   replicas: 1
@@ -496,5 +496,5 @@ spec:
           optional: true
         name: v4-0-config-system-trusted-ca-bundle
 status:
-  observedGeneration: 1
+  observedGeneration: 2
   replicas: 0
