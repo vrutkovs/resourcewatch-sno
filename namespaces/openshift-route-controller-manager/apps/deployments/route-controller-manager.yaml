@@ -169,6 +169,14 @@ metadata:
       f:status:
         f:conditions:
           .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
           k:{"type":"Progressing"}:
             .: {}
             f:lastTransitionTime: {}
@@ -177,13 +185,15 @@ metadata:
             f:reason: {}
             f:status: {}
             f:type: {}
+        f:observedGeneration: {}
+        f:unavailableReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
     time: "2023-03-09T14:23:00Z"
   name: route-controller-manager
   namespace: openshift-route-controller-manager
-  resourceVersion: "6140"
+  resourceVersion: "6150"
   uid: ad9d7992-335d-4009-a433-f1dc108a6d16
 spec:
   progressDeadlineSeconds: 600
@@ -317,3 +327,11 @@ status:
     reason: NewReplicaSetCreated
     status: "True"
     type: Progressing
+  - lastTransitionTime: "2023-03-09T14:23:00Z"
+    lastUpdateTime: "2023-03-09T14:23:00Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 1
+  unavailableReplicas: 1
