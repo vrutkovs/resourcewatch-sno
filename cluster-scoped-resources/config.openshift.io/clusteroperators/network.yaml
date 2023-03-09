@@ -50,14 +50,20 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "2476"
+  resourceVersion: "2482"
   uid: efc0e65e-4103-4be7-8a5a-99dd46b6df53
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:20:15Z"
-    message: No networks.operator.openshift.io cluster found
-    reason: NoOperConfig
+    message: Operator configuration openshift-network-operator/cluster was deleted
+    reason: NoOperatorConfig
     status: "True"
     type: Degraded
+  - lastTransitionTime: "2023-03-09T14:20:15Z"
+    status: "False"
+    type: ManagementStateDegraded
+  - lastTransitionTime: "2023-03-09T14:20:15Z"
+    status: "True"
+    type: Upgradeable
   extension: null
