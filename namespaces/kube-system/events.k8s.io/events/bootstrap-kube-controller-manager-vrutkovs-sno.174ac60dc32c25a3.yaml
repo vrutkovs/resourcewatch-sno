@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 2
+deprecatedFirstTimestamp: "2023-03-09T14:19:33Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:42Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:44Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:24:44Z"
+  name: bootstrap-kube-controller-manager-vrutkovs-sno.174ac60dc32c25a3
+  namespace: kube-system
+  resourceVersion: "7177"
+  uid: bd098541-c806-487a-9205-507a81e66bd4
+note: Created container kube-controller-manager
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-controller-manager}
+  kind: Pod
+  name: bootstrap-kube-controller-manager-vrutkovs-sno
+  namespace: kube-system
+  uid: 50e2c0aeaac98cd51b394121844a05b8
+type: Normal
