@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:21:54Z"
+deprecatedLastTimestamp: "2023-03-09T14:21:54Z"
+deprecatedSource:
+  component: daemonset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:21:54Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:21:54Z"
+  name: machine-config-daemon.174ac62e853022c5
+  namespace: openshift-machine-config-operator
+  resourceVersion: "3269"
+  uid: e68053dc-1594-4a1c-85d1-0caab7b55df9
+note: 'Created pod: machine-config-daemon-vtrjl'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: DaemonSet
+  name: machine-config-daemon
+  namespace: openshift-machine-config-operator
+  resourceVersion: "3264"
+  uid: 58eb863c-67e0-453b-b99f-f0077a684bea
+type: Normal
