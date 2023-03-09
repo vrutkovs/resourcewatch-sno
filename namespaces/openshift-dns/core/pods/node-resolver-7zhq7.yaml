@@ -112,8 +112,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -129,6 +127,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:22:19Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:02Z"
   name: node-resolver-7zhq7
   namespace: openshift-dns
   ownerReferences:
@@ -138,7 +148,7 @@ metadata:
     kind: DaemonSet
     name: node-resolver
     uid: 405dbad3-d0ef-453e-981a-4538d7778afc
-  resourceVersion: "4847"
+  resourceVersion: "13919"
   uid: 453255df-8f52-4c64-92e6-43bf57f2a9eb
 spec:
   affinity:
@@ -301,8 +311,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:19Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:02Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:19Z"
