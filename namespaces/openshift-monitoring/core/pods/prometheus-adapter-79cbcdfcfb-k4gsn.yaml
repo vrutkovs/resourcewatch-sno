@@ -219,8 +219,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -233,8 +231,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -250,7 +246,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:49Z"
+    time: "2023-03-09T14:33:39Z"
   name: prometheus-adapter-79cbcdfcfb-k4gsn
   namespace: openshift-monitoring
   ownerReferences:
@@ -260,7 +256,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-adapter-79cbcdfcfb
     uid: 90f3ce22-2467-4c26-a73b-b0809c59c454
-  resourceVersion: "15999"
+  resourceVersion: "16463"
   uid: 707a0d02-a993-4fd9-bca9-6d3a3105cde2
 spec:
   automountServiceAccountToken: true
@@ -439,16 +435,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:47Z"
-    message: 'containers with unready status: [prometheus-adapter]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:33:22Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:47Z"
-    message: 'containers with unready status: [prometheus-adapter]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:33:22Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:47Z"
@@ -460,7 +452,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:86d474263af96d19f25f530fef4aa2ee8bc02e3c5202c1ecc74841626ded2852
     lastState: {}
     name: prometheus-adapter
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
