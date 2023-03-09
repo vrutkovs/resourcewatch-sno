@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:47Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:47Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:47Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:32:47Z"
+  name: prometheus-adapter-f5d985798.174ac6c69e300837
+  namespace: openshift-monitoring
+  resourceVersion: "15955"
+  uid: 0cb761e4-209d-4032-b12b-a24c9e061909
+note: 'Deleted pod: prometheus-adapter-f5d985798-pb9tz'
+reason: SuccessfulDelete
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: prometheus-adapter-f5d985798
+  namespace: openshift-monitoring
+  resourceVersion: "15944"
+  uid: 00aafcc8-1f59-40dd-81f8-296659b61ac5
+type: Normal
