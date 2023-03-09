@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/node-selector: ""
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2023-03-09T14:14:15Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-kube-controller-manager-operator
+    openshift.io/cluster-monitoring: "true"
+    openshift.io/run-level: "0"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/cluster-monitoring: {}
+          f:openshift.io/run-level: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:14:15Z"
+  name: openshift-kube-controller-manager-operator
+  resourceVersion: "447"
+  uid: f74cc489-fed3-454b-9991-1b4118bff97d
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
