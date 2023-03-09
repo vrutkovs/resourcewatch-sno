@@ -145,13 +145,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:40Z"
+    time: "2023-03-09T14:32:07Z"
   name: multus-admission-controller-7cd94d77c5
   namespace: openshift-multus
   ownerReferences:
@@ -161,7 +163,7 @@ metadata:
     kind: Deployment
     name: multus-admission-controller
     uid: 3f577280-a91b-42dc-8ed6-a9b403637b32
-  resourceVersion: "13720"
+  resourceVersion: "14323"
   uid: 01dcd71a-ca99-45b5-b37f-40bba57bfbfb
 spec:
   replicas: 1
@@ -260,6 +262,8 @@ spec:
           defaultMode: 420
           secretName: multus-admission-controller-secret
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
