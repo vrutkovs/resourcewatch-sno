@@ -1,6 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
   creationTimestamp: "2023-03-09T14:22:38Z"
   generation: 1
   labels:
@@ -10,6 +12,28 @@ metadata:
     app.kubernetes.io/part-of: openshift-monitoring
     app.kubernetes.io/version: 2.8.1
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:38Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -184,7 +208,7 @@ metadata:
     time: "2023-03-09T14:22:38Z"
   name: kube-state-metrics
   namespace: openshift-monitoring
-  resourceVersion: "5643"
+  resourceVersion: "5653"
   uid: 99b0f757-5c92-49f2-ac93-2eb4407d7bda
 spec:
   progressDeadlineSeconds: 600
@@ -340,4 +364,11 @@ spec:
         secret:
           defaultMode: 420
           secretName: kube-state-metrics-kube-rbac-proxy-config
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:22:38Z"
+    lastUpdateTime: "2023-03-09T14:22:38Z"
+    message: Created new replica set "kube-state-metrics-6b798876f4"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
