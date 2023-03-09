@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16625"
+  resourceVersion: "16631"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
@@ -67,20 +67,16 @@ status:
     reason: AsExpected
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:32:30Z"
-    message: 'WellKnownReadyControllerProgressing: kube-apiserver oauth endpoint https://10.0.130.93:6443/.well-known/oauth-authorization-server
-      is not yet served and authentication operator keeps waiting (check kube-apiserver
-      operator, and check that instances roll out successfully, which can take several
-      minutes per instance)'
-    reason: WellKnownReadyController_OAuthMetadataNotYetServed
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:33:51Z"
+    message: 'AuthenticatorCertKeyProgressing: All is well'
+    reason: AsExpected
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
       OAuthServerDeploymentAvailable: no oauth-openshift.openshift-authentication pods available on any node.
       OAuthServerRouteEndpointAccessibleControllerAvailable: Get "https://oauth-openshift.apps.ocp.choomba.one/healthz": EOF
-      WellKnownAvailable: The well-known endpoint is not yet available: kube-apiserver oauth endpoint https://10.0.130.93:6443/.well-known/oauth-authorization-server is not yet served and authentication operator keeps waiting (check kube-apiserver operator, and check that instances roll out successfully, which can take several minutes per instance)
-    reason: OAuthServerDeployment_NoPod::OAuthServerRouteEndpointAccessibleController_EndpointUnavailable::WellKnown_NotReady
+    reason: OAuthServerDeployment_NoPod::OAuthServerRouteEndpointAccessibleController_EndpointUnavailable
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
