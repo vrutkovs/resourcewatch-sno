@@ -232,10 +232,8 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
@@ -250,7 +248,7 @@ metadata:
     kind: Deployment
     name: telemeter-client
     uid: 08f8fbb9-af1b-499b-a1db-e123e8a5a590
-  resourceVersion: "8119"
+  resourceVersion: "13845"
   uid: 4d20d55e-0b0e-4d96-9919-61c23bb9cc36
 spec:
   replicas: 1
@@ -552,8 +550,6 @@ spec:
           optional: true
         name: telemeter-trusted-ca-bundle
 status:
-  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
-  readyReplicas: 1
   replicas: 1
