@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:03Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:03Z"
+deprecatedSource:
+  component: csi-snapshot-controller-operator-status-controller-statussyncer_csi-snapshot-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:03Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: csi-snapshot-controller-operator
+    operation: Update
+    time: "2023-03-09T14:22:03Z"
+  name: csi-snapshot-controller-operator.174ac630a97de2a8
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "3905"
+  uid: c522a744-ccab-40ac-9a1e-f80fe26f4159
+note: 'Status for clusteroperator/csi-snapshot-controller changed: Degraded message
+  changed from "CSISnapshotWebhookControllerDegraded: Operation cannot be fulfilled
+  on csisnapshotcontrollers.operator.openshift.io \"cluster\": the object has been
+  modified; please apply your changes to the latest version and try again" to "All
+  is well"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: csi-snapshot-controller-operator
+  namespace: openshift-cluster-storage-operator
+  uid: 79d88ae3-4366-475b-9556-f0485be3cce2
+type: Normal
