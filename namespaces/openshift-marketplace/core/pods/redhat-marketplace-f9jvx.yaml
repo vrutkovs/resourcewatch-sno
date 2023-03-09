@@ -138,6 +138,25 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:29:16Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:29:17Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"ContainersReady"}:
@@ -164,30 +183,18 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.58"}:
+            .: {}
+            f:ip: {}
         f:startTime: {}
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:16Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.ovn.org/pod-networks: {}
-    manager: vrutkovs-sno
-    operation: Update
-    time: "2023-03-09T14:29:16Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.v1.cni.cncf.io/network-status: {}
-    manager: multus
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:29:17Z"
+    time: "2023-03-09T14:29:38Z"
   name: redhat-marketplace-f9jvx
   namespace: openshift-marketplace
   ownerReferences:
@@ -197,7 +204,7 @@ metadata:
     kind: CatalogSource
     name: redhat-marketplace
     uid: b1e096c1-9aee-45b4-9c8a-7a7145b2ad1d
-  resourceVersion: "9602"
+  resourceVersion: "10121"
   uid: 64e4353e-9138-42d7-a2c0-3412e8b68186
 spec:
   containers:
@@ -337,17 +344,21 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.redhat.io/redhat/redhat-marketplace-index:v4.12
-    imageID: ""
+  - containerID: cri-o://59a5c91fb2619400be459f6a8f253872899fd926db0320f714c6651e9d01ef68
+    image: registry.redhat.io/redhat/redhat-marketplace-index:v4.12
+    imageID: registry.redhat.io/redhat/redhat-marketplace-index@sha256:5b32b791552c600a0dd74377ef6f62f65833fa7f898dd4bc8cf3f18a879cd71c
     lastState: {}
     name: registry-server
     ready: false
     restartCount: 0
     started: false
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:29:38Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.58
+  podIPs:
+  - ip: 10.128.0.58
   qosClass: Burstable
   startTime: "2023-03-09T14:29:16Z"
