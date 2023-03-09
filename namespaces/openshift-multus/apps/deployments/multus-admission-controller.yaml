@@ -129,12 +129,11 @@ metadata:
         f:observedGeneration: {}
         f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:38Z"
+    time: "2023-03-09T14:22:40Z"
   name: multus-admission-controller
   namespace: openshift-multus
   ownerReferences:
@@ -144,7 +143,7 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "5588"
+  resourceVersion: "5779"
   uid: 3f577280-a91b-42dc-8ed6-a9b403637b32
 spec:
   progressDeadlineSeconds: 600
@@ -248,7 +247,7 @@ spec:
           defaultMode: 420
           secretName: multus-admission-controller-secret
 status:
-  availableReplicas: 1
+  availableReplicas: 2
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:29Z"
     lastUpdateTime: "2023-03-09T14:22:29Z"
@@ -257,13 +256,12 @@ status:
     status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:20:26Z"
-    lastUpdateTime: "2023-03-09T14:22:38Z"
+    lastUpdateTime: "2023-03-09T14:22:40Z"
     message: ReplicaSet "multus-admission-controller-7cd94d77c5" is progressing.
     reason: ReplicaSetUpdated
     status: "True"
     type: Progressing
   observedGeneration: 2
-  readyReplicas: 1
+  readyReplicas: 2
   replicas: 2
-  unavailableReplicas: 1
   updatedReplicas: 1
