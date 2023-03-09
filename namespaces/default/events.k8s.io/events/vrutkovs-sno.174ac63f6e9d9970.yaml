@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:23:06Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:06Z"
+deprecatedSource:
+  component: machineconfigdaemon
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:23:06Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: machine-config-daemon
+    operation: Update
+    time: "2023-03-09T14:23:06Z"
+  name: vrutkovs-sno.174ac63f6e9d9970
+  namespace: default
+  resourceVersion: "6393"
+  uid: 2f10c091-8868-4b75-a5db-ba50f06387fb
+note: Config Drift Monitor started, watching against rendered-master-b84983722a8f041fcce35c8e28efcb54
+reason: ConfigDriftMonitorStarted
+regarding:
+  kind: Node
+  name: vrutkovs-sno
+  uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
+type: Normal
