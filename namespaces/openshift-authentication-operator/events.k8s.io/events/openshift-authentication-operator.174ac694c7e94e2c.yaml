@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:29:13Z"
-deprecatedLastTimestamp: "2023-03-09T14:29:13Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:05Z"
 deprecatedSource:
   component: oauth-apiserver-status-controller-statussyncer_authentication
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-09T14:29:13Z"
+    time: "2023-03-09T14:32:05Z"
   name: openshift-authentication-operator.174ac694c7e94e2c
   namespace: openshift-authentication-operator
-  resourceVersion: "9249"
+  resourceVersion: "14161"
   uid: d2d9814c-6d18-49dc-a5c6-3543304e9ddc
 note: 'Status for clusteroperator/authentication changed: Degraded message changed
   from "IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server\nOAuthServerServiceEndpointAccessibleControllerDegraded:
