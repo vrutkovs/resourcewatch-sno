@@ -58,14 +58,14 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:42Z"
+    time: "2023-03-09T14:22:43Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "5838"
+  resourceVersion: "5888"
   uid: e3da0174-daf2-4d9e-b232-e5e61f76793b
 spec:
   logLevel: Normal
@@ -136,8 +136,7 @@ status:
     status: "True"
     type: RevisionControllerDegraded
   - lastTransitionTime: "2023-03-09T14:22:24Z"
-    message: 'missing required resources: [configmaps: restore-etcd-pod, configmaps:
-      etcd-endpoints-1,etcd-metrics-proxy-client-ca-1,etcd-metrics-proxy-serving-ca-1,etcd-peer-client-ca-1,etcd-pod-1,etcd-serving-ca-1,
+    message: 'missing required resources: [configmaps: etcd-endpoints-1,etcd-metrics-proxy-client-ca-1,etcd-metrics-proxy-serving-ca-1,etcd-peer-client-ca-1,etcd-pod-1,etcd-serving-ca-1,
       secrets: etcd-all-certs-1]'
     reason: Error
     status: "True"
