@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:33Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:33Z"
+deprecatedSource:
+  component: cluster-node-tuning-operator-84595cd48f-pmhnw_8202bd7d-09b7-4b0a-81e3-1b4a16e6301d
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:33Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-node-tuning-operator
+    operation: Update
+    time: "2023-03-09T14:22:33Z"
+  name: node-tuning-operator-lock.174ac637af24adf1
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "5460"
+  uid: 2f5ba686-e212-414b-be78-2df3a34971ef
+note: cluster-node-tuning-operator-84595cd48f-pmhnw_8202bd7d-09b7-4b0a-81e3-1b4a16e6301d
+  became leader
+reason: LeaderElection
+regarding:
+  apiVersion: v1
+  kind: ConfigMap
+  name: node-tuning-operator-lock
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "5456"
+  uid: 3ab8b864-71c5-4b24-9e96-df3bad0676d0
+type: Normal
