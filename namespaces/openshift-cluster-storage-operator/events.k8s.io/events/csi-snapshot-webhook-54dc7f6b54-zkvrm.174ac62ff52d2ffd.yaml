@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:06Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:22:06Z"
+  name: csi-snapshot-webhook-54dc7f6b54-zkvrm.174ac62ff52d2ffd
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "4208"
+  uid: 43e4c172-e15f-44de-911f-9d4c3c2a9356
+note: 'MountVolume.SetUp failed for volume "certs" : secret "csi-snapshot-webhook-secret"
+  not found'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: csi-snapshot-webhook-54dc7f6b54-zkvrm
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "3516"
+  uid: 54c31e4a-7309-4e5a-a251-c52cbc91e8e8
+type: Warning
