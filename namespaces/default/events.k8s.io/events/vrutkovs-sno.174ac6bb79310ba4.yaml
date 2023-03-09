@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:31:59Z"
 deprecatedLastTimestamp: "2023-03-09T14:31:59Z"
 deprecatedSource:
@@ -28,7 +28,7 @@ metadata:
     time: "2023-03-09T14:31:59Z"
   name: vrutkovs-sno.174ac6bb79310ba4
   namespace: default
-  resourceVersion: "13341"
+  resourceVersion: "13348"
   uid: cd8d6d18-4351-488b-b96f-ba91b2597e7f
 note: 'Node vrutkovs-sno status is now: NodeHasNoDiskPressure'
 reason: NodeHasNoDiskPressure
