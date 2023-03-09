@@ -606,7 +606,7 @@ metadata:
     kind: DaemonSet
     name: ovnkube-master
     uid: 5e54e35f-7fe1-4309-a412-ba71c74af3ed
-  resourceVersion: "3072"
+  resourceVersion: "3073"
   uid: 9e75d9d6-b616-493a-90a5-773d93d969d6
 spec:
   affinity:
@@ -1485,13 +1485,13 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:33Z"
-    message: 'containers with unready status: [nbdb sbdb]'
+    message: 'containers with unready status: [nbdb]'
     reason: ContainersNotReady
     status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:33Z"
-    message: 'containers with unready status: [nbdb sbdb]'
+    message: 'containers with unready status: [nbdb]'
     reason: ContainersNotReady
     status: "False"
     type: ContainersReady
@@ -1560,7 +1560,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
     lastState: {}
     name: sbdb
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
