@@ -65,7 +65,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6265"
+  resourceVersion: "6266"
   uid: e3da0174-daf2-4d9e-b232-e5e61f76793b
 spec:
   logLevel: Normal
@@ -215,6 +215,11 @@ status:
     reason: AsExpected
     status: "False"
     type: EtcdMembersProgressing
+  - lastTransitionTime: "2023-03-09T14:23:02Z"
+    message: 1 members are available
+    reason: EtcdQuorate
+    status: "True"
+    type: EtcdMembersAvailable
   latestAvailableRevision: 2
   latestAvailableRevisionReason: ""
   nodeStatuses:
