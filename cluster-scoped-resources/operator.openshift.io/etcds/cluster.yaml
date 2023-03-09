@@ -58,14 +58,14 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:07Z"
+    time: "2023-03-09T14:23:08Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6414"
+  resourceVersion: "6433"
   uid: e3da0174-daf2-4d9e-b232-e5e61f76793b
 spec:
   logLevel: Normal
@@ -86,11 +86,9 @@ spec:
   unsupportedConfigOverrides: null
 status:
   conditions:
-  - lastTransitionTime: "2023-03-09T14:23:06Z"
-    message: 'getting cache client could not retrieve endpoints: configmaps lister
-      not synced'
-    reason: ErrorUpdatingReportEtcdMembers
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:23:08Z"
+    reason: MembersReported
+    status: "False"
     type: EtcdMembersControllerDegraded
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     reason: AsExpected
