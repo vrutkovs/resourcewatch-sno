@@ -3,6 +3,9 @@ kind: Namespace
 metadata:
   annotations:
     openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c24,c19
+    openshift.io/sa.scc.supplemental-groups: 1000590000/10000
+    openshift.io/sa.scc.uid-range: 1000590000/10000
     workload.openshift.io/allowed: management
   creationTimestamp: "2023-03-09T14:22:08Z"
   labels:
@@ -30,8 +33,19 @@ metadata:
     manager: authentication-operator
     operation: Update
     time: "2023-03-09T14:22:08Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:22:08Z"
   name: openshift-authentication
-  resourceVersion: "4273"
+  resourceVersion: "4280"
   uid: b6f8e98b-7179-4ae4-b218-93d7b3a6f5c2
 spec:
   finalizers:
