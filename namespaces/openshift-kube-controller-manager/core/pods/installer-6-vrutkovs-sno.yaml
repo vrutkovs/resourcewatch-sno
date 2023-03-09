@@ -152,12 +152,14 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"PodScheduled"}:
@@ -170,6 +172,7 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -185,7 +188,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:37:36Z"
+    time: "2023-03-09T14:38:09Z"
   name: installer-6-vrutkovs-sno
   namespace: openshift-kube-controller-manager
   ownerReferences:
@@ -193,7 +196,7 @@ metadata:
     kind: ConfigMap
     name: revision-status-6
     uid: b9b4edf4-e8a6-4aa7-b40d-b692e347e75f
-  resourceVersion: "17548"
+  resourceVersion: "17652"
   uid: d0316185-748a-4f0c-9b10-3d18d1b8fbfa
 spec:
   automountServiceAccountToken: false
@@ -308,15 +311,18 @@ status:
   conditions:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:37:34Z"
+    reason: PodCompleted
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:37:36Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:38:09Z"
+    reason: PodCompleted
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:37:36Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:38:09Z"
+    reason: PodCompleted
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:37:34Z"
@@ -328,11 +334,15 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d32df39b960a3d0fd95bb8269b5f82f104c4834d44ce0e86605741fe6546ff3d
     lastState: {}
     name: installer
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://a386d962a3d0f69e13e4ce3d017cefbbd9890d723e08896b58e06714e4d5c8e5
+        exitCode: 0
+        finishedAt: "2023-03-09T14:38:08Z"
+        reason: Completed
         startedAt: "2023-03-09T14:37:36Z"
   hostIP: 10.0.130.93
   phase: Running
