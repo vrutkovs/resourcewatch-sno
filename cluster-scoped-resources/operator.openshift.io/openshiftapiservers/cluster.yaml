@@ -36,6 +36,7 @@ metadata:
       f:status:
         .: {}
         f:conditions: {}
+        f:latestAvailableRevision: {}
         f:readyReplicas: {}
     manager: cluster-openshift-apiserver-operator
     operation: Update
@@ -47,7 +48,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4065"
+  resourceVersion: "4072"
   uid: 745e26c2-906b-4bfc-8835-c7ba9c167c7b
 spec:
   logLevel: Normal
@@ -109,4 +110,5 @@ status:
     reason: Error
     status: "True"
     type: AuditPolicyDegraded
+  latestAvailableRevision: 1
   readyReplicas: 0
