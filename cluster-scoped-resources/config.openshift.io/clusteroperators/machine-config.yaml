@@ -41,7 +41,6 @@ metadata:
         f:conditions: {}
         f:extension:
           .: {}
-          f:lastSyncError: {}
           f:master: {}
           f:worker: {}
     manager: machine-config-operator
@@ -55,7 +54,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "5285"
+  resourceVersion: "5286"
   uid: a2677b7f-e3c9-4360-88a8-42c47852f1d4
 spec: {}
 status:
@@ -71,8 +70,6 @@ status:
     status: "True"
     type: Upgradeable
   extension:
-    lastSyncError: 'pool master has not progressed to latest configuration: configuration
-      status for pool master is empty: <unknown>, retrying'
     master: <unknown>
     worker: <unknown>
   relatedObjects:
