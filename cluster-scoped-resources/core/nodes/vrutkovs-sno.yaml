@@ -14,10 +14,9 @@ metadata:
     machineconfiguration.openshift.io/desiredConfig: rendered-master-b84983722a8f041fcce35c8e28efcb54
     machineconfiguration.openshift.io/desiredDrain: uncordon-rendered-master-b84983722a8f041fcce35c8e28efcb54
     machineconfiguration.openshift.io/lastAppliedDrain: uncordon-rendered-master-b84983722a8f041fcce35c8e28efcb54
-    machineconfiguration.openshift.io/reason: machineconfig.machineconfiguration.openshift.io
-      "rendered-master-b84983722a8f041fcce35c8e28efcb54" not found
+    machineconfiguration.openshift.io/reason: ""
     machineconfiguration.openshift.io/ssh: accessed
-    machineconfiguration.openshift.io/state: Degraded
+    machineconfiguration.openshift.io/state: Done
     volumes.kubernetes.io/controller-managed-attach-detach: "true"
   creationTimestamp: "2023-03-09T14:19:59Z"
   labels:
@@ -71,20 +70,6 @@ metadata:
     fieldsV1:
       f:metadata:
         f:annotations:
-          f:machineconfiguration.openshift.io/currentConfig: {}
-          f:machineconfiguration.openshift.io/desiredConfig: {}
-          f:machineconfiguration.openshift.io/desiredDrain: {}
-          f:machineconfiguration.openshift.io/reason: {}
-          f:machineconfiguration.openshift.io/ssh: {}
-          f:machineconfiguration.openshift.io/state: {}
-    manager: machine-config-daemon
-    operation: Update
-    time: "2023-03-09T14:22:56Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
           f:machineconfiguration.openshift.io/controlPlaneTopology: {}
           f:machineconfiguration.openshift.io/lastAppliedDrain: {}
         f:labels:
@@ -114,8 +99,22 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:23:02Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:machineconfiguration.openshift.io/currentConfig: {}
+          f:machineconfiguration.openshift.io/desiredConfig: {}
+          f:machineconfiguration.openshift.io/desiredDrain: {}
+          f:machineconfiguration.openshift.io/reason: {}
+          f:machineconfiguration.openshift.io/ssh: {}
+          f:machineconfiguration.openshift.io/state: {}
+    manager: machine-config-daemon
+    operation: Update
+    time: "2023-03-09T14:23:06Z"
   name: vrutkovs-sno
-  resourceVersion: "6258"
+  resourceVersion: "6389"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
 spec: {}
 status:
