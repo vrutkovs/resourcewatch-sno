@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"vrutkovs-sno_0711b377-1a78-4cb2-8571-859555bbbce7","leaseDurationSeconds":137,"acquireTime":"2023-03-09T14:13:49Z","renewTime":"2023-03-09T14:13:58Z","leaderTransitions":0}'
+  creationTimestamp: "2023-03-09T14:13:49Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:control-plane.alpha.kubernetes.io/leader: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-09T14:13:58Z"
+  name: version
+  namespace: openshift-cluster-version
+  resourceVersion: "315"
+  uid: 8e2ca73f-e91a-45e8-8c4a-afb18b2e19a6
