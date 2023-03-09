@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:23:42Z"
-deprecatedLastTimestamp: "2023-03-09T14:23:42Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:52Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:24:44Z"
+    time: "2023-03-09T14:24:47Z"
   name: bootstrap-kube-apiserver-vrutkovs-sno.174ac6479e752e0e
   namespace: openshift-kube-apiserver
-  resourceVersion: "7149"
+  resourceVersion: "7223"
   uid: 7b4e5691-9f6f-4d14-b83a-2f579e0f3f24
 note: |+
   Readiness probe error: HTTP probe failed with statuscode: 500
