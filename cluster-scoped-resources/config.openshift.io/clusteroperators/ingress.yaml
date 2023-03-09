@@ -44,7 +44,7 @@ metadata:
     manager: ingress-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:19Z"
+    time: "2023-03-09T14:32:01Z"
   name: ingress
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4856"
+  resourceVersion: "13492"
   uid: c55987a1-3a24-4225-a426-155e472cf5db
 spec: {}
 status:
@@ -97,6 +97,9 @@ status:
     resource: dnsrecords
   - group: ""
     name: openshift-ingress
+    resource: namespaces
+  - group: ""
+    name: openshift-ingress-canary
     resource: namespaces
   versions:
   - name: operator
