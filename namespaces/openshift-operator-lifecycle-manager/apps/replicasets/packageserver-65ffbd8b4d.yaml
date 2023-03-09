@@ -156,6 +156,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:29:22Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:29:22Z"
   name: packageserver-65ffbd8b4d
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -165,7 +174,7 @@ metadata:
     kind: Deployment
     name: packageserver
     uid: 60bb2626-4e10-403c-8b3c-428e9227e322
-  resourceVersion: "9794"
+  resourceVersion: "9802"
   uid: 339a1e91-3d6d-4eda-8612-df2805c26ea5
 spec:
   replicas: 1
@@ -290,4 +299,5 @@ spec:
             path: tls.key
           secretName: packageserver-service-cert
 status:
+  observedGeneration: 1
   replicas: 0
