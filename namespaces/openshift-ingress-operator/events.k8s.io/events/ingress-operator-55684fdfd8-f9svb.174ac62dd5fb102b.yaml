@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:21:51Z"
 deprecatedLastTimestamp: "2023-03-09T14:21:51Z"
 deprecatedSource:
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:21:51Z"
+    time: "2023-03-09T14:21:52Z"
   name: ingress-operator-55684fdfd8-f9svb.174ac62dd5fb102b
   namespace: openshift-ingress-operator
-  resourceVersion: "3186"
+  resourceVersion: "3235"
   uid: 8a832d2d-2144-4446-9397-fcfa00939f8d
 note: 'MountVolume.SetUp failed for volume "metrics-tls" : secret "metrics-tls" not
   found'
