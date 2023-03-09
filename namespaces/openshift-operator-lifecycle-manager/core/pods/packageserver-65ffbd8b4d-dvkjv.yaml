@@ -189,8 +189,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -203,8 +201,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -220,7 +216,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:24Z"
+    time: "2023-03-09T14:29:25Z"
   name: packageserver-65ffbd8b4d-dvkjv
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -230,7 +226,7 @@ metadata:
     kind: ReplicaSet
     name: packageserver-65ffbd8b4d
     uid: 339a1e91-3d6d-4eda-8612-df2805c26ea5
-  resourceVersion: "9850"
+  resourceVersion: "9869"
   uid: f596f7f8-174a-4dab-9079-9621f7175acc
 spec:
   affinity: {}
@@ -378,16 +374,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:22Z"
-    message: 'containers with unready status: [packageserver]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:25Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:22Z"
-    message: 'containers with unready status: [packageserver]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:25Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:22Z"
@@ -399,7 +391,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:70c02853f645d8d0e82db73c738d51ace951044ac4e98e35d1db4f7cd75a3e71
     lastState: {}
     name: packageserver
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
