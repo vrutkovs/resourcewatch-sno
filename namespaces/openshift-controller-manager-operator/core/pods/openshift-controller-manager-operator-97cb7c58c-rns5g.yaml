@@ -191,6 +191,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -205,19 +207,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:20Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:09Z"
   name: openshift-controller-manager-operator-97cb7c58c-rns5g
   namespace: openshift-controller-manager-operator
   ownerReferences:
@@ -227,7 +217,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-controller-manager-operator-97cb7c58c
     uid: c66b1581-929b-4ff8-9bc4-9204a04611ff
-  resourceVersion: "13687"
+  resourceVersion: "14486"
   uid: 39bc9e34-f28d-4685-b8d6-f43878797f30
 spec:
   containers:
@@ -350,8 +340,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:23:20Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:23:20Z"
