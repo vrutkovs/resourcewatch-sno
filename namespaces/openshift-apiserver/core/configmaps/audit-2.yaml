@@ -1,0 +1,78 @@
+apiVersion: v1
+data:
+  policy.yaml: |
+    apiVersion: audit.k8s.io/v1
+    kind: Policy
+    metadata:
+      creationTimestamp: null
+      name: policy
+    omitManagedFields: true
+    omitStages:
+    - RequestReceived
+    rules:
+    - level: None
+      resources:
+      - resources:
+        - events
+    - level: None
+      nonResourceURLs:
+      - /api*
+      - /version
+      - /healthz
+      - /readyz
+      userGroups:
+      - system:authenticated
+      - system:unauthenticated
+    - level: None
+      namespaces:
+      - ""
+      resources:
+      - group: apiserver.openshift.io
+        resources:
+        - apirequestcounts
+        - apirequestcounts/*
+      users:
+      - system:apiserver
+    - level: RequestResponse
+      resources:
+      - group: user.openshift.io
+        resources:
+        - identities
+      - group: oauth.openshift.io
+        resources:
+        - oauthaccesstokens
+        - oauthauthorizetokens
+      verbs:
+      - create
+      - update
+      - patch
+      - delete
+    - level: Metadata
+      omitStages:
+      - RequestReceived
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:22:06Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:policy.yaml: {}
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"088c456f-5908-45a9-ad80-0c78899e72e1"}: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:22:06Z"
+  name: audit-2
+  namespace: openshift-apiserver
+  ownerReferences:
+  - apiVersion: v1
+    kind: ConfigMap
+    name: revision-status-2
+    uid: 088c456f-5908-45a9-ad80-0c78899e72e1
+  resourceVersion: "4192"
+  uid: b17802f5-63ca-42d6-9c58-a4fa44db7b53
