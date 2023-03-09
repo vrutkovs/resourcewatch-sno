@@ -1,0 +1,87 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:15Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:15Z"
+deprecatedSource:
+  component: openshift-apiserver-operator-status-controller-statussyncer_openshift-apiserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:29:15Z"
+  name: openshift-apiserver-operator.174ac695248079db
+  namespace: openshift-apiserver-operator
+  resourceVersion: "9436"
+  uid: 4300056e-8462-4ba1-83b0-dd07d99029ee
+note: 'Status for clusteroperator/openshift-apiserver changed: Available message changed
+  from "APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.apps.openshift.io:
+  not available: failing or missing response from https://10.128.0.40:8443/apis/apps.openshift.io/v1:
+  bad status from https://10.128.0.40:8443/apis/apps.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.authorization.openshift.io: not available:
+  failing or missing response from https://10.128.0.40:8443/apis/authorization.openshift.io/v1:
+  bad status from https://10.128.0.40:8443/apis/authorization.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.build.openshift.io: not available: failing
+  or missing response from https://10.128.0.40:8443/apis/build.openshift.io/v1: bad
+  status from https://10.128.0.40:8443/apis/build.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.image.openshift.io: not available: failing
+  or missing response from https://10.128.0.40:8443/apis/image.openshift.io/v1: bad
+  status from https://10.128.0.40:8443/apis/image.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.project.openshift.io: not available: failing
+  or missing response from https://10.128.0.40:8443/apis/project.openshift.io/v1:
+  bad status from https://10.128.0.40:8443/apis/project.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.quota.openshift.io: not available: failing
+  or missing response from https://10.128.0.40:8443/apis/quota.openshift.io/v1: bad
+  status from https://10.128.0.40:8443/apis/quota.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.route.openshift.io: not available: failing
+  or missing response from https://10.128.0.40:8443/apis/route.openshift.io/v1: bad
+  status from https://10.128.0.40:8443/apis/route.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.security.openshift.io: not available: failing
+  or missing response from https://10.128.0.40:8443/apis/security.openshift.io/v1:
+  bad status from https://10.128.0.40:8443/apis/security.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.template.openshift.io: not available: failing
+  or missing response from https://10.128.0.40:8443/apis/template.openshift.io/v1:
+  bad status from https://10.128.0.40:8443/apis/template.openshift.io/v1: 401" to
+  "APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.apps.openshift.io:
+  not available: failing or missing response from https://10.128.0.40:8443/apis/apps.openshift.io/v1:
+  bad status from https://10.128.0.40:8443/apis/apps.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.authorization.openshift.io: not available:
+  endpoints for service/api in \"openshift-apiserver\" have no addresses with port
+  name \"https\"\nAPIServicesAvailable: apiservices.apiregistration.k8s.io/v1.build.openshift.io:
+  not available: failing or missing response from https://10.128.0.40:8443/apis/build.openshift.io/v1:
+  bad status from https://10.128.0.40:8443/apis/build.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.image.openshift.io: not available: failing
+  or missing response from https://10.128.0.40:8443/apis/image.openshift.io/v1: bad
+  status from https://10.128.0.40:8443/apis/image.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.project.openshift.io: not available: endpoints
+  for service/api in \"openshift-apiserver\" have no addresses with port name \"https\"\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.quota.openshift.io: not available: endpoints
+  for service/api in \"openshift-apiserver\" have no addresses with port name \"https\"\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.route.openshift.io: not available: endpoints
+  for service/api in \"openshift-apiserver\" have no addresses with port name \"https\"\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.security.openshift.io: not available: endpoints
+  for service/api in \"openshift-apiserver\" have no addresses with port name \"https\"\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.template.openshift.io: not available: endpoints
+  for service/api in \"openshift-apiserver\" have no addresses with port name \"https\""'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-apiserver-operator
+  namespace: openshift-apiserver-operator
+  uid: a2161746-31b9-4c81-9d80-ec57dac3c48f
+type: Normal
