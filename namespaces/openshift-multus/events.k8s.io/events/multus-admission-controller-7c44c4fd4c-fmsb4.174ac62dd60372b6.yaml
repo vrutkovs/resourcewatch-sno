@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 4
+deprecatedCount: 5
 deprecatedFirstTimestamp: "2023-03-09T14:21:51Z"
-deprecatedLastTimestamp: "2023-03-09T14:21:54Z"
+deprecatedLastTimestamp: "2023-03-09T14:21:58Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:21:57Z"
+    time: "2023-03-09T14:22:02Z"
   name: multus-admission-controller-7c44c4fd4c-fmsb4.174ac62dd60372b6
   namespace: openshift-multus
-  resourceVersion: "3292"
+  resourceVersion: "3809"
   uid: 53b259b3-7110-473c-aeb1-51d69d854981
 note: 'MountVolume.SetUp failed for volume "webhook-certs" : secret "multus-admission-controller-secret"
   not found'
