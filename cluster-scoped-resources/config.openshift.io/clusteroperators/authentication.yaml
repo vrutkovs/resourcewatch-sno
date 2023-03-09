@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:20Z"
+    time: "2023-03-09T14:22:23Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,15 +52,16 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4890"
+  resourceVersion: "5046"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: "WebhookAuthenticatorControllerDegraded: failed to retrieve service openshift-oauth-apiserver/api:
-      service \"api\" not found\nOAuthServiceDegraded: Unable to get oauth server
-      service: service \"oauth-openshift\" not found\nAPIServerDeploymentDegraded:
+      service \"api\" not found\nOAuthServerServiceEndpointAccessibleControllerDegraded:
+      configmap \"v4-0-config-system-service-ca\" not found\nOAuthServiceDegraded:
+      Unable to get oauth server service: service \"oauth-openshift\" not found\nAPIServerDeploymentDegraded:
       waiting for observed configuration to be available (haven't found APIServerArguments
       in spec.ObservedConfig.Raw)\nAPIServerDeploymentDegraded: \nOAuthServerConfigObservationDegraded:
       secret \"v4-0-config-system-router-certs\" not found\nIngressStateEndpointsDegraded:
