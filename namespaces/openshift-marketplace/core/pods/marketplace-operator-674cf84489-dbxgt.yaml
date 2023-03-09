@@ -209,6 +209,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -221,6 +223,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -236,7 +240,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:27:27Z"
+    time: "2023-03-09T14:29:14Z"
   name: marketplace-operator-674cf84489-dbxgt
   namespace: openshift-marketplace
   ownerReferences:
@@ -246,7 +250,7 @@ metadata:
     kind: ReplicaSet
     name: marketplace-operator-674cf84489
     uid: 6de7f729-4467-44a0-b559-6acd49abfed5
-  resourceVersion: "7808"
+  resourceVersion: "9372"
   uid: e0c97e17-7e07-4da5-9587-dcabc1819678
 spec:
   containers:
@@ -400,12 +404,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:27:27Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:29:11Z"
+    message: 'containers with unready status: [marketplace-operator]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:27:27Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:29:11Z"
+    message: 'containers with unready status: [marketplace-operator]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:21:51Z"
@@ -423,7 +431,7 @@ status:
         reason: Completed
         startedAt: "2023-03-09T14:24:44Z"
     name: marketplace-operator
-    ready: true
+    ready: false
     restartCount: 2
     started: true
     state:
