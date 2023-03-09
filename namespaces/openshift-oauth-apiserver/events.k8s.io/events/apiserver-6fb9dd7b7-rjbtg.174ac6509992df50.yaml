@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:24:20Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:20Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:24:53Z"
+  name: apiserver-6fb9dd7b7-rjbtg.174ac6509992df50
+  namespace: openshift-oauth-apiserver
+  resourceVersion: "7327"
+  uid: f3f123d8-c012-482e-abce-8449e1297f0d
+note: 'MountVolume.SetUp failed for volume "audit-policies" : object "openshift-oauth-apiserver"/"audit-0"
+  not registered'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: apiserver-6fb9dd7b7-rjbtg
+  namespace: openshift-oauth-apiserver
+  resourceVersion: "4548"
+  uid: 55a83382-2c01-473e-b952-0d3de004e919
+type: Warning
