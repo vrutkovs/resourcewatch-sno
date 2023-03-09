@@ -1,0 +1,41 @@
+action: Scheduling
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:20:00.731559Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:00Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:20:00Z"
+  name: cluster-node-tuning-operator-84595cd48f-pmhnw.174ac61416b55fa8
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "2381"
+  uid: db4fb77c-05f2-485c-8bcc-7beb76e65f48
+note: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+  }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
+reason: FailedScheduling
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: cluster-node-tuning-operator-84595cd48f-pmhnw
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "2379"
+  uid: 5eb0d1b7-2449-4479-93aa-eda071f39d77
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Warning
