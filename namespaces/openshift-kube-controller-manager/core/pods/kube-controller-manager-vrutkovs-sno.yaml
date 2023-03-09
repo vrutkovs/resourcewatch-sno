@@ -332,7 +332,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:39:24Z"
+    time: "2023-03-09T14:39:32Z"
   name: kube-controller-manager-vrutkovs-sno
   namespace: openshift-kube-controller-manager
   ownerReferences:
@@ -341,7 +341,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "17940"
+  resourceVersion: "17967"
   uid: 90fba2be-3b3f-43d0-b578-7ad1c088d548
 spec:
   containers:
@@ -607,7 +607,7 @@ status:
     name: cluster-policy-controller
     ready: false
     restartCount: 1
-    started: false
+    started: true
     state:
       running:
         startedAt: "2023-03-09T14:39:23Z"
