@@ -1,0 +1,48 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:06Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:06Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-status-controller-statussyncer_kube-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:07Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:22:07Z"
+  name: openshift-kube-scheduler-operator.174ac631667fc0b6
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "4240"
+  uid: eb9a2dfd-0b2a-4f86-9550-4fd4b6c1a9c1
+note: 'Status for clusteroperator/kube-scheduler changed: Degraded message changed
+  from "InstallerControllerDegraded: missing required resources: [secrets: kube-scheduler-client-cert-key,
+  configmaps: config-0,kube-scheduler-cert-syncer-kubeconfig-0,kube-scheduler-pod-0,scheduler-kubeconfig-0,serviceaccount-ca-0,
+  secrets: localhost-recovery-client-token-0]\nNodeControllerDegraded: All master
+  nodes are ready" to "InstallerControllerDegraded: missing required resources: [secrets:
+  kube-scheduler-client-cert-key, configmaps: config-0,kube-scheduler-cert-syncer-kubeconfig-0,kube-scheduler-pod-0,scheduler-kubeconfig-0,serviceaccount-ca-0,
+  secrets: localhost-recovery-client-token-0]\nNodeControllerDegraded: All master
+  nodes are ready\nRevisionControllerDegraded: Operation cannot be fulfilled on kubeschedulers.operator.openshift.io
+  \"cluster\": the object has been modified; please apply your changes to the latest
+  version and try again"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 63ed6034-26ff-494c-bb49-f929f1f6a34d
+type: Normal
