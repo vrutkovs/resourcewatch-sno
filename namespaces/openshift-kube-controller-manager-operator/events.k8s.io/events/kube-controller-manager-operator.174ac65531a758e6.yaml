@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:24:40Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:40Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-status-controller-statussyncer_kube-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:40Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:24:40Z"
+  name: kube-controller-manager-operator.174ac65531a758e6
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "7083"
+  uid: 8fb13e95-c0cc-4c03-af76-9e693411b600
+note: 'Status for clusteroperator/kube-controller-manager changed: Degraded changed
+  from False to True ("GarbageCollectorDegraded: error fetching rules: Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\":
+  dial tcp 172.30.121.173:9091: connect: connection refused\nInstallerControllerDegraded:
+  missing required resources: [configmaps: aggregator-client-ca,client-ca, secrets:
+  kube-controller-manager-client-cert-key]")'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Normal
