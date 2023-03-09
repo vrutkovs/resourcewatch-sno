@@ -154,6 +154,24 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:14:30Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:14:30Z"
   name: assisted-installer-controller-vwq9s
   namespace: assisted-installer
   ownerReferences:
@@ -163,7 +181,7 @@ metadata:
     kind: Job
     name: assisted-installer-controller
     uid: f5a4e959-715f-4436-8272-3a0acf078c12
-  resourceVersion: "576"
+  resourceVersion: "581"
   uid: bf338db4-906a-4d43-be22-8959360a0341
 spec:
   containers:
@@ -317,5 +335,12 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:14:30Z"
+    message: no nodes available to schedule pods
+    reason: Unschedulable
+    status: "False"
+    type: PodScheduled
   phase: Pending
   qosClass: BestEffort
