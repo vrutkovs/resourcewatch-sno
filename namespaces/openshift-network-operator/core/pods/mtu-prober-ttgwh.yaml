@@ -74,7 +74,7 @@ metadata:
     kind: Job
     name: mtu-prober
     uid: db7d7933-5153-400a-a756-a012e41bd310
-  resourceVersion: "2486"
+  resourceVersion: "2487"
   uid: 921f35b3-628d-4f61-8af9-88f3a1ba4c45
 spec:
   containers:
@@ -104,6 +104,7 @@ spec:
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
   hostNetwork: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     kubernetes.io/os: linux
   preemptionPolicy: PreemptLowerPriority
@@ -161,5 +162,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:15Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
