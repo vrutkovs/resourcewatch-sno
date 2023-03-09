@@ -298,14 +298,16 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
     time: "2023-03-09T14:33:06Z"
   name: oauth-openshift
   namespace: openshift-authentication
-  resourceVersion: "16304"
+  resourceVersion: "16307"
   uid: 28c413a6-04a7-4cae-8efd-4240ba332c8e
 spec:
   progressDeadlineSeconds: 600
@@ -525,4 +527,6 @@ status:
     status: "True"
     type: Progressing
   observedGeneration: 3
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
