@@ -1,0 +1,197 @@
+apiVersion: v1
+data:
+  forceRedeploymentReason: ""
+  pod.yaml: |
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: etcd
+      namespace: openshift-etcd
+      labels:
+        app: etcd
+        k8s-app: etcd
+        etcd: "true"
+        revision: "REVISION"
+    spec:
+      containers:
+      - name: etcd
+        image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+        imagePullPolicy: IfNotPresent
+        terminationMessagePolicy: FallbackToLogsOnError
+        command:
+          - /bin/sh
+          - -c
+          - |
+            #!/bin/sh
+            set -euo pipefail
+
+            export ETCD_NAME=${NODE_NODE_ENVVAR_NAME_ETCD_NAME}
+            export ETCD_INITIAL_CLUSTER="${ETCD_NAME}=https://${NODE_NODE_ENVVAR_NAME_ETCD_URL_HOST}:2380"
+            env | grep ETCD | grep -v NODE
+            export ETCD_NODE_PEER_URL=https://${NODE_NODE_ENVVAR_NAME_ETCD_URL_HOST}:2380
+
+            # checking if there are any fio perf file left behind that could be deleted without problems
+            if [ ! -z $(ls -A "/var/lib/etcd/etcd_perf*") ]; then
+              rm -f /var/lib/etcd/etcd_perf*
+            fi
+
+            # checking if data directory is empty, if not etcdctl restore will fail
+            if [ ! -z $(ls -A "/var/lib/etcd") ]; then
+              echo "please delete the contents of data directory before restoring, running the restore script will do this for you"
+              exit 1
+            fi
+
+            # check if we have backup file to be restored
+            # if the file exist, check if it has not changed size in last 5 seconds
+            if [ ! -f /var/lib/etcd-backup/snapshot.db ]; then
+              echo "please make a copy of the snapshot db file, then move that copy to /var/lib/etcd-backup/snapshot.db"
+              exit 1
+            else
+              filesize=$(stat --format=%s "/var/lib/etcd-backup/snapshot.db")
+              sleep 5
+              newfilesize=$(stat --format=%s "/var/lib/etcd-backup/snapshot.db")
+              if [ "$filesize" != "$newfilesize" ]; then
+                echo "file size has changed since last 5 seconds, retry sometime after copying is complete"
+                exit 1
+              fi
+            fi
+
+            UUID=$(uuidgen)
+            echo "restoring to a single node cluster"
+            ETCDCTL_API=3 /usr/bin/etcdctl snapshot restore /var/lib/etcd-backup/snapshot.db \
+             --name  $ETCD_NAME \
+             --initial-cluster=$ETCD_INITIAL_CLUSTER \
+             --initial-cluster-token "openshift-etcd-${UUID}" \
+             --initial-advertise-peer-urls $ETCD_NODE_PEER_URL \
+             --data-dir="/var/lib/etcd/restore-${UUID}"
+
+            mv /var/lib/etcd/restore-${UUID}/* /var/lib/etcd/
+
+            rmdir /var/lib/etcd/restore-${UUID}
+            rm /var/lib/etcd-backup/snapshot.db
+
+            set -x
+            exec etcd \
+              --logger=zap \
+              --log-level=info \
+              --initial-advertise-peer-urls=https://${NODE_NODE_ENVVAR_NAME_IP}:2380 \
+              --cert-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-NODE_NAME.crt \
+              --key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-NODE_NAME.key \
+              --trusted-ca-file=/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt \
+              --client-cert-auth=true \
+              --peer-cert-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-NODE_NAME.crt \
+              --peer-key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-NODE_NAME.key \
+              --peer-trusted-ca-file=/etc/kubernetes/static-pod-certs/configmaps/etcd-peer-client-ca/ca-bundle.crt \
+              --peer-client-cert-auth=true \
+              --advertise-client-urls=https://${NODE_NODE_ENVVAR_NAME_IP}:2379 \
+              --listen-client-urls=https://0.0.0.0:2379 \
+              --listen-peer-urls=https://0.0.0.0:2380 \
+              --metrics=extensive \
+              --listen-metrics-urls=https://0.0.0.0:9978
+        env:
+          - name: "ALL_ETCD_ENDPOINTS"
+            value: "https://10.0.130.93:2379"
+          - name: "ETCDCTL_API"
+            value: "3"
+          - name: "ETCDCTL_CACERT"
+            value: "/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt"
+          - name: "ETCDCTL_CERT"
+            value: "/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-NODE_NAME.crt"
+          - name: "ETCDCTL_ENDPOINTS"
+            value: "https://10.0.130.93:2379"
+          - name: "ETCDCTL_KEY"
+            value: "/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-NODE_NAME.key"
+          - name: "ETCD_CIPHER_SUITES"
+            value: "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
+          - name: "ETCD_DATA_DIR"
+            value: "/var/lib/etcd"
+          - name: "ETCD_ELECTION_TIMEOUT"
+            value: "1000"
+          - name: "ETCD_ENABLE_PPROF"
+            value: "true"
+          - name: "ETCD_EXPERIMENTAL_MAX_LEARNERS"
+            value: "1"
+          - name: "ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION"
+            value: "200ms"
+          - name: "ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL"
+            value: "5s"
+          - name: "ETCD_HEARTBEAT_INTERVAL"
+            value: "100"
+          - name: "ETCD_IMAGE"
+            value: "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76"
+          - name: "ETCD_INITIAL_CLUSTER_STATE"
+            value: "existing"
+          - name: "ETCD_QUOTA_BACKEND_BYTES"
+            value: "8589934592"
+          - name: "ETCD_SOCKET_REUSE_ADDRESS"
+            value: "true"
+          - name: "NODE_vrutkovs_sno_ETCD_NAME"
+            value: "vrutkovs-sno"
+          - name: "NODE_vrutkovs_sno_ETCD_URL_HOST"
+            value: "10.0.130.93"
+          - name: "NODE_vrutkovs_sno_IP"
+            value: "10.0.130.93"
+          - name: "ETCD_STATIC_POD_REV"
+            value: "REVISION"
+        resources:
+          requests:
+            memory: 600Mi
+            cpu: 300m
+        readinessProbe:
+          tcpSocket:
+            port: 2380
+          failureThreshold: 3
+          initialDelaySeconds: 3
+          periodSeconds: 5
+          successThreshold: 1
+          timeoutSeconds: 5
+        securityContext:
+          privileged: true
+        volumeMounts:
+          - mountPath: /etc/kubernetes/manifests
+            name: static-pod-dir
+          - mountPath: /etc/kubernetes/static-pod-certs
+            name: cert-dir
+          - mountPath: /var/lib/etcd/
+            name: data-dir
+          - mountPath: /var/lib/etcd-backup/
+            name: backup-dir
+      hostNetwork: true
+      priorityClassName: system-node-critical
+      tolerations:
+      - operator: "Exists"
+      volumes:
+        - hostPath:
+            path: /etc/kubernetes/manifests
+          name: static-pod-dir
+        - hostPath:
+            path: /etc/kubernetes/static-pod-resources/etcd-certs
+          name: cert-dir
+        - hostPath:
+            path: /var/lib/etcd
+            type: ""
+          name: data-dir
+        - hostPath:
+            path: /var/lib/etcd-backup
+            type: ""
+          name: backup-dir
+  version: v0.0.0-alpha.0-1235-gb40e0f9
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:22:40Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:forceRedeploymentReason: {}
+        f:pod.yaml: {}
+        f:version: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-09T14:22:40Z"
+  name: restore-etcd-pod
+  namespace: openshift-etcd
+  resourceVersion: "5790"
+  uid: f831827d-d19d-4317-b7fe-7d15a2b4e387
