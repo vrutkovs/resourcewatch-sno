@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
 deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:22:00Z"
   name: etcd-operator.174ac62ffd4cab0e
   namespace: openshift-etcd-operator
-  resourceVersion: "3628"
+  resourceVersion: "3631"
   uid: 1582f156-47bc-463a-84ed-5ea35159a24b
 note: etcds.operator.openshift.io "cluster" not found
 reason: ReportEtcdMembersErrorUpdatingStatus
