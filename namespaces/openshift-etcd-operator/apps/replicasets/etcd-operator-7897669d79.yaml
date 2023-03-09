@@ -187,11 +187,13 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:15:08Z"
+    time: "2023-03-09T14:19:59Z"
   name: etcd-operator-7897669d79
   namespace: openshift-etcd-operator
   ownerReferences:
@@ -201,7 +203,7 @@ metadata:
     kind: Deployment
     name: etcd-operator
     uid: 83b0ee74-72c5-4b95-9e21-87b97e13fab6
-  resourceVersion: "2302"
+  resourceVersion: "2303"
   uid: e176b871-584e-4519-89f0-3385169cda9c
 spec:
   replicas: 1
@@ -322,5 +324,6 @@ spec:
           defaultMode: 420
           secretName: etcd-client
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
