@@ -42,7 +42,7 @@ metadata:
     manager: cluster-network-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:20Z"
+    time: "2023-03-09T14:20:21Z"
   name: network
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -50,7 +50,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "2530"
+  resourceVersion: "2533"
   uid: efc0e65e-4103-4be7-8a5a-99dd46b6df53
 spec: {}
 status:
@@ -70,4 +70,7 @@ status:
   - lastTransitionTime: "2023-03-09T14:20:15Z"
     status: "True"
     type: Upgradeable
+  - lastTransitionTime: "2023-03-09T14:20:21Z"
+    status: "False"
+    type: Progressing
   extension: null
