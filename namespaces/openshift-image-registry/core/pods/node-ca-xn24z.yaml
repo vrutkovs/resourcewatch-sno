@@ -1,0 +1,221 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    openshift.io/scc: privileged
+  creationTimestamp: "2023-03-09T14:34:56Z"
+  generateName: node-ca-
+  labels:
+    controller-revision-hash: 568fcdb8db
+    name: node-ca
+    pod-template-generation: "1"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:controller-revision-hash: {}
+          f:name: {}
+          f:pod-template-generation: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"693646fe-3c8a-4a56-9340-c702bb10b463"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:nodeAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"node-ca"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+              f:runAsGroup: {}
+              f:runAsUser: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/docker/certs.d"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/tmp/serviceca"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"host"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"serviceca"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:34:56Z"
+  name: node-ca-xn24z
+  namespace: openshift-image-registry
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: node-ca
+    uid: 693646fe-3c8a-4a56-9340-c702bb10b463
+  resourceVersion: "16921"
+  uid: fef2b105-4db4-4000-81c7-8b8797bd2808
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - vrutkovs-sno
+  containers:
+  - command:
+    - /bin/sh
+    - -c
+    - |
+      trap 'jobs -p | xargs -r kill; echo shutting down node-ca; exit 0' TERM
+      while [ true ];
+      do
+        for f in $(ls /tmp/serviceca); do
+            echo $f
+            ca_file_path="/tmp/serviceca/${f}"
+            f=$(echo $f | sed  -r 's/(.*)\.\./\1:/')
+            reg_dir_path="/etc/docker/certs.d/${f}"
+            if [ -e "${reg_dir_path}" ]; then
+                cp -u $ca_file_path $reg_dir_path/ca.crt
+            else
+                mkdir $reg_dir_path
+                cp $ca_file_path $reg_dir_path/ca.crt
+            fi
+        done
+        for d in $(ls /etc/docker/certs.d); do
+            echo $d
+            dp=$(echo $d | sed  -r 's/(.*):/\1\.\./')
+            reg_conf_path="/tmp/serviceca/${dp}"
+            if [ ! -e "${reg_conf_path}" ]; then
+                rm -rf /etc/docker/certs.d/$d
+            fi
+        done
+        sleep 60 & wait ${!}
+      done
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:15810750917159187c7aec36e164212832cbaabc5c4b040a63252fe4238b40d1
+    imagePullPolicy: IfNotPresent
+    name: node-ca
+    resources:
+      requests:
+        cpu: 10m
+        memory: 10Mi
+    securityContext:
+      privileged: true
+      runAsGroup: 0
+      runAsNonRoot: true
+      runAsUser: 1001
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /tmp/serviceca
+      name: serviceca
+    - mountPath: /etc/docker/certs.d
+      name: host
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-vbwh8
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  imagePullSecrets:
+  - name: node-ca-dockercfg-n5ft8
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: node-ca
+  serviceAccountName: node-ca
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/docker/certs.d
+      type: ""
+    name: host
+  - configMap:
+      defaultMode: 420
+      name: image-registry-certificates
+    name: serviceca
+  - name: kube-api-access-vbwh8
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  phase: Pending
+  qosClass: Burstable
