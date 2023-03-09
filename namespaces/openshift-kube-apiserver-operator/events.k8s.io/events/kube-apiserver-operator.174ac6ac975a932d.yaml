@@ -1,0 +1,51 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:30:55Z"
+deprecatedLastTimestamp: "2023-03-09T14:30:55Z"
+deprecatedSource:
+  component: kube-apiserver-operator-status-controller-statussyncer_kube-apiserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:30:55Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:30:55Z"
+  name: kube-apiserver-operator.174ac6ac975a932d
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "10866"
+  uid: daf3c765-99b7-4c21-9f05-4a37bb3a4d59
+note: 'Status for clusteroperator/kube-apiserver changed: Degraded message changed
+  from "NodeControllerDegraded: All master nodes are ready\nInstallerControllerDegraded:
+  missing required resources: [configmaps: aggregator-client-ca,check-endpoints-kubeconfig,client-ca,control-plane-node-kubeconfig,
+  secrets: aggregator-client,check-endpoints-client-cert-key,control-plane-node-admin-client-cert-key,external-loadbalancer-serving-certkey,internal-loadbalancer-serving-certkey,kubelet-client,localhost-serving-cert-certkey,node-kubeconfigs,service-network-serving-certkey,
+  configmaps: bound-sa-token-signing-certs-0,config-0,etcd-serving-ca-0,kube-apiserver-audit-policies-0,kube-apiserver-cert-syncer-kubeconfig-0,kube-apiserver-pod-0,kubelet-serving-ca-0,sa-token-signing-certs-0,
+  secrets: etcd-client-0,localhost-recovery-client-token-0,localhost-recovery-serving-certkey-0]"
+  to "NodeControllerDegraded: All master nodes are ready\nInstallerControllerDegraded:
+  missing required resources: [configmaps: bound-sa-token-signing-certs-1,config-1,etcd-serving-ca-1,kube-apiserver-audit-policies-1,kube-apiserver-cert-syncer-kubeconfig-1,kube-apiserver-pod-1,kubelet-serving-ca-1,sa-token-signing-certs-1,
+  secrets: etcd-client-1,localhost-recovery-client-token-1,localhost-recovery-serving-certkey-1]",Progressing
+  changed from False to True ("NodeInstallerProgressing: 1 nodes are at revision 0;
+  0 nodes have achieved new revision 1"),Available message changed from "StaticPodsAvailable:
+  0 nodes are active; 1 nodes are at revision 0" to "StaticPodsAvailable: 0 nodes
+  are active; 1 nodes are at revision 0; 0 nodes have achieved new revision 1"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Normal
