@@ -43,14 +43,14 @@ metadata:
     manager: console
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:22Z"
+    time: "2023-03-09T14:32:25Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15031"
+  resourceVersion: "15123"
   uid: 220131d0-1fdb-4e14-a9b0-f123fc3fa77f
 spec:
   logLevel: Normal
@@ -96,6 +96,15 @@ status:
     reason: RouteNotAdmitted
     status: "False"
     type: RouteHealthAvailable
+  - lastTransitionTime: "2023-03-09T14:32:23Z"
+    message: no ingress for host console-openshift-console.apps.ocp.choomba.one in
+      route console in namespace openshift-console
+    reason: FailedIngress
+    status: "True"
+    type: SyncLoopRefreshDegraded
+  - lastTransitionTime: "2023-03-09T14:32:23Z"
+    status: "False"
+    type: SyncLoopRefreshProgressing
   generations:
   - group: apps
     hash: ""
