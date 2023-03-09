@@ -298,8 +298,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -312,8 +310,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -339,7 +335,7 @@ metadata:
     kind: ReplicaSet
     name: oauth-openshift-7749b8f584
     uid: 445b598f-a0d5-402c-9e1b-cdda347aad21
-  resourceVersion: "15421"
+  resourceVersion: "15429"
   uid: 6f6eb656-5372-4dd2-958f-29163b5fec6a
 spec:
   affinity:
@@ -562,16 +558,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:25Z"
-    message: 'containers with unready status: [oauth-openshift]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:32:32Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:25Z"
-    message: 'containers with unready status: [oauth-openshift]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:32:32Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:25Z"
@@ -583,7 +575,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:15e21cbe2bb0386ae5b03e5029a4e41668d16e52862bbeb297ec6e4aaaa2493f
     lastState: {}
     name: oauth-openshift
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
