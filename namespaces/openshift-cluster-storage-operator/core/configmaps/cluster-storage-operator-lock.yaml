@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"cluster-storage-operator-6cc87ccb44-4q45b_5b166edb-7b50-416d-a32f-3f2b2f2852be","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:29:12Z","renewTime":"2023-03-09T14:35:12Z","leaderTransitions":0}'
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"cluster-storage-operator-6cc87ccb44-4q45b_5b166edb-7b50-416d-a32f-3f2b2f2852be","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:29:12Z","renewTime":"2023-03-09T14:36:12Z","leaderTransitions":0}'
   creationTimestamp: "2023-03-09T14:29:12Z"
   managedFields:
   - apiVersion: v1
@@ -14,8 +14,8 @@ metadata:
           f:control-plane.alpha.kubernetes.io/leader: {}
     manager: cluster-storage-operator
     operation: Update
-    time: "2023-03-09T14:35:12Z"
+    time: "2023-03-09T14:36:12Z"
   name: cluster-storage-operator-lock
   namespace: openshift-cluster-storage-operator
-  resourceVersion: "17084"
+  resourceVersion: "17287"
   uid: d4c2de35-8edf-4175-ac89-f747981cb9a6
