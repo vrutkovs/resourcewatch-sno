@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:23:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:00Z"
+deprecatedSource:
+  component: openshift-controller-manager-operator-status-controller-statussyncer_openshift-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:23:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:23:00Z"
+  name: openshift-controller-manager-operator.174ac63dd978d29b
+  namespace: openshift-controller-manager-operator
+  resourceVersion: "6118"
+  uid: db5d3f3e-b2c2-4e49-ab87-96d9272d4946
+note: 'Status for clusteroperator/openshift-controller-manager changed: Degraded set
+  to False ("All is well"),Progressing set to Unknown (""),Available set to Unknown
+  (""),Upgradeable set to Unknown (""),status.relatedObjects changed from [] to [{"operator.openshift.io"
+  "openshiftcontrollermanagers" "" "cluster"} {"" "namespaces" "" "openshift-config"}
+  {"" "namespaces" "" "openshift-config-managed"} {"" "namespaces" "" "openshift-controller-manager-operator"}
+  {"" "namespaces" "" "openshift-controller-manager"} {"" "namespaces" "" "openshift-route-controller-manager"}]'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-controller-manager-operator
+  namespace: openshift-controller-manager-operator
+  uid: 79e5a595-58b3-4198-82cc-8e7f0f9cd29e
+type: Normal
