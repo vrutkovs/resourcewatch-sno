@@ -126,7 +126,9 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -140,7 +142,7 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "2643"
+  resourceVersion: "2644"
   uid: 3f577280-a91b-42dc-8ed6-a9b403637b32
 spec:
   progressDeadlineSeconds: 600
@@ -247,15 +249,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:20:26Z"
     lastUpdateTime: "2023-03-09T14:20:26Z"
-    message: Created new replica set "multus-admission-controller-7c44c4fd4c"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-09T14:20:26Z"
-    lastUpdateTime: "2023-03-09T14:20:26Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-09T14:20:26Z"
+    lastUpdateTime: "2023-03-09T14:20:26Z"
+    message: ReplicaSet "multus-admission-controller-7c44c4fd4c" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
