@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "14403"
+  resourceVersion: "14410"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
@@ -74,11 +74,9 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
       APIServerDeploymentAvailable: no apiserver.openshift-oauth-apiserver pods available on any node.
-      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.oauth.openshift.io: not available: endpoints for service/api in "openshift-oauth-apiserver" have no addresses with port name "https"
-      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.user.openshift.io: not available: endpoints for service/api in "openshift-oauth-apiserver" have no addresses with port name "https"
       OAuthServerServiceEndpointAccessibleControllerAvailable: Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443: connect: connection refused
       OAuthServerServiceEndpointsEndpointAccessibleControllerAvailable: endpoints "oauth-openshift" not found
-    reason: APIServerDeployment_NoPod::APIServices_Error::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound
+    reason: APIServerDeployment_NoPod::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
