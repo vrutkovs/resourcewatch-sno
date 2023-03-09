@@ -1,0 +1,78 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:33:47Z"
+deprecatedLastTimestamp: "2023-03-09T14:33:47Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-status-controller-statussyncer_kube-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:33:47Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:33:47Z"
+  name: kube-controller-manager-operator.174ac6d48e38f0b8
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "16581"
+  uid: b9b5b0a0-51a6-4fc8-b982-8ca0a95f7e56
+note: 'Status for clusteroperator/kube-controller-manager changed: Degraded changed
+  from True to False ("NodeControllerDegraded: All master nodes are ready\nKubeControllerManagerStaticResourcesDegraded:
+  \"assets/kube-controller-manager/ns.yaml\" (string): Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nKubeControllerManagerStaticResourcesDegraded:
+  \"assets/kube-controller-manager/leader-election-rolebinding.yaml\" (string): Get
+  \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/rolebindings/system:openshift:leader-locking-kube-controller-manager\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nKubeControllerManagerStaticResourcesDegraded:
+  \"assets/kube-controller-manager/leader-election-cluster-policy-controller-role.yaml\"
+  (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/openshift-kube-controller-manager/roles/system:openshift:leader-election-lock-cluster-policy-controller\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nKubeControllerManagerStaticResourcesDegraded:
+  \"assets/kube-controller-manager/leader-election-cluster-policy-controller-rolebinding.yaml\"
+  (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/namespaces/openshift-kube-controller-manager/rolebindings/system:openshift:leader-election-lock-cluster-policy-controller\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nKubeControllerManagerStaticResourcesDegraded:
+  \"assets/kube-controller-manager/namespace-security-allocation-controller-clusterrole.yaml\"
+  (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterroles/system:openshift:controller:namespace-security-allocation-controller\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nKubeControllerManagerStaticResourcesDegraded:
+  \"assets/kube-controller-manager/namespace-security-allocation-controller-clusterrolebinding.yaml\"
+  (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/system:openshift:controller:namespace-security-allocation-controller\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nKubeControllerManagerStaticResourcesDegraded:
+  \"assets/kube-controller-manager/podsecurity-admission-label-syncer-controller-clusterrole.yaml\"
+  (string): clusterroles.rbac.authorization.k8s.io \"system:openshift:controller:podsecurity-admission-label-syncer-controller\"
+  is forbidden: User \"system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator\"
+  cannot get resource \"clusterroles\" in API group \"rbac.authorization.k8s.io\"
+  at the cluster scope\nKubeControllerManagerStaticResourcesDegraded: \"assets/kube-controller-manager/podsecurity-admission-label-syncer-controller-clusterrolebinding.yaml\"
+  (string): clusterrolebindings.rbac.authorization.k8s.io \"system:openshift:controller:podsecurity-admission-label-syncer-controller\"
+  is forbidden: User \"system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator\"
+  cannot get resource \"clusterrolebindings\" in API group \"rbac.authorization.k8s.io\"
+  at the cluster scope\nKubeControllerManagerStaticResourcesDegraded: \"assets/kube-controller-manager/namespace-openshift-infra.yaml\"
+  (string): namespaces \"openshift-infra\" is forbidden: User \"system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator\"
+  cannot get resource \"namespaces\" in API group \"\" in the namespace \"openshift-infra\"\nKubeControllerManagerStaticResourcesDegraded:
+  \"assets/kube-controller-manager/svc.yaml\" (string): services \"kube-controller-manager\"
+  is forbidden: User \"system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator\"
+  cannot get resource \"services\" in API group \"\" in the namespace \"openshift-kube-controller-manager\"\nKubeControllerManagerStaticResourcesDegraded:
+  \"assets/kube-controller-manager/sa.yaml\" (string): serviceaccounts \"kube-controller-manager-sa\"
+  is forbidden: User \"system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator\"
+  cannot get resource \"serviceaccounts\" in API group \"\" in the namespace \"openshift-kube-controller-manager\"\nKubeControllerManagerStaticResourcesDegraded:
+  \"assets/kube-controller-manager/recycler-sa.yaml\" (string): serviceaccounts \"pv-recycler-controller\"
+  is forbidden: User \"system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator\"
+  cannot get resource \"serviceaccounts\" in API group \"\" in the namespace \"openshift-infra\"\nKubeControllerManagerStaticResourcesDegraded:
+  ")'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Normal
