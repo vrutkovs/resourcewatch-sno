@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:39Z"
+    time: "2023-03-09T14:30:15Z"
   name: kube-controller-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10149"
+  resourceVersion: "10444"
   uid: fc4da80c-8238-45f0-831b-b76abd6e6070
 spec: {}
 status:
@@ -112,3 +112,7 @@ status:
   versions:
   - name: raw-internal
     version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+  - name: operator
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+  - name: kube-controller-manager
+    version: 1.26.2
