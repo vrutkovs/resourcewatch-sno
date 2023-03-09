@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:57Z"
+    time: "2023-03-09T14:23:02Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,23 +52,20 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6093"
+  resourceVersion: "6276"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: "WebhookAuthenticatorControllerDegraded: failed to retrieve service openshift-oauth-apiserver/api:
-      service \"api\" not found\nOAuthServerServiceEndpointAccessibleControllerDegraded:
-      configmap \"v4-0-config-system-service-ca\" not found\nOAuthServerServiceEndpointsEndpointAccessibleControllerDegraded:
-      oauth service endpoints are not ready\nAPIServerDeploymentDegraded: waiting
-      for observed configuration to be available (haven't found APIServerArguments
-      in spec.ObservedConfig.Raw)\nAPIServerDeploymentDegraded: \nOAuthServerConfigObservationDegraded:
-      secret \"v4-0-config-system-router-certs\" not found\nIngressStateEndpointsDegraded:
-      No subsets found for the endpoints of oauth-server\nRevisionControllerDegraded:
-      Operation cannot be fulfilled on authentications.operator.openshift.io \"cluster\":
-      the object has been modified; please apply your changes to the latest version
-      and try again"
+    message: |-
+      WebhookAuthenticatorControllerDegraded: failed to retrieve service openshift-oauth-apiserver/api: service "api" not found
+      OAuthServerServiceEndpointAccessibleControllerDegraded: configmap "v4-0-config-system-service-ca" not found
+      OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth service endpoints are not ready
+      APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable for apiserver.openshift-oauth-apiserver (2 containers are waiting in pending apiserver-6fb9dd7b7-rjbtg pod)
+      OAuthServerConfigObservationDegraded: secret "v4-0-config-system-router-certs" not found
+      IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
+      RevisionControllerDegraded: Operation cannot be fulfilled on authentications.operator.openshift.io "cluster": the object has been modified; please apply your changes to the latest version and try again
     reason: AsExpected
     status: "False"
     type: Degraded
@@ -79,10 +76,11 @@ status:
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
+      APIServerDeploymentAvailable: no apiserver.openshift-oauth-apiserver pods available on any node.
       APIServicesAvailable: PreconditionNotReady
       OAuthServerServiceEndpointAccessibleControllerAvailable: Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443: connect: connection refused
       OAuthServerServiceEndpointsEndpointAccessibleControllerAvailable: endpoints "oauth-openshift" not found
-    reason: APIServerDeployment_PreconditionNotFulfilled::APIServices_PreconditionNotReady::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound
+    reason: APIServerDeployment_NoPod::APIServices_PreconditionNotReady::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
