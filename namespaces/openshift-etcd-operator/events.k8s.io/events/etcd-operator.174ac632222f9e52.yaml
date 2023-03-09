@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-09T14:22:09Z"
-deprecatedLastTimestamp: "2023-03-09T14:22:21Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:30Z"
 deprecatedSource:
   component: openshift-cluster-etcd-operator-cluster-backup-controller-clusterbackupcontroller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-etcd-operator
     operation: Update
-    time: "2023-03-09T14:22:21Z"
+    time: "2023-03-09T14:22:30Z"
   name: etcd-operator.174ac632222f9e52
   namespace: openshift-etcd-operator
-  resourceVersion: "4945"
+  resourceVersion: "5302"
   uid: d2a4fb5e-ca7f-4cd2-b304-07903d785150
 note: 'Operation cannot be fulfilled on etcds.operator.openshift.io "cluster": the
   object has been modified; please apply your changes to the latest version and try
