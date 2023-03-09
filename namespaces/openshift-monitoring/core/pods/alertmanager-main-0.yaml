@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.79/23"],"mac_address":"0a:58:0a:80:00:4f","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.79/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.79"
+          ],
+          "mac": "0a:58:0a:80:00:4f",
+          "default": true,
+          "dns": {}
+      }]
     kubectl.kubernetes.io/default-container: alertmanager
     openshift.io/scc: nonroot
   creationTimestamp: "2023-03-09T14:32:51Z"
@@ -469,6 +480,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-09T14:32:51Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:52Z"
   name: alertmanager-main-0
   namespace: openshift-monitoring
   ownerReferences:
@@ -478,7 +499,7 @@ metadata:
     kind: StatefulSet
     name: alertmanager-main
     uid: 98deb091-f51e-4a1f-a4a3-8038c2d7d435
-  resourceVersion: "16039"
+  resourceVersion: "16043"
   uid: a1fc1fe4-8eea-4bb1-bd86-50214a66e433
 spec:
   containers:
