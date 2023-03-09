@@ -122,8 +122,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -139,6 +137,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:22:03Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:02Z"
   name: csi-snapshot-controller-74f6d7449-vlj4v
   namespace: openshift-cluster-storage-operator
   ownerReferences:
@@ -148,7 +158,7 @@ metadata:
     kind: ReplicaSet
     name: csi-snapshot-controller-74f6d7449
     uid: 255c9d94-f814-4b8e-8eda-8f3cf6339e67
-  resourceVersion: "3874"
+  resourceVersion: "13619"
   uid: afaa8659-dbed-4f70-ad8c-8a25047b1758
 spec:
   affinity:
@@ -253,8 +263,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:03Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:02Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:03Z"
