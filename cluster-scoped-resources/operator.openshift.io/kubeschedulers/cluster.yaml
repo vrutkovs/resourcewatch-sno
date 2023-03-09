@@ -57,14 +57,14 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:15Z"
+    time: "2023-03-09T14:24:49Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6801"
+  resourceVersion: "7261"
   uid: 48eb058e-3e1d-45d9-baa8-cf6a53778010
 spec:
   logLevel: Normal
@@ -110,7 +110,7 @@ status:
     reason: AsExpected
     status: "False"
     type: MissingStaticPodControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:22:01Z"
+  - lastTransitionTime: "2023-03-09T14:24:44Z"
     status: "False"
     type: StaticPodsDegraded
   - lastTransitionTime: "2023-03-09T14:22:01Z"
@@ -122,7 +122,7 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:01Z"
     status: "False"
     type: InstallerPodNetworkingDegraded
-  - lastTransitionTime: "2023-03-09T14:22:02Z"
+  - lastTransitionTime: "2023-03-09T14:24:44Z"
     status: "False"
     type: ResourceSyncControllerDegraded
   - lastTransitionTime: "2023-03-09T14:22:04Z"
@@ -131,7 +131,7 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:28Z"
     status: "False"
     type: RevisionControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:22:07Z"
+  - lastTransitionTime: "2023-03-09T14:24:44Z"
     reason: AsExpected
     status: "False"
     type: BackingResourceControllerDegraded
@@ -143,11 +143,11 @@ status:
     reason: AsExpected
     status: "False"
     type: GuardControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:22:11Z"
+  - lastTransitionTime: "2023-03-09T14:24:43Z"
     reason: AsExpected
     status: "False"
     type: KubeControllerManagerStaticResourcesDegraded
-  - lastTransitionTime: "2023-03-09T14:22:20Z"
+  - lastTransitionTime: "2023-03-09T14:24:49Z"
     status: "False"
     type: TargetConfigControllerDegraded
   latestAvailableRevision: 3
