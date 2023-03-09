@@ -46,7 +46,7 @@ metadata:
     manager: machine-config-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:11Z"
+    time: "2023-03-09T14:29:12Z"
   name: machine-config
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -54,7 +54,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "9068"
+  resourceVersion: "9141"
   uid: a2677b7f-e3c9-4360-88a8-42c47852f1d4
 spec: {}
 status:
@@ -63,11 +63,11 @@ status:
     message: Error while reconciling 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
     status: "False"
     type: Progressing
-  - lastTransitionTime: "2023-03-09T14:23:12Z"
-    message: 'An error occurred when checking kubelet version skew: kube-apiserver
-      does not yet have a version'
-    reason: KubeletSkewUnchecked
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:29:12Z"
+    message: One or more machine config pools are updating, please see `oc get mcp`
+      for further details
+    reason: PoolUpdating
+    status: "False"
     type: Upgradeable
   - lastTransitionTime: "2023-03-09T14:23:14Z"
     message: 'Failed to resync 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
