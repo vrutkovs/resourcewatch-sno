@@ -10,6 +10,7 @@ metadata:
   creationTimestamp: "2023-03-09T14:14:14Z"
   labels:
     kubernetes.io/metadata.name: openshift-kube-controller-manager
+    olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: ""
     openshift.io/cluster-monitoring: "true"
     openshift.io/run-level: "0"
     pod-security.kubernetes.io/audit: privileged
@@ -54,8 +55,17 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     time: "2023-03-09T14:22:03Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: {}
+    manager: olm
+    operation: Update
+    time: "2023-03-09T14:29:17Z"
   name: openshift-kube-controller-manager
-  resourceVersion: "3932"
+  resourceVersion: "9580"
   uid: 820ebdb6-9be1-4313-b86c-74a55214e5e6
 spec:
   finalizers:
