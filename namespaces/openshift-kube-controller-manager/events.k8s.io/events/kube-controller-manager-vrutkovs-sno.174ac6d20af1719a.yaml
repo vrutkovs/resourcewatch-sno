@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:33:36Z"
-deprecatedLastTimestamp: "2023-03-09T14:33:36Z"
+deprecatedLastTimestamp: "2023-03-09T14:34:30Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:33:45Z"
+    time: "2023-03-09T14:34:30Z"
   name: kube-controller-manager-vrutkovs-sno.174ac6d20af1719a
   namespace: openshift-kube-controller-manager
-  resourceVersion: "16543"
+  resourceVersion: "16804"
   uid: eb38a7f0-0084-4f35-8cbd-f0a709e9bbf5
 note: Container image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4"
   already present on machine
