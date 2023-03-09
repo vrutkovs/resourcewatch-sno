@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:21:51Z"
 deprecatedLastTimestamp: "2023-03-09T14:21:51Z"
 deprecatedSource:
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:21:51Z"
+    time: "2023-03-09T14:21:52Z"
   name: cluster-node-tuning-operator-84595cd48f-pmhnw.174ac62dd608a0f0
   namespace: openshift-cluster-node-tuning-operator
-  resourceVersion: "3189"
+  resourceVersion: "3236"
   uid: 3c7dfdba-c8c5-44c8-9f18-a0af408339ba
 note: 'MountVolume.SetUp failed for volume "apiservice-cert" : secret "performance-addon-operator-webhook-cert"
   not found'
