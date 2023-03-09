@@ -131,7 +131,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-monitoring-operator-669bd8685c
     uid: 194c53a2-cea2-42a0-b075-8030a374606f
-  resourceVersion: "2367"
+  resourceVersion: "3123"
   uid: ff407fd4-cfaa-42db-af8c-737d83b40584
 spec:
   containers:
@@ -199,6 +199,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     kubernetes.io/os: linux
     node-role.kubernetes.io/master: ""
@@ -266,11 +267,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:00Z"
-    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
-      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
-    reason: Unschedulable
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:21:51Z"
+    status: "True"
     type: PodScheduled
   phase: Pending
   qosClass: Burstable
