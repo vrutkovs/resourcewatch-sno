@@ -66,28 +66,6 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"DiskPressure"}:
-            f:lastHeartbeatTime: {}
-          k:{"type":"MemoryPressure"}:
-            f:lastHeartbeatTime: {}
-          k:{"type":"PIDPressure"}:
-            f:lastHeartbeatTime: {}
-          k:{"type":"Ready"}:
-            f:lastHeartbeatTime: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-        f:images: {}
-    manager: kubelet
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:22:01Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:metadata:
         f:annotations:
           f:machineconfiguration.openshift.io/currentConfig: {}
@@ -107,8 +85,30 @@ metadata:
     manager: machine-config-controller
     operation: Update
     time: "2023-03-09T14:22:21Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"DiskPressure"}:
+            f:lastHeartbeatTime: {}
+          k:{"type":"MemoryPressure"}:
+            f:lastHeartbeatTime: {}
+          k:{"type":"PIDPressure"}:
+            f:lastHeartbeatTime: {}
+          k:{"type":"Ready"}:
+            f:lastHeartbeatTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+        f:images: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:31Z"
   name: vrutkovs-sno
-  resourceVersion: "4957"
+  resourceVersion: "5348"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
 spec: {}
 status:
@@ -132,25 +132,25 @@ status:
     memory: 16342536Ki
     pods: "250"
   conditions:
-  - lastHeartbeatTime: "2023-03-09T14:22:01Z"
+  - lastHeartbeatTime: "2023-03-09T14:22:31Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient memory available
     reason: KubeletHasSufficientMemory
     status: "False"
     type: MemoryPressure
-  - lastHeartbeatTime: "2023-03-09T14:22:01Z"
+  - lastHeartbeatTime: "2023-03-09T14:22:31Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has no disk pressure
     reason: KubeletHasNoDiskPressure
     status: "False"
     type: DiskPressure
-  - lastHeartbeatTime: "2023-03-09T14:22:01Z"
+  - lastHeartbeatTime: "2023-03-09T14:22:31Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient PID available
     reason: KubeletHasSufficientPID
     status: "False"
     type: PIDPressure
-  - lastHeartbeatTime: "2023-03-09T14:22:01Z"
+  - lastHeartbeatTime: "2023-03-09T14:22:31Z"
     lastTransitionTime: "2023-03-09T14:21:50Z"
     message: kubelet is posting ready status
     reason: KubeletReady
@@ -174,8 +174,14 @@ status:
     - quay.io/edge-infrastructure/assisted-installer-controller:latest
     sizeBytes: 740647178
   - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:46c456d5235e5d1df09461bbdcde03aed3a32f31fdf8f84e1969b7514316c664
+    sizeBytes: 621998538
+  - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4e4bafb1e5f5b396d308ee8a7e49c4fd8b13597134c5887db0dd9d9c2d4e0e40
     sizeBytes: 602617270
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:f70e0e3bbcb375e3829fd9b16ae1b85953fb2f285af3047073aa13f20daeca87
+    sizeBytes: 601723831
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:bd71d26b8b646787500887be672ea8241ad05b6d9412d85569941b549898b01c
     sizeBytes: 540825776
@@ -186,34 +192,89 @@ status:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:40cda5fb6d1b85aac5696cd4ae0edceb5953c9b767b4455c0da98a5a65378be5
     sizeBytes: 507394797
   - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2dce8c783764cd2f0e9e7530a2ee1447b45d936311e845efe00a90da9c103a24
+    sizeBytes: 492719057
+  - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
     sizeBytes: 447204293
   - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:b64200873ef1293d0ffa5f53661ff32b05a0ea5c89aa411eb5dfd15188612ace
+    sizeBytes: 446388315
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2948a32ac6e029f093ecf20b3bcd87105bfa7ec549d01203ab9592ed062ce7fa
+    sizeBytes: 446030868
+  - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9f7dfaf9351c4deaac3d2846c64dd32a066c68dd3b844d8f9ee748cef7583859
     sizeBytes: 443544284
-  - names: null
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:911863c370cd31453bc66d3df7571aa87cdbc21d6c064d53541f3c594a2ea504
     sizeBytes: 443278729
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d32df39b960a3d0fd95bb8269b5f82f104c4834d44ce0e86605741fe6546ff3d
+    sizeBytes: 441985666
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4349a340ad6752856159937ab2c2c8fa737b44e4103113cc1c3d88b74ad137c3
+    sizeBytes: 441878655
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:1a3fb5eda79c9e3a3b9368a2f923c2ed63fffccba20502b718b8d1afb7675897
     sizeBytes: 440452056
-  - names: null
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
     sizeBytes: 439275044
-  - names: null
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c85de6de3820e7ef13625ef4ceda1ec350d93fc924138ff8ef7717948f908d73
+    sizeBytes: 438752343
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:906376adc0b8bc6664986af642be2b1c740da454523ae3a8020b87e890d409d5
     sizeBytes: 438196250
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:af5fed62790f3da5a9b7d32374331539ab531f17d006a69ea501622d946a07fe
+    sizeBytes: 436025435
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:f79d88a33d2b57e68d0e153d69e2bf0c196b45191ad32687713ff5d4298b86df
     sizeBytes: 431803821
   - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d3648efe735c9568c314bb8502c95f97d6356595a0623d64cba3bedbff8a9951
+    sizeBytes: 431489753
+  - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4a17a5edd33292beb6a274a3d484c8464a8f9291058107b4cb2cf6181058b1cd
     sizeBytes: 427538448
-  - names: null
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:436144e4a5eeaa009bbbda8aa226c06c0094e622a6a203f26f5eed856863d402
+    sizeBytes: 427334279
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87f42f063f97dec016b3981f7d68e4c759c01411158eb65d20f42137bc475253
     sizeBytes: 427177311
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     sizeBytes: 425572704
   - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9b5859648ff4466d9c2dc97ff9bf12044132c11f33d92183d171ca253a6984ee
+    sizeBytes: 422905142
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9ea15ecbb6c5cf3fde797915699919c1e6285edfdacf748b3a717b87ef6510fb
+    sizeBytes: 404869874
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:b6f02088fb1a0bdf8d3b8d138034dc8ed52f58b459ce6aaa1dec833a0a6789dd
+    sizeBytes: 403361630
+  - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
     sizeBytes: 402764947
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e3089921fbd0c64d58f211f8544b243a5cc480ad0fa8547a805ac6cb368e4d83
+    sizeBytes: 401854646
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:50beb6dcf8e67cfa10be580b40883e76ac23448d13739e2ebe3a273566109b8b
+    sizeBytes: 395169065
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87b6a9e1a56c11e9c67ff89a7edd87c95da64bd7ad3964cff0ee5d1dcae87b92
+    sizeBytes: 388906646
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:b16fa3856a886788d62d98f5ab5881de0ec8a76cd7807ce6bc24e6386aa64c50
+    sizeBytes: 388040302
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87f1812b55e14f104d3ab49c06711f5ba37e94490717470e42c12749fe3c90ad
+    sizeBytes: 366055841
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:26d23cd931fe8b128262dcabd42370499cd80727283fedaeb552ee236c5a70fd
     sizeBytes: 360076247
