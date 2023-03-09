@@ -245,7 +245,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:27:14Z"
+    time: "2023-03-09T14:27:26Z"
   name: ingress-operator-55684fdfd8-f9svb
   namespace: openshift-ingress-operator
   ownerReferences:
@@ -255,7 +255,7 @@ metadata:
     kind: ReplicaSet
     name: ingress-operator-55684fdfd8
     uid: 506330a6-6445-4b53-bc78-33b1bd4aaf6b
-  resourceVersion: "7725"
+  resourceVersion: "7807"
   uid: 8586aeeb-8734-4698-adcd-01ee23ee37ca
 spec:
   containers:
@@ -447,34 +447,6 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c85de6de3820e7ef13625ef4ceda1ec350d93fc924138ff8ef7717948f908d73
     lastState:
       terminated:
-        containerID: cri-o://1e65c60459803e04241deabedafa6d1f8a3499b9b890f68681c7d46d795c40d5
-        exitCode: 1
-        finishedAt: "2023-03-09T14:24:37Z"
-        message: "2023-03-09T14:24:37.582Z\tINFO\toperator.main\tingress-operator/start.go:64\tusing
-          operator namespace\t{\"namespace\": \"openshift-ingress-operator\"}\n2023-03-09T14:24:37.583Z\tERROR\toperator.main\tcobra/command.go:920\terror
-          starting\t{\"error\": \"failed to create client from kube config: &rest.Config{Host:\\\"https://172.30.0.1:443\\\",
-          APIPath:\\\"\\\", ContentConfig:rest.ContentConfig{AcceptContentTypes:\\\"\\\",
-          ContentType:\\\"\\\", GroupVersion:(*schema.GroupVersion)(nil), NegotiatedSerializer:runtime.NegotiatedSerializer(nil)},
-          Username:\\\"\\\", Password:\\\"\\\", BearerToken:\\\"--- REDACTED ---\\\",
-          BearerTokenFile:\\\"/var/run/secrets/kubernetes.io/serviceaccount/token\\\",
-          Impersonate:rest.ImpersonationConfig{UserName:\\\"\\\", UID:\\\"\\\", Groups:[]string(nil),
-          Extra:map[string][]string(nil)}, AuthProvider:<nil>, AuthConfigPersister:rest.AuthProviderConfigPersister(nil),
-          ExecProvider:<nil>, TLSClientConfig:rest.sanitizedTLSClientConfig{Insecure:false,
-          ServerName:\\\"\\\", CertFile:\\\"\\\", KeyFile:\\\"\\\", CAFile:\\\"/var/run/secrets/kubernetes.io/serviceaccount/ca.crt\\\",
-          CertData:[]uint8(nil), KeyData:[]uint8(nil), CAData:[]uint8(nil), NextProtos:[]string(nil)},
-          UserAgent:\\\"\\\", DisableCompression:false, Transport:http.RoundTripper(nil),
-          WrapTransport:(transport.WrapperFunc)(nil), QPS:20, Burst:30, RateLimiter:flowcontrol.RateLimiter(nil),
-          WarningHandler:rest.WarningHandler(nil), Timeout:0, Dial:(func(context.Context,
-          string, string) (net.Conn, error))(nil), Proxy:(func(*http.Request) (*url.URL,
-          error))(nil)}\"}\n"
-        reason: Error
-        startedAt: "2023-03-09T14:24:37Z"
-    name: ingress-operator
-    ready: false
-    restartCount: 2
-    started: false
-    state:
-      terminated:
         containerID: cri-o://93a3ddd98530581dfdf6cb02a948b6d2090a8ee7fe229ec8f0f7c9b694145590
         exitCode: 1
         finishedAt: "2023-03-09T14:27:14Z"
@@ -497,6 +469,14 @@ status:
           timed out waiting for cache to be synced\"}\n"
         reason: Error
         startedAt: "2023-03-09T14:24:51Z"
+    name: ingress-operator
+    ready: false
+    restartCount: 2
+    started: false
+    state:
+      waiting:
+        message: back-off 20s restarting failed container=ingress-operator pod=ingress-operator-55684fdfd8-f9svb_openshift-ingress-operator(8586aeeb-8734-4698-adcd-01ee23ee37ca)
+        reason: CrashLoopBackOff
   - containerID: cri-o://4faebc498b4b95548187501ddee80a8b5a5f2ae0060c901ff119d20c6919cec6
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
