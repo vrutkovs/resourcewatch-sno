@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedSource:
+  component: service-ca-operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
+  name: service-ca-operator-lock.174ac62ff8c267a1
+  namespace: openshift-service-ca-operator
+  resourceVersion: "3597"
+  uid: 99354de9-9468-44ac-b359-a290d06b38bd
+note: service-ca-operator-5b79975495-r96qd_59c021b1-5cbb-4408-9d6a-53b248badee9 became
+  leader
+reason: LeaderElection
+regarding:
+  apiVersion: v1
+  kind: ConfigMap
+  name: service-ca-operator-lock
+  namespace: openshift-service-ca-operator
+  resourceVersion: "3593"
+  uid: d49f971b-1502-497a-8913-50daf92f4dd2
+type: Normal
