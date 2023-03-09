@@ -63,7 +63,7 @@ metadata:
     time: "2023-03-09T14:22:19Z"
   name: default
   namespace: openshift-ingress-operator
-  resourceVersion: "4843"
+  resourceVersion: "4854"
   uid: 581ce6e7-0dc9-460c-b609-a8d3a1b3ae1f
 spec:
   clientTLS:
@@ -86,9 +86,9 @@ status:
     status: "True"
     type: Admitted
   - lastTransitionTime: "2023-03-09T14:22:19Z"
-    message: The deployment has no Available status condition set
-    reason: DeploymentAvailabilityUnknown
-    status: Unknown
+    message: The deployment has Available status condition set to True
+    reason: DeploymentAvailable
+    status: "True"
     type: DeploymentAvailable
   - lastTransitionTime: "2023-03-09T14:22:19Z"
     message: Minimum replicas requirement is met
@@ -102,7 +102,7 @@ status:
     type: DeploymentReplicasAllAvailable
   - lastTransitionTime: "2023-03-09T14:22:19Z"
     message: |
-      Waiting for router deployment rollout to finish: 0 out of 1 new replica(s) have been updated...
+      Waiting for router deployment rollout to finish: 0 of 1 updated replica(s) are available...
     reason: DeploymentRollingOut
     status: "True"
     type: DeploymentRollingOut
@@ -123,15 +123,11 @@ status:
     status: "False"
     type: DNSManaged
   - lastTransitionTime: "2023-03-09T14:22:19Z"
-    message: 'One or more status conditions indicate unavailable: DeploymentAvailable=Unknown
-      (DeploymentAvailabilityUnknown: The deployment has no Available status condition
-      set)'
-    reason: IngressControllerUnavailable
-    status: "False"
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:19Z"
     message: |-
-      One or more status conditions indicate progressing: DeploymentRollingOut=True (DeploymentRollingOut: Waiting for router deployment rollout to finish: 0 out of 1 new replica(s) have been updated...
+      One or more status conditions indicate progressing: DeploymentRollingOut=True (DeploymentRollingOut: Waiting for router deployment rollout to finish: 0 of 1 updated replica(s) are available...
       )
     reason: IngressControllerProgressing
     status: "True"
