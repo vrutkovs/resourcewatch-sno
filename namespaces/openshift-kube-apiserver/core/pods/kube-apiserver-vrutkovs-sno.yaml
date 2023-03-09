@@ -3,16 +3,16 @@ kind: Pod
 metadata:
   annotations:
     kubectl.kubernetes.io/default-container: kube-apiserver
-    kubernetes.io/config.hash: 6b61ebb38f22120753f67c54c23c6f95
-    kubernetes.io/config.mirror: 6b61ebb38f22120753f67c54c23c6f95
-    kubernetes.io/config.seen: "2023-03-09T14:31:51.884258805Z"
+    kubernetes.io/config.hash: 536997fd0ca274bf533f4bb07b6b4cb6
+    kubernetes.io/config.mirror: 536997fd0ca274bf533f4bb07b6b4cb6
+    kubernetes.io/config.seen: "2023-03-09T14:33:21.983973781Z"
     kubernetes.io/config.source: file
     target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
-  creationTimestamp: "2023-03-09T14:31:55Z"
+  creationTimestamp: "2023-03-09T14:33:37Z"
   labels:
     apiserver: "true"
     app: openshift-kube-apiserver
-    revision: "2"
+    revision: "3"
   managedFields:
   - apiVersion: v1
     fieldsType: FieldsV1
@@ -349,7 +349,7 @@ metadata:
             f:name: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:31:55Z"
+    time: "2023-03-09T14:33:37Z"
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -360,6 +360,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -378,6 +380,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -394,7 +398,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:11Z"
+    time: "2023-03-09T14:33:39Z"
   name: kube-apiserver-vrutkovs-sno
   namespace: openshift-kube-apiserver
   ownerReferences:
@@ -403,8 +407,8 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "14713"
-  uid: 7abd9119-5805-49e6-9da3-7d5e81d1bf97
+  resourceVersion: "16464"
+  uid: ee448b79-9aa6-4890-a3b4-1f4517c1a204
 spec:
   containers:
   - args:
@@ -436,7 +440,7 @@ spec:
           apiVersion: v1
           fieldPath: metadata.namespace
     - name: STATIC_POD_VERSION
-      value: "2"
+      value: "3"
     - name: HOST_IP
       valueFrom:
         fieldRef:
@@ -698,7 +702,7 @@ spec:
   - operator: Exists
   volumes:
   - hostPath:
-      path: /etc/kubernetes/static-pod-resources/kube-apiserver-pod-2
+      path: /etc/kubernetes/static-pod-resources/kube-apiserver-pod-3
       type: ""
     name: resource-dir
   - hostPath:
@@ -712,34 +716,38 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:03Z"
+    lastTransitionTime: "2023-03-09T14:33:35Z"
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:11Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:33:34Z"
+    message: 'containers with unready status: [kube-apiserver kube-apiserver-check-endpoints]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:11Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:33:34Z"
+    message: 'containers with unready status: [kube-apiserver kube-apiserver-check-endpoints]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:03Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://53019668a7d0e0c77ce5f00c9dcc0a55f3edd0b8edd11f891d0455386ce2e145
+  - containerID: cri-o://1bc778f5ae0f023baeae6b1c437ed8ec22914b6ec15cfcc618899aacd74ae746
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
     lastState: {}
     name: kube-apiserver
-    ready: true
+    ready: false
     restartCount: 0
     started: true
     state:
       running:
-        startedAt: "2023-03-09T14:31:53Z"
-  - containerID: cri-o://e240882d0a6708189190a32863e799f377b6f1f26c9f8fae934084f105ae38c8
+        startedAt: "2023-03-09T14:33:35Z"
+  - containerID: cri-o://007bd3b99a5767700eefe6a93546e63af1e7ccf1b64a522812d304b7f7c53403
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
     lastState: {}
@@ -749,8 +757,8 @@ status:
     started: true
     state:
       running:
-        startedAt: "2023-03-09T14:31:54Z"
-  - containerID: cri-o://702b257268f29bc1236246a514cb08b842ad3f603025313ef57e670cf5a19905
+        startedAt: "2023-03-09T14:33:36Z"
+  - containerID: cri-o://aa485dba087ad3d935e7a94f9f8fe3de830f4e32c1d8c49ecd70fc6e6fd0c072
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
     lastState: {}
@@ -760,19 +768,19 @@ status:
     started: true
     state:
       running:
-        startedAt: "2023-03-09T14:31:53Z"
-  - containerID: cri-o://791642282ec3acfbd27b17d4957a425b0377ea80d24aefd833929c2691e1f308
+        startedAt: "2023-03-09T14:33:36Z"
+  - containerID: cri-o://b9b468cb785443c031dbd3fcd0367943576ec9b08b456971fbba86e5ed5fa73f
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
     lastState: {}
     name: kube-apiserver-check-endpoints
-    ready: true
+    ready: false
     restartCount: 0
     started: true
     state:
       running:
-        startedAt: "2023-03-09T14:31:54Z"
-  - containerID: cri-o://48bb9f97e2587794d75966275686e90263b6048db45a2bcf7f1d304eaa40191a
+        startedAt: "2023-03-09T14:33:36Z"
+  - containerID: cri-o://0c90664e984dced1d0861af8a60e62ae62338a38a0a3aed82b45fad6bc61df55
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
     lastState: {}
@@ -782,10 +790,10 @@ status:
     started: true
     state:
       running:
-        startedAt: "2023-03-09T14:31:54Z"
+        startedAt: "2023-03-09T14:33:36Z"
   hostIP: 10.0.130.93
   initContainerStatuses:
-  - containerID: cri-o://64dd01f369c5e7d8c4a7bc6d3e01b07820fb2e6f4f3e5a3990520fe3ab96e1f9
+  - containerID: cri-o://dba4143fb824cc9fe52fd69aa604fcd721ae7f5a2f0589b3522282b2725794d9
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
     lastState: {}
@@ -794,11 +802,11 @@ status:
     restartCount: 0
     state:
       terminated:
-        containerID: cri-o://64dd01f369c5e7d8c4a7bc6d3e01b07820fb2e6f4f3e5a3990520fe3ab96e1f9
+        containerID: cri-o://dba4143fb824cc9fe52fd69aa604fcd721ae7f5a2f0589b3522282b2725794d9
         exitCode: 0
-        finishedAt: "2023-03-09T14:31:52Z"
+        finishedAt: "2023-03-09T14:33:35Z"
         reason: Completed
-        startedAt: "2023-03-09T14:31:52Z"
+        startedAt: "2023-03-09T14:33:35Z"
   phase: Running
   podIP: 10.0.130.93
   podIPs:
