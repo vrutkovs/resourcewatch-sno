@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:11Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:11Z"
+deprecatedSource:
+  component: machineapioperator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:11Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: machine-api-operator
+    operation: Update
+    time: "2023-03-09T14:29:11Z"
+  name: machine-api.174ac6945ff824ef
+  namespace: default
+  resourceVersion: "9074"
+  uid: 402d8574-942b-420d-860c-74e0dd159e4a
+note: 'Progressing towards operator: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest'
+reason: Status upgrade
+regarding:
+  apiVersion: config.openshift.io/v1
+  kind: ClusterOperator
+  name: machine-api
+  resourceVersion: "9072"
+  uid: f9027f2b-91b7-48e8-972b-4c1557f470e4
+type: Normal
