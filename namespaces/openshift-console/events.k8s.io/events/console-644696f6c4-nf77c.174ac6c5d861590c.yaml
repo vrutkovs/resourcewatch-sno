@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:44Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:44Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:44Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:44Z"
+  name: console-644696f6c4-nf77c.174ac6c5d861590c
+  namespace: openshift-console
+  resourceVersion: "15823"
+  uid: 2df5d151-2ffc-4602-879e-d64aec2d6037
+note: 'Readiness probe failed: Get "https://10.128.0.76:8443/health": dial tcp 10.128.0.76:8443:
+  connect: connection refused'
+reason: Unhealthy
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{console}
+  kind: Pod
+  name: console-644696f6c4-nf77c
+  namespace: openshift-console
+  resourceVersion: "15692"
+  uid: db1a5fa9-d7ef-48f8-932b-a0fec7ae9c25
+type: Warning
