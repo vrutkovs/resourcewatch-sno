@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:22:22Z"
-deprecatedLastTimestamp: "2023-03-09T14:22:22Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:08Z"
 deprecatedSource:
   component: csi-snapshot-controller-operator-status-controller-statussyncer_csi-snapshot-controller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: csi-snapshot-controller-operator
     operation: Update
-    time: "2023-03-09T14:22:22Z"
+    time: "2023-03-09T14:32:08Z"
   name: csi-snapshot-controller-operator.174ac63511afea7a
   namespace: openshift-cluster-storage-operator
-  resourceVersion: "4997"
+  resourceVersion: "14354"
   uid: 46baa702-25d5-4c15-9eb0-d93c8397d62e
 note: 'Status for clusteroperator/csi-snapshot-controller changed: Progressing changed
   from True to False ("All is well"),Available changed from False to True ("All is
