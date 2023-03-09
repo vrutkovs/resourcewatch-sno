@@ -156,6 +156,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:28:51Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:51Z"
   name: cluster-cloud-controller-manager-operator-7894f8f557
   namespace: openshift-cloud-controller-manager-operator
   ownerReferences:
@@ -165,7 +174,7 @@ metadata:
     kind: Deployment
     name: cluster-cloud-controller-manager-operator
     uid: ce91a0d3-f9df-43eb-a446-a4f71be087e1
-  resourceVersion: "8468"
+  resourceVersion: "8474"
   uid: d7869efa-d36a-45be-b1c7-23d573ab3e1d
 spec:
   replicas: 1
@@ -312,4 +321,5 @@ spec:
           type: Directory
         name: host-etc-kube
 status:
+  observedGeneration: 1
   replicas: 0
