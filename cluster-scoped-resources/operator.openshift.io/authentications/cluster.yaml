@@ -99,7 +99,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "14933"
+  resourceVersion: "14937"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -297,6 +297,15 @@ status:
     reason: AsExpected
     status: "False"
     type: ProxyConfigControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:32:16Z"
+    status: "False"
+    type: AuthConfigDegraded
+  - lastTransitionTime: "2023-03-09T14:32:16Z"
+    status: "False"
+    type: IngressConfigDegraded
+  - lastTransitionTime: "2023-03-09T14:32:16Z"
+    status: "False"
+    type: OAuthSystemMetadataDegraded
   generations:
   - group: apps
     hash: ""
