@@ -1,0 +1,53 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:33:51Z"
+deprecatedLastTimestamp: "2023-03-09T14:33:51Z"
+deprecatedSource:
+  component: oauth-apiserver-status-controller-statussyncer_authentication
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:33:51Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:33:51Z"
+  name: openshift-authentication-operator.174ac6d569796dcd
+  namespace: openshift-authentication-operator
+  resourceVersion: "16626"
+  uid: 490efb8d-f3e7-4eef-a201-e25bebb985d2
+note: 'Status for clusteroperator/authentication changed: Degraded message changed
+  from "OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth service
+  endpoints are not ready\nIngressStateEndpointsDegraded: No subsets found for the
+  endpoints of oauth-server\nOAuthServerRouteEndpointAccessibleControllerDegraded:
+  Get \"https://oauth-openshift.apps.ocp.choomba.one/healthz\": EOF\nOAuthServerDeploymentDegraded:
+  1 of 1 requested instances are unavailable for oauth-openshift.openshift-authentication
+  ()" to "OAuthServerServiceEndpointAccessibleControllerDegraded: [Get \"https://172.30.70.249:443/healthz\":
+  dial tcp 172.30.70.249:443: i/o timeout (Client.Timeout exceeded while awaiting
+  headers), Operation cannot be fulfilled on authentications.operator.openshift.io
+  \"cluster\": the object has been modified; please apply your changes to the latest
+  version and try again]\nOAuthServerServiceEndpointsEndpointAccessibleControllerDegraded:
+  oauth service endpoints are not ready\nIngressStateEndpointsDegraded: No subsets
+  found for the endpoints of oauth-server\nOAuthServerRouteEndpointAccessibleControllerDegraded:
+  Get \"https://oauth-openshift.apps.ocp.choomba.one/healthz\": EOF\nOAuthServerDeploymentDegraded:
+  1 of 1 requested instances are unavailable for oauth-openshift.openshift-authentication
+  ()"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: v1
+  kind: Namespace
+  name: openshift-authentication-operator
+  namespace: openshift-authentication-operator
+type: Normal
