@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-revisioncontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
+  name: etcd-operator.174ac62ffc2f12fd
+  namespace: openshift-etcd-operator
+  resourceVersion: "3619"
+  uid: c8f5d6e3-9bac-4e95-b0f3-975a7e7847eb
+note: Controller "RevisionController" resync interval is set to 0s which might lead
+  to client request throttling
+reason: FastControllerResync
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 83b0ee74-72c5-4b95-9e21-87b97e13fab6
+type: Warning
