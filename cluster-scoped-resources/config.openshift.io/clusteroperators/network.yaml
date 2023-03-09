@@ -42,7 +42,7 @@ metadata:
     manager: cluster-network-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:15Z"
+    time: "2023-03-09T14:20:20Z"
   name: network
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -50,14 +50,18 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "2482"
+  resourceVersion: "2530"
   uid: efc0e65e-4103-4be7-8a5a-99dd46b6df53
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:20:15Z"
-    message: Operator configuration openshift-network-operator/cluster was deleted
-    reason: NoOperatorConfig
+    message: 'Internal error while updating operator configuration: could not apply
+      (operator.openshift.io/v1, Kind=Network) /cluster, err: failed to apply / update
+      (operator.openshift.io/v1, Kind=Network) /cluster: Operation cannot be fulfilled
+      on networks.operator.openshift.io "cluster": the object has been modified; please
+      apply your changes to the latest version and try again'
+    reason: UpdateOperatorConfig
     status: "True"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:20:15Z"
