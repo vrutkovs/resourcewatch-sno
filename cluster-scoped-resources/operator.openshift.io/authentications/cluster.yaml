@@ -89,14 +89,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:02Z"
+    time: "2023-03-09T14:23:04Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6275"
+  resourceVersion: "6312"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -286,6 +286,10 @@ status:
   - lastTransitionTime: "2023-03-09T14:23:00Z"
     status: "False"
     type: EncryptionPruneControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:23:03Z"
+    reason: AsExpected
+    status: "False"
+    type: APIServerStaticResourcesDegraded
   generations:
   - group: apps
     hash: ""
