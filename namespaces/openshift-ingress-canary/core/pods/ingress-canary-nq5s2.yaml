@@ -81,6 +81,24 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:32:01Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:02Z"
   name: ingress-canary-nq5s2
   namespace: openshift-ingress-canary
   ownerReferences:
@@ -90,7 +108,7 @@ metadata:
     kind: DaemonSet
     name: ingress-canary
     uid: 8cada35d-3ced-4501-9955-de0cda7fcf82
-  resourceVersion: "13560"
+  resourceVersion: "13595"
   uid: 26eff830-6bd5-48a5-9969-7e94ee30b069
 spec:
   affinity:
@@ -196,5 +214,13 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:32:02Z"
+    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
+    reason: Unschedulable
+    status: "False"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
