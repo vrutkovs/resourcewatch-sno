@@ -279,7 +279,6 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
-        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -299,8 +298,8 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
+        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
@@ -308,7 +307,7 @@ metadata:
     time: "2023-03-09T14:32:33Z"
   name: oauth-openshift
   namespace: openshift-authentication
-  resourceVersion: "15465"
+  resourceVersion: "15466"
   uid: 28c413a6-04a7-4cae-8efd-4240ba332c8e
 spec:
   progressDeadlineSeconds: 600
@@ -514,7 +513,6 @@ spec:
           optional: true
         name: v4-0-config-system-trusted-ca-bundle
 status:
-  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-03-09T14:32:25Z"
     lastUpdateTime: "2023-03-09T14:32:25Z"
@@ -529,6 +527,6 @@ status:
     status: "True"
     type: Progressing
   observedGeneration: 2
-  readyReplicas: 1
-  replicas: 2
+  replicas: 1
+  unavailableReplicas: 1
   updatedReplicas: 1
