@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:12Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:12Z"
+deprecatedSource:
+  component: image-registry-operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:12Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-image-registry-operator
+    operation: Update
+    time: "2023-03-09T14:29:12Z"
+  name: openshift-master-controllers.174ac6947c7b6913
+  namespace: openshift-image-registry
+  resourceVersion: "9102"
+  uid: bff9e329-dff6-4fa8-aaac-1935a1101701
+note: cluster-image-registry-operator-77f7dc4fc4-jcn7n_f38b9d15-a74e-482f-b38f-6d604ef8c612
+  became leader
+reason: LeaderElection
+regarding:
+  apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  name: openshift-master-controllers
+  namespace: openshift-image-registry
+  resourceVersion: "9100"
+  uid: 08c0b578-a7e7-40f5-bdb4-a1e293c028e6
+type: Normal
