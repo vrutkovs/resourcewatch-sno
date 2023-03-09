@@ -33,17 +33,6 @@ metadata:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        .: {}
-        f:conditions: {}
-        f:readyReplicas: {}
-    manager: cluster-openshift-controller-manager-operator
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:22:01Z"
-  - apiVersion: operator.openshift.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:spec:
         f:observedConfig:
           .: {}
@@ -68,13 +57,24 @@ metadata:
     manager: cluster-openshift-controller-manager-operator
     operation: Update
     time: "2023-03-09T14:23:00Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:readyReplicas: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:23:00Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6114"
+  resourceVersion: "6123"
   uid: b34d6810-68f9-4135-9afc-798b3c845c22
 spec:
   logLevel: Normal
@@ -99,4 +99,7 @@ status:
     reason: AsExpected
     status: "False"
     type: OpenshiftControllerManagerStaticResourcesDegraded
+  - lastTransitionTime: "2023-03-09T14:23:00Z"
+    status: "False"
+    type: ResourceSyncControllerDegraded
   readyReplicas: 0
