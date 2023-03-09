@@ -136,6 +136,24 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:15:04Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ReplicaFailure"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:15:04Z"
   name: kube-storage-version-migrator-operator-77b5d98c74
   namespace: openshift-kube-storage-version-migrator-operator
   ownerReferences:
@@ -145,7 +163,7 @@ metadata:
     kind: Deployment
     name: kube-storage-version-migrator-operator
     uid: e175c73d-fd16-4746-ae1b-5ca4d30312d9
-  resourceVersion: "1572"
+  resourceVersion: "1576"
   uid: 03917f08-1f25-4eff-8711-5bda51a91405
 spec:
   replicas: 1
@@ -238,4 +256,13 @@ spec:
           name: config
         name: config
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:15:04Z"
+    message: 'pods "kube-storage-version-migrator-operator-77b5d98c74-" is forbidden:
+      autoscaling.openshift.io/ManagementCPUsOverride the cluster does not have any
+      nodes'
+    reason: FailedCreate
+    status: "True"
+    type: ReplicaFailure
+  observedGeneration: 1
   replicas: 0
