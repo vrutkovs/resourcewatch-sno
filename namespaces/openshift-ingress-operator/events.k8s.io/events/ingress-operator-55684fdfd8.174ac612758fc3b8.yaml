@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 9
+deprecatedFirstTimestamp: "2023-03-09T14:19:53Z"
+deprecatedLastTimestamp: "2023-03-09T14:19:58Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:19:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:19:58Z"
+  name: ingress-operator-55684fdfd8.174ac612758fc3b8
+  namespace: openshift-ingress-operator
+  resourceVersion: "2250"
+  uid: 769af4f8-60d5-4c3d-9efe-c44470377a34
+note: 'Error creating: pods "ingress-operator-55684fdfd8-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+  the cluster does not have any nodes'
+reason: FailedCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: ingress-operator-55684fdfd8
+  namespace: openshift-ingress-operator
+  resourceVersion: "1996"
+  uid: 506330a6-6445-4b53-bc78-33b1bd4aaf6b
+type: Warning
