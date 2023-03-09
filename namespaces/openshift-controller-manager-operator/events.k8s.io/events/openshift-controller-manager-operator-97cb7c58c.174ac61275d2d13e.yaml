@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 9
+deprecatedFirstTimestamp: "2023-03-09T14:19:53Z"
+deprecatedLastTimestamp: "2023-03-09T14:19:58Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:19:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:19:58Z"
+  name: openshift-controller-manager-operator-97cb7c58c.174ac61275d2d13e
+  namespace: openshift-controller-manager-operator
+  resourceVersion: "2249"
+  uid: 3a7748f1-13b5-4db2-8600-7e30b247b1b3
+note: 'Error creating: pods "openshift-controller-manager-operator-97cb7c58c-" is
+  forbidden: autoscaling.openshift.io/ManagementCPUsOverride the cluster does not
+  have any nodes'
+reason: FailedCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: openshift-controller-manager-operator-97cb7c58c
+  namespace: openshift-controller-manager-operator
+  resourceVersion: "1454"
+  uid: c66b1581-929b-4ff8-9bc4-9204a04611ff
+type: Warning
