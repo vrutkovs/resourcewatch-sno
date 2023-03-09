@@ -1,0 +1,60 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:23Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:23Z"
+deprecatedSource:
+  component: kube-apiserver-operator-config-observer-configobserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:27Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:29:27Z"
+  name: kube-apiserver-operator.174ac697103cfb82
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "9916"
+  uid: a619f4b4-6e8e-4e14-b65e-e65bf885038b
+note: "Writing updated observed config:   map[string]any{\n+ \t\"admission\": map[string]any{\n+ \t\t\"pluginConfig\":
+  map[string]any{\n+ \t\t\t\"PodSecurity\":                                       map[string]any{\"configuration\":
+  map[string]any{...}},\n+ \t\t\t\"network.openshift.io/ExternalIPRanger\":             map[string]any{\"configuration\":
+  map[string]any{...}},\n+ \t\t\t\"network.openshift.io/RestrictedEndpointsAdmission\":
+  map[string]any{\"configuration\": map[string]any{...}},\n+ \t\t},\n+ \t},\n+ \t\"apiServerArguments\":
+  map[string]any{\n+ \t\t\"api-audiences\":                            []any{string(\"https://kubernetes.default.svc\")},\n+ \t\t\"authentication-token-webhook-config-file\":
+  []any{string(\"/etc/kubernetes/static-pod-resources/secrets/webhook-authenticat\"...)},\n+ \t\t\"authentication-token-webhook-version\":
+  \    []any{string(\"v1\")},\n+ \t\t\"etcd-servers\":                             []any{string(\"https://10.0.130.93:2379\"),
+  string(\"https://localhost:2379\")},\n+ \t\t\"feature-gates\": []any{\n+ \t\t\tstring(\"APIPriorityAndFairness=true\"),\n+ \t\t\tstring(\"RotateKubeletServerCertificate=true\"),\n+ \t\t\tstring(\"DownwardAPIHugePages=true\"),\n+ \t\t\tstring(\"OpenShiftPodSecurityAdmission=true\"),\n+ \t\t\tstring(\"RetroactiveDefaultStorageClass=false\"),\n+ \t\t},\n+ \t\t\"service-account-issuer\":
+  \  []any{string(\"https://kubernetes.default.svc\")},\n+ \t\t\"service-account-jwks-uri\":
+  []any{string(\"https://api-int.ocp.choomba.one:6443/openid/v1/jwks\")},\n+ \t\t\"shutdown-delay-duration\":
+  \ []any{string(\"0s\")},\n+ \t},\n+ \t\"corsAllowedOrigins\":          []any{string(`//127\\.0\\.0\\.1(:|$)`),
+  string(\"//localhost(:|$)\")},\n+ \t\"gracefulTerminationDuration\": string(\"15\"),\n+ \t\"servicesSubnet\":
+  \             string(\"172.30.0.0/16\"),\n+ \t\"servingInfo\": map[string]any{\n+ \t\t\"bindAddress\":
+  string(\"0.0.0.0:6443\"),\n+ \t\t\"bindNetwork\": string(\"tcp4\"),\n+ \t\t\"cipherSuites\":
+  []any{\n+ \t\t\tstring(\"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256\"),\n+ \t\t\tstring(\"TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256\"),\n+ \t\t\tstring(\"TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384\"),\n+ \t\t\tstring(\"TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384\"),\n+ \t\t\tstring(\"TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256\"),\n+ \t\t\tstring(\"TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256\"),\n+ \t\t},\n+ \t\t\"minTLSVersion\":
+  string(\"VersionTLS12\"),\n+ \t\t\"namedCertificates\": []any{\n+ \t\t\tmap[string]any{\n+ \t\t\t\t\"certFile\":
+  string(\"/etc/kubernetes/static-pod-certs\"...),\n+ \t\t\t\t\"keyFile\":  string(\"/etc/kubernetes/static-pod-certs\"...),\n+ \t\t\t},\n+ \t\t\tmap[string]any{\n+ \t\t\t\t\"certFile\":
+  string(\"/etc/kubernetes/static-pod-certs\"...),\n+ \t\t\t\t\"keyFile\":  string(\"/etc/kubernetes/static-pod-certs\"...),\n+ \t\t\t},\n+ \t\t\tmap[string]any{\n+ \t\t\t\t\"certFile\":
+  string(\"/etc/kubernetes/static-pod-certs\"...),\n+ \t\t\t\t\"keyFile\":  string(\"/etc/kubernetes/static-pod-certs\"...),\n+ \t\t\t},\n+ \t\t\tmap[string]any{\n+ \t\t\t\t\"certFile\":
+  string(\"/etc/kubernetes/static-pod-certs\"...),\n+ \t\t\t\t\"keyFile\":  string(\"/etc/kubernetes/static-pod-certs\"...),\n+ \t\t\t},\n+ \t\t\tmap[string]any{\n+ \t\t\t\t\"certFile\":
+  string(\"/etc/kubernetes/static-pod-resou\"...),\n+ \t\t\t\t\"keyFile\":  string(\"/etc/kubernetes/static-pod-resou\"...),\n+ \t\t\t},\n+ \t\t},\n+ \t},\n  }\n"
+reason: ObservedConfigChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Normal
