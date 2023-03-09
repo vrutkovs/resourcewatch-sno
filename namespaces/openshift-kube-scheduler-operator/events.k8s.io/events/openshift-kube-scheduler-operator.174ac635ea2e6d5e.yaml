@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:26Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:26Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-revisioncontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:26Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:22:26Z"
+  name: openshift-kube-scheduler-operator.174ac635ea2e6d5e
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "5133"
+  uid: 65f1541c-60c8-4602-9645-82de99a00b40
+note: |-
+  Updated ConfigMap/revision-status-3 -n openshift-kube-scheduler:
+  cause by changes in data.reason
+reason: ConfigMapUpdated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 63ed6034-26ff-494c-bb49-f929f1f6a34d
+type: Normal
