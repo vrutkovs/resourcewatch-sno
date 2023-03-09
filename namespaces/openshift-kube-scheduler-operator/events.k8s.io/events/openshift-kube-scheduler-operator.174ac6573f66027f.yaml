@@ -1,0 +1,58 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:24:49Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:49Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-status-controller-statussyncer_kube-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:49Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:24:49Z"
+  name: openshift-kube-scheduler-operator.174ac6573f66027f
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "7264"
+  uid: 300f857c-4809-46ce-833e-27380e1f27b3
+note: 'Status for clusteroperator/kube-scheduler changed: Degraded message changed
+  from "InstallerControllerDegraded: missing required resources: secrets: kube-scheduler-client-cert-key\nTargetConfigControllerDegraded:
+  \"configmap\": configmaps \"config\" is forbidden: User \"system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator\"
+  cannot get resource \"configmaps\" in API group \"\" in the namespace \"openshift-kube-scheduler\":
+  RBAC: [clusterrole.rbac.authorization.k8s.io \"system:build-strategy-jenkinspipeline\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:oauth-token-deleter\"
+  not found, clusterrole.rbac.authorization.k8s.io \"self-access-reviewer\" not found,
+  clusterrole.rbac.authorization.k8s.io \"system:discovery\" not found, clusterrole.rbac.authorization.k8s.io
+  \"cluster-status\" not found, clusterrole.rbac.authorization.k8s.io \"system:scope-impersonation\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:public-info-viewer\" not
+  found, clusterrole.rbac.authorization.k8s.io \"system:openshift:scc:restricted-v2\"
+  not found, clusterrole.rbac.authorization.k8s.io \"cluster-admin\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:build-strategy-source\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:openshift:discovery\" not found, clusterrole.rbac.authorization.k8s.io
+  \"basic-user\" not found, clusterrole.rbac.authorization.k8s.io \"system:webhook\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:service-account-issuer-discovery\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:build-strategy-docker\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:basic-user\" not found,
+  clusterrole.rbac.authorization.k8s.io \"system:openshift:public-info-viewer\" not
+  found]" to "InstallerControllerDegraded: missing required resources: secrets: kube-scheduler-client-cert-key"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 63ed6034-26ff-494c-bb49-f929f1f6a34d
+type: Normal
