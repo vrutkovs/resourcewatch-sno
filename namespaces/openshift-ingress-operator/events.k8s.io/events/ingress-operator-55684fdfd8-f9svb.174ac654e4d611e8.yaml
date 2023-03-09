@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-09T14:24:39Z"
-deprecatedLastTimestamp: "2023-03-09T14:27:14Z"
+deprecatedLastTimestamp: "2023-03-09T14:27:26Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:27:21Z"
+    time: "2023-03-09T14:27:26Z"
   name: ingress-operator-55684fdfd8-f9svb.174ac654e4d611e8
   namespace: openshift-ingress-operator
-  resourceVersion: "7788"
+  resourceVersion: "7806"
   uid: e24b224e-9e41-45e2-be9f-39b4b948f021
 note: Back-off restarting failed container ingress-operator in pod ingress-operator-55684fdfd8-f9svb_openshift-ingress-operator(8586aeeb-8734-4698-adcd-01ee23ee37ca)
 reason: BackOff
