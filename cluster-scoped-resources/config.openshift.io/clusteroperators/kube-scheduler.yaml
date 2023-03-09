@@ -52,15 +52,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3452"
+  resourceVersion: "3471"
   uid: 441925ee-aa23-4d3c-937b-d1809e7a63de
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: 'InstallerControllerDegraded: missing required resources: [secrets: kube-scheduler-client-cert-key,
-      configmaps: config-0,kube-scheduler-cert-syncer-kubeconfig-0,kube-scheduler-pod-0,scheduler-kubeconfig-0,serviceaccount-ca-0,
-      secrets: localhost-recovery-client-token-0]'
+    message: |-
+      InstallerControllerDegraded: missing required resources: [secrets: kube-scheduler-client-cert-key, configmaps: config-0,kube-scheduler-cert-syncer-kubeconfig-0,kube-scheduler-pod-0,scheduler-kubeconfig-0,serviceaccount-ca-0, secrets: localhost-recovery-client-token-0]
+      NodeControllerDegraded: All master nodes are ready
     reason: AsExpected
     status: "False"
     type: Degraded
