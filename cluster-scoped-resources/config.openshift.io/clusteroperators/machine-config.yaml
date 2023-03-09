@@ -41,12 +41,13 @@ metadata:
         f:conditions: {}
         f:extension:
           .: {}
+          f:lastSyncError: {}
           f:master: {}
           f:worker: {}
     manager: machine-config-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:29Z"
+    time: "2023-03-09T14:22:30Z"
   name: machine-config
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -54,7 +55,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "5286"
+  resourceVersion: "5310"
   uid: a2677b7f-e3c9-4360-88a8-42c47852f1d4
 spec: {}
 status:
@@ -70,6 +71,8 @@ status:
     status: "True"
     type: Upgradeable
   extension:
+    lastSyncError: 'pool master has not progressed to latest configuration: configuration
+      status for pool master is empty: <unknown>, retrying'
     master: <unknown>
     worker: <unknown>
   relatedObjects:
