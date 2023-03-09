@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 15
+deprecatedCount: 16
 deprecatedFirstTimestamp: "2023-03-09T14:22:21Z"
-deprecatedLastTimestamp: "2023-03-09T14:22:36Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:38Z"
 deprecatedSource:
   component: openshift-cluster-etcd-operator-revisioncontroller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-etcd-operator
     operation: Update
-    time: "2023-03-09T14:22:36Z"
+    time: "2023-03-09T14:22:38Z"
   name: etcd-operator.174ac634eda2d39c
   namespace: openshift-etcd-operator
-  resourceVersion: "5553"
+  resourceVersion: "5573"
   uid: 6d8f03c4-a2ba-4d65-b17e-18614afd2fb0
 note: new revision 2 triggered by "configmap \"etcd-pod\" not found"
 reason: RevisionTriggered
