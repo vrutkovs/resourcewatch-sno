@@ -110,6 +110,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:22:02Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:02Z"
   name: service-ca-854874ddf4
   namespace: openshift-service-ca
   ownerReferences:
@@ -119,7 +128,7 @@ metadata:
     kind: Deployment
     name: service-ca
     uid: 9202bf82-fe2e-4cb4-b621-e9cc589d5fa4
-  resourceVersion: "3838"
+  resourceVersion: "3845"
   uid: 760c1e5d-253c-4a05-96a8-65b3a3769928
 spec:
   replicas: 1
@@ -196,4 +205,5 @@ spec:
           name: signing-cabundle
         name: signing-cabundle
 status:
+  observedGeneration: 1
   replicas: 0
