@@ -163,6 +163,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -175,6 +177,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -190,7 +194,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:08Z"
+    time: "2023-03-09T14:32:10Z"
   name: community-operators-5bjdh
   namespace: openshift-marketplace
   ownerReferences:
@@ -200,7 +204,7 @@ metadata:
     kind: CatalogSource
     name: community-operators
     uid: cdf5bb77-79b2-4e4e-b630-d1251f9b24b4
-  resourceVersion: "14477"
+  resourceVersion: "14632"
   uid: ecc138ae-ec4e-47d1-af8b-54ff129ee713
 spec:
   containers:
@@ -324,12 +328,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:47Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:07Z"
+    message: 'containers with unready status: [registry-server]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:47Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:07Z"
+    message: 'containers with unready status: [registry-server]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:16Z"
@@ -341,9 +349,9 @@ status:
     imageID: registry.redhat.io/redhat/community-operator-index@sha256:944ed0229cf470ac1da8f31d65ee50a6cf2641477c6cb97c7f002e0b296a5f34
     lastState: {}
     name: registry-server
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
       running:
         startedAt: "2023-03-09T14:29:37Z"
