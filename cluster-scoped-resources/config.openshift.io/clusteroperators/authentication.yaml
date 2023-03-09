@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16209"
+  resourceVersion: "16212"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
@@ -62,8 +62,9 @@ status:
       IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
       OAuthServerDeploymentDegraded: 1 of 1 requested instances are unavailable for oauth-openshift.openshift-authentication ()
       OAuthServerRouteEndpointAccessibleControllerDegraded: Get "https://oauth-openshift.apps.ocp.choomba.one/healthz": EOF
+      OAuthServerServiceEndpointAccessibleControllerDegraded: Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443: connect: connection refused
       OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth service endpoints are not ready
-    reason: IngressStateEndpoints_MissingSubsets::OAuthServerDeployment_UnavailablePod::OAuthServerRouteEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError
+    reason: IngressStateEndpoints_MissingSubsets::OAuthServerDeployment_UnavailablePod::OAuthServerRouteEndpointAccessibleController_SyncError::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError
     status: "True"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:32:30Z"
