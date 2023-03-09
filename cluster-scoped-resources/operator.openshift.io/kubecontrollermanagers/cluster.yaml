@@ -44,14 +44,14 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:02Z"
+    time: "2023-03-09T14:22:03Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3859"
+  resourceVersion: "3936"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -113,6 +113,11 @@ status:
     reason: MasterNodesReady
     status: "False"
     type: NodeControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:03Z"
+    message: configmaps "kube-controller-manager-pod" not found
+    reason: ContentCreationError
+    status: "True"
+    type: RevisionControllerDegraded
   latestAvailableRevision: 0
   latestAvailableRevisionReason: ""
   nodeStatuses:
