@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:25Z"
+  name: ubi8-openjdk-8-runtime
+  namespace: openshift-cluster-samples-operator
+  resourceVersion: "15079"
+  uid: c3116366-81c1-4433-84da-5be0e2653de3
