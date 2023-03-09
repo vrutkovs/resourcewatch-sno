@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:31:59Z"
 deprecatedLastTimestamp: "2023-03-09T14:31:59Z"
 deprecatedSource:
@@ -28,7 +28,7 @@ metadata:
     time: "2023-03-09T14:31:59Z"
   name: vrutkovs-sno.174ac6bb79296c19
   namespace: default
-  resourceVersion: "13340"
+  resourceVersion: "13347"
   uid: 89528881-5b3d-483d-9090-59b00685afbe
 note: 'Node vrutkovs-sno status is now: NodeHasSufficientMemory'
 reason: NodeHasSufficientMemory
