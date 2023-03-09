@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:29:16Z"
 deprecatedLastTimestamp: "2023-03-09T14:29:16Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:29:16Z"
   name: kube-controller-manager-operator.174ac6957bea8382
   namespace: openshift-kube-controller-manager-operator
-  resourceVersion: "9510"
+  resourceVersion: "9519"
   uid: 0c0956b1-aeff-402f-8dd5-67263b44bb00
 note: 'configmaps: client-ca'
 reason: RequiredInstallerResourcesMissing
