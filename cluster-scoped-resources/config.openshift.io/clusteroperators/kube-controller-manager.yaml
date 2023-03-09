@@ -52,21 +52,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "13117"
+  resourceVersion: "13128"
   uid: fc4da80c-8238-45f0-831b-b76abd6e6070
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:24:40Z"
-    message: "GarbageCollectorDegraded: error fetching rules: Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\":
-      dial tcp 172.30.121.173:9091: connect: connection refused\nStaticPodsDegraded:
-      pod/kube-controller-manager-vrutkovs-sno container \"cluster-policy-controller\"
-      is waiting: ContainerCreating: \nStaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno
-      container \"kube-controller-manager\" is waiting: ContainerCreating: \nStaticPodsDegraded:
-      pod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager-cert-syncer\"
-      is waiting: ContainerCreating: \nStaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno
-      container \"kube-controller-manager-recovery-controller\" is waiting: ContainerCreating: "
-    reason: GarbageCollector_Error::StaticPods_Error
+    message: 'GarbageCollectorDegraded: error fetching rules: Get "https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules":
+      dial tcp 172.30.121.173:9091: connect: connection refused'
+    reason: GarbageCollector_Error
     status: "True"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:30:55Z"
