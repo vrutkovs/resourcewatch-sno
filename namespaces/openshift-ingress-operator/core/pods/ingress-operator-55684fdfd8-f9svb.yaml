@@ -225,6 +225,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -239,19 +241,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:30:03Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:01Z"
+    time: "2023-03-09T14:32:09Z"
   name: ingress-operator-55684fdfd8-f9svb
   namespace: openshift-ingress-operator
   ownerReferences:
@@ -261,7 +251,7 @@ metadata:
     kind: ReplicaSet
     name: ingress-operator-55684fdfd8
     uid: 506330a6-6445-4b53-bc78-33b1bd4aaf6b
-  resourceVersion: "13529"
+  resourceVersion: "14538"
   uid: 8586aeeb-8734-4698-adcd-01ee23ee37ca
 spec:
   containers:
@@ -432,8 +422,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:01Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:30:03Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:30:03Z"
