@@ -108,7 +108,7 @@ metadata:
     kind: DaemonSet
     name: ingress-canary
     uid: 8cada35d-3ced-4501-9955-de0cda7fcf82
-  resourceVersion: "13595"
+  resourceVersion: "14039"
   uid: 26eff830-6bd5-48a5-9969-7e94ee30b069
 spec:
   affinity:
@@ -150,6 +150,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     kubernetes.io/os: linux
   preemptionPolicy: PreemptLowerPriority
@@ -216,11 +217,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
-      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
-    reason: Unschedulable
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:32:03Z"
+    status: "True"
     type: PodScheduled
   phase: Pending
   qosClass: Burstable
