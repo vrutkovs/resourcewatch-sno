@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:02Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:02Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:02Z"
+  name: vrutkovs-sno.174ac6bc2cd8a678
+  namespace: default
+  resourceVersion: "13840"
+  uid: 9e442279-825b-4fe1-9953-fe4b4a14ff32
+note: Updated Node Allocatable limit across pods
+reason: NodeAllocatableEnforced
+regarding:
+  kind: Node
+  name: vrutkovs-sno
+  uid: vrutkovs-sno
+type: Normal
