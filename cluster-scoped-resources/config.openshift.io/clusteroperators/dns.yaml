@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "14020"
+  resourceVersion: "14094"
   uid: eca927bc-ff97-4d51-9a2e-9e7aacfef147
 spec: {}
 status:
@@ -63,8 +63,8 @@ status:
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:32:03Z"
-    message: 'DNS "default" reports Progressing=True: "Have 0 available node-resolver
-      pods, want 1."'
+    message: 'DNS "default" reports Progressing=True: "Have 0 available DNS pods,
+      want 1.\nHave 0 available node-resolver pods, want 1."'
     reason: DNSReportsProgressingIsTrue
     status: "True"
     type: Progressing
