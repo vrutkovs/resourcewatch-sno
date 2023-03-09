@@ -1,0 +1,75 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:24:45Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:45Z"
+deprecatedSource:
+  component: openshift-apiserver-operator-status-controller-statussyncer_openshift-apiserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:45Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:24:45Z"
+  name: openshift-apiserver-operator.174ac65658883110
+  namespace: openshift-apiserver-operator
+  resourceVersion: "7183"
+  uid: 64f05ab8-59b1-421d-b8b6-fd26c9dd0dce
+note: 'Status for clusteroperator/openshift-apiserver changed: Available message changed
+  from "APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.apps.openshift.io:
+  not available: failing or missing response from https://10.128.0.40:8443/apis/apps.openshift.io/v1:
+  bad status from https://10.128.0.40:8443/apis/apps.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.authorization.openshift.io: not available:
+  failing or missing response from https://10.128.0.40:8443/apis/authorization.openshift.io/v1:
+  bad status from https://10.128.0.40:8443/apis/authorization.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.build.openshift.io: not available: failing
+  or missing response from https://10.128.0.40:8443/apis/build.openshift.io/v1: bad
+  status from https://10.128.0.40:8443/apis/build.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.image.openshift.io: not available: failing
+  or missing response from https://10.128.0.40:8443/apis/image.openshift.io/v1: bad
+  status from https://10.128.0.40:8443/apis/image.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.project.openshift.io: not available: failing
+  or missing response from https://10.128.0.40:8443/apis/project.openshift.io/v1:
+  bad status from https://10.128.0.40:8443/apis/project.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.quota.openshift.io: not available: failing
+  or missing response from https://10.128.0.40:8443/apis/quota.openshift.io/v1: bad
+  status from https://10.128.0.40:8443/apis/quota.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.route.openshift.io: not available: failing
+  or missing response from https://10.128.0.40:8443/apis/route.openshift.io/v1: bad
+  status from https://10.128.0.40:8443/apis/route.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.security.openshift.io: not available: failing
+  or missing response from https://10.128.0.40:8443/apis/security.openshift.io/v1:
+  bad status from https://10.128.0.40:8443/apis/security.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.template.openshift.io: not available: failing
+  or missing response from https://10.128.0.40:8443/apis/template.openshift.io/v1:
+  bad status from https://10.128.0.40:8443/apis/template.openshift.io/v1: 401" to
+  "APIServicesAvailable: [Get \"https://172.30.0.1:443/apis/apiregistration.k8s.io/v1/apiservices/v1.apps.openshift.io\":
+  dial tcp 172.30.0.1:443: connect: connection refused, Get \"https://172.30.0.1:443/apis/apiregistration.k8s.io/v1/apiservices/v1.authorization.openshift.io\":
+  dial tcp 172.30.0.1:443: connect: connection refused, Get \"https://172.30.0.1:443/apis/apiregistration.k8s.io/v1/apiservices/v1.build.openshift.io\":
+  dial tcp 172.30.0.1:443: connect: connection refused, Get \"https://172.30.0.1:443/apis/apiregistration.k8s.io/v1/apiservices/v1.image.openshift.io\":
+  dial tcp 172.30.0.1:443: connect: connection refused, Get \"https://172.30.0.1:443/apis/apiregistration.k8s.io/v1/apiservices/v1.project.openshift.io\":
+  dial tcp 172.30.0.1:443: connect: connection refused, Get \"https://172.30.0.1:443/apis/apiregistration.k8s.io/v1/apiservices/v1.quota.openshift.io\":
+  dial tcp 172.30.0.1:443: connect: connection refused, Get \"https://172.30.0.1:443/apis/apiregistration.k8s.io/v1/apiservices/v1.route.openshift.io\":
+  dial tcp 172.30.0.1:443: connect: connection refused, Get \"https://172.30.0.1:443/apis/apiregistration.k8s.io/v1/apiservices/v1.security.openshift.io\":
+  dial tcp 172.30.0.1:443: connect: connection refused]"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-apiserver-operator
+  namespace: openshift-apiserver-operator
+  uid: a2161746-31b9-4c81-9d80-ec57dac3c48f
+type: Normal
