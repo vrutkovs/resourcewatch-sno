@@ -114,6 +114,24 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:20:26Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:26Z"
   name: multus-admission-controller-7c44c4fd4c-fmsb4
   namespace: openshift-multus
   ownerReferences:
@@ -123,7 +141,7 @@ metadata:
     kind: ReplicaSet
     name: multus-admission-controller-7c44c4fd4c
     uid: 7a585df6-dad3-48d7-b274-879569445ab4
-  resourceVersion: "2636"
+  resourceVersion: "2641"
   uid: 8ed3c998-db5a-4b2d-8aef-ef8476242060
 spec:
   containers:
@@ -246,5 +264,13 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:26Z"
+    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
+    reason: Unschedulable
+    status: "False"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
