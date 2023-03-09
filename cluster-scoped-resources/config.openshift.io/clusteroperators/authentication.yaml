@@ -52,14 +52,13 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "17048"
+  resourceVersion: "17051"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:33:05Z"
-    message: 'OAuthServerDeploymentDegraded: 1 of 1 requested instances are unavailable
-      for oauth-openshift.openshift-authentication ()'
+    message: All is well
     reason: AsExpected
     status: "False"
     type: Degraded
@@ -68,11 +67,10 @@ status:
     reason: AsExpected
     status: "False"
     type: Progressing
-  - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: 'OAuthServerDeploymentAvailable: no oauth-openshift.openshift-authentication
-      pods available on any node.'
-    reason: OAuthServerDeployment_NoPod
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:35:05Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: All is well
