@@ -44,14 +44,14 @@ metadata:
     manager: cluster-kube-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:53Z"
+    time: "2023-03-09T14:28:54Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8567"
+  resourceVersion: "8605"
   uid: c0c6917e-93dd-43c7-a907-55546729e305
 spec:
   logLevel: Normal
@@ -77,6 +77,10 @@ status:
     reason: MasterNodesReady
     status: "False"
     type: NodeControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:28:54Z"
+    reason: DefaultCertRotationBase
+    status: "True"
+    type: CertRotationTimeUpgradeable
   latestAvailableRevision: 0
   latestAvailableRevisionReason: ""
   nodeStatuses:
