@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:02Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:02Z"
+deprecatedSource:
+  component: snapshot-controller-leader/csi-snapshot-controller-74f6d7449-vlj4v
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: snapshot-controller
+    operation: Update
+    time: "2023-03-09T14:22:02Z"
+  name: snapshot-controller-leader.174ac6307ce6c50c
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "3822"
+  uid: 2cbb51d1-64ee-447b-a8bd-06ac740a216f
+note: csi-snapshot-controller-74f6d7449-vlj4v became leader
+reason: LeaderElection
+regarding:
+  apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  name: snapshot-controller-leader
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "3821"
+  uid: 9ba71f78-a8af-4046-8fa5-8b6940a5bd47
+type: Normal
