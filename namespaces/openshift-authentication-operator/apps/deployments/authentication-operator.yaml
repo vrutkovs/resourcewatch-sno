@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     config.openshift.io/inject-proxy: authentication-operator
+    deployment.kubernetes.io/revision: "1"
     exclude.release.openshift.io/internal-openshift-hosted: "true"
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
@@ -170,6 +171,27 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:15:01Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:15:01Z"
   name: authentication-operator
   namespace: openshift-authentication-operator
   ownerReferences:
@@ -178,7 +200,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1515"
+  resourceVersion: "1518"
   uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
 spec:
   progressDeadlineSeconds: 600
@@ -301,4 +323,11 @@ spec:
           name: service-ca-bundle
           optional: true
         name: service-ca-bundle
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:15:01Z"
+    lastUpdateTime: "2023-03-09T14:15:01Z"
+    message: Created new replica set "authentication-operator-5d5d777b7f"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
