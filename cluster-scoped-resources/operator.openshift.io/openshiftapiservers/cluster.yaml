@@ -41,14 +41,14 @@ metadata:
     manager: cluster-openshift-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:04Z"
+    time: "2023-03-09T14:22:05Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4072"
+  resourceVersion: "4117"
   uid: 745e26c2-906b-4bfc-8835-c7ba9c167c7b
 spec:
   logLevel: Normal
@@ -105,10 +105,8 @@ status:
     reason: ContentCreationError
     status: "True"
     type: RevisionControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:22:04Z"
-    message: namespaces "openshift-apiserver" not found
-    reason: Error
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:22:05Z"
+    status: "False"
     type: AuditPolicyDegraded
   latestAvailableRevision: 1
   readyReplicas: 0
