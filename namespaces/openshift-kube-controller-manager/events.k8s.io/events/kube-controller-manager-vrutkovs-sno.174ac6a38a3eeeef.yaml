@@ -1,0 +1,38 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:30:16Z"
+deprecatedLastTimestamp: "2023-03-09T14:30:16Z"
+deprecatedSource:
+  component: podsecurity-admission-label-sync-controller-pod-security-admission-label-synchronization-controller-pod-security-admission-label-synchronization-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:30:16Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:30:16Z"
+  name: kube-controller-manager-vrutkovs-sno.174ac6a38a3eeeef
+  namespace: openshift-kube-controller-manager
+  resourceVersion: "10468"
+  uid: c81bb8aa-545a-4f8c-ac1e-adcb2a556a5f
+note: Controller "pod-security-admission-label-synchronization-controller" resync
+  interval is set to 0s which might lead to client request throttling
+reason: FastControllerResync
+regarding:
+  kind: Pod
+  name: kube-controller-manager-vrutkovs-sno
+  namespace: openshift-kube-controller-manager
+type: Warning
