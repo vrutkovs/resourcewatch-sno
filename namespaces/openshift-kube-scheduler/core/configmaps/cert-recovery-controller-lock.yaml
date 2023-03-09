@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"vrutkovs-sno_4d9d60d4-07ba-4bb6-b614-db85b0cb267c","leaseDurationSeconds":137,"acquireTime":"2023-03-09T14:32:14Z","renewTime":"2023-03-09T14:40:55Z","leaderTransitions":0}'
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"vrutkovs-sno_4d9d60d4-07ba-4bb6-b614-db85b0cb267c","leaseDurationSeconds":137,"acquireTime":"2023-03-09T14:32:14Z","renewTime":"2023-03-09T14:41:21Z","leaderTransitions":0}'
   creationTimestamp: "2023-03-09T14:32:14Z"
   managedFields:
   - apiVersion: v1
@@ -14,8 +14,8 @@ metadata:
           f:control-plane.alpha.kubernetes.io/leader: {}
     manager: cluster-kube-scheduler-operator
     operation: Update
-    time: "2023-03-09T14:40:55Z"
+    time: "2023-03-09T14:41:21Z"
   name: cert-recovery-controller-lock
   namespace: openshift-kube-scheduler
-  resourceVersion: "18331"
+  resourceVersion: "18424"
   uid: 7d785f70-42ff-4505-86d2-99f30d3ca432
