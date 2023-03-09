@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 8
+deprecatedCount: 9
 deprecatedFirstTimestamp: "2023-03-09T14:29:11Z"
-deprecatedLastTimestamp: "2023-03-09T14:29:18Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:19Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -28,7 +28,7 @@ metadata:
     time: "2023-03-09T14:29:23Z"
   name: router-default-7c6dfd9fb7-jthnw.174ac69452689fcc
   namespace: openshift-ingress
-  resourceVersion: "9832"
+  resourceVersion: "9840"
   uid: c4476e07-4a97-4de7-a0fc-1c461b9ec272
 note: 'Startup probe failed: HTTP probe failed with statuscode: 500'
 reason: Unhealthy
