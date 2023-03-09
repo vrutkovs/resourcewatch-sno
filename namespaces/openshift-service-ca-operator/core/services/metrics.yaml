@@ -5,7 +5,9 @@ metadata:
     include.release.openshift.io/ibm-cloud-managed: "true"
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
     service.beta.openshift.io/serving-cert-secret-name: serving-cert
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
   creationTimestamp: "2023-03-09T14:14:46Z"
   labels:
     app: service-ca-operator
@@ -42,6 +44,16 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:46Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:22:11Z"
   name: metrics
   namespace: openshift-service-ca-operator
   ownerReferences:
@@ -50,7 +62,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1116"
+  resourceVersion: "4479"
   uid: a5e3e19b-67f6-4705-b331-2a1cc559f7be
 spec:
   clusterIP: 172.30.64.221
