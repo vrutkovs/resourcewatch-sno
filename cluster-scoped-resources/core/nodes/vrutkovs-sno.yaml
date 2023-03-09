@@ -94,6 +94,14 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:spec:
+        f:taints: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:32:01Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:allocatable:
           f:ephemeral-storage: {}
@@ -116,9 +124,13 @@ metadata:
     subresource: status
     time: "2023-03-09T14:32:01Z"
   name: vrutkovs-sno
-  resourceVersion: "13459"
+  resourceVersion: "13530"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-spec: {}
+spec:
+  taints:
+  - effect: NoSchedule
+    key: node.kubernetes.io/not-ready
+    timeAdded: "2023-03-09T14:32:01Z"
 status:
   addresses:
   - address: 10.0.130.93
