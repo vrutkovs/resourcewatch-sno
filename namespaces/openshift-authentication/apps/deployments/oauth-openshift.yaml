@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    deployment.kubernetes.io/revision: "2"
+    deployment.kubernetes.io/revision: "3"
     operator.openshift.io/rvs-hash: q_WUyiqrIOKjhBW1LV7Edj9281_lFrYastgX3H2w8RFuos1-4l6r_FID10a2TqMV3vxo7WeS-TIOpV6helOSng
     operator.openshift.io/spec-hash: 6d3f34c8631b752841de82c4e9f0fc2813555e6ab4496848bfbff56c4ffd89f8
   creationTimestamp: "2023-03-09T14:32:25Z"
@@ -10,40 +10,6 @@ metadata:
   labels:
     app: oauth-openshift
   managedFields:
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:deployment.kubernetes.io/revision: {}
-      f:status:
-        f:availableReplicas: {}
-        f:conditions:
-          .: {}
-          k:{"type":"Available"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Progressing"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:observedGeneration: {}
-        f:readyReplicas: {}
-        f:replicas: {}
-        f:updatedReplicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:33:03Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -306,9 +272,43 @@ metadata:
     manager: authentication-operator
     operation: Update
     time: "2023-03-09T14:33:05Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:availableReplicas: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:33:06Z"
   name: oauth-openshift
   namespace: openshift-authentication
-  resourceVersion: "16283"
+  resourceVersion: "16287"
   uid: 28c413a6-04a7-4cae-8efd-4240ba332c8e
 spec:
   progressDeadlineSeconds: 600
@@ -523,9 +523,9 @@ status:
     status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:32:25Z"
-    lastUpdateTime: "2023-03-09T14:33:03Z"
-    message: ReplicaSet "oauth-openshift-77f4f9844d" has successfully progressed.
-    reason: NewReplicaSetAvailable
+    lastUpdateTime: "2023-03-09T14:33:06Z"
+    message: Created new replica set "oauth-openshift-55cc54fd65"
+    reason: NewReplicaSetCreated
     status: "True"
     type: Progressing
   observedGeneration: 2
