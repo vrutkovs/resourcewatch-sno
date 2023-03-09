@@ -1,0 +1,50 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:13Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:13Z"
+deprecatedSource:
+  component: oauth-apiserver-status-controller-statussyncer_authentication
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:13Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:29:13Z"
+  name: openshift-authentication-operator.174ac694c56327d7
+  namespace: openshift-authentication-operator
+  resourceVersion: "9239"
+  uid: 16fd930f-7581-4e91-a4a9-a5bcf6a89f99
+note: 'Status for clusteroperator/authentication changed: Available message changed
+  from "APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.oauth.openshift.io:
+  not available: failing or missing response from https://10.128.0.41:8443/apis/oauth.openshift.io/v1:
+  bad status from https://10.128.0.41:8443/apis/oauth.openshift.io/v1: 401\nAPIServicesAvailable:
+  apiservices.apiregistration.k8s.io/v1.user.openshift.io: not available: failing
+  or missing response from https://10.128.0.41:8443/apis/user.openshift.io/v1: bad
+  status from https://10.128.0.41:8443/apis/user.openshift.io/v1: 401\nOAuthServerServiceEndpointAccessibleControllerAvailable:
+  Get \"https://172.30.70.249:443/healthz\": dial tcp 172.30.70.249:443: connect:
+  connection refused\nOAuthServerServiceEndpointsEndpointAccessibleControllerAvailable:
+  endpoints \"oauth-openshift\" not found" to "APIServicesAvailable: PreconditionNotReady\nOAuthServerServiceEndpointAccessibleControllerAvailable:
+  Get \"https://172.30.70.249:443/healthz\": dial tcp 172.30.70.249:443: connect:
+  connection refused\nOAuthServerServiceEndpointsEndpointAccessibleControllerAvailable:
+  endpoints \"oauth-openshift\" not found"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: v1
+  kind: Namespace
+  name: openshift-authentication-operator
+  namespace: openshift-authentication-operator
+type: Normal
