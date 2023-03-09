@@ -43,7 +43,7 @@ metadata:
     manager: cluster-openshift-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:00Z"
+    time: "2023-03-09T14:23:01Z"
   name: openshift-controller-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -51,7 +51,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6115"
+  resourceVersion: "6251"
   uid: cb36378d-79fb-4403-a457-c380addd90d6
 spec: {}
 status:
@@ -61,17 +61,25 @@ status:
     reason: AsExpected
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:23:00Z"
-    reason: NoData
-    status: Unknown
+  - lastTransitionTime: "2023-03-09T14:23:01Z"
+    message: |-
+      Progressing: deployment/controller-manager: observed generation is 1, desired generation is 2.
+      Progressing: deployment/controller-manager: available replicas is 0, desired available replicas > 1
+      Progressing: deployment/route-controller-manager: observed generation is 1, desired generation is 2.
+      Progressing: deployment/route-controller-manager: available replicas is 0, desired available replicas > 1
+      Progressing: openshiftcontrollermanagers.operator.openshift.io/cluster: observed generation is 0, desired generation is 2.
+    reason: _DesiredStateNotYetAchieved
+    status: "True"
     type: Progressing
-  - lastTransitionTime: "2023-03-09T14:23:00Z"
-    reason: NoData
-    status: Unknown
+  - lastTransitionTime: "2023-03-09T14:23:01Z"
+    message: 'Available: no pods available on any node.'
+    reason: _NoPodsAvailable
+    status: "False"
     type: Available
-  - lastTransitionTime: "2023-03-09T14:23:00Z"
-    reason: NoData
-    status: Unknown
+  - lastTransitionTime: "2023-03-09T14:23:01Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
     type: Upgradeable
   extension: null
   relatedObjects:
