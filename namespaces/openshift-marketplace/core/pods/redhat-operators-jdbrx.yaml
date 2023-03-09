@@ -194,7 +194,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:10Z"
+    time: "2023-03-09T14:32:14Z"
   name: redhat-operators-jdbrx
   namespace: openshift-marketplace
   ownerReferences:
@@ -204,7 +204,7 @@ metadata:
     kind: CatalogSource
     name: redhat-operators
     uid: 0d01f0d0-d14a-433d-aa2b-f890372ecc3c
-  resourceVersion: "14682"
+  resourceVersion: "14882"
   uid: 24c18e6d-5ec4-4179-bd33-3eee20816f69
 spec:
   containers:
@@ -351,7 +351,7 @@ status:
     name: registry-server
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
       running:
         startedAt: "2023-03-09T14:29:38Z"
