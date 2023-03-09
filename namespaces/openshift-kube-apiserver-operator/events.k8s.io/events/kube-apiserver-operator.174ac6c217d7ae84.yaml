@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:28Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:28Z"
+deprecatedSource:
+  component: kube-apiserver-operator-revisioncontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:28Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:32:28Z"
+  name: kube-apiserver-operator.174ac6c217d7ae84
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "15255"
+  uid: 72913f84-caa2-43b9-ad55-1358c58ec53a
+note: new revision 3 triggered by "configmap/config has changed,configmap/oauth-metadata
+  has changed,configmap/sa-token-signing-certs has changed"
+reason: RevisionTriggered
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Normal
