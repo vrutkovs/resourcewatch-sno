@@ -1,0 +1,172 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2023-03-09T14:39:36Z"
+  labels:
+    app: pruner
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b9b4edf4-e8a6-4aa7-b40d-b692e347e75f"}: {}
+      f:spec:
+        f:automountServiceAccountToken: {}
+        f:containers:
+          k:{"name":"pruner"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+              f:runAsUser: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/secrets/kubernetes.io/serviceaccount"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeName: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsUser: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"kube-api-access"}:
+            .: {}
+            f:name: {}
+            f:projected:
+              .: {}
+              f:defaultMode: {}
+              f:sources: {}
+          k:{"name":"kubelet-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:39:36Z"
+  name: revision-pruner-6-vrutkovs-sno
+  namespace: openshift-kube-controller-manager
+  ownerReferences:
+  - apiVersion: v1
+    kind: ConfigMap
+    name: revision-status-6
+    uid: b9b4edf4-e8a6-4aa7-b40d-b692e347e75f
+  resourceVersion: "17987"
+  uid: 6740dae1-f1d0-4a81-b8f9-dee4f7e34848
+spec:
+  automountServiceAccountToken: false
+  containers:
+  - args:
+    - -v=4
+    - --max-eligible-revision=6
+    - --protected-revisions=2,3,4,5,6
+    - --resource-dir=/etc/kubernetes/static-pod-resources
+    - --cert-dir=kube-controller-manager-certs
+    - --static-pod-name=kube-controller-manager-pod
+    command:
+    - cluster-kube-controller-manager-operator
+    - prune
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d32df39b960a3d0fd95bb8269b5f82f104c4834d44ce0e86605741fe6546ff3d
+    imagePullPolicy: IfNotPresent
+    name: pruner
+    resources:
+      limits:
+        cpu: 150m
+        memory: 200M
+      requests:
+        cpu: 150m
+        memory: 200M
+    securityContext:
+      privileged: true
+      runAsUser: 0
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kubernetes/
+      name: kubelet-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: installer-sa-dockercfg-8v9l5
+  nodeName: vrutkovs-sno
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Never
+  schedulerName: default-scheduler
+  securityContext:
+    runAsUser: 0
+  serviceAccount: installer-sa
+  serviceAccountName: installer-sa
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/kubernetes/
+      type: ""
+    name: kubelet-dir
+  - name: kube-api-access
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3600
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  phase: Pending
+  qosClass: Guaranteed
