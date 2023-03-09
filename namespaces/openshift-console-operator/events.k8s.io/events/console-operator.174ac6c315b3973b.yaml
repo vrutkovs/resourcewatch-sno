@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:32Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:32Z"
+deprecatedSource:
+  component: console-operator-console-operator-consoleoperator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:32Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: console
+    operation: Update
+    time: "2023-03-09T14:32:32Z"
+  name: console-operator.174ac6c315b3973b
+  namespace: openshift-console-operator
+  resourceVersion: "15395"
+  uid: 60e887e2-9637-4c64-b997-5cb0f5403d00
+note: Created Deployment.apps/console -n openshift-console because it was missing
+reason: DeploymentCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: console-operator
+  namespace: openshift-console-operator
+  uid: 96b3e259-2eaa-49a3-8a5e-54df68da1860
+type: Normal
