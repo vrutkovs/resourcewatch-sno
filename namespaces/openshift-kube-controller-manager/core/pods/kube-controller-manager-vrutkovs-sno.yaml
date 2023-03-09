@@ -332,7 +332,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:39:32Z"
+    time: "2023-03-09T14:39:33Z"
   name: kube-controller-manager-vrutkovs-sno
   namespace: openshift-kube-controller-manager
   ownerReferences:
@@ -341,7 +341,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "17968"
+  resourceVersion: "17970"
   uid: 90fba2be-3b3f-43d0-b578-7ad1c088d548
 spec:
   containers:
@@ -579,13 +579,13 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:38:09Z"
-    message: 'containers with unready status: [kube-controller-manager cluster-policy-controller]'
+    message: 'containers with unready status: [kube-controller-manager]'
     reason: ContainersNotReady
     status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:38:09Z"
-    message: 'containers with unready status: [kube-controller-manager cluster-policy-controller]'
+    message: 'containers with unready status: [kube-controller-manager]'
     reason: ContainersNotReady
     status: "False"
     type: ContainersReady
@@ -605,7 +605,7 @@ status:
         reason: Completed
         startedAt: "2023-03-09T14:38:23Z"
     name: cluster-policy-controller
-    ready: false
+    ready: true
     restartCount: 1
     started: true
     state:
