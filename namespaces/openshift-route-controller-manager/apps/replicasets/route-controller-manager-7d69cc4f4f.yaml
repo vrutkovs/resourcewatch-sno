@@ -169,7 +169,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -183,7 +185,7 @@ metadata:
     kind: Deployment
     name: route-controller-manager
     uid: ad9d7992-335d-4009-a433-f1dc108a6d16
-  resourceVersion: "6241"
+  resourceVersion: "6243"
   uid: 5fb8ad78-30f0-4c6a-b57c-0bfcc090e47f
 spec:
   replicas: 1
@@ -305,5 +307,6 @@ spec:
           defaultMode: 420
           secretName: serving-cert
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 2
-  replicas: 0
+  replicas: 1
