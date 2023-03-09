@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:01Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:01Z"
+deprecatedSource:
+  component: service-ca-operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:01Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:22:01Z"
+  name: service-ca-operator.174ac6302a318c56
+  namespace: openshift-service-ca-operator
+  resourceVersion: "3743"
+  uid: e72b1c46-5099-4cc5-a821-52270d6acdb6
+note: Created ClusterRoleBinding.rbac.authorization.k8s.io/system:openshift:controller:service-ca
+  because it was missing
+reason: ClusterRoleBindingCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: service-ca-operator
+  namespace: openshift-service-ca-operator
+  uid: 4278fbc3-b3a7-4276-bef7-7a9632b54a52
+type: Normal
