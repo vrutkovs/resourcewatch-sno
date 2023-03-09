@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:25Z"
+  name: dotnet
+  namespace: openshift-cluster-samples-operator
+  resourceVersion: "15111"
+  uid: e56f5eb8-7a4d-458c-9d66-f3b5148f4f31
