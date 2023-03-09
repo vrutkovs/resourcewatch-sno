@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:25Z"
+  name: php
+  namespace: openshift-cluster-samples-operator
+  resourceVersion: "15081"
+  uid: 3a4a20b6-48b9-4433-b608-6fa5f10faa28
