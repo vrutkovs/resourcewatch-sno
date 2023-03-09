@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-09T14:21:51Z"
-deprecatedLastTimestamp: "2023-03-09T14:21:51Z"
+deprecatedLastTimestamp: "2023-03-09T14:21:52Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:21:51Z"
+    time: "2023-03-09T14:21:55Z"
   name: marketplace-operator-674cf84489-dbxgt.174ac62dd5eba91f
   namespace: openshift-marketplace
-  resourceVersion: "3202"
+  resourceVersion: "3281"
   uid: c8dbc526-35b2-4f61-af84-758377099c58
 note: 'MountVolume.SetUp failed for volume "marketplace-operator-metrics" : secret
   "marketplace-operator-metrics" not found'
