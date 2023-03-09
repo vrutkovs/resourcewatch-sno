@@ -44,7 +44,7 @@ metadata:
     manager: cluster-image-registry-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:34:56Z"
+    time: "2023-03-09T14:34:59Z"
   name: image-registry
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,25 +52,25 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16928"
+  resourceVersion: "16965"
   uid: b3c174db-4a7c-4e86-bf88-820c8067e5b0
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-09T14:33:47Z"
+  - lastTransitionTime: "2023-03-09T14:34:59Z"
     message: |-
       Available: The registry is removed
-      NodeCADaemonAvailable: The daemon set node-ca does not have available replicas
+      NodeCADaemonAvailable: The daemon set node-ca has available replicas
       ImagePrunerAvailable: Pruner CronJob has been created
-    reason: NodeCADaemonNoAvailableReplicas::Removed
-    status: "False"
+    reason: Removed
+    status: "True"
     type: Available
-  - lastTransitionTime: "2023-03-09T14:33:47Z"
+  - lastTransitionTime: "2023-03-09T14:34:59Z"
     message: |-
       Progressing: All registry resources are removed
-      NodeCADaemonProgressing: The daemon set node-ca is deploying node pods
-    reason: NodeCADaemonUnavailable::Removed
-    status: "True"
+      NodeCADaemonProgressing: The daemon set node-ca is deployed
+    reason: Removed
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:32:22Z"
     message: 'Degraded: The registry is removed'
