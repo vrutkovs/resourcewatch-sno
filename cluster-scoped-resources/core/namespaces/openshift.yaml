@@ -1,10 +1,26 @@
 apiVersion: v1
 kind: Namespace
 metadata:
+  annotations:
+    openshift.io/sa.scc.mcs: s0:c25,c10
+    openshift.io/sa.scc.supplemental-groups: 1000620000/10000
+    openshift.io/sa.scc.uid-range: 1000620000/10000
   creationTimestamp: "2023-03-09T14:23:11Z"
   labels:
     kubernetes.io/metadata.name: openshift
   managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:23:11Z"
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -16,7 +32,7 @@ metadata:
     operation: Update
     time: "2023-03-09T14:23:11Z"
   name: openshift
-  resourceVersion: "6641"
+  resourceVersion: "6647"
   uid: 37d77db2-a543-477b-8091-bc0c5819286c
 spec:
   finalizers:
