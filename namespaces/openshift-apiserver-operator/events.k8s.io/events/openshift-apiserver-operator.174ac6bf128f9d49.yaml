@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:15Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:15Z"
+deprecatedSource:
+  component: openshift-apiserver-operator-status-controller-statussyncer_openshift-apiserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:32:15Z"
+  name: openshift-apiserver-operator.174ac6bf128f9d49
+  namespace: openshift-apiserver-operator
+  resourceVersion: "14907"
+  uid: a6254d60-9482-463f-9579-f7e05872395c
+note: 'Status for clusteroperator/openshift-apiserver changed: Degraded message changed
+  from "APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable for
+  apiserver.openshift-apiserver (container is crashlooping in apiserver-5974c8c8bd-7zfsh
+  pod)" to "All is well",Available changed from False to True ("All is well")'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-apiserver-operator
+  namespace: openshift-apiserver-operator
+  uid: a2161746-31b9-4c81-9d80-ec57dac3c48f
+type: Normal
