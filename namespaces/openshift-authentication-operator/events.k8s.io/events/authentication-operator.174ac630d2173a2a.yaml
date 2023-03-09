@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:04Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:04Z"
+deprecatedSource:
+  component: cluster-authentication-operator-config-observer-configobserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:04Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:22:04Z"
+  name: authentication-operator.174ac630d2173a2a
+  namespace: openshift-authentication-operator
+  resourceVersion: "3952"
+  uid: 73d0be5b-a57d-4ec3-b80a-e3f1c56dced1
+note: templates changed to map["error":"/var/config/system/secrets/v4-0-config-system-ocp-branding-template/errors.html"
+  "login":"/var/config/system/secrets/v4-0-config-system-ocp-branding-template/login.html"
+  "providerSelection":"/var/config/system/secrets/v4-0-config-system-ocp-branding-template/providers.html"]
+reason: ObserveTemplates
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
+type: Normal
