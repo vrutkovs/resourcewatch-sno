@@ -1,0 +1,42 @@
+apiVersion: operator.openshift.io/v1
+kind: Network
+metadata:
+  creationTimestamp: "2023-03-09T14:20:15Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:clusterNetwork: {}
+        f:defaultNetwork:
+          f:type: {}
+        f:disableNetworkDiagnostics: {}
+        f:managementState: {}
+        f:observedConfig: {}
+        f:serviceNetwork: {}
+        f:unsupportedConfigOverrides: {}
+      f:status:
+        f:readyReplicas: {}
+    manager: cluster-network-operator/clusterconfig
+    operation: Apply
+    time: "2023-03-09T14:20:15Z"
+  name: cluster
+  resourceVersion: "2477"
+  uid: e6519524-ef16-4ee8-82f1-2faa42688032
+spec:
+  clusterNetwork:
+  - cidr: 10.128.0.0/14
+    hostPrefix: 23
+  defaultNetwork:
+    type: OVNKubernetes
+  disableNetworkDiagnostics: false
+  logLevel: Normal
+  managementState: Managed
+  observedConfig: null
+  operatorLogLevel: Normal
+  serviceNetwork:
+  - 172.30.0.0/16
+  unsupportedConfigOverrides: null
+status:
+  readyReplicas: 0
