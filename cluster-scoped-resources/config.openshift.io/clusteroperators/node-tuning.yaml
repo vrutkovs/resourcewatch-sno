@@ -46,7 +46,7 @@ metadata:
     manager: cluster-node-tuning-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:08Z"
   name: node-tuning
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -54,15 +54,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "13610"
+  resourceVersion: "14416"
   uid: 1b8976f1-2cb3-4b19-b68c-fe37f00574ed
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-09T14:32:02Z"
-    message: DaemonSet "tuned" has no available Pod(s)
-    reason: TunedUnavailable
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:32:08Z"
+    message: Cluster has deployed "4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest"
+    reason: AsExpected
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:34Z"
     message: Cluster version is "4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest"
