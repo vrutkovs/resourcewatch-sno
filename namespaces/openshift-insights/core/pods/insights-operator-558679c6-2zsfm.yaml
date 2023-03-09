@@ -145,6 +145,40 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:48Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:metadata:
         f:annotations:
           f:k8s.ovn.org/pod-networks: {}
@@ -160,7 +194,7 @@ metadata:
     kind: ReplicaSet
     name: insights-operator-558679c6
     uid: 676c392a-9c6b-4895-9a89-2500abfa49c6
-  resourceVersion: "8359"
+  resourceVersion: "8362"
   uid: 005bb3a4-6468-4232-a227-5fd234462534
 spec:
   containers:
@@ -296,6 +330,35 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:28:48Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:28:48Z"
+    message: 'containers with unready status: [insights-operator]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:28:48Z"
+    message: 'containers with unready status: [insights-operator]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:28:48Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:cbd36d05aafe3dee480a62e8c8ec07dff5ec7dbc81a64212279bf54cf558d39f
+    imageID: ""
+    lastState: {}
+    name: insights-operator
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.93
   phase: Pending
   qosClass: Burstable
+  startTime: "2023-03-09T14:28:48Z"
