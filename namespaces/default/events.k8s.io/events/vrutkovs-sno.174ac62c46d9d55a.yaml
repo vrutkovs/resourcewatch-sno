@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:21:44Z"
+deprecatedLastTimestamp: "2023-03-09T14:21:44Z"
+deprecatedSource:
+  component: controlplane
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:21:44Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:21:44Z"
+  name: vrutkovs-sno.174ac62c46d9d55a
+  namespace: default
+  resourceVersion: "3084"
+  uid: 1478c2b4-533d-431e-b50e-5daabcb98e4c
+note: 'error creating gateway for node vrutkovs-sno: failed to init shared interface
+  gateway: failed to create MAC Binding for dummy nexthop vrutkovs-sno: error getting
+  datapath GR_vrutkovs-sno: object not found'
+reason: ErrorReconcilingNode
+regarding:
+  apiVersion: v1
+  kind: Node
+  name: vrutkovs-sno
+  resourceVersion: "3083"
+  uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
+type: Warning
