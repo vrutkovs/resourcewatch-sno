@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:09Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:09Z"
+deprecatedSource:
+  component: oauth-apiserver-apiserverstaticresources-apiserverstaticresources
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:09Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:22:09Z"
+  name: authentication-operator.174ac632119d0852
+  namespace: openshift-authentication-operator
+  resourceVersion: "4351"
+  uid: 75ef0cc0-a639-488b-a2ed-4eb828c36306
+note: Created ClusterRoleBinding.rbac.authorization.k8s.io/system:openshift:useroauthaccesstoken-manager
+  because it was missing
+reason: ClusterRoleBindingCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
+type: Normal
