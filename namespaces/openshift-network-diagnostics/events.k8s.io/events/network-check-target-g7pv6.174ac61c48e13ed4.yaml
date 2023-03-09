@@ -1,0 +1,41 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:20:35.933029Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:35Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:20:35Z"
+  name: network-check-target-g7pv6.174ac61c48e13ed4
+  namespace: openshift-network-diagnostics
+  resourceVersion: "2831"
+  uid: d735602e-7e12-4e57-b059-7d1ef7cb37fb
+note: Successfully assigned openshift-network-diagnostics/network-check-target-g7pv6
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: network-check-target-g7pv6
+  namespace: openshift-network-diagnostics
+  resourceVersion: "2827"
+  uid: 8889968e-1c5d-4445-b108-fe901317fa94
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
