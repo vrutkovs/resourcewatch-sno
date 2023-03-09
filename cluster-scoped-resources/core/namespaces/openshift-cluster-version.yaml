@@ -53,8 +53,24 @@ metadata:
     manager: cluster-policy-controller
     operation: Update
     time: "2023-03-09T14:14:21Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b7590f0c-c37f-44e0-80d3-7b5df1e0e187"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-09T14:14:36Z"
   name: openshift-cluster-version
-  resourceVersion: "491"
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
+  resourceVersion: "737"
   uid: 7d539aeb-8e49-4e6f-91a5-2a6626adbd8c
 spec:
   finalizers:
