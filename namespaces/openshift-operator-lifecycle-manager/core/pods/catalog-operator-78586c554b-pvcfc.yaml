@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.54/23"],"mac_address":"0a:58:0a:80:00:36","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.54/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:28:53Z"
@@ -130,6 +131,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:28:53Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:28:53Z"
   name: catalog-operator-78586c554b-pvcfc
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -139,7 +149,7 @@ metadata:
     kind: ReplicaSet
     name: catalog-operator-78586c554b
     uid: ae6e6601-2c53-467b-9f43-706d423b723d
-  resourceVersion: "8588"
+  resourceVersion: "8593"
   uid: 4cd62dbd-153e-43df-a0c5-361a9afb81bc
 spec:
   containers:
