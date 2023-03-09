@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:33Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:33Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:33Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:32:33Z"
+  name: oauth-openshift-7749b8f584.174ac6c345f5ae73
+  namespace: openshift-authentication
+  resourceVersion: "15454"
+  uid: 96804edf-9b18-40e9-b32d-3547e5cae194
+note: 'Deleted pod: oauth-openshift-7749b8f584-djk22'
+reason: SuccessfulDelete
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: oauth-openshift-7749b8f584
+  namespace: openshift-authentication
+  resourceVersion: "15447"
+  uid: 445b598f-a0d5-402c-9e1b-cdda347aad21
+type: Normal
