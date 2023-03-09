@@ -176,40 +176,6 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"ContainersReady"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Initialized"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Ready"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:containerStatuses: {}
-        f:hostIP: {}
-        f:startTime: {}
-    manager: kubelet
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:28:48Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:metadata:
         f:annotations:
           f:k8s.ovn.org/pod-networks: {}
@@ -226,6 +192,43 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:28:49Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.49"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:53Z"
   name: cluster-autoscaler-operator-79c8f8b45c-ncs67
   namespace: openshift-machine-api
   ownerReferences:
@@ -235,7 +238,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-autoscaler-operator-79c8f8b45c
     uid: c2f6ebb9-46f2-4812-b02b-6671806b38f3
-  resourceVersion: "8415"
+  resourceVersion: "8595"
   uid: 45789d7d-44e4-4ed4-be30-6bbd8d5edaaa
 spec:
   containers:
@@ -412,43 +415,44 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:28:48Z"
-    message: 'containers with unready status: [kube-rbac-proxy cluster-autoscaler-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:28:53Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:28:48Z"
-    message: 'containers with unready status: [kube-rbac-proxy cluster-autoscaler-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:28:53Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:28:48Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:43efea12406b5a62bdb7f1cdfc0357c4d53cfa985861af2a89655e1a991fd3c0
-    imageID: ""
+  - containerID: cri-o://7fdfbaf6ff7a5d923271301936d656f25451d0ba364abbcc3112308d021ca135
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:43efea12406b5a62bdb7f1cdfc0357c4d53cfa985861af2a89655e1a991fd3c0
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:43efea12406b5a62bdb7f1cdfc0357c4d53cfa985861af2a89655e1a991fd3c0
     lastState: {}
     name: cluster-autoscaler-operator
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:28:53Z"
+  - containerID: cri-o://0af55c81d2a3bd1e920a1ab799cbb16811a6e12110adc956289f68f18ce59b0e
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
     lastState: {}
     name: kube-rbac-proxy
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:28:49Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.49
+  podIPs:
+  - ip: 10.128.0.49
   qosClass: Burstable
   startTime: "2023-03-09T14:28:48Z"
