@@ -111,15 +111,6 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:conditions:
-          .: {}
-          k:{"type":"ReplicaFailure"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
         f:observedGeneration: {}
     manager: kube-controller-manager
     operation: Update
@@ -134,7 +125,7 @@ metadata:
     kind: Deployment
     name: machine-config-operator
     uid: 2db1961c-62ad-4f93-a015-42fb019dfc21
-  resourceVersion: "1808"
+  resourceVersion: "2266"
   uid: 8c7f1761-63c0-4ba4-a559-948ea90c5d54
 spec:
   replicas: 1
@@ -204,12 +195,5 @@ spec:
           type: ""
         name: root-ca
 status:
-  conditions:
-  - lastTransitionTime: "2023-03-09T14:15:12Z"
-    message: 'pods "machine-config-operator-8494d5cfff-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
-      the cluster does not have any nodes'
-    reason: FailedCreate
-    status: "True"
-    type: ReplicaFailure
   observedGeneration: 1
   replicas: 0
