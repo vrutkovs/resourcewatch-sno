@@ -191,6 +191,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -205,19 +207,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:14Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:09Z"
   name: olm-operator-5fccd556f6-7cf76
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -227,7 +217,7 @@ metadata:
     kind: ReplicaSet
     name: olm-operator-5fccd556f6
     uid: 4c987813-63b3-4af7-90fa-e10158fa33e2
-  resourceVersion: "13656"
+  resourceVersion: "14504"
   uid: 88b458f5-b8fd-4384-a4b8-d57d22d2f34d
 spec:
   containers:
@@ -380,8 +370,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:12Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:12Z"
