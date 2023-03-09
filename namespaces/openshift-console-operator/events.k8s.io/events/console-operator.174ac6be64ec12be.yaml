@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:12Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:12Z"
+deprecatedSource:
+  component: console-operator-resource-sync-controller-resourcesynccontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:12Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: console
+    operation: Update
+    time: "2023-03-09T14:32:12Z"
+  name: console-operator.174ac6be64ec12be
+  namespace: openshift-console-operator
+  resourceVersion: "14773"
+  uid: 231109e2-5311-47cd-bc81-08028c4afa15
+note: Created ConfigMap/oauth-serving-cert -n openshift-console because it was missing
+reason: ConfigMapCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: console-operator
+  namespace: openshift-console-operator
+  uid: 96b3e259-2eaa-49a3-8a5e-54df68da1860
+type: Normal
