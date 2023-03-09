@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 11
+deprecatedCount: 12
 deprecatedFirstTimestamp: "2023-03-09T14:22:10Z"
 deprecatedLastTimestamp: "2023-03-09T14:22:14Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:22:21Z"
   name: kube-controller-manager-operator.174ac632607c811d
   namespace: openshift-kube-controller-manager-operator
-  resourceVersion: "4936"
+  resourceVersion: "4949"
   uid: 04d314b1-5623-498d-b08f-c8eb280c0452
 note: new revision 2 triggered by "configmap \"kube-controller-manager-pod\" not found"
 reason: RevisionTriggered
