@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:31:09Z"
+    time: "2023-03-09T14:31:55Z"
   name: kube-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10945"
+  resourceVersion: "13288"
   uid: 44fa5a7d-2a86-4650-a833-6e25b487f945
 spec: {}
 status:
@@ -121,4 +121,8 @@ status:
     resource: nodes
   versions:
   - name: raw-internal
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+  - name: kube-apiserver
+    version: 1.26.2
+  - name: operator
     version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
