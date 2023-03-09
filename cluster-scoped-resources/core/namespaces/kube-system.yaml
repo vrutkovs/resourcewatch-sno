@@ -1,6 +1,10 @@
 apiVersion: v1
 kind: Namespace
 metadata:
+  annotations:
+    openshift.io/sa.scc.mcs: s0:c1,c0
+    openshift.io/sa.scc.supplemental-groups: 1000000000/10000
+    openshift.io/sa.scc.uid-range: 1000000000/10000
   creationTimestamp: "2023-03-09T14:13:44Z"
   labels:
     kubernetes.io/metadata.name: kube-system
@@ -15,8 +19,20 @@ metadata:
     manager: kube-apiserver
     operation: Update
     time: "2023-03-09T14:13:44Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:14:21Z"
   name: kube-system
-  resourceVersion: "4"
+  resourceVersion: "482"
   uid: 4fe2d4dd-7599-4974-9fdf-3a0c4574ab76
 spec:
   finalizers:
