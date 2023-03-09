@@ -341,7 +341,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "17967"
+  resourceVersion: "17968"
   uid: 90fba2be-3b3f-43d0-b578-7ad1c088d548
 spec:
   containers:
@@ -632,7 +632,7 @@ status:
     name: kube-controller-manager
     ready: false
     restartCount: 1
-    started: false
+    started: true
     state:
       running:
         startedAt: "2023-03-09T14:39:23Z"
