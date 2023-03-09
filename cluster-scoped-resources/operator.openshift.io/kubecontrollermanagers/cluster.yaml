@@ -68,14 +68,14 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:26Z"
+    time: "2023-03-09T14:23:27Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6966"
+  resourceVersion: "6979"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -122,7 +122,7 @@ status:
     type: UnsupportedConfigOverridesUpgradeable
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: 'missing required resources: [configmaps: aggregator-client-ca,client-ca,
-      secrets: kube-controller-manager-client-cert-key, configmaps: cluster-policy-controller-config-3,config-3,controller-manager-kubeconfig-3,kube-controller-cert-syncer-kubeconfig-3,kube-controller-manager-pod-3,recycler-config-3,service-ca-3,serviceaccount-ca-3]'
+      secrets: kube-controller-manager-client-cert-key]'
     reason: Error
     status: "True"
     type: InstallerControllerDegraded
