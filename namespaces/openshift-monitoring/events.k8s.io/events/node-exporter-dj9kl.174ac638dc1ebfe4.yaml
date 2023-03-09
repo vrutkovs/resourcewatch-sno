@@ -1,0 +1,40 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:22:38.662396Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:38Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:22:38Z"
+  name: node-exporter-dj9kl.174ac638dc1ebfe4
+  namespace: openshift-monitoring
+  resourceVersion: "5673"
+  uid: 1b708501-c31e-49df-9072-a72b1b83e1c9
+note: Successfully assigned openshift-monitoring/node-exporter-dj9kl to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: node-exporter-dj9kl
+  namespace: openshift-monitoring
+  resourceVersion: "5664"
+  uid: d20f866f-3ce8-41d0-9b9a-7b811162ed48
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
