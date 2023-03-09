@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3979"
+  resourceVersion: "4000"
   uid: 554eb8d5-f8a6-4fb8-afb7-e4785239d130
 spec: {}
 status:
@@ -60,7 +60,8 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:02Z"
     message: "APIServerDeploymentDegraded: waiting for observed configuration to be
       available\nAPIServerDeploymentDegraded: \nRevisionControllerDegraded: namespaces
-      \"openshift-apiserver\" not found"
+      \"openshift-apiserver\" not found\nAuditPolicyDegraded: namespaces \"openshift-apiserver\"
+      not found"
     reason: AsExpected
     status: "False"
     type: Degraded
