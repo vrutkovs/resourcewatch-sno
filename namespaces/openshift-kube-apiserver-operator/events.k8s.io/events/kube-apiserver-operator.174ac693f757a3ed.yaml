@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:09Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:09Z"
+deprecatedSource:
+  component: kube-apiserver-operator-kubeapiserverstaticresources-kubeapiserverstaticresources
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:16Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:29:16Z"
+  name: kube-apiserver-operator.174ac693f757a3ed
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "9527"
+  uid: 8765966a-28ef-48bc-9206-c7b48cb08e59
+note: Created ClusterRoleBinding.rbac.authorization.k8s.io/system:openshift:operator:kube-apiserver-recovery
+  because it was missing
+reason: ClusterRoleBindingCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Normal
