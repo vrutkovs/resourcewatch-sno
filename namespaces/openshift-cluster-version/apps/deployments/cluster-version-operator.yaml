@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
+    deployment.kubernetes.io/revision: "1"
     exclude.release.openshift.io/internal-openshift-hosted: "true"
     include.release.openshift.io/self-managed-high-availability: "true"
     kubernetes.io/description: The cluster-version operator manages OpenShift updates
@@ -147,9 +148,30 @@ metadata:
     manager: cluster-bootstrap
     operation: Update
     time: "2023-03-09T14:14:43Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:14:43Z"
   name: cluster-version-operator
   namespace: openshift-cluster-version
-  resourceVersion: "1031"
+  resourceVersion: "1034"
   uid: aac71004-72e0-4099-a4c0-18313331c859
 spec:
   progressDeadlineSeconds: 600
@@ -278,4 +300,11 @@ spec:
                   apiVersion: v1
                   fieldPath: metadata.namespace
                 path: namespace
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:14:43Z"
+    lastUpdateTime: "2023-03-09T14:14:43Z"
+    message: Created new replica set "cluster-version-operator-c4f49bf9f"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
