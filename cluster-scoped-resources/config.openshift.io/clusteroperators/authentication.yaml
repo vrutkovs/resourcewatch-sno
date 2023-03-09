@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:24Z"
+    time: "2023-03-09T14:32:25Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15051"
+  resourceVersion: "15058"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
@@ -62,8 +62,9 @@ status:
       IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
       OAuthServerServiceEndpointAccessibleControllerDegraded: Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443: connect: connection refused
       OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth service endpoints are not ready
+      ResourceSyncControllerDegraded: configmaps "oauth-openshift" already exists
       WellKnownReadyControllerDegraded: route.route.openshift.io "oauth-openshift" not found
-    reason: IngressStateEndpoints_MissingSubsets::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError::WellKnownReadyController_SyncError
+    reason: IngressStateEndpoints_MissingSubsets::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError::ResourceSyncController_Error::WellKnownReadyController_SyncError
     status: "True"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:23:14Z"
