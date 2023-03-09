@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 5
+deprecatedCount: 6
 deprecatedFirstTimestamp: "2023-03-09T14:22:07Z"
-deprecatedLastTimestamp: "2023-03-09T14:22:11Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:12Z"
 deprecatedSource:
   component: openshift-cluster-kube-scheduler-operator-installer-controller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-scheduler-operator
     operation: Update
-    time: "2023-03-09T14:22:11Z"
+    time: "2023-03-09T14:22:12Z"
   name: openshift-kube-scheduler-operator.174ac63189ff642b
   namespace: openshift-kube-scheduler-operator
-  resourceVersion: "4497"
+  resourceVersion: "4507"
   uid: 2ec20e6a-bd5c-4f09-af60-fda8e0fd0a1a
 note: 'secrets: kube-scheduler-client-cert-key, configmaps: config-1,kube-scheduler-cert-syncer-kubeconfig-1,kube-scheduler-pod-1,scheduler-kubeconfig-1,serviceaccount-ca-1,
   secrets: localhost-recovery-client-token-1'
