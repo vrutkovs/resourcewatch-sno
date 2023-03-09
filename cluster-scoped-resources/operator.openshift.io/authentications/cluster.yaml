@@ -92,14 +92,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:33:07Z"
+    time: "2023-03-09T14:33:37Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16324"
+  resourceVersion: "16441"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -301,9 +301,10 @@ status:
   - lastTransitionTime: "2023-03-09T14:32:16Z"
     status: "False"
     type: OAuthSystemMetadataDegraded
-  - lastTransitionTime: "2023-03-09T14:33:04Z"
-    reason: AsExpected
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:33:35Z"
+    message: 'Get "https://oauth-openshift.apps.ocp.choomba.one/healthz": EOF'
+    reason: EndpointUnavailable
+    status: "False"
     type: OAuthServerRouteEndpointAccessibleControllerAvailable
   - lastTransitionTime: "2023-03-09T14:32:17Z"
     message: 'The well-known endpoint is not yet available: kube-apiserver oauth endpoint
