@@ -52,14 +52,14 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "5921"
+  resourceVersion: "5926"
   uid: fc4da80c-8238-45f0-831b-b76abd6e6070
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
-      InstallerControllerDegraded: missing required resources: [configmaps: aggregator-client-ca,client-ca, secrets: kube-controller-manager-client-cert-key, configmaps: cluster-policy-controller-config-1,config-1,controller-manager-kubeconfig-1,kube-controller-cert-syncer-kubeconfig-1,kube-controller-manager-pod-1,recycler-config-1,service-ca-1,serviceaccount-ca-1, secrets: localhost-recovery-client-token-1,service-account-private-key-1]
+      InstallerControllerDegraded: missing required resources: [configmaps: aggregator-client-ca,client-ca, secrets: kube-controller-manager-client-cert-key]
       GarbageCollectorDegraded: error fetching rules: Get "https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules": dial tcp 172.30.121.173:9091: connect: connection refused
       NodeControllerDegraded: All master nodes are ready
     reason: AsExpected
@@ -67,13 +67,13 @@ status:
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:22:11Z"
     message: 'NodeInstallerProgressing: 1 nodes are at revision 0; 0 nodes have achieved
-      new revision 1'
+      new revision 2'
     reason: NodeInstaller
     status: "True"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: 'StaticPodsAvailable: 0 nodes are active; 1 nodes are at revision 0;
-      0 nodes have achieved new revision 1'
+      0 nodes have achieved new revision 2'
     reason: StaticPods_ZeroNodesActive
     status: "False"
     type: Available
