@@ -1,0 +1,47 @@
+apiVersion: operator.openshift.io/v1
+kind: IngressController
+metadata:
+  creationTimestamp: "2023-03-09T14:22:16Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:clientTLS:
+          .: {}
+          f:clientCA:
+            .: {}
+            f:name: {}
+          f:clientCertificatePolicy: {}
+        f:httpCompression: {}
+        f:httpEmptyRequestsPolicy: {}
+        f:httpErrorCodePages:
+          .: {}
+          f:name: {}
+        f:replicas: {}
+        f:tuningOptions:
+          .: {}
+          f:reloadInterval: {}
+        f:unsupportedConfigOverrides: {}
+    manager: ingress-operator
+    operation: Update
+    time: "2023-03-09T14:22:16Z"
+  name: default
+  namespace: openshift-ingress-operator
+  resourceVersion: "4721"
+  uid: 581ce6e7-0dc9-460c-b609-a8d3a1b3ae1f
+spec:
+  clientTLS:
+    clientCA:
+      name: ""
+    clientCertificatePolicy: ""
+  httpCompression: {}
+  httpEmptyRequestsPolicy: Respond
+  httpErrorCodePages:
+    name: ""
+  replicas: 1
+  tuningOptions:
+    reloadInterval: 0s
+  unsupportedConfigOverrides: null
