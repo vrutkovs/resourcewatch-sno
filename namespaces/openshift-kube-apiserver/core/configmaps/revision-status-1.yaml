@@ -1,0 +1,22 @@
+apiVersion: v1
+data:
+  reason: configmap "kube-apiserver-pod" not found
+  revision: "1"
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:28:57Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:reason: {}
+        f:revision: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:28:57Z"
+  name: revision-status-1
+  namespace: openshift-kube-apiserver
+  resourceVersion: "8773"
+  uid: 4efcdea0-0df3-4936-ac8e-651bf577f3d0
