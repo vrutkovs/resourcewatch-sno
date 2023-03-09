@@ -1,0 +1,40 @@
+apiVersion: v1
+data:
+  ca-bundle.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIDRzCCAi+gAwIBAgIIUaxElXDD7+swDQYJKoZIhvcNAQELBQAwMTESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MRswGQYDVQQDExJldGNkLW1ldHJpYy1zaWduZXIwHhcNMjMw
+    MzA5MTQxMzAxWhcNMzMwMzA2MTQxMzAyWjAxMRIwEAYDVQQLEwlvcGVuc2hpZnQx
+    GzAZBgNVBAMTEmV0Y2QtbWV0cmljLXNpZ25lcjCCASIwDQYJKoZIhvcNAQEBBQAD
+    ggEPADCCAQoCggEBAPWTmXIIFmQTJcspLuYPz0fyF3+8J77NdydBUmDaXCZncoiM
+    LxXVFFHpdK2YRLX7WN27y6kqdcyEiBc/qbDApzySG+cVxxJWQgd3QyhE5Z25l1Zi
+    OPAZDJ8EMM/fBHvA9mPkp7+LM+TG7EbdbQKUSGAssPm1BCTURFsIPNMP4CgBSkIN
+    dOPPzBhhv5WjkT+RRSDab/pd7g/BiHvBj+q3E9OzSfNtS3+NPGmtAqQYsoktMCzX
+    WVX7QAefrGq7wJncRD1QcP90b1oSeYiFjj3oAwQ/aCEJiEx5jxLAnfySp26HpNKc
+    KaNLZp4y+ioTPaqQovZzWJCRKT+iILl3LNqM5FsCAwEAAaNjMGEwDgYDVR0PAQH/
+    BAQDAgKkMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFJl19xk7RYucNgrdhxiC
+    +8vVuv9YMB8GA1UdIwQYMBaAFJl19xk7RYucNgrdhxiC+8vVuv9YMA0GCSqGSIb3
+    DQEBCwUAA4IBAQCFQzgyL/wod/930iN8E+g9NNw7eLJIG4GLZDA3G6o5h98LJegT
+    hwKGLLXHePhOVsxM+YBTa7uSPu7e6zxmh3EnZGRfsCKoU4FMtcIhv35I1gB0Bdvh
+    NFmdmYzzkxA9tXzwIg5uX19Os3Pk1XOd3joRyjIoM0fzfNV/TUjqLS42aM+f/gJn
+    DRW0NbhQBRe1XITZqPhtHitqGDRCS5IsIsW8SkM2rHgN+BH7230gfFg2KZpML9NZ
+    43BTdV15jUGUlJ8i3bHHWdNCp64OL5QQfrsuYNqfRaZpwaMbMEEumQ/ojKxJKZUU
+    QJ01Yv6rBeeybwxHKkgNszLnmfez5ZySOd1Q
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:15:19Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:ca-bundle.crt: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:15:19Z"
+  name: etcd-metric-serving-ca
+  namespace: openshift-config
+  resourceVersion: "2016"
+  uid: 846625ff-e21a-49af-b555-952c204e95ed
