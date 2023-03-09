@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3787"
+  resourceVersion: "3860"
   uid: fc4da80c-8238-45f0-831b-b76abd6e6070
 spec: {}
 status:
@@ -65,12 +65,12 @@ status:
     status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: All is well
+    message: 'NodeInstallerProgressing: 1 nodes are at revision 0'
     reason: AsExpected
     status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: 'StaticPodsAvailable: 0 nodes are active; '
+    message: 'StaticPodsAvailable: 0 nodes are active; 1 nodes are at revision 0'
     reason: StaticPods_ZeroNodesActive
     status: "False"
     type: Available
