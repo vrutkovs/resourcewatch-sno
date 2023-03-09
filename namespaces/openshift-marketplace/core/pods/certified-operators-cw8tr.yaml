@@ -132,7 +132,7 @@ metadata:
     kind: CatalogSource
     name: certified-operators
     uid: 7b4ab0f1-7ce4-4a55-8456-68080033fbee
-  resourceVersion: "9088"
+  resourceVersion: "9506"
   uid: cb6d2235-6d17-4775-a8f5-1e586e9b2f17
 spec:
   containers:
@@ -192,6 +192,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     kubernetes.io/os: linux
     node-role.kubernetes.io/master: ""
@@ -251,11 +252,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:11Z"
-    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
-      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
-    reason: Unschedulable
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:16Z"
+    status: "True"
     type: PodScheduled
   phase: Pending
   qosClass: Burstable
