@@ -1,0 +1,22 @@
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource:
+  component: apiserver
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:31:53Z"
+  name: openshift-kube-apiserver.174ac6ba2355c1aa
+  namespace: default
+  resourceVersion: "13169"
+  uid: 311b570f-0026-4a75-9dba-16513cf044ff
+note: All pending requests processed
+reason: TerminationGracefulTerminationFinished
+regarding:
+  apiVersion: v1
+  kind: Namespace
+  name: openshift-kube-apiserver
+  namespace: default
+type: Normal
