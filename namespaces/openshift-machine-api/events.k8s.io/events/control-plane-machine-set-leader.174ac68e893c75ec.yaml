@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:28:46Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:46Z"
+deprecatedSource:
+  component: control-plane-machine-set-operator-55cbcd9448-zczn6_b6224e1e-8352-486d-a865-0f0f8b99a46c
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:46Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: manager
+    operation: Update
+    time: "2023-03-09T14:28:46Z"
+  name: control-plane-machine-set-leader.174ac68e893c75ec
+  namespace: openshift-machine-api
+  resourceVersion: "8331"
+  uid: 9c76cbc4-0919-4d5d-b675-060901f28178
+note: control-plane-machine-set-operator-55cbcd9448-zczn6_b6224e1e-8352-486d-a865-0f0f8b99a46c
+  became leader
+reason: LeaderElection
+regarding:
+  apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  name: control-plane-machine-set-leader
+  namespace: openshift-machine-api
+  resourceVersion: "8330"
+  uid: ad3da1ab-94f8-4962-aa8d-804e9e62a537
+type: Normal
