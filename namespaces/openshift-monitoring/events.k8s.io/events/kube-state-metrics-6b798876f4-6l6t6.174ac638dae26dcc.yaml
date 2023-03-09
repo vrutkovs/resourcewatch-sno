@@ -1,0 +1,41 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:22:38.641663Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:38Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:22:38Z"
+  name: kube-state-metrics-6b798876f4-6l6t6.174ac638dae26dcc
+  namespace: openshift-monitoring
+  resourceVersion: "5665"
+  uid: 90b3e1a7-f72d-4b00-9b91-607d08556967
+note: Successfully assigned openshift-monitoring/kube-state-metrics-6b798876f4-6l6t6
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: kube-state-metrics-6b798876f4-6l6t6
+  namespace: openshift-monitoring
+  resourceVersion: "5654"
+  uid: de802bf0-e138-4c6c-9531-5c01ecddda1e
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
