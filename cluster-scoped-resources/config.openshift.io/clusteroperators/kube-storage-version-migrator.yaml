@@ -50,7 +50,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3383"
+  resourceVersion: "3392"
   uid: a9cb0768-73a3-4312-8d2e-bf9cd2e9860c
 spec: {}
 status:
@@ -61,8 +61,8 @@ status:
     status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:21:59Z"
-    message: 'KubeStorageVersionMigratorProgressing: Waiting for Deployment to act
-      on changes'
+    message: 'KubeStorageVersionMigratorProgressing: Waiting for Deployment to deploy
+      pods'
     reason: KubeStorageVersionMigrator_Deploying
     status: "True"
     type: Progressing
