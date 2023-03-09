@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:21:59Z"
 deprecatedLastTimestamp: "2023-03-09T14:21:59Z"
 deprecatedSource:
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: Go-http-client
     operation: Update
-    time: "2023-03-09T14:21:59Z"
+    time: "2023-03-09T14:22:00Z"
   name: kube-storage-version-migrator-operator.174ac62fcd9f30e2
   namespace: openshift-kube-storage-version-migrator-operator
-  resourceVersion: "3378"
+  resourceVersion: "3479"
   uid: b0a2f456-ee52-4e64-84f0-a0cf38bf1c14
 note: 'Status for clusteroperator/kube-storage-version-migrator changed: Degraded
   changed from Unknown to False ("All is well")'
