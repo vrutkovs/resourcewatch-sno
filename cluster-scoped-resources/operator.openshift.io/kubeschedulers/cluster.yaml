@@ -50,7 +50,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3444"
+  resourceVersion: "3497"
   uid: 48eb058e-3e1d-45d9-baa8-cf6a53778010
 spec:
   logLevel: Normal
@@ -66,11 +66,12 @@ status:
     status: "True"
     type: InstallerControllerDegraded
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: '0 nodes are active; '
+    message: 0 nodes are active; 1 nodes are at revision 0
     reason: ZeroNodesActive
     status: "False"
     type: StaticPodsAvailable
   - lastTransitionTime: "2023-03-09T14:22:00Z"
+    message: 1 nodes are at revision 0
     reason: AllNodesAtLatestRevision
     status: "False"
     type: NodeInstallerProgressing
