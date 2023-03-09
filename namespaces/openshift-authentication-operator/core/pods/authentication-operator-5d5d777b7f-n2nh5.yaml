@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.21/23"],"mac_address":"0a:58:0a:80:00:15","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.21/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: anyuid
   creationTimestamp: "2023-03-09T14:20:01Z"
   generateName: authentication-operator-5d5d777b7f-
@@ -166,6 +167,15 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:20:01Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:21:51Z"
   name: authentication-operator-5d5d777b7f-n2nh5
   namespace: openshift-authentication-operator
   ownerReferences:
@@ -175,7 +185,7 @@ metadata:
     kind: ReplicaSet
     name: authentication-operator-5d5d777b7f
     uid: 9d663e46-1f08-41c1-94e5-3d0d46f7e93e
-  resourceVersion: "3126"
+  resourceVersion: "3168"
   uid: 11698cce-3094-4d93-8221-8d619bf2ecd8
 spec:
   containers:
