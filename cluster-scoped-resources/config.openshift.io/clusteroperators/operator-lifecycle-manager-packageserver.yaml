@@ -32,6 +32,15 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:14:36Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+    manager: olm
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:29:17Z"
   name: operator-lifecycle-manager-packageserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -39,8 +48,19 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "746"
+  resourceVersion: "9556"
   uid: 1925a336-2158-411b-aeab-c2b82fca38c3
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:29:17Z"
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-03-09T14:29:17Z"
+    status: "False"
+    type: Available
+  - lastTransitionTime: "2023-03-09T14:29:17Z"
+    message: waiting for events - source=operator-lifecycle-manager-packageserver
+    status: "True"
+    type: Progressing
   extension: null
