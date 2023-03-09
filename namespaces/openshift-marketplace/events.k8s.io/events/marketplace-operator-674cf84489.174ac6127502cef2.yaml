@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 9
+deprecatedFirstTimestamp: "2023-03-09T14:19:53Z"
+deprecatedLastTimestamp: "2023-03-09T14:19:57Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:19:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:19:57Z"
+  name: marketplace-operator-674cf84489.174ac6127502cef2
+  namespace: openshift-marketplace
+  resourceVersion: "2241"
+  uid: 9619cced-ebbf-4402-9ea8-6d99ee9ebf35
+note: 'Error creating: pods "marketplace-operator-674cf84489-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+  the cluster does not have any nodes'
+reason: FailedCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: marketplace-operator-674cf84489
+  namespace: openshift-marketplace
+  resourceVersion: "1486"
+  uid: 6de7f729-4467-44a0-b559-6acd49abfed5
+type: Warning
