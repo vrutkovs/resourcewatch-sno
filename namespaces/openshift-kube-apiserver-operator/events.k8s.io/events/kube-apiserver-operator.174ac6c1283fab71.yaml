@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:24Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:24Z"
+deprecatedSource:
+  component: kube-apiserver-operator-revisioncontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:24Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:32:24Z"
+  name: kube-apiserver-operator.174ac6c1283fab71
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "15046"
+  uid: 6d62be4d-1ea6-43ca-9900-a0e6faa778c1
+note: Created Secret/etcd-client-3 -n openshift-kube-apiserver because it was missing
+reason: SecretCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Normal
