@@ -30,15 +30,33 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:42Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:readyReplicas: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:00Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1011"
+  resourceVersion: "3582"
   uid: 745e26c2-906b-4bfc-8835-c7ba9c167c7b
 spec:
   logLevel: Normal
   managementState: Managed
   operatorLogLevel: Normal
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    reason: NoUnsupportedConfigOverrides
+    status: "True"
+    type: UnsupportedConfigOverridesUpgradeable
+  readyReplicas: 0
