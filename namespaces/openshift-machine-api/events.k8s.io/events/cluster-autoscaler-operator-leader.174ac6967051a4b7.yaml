@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:20Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:20Z"
+deprecatedSource:
+  component: cluster-autoscaler-operator-79c8f8b45c-ncs67_6e29abe6-33d3-4d3e-94ff-be159b42ab32
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:20Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-autoscaler-operator
+    operation: Update
+    time: "2023-03-09T14:29:20Z"
+  name: cluster-autoscaler-operator-leader.174ac6967051a4b7
+  namespace: openshift-machine-api
+  resourceVersion: "9712"
+  uid: c37fb4b1-fd1f-4533-b87e-210c55dba3bf
+note: cluster-autoscaler-operator-79c8f8b45c-ncs67_6e29abe6-33d3-4d3e-94ff-be159b42ab32
+  became leader
+reason: LeaderElection
+regarding:
+  apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  name: cluster-autoscaler-operator-leader
+  namespace: openshift-machine-api
+  resourceVersion: "9709"
+  uid: 42895a9d-3869-404a-8905-25d7d3a682ed
+type: Normal
