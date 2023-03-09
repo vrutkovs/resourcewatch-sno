@@ -1,0 +1,119 @@
+apiVersion: config.openshift.io/v1
+kind: ClusterVersion
+metadata:
+  creationTimestamp: "2023-03-09T14:14:31Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:channel: {}
+        f:clusterID: {}
+        f:overrides: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:14:31Z"
+  name: version
+  resourceVersion: "585"
+  uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
+spec:
+  channel: stable-4.13
+  clusterID: f6f009e8-52a4-44f0-9da3-8f1555e3132b
+  overrides:
+  - group: ""
+    kind: ConfigMap
+    name: cluster-config-v1
+    namespace: kube-system
+    unmanaged: true
+  - group: config.openshift.io
+    kind: DNS
+    name: cluster
+    namespace: ""
+    unmanaged: true
+  - group: config.openshift.io
+    kind: Infrastructure
+    name: cluster
+    namespace: ""
+    unmanaged: true
+  - group: config.openshift.io
+    kind: Ingress
+    name: cluster
+    namespace: ""
+    unmanaged: true
+  - group: apiextensions.k8s.io
+    kind: CustomResourceDefinition
+    name: networks.config.openshift.io
+    namespace: ""
+    unmanaged: true
+  - group: config.openshift.io
+    kind: Network
+    name: cluster
+    namespace: ""
+    unmanaged: true
+  - group: config.openshift.io
+    kind: Proxy
+    name: cluster
+    namespace: ""
+    unmanaged: true
+  - group: config.openshift.io
+    kind: Scheduler
+    name: cluster
+    namespace: ""
+    unmanaged: true
+  - group: ""
+    kind: Secret
+    name: kube-cloud-cfg
+    namespace: kube-system
+    unmanaged: true
+  - group: ""
+    kind: ConfigMap
+    name: root-ca
+    namespace: kube-system
+    unmanaged: true
+  - group: ""
+    kind: Secret
+    name: machine-config-server-tls
+    namespace: openshift-machine-config-operator
+    unmanaged: true
+  - group: ""
+    kind: Secret
+    name: pull-secret
+    namespace: openshift-config
+    unmanaged: true
+  - group: machineconfiguration.openshift.io
+    kind: MachineConfig
+    name: 50-masters-chrony-configuration
+    namespace: ""
+    unmanaged: true
+  - group: machineconfiguration.openshift.io
+    kind: MachineConfig
+    name: 50-workers-chrony-configuration
+    namespace: ""
+    unmanaged: true
+  - group: ""
+    kind: Secret
+    name: kubeadmin
+    namespace: kube-system
+    unmanaged: true
+  - group: machineconfiguration.openshift.io
+    kind: MachineConfig
+    name: 50-master-dnsmasq-configuration
+    namespace: ""
+    unmanaged: true
+  - group: machineconfiguration.openshift.io
+    kind: MachineConfig
+    name: 10-masters-node-ip-hint
+    namespace: ""
+    unmanaged: true
+  - group: machineconfiguration.openshift.io
+    kind: MachineConfig
+    name: 10-workers-node-ip-hint
+    namespace: ""
+    unmanaged: true
+  - group: ""
+    kind: ConfigMap
+    name: openshift-install-manifests
+    namespace: openshift-config
+    unmanaged: true
