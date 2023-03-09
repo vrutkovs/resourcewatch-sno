@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.73/23"],"mac_address":"0a:58:0a:80:00:49","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.73/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.73"
+          ],
+          "mac": "0a:58:0a:80:00:49",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:32:12Z"
@@ -141,6 +152,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-09T14:32:12Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:13Z"
   name: downloads-688fb7695c-xkckl
   namespace: openshift-console
   ownerReferences:
@@ -150,7 +171,7 @@ metadata:
     kind: ReplicaSet
     name: downloads-688fb7695c
     uid: ff4bbfd5-d819-4efa-a783-78f5e06c4ea9
-  resourceVersion: "14833"
+  resourceVersion: "14873"
   uid: 02157f75-7110-43df-87d1-40bcaeaf5461
 spec:
   affinity: {}
