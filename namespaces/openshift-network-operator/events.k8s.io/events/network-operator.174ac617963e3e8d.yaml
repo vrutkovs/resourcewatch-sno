@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:20:15Z"
+deprecatedLastTimestamp: "2023-03-09T14:20:15Z"
+deprecatedSource:
+  component: network-operator-management-state-recorder-managementstatecontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-network-operator
+    operation: Update
+    time: "2023-03-09T14:20:15Z"
+  name: network-operator.174ac617963e3e8d
+  namespace: openshift-network-operator
+  resourceVersion: "2470"
+  uid: 3fc1c3d6-5f34-4bfa-aa6f-69951d194490
+note: Unable to determine current operator status for cluster-network-operator
+reason: StatusNotFound
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: network-operator
+  namespace: openshift-network-operator
+  uid: fa931036-6675-4cee-8fe6-6b11b9af8ad6
+type: Warning
