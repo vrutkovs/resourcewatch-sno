@@ -228,7 +228,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -242,7 +244,7 @@ metadata:
     kind: Deployment
     name: console
     uid: 8cf32543-ad95-4aa3-8d4f-21c433364acd
-  resourceVersion: "15694"
+  resourceVersion: "15698"
   uid: 3977de21-e206-447a-8dd8-f221d6cc9fbf
 spec:
   replicas: 1
@@ -390,5 +392,6 @@ spec:
           name: trusted-ca-bundle
         name: trusted-ca-bundle
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
