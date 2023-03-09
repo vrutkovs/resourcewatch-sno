@@ -133,7 +133,9 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -146,7 +148,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8161"
+  resourceVersion: "8165"
   uid: c471666c-0c30-4b5f-af99-ce85a764d293
 spec:
   progressDeadlineSeconds: 600
@@ -225,15 +227,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:28:37Z"
     lastUpdateTime: "2023-03-09T14:28:37Z"
-    message: Created new replica set "control-plane-machine-set-operator-55cbcd9448"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-09T14:28:37Z"
-    lastUpdateTime: "2023-03-09T14:28:37Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-09T14:28:37Z"
+    lastUpdateTime: "2023-03-09T14:28:37Z"
+    message: ReplicaSet "control-plane-machine-set-operator-55cbcd9448" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
