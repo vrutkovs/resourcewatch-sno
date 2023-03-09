@@ -1,0 +1,28 @@
+apiVersion: config.openshift.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: "2023-03-09T14:14:26Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:domain: {}
+        f:loadBalancer:
+          .: {}
+          f:platform:
+            .: {}
+            f:type: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:14:26Z"
+  name: cluster
+  resourceVersion: "563"
+  uid: c1484dd1-5fdc-4633-bc7c-b45c37efbd64
+spec:
+  domain: apps.ocp.choomba.one
+  loadBalancer:
+    platform:
+      type: ""
