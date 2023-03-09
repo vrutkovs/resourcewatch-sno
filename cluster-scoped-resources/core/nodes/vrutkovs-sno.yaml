@@ -95,6 +95,8 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:allocatable:
+          f:ephemeral-storage: {}
         f:conditions:
           k:{"type":"DiskPressure"}:
             f:lastHeartbeatTime: {}
@@ -112,9 +114,9 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:27:04Z"
+    time: "2023-03-09T14:29:06Z"
   name: vrutkovs-sno
-  resourceVersion: "7631"
+  resourceVersion: "8933"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
 spec: {}
 status:
@@ -125,7 +127,7 @@ status:
     type: Hostname
   allocatable:
     cpu: 7500m
-    ephemeral-storage: "114345831029"
+    ephemeral-storage: 125238252Ki
     hugepages-1Gi: "0"
     hugepages-2Mi: "0"
     memory: 15191560Ki
@@ -138,29 +140,29 @@ status:
     memory: 16342536Ki
     pods: "250"
   conditions:
-  - lastHeartbeatTime: "2023-03-09T14:27:04Z"
+  - lastHeartbeatTime: "2023-03-09T14:29:06Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient memory available
     reason: KubeletHasSufficientMemory
     status: "False"
     type: MemoryPressure
-  - lastHeartbeatTime: "2023-03-09T14:27:04Z"
+  - lastHeartbeatTime: "2023-03-09T14:29:06Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has no disk pressure
     reason: KubeletHasNoDiskPressure
     status: "False"
     type: DiskPressure
-  - lastHeartbeatTime: "2023-03-09T14:27:04Z"
+  - lastHeartbeatTime: "2023-03-09T14:29:06Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient PID available
     reason: KubeletHasSufficientPID
     status: "False"
     type: PIDPressure
-  - lastHeartbeatTime: "2023-03-09T14:27:04Z"
-    lastTransitionTime: "2023-03-09T14:21:50Z"
-    message: kubelet is posting ready status
-    reason: KubeletReady
-    status: "True"
+  - lastHeartbeatTime: "2023-03-09T14:29:06Z"
+    lastTransitionTime: "2023-03-09T14:29:06Z"
+    message: container runtime status check may not have completed yet
+    reason: KubeletNotReady
+    status: "False"
     type: Ready
   daemonEndpoints:
     kubeletEndpoint:
@@ -179,6 +181,12 @@ status:
     - quay.io/edge-infrastructure/assisted-installer-controller@sha256:81c2da91bf20932218d4b0ffc0a321385d81f9971a7529cc1c164d8fe9996d6f
     - quay.io/edge-infrastructure/assisted-installer-controller:latest
     sizeBytes: 740647178
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:70c02853f645d8d0e82db73c738d51ace951044ac4e98e35d1db4f7cd75a3e71
+    sizeBytes: 700924653
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c1db3ebb7641418424cad11ba60d0016687f7e0810770e2b222f0ccfc05e090e
+    sizeBytes: 671848064
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:46c456d5235e5d1df09461bbdcde03aed3a32f31fdf8f84e1969b7514316c664
     sizeBytes: 621998538
@@ -204,6 +212,12 @@ status:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2dce8c783764cd2f0e9e7530a2ee1447b45d936311e845efe00a90da9c103a24
     sizeBytes: 492719057
   - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:30419fc4a520a205aae457b512bab0a1a0f51d7e0885413f2e8637d0732b962e
+    sizeBytes: 459765920
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:096113738f7d95b71e8ff0a39996ba5d6b9d25648764d3ba4f3625f01982c821
+    sizeBytes: 459281336
+  - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
     sizeBytes: 447204293
   - names:
@@ -224,6 +238,9 @@ status:
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4349a340ad6752856159937ab2c2c8fa737b44e4103113cc1c3d88b74ad137c3
     sizeBytes: 441878655
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:45f1547cfa949f8ebd4b3e910359ce9f194e1ebb99ae7a829d3b8016248b431a
+    sizeBytes: 441687928
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:1a3fb5eda79c9e3a3b9368a2f923c2ed63fffccba20502b718b8d1afb7675897
     sizeBytes: 440452056
@@ -261,14 +278,26 @@ status:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     sizeBytes: 425572704
   - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:cbd36d05aafe3dee480a62e8c8ec07dff5ec7dbc81a64212279bf54cf558d39f
+    sizeBytes: 424141040
+  - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9b5859648ff4466d9c2dc97ff9bf12044132c11f33d92183d171ca253a6984ee
     sizeBytes: 422905142
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/release@sha256:d1680bbb0440b5ecad41a725943ea1feaeea72eaed97943964572ba8dc00367e
     sizeBytes: 420689887
   - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9ee2b50b7c3736e24cf92a690115d588104e78951c25f9ffed6d1329d58b60c0
+    sizeBytes: 418996971
+  - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:86d474263af96d19f25f530fef4aa2ee8bc02e3c5202c1ecc74841626ded2852
     sizeBytes: 417296355
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8f9ca26966f087b3e9f2169fd5e09c379da9a90aa29ba0a32c2bb169d88abaf0
+    sizeBytes: 413037739
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:df80aa07467d1c6f59a39f3c00e00e130a6b25308b1419264565ca7cd8a76407
+    sizeBytes: 411751504
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9ea15ecbb6c5cf3fde797915699919c1e6285edfdacf748b3a717b87ef6510fb
     sizeBytes: 404869874
@@ -285,38 +314,11 @@ status:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e3089921fbd0c64d58f211f8544b243a5cc480ad0fa8547a805ac6cb368e4d83
     sizeBytes: 401854646
   - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:50beb6dcf8e67cfa10be580b40883e76ac23448d13739e2ebe3a273566109b8b
-    sizeBytes: 395169065
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:a0ccbba3855d8d56437f16cc8336ea26cf1514f4508e83dbedb3f6f36ef371c5
+    sizeBytes: 401012338
   - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ab9d97fb12c8627fa29ec4d54844da65da1c7cf2be317311b62950cc5d2e5a56
-    sizeBytes: 389309864
-  - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c09c1a8eba7586dfc3bbf97ee7141d33e7a7ec871e025967ff992a642b0c0c3f
-    sizeBytes: 389227939
-  - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87b6a9e1a56c11e9c67ff89a7edd87c95da64bd7ad3964cff0ee5d1dcae87b92
-    sizeBytes: 388906646
-  - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:b16fa3856a886788d62d98f5ab5881de0ec8a76cd7807ce6bc24e6386aa64c50
-    sizeBytes: 388040302
-  - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:406d5d02abb3a145daf99c8bf6c00036f4d6f6affe0f27ef90a58bd7cb3b3cdb
-    sizeBytes: 387021120
-  - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:cda1e1a5229df01b50e823e19e839ec0f818813b948e25f22879b27bfe46faaa
-    sizeBytes: 379884929
-  - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:59eb5e22e7c2b150cb6aab53f3e77aa3c4a785fa42cda7db08ec38cde445cbd9
-    sizeBytes: 371847935
-  - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87f1812b55e14f104d3ab49c06711f5ba37e94490717470e42c12749fe3c90ad
-    sizeBytes: 366055841
-  - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:26d23cd931fe8b128262dcabd42370499cd80727283fedaeb552ee236c5a70fd
-    sizeBytes: 360076247
-  - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ed68da48de609d277c0cbc6d388e49ba322c0d92e636f2d708274855abaa9c6b
-    sizeBytes: 354430079
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:43efea12406b5a62bdb7f1cdfc0357c4d53cfa985861af2a89655e1a991fd3c0
+    sizeBytes: 400552597
   nodeInfo:
     architecture: amd64
     bootID: fb8ee38c-473c-4e92-a927-ec95a38fb01a
