@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:42Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:42Z"
+deprecatedSource:
+  component: machineconfigcontroller-nodecontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:42Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: machine-config-controller
+    operation: Update
+    time: "2023-03-09T14:29:42Z"
+  name: master.174ac69b91388baa
+  namespace: default
+  resourceVersion: "10179"
+  uid: c79a2491-569a-49a6-a240-73a321b85692
+note: Targeted node vrutkovs-sno to config rendered-master-488a5071a7880577f352cdd858a32b9d
+reason: SetDesiredConfig
+regarding:
+  apiVersion: machineconfiguration.openshift.io/v1
+  kind: MachineConfigPool
+  name: master
+  resourceVersion: "10074"
+  uid: a9cc3c86-8959-4316-9a01-167ecdf160f6
+type: Normal
