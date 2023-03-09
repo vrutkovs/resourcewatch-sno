@@ -19,6 +19,8 @@ metadata:
     operatorframework.io/managed-by: marketplace-operator
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:33:42Z"
+  deletionGracePeriodSeconds: 1
+  deletionTimestamp: "2023-03-09T14:33:57Z"
   generateName: certified-operators-
   labels:
     catalogsource.operators.coreos.com/update: certified-operators
@@ -184,7 +186,7 @@ metadata:
     kind: CatalogSource
     name: certified-operators
     uid: 7b4ab0f1-7ce4-4a55-8456-68080033fbee
-  resourceVersion: "16670"
+  resourceVersion: "16679"
   uid: 43488ef5-2973-4f49-85e9-9bfc59f6f35b
 spec:
   containers:
