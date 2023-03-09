@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:06Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:06Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:06Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:29:06Z"
+  name: vrutkovs-sno.174ac6931c4f8d39
+  namespace: default
+  resourceVersion: "8932"
+  uid: 2f97d0eb-0b12-4a79-9163-8c4e2de3bd9d
+note: 'Node vrutkovs-sno status is now: NodeNotReady'
+reason: NodeNotReady
+regarding:
+  kind: Node
+  name: vrutkovs-sno
+  uid: vrutkovs-sno
+type: Normal
