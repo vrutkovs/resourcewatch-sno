@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"machine-api-operator-699b5b587b-nfpzd_e742967d-b8cc-42d7-8add-aa8469cb6633","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:29:11Z","renewTime":"2023-03-09T14:42:11Z","leaderTransitions":0}'
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"machine-api-operator-699b5b587b-nfpzd_e742967d-b8cc-42d7-8add-aa8469cb6633","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:29:11Z","renewTime":"2023-03-09T14:43:11Z","leaderTransitions":0}'
   creationTimestamp: "2023-03-09T14:29:11Z"
   managedFields:
   - apiVersion: v1
@@ -14,8 +14,8 @@ metadata:
           f:control-plane.alpha.kubernetes.io/leader: {}
     manager: machine-api-operator
     operation: Update
-    time: "2023-03-09T14:42:11Z"
+    time: "2023-03-09T14:43:11Z"
   name: machine-api-operator
   namespace: openshift-machine-api
-  resourceVersion: "18612"
+  resourceVersion: "18804"
   uid: 48e014a5-e31d-4a54-bdd2-80150848ada8
