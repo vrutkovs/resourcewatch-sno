@@ -157,7 +157,7 @@ metadata:
     kind: ReplicaSet
     name: route-controller-manager-57654f6596
     uid: 1f001f68-eb3d-48f7-99f9-0b548788cb92
-  resourceVersion: "6141"
+  resourceVersion: "6143"
   uid: 73058960-10e6-492d-aa88-3527fe751cfe
 spec:
   affinity:
@@ -225,6 +225,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -294,5 +295,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:23:00Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
