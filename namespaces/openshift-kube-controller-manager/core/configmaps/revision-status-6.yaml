@@ -1,0 +1,22 @@
+apiVersion: v1
+data:
+  reason: secret/service-account-private-key has changed
+  revision: "6"
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:37:26Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:reason: {}
+        f:revision: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:37:26Z"
+  name: revision-status-6
+  namespace: openshift-kube-controller-manager
+  resourceVersion: "17486"
+  uid: b9b4edf4-e8a6-4aa7-b40d-b692e347e75f
