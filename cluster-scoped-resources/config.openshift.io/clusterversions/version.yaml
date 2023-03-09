@@ -35,9 +35,9 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:45Z"
+    time: "2023-03-09T14:33:40Z"
   name: version
-  resourceVersion: "15852"
+  resourceVersion: "16465"
   uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
 spec:
   channel: stable-4.13
@@ -87,14 +87,23 @@ status:
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:31:15Z"
-    message: Cluster operators authentication, console, monitoring are not available
-    reason: ClusterOperatorsNotAvailable
+    message: |-
+      Multiple errors are preventing progress:
+      * Cluster operators authentication, monitoring are not available
+      * Could not update clusterrole "machine-api-operator-ext-remediation" (202 of 840)
+      * Could not update clusterrolebinding "system:openshift:operator:kube-apiserver-operator" (106 of 840)
+      * Could not update customresourcedefinition "insightsoperators.operator.openshift.io" (616 of 840)
+      * Could not update deployment "openshift-cloud-controller-manager-operator/cluster-cloud-controller-manager-operator" (157 of 840)
+      * Could not update deployment "openshift-operator-lifecycle-manager/catalog-operator" (646 of 840)
+      * Could not update role "openshift-cluster-samples-operator/prometheus-k8s" (506 of 840)
+      * Could not update rolebinding "openshift-config-managed/console-operator" (558 of 840)
+    reason: MultipleErrors
     status: "True"
     type: Failing
   - lastTransitionTime: "2023-03-09T14:14:35Z"
     message: 'Unable to apply 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest:
-      some cluster operators are not available'
-    reason: ClusterOperatorsNotAvailable
+      an unknown error has occurred: MultipleErrors'
+    reason: MultipleErrors
     status: "True"
     type: Progressing
   desired:
