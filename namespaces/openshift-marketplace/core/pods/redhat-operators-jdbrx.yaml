@@ -174,8 +174,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -191,6 +189,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:29:47Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:02Z"
   name: redhat-operators-jdbrx
   namespace: openshift-marketplace
   ownerReferences:
@@ -200,7 +210,7 @@ metadata:
     kind: CatalogSource
     name: redhat-operators
     uid: 0d01f0d0-d14a-433d-aa2b-f890372ecc3c
-  resourceVersion: "10226"
+  resourceVersion: "13638"
   uid: 24c18e6d-5ec4-4179-bd33-3eee20816f69
 spec:
   containers:
@@ -324,8 +334,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:47Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:02Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:47Z"
