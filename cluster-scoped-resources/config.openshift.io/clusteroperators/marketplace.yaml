@@ -26,6 +26,16 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:35Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:14:35Z"
   name: marketplace
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -33,6 +43,8 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "610"
+  resourceVersion: "632"
   uid: 62cc6472-fd40-4fbb-b33c-7bcca8bd2dce
 spec: {}
+status:
+  extension: null
