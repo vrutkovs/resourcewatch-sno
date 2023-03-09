@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:24:54Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:54Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:54Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-09T14:24:54Z"
+  name: etcd-operator.174ac65892867dc3
+  namespace: openshift-etcd-operator
+  resourceVersion: "7346"
+  uid: 9017db36-3141-409e-98f2-608b10903deb
+note: 'Status for clusteroperator/etcd changed: Progressing changed from False to
+  True ("NodeInstallerProgressing: 1 nodes are at revision 2; 0 nodes have achieved
+  new revision 3"),Available message changed from "StaticPodsAvailable: 1 nodes are
+  active; 1 nodes are at revision 2\nEtcdMembersAvailable: 1 members are available"
+  to "StaticPodsAvailable: 1 nodes are active; 1 nodes are at revision 2; 0 nodes
+  have achieved new revision 3\nEtcdMembersAvailable: 1 members are available"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 83b0ee74-72c5-4b95-9e21-87b97e13fab6
+type: Normal
