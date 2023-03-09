@@ -168,7 +168,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:07Z"
+    time: "2023-03-09T14:32:10Z"
   name: network-check-target-g7pv6
   namespace: openshift-network-diagnostics
   ownerReferences:
@@ -178,7 +178,7 @@ metadata:
     kind: DaemonSet
     name: network-check-target
     uid: 62454efe-a10a-4b0f-95f3-f94bf8ea8fd3
-  resourceVersion: "14231"
+  resourceVersion: "14674"
   uid: 8889968e-1c5d-4445-b108-fe901317fa94
 spec:
   affinity:
@@ -284,11 +284,11 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:18Z"
+    lastTransitionTime: "2023-03-09T14:32:06Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:18Z"
+    lastTransitionTime: "2023-03-09T14:32:06Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
