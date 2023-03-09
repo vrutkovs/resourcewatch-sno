@@ -10,6 +10,7 @@ metadata:
     console.openshift.io/proxy-config-version: "568"
     console.openshift.io/service-ca-config-version: "15279"
     console.openshift.io/trusted-ca-config-version: "15306"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.76/23"],"mac_address":"0a:58:0a:80:00:4c","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.76/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:32:41Z"
@@ -199,6 +200,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:32:41Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:32:41Z"
   name: console-644696f6c4-nf77c
   namespace: openshift-console
   ownerReferences:
@@ -208,7 +218,7 @@ metadata:
     kind: ReplicaSet
     name: console-644696f6c4
     uid: 3977de21-e206-447a-8dd8-f221d6cc9fbf
-  resourceVersion: "15692"
+  resourceVersion: "15695"
   uid: db1a5fa9-d7ef-48f8-932b-a0fec7ae9c25
 spec:
   affinity: {}
