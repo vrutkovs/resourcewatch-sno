@@ -1,0 +1,74 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:33:45Z"
+deprecatedLastTimestamp: "2023-03-09T14:33:45Z"
+deprecatedSource:
+  component: kube-apiserver-operator-status-controller-statussyncer_kube-apiserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:33:45Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:33:45Z"
+  name: kube-apiserver-operator.174ac6d43b61f0e9
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "16553"
+  uid: da22d44b-898e-485f-9b0d-403a7964ee84
+note: 'Status for clusteroperator/kube-apiserver changed: Degraded message changed
+  from "NodeControllerDegraded: All master nodes are ready\nKubeAPIServerStaticResourcesDegraded:
+  \"assets/kube-apiserver/ns.yaml\" (string): Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nKubeAPIServerStaticResourcesDegraded:
+  \"assets/kube-apiserver/svc.yaml\" (string): services \"apiserver\" is forbidden:
+  User \"system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator\"
+  cannot get resource \"services\" in API group \"\" in the namespace \"openshift-kube-apiserver\"\nKubeAPIServerStaticResourcesDegraded:
+  \"assets/kube-apiserver/check-endpoints-clusterrole.yaml\" (string): clusterroles.rbac.authorization.k8s.io
+  \"system:openshift:controller:check-endpoints\" is forbidden: User \"system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator\"
+  cannot get resource \"clusterroles\" in API group \"rbac.authorization.k8s.io\"
+  at the cluster scope\nKubeAPIServerStaticResourcesDegraded: \"assets/kube-apiserver/check-endpoints-clusterrole-node-reader.yaml\"
+  (string): clusterroles.rbac.authorization.k8s.io \"system:openshift:controller:check-endpoints-node-reader\"
+  is forbidden: User \"system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator\"
+  cannot get resource \"clusterroles\" in API group \"rbac.authorization.k8s.io\"
+  at the cluster scope\nKubeAPIServerStaticResourcesDegraded: \"assets/kube-apiserver/check-endpoints-clusterrole-crd-reader.yaml\"
+  (string): clusterroles.rbac.authorization.k8s.io \"system:openshift:controller:check-endpoints-crd-reader\"
+  is forbidden: User \"system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator\"
+  cannot get resource \"clusterroles\" in API group \"rbac.authorization.k8s.io\"
+  at the cluster scope\nKubeAPIServerStaticResourcesDegraded: \"assets/kube-apiserver/check-endpoints-clusterrolebinding-auth-delegator.yaml\"
+  (string): clusterrolebindings.rbac.authorization.k8s.io \"system:openshift:controller:kube-apiserver-check-endpoints-auth-delegator\"
+  is forbidden: User \"system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator\"
+  cannot get resource \"clusterrolebindings\" in API group \"rbac.authorization.k8s.io\"
+  at the cluster scope\nKubeAPIServerStaticResourcesDegraded: \"assets/kube-apiserver/check-endpoints-clusterrolebinding-node-reader.yaml\"
+  (string): clusterrolebindings.rbac.authorization.k8s.io \"system:openshift:controller:kube-apiserver-check-endpoints-node-reader\"
+  is forbidden: User \"system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator\"
+  cannot get resource \"clusterrolebindings\" in API group \"rbac.authorization.k8s.io\"
+  at the cluster scope\nKubeAPIServerStaticResourcesDegraded: \"assets/kube-apiserver/check-endpoints-clusterrolebinding-crd-reader.yaml\"
+  (string): clusterrolebindings.rbac.authorization.k8s.io \"system:openshift:controller:kube-apiserver-check-endpoints-crd-reader\"
+  is forbidden: User \"system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator\"
+  cannot get resource \"clusterrolebindings\" in API group \"rbac.authorization.k8s.io\"
+  at the cluster scope\nKubeAPIServerStaticResourcesDegraded: \"assets/kube-apiserver/check-endpoints-rolebinding-kube-system.yaml\"
+  (string): rolebindings.rbac.authorization.k8s.io \"system:openshift:controller:kube-apiserver-check-endpoints\"
+  is forbidden: User \"system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator\"
+  cannot get resource \"rolebindings\" in API group \"rbac.authorization.k8s.io\"
+  in the namespace \"kube-system\"\nKubeAPIServerStaticResourcesDegraded: " to "NodeControllerDegraded:
+  All master nodes are ready"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Normal
