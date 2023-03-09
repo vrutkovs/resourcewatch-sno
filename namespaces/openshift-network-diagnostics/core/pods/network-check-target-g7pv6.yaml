@@ -152,6 +152,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -166,19 +168,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:18Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:07Z"
   name: network-check-target-g7pv6
   namespace: openshift-network-diagnostics
   ownerReferences:
@@ -188,7 +178,7 @@ metadata:
     kind: DaemonSet
     name: network-check-target
     uid: 62454efe-a10a-4b0f-95f3-f94bf8ea8fd3
-  resourceVersion: "13795"
+  resourceVersion: "14231"
   uid: 8889968e-1c5d-4445-b108-fe901317fa94
 spec:
   affinity:
@@ -294,8 +284,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:18Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:18Z"
