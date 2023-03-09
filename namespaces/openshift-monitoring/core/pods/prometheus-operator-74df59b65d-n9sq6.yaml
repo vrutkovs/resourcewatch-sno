@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.32/23"],"mac_address":"0a:58:0a:80:00:20","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.32/23","gateway_ip":"10.128.0.1"}}'
     kubectl.kubernetes.io/default-container: prometheus-operator
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
@@ -135,6 +136,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:22:32Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:22:32Z"
   name: prometheus-operator-74df59b65d-n9sq6
   namespace: openshift-monitoring
   ownerReferences:
@@ -144,7 +154,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-operator-74df59b65d
     uid: 3268f7b5-068f-4138-9dde-b59322d4757b
-  resourceVersion: "5383"
+  resourceVersion: "5388"
   uid: 82ade848-f870-485d-b793-db7dcd7c2982
 spec:
   automountServiceAccountToken: true
