@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:04Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:04Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:11Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:11Z"
+  name: marketplace-operator-674cf84489-dbxgt.174ac6bca90ca3bc
+  namespace: openshift-marketplace
+  resourceVersion: "14754"
+  uid: fa79b0f1-ff1d-43c9-9ebe-225a56c87aaa
+note: 'MountVolume.SetUp failed for volume "marketplace-trusted-ca" : failed to sync
+  configmap cache: timed out waiting for the condition'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: marketplace-operator-674cf84489-dbxgt
+  namespace: openshift-marketplace
+  resourceVersion: "9422"
+  uid: e0c97e17-7e07-4da5-9587-dcabc1819678
+type: Warning
