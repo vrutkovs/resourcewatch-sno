@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:31:21Z"
+deprecatedLastTimestamp: "2023-03-09T14:31:21Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:31:21Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:31:21Z"
+  name: openshift-kube-scheduler-vrutkovs-sno.174ac6b296a486ae
+  namespace: openshift-kube-scheduler
+  resourceVersion: "12602"
+  uid: 9c7839e9-55ce-4402-81c2-669802d728b9
+note: Stopping container kube-scheduler-recovery-controller
+reason: Killing
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-scheduler-recovery-controller}
+  kind: Pod
+  name: openshift-kube-scheduler-vrutkovs-sno
+  namespace: openshift-kube-scheduler
+  uid: 97643d75ddd58e188484778669b9a694
+type: Normal
