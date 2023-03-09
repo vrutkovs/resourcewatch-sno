@@ -211,7 +211,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:36:15Z"
+    time: "2023-03-09T14:36:17Z"
   name: assisted-installer-controller-vwq9s
   namespace: assisted-installer
   ownerReferences:
@@ -221,7 +221,7 @@ metadata:
     kind: Job
     name: assisted-installer-controller
     uid: f5a4e959-715f-4436-8272-3a0acf078c12
-  resourceVersion: "17291"
+  resourceVersion: "17296"
   uid: bf338db4-906a-4d43-be22-8959360a0341
 spec:
   containers:
@@ -413,7 +413,7 @@ status:
         reason: Completed
         startedAt: "2023-03-09T14:20:15Z"
   hostIP: 10.0.130.93
-  phase: Running
+  phase: Succeeded
   podIP: 10.0.130.93
   podIPs:
   - ip: 10.0.130.93
