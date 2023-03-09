@@ -275,11 +275,18 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.71"}:
+            .: {}
+            f:ip: {}
         f:startTime: {}
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:09Z"
+    time: "2023-03-09T14:32:12Z"
   name: console-operator-5cb6dc7685-cgzvf
   namespace: openshift-console-operator
   ownerReferences:
@@ -289,7 +296,7 @@ metadata:
     kind: ReplicaSet
     name: console-operator-5cb6dc7685
     uid: 7a7ff091-2bce-41fb-a1bf-d16d7bd180e0
-  resourceVersion: "14582"
+  resourceVersion: "14799"
   uid: 3bd52f73-c24d-4e28-aacf-d04fc0002276
 spec:
   containers:
@@ -508,27 +515,32 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e611740ca5f095ba0d1311e1ec0b7c3529815b7d641ea23d74294438ed7ae6d8
-    imageID: ""
+  - containerID: cri-o://466b036e29b0c2045b6450da771eea6339c02b6f1e12da638de087dd4ce60656
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e611740ca5f095ba0d1311e1ec0b7c3529815b7d641ea23d74294438ed7ae6d8
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e611740ca5f095ba0d1311e1ec0b7c3529815b7d641ea23d74294438ed7ae6d8
     lastState: {}
     name: console-operator
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e611740ca5f095ba0d1311e1ec0b7c3529815b7d641ea23d74294438ed7ae6d8
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:32:11Z"
+  - containerID: cri-o://4b9a106d6a05c26587680d947904d53f6e104be67ef1904543c445fd333350d7
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e611740ca5f095ba0d1311e1ec0b7c3529815b7d641ea23d74294438ed7ae6d8
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e611740ca5f095ba0d1311e1ec0b7c3529815b7d641ea23d74294438ed7ae6d8
     lastState: {}
     name: conversion-webhook-server
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:32:11Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.71
+  podIPs:
+  - ip: 10.128.0.71
   qosClass: Burstable
   startTime: "2023-03-09T14:32:03Z"
