@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:29Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:29Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:31Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:22:31Z"
+  name: cluster-monitoring-operator-669bd8685c-9n9k6.174ac6369e7fe392
+  namespace: openshift-monitoring
+  resourceVersion: "5347"
+  uid: da27763d-be81-4a47-9e67-1e33f9e68af9
+note: Started container cluster-monitoring-operator
+reason: Started
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{cluster-monitoring-operator}
+  kind: Pod
+  name: cluster-monitoring-operator-669bd8685c-9n9k6
+  namespace: openshift-monitoring
+  resourceVersion: "3123"
+  uid: ff407fd4-cfaa-42db-af8c-737d83b40584
+type: Normal
