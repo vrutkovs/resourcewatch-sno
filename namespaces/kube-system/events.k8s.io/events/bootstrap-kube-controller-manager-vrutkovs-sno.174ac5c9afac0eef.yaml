@@ -1,0 +1,37 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:14:41Z"
+deprecatedLastTimestamp: "2023-03-09T14:14:41Z"
+deprecatedSource:
+  component: cluster-policy-controller-namespace-security-allocation-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:14:41Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:14:41Z"
+  name: bootstrap-kube-controller-manager-vrutkovs-sno.174ac5c9afac0eef
+  namespace: kube-system
+  resourceVersion: "940"
+  uid: 990db6f6-eede-4e68-9489-9b6011e0bba5
+note: created SCC ranges for openshift-machine-config-operator namespace
+reason: CreatedSCCRanges
+regarding:
+  kind: Pod
+  name: bootstrap-kube-controller-manager-vrutkovs-sno
+  namespace: kube-system
+type: Normal
