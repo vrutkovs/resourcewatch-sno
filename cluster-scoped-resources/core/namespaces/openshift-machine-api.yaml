@@ -6,6 +6,9 @@ metadata:
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
     openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c22,c9
+    openshift.io/sa.scc.supplemental-groups: 1000480000/10000
+    openshift.io/sa.scc.uid-range: 1000480000/10000
     workload.openshift.io/allowed: management
   creationTimestamp: "2023-03-09T14:15:14Z"
   labels:
@@ -17,6 +20,17 @@ metadata:
     pod-security.kubernetes.io/enforce: privileged
     pod-security.kubernetes.io/warn: privileged
   managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:15:14Z"
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -50,7 +64,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1865"
+  resourceVersion: "1870"
   uid: d82b5e54-88d6-4a09-b834-e15786d5ce16
 spec:
   finalizers:
