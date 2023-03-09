@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedSource:
+  component: csi-snapshot-controller-operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: csi-snapshot-controller-operator
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
+  name: csi-snapshot-controller-operator-lock.174ac62fddc4662a
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "3431"
+  uid: b4c188e6-6082-46ee-8172-0050f5fcc071
+note: csi-snapshot-controller-operator-6f7d895c88-9c5xt_f2cf50c4-60a9-44f6-bb8f-47c5f55145b1
+  became leader
+reason: LeaderElection
+regarding:
+  apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  name: csi-snapshot-controller-operator-lock
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "3417"
+  uid: 0a95d78c-f647-4b96-aa46-0a9e0814b75a
+type: Normal
