@@ -17,8 +17,8 @@ metadata:
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:22:40Z"
-  deletionGracePeriodSeconds: 30
-  deletionTimestamp: "2023-03-09T14:33:17Z"
+  deletionGracePeriodSeconds: 0
+  deletionTimestamp: "2023-03-09T14:32:47Z"
   generateName: prometheus-adapter-f5d985798-
   labels:
     app.kubernetes.io/component: metrics-adapter
@@ -262,7 +262,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-adapter-f5d985798
     uid: 00aafcc8-1f59-40dd-81f8-296659b61ac5
-  resourceVersion: "16007"
+  resourceVersion: "16009"
   uid: 4b3a2d80-8ba4-47c0-8a5d-948e31e9ab57
 spec:
   automountServiceAccountToken: true
