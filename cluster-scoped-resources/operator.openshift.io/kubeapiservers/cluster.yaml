@@ -104,14 +104,14 @@ metadata:
     manager: cluster-kube-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:13Z"
+    time: "2023-03-09T14:32:14Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "14852"
+  resourceVersion: "14881"
   uid: c0c6917e-93dd-43c7-a907-55546729e305
 spec:
   logLevel: Normal
@@ -245,11 +245,8 @@ status:
   - lastTransitionTime: "2023-03-09T14:28:56Z"
     status: "False"
     type: ValidatingAdmissionWebhookConfigurationError
-  - lastTransitionTime: "2023-03-09T14:28:56Z"
-    message: 'consoleplugins.console.openshift.io: dial tcp 172.30.42.138:9443: connect:
-      connection refused'
-    reason: WebhookServiceConnectionError
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:32:14Z"
+    status: "False"
     type: CRDConversionWebhookConfigurationError
   - lastTransitionTime: "2023-03-09T14:28:56Z"
     status: "False"
