@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:29:22Z"
 deprecatedLastTimestamp: "2023-03-09T14:29:22Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:29:22Z"
   name: packageserver.174ac696f7654ce7
   namespace: openshift-operator-lifecycle-manager
-  resourceVersion: "9813"
+  resourceVersion: "9817"
   uid: 3e2ba9b2-46a2-43d2-bf3a-42584b2ed83f
 note: apiServices not installed
 reason: InstallWaiting
