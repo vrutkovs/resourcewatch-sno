@@ -41,7 +41,6 @@ metadata:
         f:conditions: {}
         f:extension:
           .: {}
-          f:lastSyncError: {}
           f:master: {}
           f:worker: {}
     manager: machine-config-operator
@@ -55,7 +54,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6684"
+  resourceVersion: "6685"
   uid: a2677b7f-e3c9-4360-88a8-42c47852f1d4
 spec: {}
 status:
@@ -70,9 +69,10 @@ status:
     reason: DegradedPool
     status: "False"
     type: Upgradeable
+  - lastTransitionTime: "2023-03-09T14:23:12Z"
+    status: "False"
+    type: Degraded
   extension:
-    lastSyncError: 'error pool master is not ready, retrying. Status: (pool degraded:
-      true total: 1, ready 0, updated: 0, unavailable: 1)'
     master: all 1 nodes are at latest configuration rendered-master-b84983722a8f041fcce35c8e28efcb54
     worker: all 0 nodes are at latest configuration rendered-worker-b30c18907c1b1658d47b3a459ef99f7d
   relatedObjects:
