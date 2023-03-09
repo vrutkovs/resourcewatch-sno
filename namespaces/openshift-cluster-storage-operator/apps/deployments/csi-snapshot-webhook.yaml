@@ -124,14 +124,16 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
     time: "2023-03-09T14:22:00Z"
   name: csi-snapshot-webhook
   namespace: openshift-cluster-storage-operator
-  resourceVersion: "3517"
+  resourceVersion: "3545"
   uid: 0c80ccd2-e84e-4819-b3c8-5db290e25126
 spec:
   progressDeadlineSeconds: 600
@@ -221,15 +223,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     lastUpdateTime: "2023-03-09T14:22:00Z"
-    message: Created new replica set "csi-snapshot-webhook-54dc7f6b54"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-09T14:22:00Z"
-    lastUpdateTime: "2023-03-09T14:22:00Z"
     message: Deployment has minimum availability.
     reason: MinimumReplicasAvailable
     status: "True"
     type: Available
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    lastUpdateTime: "2023-03-09T14:22:00Z"
+    message: ReplicaSet "csi-snapshot-webhook-54dc7f6b54" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
