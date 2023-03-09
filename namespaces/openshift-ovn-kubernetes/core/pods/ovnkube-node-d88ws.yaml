@@ -516,7 +516,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:07Z"
+    time: "2023-03-09T14:32:10Z"
   name: ovnkube-node-d88ws
   namespace: openshift-ovn-kubernetes
   ownerReferences:
@@ -526,7 +526,7 @@ metadata:
     kind: DaemonSet
     name: ovnkube-node
     uid: 8b6ad0dc-8208-4b89-9ad9-f44d3b557593
-  resourceVersion: "14223"
+  resourceVersion: "14636"
   uid: db94c2b8-7410-40a2-990d-f725713e7562
 spec:
   affinity:
@@ -1043,11 +1043,11 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:20Z"
+    lastTransitionTime: "2023-03-09T14:32:09Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:20Z"
+    lastTransitionTime: "2023-03-09T14:32:09Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
