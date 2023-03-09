@@ -1,0 +1,40 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:20:24.124365Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:24Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:20:24Z"
+  name: network-metrics-daemon-vwx7z.174ac61989074f49
+  namespace: openshift-multus
+  resourceVersion: "2605"
+  uid: 62bb80e5-97b5-4aef-9039-83d6cdecc6ad
+note: Successfully assigned openshift-multus/network-metrics-daemon-vwx7z to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: network-metrics-daemon-vwx7z
+  namespace: openshift-multus
+  resourceVersion: "2601"
+  uid: 775eae44-5277-44da-82fb-8e276826522c
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
