@@ -186,7 +186,6 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
-        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -206,13 +205,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
+        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:06Z"
+    time: "2023-03-09T14:32:02Z"
   name: etcd-operator
   namespace: openshift-etcd-operator
   ownerReferences:
@@ -221,7 +220,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6381"
+  resourceVersion: "13946"
   uid: 83b0ee74-72c5-4b95-9e21-87b97e13fab6
 spec:
   progressDeadlineSeconds: 600
@@ -344,7 +343,6 @@ spec:
           defaultMode: 420
           secretName: etcd-client
 status:
-  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-03-09T14:15:08Z"
     lastUpdateTime: "2023-03-09T14:22:00Z"
@@ -352,13 +350,13 @@ status:
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
-  - lastTransitionTime: "2023-03-09T14:23:06Z"
-    lastUpdateTime: "2023-03-09T14:23:06Z"
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:32:02Z"
+    lastUpdateTime: "2023-03-09T14:32:02Z"
+    message: Deployment does not have minimum availability.
+    reason: MinimumReplicasUnavailable
+    status: "False"
     type: Available
   observedGeneration: 1
-  readyReplicas: 1
   replicas: 1
+  unavailableReplicas: 1
   updatedReplicas: 1
