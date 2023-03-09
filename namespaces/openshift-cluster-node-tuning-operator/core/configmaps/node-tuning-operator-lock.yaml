@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"cluster-node-tuning-operator-84595cd48f-pmhnw_8202bd7d-09b7-4b0a-81e3-1b4a16e6301d","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:22:33Z","renewTime":"2023-03-09T14:38:42Z","leaderTransitions":0}'
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"cluster-node-tuning-operator-84595cd48f-pmhnw_8202bd7d-09b7-4b0a-81e3-1b4a16e6301d","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:22:33Z","renewTime":"2023-03-09T14:39:42Z","leaderTransitions":0}'
   creationTimestamp: "2023-03-09T14:22:33Z"
   managedFields:
   - apiVersion: v1
@@ -14,8 +14,8 @@ metadata:
           f:control-plane.alpha.kubernetes.io/leader: {}
     manager: cluster-node-tuning-operator
     operation: Update
-    time: "2023-03-09T14:38:42Z"
+    time: "2023-03-09T14:39:42Z"
   name: node-tuning-operator-lock
   namespace: openshift-cluster-node-tuning-operator
-  resourceVersion: "17760"
+  resourceVersion: "18019"
   uid: 3ab8b864-71c5-4b24-9e96-df3bad0676d0
