@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"authentication-operator-5d5d777b7f-n2nh5_a9b3b8df-44d9-43ff-b029-627d2282d7c4","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:21:59Z","renewTime":"2023-03-09T14:21:59Z","leaderTransitions":0}'
+  creationTimestamp: "2023-03-09T14:21:59Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:control-plane.alpha.kubernetes.io/leader: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:21:59Z"
+  name: cluster-authentication-operator-lock
+  namespace: openshift-authentication-operator
+  resourceVersion: "3337"
+  uid: 9a3dd764-bd22-42dd-ba35-2bfc95cfe5bf
