@@ -1,0 +1,219 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubernetes.io/config.hash: c6aee3b4bf5e8aa8be8128749a904f7f
+    kubernetes.io/config.mirror: c6aee3b4bf5e8aa8be8128749a904f7f
+    kubernetes.io/config.seen: "2023-03-09T14:31:51.882930511Z"
+    kubernetes.io/config.source: file
+  creationTimestamp: "2023-03-09T14:31:55Z"
+  labels:
+    revision: "2"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubernetes.io/config.hash: {}
+          f:kubernetes.io/config.mirror: {}
+          f:kubernetes.io/config.seen: {}
+          f:kubernetes.io/config.source: {}
+        f:labels:
+          .: {}
+          f:revision: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"08a7e8a3-d906-4471-95ae-d16a1161f435"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"startup-monitor"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes/manifests"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-resources"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-resources/configmaps"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+                f:subPath: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-resources/secrets"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+                f:subPath: {}
+              k:{"mountPath":"/var/lock"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/log/kube-apiserver"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:nodeName: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"manifests"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"pod-resource-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"resource-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"var-lock"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"var-log"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:31:55Z"
+  name: kube-apiserver-startup-monitor-vrutkovs-sno
+  namespace: openshift-kube-apiserver
+  ownerReferences:
+  - apiVersion: v1
+    controller: true
+    kind: Node
+    name: vrutkovs-sno
+    uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
+  resourceVersion: "13228"
+  uid: 5f544849-07c2-47a7-9479-e6b5b3024dc7
+spec:
+  containers:
+  - args:
+    - -v=2
+    - --fallback-timeout-duration=300s
+    - --target-name=kube-apiserver
+    - --manifests-dir=/etc/kubernetes/manifests
+    - --resource-dir=/etc/kubernetes/static-pod-resources
+    - --installer-lock-file=/var/lock/kube-apiserver-installer.lock
+    - --revision=2
+    - --node-name=vrutkovs-sno
+    - --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-apiserver-cert-syncer-kubeconfig/kubeconfig
+    - --log-file-path=/var/log/kube-apiserver/startup.log
+    command:
+    - cluster-kube-apiserver-operator
+    - startup-monitor
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
+    imagePullPolicy: IfNotPresent
+    name: startup-monitor
+    resources:
+      requests:
+        cpu: 5m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kubernetes/manifests
+      name: manifests
+    - mountPath: /etc/kubernetes/static-pod-resources
+      name: resource-dir
+    - mountPath: /etc/kubernetes/static-pod-resources/secrets
+      name: pod-resource-dir
+      readOnly: true
+      subPath: secrets
+    - mountPath: /etc/kubernetes/static-pod-resources/configmaps
+      name: pod-resource-dir
+      readOnly: true
+      subPath: configmaps
+    - mountPath: /var/lock
+      name: var-lock
+    - mountPath: /var/log/kube-apiserver
+      name: var-log
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  nodeName: vrutkovs-sno
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  terminationGracePeriodSeconds: 5
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/kubernetes/static-pod-resources
+      type: ""
+    name: resource-dir
+  - hostPath:
+      path: /etc/kubernetes/manifests
+      type: ""
+    name: manifests
+  - hostPath:
+      path: /etc/kubernetes/static-pod-resources/kube-apiserver-pod-2
+      type: ""
+    name: pod-resource-dir
+  - hostPath:
+      path: /var/lock
+      type: ""
+    name: var-lock
+  - hostPath:
+      path: /var/log/kube-apiserver
+      type: ""
+    name: var-log
+status:
+  phase: Pending
+  qosClass: Burstable
