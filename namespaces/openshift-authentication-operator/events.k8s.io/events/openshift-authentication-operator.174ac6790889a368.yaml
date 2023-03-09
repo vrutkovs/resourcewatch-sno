@@ -1,0 +1,84 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:27:14Z"
+deprecatedLastTimestamp: "2023-03-09T14:27:14Z"
+deprecatedSource:
+  component: oauth-apiserver-status-controller-statussyncer_authentication
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:27:14Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:27:14Z"
+  name: openshift-authentication-operator.174ac6790889a368
+  namespace: openshift-authentication-operator
+  resourceVersion: "7723"
+  uid: 3afe704a-ec5b-45fa-a249-f769c4fddbd3
+note: 'Status for clusteroperator/authentication changed: Degraded message changed
+  from "APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable for
+  apiserver.openshift-oauth-apiserver ()\nIngressStateEndpointsDegraded: No subsets
+  found for the endpoints of oauth-server\nOAuthServerServiceEndpointAccessibleControllerDegraded:
+  Get \"https://172.30.70.249:443/healthz\": dial tcp 172.30.70.249:443: connect:
+  connection refused\nOAuthServerServiceEndpointsEndpointAccessibleControllerDegraded:
+  oauth service endpoints are not ready\nOpenshiftAuthenticationStaticResourcesDegraded:
+  \"oauth-openshift/ns.yaml\" (string): Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-authentication\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftAuthenticationStaticResourcesDegraded:
+  \"oauth-openshift/authentication-clusterrolebinding.yaml\" (string): Get \"https://172.30.0.1:443/apis/rbac.authorization.k8s.io/v1/clusterrolebindings/system:openshift:openshift-authentication\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nOpenshiftAuthenticationStaticResourcesDegraded:
+  \"oauth-openshift/serviceaccount.yaml\" (string): serviceaccounts \"oauth-openshift\"
+  is forbidden: User \"system:serviceaccount:openshift-authentication-operator:authentication-operator\"
+  cannot get resource \"serviceaccounts\" in API group \"\" in the namespace \"openshift-authentication\"\nOpenshiftAuthenticationStaticResourcesDegraded:
+  \"oauth-openshift/oauth-service.yaml\" (string): services \"oauth-openshift\" is
+  forbidden: User \"system:serviceaccount:openshift-authentication-operator:authentication-operator\"
+  cannot get resource \"services\" in API group \"\" in the namespace \"openshift-authentication\"\nOpenshiftAuthenticationStaticResourcesDegraded:
+  \"oauth-openshift/trust_distribution_role.yaml\" (string): roles.rbac.authorization.k8s.io
+  \"system:openshift:oauth-servercert-trust\" is forbidden: User \"system:serviceaccount:openshift-authentication-operator:authentication-operator\"
+  cannot get resource \"roles\" in API group \"rbac.authorization.k8s.io\" in the
+  namespace \"openshift-config-managed\"\nOpenshiftAuthenticationStaticResourcesDegraded:
+  \"oauth-openshift/trust_distribution_rolebinding.yaml\" (string): rolebindings.rbac.authorization.k8s.io
+  \"system:openshift:oauth-servercert-trust\" is forbidden: User \"system:serviceaccount:openshift-authentication-operator:authentication-operator\"
+  cannot get resource \"rolebindings\" in API group \"rbac.authorization.k8s.io\"
+  in the namespace \"openshift-config-managed\": RBAC: [clusterrole.rbac.authorization.k8s.io
+  \"system:openshift:discovery\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:public-info-viewer\" not found, clusterrole.rbac.authorization.k8s.io \"system:discovery\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:basic-user\" not found,
+  clusterrole.rbac.authorization.k8s.io \"cluster-admin\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:oauth-token-deleter\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:build-strategy-jenkinspipeline\" not found, clusterrole.rbac.authorization.k8s.io
+  \"basic-user\" not found, clusterrole.rbac.authorization.k8s.io \"system:build-strategy-source\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:openshift:public-info-viewer\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:scope-impersonation\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:service-account-issuer-discovery\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:webhook\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:build-strategy-docker\" not found, clusterrole.rbac.authorization.k8s.io
+  \"cluster-status\" not found, clusterrole.rbac.authorization.k8s.io \"self-access-reviewer\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:openshift:scc:restricted-v2\"
+  not found, role.rbac.authorization.k8s.io \"openshift-network-public-role\" not
+  found, role.rbac.authorization.k8s.io \"system:openshift:oauth-servercert-trust\"
+  not found]\nOpenshiftAuthenticationStaticResourcesDegraded: " to "APIServerDeploymentDegraded:
+  1 of 1 requested instances are unavailable for apiserver.openshift-oauth-apiserver
+  ()\nIngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server\nOAuthServerServiceEndpointAccessibleControllerDegraded:
+  Get \"https://172.30.70.249:443/healthz\": dial tcp 172.30.70.249:443: connect:
+  connection refused\nOAuthServerServiceEndpointsEndpointAccessibleControllerDegraded:
+  oauth service endpoints are not ready"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: v1
+  kind: Namespace
+  name: openshift-authentication-operator
+  namespace: openshift-authentication-operator
+type: Normal
