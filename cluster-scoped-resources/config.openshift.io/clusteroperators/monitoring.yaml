@@ -43,7 +43,7 @@ metadata:
     manager: operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:29Z"
+    time: "2023-03-09T14:32:41Z"
   name: monitoring
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -51,16 +51,38 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "5220"
+  resourceVersion: "15725"
   uid: 7110d9d8-de42-4c91-acf6-489d49e1373a
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-09T14:22:29Z"
-    status: Unknown
+  - lastTransitionTime: "2023-03-09T14:32:41Z"
+    message: 'reconciling Alertmanager Route failed: retrieving Route object failed:
+      the server is currently unable to handle the request (get routes.route.openshift.io
+      alertmanager-main), deleting Thanos Ruler Route failed: the server is currently
+      unable to handle the request (delete routes.route.openshift.io thanos-ruler),
+      reconciling Thanos Querier Route failed: retrieving Route object failed: the
+      server is currently unable to handle the request (get routes.route.openshift.io
+      thanos-querier), deleting UserWorkload federate Route failed: the server is
+      currently unable to handle the request (delete routes.route.openshift.io federate),
+      openshift-config-managed/kubelet-serving-ca: configmaps "kubelet-serving-ca"
+      not found, prometheuses.monitoring.coreos.com "k8s" not found'
+    reason: MultipleTasksFailed
+    status: "False"
     type: Available
-  - lastTransitionTime: "2023-03-09T14:22:29Z"
-    status: Unknown
+  - lastTransitionTime: "2023-03-09T14:32:41Z"
+    message: 'reconciling Alertmanager Route failed: retrieving Route object failed:
+      the server is currently unable to handle the request (get routes.route.openshift.io
+      alertmanager-main), deleting Thanos Ruler Route failed: the server is currently
+      unable to handle the request (delete routes.route.openshift.io thanos-ruler),
+      reconciling Thanos Querier Route failed: retrieving Route object failed: the
+      server is currently unable to handle the request (get routes.route.openshift.io
+      thanos-querier), deleting UserWorkload federate Route failed: the server is
+      currently unable to handle the request (delete routes.route.openshift.io federate),
+      openshift-config-managed/kubelet-serving-ca: configmaps "kubelet-serving-ca"
+      not found, prometheuses.monitoring.coreos.com "k8s" not found'
+    reason: MultipleTasksFailed
+    status: "True"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:22:29Z"
     message: Rolling out the stack.
