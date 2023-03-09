@@ -66,17 +66,18 @@ metadata:
         f:generations: {}
         f:observedGeneration: {}
         f:readyReplicas: {}
+        f:version: {}
     manager: cluster-openshift-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:30:45Z"
+    time: "2023-03-09T14:31:24Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10768"
+  resourceVersion: "13002"
   uid: b34d6810-68f9-4135-9afc-798b3c845c22
 spec:
   logLevel: Normal
@@ -107,17 +108,11 @@ status:
   - lastTransitionTime: "2023-03-09T14:23:00Z"
     status: "False"
     type: ConfigObservationDegraded
-  - lastTransitionTime: "2023-03-09T14:23:01Z"
-    message: no pods available on any node.
-    reason: NoPodsAvailable
-    status: "False"
-    type: Available
-  - lastTransitionTime: "2023-03-09T14:23:01Z"
-    message: |-
-      deployment/controller-manager: available replicas is 0, desired available replicas > 1
-      deployment/route-controller-manager: available replicas is 0, desired available replicas > 1
-    reason: DesiredStateNotYetAchieved
+  - lastTransitionTime: "2023-03-09T14:31:24Z"
     status: "True"
+    type: Available
+  - lastTransitionTime: "2023-03-09T14:31:24Z"
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:23:01Z"
     status: "True"
@@ -140,3 +135,4 @@ status:
     resource: deployments
   observedGeneration: 2
   readyReplicas: 0
+  version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
