@@ -44,7 +44,7 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:24:54Z"
+    time: "2023-03-09T14:27:14Z"
   name: etcd
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "7345"
+  resourceVersion: "7729"
   uid: 5b689e62-691b-4fc1-86d9-fed9d5250955
 spec: {}
 status:
@@ -64,15 +64,16 @@ status:
     reason: AsExpected
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:24:54Z"
-    message: 'NodeInstallerProgressing: 1 nodes are at revision 2; 0 nodes have achieved
-      new revision 3'
-    reason: NodeInstaller
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:27:14Z"
+    message: |-
+      NodeInstallerProgressing: 1 nodes are at revision 3
+      EtcdMembersProgressing: No unstarted etcd members found
+    reason: AsExpected
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:24:49Z"
     message: |-
-      StaticPodsAvailable: 1 nodes are active; 1 nodes are at revision 2; 0 nodes have achieved new revision 3
+      StaticPodsAvailable: 1 nodes are active; 1 nodes are at revision 3
       EtcdMembersAvailable: 1 members are available
     reason: AsExpected
     status: "True"
