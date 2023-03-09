@@ -34,6 +34,15 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:14:36Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+    manager: cluster-network-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:15Z"
   name: network
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -41,8 +50,14 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "715"
+  resourceVersion: "2476"
   uid: efc0e65e-4103-4be7-8a5a-99dd46b6df53
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:20:15Z"
+    message: No networks.operator.openshift.io cluster found
+    reason: NoOperConfig
+    status: "True"
+    type: Degraded
   extension: null
