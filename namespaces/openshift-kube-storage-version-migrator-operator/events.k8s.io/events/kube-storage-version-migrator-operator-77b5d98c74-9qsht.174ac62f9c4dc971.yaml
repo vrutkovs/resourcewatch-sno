@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:21:58Z"
+deprecatedLastTimestamp: "2023-03-09T14:21:58Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:03Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:22:03Z"
+  name: kube-storage-version-migrator-operator-77b5d98c74-9qsht.174ac62f9c4dc971
+  namespace: openshift-kube-storage-version-migrator-operator
+  resourceVersion: "3885"
+  uid: 122bcbf3-2d35-44e5-9c70-6f0bc6422ad5
+note: Created container kube-storage-version-migrator-operator
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-storage-version-migrator-operator}
+  kind: Pod
+  name: kube-storage-version-migrator-operator-77b5d98c74-9qsht
+  namespace: openshift-kube-storage-version-migrator-operator
+  resourceVersion: "3118"
+  uid: b63fa47c-1d22-4f70-ad4e-693f9fda121d
+type: Normal
