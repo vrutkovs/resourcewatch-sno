@@ -30,11 +30,20 @@ metadata:
       f:status:
         .: {}
         f:extension: {}
-        f:relatedObjects: {}
     manager: cluster-version-operator
     operation: Update
     subresource: status
     time: "2023-03-09T14:14:35Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+    manager: ingress-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:18Z"
   name: ingress
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -42,20 +51,39 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "631"
+  resourceVersion: "4792"
   uid: c55987a1-3a24-4225-a426-155e472cf5db
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:22:18Z"
+    message: The "default" ingress controller is not reporting an Available status
+      condition.
+    reason: IngressDoesNotHaveAvailableCondition
+    status: Unknown
+    type: Available
+  - lastTransitionTime: "2023-03-09T14:22:18Z"
+    message: Not all ingress controllers are available.
+    reason: Reconciling
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2023-03-09T14:22:18Z"
+    message: The "default" ingress controller is not reporting a Degraded status condition.
+    reason: IngressDoesNotHaveDegradedCondition
+    status: Unknown
+    type: Degraded
+  - lastTransitionTime: "2023-03-09T14:22:18Z"
+    reason: IngressControllersUpgradeable
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2023-03-09T14:22:18Z"
+    reason: AsExpected
+    status: "False"
+    type: EvaluationConditionsDetected
   extension: null
   relatedObjects:
   - group: ""
     name: openshift-ingress-operator
-    resource: namespaces
-  - group: ""
-    name: openshift-ingress
-    resource: namespaces
-  - group: ""
-    name: openshift-ingress-canary
     resource: namespaces
   - group: operator.openshift.io
     name: ""
