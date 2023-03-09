@@ -200,6 +200,7 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -210,7 +211,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:12Z"
+    time: "2023-03-09T14:29:13Z"
   name: olm-operator-5fccd556f6-7cf76
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -220,7 +221,7 @@ metadata:
     kind: ReplicaSet
     name: olm-operator-5fccd556f6
     uid: 4c987813-63b3-4af7-90fa-e10158fa33e2
-  resourceVersion: "9173"
+  resourceVersion: "9317"
   uid: 88b458f5-b8fd-4384-a4b8-d57d22d2f34d
 spec:
   containers:
@@ -389,18 +390,19 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:70c02853f645d8d0e82db73c738d51ace951044ac4e98e35d1db4f7cd75a3e71
-    imageID: ""
+  - containerID: cri-o://bbe7cdcb9b6cbac2dc8bc77d80b5acb18230a2f27714a9cc18db81642f877faa
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:70c02853f645d8d0e82db73c738d51ace951044ac4e98e35d1db4f7cd75a3e71
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:70c02853f645d8d0e82db73c738d51ace951044ac4e98e35d1db4f7cd75a3e71
     lastState: {}
     name: olm-operator
     ready: false
-    restartCount: 0
-    started: false
+    restartCount: 1
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:29:11Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
   podIP: 10.128.0.53
   podIPs:
   - ip: 10.128.0.53
