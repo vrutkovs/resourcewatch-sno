@@ -296,7 +296,7 @@ metadata:
     kind: ReplicaSet
     name: console-operator-5cb6dc7685
     uid: 7a7ff091-2bce-41fb-a1bf-d16d7bd180e0
-  resourceVersion: "14799"
+  resourceVersion: "14807"
   uid: 3bd52f73-c24d-4e28-aacf-d04fc0002276
 spec:
   containers:
@@ -500,13 +500,13 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:03Z"
-    message: 'containers with unready status: [console-operator conversion-webhook-server]'
+    message: 'containers with unready status: [console-operator]'
     reason: ContainersNotReady
     status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:03Z"
-    message: 'containers with unready status: [console-operator conversion-webhook-server]'
+    message: 'containers with unready status: [console-operator]'
     reason: ContainersNotReady
     status: "False"
     type: ContainersReady
@@ -531,7 +531,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e611740ca5f095ba0d1311e1ec0b7c3529815b7d641ea23d74294438ed7ae6d8
     lastState: {}
     name: conversion-webhook-server
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
