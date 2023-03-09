@@ -186,6 +186,7 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -205,13 +206,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:48Z"
+    time: "2023-03-09T14:28:53Z"
   name: cluster-autoscaler-operator
   namespace: openshift-machine-api
   ownerReferences:
@@ -220,7 +221,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8403"
+  resourceVersion: "8601"
   uid: 098011f3-d42f-474e-8830-33f551d1042c
 spec:
   progressDeadlineSeconds: 600
@@ -348,20 +349,22 @@ spec:
           name: kube-rbac-proxy-cluster-autoscaler-operator
         name: auth-proxy-config
 status:
+  availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2023-03-09T14:28:48Z"
-    lastUpdateTime: "2023-03-09T14:28:48Z"
-    message: Deployment does not have minimum availability.
-    reason: MinimumReplicasUnavailable
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:28:53Z"
+    lastUpdateTime: "2023-03-09T14:28:53Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:28:48Z"
-    lastUpdateTime: "2023-03-09T14:28:48Z"
-    message: ReplicaSet "cluster-autoscaler-operator-79c8f8b45c" is progressing.
-    reason: ReplicaSetUpdated
+    lastUpdateTime: "2023-03-09T14:28:53Z"
+    message: ReplicaSet "cluster-autoscaler-operator-79c8f8b45c" has successfully
+      progressed.
+    reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
