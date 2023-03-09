@@ -44,7 +44,7 @@ metadata:
     manager: cluster-openshift-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:13Z"
+    time: "2023-03-09T14:32:15Z"
   name: openshift-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,15 +52,13 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "14855"
+  resourceVersion: "14906"
   uid: 554eb8d5-f8a6-4fb8-afb7-e4785239d130
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:02Z"
-    message: 'APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable
-      for apiserver.openshift-apiserver (container is crashlooping in apiserver-5974c8c8bd-7zfsh
-      pod)'
+    message: All is well
     reason: AsExpected
     status: "False"
     type: Degraded
@@ -69,11 +67,10 @@ status:
     reason: AsExpected
     status: "False"
     type: Progressing
-  - lastTransitionTime: "2023-03-09T14:32:02Z"
-    message: 'APIServerDeploymentAvailable: no apiserver.openshift-apiserver pods
-      available on any node.'
-    reason: APIServerDeployment_NoPod
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:32:15Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: All is well
