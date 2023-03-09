@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:02Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:02Z"
+deprecatedSource:
+  component: node-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:03Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:32:03Z"
+  name: cluster-image-registry-operator-77f7dc4fc4-jcn7n.174ac6bc1d34b079
+  namespace: openshift-image-registry
+  resourceVersion: "14028"
+  uid: b0990a01-02d3-4f37-9424-9b103e5e0e83
+note: Node is not ready
+reason: NodeNotReady
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: cluster-image-registry-operator-77f7dc4fc4-jcn7n
+  namespace: openshift-image-registry
+  resourceVersion: "9394"
+  uid: 81cbee3b-44bb-43cc-8de8-f36011505ee6
+type: Warning
