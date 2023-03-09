@@ -35,7 +35,7 @@ metadata:
     manager: AuthenticationCustomRouteController
     operation: Apply
     subresource: status
-    time: "2023-03-09T14:32:21Z"
+    time: "2023-03-09T14:36:08Z"
   - apiVersion: config.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -61,7 +61,7 @@ metadata:
     subresource: status
     time: "2023-03-09T14:14:26Z"
   name: cluster
-  resourceVersion: "15020"
+  resourceVersion: "17274"
   uid: c1484dd1-5fdc-4633-bc7c-b45c37efbd64
 spec:
   domain: apps.ocp.choomba.one
@@ -71,11 +71,10 @@ spec:
 status:
   componentRoutes:
   - conditions:
-    - lastTransitionTime: "2023-03-09T14:32:16Z"
-      message: 'unexpected error at oauth-openshift.apps.ocp.choomba.one: Get "https://oauth-openshift.apps.ocp.choomba.one/healthz":
-        EOF'
-      reason: ErrorReachingOutToService
-      status: "True"
+    - lastTransitionTime: "2023-03-09T14:36:08Z"
+      message: All is well
+      reason: AsExpected
+      status: "False"
       type: Progressing
     - lastTransitionTime: "2023-03-09T14:32:16Z"
       message: All is well
