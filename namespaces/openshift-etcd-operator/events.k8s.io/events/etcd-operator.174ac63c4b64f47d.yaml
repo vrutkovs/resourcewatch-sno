@@ -1,0 +1,49 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:53Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:53Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-09T14:22:53Z"
+  name: etcd-operator.174ac63c4b64f47d
+  namespace: openshift-etcd-operator
+  resourceVersion: "6024"
+  uid: ce6a07dc-8ee6-40b8-a0f4-ab539ad341e0
+note: 'Status for clusteroperator/etcd changed: Degraded message changed from "EtcdMembersControllerDegraded:
+  giving up getting a cached client after 3 tries\nNodeControllerDegraded: All master
+  nodes are ready\nEtcdEndpointsDegraded: failed to get member list: giving up getting
+  a cached client after 3 tries\nRevisionControllerDegraded: configmaps \"etcd-pod\"
+  not found\nInstallerControllerDegraded: missing required resources: [configmaps:
+  etcd-endpoints-1,etcd-metrics-proxy-client-ca-1,etcd-metrics-proxy-serving-ca-1,etcd-peer-client-ca-1,etcd-pod-1,etcd-serving-ca-1,
+  secrets: etcd-all-certs-1]" to "EtcdMembersControllerDegraded: giving up getting
+  a cached client after 3 tries\nNodeControllerDegraded: All master nodes are ready\nEtcdEndpointsDegraded:
+  failed to get member list: giving up getting a cached client after 3 tries\nInstallerControllerDegraded:
+  missing required resources: [configmaps: etcd-endpoints-1,etcd-metrics-proxy-client-ca-1,etcd-metrics-proxy-serving-ca-1,etcd-peer-client-ca-1,etcd-pod-1,etcd-serving-ca-1,
+  secrets: etcd-all-certs-1]"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 83b0ee74-72c5-4b95-9e21-87b97e13fab6
+type: Normal
