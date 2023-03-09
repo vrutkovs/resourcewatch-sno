@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:30:15Z"
+deprecatedLastTimestamp: "2023-03-09T14:30:15Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-status-controller-statussyncer_kube-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:30:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:30:15Z"
+  name: kube-controller-manager-operator.174ac6a34c8b35dc
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "10446"
+  uid: 731a1c37-065b-46a7-ba1c-46df41cbba45
+note: 'Status for clusteroperator/kube-controller-manager changed: status.versions
+  changed from [{"raw-internal" "4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest"}]
+  to [{"raw-internal" "4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest"} {"operator"
+  "4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest"} {"kube-controller-manager"
+  "1.26.2"}]'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Normal
