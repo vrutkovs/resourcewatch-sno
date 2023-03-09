@@ -1,0 +1,45 @@
+apiVersion: v1
+data:
+  config-file.yaml: |
+    authorization:
+      resourceAttributes:
+        apiVersion: v1
+        resource: namespace
+        subresource: metrics
+        namespace: openshift-machine-api
+kind: ConfigMap
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-03-09T14:28:46Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:config-file.yaml: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b7590f0c-c37f-44e0-80d3-7b5df1e0e187"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-09T14:28:46Z"
+  name: kube-rbac-proxy-cluster-autoscaler-operator
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
+  resourceVersion: "8322"
+  uid: 70673964-eef6-4f49-8dfa-20a5f0287810
