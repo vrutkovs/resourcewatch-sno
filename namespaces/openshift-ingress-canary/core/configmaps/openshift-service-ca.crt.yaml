@@ -1,0 +1,26 @@
+apiVersion: v1
+data:
+  service-ca.crt: ""
+kind: ConfigMap
+metadata:
+  annotations:
+    service.beta.openshift.io/inject-cabundle: "true"
+  creationTimestamp: "2023-03-09T14:32:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:service-ca.crt: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:service.beta.openshift.io/inject-cabundle: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:32:02Z"
+  name: openshift-service-ca.crt
+  namespace: openshift-ingress-canary
+  resourceVersion: "13663"
+  uid: 6bec0f85-e31a-48dc-af59-1b33ad9371f8
