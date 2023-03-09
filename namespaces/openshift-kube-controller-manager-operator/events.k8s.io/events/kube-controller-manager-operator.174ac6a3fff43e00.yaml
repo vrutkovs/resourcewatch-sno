@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:30:18Z"
-deprecatedLastTimestamp: "2023-03-09T14:30:18Z"
+deprecatedLastTimestamp: "2023-03-09T14:31:41Z"
 deprecatedSource:
   component: kube-controller-manager-operator-status-controller-statussyncer_kube-controller-manager
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-controller-manager-operator
     operation: Update
-    time: "2023-03-09T14:30:18Z"
+    time: "2023-03-09T14:31:41Z"
   name: kube-controller-manager-operator.174ac6a3fff43e00
   namespace: openshift-kube-controller-manager-operator
-  resourceVersion: "10486"
+  resourceVersion: "13129"
   uid: fc12cb82-b190-412f-bb93-c58ff6800221
 note: 'Status for clusteroperator/kube-controller-manager changed: Degraded message
   changed from "GarbageCollectorDegraded: error fetching rules: Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\":
