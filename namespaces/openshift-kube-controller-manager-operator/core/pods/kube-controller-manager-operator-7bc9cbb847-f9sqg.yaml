@@ -171,7 +171,7 @@ metadata:
     kind: ReplicaSet
     name: kube-controller-manager-operator-7bc9cbb847
     uid: c0d92894-0d4a-459c-85e6-a2fc1f4a0848
-  resourceVersion: "2326"
+  resourceVersion: "3119"
   uid: 80e0e446-fc1d-4cde-8a91-ccfee062c600
 spec:
   automountServiceAccountToken: false
@@ -227,6 +227,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -288,11 +289,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:00Z"
-    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
-      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
-    reason: Unschedulable
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:21:51Z"
+    status: "True"
     type: PodScheduled
   phase: Pending
   qosClass: Burstable
