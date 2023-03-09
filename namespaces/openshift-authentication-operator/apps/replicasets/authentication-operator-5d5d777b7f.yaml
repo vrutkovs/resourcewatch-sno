@@ -175,11 +175,13 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:15:01Z"
+    time: "2023-03-09T14:20:01Z"
   name: authentication-operator-5d5d777b7f
   namespace: openshift-authentication-operator
   ownerReferences:
@@ -189,7 +191,7 @@ metadata:
     kind: Deployment
     name: authentication-operator
     uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
-  resourceVersion: "2408"
+  resourceVersion: "2409"
   uid: 9d663e46-1f08-41c1-94e5-3d0d46f7e93e
 spec:
   replicas: 1
@@ -308,5 +310,6 @@ spec:
           optional: true
         name: service-ca-bundle
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
