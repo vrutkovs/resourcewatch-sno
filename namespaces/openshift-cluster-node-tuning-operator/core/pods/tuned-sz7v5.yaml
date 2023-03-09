@@ -214,8 +214,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -228,12 +226,11 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -244,7 +241,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:33Z"
+    time: "2023-03-09T14:22:34Z"
   name: tuned-sz7v5
   namespace: openshift-cluster-node-tuning-operator
   ownerReferences:
@@ -254,7 +251,7 @@ metadata:
     kind: DaemonSet
     name: tuned
     uid: b4208f1d-5138-4e19-9dad-51452715bfeb
-  resourceVersion: "5483"
+  resourceVersion: "5496"
   uid: b68a5e0b-e530-48e1-b392-8e4113fd4d24
 spec:
   affinity:
@@ -420,34 +417,31 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:33Z"
-    message: 'containers with unready status: [tuned]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:22:34Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:33Z"
-    message: 'containers with unready status: [tuned]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:22:34Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:33Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:f70e0e3bbcb375e3829fd9b16ae1b85953fb2f285af3047073aa13f20daeca87
-    imageID: ""
+  - containerID: cri-o://5b08c466ecb95154a699d523386317bb391d67b15aad45d07768a86d1d9a3157
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:f70e0e3bbcb375e3829fd9b16ae1b85953fb2f285af3047073aa13f20daeca87
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:f70e0e3bbcb375e3829fd9b16ae1b85953fb2f285af3047073aa13f20daeca87
     lastState: {}
     name: tuned
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:22:34Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
   podIP: 10.0.130.93
   podIPs:
   - ip: 10.0.130.93
