@@ -47,7 +47,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3911"
+  resourceVersion: "3935"
   uid: 745e26c2-906b-4bfc-8835-c7ba9c167c7b
 spec:
   logLevel: Normal
@@ -96,4 +96,7 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:03Z"
     status: "False"
     type: EncryptionKeyControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:03Z"
+    status: "False"
+    type: EncryptionPruneControllerDegraded
   readyReplicas: 0
