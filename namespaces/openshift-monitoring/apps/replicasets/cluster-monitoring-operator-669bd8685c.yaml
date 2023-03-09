@@ -122,6 +122,24 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:15:13Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ReplicaFailure"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:15:13Z"
   name: cluster-monitoring-operator-669bd8685c
   namespace: openshift-monitoring
   ownerReferences:
@@ -131,7 +149,7 @@ metadata:
     kind: Deployment
     name: cluster-monitoring-operator
     uid: 3fbddbae-91a0-49f3-9def-60d43a684e07
-  resourceVersion: "1846"
+  resourceVersion: "1850"
   uid: 194c53a2-cea2-42a0-b075-8030a374606f
 spec:
   replicas: 1
@@ -238,4 +256,12 @@ spec:
           defaultMode: 420
           secretName: cluster-monitoring-operator-tls
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:15:13Z"
+    message: 'pods "cluster-monitoring-operator-669bd8685c-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+      the cluster does not have any nodes'
+    reason: FailedCreate
+    status: "True"
+    type: ReplicaFailure
+  observedGeneration: 1
   replicas: 0
