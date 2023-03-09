@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:28:53Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:53Z"
+deprecatedSource:
+  component: kube-apiserver-operator-prunecontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:28:53Z"
+  name: kube-apiserver-operator.174ac690108ab39f
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "8549"
+  uid: 25ed5c4a-7991-4655-ab09-d6c891e1d18a
+note: Controller "PruneController" resync interval is set to 0s which might lead to
+  client request throttling
+reason: FastControllerResync
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Warning
