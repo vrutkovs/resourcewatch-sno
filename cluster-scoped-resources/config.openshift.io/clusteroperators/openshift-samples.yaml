@@ -51,7 +51,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15022"
+  resourceVersion: "15023"
   uid: d07997f3-20d5-4c43-81d7-0e39c2ed7464
 spec: {}
 status:
@@ -59,6 +59,10 @@ status:
   - lastTransitionTime: "2023-03-09T14:32:22Z"
     status: "False"
     type: Degraded
+  - lastTransitionTime: "2023-03-09T14:32:22Z"
+    reason: SampleUpsertsPending
+    status: "False"
+    type: Available
   extension: null
   relatedObjects:
   - group: samples.operator.openshift.io
