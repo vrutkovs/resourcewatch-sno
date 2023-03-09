@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:22:45Z"
-deprecatedLastTimestamp: "2023-03-09T14:22:45Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:57Z"
 deprecatedSource:
   component: kube-controller-manager-operator-revisioncontroller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-controller-manager-operator
     operation: Update
-    time: "2023-03-09T14:22:45Z"
+    time: "2023-03-09T14:22:57Z"
   name: kube-controller-manager-operator.174ac63a6be65299
   namespace: openshift-kube-controller-manager-operator
-  resourceVersion: "5923"
+  resourceVersion: "6071"
   uid: 414fa551-9314-427a-9141-a948df91f462
 note: new revision 3 triggered by "configmap/config has changed,configmap/cluster-policy-controller-config
   has changed"
