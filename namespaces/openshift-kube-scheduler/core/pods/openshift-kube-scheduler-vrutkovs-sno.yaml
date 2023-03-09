@@ -228,6 +228,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"PodScheduled"}:
@@ -258,7 +260,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:31:22Z"
+    time: "2023-03-09T14:31:37Z"
   name: openshift-kube-scheduler-vrutkovs-sno
   namespace: openshift-kube-scheduler
   ownerReferences:
@@ -267,7 +269,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "12764"
+  resourceVersion: "13066"
   uid: f523c4a2-c950-4cb7-9a84-cf5844b890e8
 spec:
   containers:
@@ -432,8 +434,10 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:30:10Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:31:37Z"
+    message: 'containers with incomplete status: [wait-for-host-port]'
+    reason: ContainersNotInitialized
+    status: "False"
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:31:22Z"
@@ -454,71 +458,48 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://c02b9d4ecec49aec4edcccce0d09c93f8b2e2b42cf5ae8af148281d63aa7abf4
-    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
-    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
+    imageID: ""
     lastState: {}
     name: kube-scheduler
     ready: false
     restartCount: 0
     started: false
     state:
-      terminated:
-        containerID: cri-o://c02b9d4ecec49aec4edcccce0d09c93f8b2e2b42cf5ae8af148281d63aa7abf4
-        exitCode: 0
-        finishedAt: "2023-03-09T14:31:21Z"
-        reason: Completed
-        startedAt: "2023-03-09T14:30:11Z"
-  - containerID: cri-o://4e4e0af20358be8cdf2a460a53b1e6f79025087fa61119d7a5642681bc912d54
-    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
-    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
+      waiting:
+        reason: PodInitializing
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
+    imageID: ""
     lastState: {}
     name: kube-scheduler-cert-syncer
     ready: false
     restartCount: 0
     started: false
     state:
-      terminated:
-        containerID: cri-o://4e4e0af20358be8cdf2a460a53b1e6f79025087fa61119d7a5642681bc912d54
-        exitCode: 2
-        finishedAt: "2023-03-09T14:31:21Z"
-        message: |
-          : x509: certificate is valid for kubernetes, kubernetes.default, kubernetes.default.svc, kubernetes.default.svc.cluster.local, openshift, openshift.default, openshift.default.svc, openshift.default.svc.cluster.local, not localhost-recovery'(may retry after sleeping)
-          E0309 14:31:21.376105       1 event.go:276] Unable to write event: '&v1.Event{TypeMeta:v1.TypeMeta{Kind:"", APIVersion:""}, ObjectMeta:v1.ObjectMeta{Name:"openshift-kube-scheduler-vrutkovs-sno.174ac6a23ff3f29c", GenerateName:"", Namespace:"openshift-kube-scheduler", SelfLink:"", UID:"", ResourceVersion:"", Generation:0, CreationTimestamp:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), DeletionTimestamp:<nil>, DeletionGracePeriodSeconds:(*int64)(nil), Labels:map[string]string(nil), Annotations:map[string]string(nil), OwnerReferences:[]v1.OwnerReference(nil), Finalizers:[]string(nil), ManagedFields:[]v1.ManagedFieldsEntry(nil)}, InvolvedObject:v1.ObjectReference{Kind:"Pod", Namespace:"openshift-kube-scheduler", Name:"openshift-kube-scheduler-vrutkovs-sno", UID:"", APIVersion:"v1", ResourceVersion:"", FieldPath:""}, Reason:"FastControllerResync", Message:"Controller \"CertSyncController\" resync interval is set to 0s which might lead to client request throttling", Source:v1.EventSource{Component:"cert-syncer-certsynccontroller", Host:""}, FirstTimestamp:time.Date(2023, time.March, 9, 14, 30, 11, 308884636, time.Local), LastTimestamp:time.Date(2023, time.March, 9, 14, 30, 11, 308884636, time.Local), Count:1, Type:"Warning", EventTime:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Series:(*v1.EventSeries)(nil), Action:"", Related:(*v1.ObjectReference)(nil), ReportingController:"", ReportingInstance:""}': 'Post "https://localhost:6443/api/v1/namespaces/openshift-kube-scheduler/events": x509: certificate is valid for kubernetes, kubernetes.default, kubernetes.default.svc, kubernetes.default.svc.cluster.local, openshift, openshift.default, openshift.default.svc, openshift.default.svc.cluster.local, not localhost-recovery'(may retry after sleeping)
-        reason: Error
-        startedAt: "2023-03-09T14:30:11Z"
-  - containerID: cri-o://aab40e6d04a62bacfe26053ccd2732e047b6c6d2bc64faf53d30a14b13b7c610
-    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
-    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
+      waiting:
+        reason: PodInitializing
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
+    imageID: ""
     lastState: {}
     name: kube-scheduler-recovery-controller
     ready: false
     restartCount: 0
     started: false
     state:
-      terminated:
-        containerID: cri-o://aab40e6d04a62bacfe26053ccd2732e047b6c6d2bc64faf53d30a14b13b7c610
-        exitCode: 0
-        finishedAt: "2023-03-09T14:31:21Z"
-        reason: Completed
-        startedAt: "2023-03-09T14:30:11Z"
+      waiting:
+        reason: PodInitializing
   hostIP: 10.0.130.93
   initContainerStatuses:
-  - containerID: cri-o://d9629a9909b76f44470d199594582dace6e2b6edec35d2e445131a48a163855a
-    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
-    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
+    imageID: ""
     lastState: {}
     name: wait-for-host-port
-    ready: true
+    ready: false
     restartCount: 0
     state:
-      terminated:
-        containerID: cri-o://d9629a9909b76f44470d199594582dace6e2b6edec35d2e445131a48a163855a
-        exitCode: 0
-        finishedAt: "2023-03-09T14:30:10Z"
-        reason: Completed
-        startedAt: "2023-03-09T14:30:10Z"
-  phase: Running
+      waiting:
+        reason: PodInitializing
+  phase: Pending
   podIP: 10.0.130.93
   podIPs:
   - ip: 10.0.130.93
