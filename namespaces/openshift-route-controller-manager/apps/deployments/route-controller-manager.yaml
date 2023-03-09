@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    deployment.kubernetes.io/revision: "1"
+    deployment.kubernetes.io/revision: "2"
     operator.openshift.io/spec-hash: 64433da62b80908a75bd1d18d3e3e472be8471b2f5cd9be5f87b3f4b6c110017
     release.openshift.io/version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
   creationTimestamp: "2023-03-09T14:23:00Z"
@@ -11,39 +11,6 @@ metadata:
     app: route-controller-manager
     route-controller-manager: "true"
   managedFields:
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:deployment.kubernetes.io/revision: {}
-      f:status:
-        f:conditions:
-          .: {}
-          k:{"type":"Available"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Progressing"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:lastUpdateTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:observedGeneration: {}
-        f:replicas: {}
-        f:unavailableReplicas: {}
-        f:updatedReplicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:23:00Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -193,9 +160,42 @@ metadata:
     manager: cluster-openshift-controller-manager-operator
     operation: Update
     time: "2023-03-09T14:23:01Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:replicas: {}
+        f:unavailableReplicas: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:23:01Z"
   name: route-controller-manager
   namespace: openshift-route-controller-manager
-  resourceVersion: "6216"
+  resourceVersion: "6225"
   uid: ad9d7992-335d-4009-a433-f1dc108a6d16
 spec:
   progressDeadlineSeconds: 600
@@ -330,9 +330,9 @@ status:
     status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:23:00Z"
-    lastUpdateTime: "2023-03-09T14:23:00Z"
-    message: ReplicaSet "route-controller-manager-57654f6596" is progressing.
-    reason: ReplicaSetUpdated
+    lastUpdateTime: "2023-03-09T14:23:01Z"
+    message: Created new replica set "route-controller-manager-7d69cc4f4f"
+    reason: NewReplicaSetCreated
     status: "True"
     type: Progressing
   observedGeneration: 1
