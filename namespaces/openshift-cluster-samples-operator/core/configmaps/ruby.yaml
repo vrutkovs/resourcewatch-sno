@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:25Z"
+  name: ruby
+  namespace: openshift-cluster-samples-operator
+  resourceVersion: "15098"
+  uid: 2579b2d1-8692-4f83-896c-925ffa0b1796
