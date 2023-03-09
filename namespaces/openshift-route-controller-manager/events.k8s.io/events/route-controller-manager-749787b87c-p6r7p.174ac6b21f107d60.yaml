@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:31:19Z"
+deprecatedLastTimestamp: "2023-03-09T14:31:19Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:31:19Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:31:19Z"
+  name: route-controller-manager-749787b87c-p6r7p.174ac6b21f107d60
+  namespace: openshift-route-controller-manager
+  resourceVersion: "12173"
+  uid: 346e5c64-cfc0-4c2f-8bbb-4d494931b14b
+note: Successfully pulled image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:97e0c3d15736e8b042931afcc1f97d024c584f47480c7a3bc26fa9faf62d7a0a"
+  in 3.532144976s (3.53215535s including waiting)
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{route-controller-manager}
+  kind: Pod
+  name: route-controller-manager-749787b87c-p6r7p
+  namespace: openshift-route-controller-manager
+  resourceVersion: "10984"
+  uid: 72f3bf26-04c4-4a10-92aa-f5060fcd50a5
+type: Normal
