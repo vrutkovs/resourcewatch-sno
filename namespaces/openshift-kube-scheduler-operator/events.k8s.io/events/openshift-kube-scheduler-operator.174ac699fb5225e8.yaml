@@ -1,0 +1,45 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:35Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:35Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-status-controller-statussyncer_kube-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:35Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:29:35Z"
+  name: openshift-kube-scheduler-operator.174ac699fb5225e8
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "10050"
+  uid: b96f7c95-60b5-411b-b4f5-eeb03d2c4bf6
+note: 'Status for clusteroperator/kube-scheduler changed: Progressing message changed
+  from "NodeInstallerProgressing: 1 nodes are at revision 0; 0 nodes have achieved
+  new revision 3" to "NodeInstallerProgressing: 1 nodes are at revision 0; 0 nodes
+  have achieved new revision 4",Available message changed from "StaticPodsAvailable:
+  0 nodes are active; 1 nodes are at revision 0; 0 nodes have achieved new revision
+  3" to "StaticPodsAvailable: 0 nodes are active; 1 nodes are at revision 0; 0 nodes
+  have achieved new revision 4"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 63ed6034-26ff-494c-bb49-f929f1f6a34d
+type: Normal
