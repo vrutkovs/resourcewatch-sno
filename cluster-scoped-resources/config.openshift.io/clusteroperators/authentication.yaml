@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:34:56Z"
+    time: "2023-03-09T14:34:58Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,15 +52,14 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16943"
+  resourceVersion: "16953"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:33:05Z"
-    message: |-
-      IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
-      OAuthServerDeploymentDegraded: 1 of 1 requested instances are unavailable for oauth-openshift.openshift-authentication ()
+    message: 'OAuthServerDeploymentDegraded: 1 of 1 requested instances are unavailable
+      for oauth-openshift.openshift-authentication ()'
     reason: AsExpected
     status: "False"
     type: Degraded
