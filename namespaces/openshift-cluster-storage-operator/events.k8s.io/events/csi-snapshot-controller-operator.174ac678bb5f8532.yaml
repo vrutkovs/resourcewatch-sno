@@ -1,0 +1,60 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:27:12Z"
+deprecatedLastTimestamp: "2023-03-09T14:27:12Z"
+deprecatedSource:
+  component: csi-snapshot-controller-operator-status-controller-statussyncer_csi-snapshot-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:27:12Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: csi-snapshot-controller-operator
+    operation: Update
+    time: "2023-03-09T14:27:12Z"
+  name: csi-snapshot-controller-operator.174ac678bb5f8532
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "7708"
+  uid: 6e81693d-24d4-4dd2-98fe-0967732f79ea
+note: 'Status for clusteroperator/csi-snapshot-controller changed: Degraded message
+  changed from "All is well" to "CSISnapshotGuestStaticResourceControllerDegraded:
+  \"volumesnapshots.yaml\" (string): customresourcedefinitions.apiextensions.k8s.io
+  \"volumesnapshots.snapshot.storage.k8s.io\" is forbidden: User \"system:serviceaccount:openshift-cluster-storage-operator:csi-snapshot-controller-operator\"
+  cannot get resource \"customresourcedefinitions\" in API group \"apiextensions.k8s.io\"
+  at the cluster scope: RBAC: [clusterrole.rbac.authorization.k8s.io \"system:scope-impersonation\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:service-account-issuer-discovery\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:build-strategy-docker\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:webhook\" not found, clusterrole.rbac.authorization.k8s.io
+  \"cluster-status\" not found, clusterrole.rbac.authorization.k8s.io \"self-access-reviewer\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:openshift:scc:restricted-v2\"
+  not found, clusterrole.rbac.authorization.k8s.io \"csi-snapshot-controller-operator-clusterrole\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:public-info-viewer\" not
+  found, clusterrole.rbac.authorization.k8s.io \"system:openshift:discovery\" not
+  found, clusterrole.rbac.authorization.k8s.io \"system:discovery\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:basic-user\" not found, clusterrole.rbac.authorization.k8s.io \"system:oauth-token-deleter\"
+  not found, clusterrole.rbac.authorization.k8s.io \"openshift-csi-snapshot-controller-runner\"
+  not found, clusterrole.rbac.authorization.k8s.io \"system:build-strategy-jenkinspipeline\"
+  not found, clusterrole.rbac.authorization.k8s.io \"basic-user\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:openshift:public-info-viewer\" not found, clusterrole.rbac.authorization.k8s.io
+  \"system:build-strategy-source\" not found]\nCSISnapshotGuestStaticResourceControllerDegraded:
+  "'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: csi-snapshot-controller-operator
+  namespace: openshift-cluster-storage-operator
+  uid: 79d88ae3-4366-475b-9556-f0485be3cce2
+type: Normal
