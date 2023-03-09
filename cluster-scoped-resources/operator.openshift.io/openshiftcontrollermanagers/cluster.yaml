@@ -30,15 +30,38 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:46Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:readyReplicas: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:00Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1110"
+  resourceVersion: "3699"
   uid: b34d6810-68f9-4135-9afc-798b3c845c22
 spec:
   logLevel: Normal
   managementState: Managed
   operatorLogLevel: Normal
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    message: |
+      "v3.11.0/openshift-controller-manager/leader-role.yaml" (string): namespaces "openshift-controller-manager" not found
+      "v3.11.0/openshift-controller-manager/leader-rolebinding.yaml" (string): namespaces "openshift-controller-manager" not found
+      "v3.11.0/openshift-controller-manager/route-controller-leader-role.yaml" (string): namespaces "openshift-route-controller-manager" not found
+      "v3.11.0/openshift-controller-manager/route-controller-leader-rolebinding.yaml" (string): namespaces "openshift-route-controller-manager" not found
+    reason: SyncError
+    status: "True"
+    type: OpenshiftControllerManagerStaticResourcesDegraded
+  readyReplicas: 0
