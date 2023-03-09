@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:28:56Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:56Z"
+deprecatedSource:
+  component: file-change-watchdog
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:56Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-samples-operator-watch
+    operation: Update
+    time: "2023-03-09T14:28:56Z"
+  name: cluster-samples-operator.174ac690c1516cfb
+  namespace: openshift-cluster-samples-operator
+  resourceVersion: "8685"
+  uid: c99c5816-6b27-4c16-ae05-0aea699b667b
+note: Started watching files for process cluster-samples-operator[7]
+reason: FileChangeWatchdogStarted
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: cluster-samples-operator
+  namespace: openshift-cluster-samples-operator
+  uid: afb01b65-cac4-45fc-82c1-b0285738979e
+type: Normal
