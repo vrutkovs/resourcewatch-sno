@@ -89,14 +89,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:04Z"
+    time: "2023-03-09T14:23:05Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6312"
+  resourceVersion: "6342"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -188,7 +188,8 @@ status:
     status: "False"
     type: OAuthServerServiceEndpointAccessibleControllerAvailable
   - lastTransitionTime: "2023-03-09T14:22:20Z"
-    message: configmap "v4-0-config-system-service-ca" not found
+    message: 'Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443:
+      connect: connection refused'
     reason: SyncError
     status: "True"
     type: OAuthServerServiceEndpointAccessibleControllerDegraded
