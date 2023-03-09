@@ -35,7 +35,7 @@ metadata:
     manager: AuthenticationCustomRouteController
     operation: Apply
     subresource: status
-    time: "2023-03-09T14:32:16Z"
+    time: "2023-03-09T14:32:21Z"
   - apiVersion: config.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -61,7 +61,7 @@ metadata:
     subresource: status
     time: "2023-03-09T14:14:26Z"
   name: cluster
-  resourceVersion: "14940"
+  resourceVersion: "15020"
   uid: c1484dd1-5fdc-4633-bc7c-b45c37efbd64
 spec:
   domain: apps.ocp.choomba.one
@@ -72,9 +72,9 @@ status:
   componentRoutes:
   - conditions:
     - lastTransitionTime: "2023-03-09T14:32:16Z"
-      message: 'Route not admitted: no ingress for host oauth-openshift.apps.ocp.choomba.one
-        in route oauth-openshift in namespace openshift-authentication'
-      reason: RouteNotAdmitted
+      message: 'unexpected error at oauth-openshift.apps.ocp.choomba.one: Get "https://oauth-openshift.apps.ocp.choomba.one/healthz":
+        EOF'
+      reason: ErrorReachingOutToService
       status: "True"
       type: Progressing
     - lastTransitionTime: "2023-03-09T14:32:16Z"
