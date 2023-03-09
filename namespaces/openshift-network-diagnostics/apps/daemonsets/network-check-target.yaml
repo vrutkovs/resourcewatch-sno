@@ -1,0 +1,183 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  annotations:
+    deprecated.daemonset.template.generation: "1"
+    kubernetes.io/description: |
+      This daemonset deploys the network-check-target pods that run
+      a dummy app to be checked by network-check-source pod
+    networkoperator.openshift.io/non-critical: ""
+    release.openshift.io/version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+  creationTimestamp: "2023-03-09T14:20:35Z"
+  generation: 1
+  labels:
+    networkoperator.openshift.io/generates-operator-status: stand-alone
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:kubernetes.io/description: {}
+          f:networkoperator.openshift.io/non-critical: {}
+          f:release.openshift.io/version: {}
+        f:labels:
+          f:networkoperator.openshift.io/generates-operator-status: {}
+        f:ownerReferences:
+          k:{"uid":"e6519524-ef16-4ee8-82f1-2faa42688032"}: {}
+      f:spec:
+        f:selector: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              f:target.workload.openshift.io/management: {}
+            f:labels:
+              f:app: {}
+              f:kubernetes.io/os: {}
+          f:spec:
+            f:affinity:
+              f:nodeAffinity:
+                f:requiredDuringSchedulingIgnoredDuringExecution: {}
+            f:containers:
+              k:{"name":"network-check-target-container"}:
+                .: {}
+                f:command: {}
+                f:env:
+                  k:{"name":"K8S_NODE_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      f:fieldRef: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:ports:
+                  k:{"containerPort":8080,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:protocol: {}
+                f:readinessProbe:
+                  f:httpGet:
+                    f:path: {}
+                    f:port: {}
+                  f:initialDelaySeconds: {}
+                  f:timeoutSeconds: {}
+                f:resources:
+                  f:requests:
+                    f:cpu: {}
+                    f:memory: {}
+                f:securityContext:
+                  f:allowPrivilegeEscalation: {}
+                  f:capabilities:
+                    f:drop: {}
+            f:nodeSelector: {}
+            f:priorityClassName: {}
+            f:securityContext:
+              f:runAsNonRoot: {}
+              f:seccompProfile:
+                f:type: {}
+            f:serviceAccount: {}
+            f:terminationGracePeriodSeconds: {}
+            f:tolerations: {}
+        f:updateStrategy:
+          f:rollingUpdate:
+            f:maxUnavailable: {}
+          f:type: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-03-09T14:20:35Z"
+  name: network-check-target
+  namespace: openshift-network-diagnostics
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: e6519524-ef16-4ee8-82f1-2faa42688032
+  resourceVersion: "2824"
+  uid: 62454efe-a10a-4b0f-95f3-f94bf8ea8fd3
+spec:
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: network-check-target
+  template:
+    metadata:
+      annotations:
+        target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+      creationTimestamp: null
+      labels:
+        app: network-check-target
+        kubernetes.io/os: linux
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: network.operator.openshift.io/dpu-host
+                operator: DoesNotExist
+              - key: network.operator.openshift.io/dpu
+                operator: DoesNotExist
+      containers:
+      - command:
+        - cluster-network-check-target
+        env:
+        - name: K8S_NODE_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: spec.nodeName
+        image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6f674d54345ba8ce675df69db58531f41a18deac6bcaec530b634cc54a38ab2c
+        imagePullPolicy: IfNotPresent
+        name: network-check-target-container
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 10
+        resources:
+          requests:
+            cpu: 10m
+            memory: 15Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        beta.kubernetes.io/os: linux
+      priorityClassName: openshift-user-critical
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext:
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+      serviceAccount: default
+      serviceAccountName: default
+      terminationGracePeriodSeconds: 10
+      tolerations:
+      - operator: Exists
+  updateStrategy:
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 10%
+    type: RollingUpdate
+status:
+  currentNumberScheduled: 0
+  desiredNumberScheduled: 0
+  numberMisscheduled: 0
+  numberReady: 0
