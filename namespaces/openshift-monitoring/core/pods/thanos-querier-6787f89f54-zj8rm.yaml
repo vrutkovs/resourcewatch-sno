@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.80/23"],"mac_address":"0a:58:0a:80:00:50","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.80/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.80"
+          ],
+          "mac": "0a:58:0a:80:00:50",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:32:52Z"
@@ -407,6 +418,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-09T14:32:52Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:53Z"
   name: thanos-querier-6787f89f54-zj8rm
   namespace: openshift-monitoring
   ownerReferences:
@@ -416,7 +437,7 @@ metadata:
     kind: ReplicaSet
     name: thanos-querier-6787f89f54
     uid: e40551e7-3785-4683-ac07-1dc8a1d9d9de
-  resourceVersion: "16058"
+  resourceVersion: "16067"
   uid: 76abe55f-fb76-47dc-b980-e6ad551f2aca
 spec:
   containers:
