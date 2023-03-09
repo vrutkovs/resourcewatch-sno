@@ -5,6 +5,9 @@ metadata:
     openshift.io/description: Namespace for enabling network policy specification
       for host network traffic. Can be used to allow access to or from host network
       components
+    openshift.io/sa.scc.mcs: s0:c23,c2
+    openshift.io/sa.scc.supplemental-groups: 1000510000/10000
+    openshift.io/sa.scc.uid-range: 1000510000/10000
     workload.openshift.io/allowed: management
   creationTimestamp: "2023-03-09T14:20:32Z"
   labels:
@@ -25,6 +28,17 @@ metadata:
     manager: cluster-network-operator/operconfig
     operation: Apply
     time: "2023-03-09T14:20:32Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:20:32Z"
   name: openshift-host-network
   ownerReferences:
   - apiVersion: operator.openshift.io/v1
@@ -33,7 +47,7 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "2738"
+  resourceVersion: "2743"
   uid: a6e0acce-313a-406b-a2cd-94913c73230f
 spec:
   finalizers:
