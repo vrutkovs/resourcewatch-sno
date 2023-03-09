@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  creationTimestamp: "2023-03-09T14:32:25Z"
-  name: jboss-eap-xp4-openjdk11-runtime-openshift
-  namespace: openshift-cluster-samples-operator
-  resourceVersion: "15084"
-  uid: 91a16b77-9f0a-4e43-acce-4867deab3e9a
