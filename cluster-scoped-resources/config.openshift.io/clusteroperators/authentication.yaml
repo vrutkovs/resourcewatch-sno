@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:16Z"
+    time: "2023-03-09T14:32:02Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "9545"
+  resourceVersion: "13699"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
@@ -72,11 +72,9 @@ status:
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
-      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.oauth.openshift.io: not available: failing or missing response from https://10.128.0.41:8443/apis/oauth.openshift.io/v1: bad status from https://10.128.0.41:8443/apis/oauth.openshift.io/v1: 401
-      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.user.openshift.io: not available: failing or missing response from https://10.128.0.41:8443/apis/user.openshift.io/v1: bad status from https://10.128.0.41:8443/apis/user.openshift.io/v1: 401
       OAuthServerServiceEndpointAccessibleControllerAvailable: Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443: connect: connection refused
       OAuthServerServiceEndpointsEndpointAccessibleControllerAvailable: endpoints "oauth-openshift" not found
-    reason: APIServices_Error::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound
+    reason: OAuthServerServiceEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
