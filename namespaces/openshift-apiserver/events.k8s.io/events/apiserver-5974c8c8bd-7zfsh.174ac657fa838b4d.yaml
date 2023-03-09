@@ -1,0 +1,36 @@
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource:
+  component: apiserver
+  host: apiserver-5974c8c8bd-7zfsh
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:52Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:involvedObject: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: openshift-apiserver
+    operation: Update
+    time: "2023-03-09T14:24:52Z"
+  name: apiserver-5974c8c8bd-7zfsh.174ac657fa838b4d
+  namespace: openshift-apiserver
+  resourceVersion: "7308"
+  uid: 72f2d33d-104b-4373-abe9-1ef00af607a1
+note: All pre-shutdown hooks have been finished
+reason: TerminationPreShutdownHooksFinished
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: apiserver-5974c8c8bd-7zfsh
+  namespace: openshift-apiserver
+type: Normal
