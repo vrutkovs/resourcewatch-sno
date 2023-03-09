@@ -53,13 +53,17 @@ metadata:
           f:type: {}
         f:observedGeneration: {}
         f:selector: {}
+        f:tlsProfile:
+          .: {}
+          f:ciphers: {}
+          f:minTLSVersion: {}
     manager: ingress-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:18Z"
+    time: "2023-03-09T14:22:19Z"
   name: default
   namespace: openshift-ingress-operator
-  resourceVersion: "4797"
+  resourceVersion: "4843"
   uid: 581ce6e7-0dc9-460c-b609-a8d3a1b3ae1f
 spec:
   clientTLS:
@@ -81,6 +85,70 @@ status:
     reason: Valid
     status: "True"
     type: Admitted
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    message: The deployment has no Available status condition set
+    reason: DeploymentAvailabilityUnknown
+    status: Unknown
+    type: DeploymentAvailable
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    message: Minimum replicas requirement is met
+    reason: DeploymentMinimumReplicasMet
+    status: "True"
+    type: DeploymentReplicasMinAvailable
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    message: 0/1 of replicas are available
+    reason: DeploymentReplicasNotAvailable
+    status: "False"
+    type: DeploymentReplicasAllAvailable
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    message: |
+      Waiting for router deployment rollout to finish: 0 out of 1 new replica(s) have been updated...
+    reason: DeploymentRollingOut
+    status: "True"
+    type: DeploymentRollingOut
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    message: The configured endpoint publishing strategy does not include a managed
+      load balancer
+    reason: EndpointPublishingStrategyExcludesManagedLoadBalancer
+    status: "False"
+    type: LoadBalancerManaged
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    message: LoadBalancer is not progressing
+    reason: LoadBalancerNotProgressing
+    status: "False"
+    type: LoadBalancerProgressing
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    message: No DNS zones are defined in the cluster dns config.
+    reason: NoDNSZones
+    status: "False"
+    type: DNSManaged
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    message: 'One or more status conditions indicate unavailable: DeploymentAvailable=Unknown
+      (DeploymentAvailabilityUnknown: The deployment has no Available status condition
+      set)'
+    reason: IngressControllerUnavailable
+    status: "False"
+    type: Available
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    message: |-
+      One or more status conditions indicate progressing: DeploymentRollingOut=True (DeploymentRollingOut: Waiting for router deployment rollout to finish: 0 out of 1 new replica(s) have been updated...
+      )
+    reason: IngressControllerProgressing
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    message: IngressController is upgradeable.
+    reason: Upgradeable
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    message: No evaluation condition is detected.
+    reason: NoEvaluationCondition
+    status: "False"
+    type: EvaluationConditionsDetected
   domain: apps.ocp.choomba.one
   endpointPublishingStrategy:
     hostNetwork:
@@ -90,4 +158,18 @@ status:
       statsPort: 1936
     type: HostNetwork
   observedGeneration: 1
-  selector: ""
+  selector: ingresscontroller.operator.openshift.io/deployment-ingresscontroller=default
+  tlsProfile:
+    ciphers:
+    - ECDHE-ECDSA-AES128-GCM-SHA256
+    - ECDHE-RSA-AES128-GCM-SHA256
+    - ECDHE-ECDSA-AES256-GCM-SHA384
+    - ECDHE-RSA-AES256-GCM-SHA384
+    - ECDHE-ECDSA-CHACHA20-POLY1305
+    - ECDHE-RSA-CHACHA20-POLY1305
+    - DHE-RSA-AES128-GCM-SHA256
+    - DHE-RSA-AES256-GCM-SHA384
+    - TLS_AES_128_GCM_SHA256
+    - TLS_AES_256_GCM_SHA384
+    - TLS_CHACHA20_POLY1305_SHA256
+    minTLSVersion: VersionTLS12
