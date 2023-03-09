@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"cluster-image-registry-operator-77f7dc4fc4-jcn7n_f38b9d15-a74e-482f-b38f-6d604ef8c612","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:29:12Z","renewTime":"2023-03-09T14:32:12Z","leaderTransitions":0}'
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"cluster-image-registry-operator-77f7dc4fc4-jcn7n_f38b9d15-a74e-482f-b38f-6d604ef8c612","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:29:12Z","renewTime":"2023-03-09T14:33:12Z","leaderTransitions":0}'
   creationTimestamp: "2023-03-09T14:29:12Z"
   managedFields:
   - apiVersion: v1
@@ -14,8 +14,8 @@ metadata:
           f:control-plane.alpha.kubernetes.io/leader: {}
     manager: cluster-image-registry-operator
     operation: Update
-    time: "2023-03-09T14:32:12Z"
+    time: "2023-03-09T14:33:12Z"
   name: openshift-master-controllers
   namespace: openshift-image-registry
-  resourceVersion: "14780"
+  resourceVersion: "16350"
   uid: 0ba20d02-aabc-4835-b061-9248cdb0a274
