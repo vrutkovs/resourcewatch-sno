@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:37:26Z"
+deprecatedLastTimestamp: "2023-03-09T14:37:26Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-revisioncontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:37:26Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:37:26Z"
+  name: kube-controller-manager-operator.174ac70799956a60
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "17488"
+  uid: e9f93c3e-80b6-4d05-99bf-8d64173c02db
+note: new revision 6 triggered by "secret/service-account-private-key has changed"
+reason: RevisionTriggered
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Normal
