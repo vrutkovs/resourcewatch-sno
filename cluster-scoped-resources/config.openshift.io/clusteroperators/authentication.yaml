@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:10Z"
+    time: "2023-03-09T14:23:11Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6468"
+  resourceVersion: "6556"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
@@ -62,15 +62,16 @@ status:
       WebhookAuthenticatorControllerDegraded: failed to retrieve service openshift-oauth-apiserver/api: service "api" not found
       OAuthServerServiceEndpointAccessibleControllerDegraded: Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443: connect: connection refused
       OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth service endpoints are not ready
-      APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable for apiserver.openshift-oauth-apiserver (2 containers are waiting in pending apiserver-6fb9dd7b7-rjbtg pod)
+      APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable for apiserver.openshift-oauth-apiserver (no pods found with labels "apiserver=true,app=openshift-oauth-apiserver,oauth-apiserver-anti-affinity=true,revision=1")
       IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
     reason: AsExpected
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:22:02Z"
-    message: 'AuthenticatorCertKeyProgressing: All is well'
-    reason: AsExpected
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:23:11Z"
+    message: 'APIServerDeploymentProgressing: deployment/apiserver.openshift-oauth-apiserver:
+      observed generation is 2, desired generation is 3.'
+    reason: APIServerDeployment_NewGeneration
+    status: "True"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
