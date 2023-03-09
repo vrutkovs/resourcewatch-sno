@@ -591,6 +591,43 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:55Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:metadata:
         f:annotations:
           f:k8s.ovn.org/pod-networks: {}
@@ -606,7 +643,7 @@ metadata:
     kind: StatefulSet
     name: prometheus-k8s
     uid: 9ab86299-d85a-42b3-adb1-dc3832bd9a6c
-  resourceVersion: "16104"
+  resourceVersion: "16106"
   uid: a079c200-a6fa-4bd9-aa4c-a968e63115ee
 spec:
   automountServiceAccountToken: true
@@ -1139,7 +1176,100 @@ status:
   conditions:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:55Z"
+    message: 'containers with incomplete status: [init-config-reloader]'
+    reason: ContainersNotInitialized
+    status: "False"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:32:55Z"
+    message: 'containers with unready status: [prometheus config-reloader thanos-sidecar
+      prometheus-proxy kube-rbac-proxy kube-rbac-proxy-thanos]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:32:55Z"
+    message: 'containers with unready status: [prometheus config-reloader thanos-sidecar
+      prometheus-proxy kube-rbac-proxy kube-rbac-proxy-thanos]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:32:55Z"
     status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:0f2284b974da7a5af712db888818e4bbd7604e604bc70c86ce8bc75c8f73457d
+    imageID: ""
+    lastState: {}
+    name: config-reloader
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: PodInitializing
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+    imageID: ""
+    lastState: {}
+    name: kube-rbac-proxy
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: PodInitializing
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+    imageID: ""
+    lastState: {}
+    name: kube-rbac-proxy-thanos
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: PodInitializing
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:dc4b6eefc99f62639bd978c031208e0071d3eb5aebdd30dc39a081f216a89625
+    imageID: ""
+    lastState: {}
+    name: prometheus
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: PodInitializing
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87f1812b55e14f104d3ab49c06711f5ba37e94490717470e42c12749fe3c90ad
+    imageID: ""
+    lastState: {}
+    name: prometheus-proxy
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: PodInitializing
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:395a2ba741986774f2aa989bd6a7d269e35c3a648fc01c522deee8079f097fac
+    imageID: ""
+    lastState: {}
+    name: thanos-sidecar
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: PodInitializing
+  hostIP: 10.0.130.93
+  initContainerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:0f2284b974da7a5af712db888818e4bbd7604e604bc70c86ce8bc75c8f73457d
+    imageID: ""
+    lastState: {}
+    name: init-config-reloader
+    ready: false
+    restartCount: 0
+    state:
+      waiting:
+        reason: PodInitializing
   phase: Pending
   qosClass: Burstable
+  startTime: "2023-03-09T14:32:55Z"
