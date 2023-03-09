@@ -20,7 +20,23 @@ metadata:
     manager: cluster-bootstrap
     operation: Update
     time: "2023-03-09T14:15:15Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b7590f0c-c37f-44e0-80d3-7b5df1e0e187"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-09T14:28:21Z"
   name: admin-gates
   namespace: openshift-config-managed
-  resourceVersion: "1908"
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
+  resourceVersion: "7931"
   uid: d3aaf0c3-0f4a-4534-9d25-857bdc566aa7
