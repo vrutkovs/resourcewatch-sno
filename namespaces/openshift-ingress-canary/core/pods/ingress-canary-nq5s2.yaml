@@ -130,6 +130,43 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:32:07Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.72"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:09Z"
   name: ingress-canary-nq5s2
   namespace: openshift-ingress-canary
   ownerReferences:
@@ -139,7 +176,7 @@ metadata:
     kind: DaemonSet
     name: ingress-canary
     uid: 8cada35d-3ced-4501-9955-de0cda7fcf82
-  resourceVersion: "14311"
+  resourceVersion: "14587"
   uid: 26eff830-6bd5-48a5-9969-7e94ee30b069
 spec:
   affinity:
@@ -250,6 +287,35 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:03Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:32:08Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:32:08Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:32:03Z"
+    status: "True"
     type: PodScheduled
-  phase: Pending
+  containerStatuses:
+  - containerID: cri-o://2f946aaeecd8ee9b3f75daf4f841ddd0acbd3947bf8f1100ac4743b11a0a0bf6
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c85de6de3820e7ef13625ef4ceda1ec350d93fc924138ff8ef7717948f908d73
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c85de6de3820e7ef13625ef4ceda1ec350d93fc924138ff8ef7717948f908d73
+    lastState: {}
+    name: serve-healthcheck-canary
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-09T14:32:08Z"
+  hostIP: 10.0.130.93
+  phase: Running
+  podIP: 10.128.0.72
+  podIPs:
+  - ip: 10.128.0.72
   qosClass: Burstable
+  startTime: "2023-03-09T14:32:03Z"
