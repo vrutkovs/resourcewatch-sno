@@ -1,0 +1,48 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: "2023-03-09T14:32:16Z"
+  labels:
+    app: oauth-openshift
+  managedFields:
+  - apiVersion: route.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+      f:spec:
+        f:host: {}
+        f:port:
+          .: {}
+          f:targetPort: {}
+        f:tls:
+          .: {}
+          f:insecureEdgeTerminationPolicy: {}
+          f:termination: {}
+        f:to:
+          f:kind: {}
+          f:name: {}
+          f:weight: {}
+        f:wildcardPolicy: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:32:16Z"
+  name: oauth-openshift
+  namespace: openshift-authentication
+  resourceVersion: "14938"
+  uid: 3e103d46-ba65-4957-84e3-eb5db8796abf
+spec:
+  host: oauth-openshift.apps.ocp.choomba.one
+  port:
+    targetPort: 6443
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: passthrough
+  to:
+    kind: Service
+    name: oauth-openshift
+    weight: 100
+  wildcardPolicy: None
+status: {}
