@@ -39,14 +39,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:01Z"
+    time: "2023-03-09T14:22:02Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3775"
+  resourceVersion: "3786"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -93,5 +93,10 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:01Z"
     status: "False"
     type: SystemServiceCAConfigDegraded
+  - lastTransitionTime: "2023-03-09T14:22:02Z"
+    message: endpoints "oauth-openshift" not found
+    reason: ResourceNotFound
+    status: "False"
+    type: OAuthServerServiceEndpointsEndpointAccessibleControllerAvailable
   oauthAPIServer: {}
   readyReplicas: 0
