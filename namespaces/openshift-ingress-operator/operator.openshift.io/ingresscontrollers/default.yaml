@@ -2,11 +2,17 @@ apiVersion: operator.openshift.io/v1
 kind: IngressController
 metadata:
   creationTimestamp: "2023-03-09T14:22:16Z"
+  finalizers:
+  - ingresscontroller.operator.openshift.io/finalizer-ingresscontroller
   generation: 1
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"ingresscontroller.operator.openshift.io/finalizer-ingresscontroller": {}
       f:spec:
         .: {}
         f:clientTLS:
@@ -27,7 +33,7 @@ metadata:
         f:unsupportedConfigOverrides: {}
     manager: ingress-operator
     operation: Update
-    time: "2023-03-09T14:22:16Z"
+    time: "2023-03-09T14:22:18Z"
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -53,7 +59,7 @@ metadata:
     time: "2023-03-09T14:22:18Z"
   name: default
   namespace: openshift-ingress-operator
-  resourceVersion: "4794"
+  resourceVersion: "4797"
   uid: 581ce6e7-0dc9-460c-b609-a8d3a1b3ae1f
 spec:
   clientTLS:
