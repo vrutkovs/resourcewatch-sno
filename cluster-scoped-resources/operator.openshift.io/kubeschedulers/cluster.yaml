@@ -43,14 +43,14 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:02Z"
+    time: "2023-03-09T14:22:03Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3815"
+  resourceVersion: "3924"
   uid: 48eb058e-3e1d-45d9-baa8-cf6a53778010
 spec:
   logLevel: Normal
@@ -99,6 +99,9 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:01Z"
     status: "False"
     type: InstallerPodNetworkingDegraded
+  - lastTransitionTime: "2023-03-09T14:22:02Z"
+    status: "False"
+    type: ResourceSyncControllerDegraded
   latestAvailableRevision: 0
   latestAvailableRevisionReason: ""
   nodeStatuses:
