@@ -176,7 +176,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:09Z"
+    time: "2023-03-09T14:32:10Z"
   name: prometheus-operator-admission-webhook-b5c544574-qvght
   namespace: openshift-monitoring
   ownerReferences:
@@ -186,7 +186,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-operator-admission-webhook-b5c544574
     uid: e40c1494-47dc-4440-9bf3-73a7f1ea3faa
-  resourceVersion: "14499"
+  resourceVersion: "14685"
   uid: 6be02a99-8e3b-4979-beb8-0c3206b2773d
 spec:
   automountServiceAccountToken: false
@@ -285,11 +285,11 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:09Z"
+    lastTransitionTime: "2023-03-09T14:32:06Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:09Z"
+    lastTransitionTime: "2023-03-09T14:32:06Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
