@@ -154,6 +154,15 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:23:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"ContainersReady"}:
@@ -184,16 +193,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:00Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.ovn.org/pod-networks: {}
-    manager: vrutkovs-sno
-    operation: Update
-    time: "2023-03-09T14:23:00Z"
+    time: "2023-03-09T14:25:05Z"
   name: route-controller-manager-57654f6596-6m7sj
   namespace: openshift-route-controller-manager
   ownerReferences:
@@ -203,7 +203,7 @@ metadata:
     kind: ReplicaSet
     name: route-controller-manager-57654f6596
     uid: 1f001f68-eb3d-48f7-99f9-0b548788cb92
-  resourceVersion: "6230"
+  resourceVersion: "7454"
   uid: 73058960-10e6-492d-aa88-3527fe751cfe
 spec:
   affinity:
@@ -371,8 +371,12 @@ status:
     restartCount: 0
     started: false
     state:
-      waiting:
-        reason: ContainerCreating
+      terminated:
+        exitCode: 137
+        finishedAt: null
+        message: The container could not be located when the pod was terminated
+        reason: ContainerStatusUnknown
+        startedAt: null
   hostIP: 10.0.130.93
   phase: Pending
   qosClass: Burstable
