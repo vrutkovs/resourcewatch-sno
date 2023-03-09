@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:33:47Z"
+deprecatedLastTimestamp: "2023-03-09T14:33:47Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:33:48Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:33:48Z"
+  name: redhat-marketplace-zgwx2.174ac6d494000383
+  namespace: openshift-marketplace
+  resourceVersion: "16591"
+  uid: 5485efa7-ca9f-49ce-9122-801fabb1dbe6
+note: Pulling image "registry.redhat.io/redhat/redhat-marketplace-index:v4.12"
+reason: Pulling
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{registry-server}
+  kind: Pod
+  name: redhat-marketplace-zgwx2
+  namespace: openshift-marketplace
+  resourceVersion: "16527"
+  uid: 0e7deaef-7337-4e96-a239-719afb9fdacb
+type: Normal
