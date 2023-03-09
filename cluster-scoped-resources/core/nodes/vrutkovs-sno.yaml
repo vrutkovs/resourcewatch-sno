@@ -80,6 +80,20 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:machineconfiguration.openshift.io/currentConfig: {}
+          f:machineconfiguration.openshift.io/desiredConfig: {}
+          f:machineconfiguration.openshift.io/desiredDrain: {}
+          f:machineconfiguration.openshift.io/reason: {}
+          f:machineconfiguration.openshift.io/ssh: {}
+          f:machineconfiguration.openshift.io/state: {}
+    manager: machine-config-daemon
+    operation: Update
+    time: "2023-03-09T14:23:06Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"DiskPressure"}:
@@ -98,23 +112,9 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:02Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:machineconfiguration.openshift.io/currentConfig: {}
-          f:machineconfiguration.openshift.io/desiredConfig: {}
-          f:machineconfiguration.openshift.io/desiredDrain: {}
-          f:machineconfiguration.openshift.io/reason: {}
-          f:machineconfiguration.openshift.io/ssh: {}
-          f:machineconfiguration.openshift.io/state: {}
-    manager: machine-config-daemon
-    operation: Update
-    time: "2023-03-09T14:23:06Z"
+    time: "2023-03-09T14:24:43Z"
   name: vrutkovs-sno
-  resourceVersion: "6389"
+  resourceVersion: "7095"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
 spec: {}
 status:
@@ -138,25 +138,25 @@ status:
     memory: 16342536Ki
     pods: "250"
   conditions:
-  - lastHeartbeatTime: "2023-03-09T14:23:02Z"
+  - lastHeartbeatTime: "2023-03-09T14:24:43Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient memory available
     reason: KubeletHasSufficientMemory
     status: "False"
     type: MemoryPressure
-  - lastHeartbeatTime: "2023-03-09T14:23:02Z"
+  - lastHeartbeatTime: "2023-03-09T14:24:43Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has no disk pressure
     reason: KubeletHasNoDiskPressure
     status: "False"
     type: DiskPressure
-  - lastHeartbeatTime: "2023-03-09T14:23:02Z"
+  - lastHeartbeatTime: "2023-03-09T14:24:43Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient PID available
     reason: KubeletHasSufficientPID
     status: "False"
     type: PIDPressure
-  - lastHeartbeatTime: "2023-03-09T14:23:02Z"
+  - lastHeartbeatTime: "2023-03-09T14:24:43Z"
     lastTransitionTime: "2023-03-09T14:21:50Z"
     message: kubelet is posting ready status
     reason: KubeletReady
@@ -197,6 +197,9 @@ status:
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:40cda5fb6d1b85aac5696cd4ae0edceb5953c9b767b4455c0da98a5a65378be5
     sizeBytes: 507394797
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:356e58bdd42aeefdbc76f72b93b6e9e9930cd6abe19ab7163f2c6e354b6b7cbf
+    sizeBytes: 505448546
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2dce8c783764cd2f0e9e7530a2ee1447b45d936311e845efe00a90da9c103a24
     sizeBytes: 492719057
