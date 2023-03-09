@@ -120,7 +120,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -134,7 +136,7 @@ metadata:
     kind: Deployment
     name: machine-config-controller
     uid: cf0f9088-c800-466f-9217-2099d6dea337
-  resourceVersion: "4912"
+  resourceVersion: "4913"
   uid: 19ae2290-65e0-4e2e-963d-b6c254373b2e
 spec:
   replicas: 1
@@ -227,5 +229,6 @@ spec:
           defaultMode: 420
           secretName: cookie-secret
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
