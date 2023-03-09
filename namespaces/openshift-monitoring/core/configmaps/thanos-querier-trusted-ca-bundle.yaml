@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:47Z"
+  labels:
+    config.openshift.io/inject-trusted-cabundle: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:config.openshift.io/inject-trusted-cabundle: {}
+    manager: operator
+    operation: Update
+    time: "2023-03-09T14:32:47Z"
+  name: thanos-querier-trusted-ca-bundle
+  namespace: openshift-monitoring
+  resourceVersion: "15936"
+  uid: 9990291b-6d01-4119-8aaa-cda8928e3bde
