@@ -1,0 +1,47 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:24:46Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:46Z"
+deprecatedSource:
+  component: csi-snapshot-controller-operator-status-controller-statussyncer_csi-snapshot-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:46Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: csi-snapshot-controller-operator
+    operation: Update
+    time: "2023-03-09T14:24:46Z"
+  name: csi-snapshot-controller-operator.174ac656884ccf69
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "7204"
+  uid: 5c695e93-7b92-415e-9143-70eb3de0930a
+note: 'Status for clusteroperator/csi-snapshot-controller changed: Degraded message
+  changed from "CSISnapshotGuestStaticResourceControllerDegraded: \"volumesnapshots.yaml\"
+  (string): Get \"https://172.30.0.1:443/apis/apiextensions.k8s.io/v1/customresourcedefinitions/volumesnapshots.snapshot.storage.k8s.io\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nCSISnapshotGuestStaticResourceControllerDegraded:
+  \"volumesnapshotcontents.yaml\" (string): Get \"https://172.30.0.1:443/apis/apiextensions.k8s.io/v1/customresourcedefinitions/volumesnapshotcontents.snapshot.storage.k8s.io\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nCSISnapshotGuestStaticResourceControllerDegraded:
+  \"volumesnapshotclasses.yaml\" (string): Get \"https://172.30.0.1:443/apis/apiextensions.k8s.io/v1/customresourcedefinitions/volumesnapshotclasses.snapshot.storage.k8s.io\":
+  dial tcp 172.30.0.1:443: connect: connection refused\nCSISnapshotGuestStaticResourceControllerDegraded:
+  " to "All is well"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: csi-snapshot-controller-operator
+  namespace: openshift-cluster-storage-operator
+  uid: 79d88ae3-4366-475b-9556-f0485be3cce2
+type: Normal
