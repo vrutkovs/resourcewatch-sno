@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:31:58Z"
+deprecatedLastTimestamp: "2023-03-09T14:31:58Z"
+deprecatedSource:
+  component: openshift-apiserver-operator-status-controller-statussyncer_openshift-apiserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:31:58Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:31:58Z"
+  name: openshift-apiserver-operator.174ac6bb3c594178
+  namespace: openshift-apiserver-operator
+  resourceVersion: "13363"
+  uid: dd7ab870-1332-46c3-94e5-69a50e1c1f96
+note: 'Status for clusteroperator/openshift-apiserver changed: Available changed from
+  False to True ("All is well")'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-apiserver-operator
+  namespace: openshift-apiserver-operator
+  uid: a2161746-31b9-4c81-9d80-ec57dac3c48f
+type: Normal
