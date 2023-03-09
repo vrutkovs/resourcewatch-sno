@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:28:30Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:30Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:30Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:28:30Z"
+  name: telemeter-client-7f96fcfc64-bbqx5.174ac68adb853e51
+  namespace: openshift-monitoring
+  resourceVersion: "8098"
+  uid: 53ef5f2b-3c2a-4bf7-b735-005dd5c9a14c
+note: Created container telemeter-client
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{telemeter-client}
+  kind: Pod
+  name: telemeter-client-7f96fcfc64-bbqx5
+  namespace: openshift-monitoring
+  resourceVersion: "7993"
+  uid: 56298754-7ac9-4ea1-a63f-854909871bba
+type: Normal
