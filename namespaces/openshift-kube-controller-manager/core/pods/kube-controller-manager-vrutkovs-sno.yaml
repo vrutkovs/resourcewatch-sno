@@ -295,6 +295,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -313,6 +315,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -328,7 +332,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:07Z"
+    time: "2023-03-09T14:32:09Z"
   name: kube-controller-manager-vrutkovs-sno
   namespace: openshift-kube-controller-manager
   ownerReferences:
@@ -337,7 +341,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "14258"
+  resourceVersion: "14593"
   uid: 86e446f4-0641-4bea-b0ad-6118d837a124
 spec:
   containers:
@@ -574,12 +578,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:03Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:04Z"
+    message: 'containers with unready status: [kube-controller-manager cluster-policy-controller]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:03Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:04Z"
+    message: 'containers with unready status: [kube-controller-manager cluster-policy-controller]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:03Z"
@@ -591,9 +599,9 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4a17a5edd33292beb6a274a3d484c8464a8f9291058107b4cb2cf6181058b1cd
     lastState: {}
     name: cluster-policy-controller
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
       running:
         startedAt: "2023-03-09T14:31:41Z"
@@ -602,9 +610,9 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
     lastState: {}
     name: kube-controller-manager
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
       running:
         startedAt: "2023-03-09T14:31:41Z"
