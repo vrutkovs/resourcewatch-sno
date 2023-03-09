@@ -1,0 +1,39 @@
+apiVersion: v1
+data:
+  ca-bundle.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIDHjCCAgagAwIBAgIIWvLfNd1LH8MwDQYJKoZIhvcNAQELBQAwLTESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MRcwFQYDVQQDEw5rdWJlbGV0LXNpZ25lcjAeFw0yMzAzMDkx
+    NDEwMjBaFw0yMzAzMTAxNDEwMjBaMC0xEjAQBgNVBAsTCW9wZW5zaGlmdDEXMBUG
+    A1UEAxMOa3ViZWxldC1zaWduZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+    AoIBAQCs9NNnLvz1JG9hsQ9BXttbf42Eznf2/TsiU812+pMh8jqz4oOMVbx08sT6
+    lsE2uZbHhX6BV1EGk9f7iZZ26rIc4hgYuRuXgV8WUYTKrfd8tg9S/n1RP7EVqCFS
+    vpuonEMxQvkS3CyEY3Ti5ygfqLzGTpCN47SN0b0raUpHuuvb5DNc7kcNJl0lxw3Y
+    WagNgde5mUBt/K2WPX2dmqdUo4xfFYWTMbCbnVNf7MElmK9ocVqap4lqyVtnlEWh
+    URmfEc6RGJYi2+MaxyRr/wqp7phmFTVtbhNuY3SU9snyWwx85TXniEWOwTRwvypQ
+    +t2rl6I7uist+q1NSpQjzUzEgRCNAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwICpDAP
+    BgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBTmjz1ivowKNJs03XP+zIcI9SEc+TAN
+    BgkqhkiG9w0BAQsFAAOCAQEAoT1CMOwY1sNgfwZMU20JUJfs3UuRgmf3OofrEhVO
+    ia5wXSDlY7kzD1cQCCJlXoa6SUzPKldQkX53ADTkTfikPhb/KDRxehCw8zBK8fyW
+    OpikFZzwqLmCudLVkq7qaXTnauc3EYzboWCnnGhrLw/wpxpXIfptxHeIFLpmMv63
+    vfH0FpVt2T/Xqown1KMAUEG++w9fl7PawxgAVILS7BUQN/Ch5OkQIntfQl3Jlvyy
+    m6KjYUUxGkdzH6xbAze3gCuU/HHNYAMZNVyWadVCw3pxEX1B1mape5P68Q5vrH6M
+    2wtKsZLzRAlLlsqVETp057B5nP2rW4THrpT8wogO8+RD/Q==
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:15:16Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:ca-bundle.crt: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:15:16Z"
+  name: csr-controller-ca
+  namespace: openshift-config-managed
+  resourceVersion: "1935"
+  uid: 379f6063-efa9-4d6b-9e74-c666e00447ef
