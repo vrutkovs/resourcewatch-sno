@@ -1,0 +1,250 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2023-03-09T14:20:00Z"
+  generateName: openshift-kube-scheduler-operator-7cc5d8f59f-
+  labels:
+    app: openshift-kube-scheduler-operator
+    pod-template-hash: 7cc5d8f59f
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5f98d709-e7df-4da0-bb93-20b5feced5fe"}: {}
+      f:spec:
+        f:automountServiceAccountToken: {}
+        f:containers:
+          k:{"name":"kube-scheduler-operator-container"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERAND_IMAGE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_IMAGE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/run/configmaps/config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/secrets/kubernetes.io/serviceaccount"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/run/secrets/serving-cert"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:runAsUser: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"config"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"kube-api-access"}:
+            .: {}
+            f:name: {}
+            f:projected:
+              .: {}
+              f:defaultMode: {}
+              f:sources: {}
+          k:{"name":"serving-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:optional: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:20:00Z"
+  name: openshift-kube-scheduler-operator-7cc5d8f59f-r7c2z
+  namespace: openshift-kube-scheduler-operator
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: openshift-kube-scheduler-operator-7cc5d8f59f
+    uid: 5f98d709-e7df-4da0-bb93-20b5feced5fe
+  resourceVersion: "2371"
+  uid: 1606b883-c96d-441c-8e75-977ff1bb9b7c
+spec:
+  automountServiceAccountToken: false
+  containers:
+  - args:
+    - --config=/var/run/configmaps/config/config.yaml
+    - -v=2
+    command:
+    - cluster-kube-scheduler-operator
+    - operator
+    env:
+    - name: IMAGE
+      value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
+    - name: OPERATOR_IMAGE
+      value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
+    - name: OPERATOR_IMAGE_VERSION
+      value: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+    - name: OPERAND_IMAGE_VERSION
+      value: 1.26.2
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
+    imagePullPolicy: IfNotPresent
+    name: kube-scheduler-operator-container
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/configmaps/config
+      name: config
+    - mountPath: /var/run/secrets/serving-cert
+      name: serving-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 65534
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: openshift-kube-scheduler-operator
+  serviceAccountName: openshift-kube-scheduler-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: serving-cert
+    secret:
+      defaultMode: 420
+      optional: true
+      secretName: kube-scheduler-operator-serving-cert
+  - configMap:
+      defaultMode: 420
+      name: openshift-kube-scheduler-operator-config
+    name: config
+  - name: kube-api-access
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3600
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  phase: Pending
+  qosClass: Burstable
