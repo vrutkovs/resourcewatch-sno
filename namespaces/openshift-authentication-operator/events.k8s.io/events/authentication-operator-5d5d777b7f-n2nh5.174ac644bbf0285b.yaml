@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:23:29Z"
-deprecatedLastTimestamp: "2023-03-09T14:23:29Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:37Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:23:29Z"
+    time: "2023-03-09T14:24:56Z"
   name: authentication-operator-5d5d777b7f-n2nh5.174ac644bbf0285b
   namespace: openshift-authentication-operator
-  resourceVersion: "6993"
+  resourceVersion: "7355"
   uid: 7b07900e-ea5b-4355-8f68-b16664a3c974
 note: Container image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:911863c370cd31453bc66d3df7571aa87cdbc21d6c064d53541f3c594a2ea504"
   already present on machine
