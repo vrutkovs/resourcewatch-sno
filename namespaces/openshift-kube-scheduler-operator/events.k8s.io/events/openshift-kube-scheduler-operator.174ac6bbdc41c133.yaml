@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:01Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:01Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-status-controller-statussyncer_kube-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:01Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:32:01Z"
+  name: openshift-kube-scheduler-operator.174ac6bbdc41c133
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "13473"
+  uid: 366f4312-9774-4a86-9d3d-57c653bbdfe5
+note: 'Status for clusteroperator/kube-scheduler changed: Degraded message changed
+  from "NodeControllerDegraded: All master nodes are ready" to "NodeControllerDegraded:
+  The master nodes not ready: node \"vrutkovs-sno\" not ready since 2023-03-09 14:32:01
+  +0000 UTC because KubeletNotReady (container runtime status check may not have completed
+  yet)"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 63ed6034-26ff-494c-bb49-f929f1f6a34d
+type: Normal
