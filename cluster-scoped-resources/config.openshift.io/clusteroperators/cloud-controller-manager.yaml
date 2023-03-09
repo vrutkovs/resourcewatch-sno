@@ -30,11 +30,21 @@ metadata:
       f:status:
         .: {}
         f:extension: {}
-        f:relatedObjects: {}
     manager: cluster-version-operator
     operation: Update
     subresource: status
     time: "2023-03-09T14:14:35Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: config-sync-controllers
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:56Z"
   name: cloud-controller-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -42,18 +52,32 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "627"
+  resourceVersion: "8710"
   uid: 25b4d22b-b211-4dd9-b2b6-bb53eef652ba
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:28:56Z"
+    message: Cloud Config Controller works as expected
+    reason: AsExpected
+    status: "True"
+    type: CloudConfigControllerAvailable
+  - lastTransitionTime: "2023-03-09T14:28:56Z"
+    message: Cloud Config Controller works as expected
+    reason: AsExpected
+    status: "False"
+    type: CloudConfigControllerDegraded
   extension: null
   relatedObjects:
+  - group: ""
+    name: openshift-cloud-controller-manager-operator
+    resource: namespaces
   - group: config.openshift.io
     name: cloud-controller-manager
     resource: clusteroperators
   - group: ""
     name: openshift-cloud-controller-manager
     resource: namespaces
-  - group: ""
-    name: openshift-cloud-controller-manager-operator
-    resource: namespaces
+  versions:
+  - name: operator
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
