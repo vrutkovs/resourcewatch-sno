@@ -1,0 +1,28 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:15:19Z"
+deprecatedLastTimestamp: "2023-03-09T14:15:19Z"
+deprecatedSource: {}
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:15:19Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:15:19Z"
+  name: bootstrap-finished
+  namespace: kube-system
+  resourceVersion: "2032"
+  uid: 9ac0a3e7-cce6-4f1e-ad21-c14d1200ecf6
+note: Required control plane pods have been created
+regarding:
+  namespace: kube-system
