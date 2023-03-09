@@ -2,7 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
     service.beta.openshift.io/serving-cert-secret-name: telemeter-client-tls
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
   creationTimestamp: "2023-03-09T14:27:41Z"
   labels:
     k8s-app: telemeter-client
@@ -34,9 +36,19 @@ metadata:
     manager: operator
     operation: Update
     time: "2023-03-09T14:27:41Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:27:41Z"
   name: telemeter-client
   namespace: openshift-monitoring
-  resourceVersion: "7850"
+  resourceVersion: "7857"
   uid: 3c9cb2bc-d313-4af4-a4ea-594b05d21f16
 spec:
   clusterIP: None
