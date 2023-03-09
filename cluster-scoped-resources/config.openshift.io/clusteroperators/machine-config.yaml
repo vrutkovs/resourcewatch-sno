@@ -41,7 +41,6 @@ metadata:
         f:conditions: {}
         f:extension:
           .: {}
-          f:lastSyncError: {}
           f:master: {}
           f:worker: {}
     manager: machine-config-operator
@@ -55,7 +54,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6273"
+  resourceVersion: "6274"
   uid: a2677b7f-e3c9-4360-88a8-42c47852f1d4
 spec: {}
 status:
@@ -71,8 +70,6 @@ status:
     status: "False"
     type: Upgradeable
   extension:
-    lastSyncError: 'error pool master is not ready, retrying. Status: (pool degraded:
-      true total: 1, ready 0, updated: 0, unavailable: 1)'
     master: 'pool is degraded because nodes fail with "1 nodes are reporting degraded
       status on sync": "Node vrutkovs-sno is reporting: \"machineconfig.machineconfiguration.openshift.io
       \\\"rendered-master-b84983722a8f041fcce35c8e28efcb54\\\" not found\""'
