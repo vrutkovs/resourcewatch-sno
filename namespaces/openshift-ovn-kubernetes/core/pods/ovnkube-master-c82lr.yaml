@@ -565,8 +565,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -579,8 +577,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -596,7 +592,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:21:43Z"
+    time: "2023-03-09T14:21:44Z"
   name: ovnkube-master-c82lr
   namespace: openshift-ovn-kubernetes
   ownerReferences:
@@ -606,7 +602,7 @@ metadata:
     kind: DaemonSet
     name: ovnkube-master
     uid: 5e54e35f-7fe1-4309-a412-ba71c74af3ed
-  resourceVersion: "3073"
+  resourceVersion: "3074"
   uid: 9e75d9d6-b616-493a-90a5-773d93d969d6
 spec:
   affinity:
@@ -1484,16 +1480,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:33Z"
-    message: 'containers with unready status: [nbdb]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:21:43Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:33Z"
-    message: 'containers with unready status: [nbdb]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:21:43Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:33Z"
@@ -1516,7 +1508,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
     lastState: {}
     name: nbdb
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
