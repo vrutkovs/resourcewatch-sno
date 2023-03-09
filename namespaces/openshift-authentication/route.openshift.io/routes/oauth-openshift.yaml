@@ -29,9 +29,18 @@ metadata:
     manager: authentication-operator
     operation: Update
     time: "2023-03-09T14:32:16Z"
+  - apiVersion: route.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:ingress: {}
+    manager: openshift-router
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:16Z"
   name: oauth-openshift
   namespace: openshift-authentication
-  resourceVersion: "14938"
+  resourceVersion: "14939"
   uid: 3e103d46-ba65-4957-84e3-eb5db8796abf
 spec:
   host: oauth-openshift.apps.ocp.choomba.one
@@ -45,4 +54,13 @@ spec:
     name: oauth-openshift
     weight: 100
   wildcardPolicy: None
-status: {}
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: "2023-03-09T14:32:16Z"
+      status: "True"
+      type: Admitted
+    host: oauth-openshift.apps.ocp.choomba.one
+    routerCanonicalHostname: router-default.apps.ocp.choomba.one
+    routerName: default
+    wildcardPolicy: None
