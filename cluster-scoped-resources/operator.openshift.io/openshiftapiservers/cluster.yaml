@@ -41,14 +41,14 @@ metadata:
     manager: cluster-openshift-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:05Z"
+    time: "2023-03-09T14:22:07Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4136"
+  resourceVersion: "4219"
   uid: 745e26c2-906b-4bfc-8835-c7ba9c167c7b
 spec:
   logLevel: Normal
@@ -100,13 +100,11 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:03Z"
     status: "False"
     type: EncryptionPruneControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:22:04Z"
-    message: configmaps "audit" not found
-    reason: ContentCreationError
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:22:07Z"
+    status: "False"
     type: RevisionControllerDegraded
   - lastTransitionTime: "2023-03-09T14:22:05Z"
     status: "False"
     type: AuditPolicyDegraded
-  latestAvailableRevision: 1
+  latestAvailableRevision: 2
   readyReplicas: 0
