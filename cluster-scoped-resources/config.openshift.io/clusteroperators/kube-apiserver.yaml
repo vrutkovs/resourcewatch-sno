@@ -52,14 +52,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8616"
+  resourceVersion: "8620"
   uid: 44fa5a7d-2a86-4650-a833-6e25b487f945
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-09T14:28:53Z"
-    reason: NoData
-    status: Unknown
+  - lastTransitionTime: "2023-03-09T14:28:54Z"
+    message: 'NodeControllerDegraded: All master nodes are ready'
+    reason: AsExpected
+    status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:28:53Z"
     reason: NoData
@@ -70,7 +71,8 @@ status:
     status: Unknown
     type: Available
   - lastTransitionTime: "2023-03-09T14:28:53Z"
-    message: All is well
+    message: 'KubeletMinorVersionUpgradeable: Kubelet and API server minor versions
+      are synced.'
     reason: AsExpected
     status: "True"
     type: Upgradeable
