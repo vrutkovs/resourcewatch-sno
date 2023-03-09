@@ -15,7 +15,7 @@ metadata:
           k:{"uid":"e6519524-ef16-4ee8-82f1-2faa42688032"}: {}
     manager: cluster-network-operator/operconfig
     operation: Apply
-    time: "2023-03-09T14:20:39Z"
+    time: "2023-03-09T14:22:05Z"
   name: applied-cluster
   namespace: openshift-network-operator
   ownerReferences:
@@ -25,5 +25,5 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "2864"
+  resourceVersion: "4082"
   uid: 47afcb03-0383-4c3f-b5cf-6098394f3425
