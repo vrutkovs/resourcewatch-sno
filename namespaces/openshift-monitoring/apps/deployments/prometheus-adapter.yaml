@@ -42,6 +42,7 @@ metadata:
         f:observedGeneration: {}
         f:readyReplicas: {}
         f:replicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -227,7 +228,7 @@ metadata:
     time: "2023-03-09T14:32:47Z"
   name: prometheus-adapter
   namespace: openshift-monitoring
-  resourceVersion: "15951"
+  resourceVersion: "15962"
   uid: 39994971-7ca2-40a2-b9c4-bc49c10b00ad
 spec:
   progressDeadlineSeconds: 600
@@ -384,10 +385,11 @@ status:
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:40Z"
     lastUpdateTime: "2023-03-09T14:32:47Z"
-    message: Created new replica set "prometheus-adapter-79cbcdfcfb"
-    reason: NewReplicaSetCreated
+    message: ReplicaSet "prometheus-adapter-79cbcdfcfb" is progressing.
+    reason: ReplicaSetUpdated
     status: "True"
     type: Progressing
   observedGeneration: 2
   readyReplicas: 1
-  replicas: 1
+  replicas: 2
+  updatedReplicas: 1
