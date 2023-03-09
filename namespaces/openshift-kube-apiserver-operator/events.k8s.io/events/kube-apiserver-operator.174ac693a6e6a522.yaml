@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:08Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:08Z"
+deprecatedSource:
+  component: kube-apiserver-operator-cert-rotation-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:21Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:29:21Z"
+  name: kube-apiserver-operator.174ac693a6e6a522
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "9738"
+  uid: 13c0d6a5-b4b8-4216-9935-5eb479b86942
+note: Created Secret/node-system-admin-client -n openshift-kube-apiserver-operator
+  because it was missing
+reason: SecretCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Normal
