@@ -197,6 +197,25 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:31:12Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:31:12Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"ContainersReady"}:
@@ -223,30 +242,18 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.68"}:
+            .: {}
+            f:ip: {}
         f:startTime: {}
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:31:12Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.v1.cni.cncf.io/network-status: {}
-    manager: multus
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:31:12Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.ovn.org/pod-networks: {}
-    manager: vrutkovs-sno
-    operation: Update
-    time: "2023-03-09T14:31:12Z"
+    time: "2023-03-09T14:31:17Z"
   name: controller-manager-787cf5bcdd-52xvw
   namespace: openshift-controller-manager
   ownerReferences:
@@ -256,7 +263,7 @@ metadata:
     kind: ReplicaSet
     name: controller-manager-787cf5bcdd
     uid: 761246e2-2c0e-421a-95d2-b29b44d0b4cf
-  resourceVersion: "10971"
+  resourceVersion: "11338"
   uid: c20e9e21-134f-40a9-a4d3-f929ce4b42f3
 spec:
   affinity:
@@ -425,17 +432,21 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e948b40220b7cdb7b4bf51bcd34f6182d63a302d688a593bf1d6100754cedec0
-    imageID: ""
+  - containerID: cri-o://bcbf66df41f54763a9b097a5710ac21aa170eb37b89c60b27ff1007d1d294f2e
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e948b40220b7cdb7b4bf51bcd34f6182d63a302d688a593bf1d6100754cedec0
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e948b40220b7cdb7b4bf51bcd34f6182d63a302d688a593bf1d6100754cedec0
     lastState: {}
     name: controller-manager
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:31:16Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.68
+  podIPs:
+  - ip: 10.128.0.68
   qosClass: Burstable
   startTime: "2023-03-09T14:31:12Z"
