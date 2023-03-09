@@ -160,7 +160,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -174,7 +176,7 @@ metadata:
     kind: Deployment
     name: packageserver
     uid: 60bb2626-4e10-403c-8b3c-428e9227e322
-  resourceVersion: "9802"
+  resourceVersion: "9807"
   uid: 339a1e91-3d6d-4eda-8612-df2805c26ea5
 spec:
   replicas: 1
@@ -299,5 +301,6 @@ spec:
             path: tls.key
           secretName: packageserver-service-cert
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
