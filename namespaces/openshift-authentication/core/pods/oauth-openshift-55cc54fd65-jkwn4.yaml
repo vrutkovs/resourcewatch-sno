@@ -291,6 +291,25 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:33:45Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:33:46Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"ContainersReady"}:
@@ -317,30 +336,18 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.84"}:
+            .: {}
+            f:ip: {}
         f:startTime: {}
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:33:45Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.ovn.org/pod-networks: {}
-    manager: vrutkovs-sno
-    operation: Update
-    time: "2023-03-09T14:33:45Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.v1.cni.cncf.io/network-status: {}
-    manager: multus
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:33:46Z"
+    time: "2023-03-09T14:33:48Z"
   name: oauth-openshift-55cc54fd65-jkwn4
   namespace: openshift-authentication
   ownerReferences:
@@ -350,7 +357,7 @@ metadata:
     kind: ReplicaSet
     name: oauth-openshift-55cc54fd65
     uid: 97c55886-f755-4cd7-8710-71d24ef8a077
-  resourceVersion: "16567"
+  resourceVersion: "16601"
   uid: a3e3549b-7bfb-41f9-bdcf-0dec52865318
 spec:
   affinity:
@@ -589,17 +596,21 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:15e21cbe2bb0386ae5b03e5029a4e41668d16e52862bbeb297ec6e4aaaa2493f
-    imageID: ""
+  - containerID: cri-o://5ea6f3a7ec2b7d4be4032b70da85856ac70c2b7838ef326ea92f4d92c959e0e9
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:15e21cbe2bb0386ae5b03e5029a4e41668d16e52862bbeb297ec6e4aaaa2493f
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:15e21cbe2bb0386ae5b03e5029a4e41668d16e52862bbeb297ec6e4aaaa2493f
     lastState: {}
     name: oauth-openshift
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:33:47Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.84
+  podIPs:
+  - ip: 10.128.0.84
   qosClass: Burstable
   startTime: "2023-03-09T14:33:45Z"
