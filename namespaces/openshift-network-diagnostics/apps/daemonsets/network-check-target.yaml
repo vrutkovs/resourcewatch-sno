@@ -86,6 +86,19 @@ metadata:
     manager: cluster-network-operator/operconfig
     operation: Apply
     time: "2023-03-09T14:20:35Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:currentNumberScheduled: {}
+        f:desiredNumberScheduled: {}
+        f:numberUnavailable: {}
+        f:observedGeneration: {}
+        f:updatedNumberScheduled: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:35Z"
   name: network-check-target
   namespace: openshift-network-diagnostics
   ownerReferences:
@@ -95,7 +108,7 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "2824"
+  resourceVersion: "2830"
   uid: 62454efe-a10a-4b0f-95f3-f94bf8ea8fd3
 spec:
   revisionHistoryLimit: 10
@@ -177,7 +190,10 @@ spec:
       maxUnavailable: 10%
     type: RollingUpdate
 status:
-  currentNumberScheduled: 0
-  desiredNumberScheduled: 0
+  currentNumberScheduled: 1
+  desiredNumberScheduled: 1
   numberMisscheduled: 0
   numberReady: 0
+  numberUnavailable: 1
+  observedGeneration: 1
+  updatedNumberScheduled: 1
