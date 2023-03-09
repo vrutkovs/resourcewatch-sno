@@ -2,7 +2,7 @@ apiVersion: operator.openshift.io/v1
 kind: Network
 metadata:
   creationTimestamp: "2023-03-09T14:20:15Z"
-  generation: 1
+  generation: 2
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -21,8 +21,16 @@ metadata:
     manager: cluster-network-operator/clusterconfig
     operation: Apply
     time: "2023-03-09T14:20:15Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+    manager: cluster-network-operator
+    operation: Update
+    time: "2023-03-09T14:20:15Z"
   name: cluster
-  resourceVersion: "2477"
+  resourceVersion: "2478"
   uid: e6519524-ef16-4ee8-82f1-2faa42688032
 spec:
   clusterNetwork:
@@ -39,4 +47,8 @@ spec:
   - 172.30.0.0/16
   unsupportedConfigOverrides: null
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:20:15Z"
+    status: "False"
+    type: ManagementStateDegraded
   readyReplicas: 0
