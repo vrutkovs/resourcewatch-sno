@@ -6,7 +6,7 @@ metadata:
     include.release.openshift.io/single-node-developer: "true"
     release.openshift.io/create-only: "true"
   creationTimestamp: "2023-03-09T14:14:46Z"
-  generation: 2
+  generation: 3
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -31,9 +31,30 @@ metadata:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:oauthAPIServer: {}
+        f:readyReplicas: {}
+    manager: authentication-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:05Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:spec:
         f:observedConfig:
           .: {}
+          f:oauthAPIServer:
+            .: {}
+            f:apiServerArguments:
+              .: {}
+              f:api-audiences: {}
+              f:cors-allowed-origins: {}
+              f:etcd-servers: {}
+              f:tls-cipher-suites: {}
+              f:tls-min-version: {}
           f:oauthServer:
             .: {}
             f:corsAllowedOrigins: {}
@@ -67,31 +88,36 @@ metadata:
         f:unsupportedConfigOverrides: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-09T14:22:04Z"
-  - apiVersion: operator.openshift.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        .: {}
-        f:conditions: {}
-        f:oauthAPIServer: {}
-        f:readyReplicas: {}
-    manager: authentication-operator
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:22:05Z"
+    time: "2023-03-09T14:22:07Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4139"
+  resourceVersion: "4257"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
   managementState: Managed
   observedConfig:
+    oauthAPIServer:
+      apiServerArguments:
+        api-audiences:
+        - https://kubernetes.default.svc
+        cors-allowed-origins:
+        - //127\.0\.0\.1(:|$)
+        - //localhost(:|$)
+        etcd-servers:
+        - https://10.0.130.93:2379
+        tls-cipher-suites:
+        - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+        - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+        - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+        - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+        - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+        - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+        tls-min-version: VersionTLS12
     oauthServer:
       corsAllowedOrigins:
       - //127\.0\.0\.1(:|$)
