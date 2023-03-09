@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:24:44Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:44Z"
+deprecatedSource:
+  component: cluster-authentication-operator-loggingsyncer
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:44Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:24:44Z"
+  name: openshift-authentication-operator.174ac65612a35b6a
+  namespace: openshift-authentication-operator
+  resourceVersion: "7141"
+  uid: b8806192-3aba-4708-98e2-118588eee89c
+note: Controller "LoggingSyncer" resync interval is set to 0s which might lead to
+  client request throttling
+reason: FastControllerResync
+regarding:
+  apiVersion: v1
+  kind: Namespace
+  name: openshift-authentication-operator
+  namespace: openshift-authentication-operator
+type: Warning
