@@ -102,7 +102,7 @@ metadata:
     kind: ReplicaSet
     name: service-ca-854874ddf4
     uid: 760c1e5d-253c-4a05-96a8-65b3a3769928
-  resourceVersion: "3843"
+  resourceVersion: "3846"
   uid: 541ba4d5-25d3-4731-9fde-c95bce4c1a15
 spec:
   containers:
@@ -140,6 +140,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -204,5 +205,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:22:02Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
