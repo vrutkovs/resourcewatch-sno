@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    kubernetes.io/description: Define update gates for the administrator to acknowledge
+      in the admin-acks ConfigMap in the openshift-config namespace.
+  creationTimestamp: "2023-03-09T14:15:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:kubernetes.io/description: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:15:15Z"
+  name: admin-gates
+  namespace: openshift-config-managed
+  resourceVersion: "1908"
+  uid: d3aaf0c3-0f4a-4534-9d25-857bdc566aa7
