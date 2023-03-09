@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:28:40Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:40Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:40Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:28:40Z"
+  name: machine-approver-6c6b895bd4-xzs2j.174ac68d1b729ad6
+  namespace: openshift-cluster-machine-approver
+  resourceVersion: "8249"
+  uid: 1dd1ad5d-53c9-4afb-bf9a-9252a9f958c2
+note: Created container kube-rbac-proxy
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-rbac-proxy}
+  kind: Pod
+  name: machine-approver-6c6b895bd4-xzs2j
+  namespace: openshift-cluster-machine-approver
+  resourceVersion: "8233"
+  uid: 8a5f7f73-b903-47bb-b429-248a6cbac921
+type: Normal
