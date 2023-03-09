@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:00Z"
+    time: "2023-03-09T14:22:02Z"
   name: kube-controller-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,16 +52,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3670"
+  resourceVersion: "3787"
   uid: fc4da80c-8238-45f0-831b-b76abd6e6070
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: 'InstallerControllerDegraded: missing required resources: [configmaps:
-      aggregator-client-ca,client-ca, secrets: csr-signer,kube-controller-manager-client-cert-key,
-      configmaps: cluster-policy-controller-config-0,config-0,controller-manager-kubeconfig-0,kube-controller-cert-syncer-kubeconfig-0,kube-controller-manager-pod-0,recycler-config-0,service-ca-0,serviceaccount-ca-0,
-      secrets: localhost-recovery-client-token-0,service-account-private-key-0]'
+    message: |-
+      InstallerControllerDegraded: missing required resources: [configmaps: aggregator-client-ca,client-ca, secrets: csr-signer,kube-controller-manager-client-cert-key, configmaps: cluster-policy-controller-config-0,config-0,controller-manager-kubeconfig-0,kube-controller-cert-syncer-kubeconfig-0,kube-controller-manager-pod-0,recycler-config-0,service-ca-0,serviceaccount-ca-0, secrets: localhost-recovery-client-token-0,service-account-private-key-0]
+      NodeControllerDegraded: All master nodes are ready
     reason: AsExpected
     status: "False"
     type: Degraded
