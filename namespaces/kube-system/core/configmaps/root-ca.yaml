@@ -1,0 +1,39 @@
+apiVersion: v1
+data:
+  ca.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIDEDCCAfigAwIBAgIIKlLjkycUf9IwDQYJKoZIhvcNAQELBQAwJjESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MRAwDgYDVQQDEwdyb290LWNhMB4XDTIzMDMwOTE0MTAxNFoX
+    DTMzMDMwNjE0MTAxNFowJjESMBAGA1UECxMJb3BlbnNoaWZ0MRAwDgYDVQQDEwdy
+    b290LWNhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA23kSgiZeObz3
+    QJ3x4H7L1W0ysWgy5C1oNFK+V/l7U8I4mW0+qvROxXMH9yySzl0gk8IQfCaEhml5
+    PF94gJh6idTH7u/KomTQdeW5UTsN0JqL/qcVmC2ImW5xpgc26VvjyvKBQuVBVES3
+    56z+9sFeeYy4sm1CO2Hraibycn6Tk68btbHxRCMB+eEeWLHVg+vaIE+WXlm1xyo6
+    imxsZxSPpKTHpvkG5ShZaJE0QpRyUCjF0Ri541LM7A1vm7BaIn2sUwJ5TBt0avCg
+    +SLXWOoPl7w3Eyhnke3AodxvYSIMoZ6eYZ1OTKrJQRK6o8gLEdg2XJqA4g/H9veV
+    m2PfX9kBxwIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/BAUwAwEB
+    /zAdBgNVHQ4EFgQUQH5XYUP1OS6rMLdlnNj52cko2tQwDQYJKoZIhvcNAQELBQAD
+    ggEBANMNN4D+sRW8j7zeoP9VtaywdQDYJbMT1nru0U3fqdpA3+OyOGD2lsXd/ILG
+    1ulItnzeJH+9H/BgFtuTxKJfdOoU1h3HzuDEsgOW0vbhsYTNYpn1WJAbKBgYXIAT
+    X8O/31pTD5njYlYYS5hfAJsAJPQ/k3E+Ja8JFme6y/AJRU0dbriszXGknTn7ymdc
+    S88j84Uve68wgGxXoVRmse6qqgW83g4wPJKRtnu+3T0AxyiPtoS4BR5rwWb69cj0
+    flsdnqyuGDSISBPPDGRaPFseXjMZqCKj8FvHtetI6N8V+MnttRZtm2w7iR69Njx4
+    LIiCWKj/kbmwaJFqVt7kcjeFGjY=
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:14:36Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:ca.crt: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:14:36Z"
+  name: root-ca
+  namespace: kube-system
+  resourceVersion: "705"
+  uid: dd89f96a-525c-4c92-a3a5-4e19fb8771cb
