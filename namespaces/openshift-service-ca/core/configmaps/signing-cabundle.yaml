@@ -1,0 +1,40 @@
+apiVersion: v1
+data:
+  ca-bundle.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIDUTCCAjmgAwIBAgIIYEp78b+bUagwDQYJKoZIhvcNAQELBQAwNjE0MDIGA1UE
+    Awwrb3BlbnNoaWZ0LXNlcnZpY2Utc2VydmluZy1zaWduZXJAMTY3ODM3MTcyMTAe
+    Fw0yMzAzMDkxNDIyMDBaFw0yNTA1MDcxNDIyMDFaMDYxNDAyBgNVBAMMK29wZW5z
+    aGlmdC1zZXJ2aWNlLXNlcnZpbmctc2lnbmVyQDE2NzgzNzE3MjEwggEiMA0GCSqG
+    SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDBjJxde1zyI90Vd62VwPqGn1/dkaaa8jL5
+    VccWHhEKfRj0FiyN9ZIY5AlBqHLnvdQSurlYyLiEpijEKONwX569t4DZUddDqKol
+    9SvoLuwMkAYyu49ZECbXRSnR3ZO8ZMVMRKKkhN52XheegJTYed2XhtfAwKkpLplR
+    /a7z0O/SIJ/KdgdWW4CavOVZGNvjXjlRvFLAo1AqdDq3C0CvDLyg+g1/s5DsQNSZ
+    3KJv7XzEUqcilUmNlypSMqngmo7qsS0ehx//WLP50wtKjQCHONGMeBhYFONjLRN2
+    UO6Tpp/gF+hWAg6+snRE1/tJGymeiykMJ2sT9aGp2CRTTe71VWR9AgMBAAGjYzBh
+    MA4GA1UdDwEB/wQEAwICpDAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBSmUzbu
+    PiqgXBWrBG9E3H0Nah18dDAfBgNVHSMEGDAWgBSmUzbuPiqgXBWrBG9E3H0Nah18
+    dDANBgkqhkiG9w0BAQsFAAOCAQEAadC1dhlUJcwzpURe9Oiqb5sw5wIgmVi6wfkE
+    5yvQbKSI1eCsyfVBK9444EMLeKHeWRfVU8ZpCVBLl95xwR7TbU1Qw9JXXe108tbN
+    K1Pc3xVFAhABQ3bTKiFuZfGLm0zHu5XepZXWM9Yz1FY+nmthkCcITqoq7iFR6iFq
+    YJB9O32C47Cs1J3/9eq1FyfrxMgEVWL74XD6uSLaNmcHLueq5HP4GQAmPyGzFVrX
+    a4ou6YQOkP1/UVGphT3ktByVR8LdCqvxbmD1bfwqABqvVqeEfCCpoeMLp0fdLG8L
+    nmVR4y0PtNMD9eDYwkg92X1YTjp+BqwEUilxQ2/O3dDvL4Kqhg==
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:22:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:ca-bundle.crt: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:22:02Z"
+  name: signing-cabundle
+  namespace: openshift-service-ca
+  resourceVersion: "3834"
+  uid: 37c205c9-5efc-4ff3-8bec-29da25a8d1a9
