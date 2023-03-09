@@ -75,7 +75,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4842"
+  resourceVersion: "4866"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -187,8 +187,12 @@ status:
     reason: AsExpected
     status: "False"
     type: GuardControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:22:11Z"
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:22:19Z"
+    message: 'error writing updated observed config: Operation cannot be fulfilled
+      on kubecontrollermanagers.operator.openshift.io "cluster": the object has been
+      modified; please apply your changes to the latest version and try again'
+    reason: Error
+    status: "True"
     type: ConfigObservationDegraded
   - lastTransitionTime: "2023-03-09T14:22:12Z"
     reason: AsExpected
