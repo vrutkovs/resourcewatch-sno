@@ -52,14 +52,13 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16933"
+  resourceVersion: "16936"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:33:05Z"
     message: |-
-      OAuthServerServiceEndpointAccessibleControllerDegraded: Get "https://172.30.70.249:443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
       IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
       OAuthServerRouteEndpointAccessibleControllerDegraded: Get "https://oauth-openshift.apps.ocp.choomba.one/healthz": EOF
       OAuthServerDeploymentDegraded: 1 of 1 requested instances are unavailable for oauth-openshift.openshift-authentication ()
