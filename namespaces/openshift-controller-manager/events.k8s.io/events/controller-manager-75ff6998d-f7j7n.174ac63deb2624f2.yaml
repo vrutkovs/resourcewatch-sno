@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:23:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:00Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:23:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:23:00Z"
+  name: controller-manager-75ff6998d-f7j7n.174ac63deb2624f2
+  namespace: openshift-controller-manager
+  resourceVersion: "6180"
+  uid: dc3b53cc-0e26-4a6a-8fc0-55468602aeb3
+note: 'MountVolume.SetUp failed for volume "proxy-ca-bundles" : configmap references
+  non-existent config key: ca-bundle.crt'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: controller-manager-75ff6998d-f7j7n
+  namespace: openshift-controller-manager
+  resourceVersion: "6145"
+  uid: 1d9578d9-a4ad-479d-9aeb-5303224d6946
+type: Warning
