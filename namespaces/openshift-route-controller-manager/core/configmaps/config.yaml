@@ -2,6 +2,7 @@ apiVersion: v1
 data:
   config.yaml: |
     {"apiVersion":"openshiftcontrolplane.config.openshift.io/v1","build":{"buildDefaults":{"resources":{}},"imageTemplateFormat":{"format":"registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:0094601b9ace07d517ea9445853bf10bc91087445cb86cac469466a062dc119f"}},"deployer":{"imageTemplateFormat":{"format":"registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:0514c00d6cb55a348561044e5c2d2de0005963e427ac72613be54ccb9d038549"}},"featureGates":[],"ingress":{"ingressIPNetworkCIDR":""},"kind":"OpenShiftControllerManagerConfig"}
+  openshift-route-controller-manager.client-ca.configmap: TzyGkA==
   openshift-route-controller-manager.serving-cert.secret: 1WUAiQ==
 kind: ConfigMap
 metadata:
@@ -13,11 +14,12 @@ metadata:
       f:data:
         .: {}
         f:config.yaml: {}
+        f:openshift-route-controller-manager.client-ca.configmap: {}
         f:openshift-route-controller-manager.serving-cert.secret: {}
     manager: cluster-openshift-controller-manager-operator
     operation: Update
-    time: "2023-03-09T14:23:01Z"
+    time: "2023-03-09T14:30:44Z"
   name: config
   namespace: openshift-route-controller-manager
-  resourceVersion: "6198"
+  resourceVersion: "10687"
   uid: 162fd95b-3880-4f5f-a03f-0762186d124d
