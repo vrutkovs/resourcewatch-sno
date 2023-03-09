@@ -53,7 +53,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "5469"
+  resourceVersion: "5479"
   uid: 1b8976f1-2cb3-4b19-b68c-fe37f00574ed
 spec: {}
 status:
@@ -64,8 +64,8 @@ status:
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:33Z"
-    message: Working towards "4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest"
-    reason: Reconciling
+    message: Waiting for 1/1 Profiles to be applied
+    reason: ProfileProgressing
     status: "True"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:33Z"
