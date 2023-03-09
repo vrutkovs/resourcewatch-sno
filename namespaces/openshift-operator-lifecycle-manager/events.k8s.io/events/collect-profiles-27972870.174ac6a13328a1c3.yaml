@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:30:06Z"
+deprecatedLastTimestamp: "2023-03-09T14:30:06Z"
+deprecatedSource:
+  component: job-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:30:06Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:30:06Z"
+  name: collect-profiles-27972870.174ac6a13328a1c3
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "10375"
+  uid: 36640d9d-b424-4a47-a3e4-4742fa75ccfb
+note: Job completed
+reason: Completed
+regarding:
+  apiVersion: batch/v1
+  kind: Job
+  name: collect-profiles-27972870
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "10371"
+  uid: 759d7395-7ae5-440a-b37a-7922d6e077d4
+type: Normal
