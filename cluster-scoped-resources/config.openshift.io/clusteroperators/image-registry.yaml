@@ -52,22 +52,26 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15036"
+  resourceVersion: "15038"
   uid: b3c174db-4a7c-4e86-bf88-820c8067e5b0
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:32:22Z"
-    message: 'ImagePrunerAvailable: Pruner CronJob has been created'
-    reason: AsExpected
+    message: |-
+      Available: The registry is removed
+      ImagePrunerAvailable: Pruner CronJob has been created
+    reason: Removed
     status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:32:22Z"
-    reason: AsExpected
+    message: 'Progressing: All registry resources are removed'
+    reason: Removed
     status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:32:22Z"
-    reason: AsExpected
+    message: 'Degraded: The registry is removed'
+    reason: Removed
     status: "False"
     type: Degraded
   extension: null
