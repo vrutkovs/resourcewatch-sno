@@ -179,6 +179,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:28:48Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:48Z"
   name: cluster-autoscaler-operator-79c8f8b45c
   namespace: openshift-machine-api
   ownerReferences:
@@ -188,7 +197,7 @@ metadata:
     kind: Deployment
     name: cluster-autoscaler-operator
     uid: 098011f3-d42f-474e-8830-33f551d1042c
-  resourceVersion: "8392"
+  resourceVersion: "8397"
   uid: c2f6ebb9-46f2-4812-b02b-6671806b38f3
 spec:
   replicas: 1
@@ -311,4 +320,5 @@ spec:
           name: kube-rbac-proxy-cluster-autoscaler-operator
         name: auth-proxy-config
 status:
+  observedGeneration: 1
   replicas: 0
