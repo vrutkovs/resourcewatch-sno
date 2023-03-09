@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:22:01Z"
-deprecatedLastTimestamp: "2023-03-09T14:22:01Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:22Z"
 deprecatedSource:
   component: openshift-cluster-etcd-operator-config-observer-configobserver
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-etcd-operator
     operation: Update
-    time: "2023-03-09T14:22:02Z"
+    time: "2023-03-09T14:22:22Z"
   name: etcd-operator.174ac63050df9f8c
   namespace: openshift-etcd-operator
-  resourceVersion: "3781"
+  resourceVersion: "5008"
   uid: dfa3b35c-e5d8-4aab-8c77-501fbb0793e2
 note: minTLSVersion changed to VersionTLS12
 reason: ObserveTLSSecurityProfile
