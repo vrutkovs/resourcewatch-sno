@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 6
+deprecatedCount: 7
 deprecatedFirstTimestamp: "2023-03-09T14:14:58Z"
 deprecatedLastTimestamp: "2023-03-09T14:14:58Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:14:58Z"
   name: dns-operator-5f6b454875.174ac5cdb6f1bcd0
   namespace: openshift-dns-operator
-  resourceVersion: "1436"
+  resourceVersion: "1439"
   uid: 2c1248f8-cd3e-4c66-aa85-afa55e1f2782
 note: 'Error creating: pods "dns-operator-5f6b454875-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
   the cluster does not have any nodes'
