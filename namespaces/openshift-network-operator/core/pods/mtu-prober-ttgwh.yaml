@@ -93,6 +93,7 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -103,7 +104,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:16Z"
+    time: "2023-03-09T14:20:18Z"
   name: mtu-prober-ttgwh
   namespace: openshift-network-operator
   ownerReferences:
@@ -113,7 +114,7 @@ metadata:
     kind: Job
     name: mtu-prober
     uid: db7d7933-5153-400a-a756-a012e41bd310
-  resourceVersion: "2499"
+  resourceVersion: "2514"
   uid: 921f35b3-628d-4f61-8af9-88f3a1ba4c45
 spec:
   containers:
@@ -238,7 +239,7 @@ status:
         reason: Completed
         startedAt: "2023-03-09T14:20:16Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Succeeded
   podIP: 10.0.130.93
   podIPs:
   - ip: 10.0.130.93
