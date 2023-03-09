@@ -306,8 +306,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -320,8 +318,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -337,7 +333,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:09Z"
+    time: "2023-03-09T14:29:12Z"
   name: router-default-7c6dfd9fb7-jthnw
   namespace: openshift-ingress
   ownerReferences:
@@ -347,7 +343,7 @@ metadata:
     kind: ReplicaSet
     name: router-default-7c6dfd9fb7
     uid: 60060897-6bbe-4498-872f-27825dcdc46a
-  resourceVersion: "7893"
+  resourceVersion: "9118"
   uid: 25f9052f-edeb-4f6b-a4da-f714b6374bdb
 spec:
   containers:
@@ -575,16 +571,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:21Z"
-    message: 'containers with unready status: [router]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:07Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:21Z"
-    message: 'containers with unready status: [router]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:07Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:21Z"
@@ -602,9 +594,9 @@ status:
         reason: Completed
         startedAt: "2023-03-09T14:25:23Z"
     name: router
-    ready: false
+    ready: true
     restartCount: 2
-    started: false
+    started: true
     state:
       running:
         startedAt: "2023-03-09T14:28:09Z"
