@@ -66,14 +66,14 @@ metadata:
     manager: cluster-openshift-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:18Z"
+    time: "2023-03-09T14:23:20Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6870"
+  resourceVersion: "6896"
   uid: 745e26c2-906b-4bfc-8835-c7ba9c167c7b
 spec:
   logLevel: Normal
@@ -105,15 +105,15 @@ status:
     type: UnsupportedConfigOverridesUpgradeable
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
-      "apps.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
-      "authorization.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
-      "build.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
-      "image.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
-      "project.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
-      "quota.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
-      "route.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
-      "security.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
-      "template.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+      apiservices.apiregistration.k8s.io/v1.apps.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/apps.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/apps.openshift.io/v1: 401
+      apiservices.apiregistration.k8s.io/v1.authorization.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/authorization.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/authorization.openshift.io/v1: 401
+      apiservices.apiregistration.k8s.io/v1.build.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/build.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/build.openshift.io/v1: 401
+      apiservices.apiregistration.k8s.io/v1.image.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/image.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/image.openshift.io/v1: 401
+      apiservices.apiregistration.k8s.io/v1.project.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/project.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/project.openshift.io/v1: 401
+      apiservices.apiregistration.k8s.io/v1.quota.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/quota.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/quota.openshift.io/v1: 401
+      apiservices.apiregistration.k8s.io/v1.route.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/route.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/route.openshift.io/v1: 401
+      apiservices.apiregistration.k8s.io/v1.security.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/security.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/security.openshift.io/v1: 401
+      apiservices.apiregistration.k8s.io/v1.template.openshift.io: not available: failing or missing response from https://10.128.0.40:8443/apis/template.openshift.io/v1: bad status from https://10.128.0.40:8443/apis/template.openshift.io/v1: 401
     reason: Error
     status: "False"
     type: APIServicesAvailable
