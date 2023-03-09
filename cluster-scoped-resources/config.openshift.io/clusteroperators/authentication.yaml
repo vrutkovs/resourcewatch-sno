@@ -52,26 +52,29 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3537"
+  resourceVersion: "3707"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    reason: NoData
-    status: Unknown
+    message: All is well
+    reason: AsExpected
+    status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     reason: NoData
     status: Unknown
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    reason: NoData
-    status: Unknown
+    message: 'APIServicesAvailable: endpoints "api" not found'
+    reason: APIServices_ErrorCheckingPrecondition
+    status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    reason: NoData
-    status: Unknown
+    message: All is well
+    reason: AsExpected
+    status: "True"
     type: Upgradeable
   extension: null
   relatedObjects:
