@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedSource:
+  component: openshift-controller-manager-operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
+  name: openshift-controller-manager-operator-lock.174ac62fdc6c3955
+  namespace: openshift-controller-manager-operator
+  resourceVersion: "3427"
+  uid: 174e8bb4-2dab-4c04-ba1f-b3464d346437
+note: openshift-controller-manager-operator-97cb7c58c-rns5g_73174aec-1a65-4999-b830-b155d6c6f640
+  became leader
+reason: LeaderElection
+regarding:
+  apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  name: openshift-controller-manager-operator-lock
+  namespace: openshift-controller-manager-operator
+  resourceVersion: "3419"
+  uid: a8a106bf-a6a3-4112-ab70-9a4eb9f67632
+type: Normal
