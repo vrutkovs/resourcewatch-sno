@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:28:49Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:49Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:49Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:28:49Z"
+  name: cluster-baremetal-operator-78475cb658-nc8qw.174ac68f2cbcb8ee
+  namespace: openshift-machine-api
+  resourceVersion: "8412"
+  uid: 824956ae-13ab-4f7c-a401-70529939c1e7
+note: Pulling image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8f9ca26966f087b3e9f2169fd5e09c379da9a90aa29ba0a32c2bb169d88abaf0"
+reason: Pulling
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{cluster-baremetal-operator}
+  kind: Pod
+  name: cluster-baremetal-operator-78475cb658-nc8qw
+  namespace: openshift-machine-api
+  resourceVersion: "8376"
+  uid: 799840ec-4d13-4b04-830e-e8b1904eefc4
+type: Normal
