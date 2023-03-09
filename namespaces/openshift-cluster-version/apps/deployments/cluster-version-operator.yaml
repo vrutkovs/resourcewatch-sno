@@ -151,6 +151,24 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b7590f0c-c37f-44e0-80d3-7b5df1e0e187"}: {}
+      f:spec:
+        f:template:
+          f:spec:
+            f:containers:
+              k:{"name":"cluster-version-operator"}:
+                f:env:
+                  k:{"name":"KUBERNETES_SERVICE_HOST"}:
+                    f:value: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-09T14:28:26Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
@@ -176,28 +194,9 @@ metadata:
         f:observedGeneration: {}
         f:readyReplicas: {}
         f:replicas: {}
-        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:29Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:ownerReferences:
-          .: {}
-          k:{"uid":"b7590f0c-c37f-44e0-80d3-7b5df1e0e187"}: {}
-      f:spec:
-        f:template:
-          f:spec:
-            f:containers:
-              k:{"name":"cluster-version-operator"}:
-                f:env:
-                  k:{"name":"KUBERNETES_SERVICE_HOST"}:
-                    f:value: {}
-    manager: cluster-version-operator
-    operation: Update
     time: "2023-03-09T14:28:26Z"
   name: cluster-version-operator
   namespace: openshift-cluster-version
@@ -207,7 +206,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8021"
+  resourceVersion: "8025"
   uid: aac71004-72e0-4099-a4c0-18313331c859
 spec:
   progressDeadlineSeconds: 600
@@ -351,7 +350,6 @@ status:
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
-  observedGeneration: 1
+  observedGeneration: 2
   readyReplicas: 1
   replicas: 1
-  updatedReplicas: 1
