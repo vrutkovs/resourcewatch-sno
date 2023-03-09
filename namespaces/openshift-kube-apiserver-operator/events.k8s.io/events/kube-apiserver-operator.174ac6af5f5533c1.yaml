@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:31:07Z"
+deprecatedLastTimestamp: "2023-03-09T14:31:07Z"
+deprecatedSource:
+  component: kube-apiserver-operator-revisioncontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:31:07Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:31:07Z"
+  name: kube-apiserver-operator.174ac6af5f5533c1
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "10931"
+  uid: 49be8f9a-83cf-4a24-b066-e8cdb100c84a
+note: Revision 1 created because configmap "kube-apiserver-pod-1" not found
+reason: RevisionCreate
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Normal
