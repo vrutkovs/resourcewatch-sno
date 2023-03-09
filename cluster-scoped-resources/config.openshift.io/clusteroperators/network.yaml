@@ -39,6 +39,16 @@ metadata:
   - apiVersion: config.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:network.operator.openshift.io/last-seen-state: {}
+          f:network.operator.openshift.io/relatedClusterObjects: {}
+    manager: cluster-network-operator
+    operation: Update
+    time: "2023-03-09T14:32:13Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions: {}
         f:relatedObjects: {}
@@ -46,16 +56,6 @@ metadata:
     manager: cluster-network-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:10Z"
-  - apiVersion: config.openshift.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:network.operator.openshift.io/last-seen-state: {}
-          f:network.operator.openshift.io/relatedClusterObjects: {}
-    manager: cluster-network-operator
-    operation: Update
     time: "2023-03-09T14:32:13Z"
   name: network
   ownerReferences:
@@ -64,7 +64,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "14843"
+  resourceVersion: "14850"
   uid: efc0e65e-4103-4be7-8a5a-99dd46b6df53
 spec: {}
 status:
@@ -78,11 +78,8 @@ status:
   - lastTransitionTime: "2023-03-09T14:20:15Z"
     status: "True"
     type: Upgradeable
-  - lastTransitionTime: "2023-03-09T14:32:10Z"
-    message: DaemonSet "/openshift-ovn-kubernetes/ovnkube-master" is not available
-      (awaiting 1 nodes)
-    reason: Deploying
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:32:13Z"
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:21:47Z"
     status: "True"
