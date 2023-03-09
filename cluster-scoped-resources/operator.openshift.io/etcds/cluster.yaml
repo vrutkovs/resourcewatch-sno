@@ -41,14 +41,14 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:35Z"
+    time: "2023-03-09T14:22:36Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "5516"
+  resourceVersion: "5551"
   uid: e3da0174-daf2-4d9e-b232-e5e61f76793b
 spec:
   logLevel: Normal
@@ -134,6 +134,11 @@ status:
     reason: Error
     status: "True"
     type: EnvVarControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:35Z"
+    message: '"configmap/etcd-pod": missing env var values'
+    reason: Error
+    status: "True"
+    type: ScriptControllerDegraded
   latestAvailableRevision: 1
   latestAvailableRevisionReason: ""
   nodeStatuses:
