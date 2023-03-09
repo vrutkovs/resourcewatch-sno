@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:09Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:09Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:13Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:29:13Z"
+  name: olm-operator-5fccd556f6-7cf76.174ac693c1e78ac9
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "9225"
+  uid: 16ffbd8b-11cd-4746-a5cf-c52b402f2136
+note: 'MountVolume.SetUp failed for volume "srv-cert" : failed to sync secret cache:
+  timed out waiting for the condition'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: olm-operator-5fccd556f6-7cf76
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "8629"
+  uid: 88b458f5-b8fd-4384-a4b8-d57d22d2f34d
+type: Warning
