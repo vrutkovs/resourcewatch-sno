@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:27:14Z"
+    time: "2023-03-09T14:28:25Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "7722"
+  resourceVersion: "7998"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
@@ -74,10 +74,11 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
       APIServerDeploymentAvailable: no apiserver.openshift-oauth-apiserver pods available on any node.
-      APIServicesAvailable: PreconditionNotReady
+      APIServicesAvailable: "oauth.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+      APIServicesAvailable: "user.openshift.io.v1" is not ready: an attempt failed with statusCode = 404, err = the server could not find the requested resource
       OAuthServerServiceEndpointAccessibleControllerAvailable: Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443: connect: connection refused
       OAuthServerServiceEndpointsEndpointAccessibleControllerAvailable: endpoints "oauth-openshift" not found
-    reason: APIServerDeployment_NoPod::APIServices_PreconditionNotReady::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound
+    reason: APIServerDeployment_NoPod::APIServices_Error::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
