@@ -7,7 +7,7 @@ metadata:
     include.release.openshift.io/single-node-developer: "true"
     release.openshift.io/create-only: "true"
   creationTimestamp: "2023-03-09T14:14:50Z"
-  generation: 1
+  generation: 2
   managedFields:
   - apiVersion: config.openshift.io/v1
     fieldsType: FieldsV1
@@ -26,12 +26,36 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:50Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:oauthMetadata:
+          .: {}
+          f:name: {}
+        f:serviceAccountIssuer: {}
+        f:type: {}
+        f:webhookTokenAuthenticator:
+          .: {}
+          f:kubeConfig:
+            .: {}
+            f:name: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:24:51Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1202"
+  resourceVersion: "7297"
   uid: 56a4adc3-7b52-49aa-a2b9-f71df840f11e
-spec: {}
+spec:
+  oauthMetadata:
+    name: ""
+  serviceAccountIssuer: ""
+  type: ""
+  webhookTokenAuthenticator:
+    kubeConfig:
+      name: webhook-authentication-integrated-oauth
