@@ -64,7 +64,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "5185"
+  resourceVersion: "5187"
   uid: 48eb058e-3e1d-45d9-baa8-cf6a53778010
 spec:
   logLevel: Normal
@@ -129,9 +129,7 @@ status:
     status: "False"
     type: ConfigObservationDegraded
   - lastTransitionTime: "2023-03-09T14:22:28Z"
-    message: conflicting latestAvailableRevision 3
-    reason: Error
-    status: "True"
+    status: "False"
     type: RevisionControllerDegraded
   - lastTransitionTime: "2023-03-09T14:22:07Z"
     reason: AsExpected
