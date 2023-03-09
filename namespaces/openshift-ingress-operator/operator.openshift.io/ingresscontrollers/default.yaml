@@ -60,10 +60,10 @@ metadata:
     manager: ingress-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:35Z"
+    time: "2023-03-09T14:32:46Z"
   name: default
   namespace: openshift-ingress-operator
-  resourceVersion: "15500"
+  resourceVersion: "15915"
   uid: 581ce6e7-0dc9-460c-b609-a8d3a1b3ae1f
 spec:
   clientTLS:
@@ -79,7 +79,7 @@ spec:
     reloadInterval: 0s
   unsupportedConfigOverrides: null
 status:
-  availableReplicas: 0
+  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:18Z"
     reason: Valid
@@ -95,16 +95,15 @@ status:
     reason: DeploymentMinimumReplicasMet
     status: "True"
     type: DeploymentReplicasMinAvailable
-  - lastTransitionTime: "2023-03-09T14:22:19Z"
-    message: 0/1 of replicas are available
-    reason: DeploymentReplicasNotAvailable
-    status: "False"
-    type: DeploymentReplicasAllAvailable
-  - lastTransitionTime: "2023-03-09T14:22:19Z"
-    message: |
-      Waiting for router deployment rollout to finish: 0 of 1 updated replica(s) are available...
-    reason: DeploymentRollingOut
+  - lastTransitionTime: "2023-03-09T14:32:46Z"
+    message: All replicas are available
+    reason: DeploymentReplicasAvailable
     status: "True"
+    type: DeploymentReplicasAllAvailable
+  - lastTransitionTime: "2023-03-09T14:32:46Z"
+    message: Deployment is not actively rolling out
+    reason: DeploymentNotRollingOut
+    status: "False"
     type: DeploymentRollingOut
   - lastTransitionTime: "2023-03-09T14:22:19Z"
     message: The configured endpoint publishing strategy does not include a managed
@@ -125,12 +124,8 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:19Z"
     status: "True"
     type: Available
-  - lastTransitionTime: "2023-03-09T14:22:19Z"
-    message: |-
-      One or more status conditions indicate progressing: DeploymentRollingOut=True (DeploymentRollingOut: Waiting for router deployment rollout to finish: 0 of 1 updated replica(s) are available...
-      )
-    reason: IngressControllerProgressing
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:32:46Z"
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:19Z"
     status: "False"
