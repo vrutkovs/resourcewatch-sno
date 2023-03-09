@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6401"
+  resourceVersion: "6413"
   uid: 5b689e62-691b-4fc1-86d9-fed9d5250955
 spec: {}
 status:
@@ -65,7 +65,6 @@ status:
       InstallerControllerDegraded: missing required resources: [configmaps: etcd-metrics-proxy-client-ca,etcd-metrics-proxy-serving-ca,etcd-peer-client-ca,etcd-scripts,etcd-serving-ca,restore-etcd-pod, configmaps: etcd-endpoints-2,etcd-metrics-proxy-client-ca-2,etcd-metrics-proxy-serving-ca-2,etcd-peer-client-ca-2,etcd-pod-2,etcd-serving-ca-2]
       EnvVarControllerDegraded: configmap "etcd-endpoints" not found
       ScriptControllerDegraded: "configmap/etcd-pod": missing env var values
-      ClusterMemberControllerDegraded: could not get list of unhealthy members: giving up getting a cached client after 3 tries
       EtcdMembersDegraded: No unhealthy members found
     reason: AsExpected
     status: "False"
