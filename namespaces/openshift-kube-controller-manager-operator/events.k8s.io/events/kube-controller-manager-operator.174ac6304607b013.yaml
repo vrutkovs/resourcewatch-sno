@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:01Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:01Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-config-observer-configobserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:22:02Z"
+  name: kube-controller-manager-operator.174ac6304607b013
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "3810"
+  uid: 08f7420a-ddd7-4df0-a9c0-003475e2deed
+note: Updated featureGates to APIPriorityAndFairness=true,RotateKubeletServerCertificate=true,DownwardAPIHugePages=true,OpenShiftPodSecurityAdmission=true,RetroactiveDefaultStorageClass=false
+reason: ObserveFeatureFlagsUpdated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Normal
