@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedSource:
+  component: openshift-controller-manager-operator-openshiftcontrollermanagerstaticresources-openshiftcontrollermanagerstaticresources
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:01Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:22:01Z"
+  name: openshift-controller-manager-operator.174ac630011aec21
+  namespace: openshift-controller-manager-operator
+  resourceVersion: "3730"
+  uid: e7e1e16f-b600-422e-946e-04214a7a2ec4
+note: Created ServiceAccount/route-controller-manager-sa -n openshift-route-controller-manager
+  because it was missing
+reason: ServiceAccountCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-controller-manager-operator
+  namespace: openshift-controller-manager-operator
+  uid: 79e5a595-58b3-4198-82cc-8e7f0f9cd29e
+type: Normal
