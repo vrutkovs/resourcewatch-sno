@@ -34,6 +34,16 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:14:36Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:23:00Z"
   name: openshift-controller-manager
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -41,8 +51,45 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "736"
+  resourceVersion: "6115"
   uid: cb36378d-79fb-4403-a457-c380addd90d6
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:23:00Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-03-09T14:23:00Z"
+    reason: NoData
+    status: Unknown
+    type: Progressing
+  - lastTransitionTime: "2023-03-09T14:23:00Z"
+    reason: NoData
+    status: Unknown
+    type: Available
+  - lastTransitionTime: "2023-03-09T14:23:00Z"
+    reason: NoData
+    status: Unknown
+    type: Upgradeable
   extension: null
+  relatedObjects:
+  - group: operator.openshift.io
+    name: cluster
+    resource: openshiftcontrollermanagers
+  - group: ""
+    name: openshift-config
+    resource: namespaces
+  - group: ""
+    name: openshift-config-managed
+    resource: namespaces
+  - group: ""
+    name: openshift-controller-manager-operator
+    resource: namespaces
+  - group: ""
+    name: openshift-controller-manager
+    resource: namespaces
+  - group: ""
+    name: openshift-route-controller-manager
+    resource: namespaces
