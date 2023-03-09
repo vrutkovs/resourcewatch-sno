@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:01Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:01Z"
+deprecatedSource:
+  component: oauth-apiserver-status-controller-statussyncer_authentication
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:01Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:22:01Z"
+  name: authentication-operator.174ac6303fff1e1e
+  namespace: openshift-authentication-operator
+  resourceVersion: "3763"
+  uid: c098f764-9345-48a1-8481-5c3d8b470fb5
+note: 'Status for clusteroperator/authentication changed: Degraded message changed
+  from "All is well" to "WebhookAuthenticatorControllerDegraded: failed to retrieve
+  service openshift-oauth-apiserver/api: service \"api\" not found"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
+type: Normal
