@@ -141,7 +141,7 @@ metadata:
     kind: ReplicaSet
     name: multus-admission-controller-7c44c4fd4c
     uid: 7a585df6-dad3-48d7-b274-879569445ab4
-  resourceVersion: "2641"
+  resourceVersion: "3130"
   uid: 8ed3c998-db5a-4b2d-8aef-ef8476242060
 spec:
   containers:
@@ -207,6 +207,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -266,11 +267,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:26Z"
-    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
-      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
-    reason: Unschedulable
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:21:51Z"
+    status: "True"
     type: PodScheduled
   phase: Pending
   qosClass: Burstable
