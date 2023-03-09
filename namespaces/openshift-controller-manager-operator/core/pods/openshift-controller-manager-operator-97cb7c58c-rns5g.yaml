@@ -180,6 +180,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -192,6 +194,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -207,7 +211,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:00Z"
+    time: "2023-03-09T14:23:19Z"
   name: openshift-controller-manager-operator-97cb7c58c-rns5g
   namespace: openshift-controller-manager-operator
   ownerReferences:
@@ -217,7 +221,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-controller-manager-operator-97cb7c58c
     uid: c66b1581-929b-4ff8-9bc4-9204a04611ff
-  resourceVersion: "3541"
+  resourceVersion: "6889"
   uid: 39bc9e34-f28d-4685-b8d6-f43878797f30
 spec:
   containers:
@@ -340,12 +344,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:00Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:23:19Z"
+    message: 'containers with unready status: [openshift-controller-manager-operator]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:00Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:23:19Z"
+    message: 'containers with unready status: [openshift-controller-manager-operator]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:21:51Z"
@@ -357,11 +365,32 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4349a340ad6752856159937ab2c2c8fa737b44e4103113cc1c3d88b74ad137c3
     lastState: {}
     name: openshift-controller-manager-operator
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://91eaa2a2d356137a0ef30f8bce8d0f953246459c75d82eebccd3d212ea3e6857
+        exitCode: 1
+        finishedAt: "2023-03-09T14:23:19Z"
+        message: |
+          6019       1 secure_serving.go:255] Stopped listening on [::]:8443
+          I0309 14:23:19.456031       1 genericapiserver.go:547] "[graceful-termination] shutdown event" name="HTTPServerStoppedListening"
+          I0309 14:23:19.456039       1 tlsconfig.go:255] "Shutting down DynamicServingCertificateController"
+          I0309 14:23:19.456076       1 configmap_cafile_content.go:223] "Shutting down controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+          I0309 14:23:19.456088       1 configmap_cafile_content.go:223] "Shutting down controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+          I0309 14:23:19.456098       1 requestheader_controller.go:183] Shutting down RequestHeaderAuthRequestController
+          I0309 14:23:19.456165       1 reflector.go:227] Stopping reflector *v1.ClusterRole (10m0s) from k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169
+          I0309 14:23:19.456316       1 reflector.go:227] Stopping reflector *v1.ClusterRoleBinding (10m0s) from k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169
+          I0309 14:23:19.456390       1 base_controller.go:167] Shutting down ConfigObserver ...
+          I0309 14:23:19.456393       1 reflector.go:227] Stopping reflector *v1.Node (10m0s) from k8s.io/client-go@v0.26.1/tools/cache/reflector.go:169
+          I0309 14:23:19.456411       1 base_controller.go:167] Shutting down StatusSyncer_openshift-controller-manager ...
+          I0309 14:23:19.456692       1 base_controller.go:145] All StatusSyncer_openshift-controller-manager post start hooks have been terminated
+          I0309 14:23:19.456427       1 base_controller.go:167] Shutting down UserCAObservationController ...
+          I0309 14:23:19.456430       1 dynamic_serving_content.go:146] "Shutting down controller" name="serving-cert::/tmp/serving-cert-380046989/tls.crt::/tmp/serving-cert-380046989/tls.key"
+          I0309 14:23:19.456434       1 operator.go:147] Shutting down OpenShiftControllerManagerOperator
+          W0309 14:23:19.456443       1 builder.go:106] graceful termination failed, controllers failed with error: stopped
+        reason: Error
         startedAt: "2023-03-09T14:21:59Z"
   hostIP: 10.0.130.93
   phase: Running
