@@ -108,7 +108,9 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -122,7 +124,7 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "2810"
+  resourceVersion: "2812"
   uid: 2812ba40-8fdc-4a88-bfa0-33acb6798e77
 spec:
   progressDeadlineSeconds: 600
@@ -196,15 +198,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:20:34Z"
     lastUpdateTime: "2023-03-09T14:20:34Z"
-    message: Created new replica set "network-check-source-64f9ddb9bc"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-09T14:20:34Z"
-    lastUpdateTime: "2023-03-09T14:20:34Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-09T14:20:34Z"
+    lastUpdateTime: "2023-03-09T14:20:34Z"
+    message: ReplicaSet "network-check-source-64f9ddb9bc" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
