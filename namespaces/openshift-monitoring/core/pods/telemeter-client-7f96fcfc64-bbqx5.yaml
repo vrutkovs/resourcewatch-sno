@@ -264,6 +264,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -278,19 +280,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:33Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:08Z"
   name: telemeter-client-7f96fcfc64-bbqx5
   namespace: openshift-monitoring
   ownerReferences:
@@ -300,7 +290,7 @@ metadata:
     kind: ReplicaSet
     name: telemeter-client-7f96fcfc64
     uid: 4d20d55e-0b0e-4d96-9919-61c23bb9cc36
-  resourceVersion: "13805"
+  resourceVersion: "14459"
   uid: 56298754-7ac9-4ea1-a63f-854909871bba
 spec:
   containers:
@@ -663,8 +653,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:28:33Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:28:33Z"
