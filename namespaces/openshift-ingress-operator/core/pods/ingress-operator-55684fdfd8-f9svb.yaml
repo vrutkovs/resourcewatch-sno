@@ -214,8 +214,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -228,8 +226,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -245,7 +241,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:30:02Z"
+    time: "2023-03-09T14:30:03Z"
   name: ingress-operator-55684fdfd8-f9svb
   namespace: openshift-ingress-operator
   ownerReferences:
@@ -255,7 +251,7 @@ metadata:
     kind: ReplicaSet
     name: ingress-operator-55684fdfd8
     uid: 506330a6-6445-4b53-bc78-33b1bd4aaf6b
-  resourceVersion: "10341"
+  resourceVersion: "10352"
   uid: 8586aeeb-8734-4698-adcd-01ee23ee37ca
 spec:
   containers:
@@ -426,54 +422,22 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:30:02Z"
-    message: 'containers with unready status: [ingress-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:30:03Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:30:02Z"
-    message: 'containers with unready status: [ingress-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:30:03Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:21:51Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://f067b6a0f93d03dfb0524d932204195e3678bdeded181e8796fc1540ca334746
+  - containerID: cri-o://9c87edd7ee8d349f09975c5ee3d4531170f5d5511fa53536f14fadbbaddf68a7
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c85de6de3820e7ef13625ef4ceda1ec350d93fc924138ff8ef7717948f908d73
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c85de6de3820e7ef13625ef4ceda1ec350d93fc924138ff8ef7717948f908d73
     lastState:
-      terminated:
-        containerID: cri-o://93a3ddd98530581dfdf6cb02a948b6d2090a8ee7fe229ec8f0f7c9b694145590
-        exitCode: 1
-        finishedAt: "2023-03-09T14:27:14Z"
-        message: "e_group.go:219\tAll workers finished\t{\"controller\": \"ingressclass_controller\"}\n2023-03-09T14:27:14.227Z\tINFO\toperator.init\tmanager/runnable_group.go:219\tAll
-          workers finished\t{\"controller\": \"clientca_configmap_controller\"}\n2023-03-09T14:27:14.227Z\tINFO\toperator.init\tmanager/runnable_group.go:219\tAll
-          workers finished\t{\"controller\": \"certificate_controller\"}\n2023-03-09T14:27:14.227Z\tINFO\toperator.init\tmanager/runnable_group.go:219\tAll
-          workers finished\t{\"controller\": \"dns_controller\"}\n2023-03-09T14:27:14.227Z\tINFO\toperator.init\tmanager/runnable_group.go:219\tAll
-          workers finished\t{\"controller\": \"certificate_publisher_controller\"}\n2023-03-09T14:27:14.227Z\tINFO\toperator.init\tmanager/runnable_group.go:219\tAll
-          workers finished\t{\"controller\": \"crl\"}\n2023-03-09T14:27:14.227Z\tINFO\toperator.init\tmanager/runnable_group.go:219\tAll
-          workers finished\t{\"controller\": \"error_page_configmap_controller\"}\n2023-03-09T14:27:14.227Z\tINFO\toperator.init\tmanager/runnable_group.go:219\tAll
-          workers finished\t{\"controller\": \"status_controller\"}\n2023-03-09T14:27:14.228Z\tINFO\toperator.init\tmanager/runnable_group.go:219\tAll
-          workers finished\t{\"controller\": \"configurable_route_controller\"}\n2023-03-09T14:27:14.228Z\tINFO\toperator.init\tmanager/runnable_group.go:219\tAll
-          workers finished\t{\"controller\": \"ingress_controller\"}\n2023-03-09T14:27:14.228Z\tINFO\toperator.init\tmanager/runnable_group.go:219\tAll
-          workers finished\t{\"controller\": \"gatewayapi_controller\"}\n2023-03-09T14:27:14.228Z\tINFO\toperator.init\truntime/asm_amd64.s:1594\tStopping
-          and waiting for caches\n2023-03-09T14:27:14.228Z\tINFO\toperator.init\truntime/asm_amd64.s:1594\tStopping
-          and waiting for webhooks\n2023-03-09T14:27:14.228Z\tINFO\toperator.init\truntime/asm_amd64.s:1594\tWait
-          completed, proceeding to shutdown the manager\n2023-03-09T14:27:14.233Z\tINFO\toperator.main\truntime/asm_amd64.s:1594\tfile
-          watch events channel closed\n2023-03-09T14:27:14.233Z\tERROR\toperator.main\tcobra/command.go:920\terror
-          starting\t{\"error\": \"failed to wait for canary_controller caches to sync:
-          timed out waiting for cache to be synced\"}\n"
-        reason: Error
-        startedAt: "2023-03-09T14:24:51Z"
-    name: ingress-operator
-    ready: false
-    restartCount: 3
-    started: false
-    state:
       terminated:
         containerID: cri-o://f067b6a0f93d03dfb0524d932204195e3678bdeded181e8796fc1540ca334746
         exitCode: 1
@@ -499,6 +463,13 @@ status:
           timed out waiting for cache to be synced\"}\n"
         reason: Error
         startedAt: "2023-03-09T14:27:39Z"
+    name: ingress-operator
+    ready: true
+    restartCount: 4
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-09T14:30:03Z"
   - containerID: cri-o://4faebc498b4b95548187501ddee80a8b5a5f2ae0060c901ff119d20c6919cec6
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
