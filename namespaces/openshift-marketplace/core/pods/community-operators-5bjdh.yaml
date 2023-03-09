@@ -194,7 +194,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:10Z"
+    time: "2023-03-09T14:32:11Z"
   name: community-operators-5bjdh
   namespace: openshift-marketplace
   ownerReferences:
@@ -204,7 +204,7 @@ metadata:
     kind: CatalogSource
     name: community-operators
     uid: cdf5bb77-79b2-4e4e-b630-d1251f9b24b4
-  resourceVersion: "14632"
+  resourceVersion: "14698"
   uid: ecc138ae-ec4e-47d1-af8b-54ff129ee713
 spec:
   containers:
@@ -351,7 +351,7 @@ status:
     name: registry-server
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
       running:
         startedAt: "2023-03-09T14:29:37Z"
