@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:04Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:04Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:12Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:12Z"
+  name: kube-controller-manager-operator-7bc9cbb847-f9sqg.174ac6bca915f97c
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "14832"
+  uid: f9bc317c-5016-4c63-b097-1499e332efb0
+note: 'MountVolume.SetUp failed for volume "serving-cert" : failed to sync secret
+  cache: timed out waiting for the condition'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: kube-controller-manager-operator-7bc9cbb847-f9sqg
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "6959"
+  uid: 80e0e446-fc1d-4cde-8a91-ccfee062c600
+type: Warning
