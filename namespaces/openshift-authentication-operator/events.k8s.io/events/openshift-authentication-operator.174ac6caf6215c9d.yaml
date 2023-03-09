@@ -1,0 +1,59 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:33:06Z"
+deprecatedLastTimestamp: "2023-03-09T14:33:06Z"
+deprecatedSource:
+  component: oauth-apiserver-status-controller-statussyncer_authentication
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:33:06Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:33:06Z"
+  name: openshift-authentication-operator.174ac6caf6215c9d
+  namespace: openshift-authentication-operator
+  resourceVersion: "16311"
+  uid: 1695476b-10d7-4947-9728-7e89999db163
+note: 'Status for clusteroperator/authentication changed: Degraded message changed
+  from "OAuthServerDeploymentDegraded: 1 of 1 requested instances are unavailable
+  for oauth-openshift.openshift-authentication ()" to "All is well",Progressing message
+  changed from "WellKnownReadyControllerProgressing: kube-apiserver oauth endpoint
+  https://10.0.130.93:6443/.well-known/oauth-authorization-server is not yet served
+  and authentication operator keeps waiting (check kube-apiserver operator, and check
+  that instances roll out successfully, which can take several minutes per instance)"
+  to "OAuthServerDeploymentProgressing: deployment/oauth-openshift.openshift-authentication:
+  observed generation is 2, desired generation is 3.\nWellKnownReadyControllerProgressing:
+  kube-apiserver oauth endpoint https://10.0.130.93:6443/.well-known/oauth-authorization-server
+  is not yet served and authentication operator keeps waiting (check kube-apiserver
+  operator, and check that instances roll out successfully, which can take several
+  minutes per instance)",Available message changed from "OAuthServerDeploymentAvailable:
+  no oauth-openshift.openshift-authentication pods available on any node.\nWellKnownAvailable:
+  The well-known endpoint is not yet available: kube-apiserver oauth endpoint https://10.0.130.93:6443/.well-known/oauth-authorization-server
+  is not yet served and authentication operator keeps waiting (check kube-apiserver
+  operator, and check that instances roll out successfully, which can take several
+  minutes per instance)" to "WellKnownAvailable: The well-known endpoint is not yet
+  available: kube-apiserver oauth endpoint https://10.0.130.93:6443/.well-known/oauth-authorization-server
+  is not yet served and authentication operator keeps waiting (check kube-apiserver
+  operator, and check that instances roll out successfully, which can take several
+  minutes per instance)"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: v1
+  kind: Namespace
+  name: openshift-authentication-operator
+  namespace: openshift-authentication-operator
+type: Normal
