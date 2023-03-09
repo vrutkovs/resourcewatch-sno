@@ -200,7 +200,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -214,7 +216,7 @@ metadata:
     kind: Deployment
     name: prometheus-adapter
     uid: 39994971-7ca2-40a2-b9c4-bc49c10b00ad
-  resourceVersion: "15948"
+  resourceVersion: "15957"
   uid: 90f3ce22-2467-4c26-a73b-b0809c59c454
 spec:
   replicas: 1
@@ -356,5 +358,6 @@ spec:
           name: adapter-config
         name: config
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
