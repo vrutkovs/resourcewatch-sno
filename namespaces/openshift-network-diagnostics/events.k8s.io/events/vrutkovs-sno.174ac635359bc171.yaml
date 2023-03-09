@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:22Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:22Z"
+deprecatedSource:
+  component: check-endpoint-checkendpointstimetostart
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:22Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-network-check-endpoints
+    operation: Update
+    time: "2023-03-09T14:22:22Z"
+  name: vrutkovs-sno.174ac635359bc171
+  namespace: openshift-network-diagnostics
+  resourceVersion: "5010"
+  uid: 27d160e2-7cbe-4e6c-8519-8d49a529bee2
+note: Controller "CheckEndpointsTimeToStart" resync interval is set to 0s which might
+  lead to client request throttling
+reason: FastControllerResync
+regarding:
+  kind: Node
+  name: vrutkovs-sno
+  namespace: openshift-network-diagnostics
+  uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
+type: Warning
