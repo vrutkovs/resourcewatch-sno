@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.57/23"],"mac_address":"0a:58:0a:80:00:39","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.57/23","gateway_ip":"10.128.0.1"}}'
     kubectl.kubernetes.io/default-container: machine-api-operator
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
@@ -134,6 +135,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:28:58Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:28:58Z"
   name: machine-api-operator-699b5b587b-nfpzd
   namespace: openshift-machine-api
   ownerReferences:
@@ -143,7 +153,7 @@ metadata:
     kind: ReplicaSet
     name: machine-api-operator-699b5b587b
     uid: a56a3e03-3cdd-46bf-b286-35bf2388494d
-  resourceVersion: "8809"
+  resourceVersion: "8815"
   uid: 2a4685ce-b771-4ac9-ad76-3f5cb5a7e7c3
 spec:
   containers:
