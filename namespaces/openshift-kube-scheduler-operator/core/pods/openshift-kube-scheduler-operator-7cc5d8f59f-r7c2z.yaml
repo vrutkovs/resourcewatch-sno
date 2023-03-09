@@ -1,6 +1,8 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.13/23"],"mac_address":"0a:58:0a:80:00:0d","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.13/23","gateway_ip":"10.128.0.1"}}'
   creationTimestamp: "2023-03-09T14:20:00Z"
   generateName: openshift-kube-scheduler-operator-7cc5d8f59f-
   labels:
@@ -12,7 +14,6 @@ metadata:
     fieldsV1:
       f:metadata:
         f:annotations:
-          .: {}
           f:target.workload.openshift.io/management: {}
         f:generateName: {}
         f:labels:
@@ -147,6 +148,16 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:20:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:21:51Z"
   name: openshift-kube-scheduler-operator-7cc5d8f59f-r7c2z
   namespace: openshift-kube-scheduler-operator
   ownerReferences:
@@ -156,7 +167,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-kube-scheduler-operator-7cc5d8f59f
     uid: 5f98d709-e7df-4da0-bb93-20b5feced5fe
-  resourceVersion: "3125"
+  resourceVersion: "3142"
   uid: 1606b883-c96d-441c-8e75-977ff1bb9b7c
 spec:
   automountServiceAccountToken: false
