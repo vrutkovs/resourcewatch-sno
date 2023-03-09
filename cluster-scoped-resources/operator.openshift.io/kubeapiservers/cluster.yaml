@@ -104,14 +104,14 @@ metadata:
     manager: cluster-kube-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:30:13Z"
+    time: "2023-03-09T14:30:17Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10430"
+  resourceVersion: "10476"
   uid: c0c6917e-93dd-43c7-a907-55546729e305
 spec:
   logLevel: Normal
@@ -228,10 +228,9 @@ status:
     reason: AsExpected
     status: "False"
     type: WorkerLatencyProfileDegraded
-  - lastTransitionTime: "2023-03-09T14:28:55Z"
-    message: '"secret/node-kubeconfigs": secret "node-system-admin-client" not found'
-    reason: SyncError
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:30:13Z"
+    reason: AsExpected
+    status: "False"
     type: NodeKubeconfigControllerDegraded
   - lastTransitionTime: "2023-03-09T14:28:55Z"
     status: "False"
