@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
+    deployment.kubernetes.io/revision: "1"
     include.release.openshift.io/self-managed-high-availability: "true"
   creationTimestamp: "2023-03-09T14:15:04Z"
   generation: 1
@@ -131,6 +132,27 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:15:04Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:15:04Z"
   name: kube-storage-version-migrator-operator
   namespace: openshift-kube-storage-version-migrator-operator
   ownerReferences:
@@ -139,7 +161,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1571"
+  resourceVersion: "1574"
   uid: e175c73d-fd16-4746-ae1b-5ca4d30312d9
 spec:
   progressDeadlineSeconds: 600
@@ -233,4 +255,11 @@ spec:
           defaultMode: 420
           name: config
         name: config
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:15:04Z"
+    lastUpdateTime: "2023-03-09T14:15:04Z"
+    message: Created new replica set "kube-storage-version-migrator-operator-77b5d98c74"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
