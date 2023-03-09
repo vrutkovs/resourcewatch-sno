@@ -24,6 +24,17 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:35Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+        f:relatedObjects: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:14:36Z"
   name: kube-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -31,6 +42,43 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "625"
+  resourceVersion: "701"
   uid: 44fa5a7d-2a86-4650-a833-6e25b487f945
 spec: {}
+status:
+  extension: null
+  relatedObjects:
+  - group: operator.openshift.io
+    name: cluster
+    resource: kubeapiservers
+  - group: apiextensions.k8s.io
+    name: ""
+    resource: customresourcedefinitions
+  - group: security.openshift.io
+    name: ""
+    resource: securitycontextconstraints
+  - group: ""
+    name: openshift-config
+    resource: namespaces
+  - group: ""
+    name: openshift-config-managed
+    resource: namespaces
+  - group: ""
+    name: openshift-kube-apiserver-operator
+    resource: namespaces
+  - group: ""
+    name: openshift-kube-apiserver
+    resource: namespaces
+  - group: admissionregistration.k8s.io
+    name: ""
+    resource: mutatingwebhookconfigurations
+  - group: admissionregistration.k8s.io
+    name: ""
+    resource: validatingwebhookconfigurations
+  - group: controlplane.operator.openshift.io
+    name: ""
+    namespace: openshift-kube-apiserver
+    resource: podnetworkconnectivitychecks
+  - group: apiserver.openshift.io
+    name: ""
+    resource: apirequestcounts
