@@ -171,6 +171,7 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -181,7 +182,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:12Z"
+    time: "2023-03-09T14:29:13Z"
   name: package-server-manager-78b664bb45-bdtcl
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -191,7 +192,7 @@ metadata:
     kind: ReplicaSet
     name: package-server-manager-78b664bb45
     uid: 994dbae6-c5b3-48d8-bf0c-7f45bf4c6b00
-  resourceVersion: "9172"
+  resourceVersion: "9309"
   uid: 18739b54-a4d2-41ac-8582-5e88f4aa3bb7
 spec:
   containers:
@@ -337,18 +338,19 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:70c02853f645d8d0e82db73c738d51ace951044ac4e98e35d1db4f7cd75a3e71
-    imageID: ""
+  - containerID: cri-o://bdd836e226633f22ead5e4c8620d915fba34f8bf5f99e38b4eaa8f38e74d4c48
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:70c02853f645d8d0e82db73c738d51ace951044ac4e98e35d1db4f7cd75a3e71
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:70c02853f645d8d0e82db73c738d51ace951044ac4e98e35d1db4f7cd75a3e71
     lastState: {}
     name: package-server-manager
     ready: false
-    restartCount: 0
-    started: false
+    restartCount: 1
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:29:11Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
   podIP: 10.128.0.52
   podIPs:
   - ip: 10.128.0.52
