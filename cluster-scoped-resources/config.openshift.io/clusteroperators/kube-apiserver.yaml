@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:59Z"
+    time: "2023-03-09T14:29:04Z"
   name: kube-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8842"
+  resourceVersion: "8903"
   uid: 44fa5a7d-2a86-4650-a833-6e25b487f945
 spec: {}
 status:
@@ -61,7 +61,7 @@ status:
     message: |-
       NodeControllerDegraded: All master nodes are ready
       NodeKubeconfigControllerDegraded: "secret/node-kubeconfigs": secret "node-system-admin-client" not found
-      InstallerControllerDegraded: missing required resources: [configmaps: aggregator-client-ca,check-endpoints-kubeconfig,client-ca,control-plane-node-kubeconfig, secrets: aggregator-client,bound-service-account-signing-key,check-endpoints-client-cert-key,control-plane-node-admin-client-cert-key,external-loadbalancer-serving-certkey,internal-loadbalancer-serving-certkey,kubelet-client,localhost-serving-cert-certkey,node-kubeconfigs,service-network-serving-certkey, configmaps: bound-sa-token-signing-certs-0,config-0,etcd-serving-ca-0,kube-apiserver-audit-policies-0,kube-apiserver-cert-syncer-kubeconfig-0,kube-apiserver-pod-0,kubelet-serving-ca-0,sa-token-signing-certs-0, secrets: etcd-client-0,localhost-recovery-client-token-0,localhost-recovery-serving-certkey-0]
+      InstallerControllerDegraded: missing required resources: [configmaps: aggregator-client-ca,check-endpoints-kubeconfig,client-ca,control-plane-node-kubeconfig, secrets: aggregator-client,check-endpoints-client-cert-key,control-plane-node-admin-client-cert-key,external-loadbalancer-serving-certkey,internal-loadbalancer-serving-certkey,kubelet-client,localhost-serving-cert-certkey,node-kubeconfigs,service-network-serving-certkey, configmaps: bound-sa-token-signing-certs-0,config-0,etcd-serving-ca-0,kube-apiserver-audit-policies-0,kube-apiserver-cert-syncer-kubeconfig-0,kube-apiserver-pod-0,kubelet-serving-ca-0,sa-token-signing-certs-0, secrets: etcd-client-0,localhost-recovery-client-token-0,localhost-recovery-serving-certkey-0]
     reason: AsExpected
     status: "False"
     type: Degraded
