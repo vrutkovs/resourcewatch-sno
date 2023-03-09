@@ -175,6 +175,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -187,6 +189,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -202,7 +206,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:29Z"
+    time: "2023-03-09T14:23:11Z"
   name: multus-admission-controller-7c44c4fd4c-fmsb4
   namespace: openshift-multus
   ownerReferences:
@@ -212,7 +216,7 @@ metadata:
     kind: ReplicaSet
     name: multus-admission-controller-7c44c4fd4c
     uid: 7a585df6-dad3-48d7-b274-879569445ab4
-  resourceVersion: "5778"
+  resourceVersion: "6668"
   uid: 8ed3c998-db5a-4b2d-8aef-ef8476242060
 spec:
   containers:
@@ -342,12 +346,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:29Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:23:11Z"
+    message: 'containers with unready status: [multus-admission-controller kube-rbac-proxy]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:29Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:23:11Z"
+    message: 'containers with unready status: [multus-admission-controller kube-rbac-proxy]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:21:51Z"
@@ -359,22 +367,30 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
     lastState: {}
     name: kube-rbac-proxy
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://a308e3bfd9685431ab5a6dbe8142e0f91922b6e68c58349b0e9cfa6ead597ae9
+        exitCode: 0
+        finishedAt: "2023-03-09T14:22:40Z"
+        reason: Completed
         startedAt: "2023-03-09T14:22:29Z"
   - containerID: cri-o://a671e8b6c5c4d580523f6191fbf1fbf02398edbbb03d88094e747721980538c3
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:b16fa3856a886788d62d98f5ab5881de0ec8a76cd7807ce6bc24e6386aa64c50
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:b16fa3856a886788d62d98f5ab5881de0ec8a76cd7807ce6bc24e6386aa64c50
     lastState: {}
     name: multus-admission-controller
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://a671e8b6c5c4d580523f6191fbf1fbf02398edbbb03d88094e747721980538c3
+        exitCode: 137
+        finishedAt: "2023-03-09T14:23:10Z"
+        reason: Error
         startedAt: "2023-03-09T14:22:29Z"
   hostIP: 10.0.130.93
   phase: Running
