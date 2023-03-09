@@ -2,6 +2,18 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.84/23"],"mac_address":"0a:58:0a:80:00:54","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.84/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.84"
+          ],
+          "mac": "0a:58:0a:80:00:54",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: node-exporter
     operator.openshift.io/bootstrap-user-exists: "true"
     operator.openshift.io/rvs-hash: q_WUyiqrIOKjhBW1LV7Edj9281_lFrYastgX3H2w8RFuos1-4l6r_FID10a2TqMV3vxo7WeS-TIOpV6helOSng
@@ -276,6 +288,59 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:33:06Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:33:45Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:33:45Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:33:46Z"
   name: oauth-openshift-55cc54fd65-jkwn4
   namespace: openshift-authentication
   ownerReferences:
@@ -285,7 +350,7 @@ metadata:
     kind: ReplicaSet
     name: oauth-openshift-55cc54fd65
     uid: 97c55886-f755-4cd7-8710-71d24ef8a077
-  resourceVersion: "16305"
+  resourceVersion: "16567"
   uid: a3e3549b-7bfb-41f9-bdcf-0dec52865318
 spec:
   affinity:
@@ -398,6 +463,7 @@ spec:
   enableServiceLinks: true
   imagePullSecrets:
   - name: oauth-openshift-dockercfg-ftwhj
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -503,12 +569,37 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:33:06Z"
-    message: '0/1 nodes are available: 1 node(s) didn''t match pod anti-affinity rules.
-      preemption: 0/1 nodes are available: 1 node(s) didn''t match pod anti-affinity
-      rules..'
-    reason: Unschedulable
+    lastTransitionTime: "2023-03-09T14:33:45Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:33:45Z"
+    message: 'containers with unready status: [oauth-openshift]'
+    reason: ContainersNotReady
     status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:33:45Z"
+    message: 'containers with unready status: [oauth-openshift]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:33:44Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:15e21cbe2bb0386ae5b03e5029a4e41668d16e52862bbeb297ec6e4aaaa2493f
+    imageID: ""
+    lastState: {}
+    name: oauth-openshift
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.93
   phase: Pending
   qosClass: Burstable
+  startTime: "2023-03-09T14:33:45Z"
