@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.69/23"],"mac_address":"0a:58:0a:80:00:45","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.69/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.69"
+          ],
+          "mac": "0a:58:0a:80:00:45",
+          "default": true,
+          "dns": {}
+      }]
   creationTimestamp: "2023-03-09T14:31:13Z"
   labels:
     app: installer
@@ -162,6 +173,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-09T14:31:13Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:31:14Z"
   name: installer-2-vrutkovs-sno
   namespace: openshift-kube-apiserver
   ownerReferences:
@@ -169,7 +190,7 @@ metadata:
     kind: ConfigMap
     name: revision-status-2
     uid: 4fb58c4c-174c-434e-9aec-e2fd8d74e4b5
-  resourceVersion: "10976"
+  resourceVersion: "10978"
   uid: c5c26a6d-eba5-4620-9dbb-2c5d8bf0845f
 spec:
   automountServiceAccountToken: false
