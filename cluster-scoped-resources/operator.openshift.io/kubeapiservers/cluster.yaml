@@ -104,14 +104,14 @@ metadata:
     manager: cluster-kube-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:31:07Z"
+    time: "2023-03-09T14:31:09Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10930"
+  resourceVersion: "10940"
   uid: c0c6917e-93dd-43c7-a907-55546729e305
 spec:
   logLevel: Normal
@@ -262,12 +262,12 @@ status:
     type: InstallerControllerDegraded
   - lastTransitionTime: "2023-03-09T14:28:58Z"
     message: 0 nodes are active; 1 nodes are at revision 0; 0 nodes have achieved
-      new revision 1
+      new revision 2
     reason: ZeroNodesActive
     status: "False"
     type: StaticPodsAvailable
   - lastTransitionTime: "2023-03-09T14:30:55Z"
-    message: 1 nodes are at revision 0; 0 nodes have achieved new revision 1
+    message: 1 nodes are at revision 0; 0 nodes have achieved new revision 2
     status: "True"
     type: NodeInstallerProgressing
   - lastTransitionTime: "2023-03-09T14:28:58Z"
@@ -377,6 +377,7 @@ status:
   nodeStatuses:
   - currentRevision: 0
     nodeName: vrutkovs-sno
+    targetRevision: 2
   readyReplicas: 0
   serviceAccountIssuers:
   - name: https://kubernetes.default.svc
