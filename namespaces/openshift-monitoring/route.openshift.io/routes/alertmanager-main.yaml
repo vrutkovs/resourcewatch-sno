@@ -8,6 +8,15 @@ metadata:
   - apiVersion: route.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:status:
+        f:ingress: {}
+    manager: openshift-router
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:45Z"
+  - apiVersion: route.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:spec:
         f:path: {}
         f:port:
@@ -27,7 +36,7 @@ metadata:
     time: "2023-03-09T14:32:45Z"
   name: alertmanager-main
   namespace: openshift-monitoring
-  resourceVersion: "15859"
+  resourceVersion: "15861"
   uid: 147ba5f4-2227-400e-8d2a-0c2d5bd47098
 spec:
   host: alertmanager-main-openshift-monitoring.apps.ocp.choomba.one
@@ -42,4 +51,13 @@ spec:
     name: alertmanager-main
     weight: 100
   wildcardPolicy: None
-status: {}
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: "2023-03-09T14:32:45Z"
+      status: "True"
+      type: Admitted
+    host: alertmanager-main-openshift-monitoring.apps.ocp.choomba.one
+    routerCanonicalHostname: router-default.apps.ocp.choomba.one
+    routerName: default
+    wildcardPolicy: None
