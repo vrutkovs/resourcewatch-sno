@@ -1,0 +1,51 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:12Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:12Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-config-observer-configobserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:14Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:22:14Z"
+  name: kube-controller-manager-operator.174ac632dfd1dea1
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "4646"
+  uid: 944bfdff-c50f-4e93-ae04-41e9b6b6279d
+note: "Writing updated observed config:   map[string]any{\n  \t\"extendedArguments\":
+  map[string]any{\"cluster-cidr\": []any{string(\"10.128.0.0/14\")}, \"cluster-name\":
+  []any{string(\"ocp-rd9g5\")}, \"feature-gates\": []any{string(\"APIPriorityAndFairness=true\"),
+  string(\"RotateKubeletServerCertificate=true\"), string(\"DownwardAPIHugePages=true\"),
+  string(\"OpenShiftPodSecurityAdmission=true\"), ...}, \"service-cluster-ip-range\":
+  []any{string(\"172.30.0.0/16\")}},\n  \t\"featureGates\":      []any{string(\"APIPriorityAndFairness=true\"),
+  string(\"RotateKubeletServerCertificate=true\"), string(\"DownwardAPIHugePages=true\"),
+  string(\"OpenShiftPodSecurityAdmission=true\"), ...},\n+ \t\"serviceServingCert\":
+  map[string]any{\n+ \t\t\"certFile\": string(\"/etc/kubernetes/static-pod-resources/configmaps/service-ca/ca-bundle.crt\"),\n+
+  \t},\n  \t\"servingInfo\": map[string]any{\"cipherSuites\": []any{string(\"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256\"),
+  string(\"TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256\"), string(\"TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384\"),
+  string(\"TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384\"), ...}, \"minTLSVersion\": string(\"VersionTLS12\")},\n
+  \ }\n"
+reason: ObservedConfigChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Normal
