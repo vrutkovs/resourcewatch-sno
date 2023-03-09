@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:54Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:54Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:54Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:54Z"
+  name: alertmanager-main-0.174ac6c83905b0f3
+  namespace: openshift-monitoring
+  resourceVersion: "16071"
+  uid: 5756cc98-6ea8-4b41-9346-a8191fbb6f65
+note: Successfully pulled image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:10a5c4496e21c74681484951c4f7b1059355127b627962c4663f32391ed151c3"
+  in 1.996605804s (1.996614603s including waiting)
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{alertmanager}
+  kind: Pod
+  name: alertmanager-main-0
+  namespace: openshift-monitoring
+  resourceVersion: "16034"
+  uid: a1fc1fe4-8eea-4bb1-bd86-50214a66e433
+type: Normal
