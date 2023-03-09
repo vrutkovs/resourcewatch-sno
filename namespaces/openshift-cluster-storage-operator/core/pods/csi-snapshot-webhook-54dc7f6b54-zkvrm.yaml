@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.25/23"],"mac_address":"0a:58:0a:80:00:19","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.25/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:22:00Z"
@@ -91,6 +92,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:22:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
   name: csi-snapshot-webhook-54dc7f6b54-zkvrm
   namespace: openshift-cluster-storage-operator
   ownerReferences:
@@ -100,7 +110,7 @@ metadata:
     kind: ReplicaSet
     name: csi-snapshot-webhook-54dc7f6b54
     uid: 703d13bc-cabb-4215-a8cb-62dd95b636d0
-  resourceVersion: "3516"
+  resourceVersion: "3534"
   uid: 54c31e4a-7309-4e5a-a251-c52cbc91e8e8
 spec:
   affinity:
