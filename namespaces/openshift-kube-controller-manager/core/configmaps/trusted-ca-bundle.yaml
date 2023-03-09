@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:22:33Z"
+  labels:
+    config.openshift.io/inject-trusted-cabundle: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:config.openshift.io/inject-trusted-cabundle: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:22:33Z"
+  name: trusted-ca-bundle
+  namespace: openshift-kube-controller-manager
+  resourceVersion: "5476"
+  uid: b119e3ba-313a-4e49-b0f9-12e072b81364
