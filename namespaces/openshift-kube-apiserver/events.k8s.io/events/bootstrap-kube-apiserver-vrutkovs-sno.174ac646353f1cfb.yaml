@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:23:35Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:35Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:44Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:24:44Z"
+  name: bootstrap-kube-apiserver-vrutkovs-sno.174ac646353f1cfb
+  namespace: openshift-kube-apiserver
+  resourceVersion: "7111"
+  uid: 84bc9be6-3876-4d5c-88e8-f444e699a4d4
+note: 'Liveness probe failed: HTTP probe failed with statuscode: 500'
+reason: Unhealthy
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-apiserver}
+  kind: Pod
+  name: bootstrap-kube-apiserver-vrutkovs-sno
+  namespace: openshift-kube-apiserver
+  uid: ada9f0e1fc79fb2dbe89ee073f22e0d2
+type: Warning
