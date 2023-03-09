@@ -9,8 +9,8 @@ metadata:
     openshiftcontrollermanagers.operator.openshift.io/cluster: "1"
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:23:00Z"
-  deletionGracePeriodSeconds: 30
-  deletionTimestamp: "2023-03-09T14:23:31Z"
+  deletionGracePeriodSeconds: 0
+  deletionTimestamp: "2023-03-09T14:23:01Z"
   generateName: route-controller-manager-57654f6596-
   labels:
     app: route-controller-manager
@@ -203,7 +203,7 @@ metadata:
     kind: ReplicaSet
     name: route-controller-manager-57654f6596
     uid: 1f001f68-eb3d-48f7-99f9-0b548788cb92
-  resourceVersion: "7454"
+  resourceVersion: "7455"
   uid: 73058960-10e6-492d-aa88-3527fe751cfe
 spec:
   affinity:
