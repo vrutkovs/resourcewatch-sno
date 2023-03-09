@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:23:06Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:06Z"
+deprecatedSource:
+  component: cluster-authentication-operator-config-observer-configobserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:23:06Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:23:06Z"
+  name: authentication-operator.174ac63f5cf0c81b
+  namespace: openshift-authentication-operator
+  resourceVersion: "6382"
+  uid: 2760bc93-2643-4483-953b-83b0e046be77
+note: namedCertificates changed to []interface {}{map[string]interface {}{"certFile":"/var/config/system/secrets/v4-0-config-system-router-certs/apps.ocp.choomba.one",
+  "keyFile":"/var/config/system/secrets/v4-0-config-system-router-certs/apps.ocp.choomba.one",
+  "names":[]interface {}{"*.apps.ocp.choomba.one"}}}
+reason: ObserveRouterSecret
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
+type: Normal
