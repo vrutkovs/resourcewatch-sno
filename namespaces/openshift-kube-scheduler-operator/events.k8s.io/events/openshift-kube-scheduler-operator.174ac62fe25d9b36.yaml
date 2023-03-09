@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
 deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
 deprecatedSource:
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-scheduler-operator
     operation: Update
-    time: "2023-03-09T14:22:00Z"
+    time: "2023-03-09T14:22:01Z"
   name: openshift-kube-scheduler-operator.174ac62fe25d9b36
   namespace: openshift-kube-scheduler-operator
-  resourceVersion: "3439"
+  resourceVersion: "3718"
   uid: 0b964a9a-847b-476a-9a8b-1b93a3d6596c
 note: clusteroperator/kube-scheduler version "raw-internal" changed from "" to "4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest"
 reason: OperatorVersionChanged
