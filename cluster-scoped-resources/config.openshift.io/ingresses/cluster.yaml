@@ -18,11 +18,23 @@ metadata:
     manager: cluster-bootstrap
     operation: Update
     time: "2023-03-09T14:14:26Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:defaultPlacement: {}
+    manager: cluster-bootstrap
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:14:26Z"
   name: cluster
-  resourceVersion: "563"
+  resourceVersion: "565"
   uid: c1484dd1-5fdc-4633-bc7c-b45c37efbd64
 spec:
   domain: apps.ocp.choomba.one
   loadBalancer:
     platform:
       type: ""
+status:
+  defaultPlacement: ControlPlane
