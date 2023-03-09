@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:40Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:40Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:40Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:40Z"
+  name: console-74cc456b6f-fqcj8.174ac6c4e9267d54
+  namespace: openshift-console
+  resourceVersion: "15628"
+  uid: 46377607-145d-44aa-9e49-e126297a87e1
+note: Created container console
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{console}
+  kind: Pod
+  name: console-74cc456b6f-fqcj8
+  namespace: openshift-console
+  resourceVersion: "15408"
+  uid: f2157db7-19c8-4b37-8174-94393f1a4f21
+type: Normal
