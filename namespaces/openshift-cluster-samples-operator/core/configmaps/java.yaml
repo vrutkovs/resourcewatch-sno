@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:25Z"
+  name: java
+  namespace: openshift-cluster-samples-operator
+  resourceVersion: "15062"
+  uid: adf07c9c-cd76-4696-b03f-ebd9e550b357
