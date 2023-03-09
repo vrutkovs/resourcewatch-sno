@@ -44,14 +44,14 @@ metadata:
     manager: console
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:52Z"
+    time: "2023-03-09T14:32:54Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16061"
+  resourceVersion: "16075"
   uid: 220131d0-1fdb-4e14-a9b0-f123fc3fa77f
 spec:
   logLevel: Normal
@@ -102,7 +102,7 @@ status:
   - lastTransitionTime: "2023-03-09T14:32:37Z"
     status: "False"
     type: SyncLoopRefreshDegraded
-  - lastTransitionTime: "2023-03-09T14:32:37Z"
+  - lastTransitionTime: "2023-03-09T14:32:52Z"
     message: Changes made during sync updates, additional sync expected.
     reason: InProgress
     status: "True"
@@ -238,7 +238,7 @@ status:
     resource: deployments
   - group: apps
     hash: ""
-    lastGeneration: 1
+    lastGeneration: 2
     name: console
     namespace: openshift-console
     resource: deployments
