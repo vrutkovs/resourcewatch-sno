@@ -141,8 +141,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -155,8 +153,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -172,7 +168,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:45Z"
+    time: "2023-03-09T14:23:14Z"
   name: network-check-target-g7pv6
   namespace: openshift-network-diagnostics
   ownerReferences:
@@ -182,7 +178,7 @@ metadata:
     kind: DaemonSet
     name: network-check-target
     uid: 62454efe-a10a-4b0f-95f3-f94bf8ea8fd3
-  resourceVersion: "5932"
+  resourceVersion: "6699"
   uid: 8889968e-1c5d-4445-b108-fe901317fa94
 spec:
   affinity:
@@ -288,16 +284,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:35Z"
-    message: 'containers with unready status: [network-check-target-container]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:23:14Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:35Z"
-    message: 'containers with unready status: [network-check-target-container]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:23:14Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:35Z"
@@ -309,7 +301,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6f674d54345ba8ce675df69db58531f41a18deac6bcaec530b634cc54a38ab2c
     lastState: {}
     name: network-check-target-container
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
