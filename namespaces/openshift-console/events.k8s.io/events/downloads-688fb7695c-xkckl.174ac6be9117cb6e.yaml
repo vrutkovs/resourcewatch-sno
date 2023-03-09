@@ -1,0 +1,40 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:32:12.929266Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:12Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:32:12Z"
+  name: downloads-688fb7695c-xkckl.174ac6be9117cb6e
+  namespace: openshift-console
+  resourceVersion: "14828"
+  uid: 254a577f-abd3-44ad-b4bc-3070d26b11d9
+note: Successfully assigned openshift-console/downloads-688fb7695c-xkckl to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: downloads-688fb7695c-xkckl
+  namespace: openshift-console
+  resourceVersion: "14822"
+  uid: 02157f75-7110-43df-87d1-40bcaeaf5461
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
