@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:24:49Z"
+    time: "2023-03-09T14:27:15Z"
   name: kube-scheduler
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "7263"
+  resourceVersion: "7740"
   uid: 441925ee-aa23-4d3c-937b-d1809e7a63de
 spec: {}
 status:
