@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:20:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:20:00Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:20:00Z"
+  name: ingress-operator-55684fdfd8.174ac613f8ea23a6
+  namespace: openshift-ingress-operator
+  resourceVersion: "2340"
+  uid: 97a0ae18-0190-4d08-b0f5-e857203dfd61
+note: 'Created pod: ingress-operator-55684fdfd8-f9svb'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: ingress-operator-55684fdfd8
+  namespace: openshift-ingress-operator
+  resourceVersion: "1996"
+  uid: 506330a6-6445-4b53-bc78-33b1bd4aaf6b
+type: Normal
