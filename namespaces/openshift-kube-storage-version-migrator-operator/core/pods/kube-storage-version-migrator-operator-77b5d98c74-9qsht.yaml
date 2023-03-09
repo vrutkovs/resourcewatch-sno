@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.8/23"],"mac_address":"0a:58:0a:80:00:08","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.8/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: nonroot-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:19:59Z"
@@ -138,6 +139,15 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:19:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:21:51Z"
   name: kube-storage-version-migrator-operator-77b5d98c74-9qsht
   namespace: openshift-kube-storage-version-migrator-operator
   ownerReferences:
@@ -147,7 +157,7 @@ metadata:
     kind: ReplicaSet
     name: kube-storage-version-migrator-operator-77b5d98c74
     uid: 03917f08-1f25-4eff-8711-5bda51a91405
-  resourceVersion: "3118"
+  resourceVersion: "3134"
   uid: b63fa47c-1d22-4f70-ad4e-693f9fda121d
 spec:
   containers:
