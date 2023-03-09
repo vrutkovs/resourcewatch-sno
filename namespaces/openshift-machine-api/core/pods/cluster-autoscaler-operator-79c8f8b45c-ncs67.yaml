@@ -212,6 +212,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -226,19 +228,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:53Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:09Z"
   name: cluster-autoscaler-operator-79c8f8b45c-ncs67
   namespace: openshift-machine-api
   ownerReferences:
@@ -248,7 +238,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-autoscaler-operator-79c8f8b45c
     uid: c2f6ebb9-46f2-4812-b02b-6671806b38f3
-  resourceVersion: "13681"
+  resourceVersion: "14574"
   uid: 45789d7d-44e4-4ed4-be30-6bbd8d5edaaa
 spec:
   containers:
@@ -425,8 +415,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:28:53Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:28:53Z"
