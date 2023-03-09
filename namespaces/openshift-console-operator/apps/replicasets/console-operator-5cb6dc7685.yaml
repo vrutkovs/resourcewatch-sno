@@ -240,13 +240,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:03Z"
+    time: "2023-03-09T14:32:13Z"
   name: console-operator-5cb6dc7685
   namespace: openshift-console-operator
   ownerReferences:
@@ -256,7 +258,7 @@ metadata:
     kind: Deployment
     name: console-operator
     uid: 96b3e259-2eaa-49a3-8a5e-54df68da1860
-  resourceVersion: "14018"
+  resourceVersion: "14868"
   uid: 7a7ff091-2bce-41fb-a1bf-d16d7bd180e0
 spec:
   replicas: 1
@@ -424,6 +426,8 @@ spec:
           optional: true
           secretName: webhook-serving-cert
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
