@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"vrutkovs-sno_95c511cf-53cd-4f80-86db-b70fa201fdbf","leaseDurationSeconds":15,"acquireTime":"2023-03-09T14:24:58Z","renewTime":"2023-03-09T14:25:31Z","leaderTransitions":2}'
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"vrutkovs-sno_c9a0dc22-7022-4266-a2ea-8947d9a230f9","leaseDurationSeconds":15,"acquireTime":"2023-03-09T14:28:25Z","renewTime":"2023-03-09T14:28:25Z","leaderTransitions":3}'
   creationTimestamp: "2023-03-09T14:13:46Z"
   managedFields:
   - apiVersion: v1
@@ -14,8 +14,8 @@ metadata:
           f:control-plane.alpha.kubernetes.io/leader: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-09T14:25:31Z"
+    time: "2023-03-09T14:28:25Z"
   name: kube-controller-manager
   namespace: kube-system
-  resourceVersion: "7536"
+  resourceVersion: "7952"
   uid: 72427019-bddc-491e-9233-a1da6c0617c9
