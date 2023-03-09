@@ -106,6 +106,24 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:20:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:00Z"
   name: service-ca-operator-5b79975495-r96qd
   namespace: openshift-service-ca-operator
   ownerReferences:
@@ -115,7 +133,7 @@ metadata:
     kind: ReplicaSet
     name: service-ca-operator-5b79975495
     uid: d0838414-953d-4de4-a656-6766270073b1
-  resourceVersion: "2355"
+  resourceVersion: "2359"
   uid: 3663cdde-68e5-4d04-ba08-b9f5426cb349
 spec:
   containers:
@@ -221,5 +239,13 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:00Z"
+    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
+    reason: Unschedulable
+    status: "False"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
