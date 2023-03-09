@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:31:51Z"
-deprecatedLastTimestamp: "2023-03-09T14:31:51Z"
+deprecatedLastTimestamp: "2023-03-09T14:31:52Z"
 deprecatedSource:
   component: kube-controller-manager-operator-installer-controller
 eventTime: null
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:31:59Z"
   name: kube-controller-manager-operator.174ac6b9afcab8a2
   namespace: openshift-kube-controller-manager-operator
-  resourceVersion: "13343"
+  resourceVersion: "13344"
   uid: 6b94893d-f46d-43cf-b8e8-45581b5135e4
 note: 'Failed to create installer pod for revision 5 count 0 on node "vrutkovs-sno":
   Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager/pods/installer-5-vrutkovs-sno":
