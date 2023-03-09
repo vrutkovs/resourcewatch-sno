@@ -75,7 +75,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "13115"
+  resourceVersion: "13127"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -152,15 +152,8 @@ status:
     reason: AsExpected
     status: "False"
     type: MissingStaticPodControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:31:31Z"
-    message: "pod/kube-controller-manager-vrutkovs-sno container \"cluster-policy-controller\"
-      is waiting: ContainerCreating: \npod/kube-controller-manager-vrutkovs-sno container
-      \"kube-controller-manager\" is waiting: ContainerCreating: \npod/kube-controller-manager-vrutkovs-sno
-      container \"kube-controller-manager-cert-syncer\" is waiting: ContainerCreating:
-      \npod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager-recovery-controller\"
-      is waiting: ContainerCreating: "
-    reason: Error
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:31:41Z"
+    status: "False"
     type: StaticPodsDegraded
   - lastTransitionTime: "2023-03-09T14:22:15Z"
     message: 'error fetching rules: Get "https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules":
