@@ -440,6 +440,25 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:32:51Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:52Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"ContainersReady"}:
@@ -466,30 +485,18 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.79"}:
+            .: {}
+            f:ip: {}
         f:startTime: {}
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:51Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.ovn.org/pod-networks: {}
-    manager: vrutkovs-sno
-    operation: Update
-    time: "2023-03-09T14:32:51Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.v1.cni.cncf.io/network-status: {}
-    manager: multus
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:52Z"
+    time: "2023-03-09T14:32:58Z"
   name: alertmanager-main-0
   namespace: openshift-monitoring
   ownerReferences:
@@ -499,7 +506,7 @@ metadata:
     kind: StatefulSet
     name: alertmanager-main
     uid: 98deb091-f51e-4a1f-a4a3-8038c2d7d435
-  resourceVersion: "16043"
+  resourceVersion: "16148"
   uid: a1fc1fe4-8eea-4bb1-bd86-50214a66e433
 spec:
   containers:
@@ -912,15 +919,13 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:51Z"
-    message: 'containers with unready status: [alertmanager config-reloader alertmanager-proxy
-      kube-rbac-proxy kube-rbac-proxy-metric prom-label-proxy]'
+    message: 'containers with unready status: [alertmanager]'
     reason: ContainersNotReady
     status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:51Z"
-    message: 'containers with unready status: [alertmanager config-reloader alertmanager-proxy
-      kube-rbac-proxy kube-rbac-proxy-metric prom-label-proxy]'
+    message: 'containers with unready status: [alertmanager]'
     reason: ContainersNotReady
     status: "False"
     type: ContainersReady
@@ -929,67 +934,85 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:10a5c4496e21c74681484951c4f7b1059355127b627962c4663f32391ed151c3
-    imageID: ""
+  - containerID: cri-o://cb8c94828bf729014aa46ea7e44049913da26dd39f8c53c31f040ae63ac3fc00
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:10a5c4496e21c74681484951c4f7b1059355127b627962c4663f32391ed151c3
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:10a5c4496e21c74681484951c4f7b1059355127b627962c4663f32391ed151c3
     lastState: {}
     name: alertmanager
     ready: false
     restartCount: 0
     started: false
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87f1812b55e14f104d3ab49c06711f5ba37e94490717470e42c12749fe3c90ad
-    imageID: ""
+      terminated:
+        containerID: cri-o://cb8c94828bf729014aa46ea7e44049913da26dd39f8c53c31f040ae63ac3fc00
+        exitCode: 1
+        finishedAt: "2023-03-09T14:32:54Z"
+        message: |
+          ts=2023-03-09T14:32:54.670Z caller=main.go:240 level=info msg="Starting Alertmanager" version="(version=0.25.0, branch=master, revision=f44d574d8e170d6788cfbf2bdbc866d3e1fc1054)"
+          ts=2023-03-09T14:32:54.670Z caller=main.go:241 level=info build_context="(go=go1.19.2, user=root@7dafc2d74d0f, date=20221223-13:03:20)"
+          ts=2023-03-09T14:32:54.704Z caller=coordinator.go:113 level=info component=configuration msg="Loading configuration file" file=/etc/alertmanager/config_out/alertmanager.env.yaml
+          ts=2023-03-09T14:32:54.704Z caller=coordinator.go:118 level=error component=configuration msg="Loading configuration file failed" file=/etc/alertmanager/config_out/alertmanager.env.yaml err="open /etc/alertmanager/config_out/alertmanager.env.yaml: no such file or directory"
+        reason: Error
+        startedAt: "2023-03-09T14:32:54Z"
+  - containerID: cri-o://fcf07fdb21df97711ae1f2cc1c918626864eb30ea996d6ed1e9c8c2e804851f3
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87f1812b55e14f104d3ab49c06711f5ba37e94490717470e42c12749fe3c90ad
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87f1812b55e14f104d3ab49c06711f5ba37e94490717470e42c12749fe3c90ad
     lastState: {}
     name: alertmanager-proxy
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:0f2284b974da7a5af712db888818e4bbd7604e604bc70c86ce8bc75c8f73457d
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:32:55Z"
+  - containerID: cri-o://6ad42e6990fbcf520151264bb4346796e0b35015d48d474203fdc68d787078e8
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:0f2284b974da7a5af712db888818e4bbd7604e604bc70c86ce8bc75c8f73457d
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:0f2284b974da7a5af712db888818e4bbd7604e604bc70c86ce8bc75c8f73457d
     lastState: {}
     name: config-reloader
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:32:54Z"
+  - containerID: cri-o://5dc25bf4c87685db3182ce1bf4e178f6c15a0034d235d3dab8d47f5af53c5a85
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
     lastState: {}
     name: kube-rbac-proxy
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:32:56Z"
+  - containerID: cri-o://82bf19cad30fa7bf308d6840332f25dfd1256bb22e589d5f8f178fd2eb946e36
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
     lastState: {}
     name: kube-rbac-proxy-metric
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9a9607c8b5ab38ce556e52abc5260e6419d2564d361be49c6a6ae5158c3ecaba
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:32:56Z"
+  - containerID: cri-o://935b5cd8a915ca29d935e860072f776d505b9f5b512ef819f6ed07b0cb396ad8
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9a9607c8b5ab38ce556e52abc5260e6419d2564d361be49c6a6ae5158c3ecaba
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9a9607c8b5ab38ce556e52abc5260e6419d2564d361be49c6a6ae5158c3ecaba
     lastState: {}
     name: prom-label-proxy
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:32:57Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.79
+  podIPs:
+  - ip: 10.128.0.79
   qosClass: Burstable
   startTime: "2023-03-09T14:32:51Z"
