@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:01Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-09T14:22:01Z"
+  name: etcd-operator.174ac63005dc2987
+  namespace: openshift-etcd-operator
+  resourceVersion: "3768"
+  uid: b4b28f83-4a88-4152-90ae-ba8a39d57f05
+note: 'Status for clusteroperator/etcd changed: Upgradeable changed from Unknown to
+  True ("All is well")'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 83b0ee74-72c5-4b95-9e21-87b97e13fab6
+type: Normal
