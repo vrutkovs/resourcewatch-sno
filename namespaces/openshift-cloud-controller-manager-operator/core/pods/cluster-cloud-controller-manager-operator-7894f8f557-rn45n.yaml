@@ -158,8 +158,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -175,6 +173,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:28:56Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:01Z"
   name: cluster-cloud-controller-manager-operator-7894f8f557-rn45n
   namespace: openshift-cloud-controller-manager-operator
   ownerReferences:
@@ -184,7 +194,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-cloud-controller-manager-operator-7894f8f557
     uid: d7869efa-d36a-45be-b1c7-23d573ab3e1d
-  resourceVersion: "8748"
+  resourceVersion: "13554"
   uid: d54af4b9-81e8-464d-a839-358cf83ee658
 spec:
   containers:
@@ -355,8 +365,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:28:56Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:01Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:28:56Z"
