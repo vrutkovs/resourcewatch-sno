@@ -111,6 +111,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:20:34Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:34Z"
   name: network-check-source-64f9ddb9bc
   namespace: openshift-network-diagnostics
   ownerReferences:
@@ -120,7 +129,7 @@ metadata:
     kind: Deployment
     name: network-check-source
     uid: 2812ba40-8fdc-4a88-bfa0-33acb6798e77
-  resourceVersion: "2802"
+  resourceVersion: "2808"
   uid: 9ca97f0a-aa3d-454a-8513-79784e29c223
 spec:
   replicas: 1
@@ -189,4 +198,5 @@ spec:
       serviceAccountName: network-diagnostics
       terminationGracePeriodSeconds: 30
 status:
+  observedGeneration: 1
   replicas: 0
