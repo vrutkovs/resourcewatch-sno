@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.20/23"],"mac_address":"0a:58:0a:80:00:14","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.20/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.20"
+          ],
+          "mac": "0a:58:0a:80:00:14",
+          "default": true,
+          "dns": {}
+      }]
   creationTimestamp: "2023-03-09T14:20:26Z"
   generateName: multus-admission-controller-7c44c4fd4c-
   labels:
@@ -177,6 +188,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-09T14:21:51Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:23Z"
   name: multus-admission-controller-7c44c4fd4c-fmsb4
   namespace: openshift-multus
   ownerReferences:
@@ -186,7 +207,7 @@ metadata:
     kind: ReplicaSet
     name: multus-admission-controller-7c44c4fd4c
     uid: 7a585df6-dad3-48d7-b274-879569445ab4
-  resourceVersion: "3184"
+  resourceVersion: "5044"
   uid: 8ed3c998-db5a-4b2d-8aef-ef8476242060
 spec:
   containers:
