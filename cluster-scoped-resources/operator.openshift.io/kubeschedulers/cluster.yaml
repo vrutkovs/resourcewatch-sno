@@ -57,14 +57,14 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:28Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "13903"
+  resourceVersion: "15318"
   uid: 48eb058e-3e1d-45d9-baa8-cf6a53778010
 spec:
   logLevel: Normal
@@ -86,15 +86,14 @@ status:
   - lastTransitionTime: "2023-03-09T14:29:35Z"
     status: "False"
     type: InstallerControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: 0 nodes are active; 1 nodes are at revision 0; 0 nodes have achieved
-      new revision 5
-    reason: ZeroNodesActive
-    status: "False"
-    type: StaticPodsAvailable
-  - lastTransitionTime: "2023-03-09T14:22:08Z"
-    message: 1 nodes are at revision 0; 0 nodes have achieved new revision 5
+  - lastTransitionTime: "2023-03-09T14:32:28Z"
+    message: 1 nodes are active; 1 nodes are at revision 5
     status: "True"
+    type: StaticPodsAvailable
+  - lastTransitionTime: "2023-03-09T14:32:28Z"
+    message: 1 nodes are at revision 5
+    reason: AllNodesAtLatestRevision
+    status: "False"
     type: NodeInstallerProgressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     status: "False"
@@ -151,7 +150,6 @@ status:
   latestAvailableRevision: 5
   latestAvailableRevisionReason: ""
   nodeStatuses:
-  - currentRevision: 0
+  - currentRevision: 5
     nodeName: vrutkovs-sno
-    targetRevision: 5
   readyReplicas: 0
