@@ -44,7 +44,7 @@ metadata:
     manager: cluster-openshift-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:31:58Z"
+    time: "2023-03-09T14:32:02Z"
   name: openshift-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "13327"
+  resourceVersion: "13994"
   uid: 554eb8d5-f8a6-4fb8-afb7-e4785239d130
 spec: {}
 status:
@@ -67,10 +67,15 @@ status:
     reason: AsExpected
     status: "False"
     type: Progressing
-  - lastTransitionTime: "2023-03-09T14:31:58Z"
-    message: All is well
-    reason: AsExpected
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:32:02Z"
+    message: |-
+      APIServicesAvailable: "project.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+      APIServicesAvailable: "quota.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+      APIServicesAvailable: "route.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+      APIServicesAvailable: "security.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+      APIServicesAvailable: "template.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+    reason: APIServices_Error
+    status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: All is well
