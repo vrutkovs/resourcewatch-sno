@@ -208,8 +208,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -225,6 +223,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:22:43Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:02Z"
   name: openshift-state-metrics-6546f7bbd5-xhkvp
   namespace: openshift-monitoring
   ownerReferences:
@@ -234,7 +244,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-state-metrics-6546f7bbd5
     uid: 38d47adb-1409-4a44-a470-f9b6c0ff7ba7
-  resourceVersion: "5872"
+  resourceVersion: "13790"
   uid: 38622ac5-a3af-44f2-8e23-f27add10741b
 spec:
   containers:
@@ -421,8 +431,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:43Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:02Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:43Z"
