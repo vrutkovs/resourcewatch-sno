@@ -183,7 +183,7 @@ metadata:
     kind: Deployment
     name: route-controller-manager
     uid: ad9d7992-335d-4009-a433-f1dc108a6d16
-  resourceVersion: "10659"
+  resourceVersion: "10676"
   uid: 3236f8a6-c684-4a31-bf11-af2c7573d287
 spec:
   replicas: 1
@@ -305,5 +305,5 @@ spec:
           defaultMode: 420
           secretName: serving-cert
 status:
-  observedGeneration: 1
+  observedGeneration: 2
   replicas: 0
