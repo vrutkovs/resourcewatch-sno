@@ -95,6 +95,40 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:metadata:
         f:annotations:
           f:k8s.ovn.org/pod-networks: {}
@@ -110,7 +144,7 @@ metadata:
     kind: ReplicaSet
     name: csi-snapshot-webhook-54dc7f6b54
     uid: 703d13bc-cabb-4215-a8cb-62dd95b636d0
-  resourceVersion: "3534"
+  resourceVersion: "3561"
   uid: 54c31e4a-7309-4e5a-a251-c52cbc91e8e8
 spec:
   affinity:
@@ -221,6 +255,35 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:00Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:22:00Z"
+    message: 'containers with unready status: [webhook]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:22:00Z"
+    message: 'containers with unready status: [webhook]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:22:00Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:50beb6dcf8e67cfa10be580b40883e76ac23448d13739e2ebe3a273566109b8b
+    imageID: ""
+    lastState: {}
+    name: webhook
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.93
   phase: Pending
   qosClass: Burstable
+  startTime: "2023-03-09T14:22:00Z"
