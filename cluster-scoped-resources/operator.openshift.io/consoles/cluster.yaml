@@ -44,14 +44,14 @@ metadata:
     manager: console
     operation: Update
     subresource: status
-    time: "2023-03-09T14:34:59Z"
+    time: "2023-03-09T14:35:02Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16992"
+  resourceVersion: "17032"
   uid: 220131d0-1fdb-4e14-a9b0-f123fc3fa77f
 spec:
   logLevel: Normal
@@ -102,10 +102,8 @@ status:
   - lastTransitionTime: "2023-03-09T14:32:37Z"
     status: "False"
     type: SyncLoopRefreshDegraded
-  - lastTransitionTime: "2023-03-09T14:34:59Z"
-    message: Changes made during sync updates, additional sync expected.
-    reason: InProgress
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:35:02Z"
+    status: "False"
     type: SyncLoopRefreshProgressing
   - lastTransitionTime: "2023-03-09T14:32:26Z"
     status: "False"
@@ -206,10 +204,8 @@ status:
   - lastTransitionTime: "2023-03-09T14:32:37Z"
     status: "False"
     type: DeploymentSyncProgressing
-  - lastTransitionTime: "2023-03-09T14:32:37Z"
-    message: 0 replicas available for console deployment
-    reason: InsufficientReplicas
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:35:02Z"
+    status: "True"
     type: DeploymentAvailable
   - lastTransitionTime: "2023-03-09T14:32:37Z"
     status: "False"
@@ -243,4 +239,4 @@ status:
     namespace: openshift-console
     resource: deployments
   observedGeneration: 1
-  readyReplicas: 0
+  readyReplicas: 1
