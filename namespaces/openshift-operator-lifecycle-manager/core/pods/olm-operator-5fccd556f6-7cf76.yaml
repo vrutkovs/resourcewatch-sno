@@ -149,7 +149,7 @@ metadata:
     kind: ReplicaSet
     name: olm-operator-5fccd556f6
     uid: 4c987813-63b3-4af7-90fa-e10158fa33e2
-  resourceVersion: "8572"
+  resourceVersion: "8575"
   uid: 88b458f5-b8fd-4384-a4b8-d57d22d2f34d
 spec:
   containers:
@@ -229,6 +229,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     kubernetes.io/os: linux
     node-role.kubernetes.io/master: ""
@@ -295,5 +296,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:28:53Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
