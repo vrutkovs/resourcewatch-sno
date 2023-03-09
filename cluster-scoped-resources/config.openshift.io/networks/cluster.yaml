@@ -1,0 +1,34 @@
+apiVersion: config.openshift.io/v1
+kind: Network
+metadata:
+  creationTimestamp: "2023-03-09T14:14:27Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:clusterNetwork: {}
+        f:externalIP:
+          .: {}
+          f:policy: {}
+        f:networkType: {}
+        f:serviceNetwork: {}
+      f:status: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:14:27Z"
+  name: cluster
+  resourceVersion: "566"
+  uid: 4c660381-a6c2-498c-b9b6-7cd0d65a8c84
+spec:
+  clusterNetwork:
+  - cidr: 10.128.0.0/14
+    hostPrefix: 23
+  externalIP:
+    policy: {}
+  networkType: OVNKubernetes
+  serviceNetwork:
+  - 172.30.0.0/16
+status: {}
