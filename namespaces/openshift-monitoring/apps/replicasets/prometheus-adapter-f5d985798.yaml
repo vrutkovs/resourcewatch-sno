@@ -6,7 +6,7 @@ metadata:
     deployment.kubernetes.io/max-replicas: "2"
     deployment.kubernetes.io/revision: "1"
   creationTimestamp: "2023-03-09T14:22:40Z"
-  generation: 1
+  generation: 2
   labels:
     app.kubernetes.io/component: metrics-adapter
     app.kubernetes.io/managed-by: cluster-monitoring-operator
@@ -15,6 +15,19 @@ metadata:
     app.kubernetes.io/version: 0.10.0
     pod-template-hash: f5d985798
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:availableReplicas: {}
+        f:fullyLabeledReplicas: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:08Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -195,20 +208,7 @@ metadata:
                 f:name: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-09T14:22:40Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:availableReplicas: {}
-        f:fullyLabeledReplicas: {}
-        f:observedGeneration: {}
-        f:readyReplicas: {}
-        f:replicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:08Z"
+    time: "2023-03-09T14:32:47Z"
   name: prometheus-adapter-f5d985798
   namespace: openshift-monitoring
   ownerReferences:
@@ -218,10 +218,10 @@ metadata:
     kind: Deployment
     name: prometheus-adapter
     uid: 39994971-7ca2-40a2-b9c4-bc49c10b00ad
-  resourceVersion: "14426"
+  resourceVersion: "15944"
   uid: 00aafcc8-1f59-40dd-81f8-296659b61ac5
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app.kubernetes.io/component: metrics-adapter
