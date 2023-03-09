@@ -357,8 +357,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -371,8 +369,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -399,7 +395,7 @@ metadata:
     kind: ReplicaSet
     name: apiserver-5974c8c8bd
     uid: 0508d21e-7e56-41f5-a005-71a0a68a7b95
-  resourceVersion: "14722"
+  resourceVersion: "14724"
   uid: fa39b23c-acc9-42e0-9490-bf2e465ae9ad
 spec:
   affinity:
@@ -669,16 +665,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:07Z"
-    message: 'containers with unready status: [openshift-apiserver]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:32:11Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:07Z"
-    message: 'containers with unready status: [openshift-apiserver]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:32:11Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:23:03Z"
@@ -700,7 +692,7 @@ status:
         reason: Error
         startedAt: "2023-03-09T14:26:47Z"
     name: openshift-apiserver
-    ready: false
+    ready: true
     restartCount: 4
     started: true
     state:
