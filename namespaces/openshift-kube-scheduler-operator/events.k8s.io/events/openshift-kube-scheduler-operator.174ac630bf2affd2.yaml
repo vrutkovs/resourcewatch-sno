@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:03Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:03Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-config-observer-configobserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:04Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:22:04Z"
+  name: openshift-kube-scheduler-operator.174ac630bf2affd2
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "3983"
+  uid: f80f4596-03bd-4658-8384-c152a769c441
+note: "Writing updated observed config:   map[string]any{\n+ \t\"servingInfo\": map[string]any{\n+
+  \t\t\"cipherSuites\": []any{\n+ \t\t\tstring(\"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256\"),\n+
+  \t\t\tstring(\"TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256\"),\n+ \t\t\tstring(\"TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384\"),\n+
+  \t\t\tstring(\"TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384\"),\n+ \t\t\tstring(\"TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256\"),\n+
+  \t\t\tstring(\"TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256\"),\n+ \t\t},\n+ \t\t\"minTLSVersion\":
+  string(\"VersionTLS12\"),\n+ \t},\n  }\n"
+reason: ObservedConfigChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 63ed6034-26ff-494c-bb49-f929f1f6a34d
+type: Normal
