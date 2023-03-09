@@ -45,7 +45,7 @@ metadata:
     manager: csi-snapshot-controller-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:02Z"
+    time: "2023-03-09T14:22:03Z"
   name: csi-snapshot-controller
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -53,7 +53,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3818"
+  resourceVersion: "3868"
   uid: e0331be3-eea0-4389-ad97-427d46033c20
 spec: {}
 status:
@@ -66,13 +66,17 @@ status:
     status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: 'CSISnapshotControllerProgressing: Waiting for Deployment to act on changes'
-    reason: CSISnapshotController_Deploying
+    message: |-
+      CSISnapshotControllerProgressing: Waiting for Deployment to act on changes
+      CSISnapshotWebhookControllerProgressing: Waiting for Deployment to deploy pods
+    reason: CSISnapshotController_Deploying::CSISnapshotWebhookController_Deploying
     status: "True"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: 'CSISnapshotControllerAvailable: Waiting for Deployment'
-    reason: CSISnapshotController_Deploying
+    message: |-
+      CSISnapshotControllerAvailable: Waiting for Deployment
+      CSISnapshotWebhookControllerAvailable: Waiting for Deployment
+    reason: CSISnapshotController_Deploying::CSISnapshotWebhookController_Deploying
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
