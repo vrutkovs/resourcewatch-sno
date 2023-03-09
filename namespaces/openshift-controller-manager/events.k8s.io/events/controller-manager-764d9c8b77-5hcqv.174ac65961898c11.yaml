@@ -1,0 +1,41 @@
+action: Scheduling
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:24:58.339716Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:58Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:24:58Z"
+  name: controller-manager-764d9c8b77-5hcqv.174ac65961898c11
+  namespace: openshift-controller-manager
+  resourceVersion: "7374"
+  uid: 33a99d24-a2f9-4bb1-b6a0-d9a51ba188cc
+note: '0/1 nodes are available: 1 node(s) didn''t match pod anti-affinity rules. preemption:
+  0/1 nodes are available: 1 node(s) didn''t match pod anti-affinity rules..'
+reason: FailedScheduling
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: controller-manager-764d9c8b77-5hcqv
+  namespace: openshift-controller-manager
+  resourceVersion: "6221"
+  uid: 947e9ae8-5f9c-4184-b0a7-26b031197531
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Warning
