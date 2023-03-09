@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:16Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:16Z"
+deprecatedSource:
+  component: kube-apiserver-operator-cert-rotation-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:23Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:29:23Z"
+  name: kube-apiserver-operator.174ac6956d6c33db
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "9833"
+  uid: 0ee18c69-f1b0-4228-8476-b08a96771e8d
+note: '"kube-scheduler-client-cert-key" in "openshift-config-managed" requires a new
+  target cert/key pair: missing notAfter'
+reason: TargetUpdateRequired
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Normal
