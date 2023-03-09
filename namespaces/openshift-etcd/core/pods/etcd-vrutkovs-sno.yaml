@@ -810,6 +810,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -825,19 +827,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:14Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:08Z"
   name: etcd-vrutkovs-sno
   namespace: openshift-etcd
   ownerReferences:
@@ -846,7 +836,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "13753"
+  resourceVersion: "14439"
   uid: 1b51edb2-8be2-46cd-9527-085464eea3b7
 spec:
   containers:
@@ -1402,8 +1392,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:12Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:12Z"
