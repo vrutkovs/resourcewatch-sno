@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:20:33Z"
+deprecatedLastTimestamp: "2023-03-09T14:20:33Z"
+deprecatedSource:
+  component: daemonset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:33Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:20:33Z"
+  name: ovnkube-master.174ac61ba1dc1101
+  namespace: openshift-ovn-kubernetes
+  resourceVersion: "2750"
+  uid: 9d5f652a-9068-4e7a-9e35-861a33388361
+note: 'Created pod: ovnkube-master-c82lr'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: DaemonSet
+  name: ovnkube-master
+  namespace: openshift-ovn-kubernetes
+  resourceVersion: "2747"
+  uid: 5e54e35f-7fe1-4309-a412-ba71c74af3ed
+type: Normal
