@@ -3,6 +3,9 @@ kind: Namespace
 metadata:
   annotations:
     openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c23,c7
+    openshift.io/sa.scc.supplemental-groups: 1000520000/10000
+    openshift.io/sa.scc.uid-range: 1000520000/10000
     workload.openshift.io/allowed: management
   creationTimestamp: "2023-03-09T14:20:33Z"
   labels:
@@ -23,6 +26,17 @@ metadata:
     manager: cluster-network-operator/operconfig
     operation: Apply
     time: "2023-03-09T14:20:33Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:20:33Z"
   name: openshift-network-diagnostics
   ownerReferences:
   - apiVersion: operator.openshift.io/v1
@@ -31,7 +45,7 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "2777"
+  resourceVersion: "2782"
   uid: cd484595-4da7-430c-a766-e47d147256cb
 spec:
   finalizers:
