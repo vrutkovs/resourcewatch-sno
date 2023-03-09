@@ -37,6 +37,8 @@ metadata:
       f:status:
         .: {}
         f:conditions: {}
+        f:latestAvailableRevision: {}
+        f:latestAvailableRevisionReason: {}
         f:readyReplicas: {}
     manager: cluster-kube-controller-manager-operator
     operation: Update
@@ -48,7 +50,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3635"
+  resourceVersion: "3647"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -61,4 +63,25 @@ status:
     reason: NoUnsupportedConfigOverrides
     status: "True"
     type: UnsupportedConfigOverridesUpgradeable
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    message: 'missing required resources: [configmaps: aggregator-client-ca,client-ca,
+      secrets: csr-signer,kube-controller-manager-client-cert-key, configmaps: cluster-policy-controller-config-0,config-0,controller-manager-kubeconfig-0,kube-controller-cert-syncer-kubeconfig-0,kube-controller-manager-pod-0,recycler-config-0,service-ca-0,serviceaccount-ca-0,
+      secrets: localhost-recovery-client-token-0,service-account-private-key-0]'
+    reason: Error
+    status: "True"
+    type: InstallerControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    message: '0 nodes are active; '
+    reason: ZeroNodesActive
+    status: "False"
+    type: StaticPodsAvailable
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    reason: AllNodesAtLatestRevision
+    status: "False"
+    type: NodeInstallerProgressing
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    status: "False"
+    type: NodeInstallerDegraded
+  latestAvailableRevision: 0
+  latestAvailableRevisionReason: ""
   readyReplicas: 0
