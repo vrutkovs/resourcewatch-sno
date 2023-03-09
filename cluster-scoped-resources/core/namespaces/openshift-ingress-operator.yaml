@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    openshift.io/node-selector: ""
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2023-03-09T14:14:26Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-ingress-operator
+    openshift.io/cluster-monitoring: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/cluster-monitoring: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:14:26Z"
+  name: openshift-ingress-operator
+  resourceVersion: "556"
+  uid: 202c644e-794b-404a-990e-c05eb9bcccbd
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
