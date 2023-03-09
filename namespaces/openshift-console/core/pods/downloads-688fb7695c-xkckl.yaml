@@ -137,8 +137,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -151,8 +149,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -168,7 +164,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:26Z"
+    time: "2023-03-09T14:32:28Z"
   name: downloads-688fb7695c-xkckl
   namespace: openshift-console
   ownerReferences:
@@ -178,7 +174,7 @@ metadata:
     kind: ReplicaSet
     name: downloads-688fb7695c
     uid: ff4bbfd5-d819-4efa-a783-78f5e06c4ea9
-  resourceVersion: "15180"
+  resourceVersion: "15298"
   uid: 02157f75-7110-43df-87d1-40bcaeaf5461
 spec:
   affinity: {}
@@ -343,16 +339,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:12Z"
-    message: 'containers with unready status: [download-server]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:32:28Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:12Z"
-    message: 'containers with unready status: [download-server]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:32:28Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:12Z"
@@ -364,7 +356,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6d46f731cbe328e293f88842f97b2dd6bfe8e9a82a1b0cf8cfc63cb2bf33f52c
     lastState: {}
     name: download-server
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
