@@ -46,7 +46,7 @@ metadata:
     manager: console
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:39Z"
+    time: "2023-03-09T14:32:41Z"
   name: console
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -54,13 +54,14 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15602"
+  resourceVersion: "15735"
   uid: 515b351d-ea5a-461b-89c7-b327405f0155
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:32:14Z"
-    message: 'RouteHealthDegraded: console route is not admitted'
+    message: 'RouteHealthDegraded: route not yet available, https://console-openshift-console.apps.ocp.choomba.one
+      returns ''503 Service Unavailable'''
     reason: AsExpected
     status: "False"
     type: Degraded
@@ -73,8 +74,8 @@ status:
   - lastTransitionTime: "2023-03-09T14:32:22Z"
     message: |-
       DeploymentAvailable: 0 replicas available for console deployment
-      RouteHealthAvailable: console route is not admitted
-    reason: Deployment_InsufficientReplicas::RouteHealth_RouteNotAdmitted
+      RouteHealthAvailable: route not yet available, https://console-openshift-console.apps.ocp.choomba.one returns '503 Service Unavailable'
+    reason: Deployment_InsufficientReplicas::RouteHealth_StatusError
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:32:13Z"
