@@ -347,7 +347,7 @@ metadata:
     kind: ReplicaSet
     name: router-default-7c6dfd9fb7
     uid: 60060897-6bbe-4498-872f-27825dcdc46a
-  resourceVersion: "14491"
+  resourceVersion: "14583"
   uid: 25f9052f-edeb-4f6b-a4da-f714b6374bdb
 spec:
   containers:
@@ -591,21 +591,10 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://e509ddb571e9db8f8b8d736573c648d729ddc70a011d50547ed679bdf557a004
+  - containerID: cri-o://0bd9ec6a6a28d4d41129643c78542aeceb0122822b8cd268ed26410357bdd151
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:af5fed62790f3da5a9b7d32374331539ab531f17d006a69ea501622d946a07fe
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:af5fed62790f3da5a9b7d32374331539ab531f17d006a69ea501622d946a07fe
     lastState:
-      terminated:
-        containerID: cri-o://9ab7466a2d5d4dc1a9f7195577b0660136293b3555f8a6e8a25a32606f436199
-        exitCode: 0
-        finishedAt: "2023-03-09T14:28:09Z"
-        reason: Completed
-        startedAt: "2023-03-09T14:25:23Z"
-    name: router
-    ready: false
-    restartCount: 2
-    started: false
-    state:
       terminated:
         containerID: cri-o://e509ddb571e9db8f8b8d736573c648d729ddc70a011d50547ed679bdf557a004
         exitCode: 137
@@ -639,6 +628,13 @@ status:
           template.go:710] router \"msg\"=\"Shutdown complete, exiting\" \n"
         reason: Error
         startedAt: "2023-03-09T14:28:09Z"
+    name: router
+    ready: false
+    restartCount: 3
+    started: false
+    state:
+      running:
+        startedAt: "2023-03-09T14:32:06Z"
   hostIP: 10.0.130.93
   phase: Running
   podIP: 10.0.130.93
