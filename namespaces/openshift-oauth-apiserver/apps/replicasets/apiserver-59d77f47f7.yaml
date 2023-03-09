@@ -21,17 +21,6 @@ metadata:
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        f:fullyLabeledReplicas: {}
-        f:observedGeneration: {}
-        f:replicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:22:33Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:metadata:
         f:annotations:
           .: {}
@@ -258,6 +247,17 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:23:11Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:fullyLabeledReplicas: {}
+        f:observedGeneration: {}
+        f:replicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:23:11Z"
   name: apiserver-59d77f47f7
   namespace: openshift-oauth-apiserver
   ownerReferences:
@@ -267,7 +267,7 @@ metadata:
     kind: Deployment
     name: apiserver
     uid: 39c9e401-3aa2-4df1-a514-e9eb77325346
-  resourceVersion: "6563"
+  resourceVersion: "6572"
   uid: 487d4513-d57a-47b1-9acf-7967b4eb5900
 spec:
   replicas: 0
@@ -471,5 +471,5 @@ spec:
         name: audit-dir
 status:
   fullyLabeledReplicas: 1
-  observedGeneration: 2
+  observedGeneration: 3
   replicas: 1
