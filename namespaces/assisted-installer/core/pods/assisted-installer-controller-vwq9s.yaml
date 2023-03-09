@@ -181,18 +181,21 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -208,7 +211,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:08Z"
+    time: "2023-03-09T14:36:15Z"
   name: assisted-installer-controller-vwq9s
   namespace: assisted-installer
   ownerReferences:
@@ -218,7 +221,7 @@ metadata:
     kind: Job
     name: assisted-installer-controller
     uid: f5a4e959-715f-4436-8272-3a0acf078c12
-  resourceVersion: "14353"
+  resourceVersion: "17291"
   uid: bf338db4-906a-4d43-be22-8959360a0341
 spec:
   containers:
@@ -376,15 +379,18 @@ status:
   conditions:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:07Z"
+    reason: PodCompleted
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:15Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:36:15Z"
+    reason: PodCompleted
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:15Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:36:15Z"
+    reason: PodCompleted
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:19:59Z"
@@ -396,11 +402,15 @@ status:
     imageID: quay.io/edge-infrastructure/assisted-installer-controller@sha256:81c2da91bf20932218d4b0ffc0a321385d81f9971a7529cc1c164d8fe9996d6f
     lastState: {}
     name: assisted-installer-controller
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://4cf7282b71186bc297e644025c1a16a2f87316c2b58d2ce868e9361ba18674f4
+        exitCode: 0
+        finishedAt: "2023-03-09T14:36:15Z"
+        reason: Completed
         startedAt: "2023-03-09T14:20:15Z"
   hostIP: 10.0.130.93
   phase: Running
