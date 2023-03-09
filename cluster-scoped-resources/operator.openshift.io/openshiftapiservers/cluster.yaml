@@ -59,6 +59,7 @@ metadata:
       f:status:
         .: {}
         f:conditions: {}
+        f:generations: {}
         f:latestAvailableRevision: {}
         f:observedGeneration: {}
         f:readyReplicas: {}
@@ -72,7 +73,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6294"
+  resourceVersion: "6299"
   uid: 745e26c2-906b-4bfc-8835-c7ba9c167c7b
 spec:
   logLevel: Normal
@@ -164,6 +165,13 @@ status:
     reason: NewGeneration
     status: "True"
     type: OperatorConfigProgressing
+  generations:
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: apiserver
+    namespace: openshift-apiserver
+    resource: deployments
   latestAvailableRevision: 2
   observedGeneration: 2
   readyReplicas: 0
