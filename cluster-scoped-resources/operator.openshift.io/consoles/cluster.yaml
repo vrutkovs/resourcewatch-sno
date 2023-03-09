@@ -44,14 +44,14 @@ metadata:
     manager: console
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:43Z"
+    time: "2023-03-09T14:32:46Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15808"
+  resourceVersion: "15894"
   uid: 220131d0-1fdb-4e14-a9b0-f123fc3fa77f
 spec:
   logLevel: Normal
@@ -223,6 +223,12 @@ status:
   - lastTransitionTime: "2023-03-09T14:32:42Z"
     status: "False"
     type: ODODownloadsSyncDegraded
+  - lastTransitionTime: "2023-03-09T14:32:44Z"
+    status: "False"
+    type: ConsoleNotificationSyncDegraded
+  - lastTransitionTime: "2023-03-09T14:32:44Z"
+    status: "False"
+    type: ConsoleNotificationSyncProgressing
   generations:
   - group: apps
     hash: ""
