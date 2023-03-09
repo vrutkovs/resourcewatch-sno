@@ -138,6 +138,46 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:19:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.93"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:07Z"
   name: cluster-version-operator-c4f49bf9f-hqn97
   namespace: openshift-cluster-version
   ownerReferences:
@@ -147,7 +187,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-version-operator-c4f49bf9f
     uid: fecf325a-68c4-4c40-90b9-720005fcd7de
-  resourceVersion: "2273"
+  resourceVersion: "2433"
   uid: 73eecfbd-4528-4a41-8f34-97198bb47986
 spec:
   automountServiceAccountToken: false
@@ -283,8 +323,40 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:07Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:07Z"
+    message: 'containers with unready status: [cluster-version-operator]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:07Z"
+    message: 'containers with unready status: [cluster-version-operator]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:19:59Z"
     status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/release@sha256:d1680bbb0440b5ecad41a725943ea1feaeea72eaed97943964572ba8dc00367e
+    imageID: ""
+    lastState: {}
+    name: cluster-version-operator
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.93
   phase: Pending
+  podIP: 10.0.130.93
+  podIPs:
+  - ip: 10.0.130.93
   qosClass: Burstable
+  startTime: "2023-03-09T14:20:07Z"
