@@ -181,7 +181,9 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -194,7 +196,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8577"
+  resourceVersion: "8580"
   uid: a1cd7de3-b443-4478-a0fb-7a9fc2ff8975
 spec:
   progressDeadlineSeconds: 600
@@ -326,15 +328,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:28:53Z"
     lastUpdateTime: "2023-03-09T14:28:53Z"
-    message: Created new replica set "olm-operator-5fccd556f6"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-09T14:28:53Z"
-    lastUpdateTime: "2023-03-09T14:28:53Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-09T14:28:53Z"
+    lastUpdateTime: "2023-03-09T14:28:53Z"
+    message: ReplicaSet "olm-operator-5fccd556f6" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
