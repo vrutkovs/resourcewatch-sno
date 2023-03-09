@@ -107,6 +107,7 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
+        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -126,13 +127,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
-        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:07Z"
   name: multus-admission-controller
   namespace: openshift-multus
   ownerReferences:
@@ -142,7 +143,7 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "13733"
+  resourceVersion: "14324"
   uid: 3f577280-a91b-42dc-8ed6-a9b403637b32
 spec:
   progressDeadlineSeconds: 600
@@ -246,6 +247,7 @@ spec:
           defaultMode: 420
           secretName: multus-admission-controller-secret
 status:
+  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-03-09T14:20:26Z"
     lastUpdateTime: "2023-03-09T14:22:40Z"
@@ -254,13 +256,13 @@ status:
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
-  - lastTransitionTime: "2023-03-09T14:32:02Z"
-    lastUpdateTime: "2023-03-09T14:32:02Z"
-    message: Deployment does not have minimum availability.
-    reason: MinimumReplicasUnavailable
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:32:07Z"
+    lastUpdateTime: "2023-03-09T14:32:07Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
     type: Available
   observedGeneration: 2
+  readyReplicas: 1
   replicas: 1
-  unavailableReplicas: 1
   updatedReplicas: 1
