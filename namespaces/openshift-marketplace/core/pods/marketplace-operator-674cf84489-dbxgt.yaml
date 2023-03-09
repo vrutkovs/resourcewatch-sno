@@ -209,6 +209,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -221,6 +223,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -236,7 +240,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:24:57Z"
+    time: "2023-03-09T14:27:13Z"
   name: marketplace-operator-674cf84489-dbxgt
   namespace: openshift-marketplace
   ownerReferences:
@@ -246,7 +250,7 @@ metadata:
     kind: ReplicaSet
     name: marketplace-operator-674cf84489
     uid: 6de7f729-4467-44a0-b559-6acd49abfed5
-  resourceVersion: "7359"
+  resourceVersion: "7713"
   uid: e0c97e17-7e07-4da5-9587-dcabc1819678
 spec:
   containers:
@@ -400,35 +404,39 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:24:57Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:26:50Z"
+    message: 'containers with unready status: [marketplace-operator]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:24:57Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:26:50Z"
+    message: 'containers with unready status: [marketplace-operator]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:21:51Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://d854c850dde9e12eb0a8dc67cda454e12844b005bb16d909922bf3e098cdaae9
+  - containerID: cri-o://6f6b3385af29d59eccbd06d4cd90ee95c3f682b5bb05ba3956f14cf7afa1d632
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:b6f02088fb1a0bdf8d3b8d138034dc8ed52f58b459ce6aaa1dec833a0a6789dd
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:b6f02088fb1a0bdf8d3b8d138034dc8ed52f58b459ce6aaa1dec833a0a6789dd
     lastState:
       terminated:
-        containerID: cri-o://fee010563f7cc3192ae0785c5fb1a8f2e9fee18d6c94427b69c340468adb13b9
+        containerID: cri-o://d854c850dde9e12eb0a8dc67cda454e12844b005bb16d909922bf3e098cdaae9
         exitCode: 0
-        finishedAt: "2023-03-09T14:24:43Z"
+        finishedAt: "2023-03-09T14:26:49Z"
         reason: Completed
-        startedAt: "2023-03-09T14:22:12Z"
+        startedAt: "2023-03-09T14:24:44Z"
     name: marketplace-operator
-    ready: true
-    restartCount: 1
+    ready: false
+    restartCount: 2
     started: true
     state:
       running:
-        startedAt: "2023-03-09T14:24:44Z"
+        startedAt: "2023-03-09T14:27:12Z"
   hostIP: 10.0.130.93
   phase: Running
   podIP: 10.128.0.17
