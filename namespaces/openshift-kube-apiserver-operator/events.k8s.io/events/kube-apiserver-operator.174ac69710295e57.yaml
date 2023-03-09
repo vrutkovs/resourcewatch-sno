@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:23Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:23Z"
+deprecatedSource:
+  component: kube-apiserver-operator-config-observer-configobserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:26Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:29:26Z"
+  name: kube-apiserver-operator.174ac69710295e57
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "9891"
+  uid: 3b280521-8673-4e7f-8c87-1829d16cdfd5
+note: cipherSuites changed to ["TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256" "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+  "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384" "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+  "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256" "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"]
+reason: ObserveTLSSecurityProfile
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Normal
