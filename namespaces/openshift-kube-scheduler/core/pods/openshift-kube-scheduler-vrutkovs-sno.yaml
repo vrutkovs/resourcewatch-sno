@@ -247,6 +247,7 @@ metadata:
         f:containerStatuses: {}
         f:hostIP: {}
         f:initContainerStatuses: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -257,7 +258,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:31:38Z"
+    time: "2023-03-09T14:31:39Z"
   name: openshift-kube-scheduler-vrutkovs-sno
   namespace: openshift-kube-scheduler
   ownerReferences:
@@ -266,7 +267,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "13091"
+  resourceVersion: "13110"
   uid: 3145a7f3-8287-406f-a80e-b534c1886caf
 spec:
   containers:
@@ -436,15 +437,13 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:31:22Z"
-    message: 'containers with unready status: [kube-scheduler kube-scheduler-cert-syncer
-      kube-scheduler-recovery-controller]'
+    message: 'containers with unready status: [kube-scheduler]'
     reason: ContainersNotReady
     status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:31:22Z"
-    message: 'containers with unready status: [kube-scheduler kube-scheduler-cert-syncer
-      kube-scheduler-recovery-controller]'
+    message: 'containers with unready status: [kube-scheduler]'
     reason: ContainersNotReady
     status: "False"
     type: ContainersReady
@@ -453,36 +452,39 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
-    imageID: ""
+  - containerID: cri-o://406afb49b7600c1a0bfa0663a9d9940d8a06d73e5415e58f2ede04fa36185efc
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
     lastState: {}
     name: kube-scheduler
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: PodInitializing
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:31:38Z"
+  - containerID: cri-o://fbfbb4ed517f22425083b78f7ad70bfb50352c37faadf2b27210eee484a25384
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
     lastState: {}
     name: kube-scheduler-cert-syncer
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: PodInitializing
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:31:38Z"
+  - containerID: cri-o://f3ef3337cca152710592616857a1cae3388e92894a1f000aa4c020898e350fa2
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
     lastState: {}
     name: kube-scheduler-recovery-controller
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: PodInitializing
+      running:
+        startedAt: "2023-03-09T14:31:38Z"
   hostIP: 10.0.130.93
   initContainerStatuses:
   - containerID: cri-o://be7e2090c62ba50e8eb69b496f40b808da20153433adeab9d7a4d567887d235b
@@ -499,7 +501,7 @@ status:
         finishedAt: "2023-03-09T14:31:37Z"
         reason: Completed
         startedAt: "2023-03-09T14:31:37Z"
-  phase: Pending
+  phase: Running
   podIP: 10.0.130.93
   podIPs:
   - ip: 10.0.130.93
