@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:37:27Z"
+deprecatedLastTimestamp: "2023-03-09T14:37:27Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-revisioncontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:37:27Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:37:27Z"
+  name: kube-controller-manager-operator.174ac707b14fee2f
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "17500"
+  uid: cfc6e84d-273a-4de9-ad1a-d3f13f02f327
+note: Created ConfigMap/controller-manager-kubeconfig-6 -n openshift-kube-controller-manager
+  because it was missing
+reason: ConfigMapCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Normal
