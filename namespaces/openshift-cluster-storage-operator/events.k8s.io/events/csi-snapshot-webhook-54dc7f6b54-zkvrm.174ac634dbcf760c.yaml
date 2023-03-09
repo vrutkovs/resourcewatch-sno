@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:21Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:21Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:23Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:22:23Z"
+  name: csi-snapshot-webhook-54dc7f6b54-zkvrm.174ac634dbcf760c
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "5016"
+  uid: 1a8baac3-b02a-472c-a87a-4495bc9326e2
+note: Successfully pulled image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:50beb6dcf8e67cfa10be580b40883e76ac23448d13739e2ebe3a273566109b8b"
+  in 3.070695202s (3.070715775s including waiting)
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{webhook}
+  kind: Pod
+  name: csi-snapshot-webhook-54dc7f6b54-zkvrm
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "3516"
+  uid: 54c31e4a-7309-4e5a-a251-c52cbc91e8e8
+type: Normal
