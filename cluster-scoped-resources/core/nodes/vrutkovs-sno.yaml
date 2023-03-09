@@ -11,8 +11,10 @@ metadata:
     k8s.ovn.org/node-subnets: '{"default":["10.128.0.0/23"]}'
     machineconfiguration.openshift.io/currentConfig: rendered-master-b84983722a8f041fcce35c8e28efcb54
     machineconfiguration.openshift.io/desiredConfig: rendered-master-b84983722a8f041fcce35c8e28efcb54
+    machineconfiguration.openshift.io/reason: machineconfig.machineconfiguration.openshift.io
+      "rendered-master-b84983722a8f041fcce35c8e28efcb54" not found
     machineconfiguration.openshift.io/ssh: accessed
-    machineconfiguration.openshift.io/state: Done
+    machineconfiguration.openshift.io/state: Degraded
     volumes.kubernetes.io/controller-managed-attach-detach: "true"
   creationTimestamp: "2023-03-09T14:19:59Z"
   labels:
@@ -97,13 +99,14 @@ metadata:
         f:annotations:
           f:machineconfiguration.openshift.io/currentConfig: {}
           f:machineconfiguration.openshift.io/desiredConfig: {}
+          f:machineconfiguration.openshift.io/reason: {}
           f:machineconfiguration.openshift.io/ssh: {}
           f:machineconfiguration.openshift.io/state: {}
     manager: machine-config-daemon
     operation: Update
     time: "2023-03-09T14:22:15Z"
   name: vrutkovs-sno
-  resourceVersion: "4661"
+  resourceVersion: "4664"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
 spec:
   taints:
