@@ -44,7 +44,7 @@ metadata:
     manager: cluster-openshift-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:10Z"
+    time: "2023-03-09T14:32:11Z"
   name: openshift-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "14671"
+  resourceVersion: "14750"
   uid: 554eb8d5-f8a6-4fb8-afb7-e4785239d130
 spec: {}
 status:
@@ -70,9 +70,15 @@ status:
     status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:32:02Z"
-    message: 'APIServerDeploymentAvailable: no apiserver.openshift-apiserver pods
-      available on any node.'
-    reason: APIServerDeployment_NoPod
+    message: |-
+      APIServerDeploymentAvailable: no apiserver.openshift-apiserver pods available on any node.
+      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.authorization.openshift.io: not available: endpoints for service/api in "openshift-apiserver" have no addresses with port name "https"
+      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.build.openshift.io: not available: endpoints for service/api in "openshift-apiserver" have no addresses with port name "https"
+      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.image.openshift.io: not available: endpoints for service/api in "openshift-apiserver" have no addresses with port name "https"
+      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.project.openshift.io: not available: endpoints for service/api in "openshift-apiserver" have no addresses with port name "https"
+      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.quota.openshift.io: not available: endpoints for service/api in "openshift-apiserver" have no addresses with port name "https"
+      APIServicesAvailable: apiservices.apiregistration.k8s.io/v1.route.openshift.io: not available: endpoints for service/api in "openshift-apiserver" have no addresses with port name "https"
+    reason: APIServerDeployment_NoPod::APIServices_Error
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
