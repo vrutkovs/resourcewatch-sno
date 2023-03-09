@@ -249,11 +249,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:14:55Z"
+    time: "2023-03-09T14:20:00Z"
   name: network-operator
   namespace: openshift-network-operator
   ownerReferences:
@@ -262,7 +264,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "2393"
+  resourceVersion: "2394"
   uid: fa931036-6675-4cee-8fe6-6b11b9af8ad6
 spec:
   progressDeadlineSeconds: 600
@@ -418,15 +420,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:14:55Z"
     lastUpdateTime: "2023-03-09T14:14:55Z"
-    message: Created new replica set "network-operator-5556ffc66"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-09T14:14:55Z"
-    lastUpdateTime: "2023-03-09T14:14:55Z"
     message: Deployment has minimum availability.
     reason: MinimumReplicasAvailable
     status: "True"
     type: Available
+  - lastTransitionTime: "2023-03-09T14:14:55Z"
+    lastUpdateTime: "2023-03-09T14:20:00Z"
+    message: ReplicaSet "network-operator-5556ffc66" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
