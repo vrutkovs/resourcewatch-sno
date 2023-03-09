@@ -4,7 +4,7 @@ metadata:
   annotations:
     networkoperator.openshift.io/ovn-cluster-initiator: 10.0.130.93
   creationTimestamp: "2023-03-09T14:20:15Z"
-  generation: 18
+  generation: 19
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -67,9 +67,9 @@ metadata:
         f:version: {}
     manager: cluster-network-operator
     operation: Update
-    time: "2023-03-09T14:20:37Z"
+    time: "2023-03-09T14:20:38Z"
   name: cluster
-  resourceVersion: "2854"
+  resourceVersion: "2860"
   uid: e6519524-ef16-4ee8-82f1-2faa42688032
 spec:
   clusterNetwork:
@@ -104,14 +104,8 @@ status:
   - lastTransitionTime: "2023-03-09T14:20:15Z"
     status: "False"
     type: ManagementStateDegraded
-  - lastTransitionTime: "2023-03-09T14:20:15Z"
-    message: 'Internal error while updating operator configuration: could not apply
-      (operator.openshift.io/v1, Kind=Network) /cluster, err: failed to apply / update
-      (operator.openshift.io/v1, Kind=Network) /cluster: Operation cannot be fulfilled
-      on networks.operator.openshift.io "cluster": the object has been modified; please
-      apply your changes to the latest version and try again'
-    reason: UpdateOperatorConfig
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:20:38Z"
+    status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:20:15Z"
     status: "True"
