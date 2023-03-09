@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    kubernetes.io/description: Record administrator acknowledgments of update gates
+      defined in the admin-gates ConfigMap in the openshift-config-managed namespace.
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2023-03-09T14:15:14Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:kubernetes.io/description: {}
+          f:release.openshift.io/create-only: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:15:14Z"
+  name: admin-acks
+  namespace: openshift-config
+  resourceVersion: "1891"
+  uid: 81b0d13e-192c-4541-bf51-4c56e2389415
