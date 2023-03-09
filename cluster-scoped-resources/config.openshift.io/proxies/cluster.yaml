@@ -15,9 +15,18 @@ metadata:
     manager: cluster-bootstrap
     operation: Update
     time: "2023-03-09T14:14:27Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status: {}
+    manager: cluster-bootstrap
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:14:28Z"
   name: cluster
-  resourceVersion: "567"
+  resourceVersion: "568"
   uid: ca3221d4-fa66-4c86-9e5b-f70c67b33713
 spec:
   trustedCA:
     name: ""
+status: {}
