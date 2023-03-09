@@ -52,14 +52,14 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4969"
+  resourceVersion: "4972"
   uid: fc4da80c-8238-45f0-831b-b76abd6e6070
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
-      InstallerControllerDegraded: missing required resources: [configmaps: aggregator-client-ca,client-ca, secrets: csr-signer,kube-controller-manager-client-cert-key, configmaps: cluster-policy-controller-config-1,config-1,controller-manager-kubeconfig-1,kube-controller-cert-syncer-kubeconfig-1,kube-controller-manager-pod-1,recycler-config-1,service-ca-1,serviceaccount-ca-1, secrets: localhost-recovery-client-token-1,service-account-private-key-1]
+      InstallerControllerDegraded: missing required resources: [configmaps: aggregator-client-ca,client-ca, secrets: kube-controller-manager-client-cert-key, configmaps: cluster-policy-controller-config-1,config-1,controller-manager-kubeconfig-1,kube-controller-cert-syncer-kubeconfig-1,kube-controller-manager-pod-1,recycler-config-1,service-ca-1,serviceaccount-ca-1, secrets: localhost-recovery-client-token-1,service-account-private-key-1]
       GarbageCollectorDegraded: error fetching rules: Get "https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules": dial tcp: lookup thanos-querier.openshift-monitoring.svc on 172.30.0.10:53: read udp 10.128.0.16:42132->172.30.0.10:53: read: connection refused
       NodeControllerDegraded: All master nodes are ready
       RevisionControllerDegraded: configmaps "kube-controller-manager-pod" not found
