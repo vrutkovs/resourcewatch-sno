@@ -1,0 +1,247 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2023-03-09T14:28:53Z"
+  generateName: package-server-manager-78b664bb45-
+  labels:
+    app: package-server-manager
+    pod-template-hash: 78b664bb45
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"994dbae6-c5b3-48d8-bf0c-7f45bf4c6b00"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"package-server-manager"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"PACKAGESERVER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PACKAGESERVER_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PACKAGESERVER_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"RELEASE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:28:53Z"
+  name: package-server-manager-78b664bb45-bdtcl
+  namespace: openshift-operator-lifecycle-manager
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: package-server-manager-78b664bb45
+    uid: 994dbae6-c5b3-48d8-bf0c-7f45bf4c6b00
+  resourceVersion: "8539"
+  uid: 18739b54-a4d2-41ac-8582-5e88f4aa3bb7
+spec:
+  containers:
+  - args:
+    - --name
+    - $(PACKAGESERVER_NAME)
+    - --namespace
+    - $(PACKAGESERVER_NAMESPACE)
+    command:
+    - /bin/psm
+    - start
+    env:
+    - name: PACKAGESERVER_NAME
+      value: packageserver
+    - name: PACKAGESERVER_IMAGE
+      value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:70c02853f645d8d0e82db73c738d51ace951044ac4e98e35d1db4f7cd75a3e71
+    - name: PACKAGESERVER_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: RELEASE_VERSION
+      value: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:70c02853f645d8d0e82db73c738d51ace951044ac4e98e35d1db4f7cd75a3e71
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 8080
+        scheme: HTTP
+      initialDelaySeconds: 30
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: package-server-manager
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 8080
+        scheme: HTTP
+      initialDelaySeconds: 30
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000390000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-wz5zb
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeSelector:
+    kubernetes.io/os: linux
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000390000
+    runAsNonRoot: true
+    seLinuxOptions:
+      level: s0:c20,c5
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: olm-operator-serviceaccount
+  serviceAccountName: olm-operator-serviceaccount
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: kube-api-access-wz5zb
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  phase: Pending
+  qosClass: Burstable
