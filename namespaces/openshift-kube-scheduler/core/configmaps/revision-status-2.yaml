@@ -1,6 +1,6 @@
 apiVersion: v1
 data:
-  reason: configmap "kube-scheduler-pod" not found
+  reason: configmap "kube-scheduler-pod-1" not found
   revision: "2"
 kind: ConfigMap
 metadata:
@@ -15,8 +15,8 @@ metadata:
         f:revision: {}
     manager: cluster-kube-scheduler-operator
     operation: Update
-    time: "2023-03-09T14:22:08Z"
+    time: "2023-03-09T14:22:11Z"
   name: revision-status-2
   namespace: openshift-kube-scheduler
-  resourceVersion: "4289"
+  resourceVersion: "4428"
   uid: 29bf98aa-b805-4cb4-a6bf-205fe616a1ec
