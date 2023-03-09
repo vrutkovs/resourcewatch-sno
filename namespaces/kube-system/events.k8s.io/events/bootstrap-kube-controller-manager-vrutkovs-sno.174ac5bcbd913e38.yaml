@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:13:45Z"
+deprecatedLastTimestamp: "2023-03-09T14:13:45Z"
+deprecatedSource:
+  component: cluster-policy-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:13:45Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:13:45Z"
+  name: bootstrap-kube-controller-manager-vrutkovs-sno.174ac5bcbd913e38
+  namespace: kube-system
+  resourceVersion: "129"
+  uid: 4c351cec-6a34-4323-adaa-a2347c839488
+note: 'unable to get cluster infrastructure status, using HA cluster values for leader
+  election: the server could not find the requested resource (get infrastructures.config.openshift.io
+  cluster)'
+reason: ClusterInfrastructureStatus
+regarding:
+  kind: Pod
+  name: bootstrap-kube-controller-manager-vrutkovs-sno
+  namespace: kube-system
+type: Warning
