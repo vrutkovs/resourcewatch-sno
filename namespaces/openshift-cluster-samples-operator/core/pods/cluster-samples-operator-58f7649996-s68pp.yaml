@@ -177,6 +177,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -191,19 +193,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:56Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:09Z"
   name: cluster-samples-operator-58f7649996-s68pp
   namespace: openshift-cluster-samples-operator
   ownerReferences:
@@ -213,7 +203,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-samples-operator-58f7649996
     uid: f9952198-6349-4f88-9794-c68242a02df7
-  resourceVersion: "13682"
+  resourceVersion: "14510"
   uid: 6bd58132-420b-4b77-be56-c3a0b7f20773
 spec:
   containers:
@@ -352,8 +342,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:28:56Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:28:56Z"
