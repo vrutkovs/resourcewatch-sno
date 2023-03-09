@@ -143,6 +143,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:28:50Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:50Z"
   name: cluster-samples-operator-58f7649996
   namespace: openshift-cluster-samples-operator
   ownerReferences:
@@ -152,7 +161,7 @@ metadata:
     kind: Deployment
     name: cluster-samples-operator
     uid: afb01b65-cac4-45fc-82c1-b0285738979e
-  resourceVersion: "8430"
+  resourceVersion: "8435"
   uid: f9952198-6349-4f88-9794-c68242a02df7
 spec:
   replicas: 1
@@ -257,4 +266,5 @@ spec:
           defaultMode: 420
           secretName: samples-operator-tls
 status:
+  observedGeneration: 1
   replicas: 0
