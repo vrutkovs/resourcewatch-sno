@@ -31,16 +31,34 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:46Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:readyReplicas: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:00Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1106"
+  resourceVersion: "3635"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
   managementState: Managed
   operatorLogLevel: Normal
   useMoreSecureServiceCA: true
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    reason: NoUnsupportedConfigOverrides
+    status: "True"
+    type: UnsupportedConfigOverridesUpgradeable
+  readyReplicas: 0
