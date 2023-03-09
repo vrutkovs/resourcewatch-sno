@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:31:39Z"
+deprecatedLastTimestamp: "2023-03-09T14:31:39Z"
+deprecatedSource:
+  component: cert-recovery-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:31:57Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:31:57Z"
+  name: openshift-kube-scheduler.174ac6b6c771a966
+  namespace: openshift-kube-scheduler
+  resourceVersion: "13306"
+  uid: c5648962-20bf-4eb8-a4d2-c26015bb49c7
+note: 'unable to get cluster infrastructure status, using HA cluster values for leader
+  election: Get "https://localhost:6443/apis/config.openshift.io/v1/infrastructures/cluster":
+  x509: certificate is valid for kubernetes, kubernetes.default, kubernetes.default.svc,
+  kubernetes.default.svc.cluster.local, openshift, openshift.default, openshift.default.svc,
+  openshift.default.svc.cluster.local, not localhost-recovery'
+reason: ClusterInfrastructureStatus
+regarding:
+  apiVersion: v1
+  kind: Namespace
+  name: openshift-kube-scheduler
+  namespace: openshift-kube-scheduler
+type: Warning
