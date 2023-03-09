@@ -20,7 +20,6 @@ metadata:
           .: {}
           f:deployment.kubernetes.io/revision: {}
       f:status:
-        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -40,8 +39,8 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
+        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
@@ -228,7 +227,7 @@ metadata:
     time: "2023-03-09T14:32:47Z"
   name: prometheus-adapter
   namespace: openshift-monitoring
-  resourceVersion: "15962"
+  resourceVersion: "15964"
   uid: 39994971-7ca2-40a2-b9c4-bc49c10b00ad
 spec:
   progressDeadlineSeconds: 600
@@ -375,7 +374,6 @@ spec:
           name: adapter-config
         name: config
 status:
-  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:40Z"
     lastUpdateTime: "2023-03-09T14:22:40Z"
@@ -390,6 +388,6 @@ status:
     status: "True"
     type: Progressing
   observedGeneration: 2
-  readyReplicas: 1
-  replicas: 2
+  replicas: 1
+  unavailableReplicas: 1
   updatedReplicas: 1
