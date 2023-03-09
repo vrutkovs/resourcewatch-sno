@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:28:57Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:57Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:57Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:28:57Z"
+  name: cluster-image-registry-operator-77f7dc4fc4-jcn7n.174ac6911fce0b6a
+  namespace: openshift-image-registry
+  resourceVersion: "8778"
+  uid: 6a55d902-f8ae-4785-8b24-fb5ed55cc8e0
+note: Pulling image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:30419fc4a520a205aae457b512bab0a1a0f51d7e0885413f2e8637d0732b962e"
+reason: Pulling
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{cluster-image-registry-operator}
+  kind: Pod
+  name: cluster-image-registry-operator-77f7dc4fc4-jcn7n
+  namespace: openshift-image-registry
+  resourceVersion: "8732"
+  uid: 81cbee3b-44bb-43cc-8de8-f36011505ee6
+type: Normal
