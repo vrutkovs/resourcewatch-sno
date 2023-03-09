@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4451"
+  resourceVersion: "4498"
   uid: eca927bc-ff97-4d51-9a2e-9e7aacfef147
 spec: {}
 status:
@@ -63,16 +63,17 @@ status:
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:11Z"
-    message: DNS "default" is not reporting a Progressing status condition
-    reason: DNSDoesNotReportProgressingStatus
-    status: Unknown
+    message: Desired and current number of DNSes are equal
+    reason: AsExpected
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:11Z"
-    reason: DNSNotDegraded
-    status: "False"
+    message: DNS default is degraded
+    reason: DNSDegraded
+    status: "True"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:22:11Z"
-    message: DNS default is upgradeable
+    message: 'DNS default is upgradeable: DNS Operator can be upgraded'
     reason: DNSUpgradeable
     status: "True"
     type: Upgradeable
@@ -88,11 +89,11 @@ status:
     name: openshift-dns
     resource: namespaces
   versions:
+  - name: kube-rbac-proxy
+    version: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
   - name: operator
     version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
   - name: coredns
     version: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9b5859648ff4466d9c2dc97ff9bf12044132c11f33d92183d171ca253a6984ee
   - name: openshift-cli
     version: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2dce8c783764cd2f0e9e7530a2ee1447b45d936311e845efe00a90da9c103a24
-  - name: kube-rbac-proxy
-    version: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
