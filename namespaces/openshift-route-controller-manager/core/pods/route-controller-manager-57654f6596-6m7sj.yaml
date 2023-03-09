@@ -152,6 +152,40 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:23:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:metadata:
         f:annotations:
           f:k8s.ovn.org/pod-networks: {}
@@ -167,7 +201,7 @@ metadata:
     kind: ReplicaSet
     name: route-controller-manager-57654f6596
     uid: 1f001f68-eb3d-48f7-99f9-0b548788cb92
-  resourceVersion: "6151"
+  resourceVersion: "6156"
   uid: 73058960-10e6-492d-aa88-3527fe751cfe
 spec:
   affinity:
@@ -309,6 +343,35 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:23:00Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:23:00Z"
+    message: 'containers with unready status: [route-controller-manager]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:23:00Z"
+    message: 'containers with unready status: [route-controller-manager]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:23:00Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:97e0c3d15736e8b042931afcc1f97d024c584f47480c7a3bc26fa9faf62d7a0a
+    imageID: ""
+    lastState: {}
+    name: route-controller-manager
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.93
   phase: Pending
   qosClass: Burstable
+  startTime: "2023-03-09T14:23:00Z"
