@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:12Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:12Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-config-observer-configobserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:12Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-09T14:22:12Z"
+  name: etcd-operator.174ac632bd30c12d
+  namespace: openshift-etcd-operator
+  resourceVersion: "4532"
+  uid: 850062c8-fb89-428d-a1fe-0b4935060123
+note: 'Failed to write observed config: Operation cannot be fulfilled on etcds.operator.openshift.io
+  "cluster": the object has been modified; please apply your changes to the latest
+  version and try again'
+reason: ObservedConfigWriteError
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 83b0ee74-72c5-4b95-9e21-87b97e13fab6
+type: Warning
