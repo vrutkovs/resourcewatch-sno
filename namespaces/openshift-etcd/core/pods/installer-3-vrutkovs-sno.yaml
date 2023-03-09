@@ -1,6 +1,8 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.42/23"],"mac_address":"0a:58:0a:80:00:2a","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.42/23","gateway_ip":"10.128.0.1"}}'
   creationTimestamp: "2023-03-09T14:24:59Z"
   labels:
     app: installer
@@ -109,6 +111,16 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     time: "2023-03-09T14:24:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:24:59Z"
   name: installer-3-vrutkovs-sno
   namespace: openshift-etcd
   ownerReferences:
@@ -116,7 +128,7 @@ metadata:
     kind: ConfigMap
     name: revision-status-3
     uid: 64e9208a-ec73-49b5-b2c8-e76d55a80825
-  resourceVersion: "7393"
+  resourceVersion: "7395"
   uid: af5d02b7-f36c-41ae-af54-61f6bac93945
 spec:
   automountServiceAccountToken: false
