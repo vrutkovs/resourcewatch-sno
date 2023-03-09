@@ -15,7 +15,7 @@ metadata:
     deployment.kubernetes.io/revision: "3"
     operator.openshift.io/spec-hash: d5ea8cd50ce5d54b55d6ff565ee4b990c7116884d5c1216ad48900fcc625c765
   creationTimestamp: "2023-03-09T14:34:59Z"
-  generation: 1
+  generation: 2
   labels:
     app: console
     component: ui
@@ -242,10 +242,10 @@ metadata:
     kind: Deployment
     name: console
     uid: 8cf32543-ad95-4aa3-8d4f-21c433364acd
-  resourceVersion: "16969"
+  resourceVersion: "16974"
   uid: 0f354b94-b053-4264-af8f-a4995b7f4b27
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: console
