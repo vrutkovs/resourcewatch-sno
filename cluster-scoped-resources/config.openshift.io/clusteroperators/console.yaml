@@ -46,7 +46,7 @@ metadata:
     manager: console
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:15Z"
+    time: "2023-03-09T14:32:17Z"
   name: console
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -54,7 +54,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "14909"
+  resourceVersion: "14953"
   uid: 515b351d-ea5a-461b-89c7-b327405f0155
 spec: {}
 status:
@@ -64,9 +64,10 @@ status:
     reason: AsExpected
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:32:12Z"
-    reason: NoData
-    status: Unknown
+  - lastTransitionTime: "2023-03-09T14:32:17Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:32:12Z"
     reason: NoData
