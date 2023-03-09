@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.72/23"],"mac_address":"0a:58:0a:80:00:48","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.72/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:32:01Z"
@@ -99,6 +100,15 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:32:02Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:32:03Z"
   name: ingress-canary-nq5s2
   namespace: openshift-ingress-canary
   ownerReferences:
@@ -108,7 +118,7 @@ metadata:
     kind: DaemonSet
     name: ingress-canary
     uid: 8cada35d-3ced-4501-9955-de0cda7fcf82
-  resourceVersion: "14039"
+  resourceVersion: "14045"
   uid: 26eff830-6bd5-48a5-9969-7e94ee30b069
 spec:
   affinity:
