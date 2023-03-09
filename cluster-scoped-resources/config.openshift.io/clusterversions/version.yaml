@@ -35,9 +35,9 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:30Z"
+    time: "2023-03-09T14:32:45Z"
   name: version
-  resourceVersion: "15372"
+  resourceVersion: "15852"
   uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
 spec:
   channel: stable-4.13
@@ -87,9 +87,7 @@ status:
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:31:15Z"
-    message: Cluster operators authentication, console, image-registry, kube-scheduler,
-      monitoring, openshift-apiserver, openshift-controller-manager, openshift-samples
-      are not available
+    message: Cluster operators authentication, console, monitoring are not available
     reason: ClusterOperatorsNotAvailable
     status: "True"
     type: Failing
