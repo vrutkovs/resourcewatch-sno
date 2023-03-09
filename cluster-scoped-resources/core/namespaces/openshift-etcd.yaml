@@ -3,6 +3,9 @@ kind: Namespace
 metadata:
   annotations:
     openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c8,c2
+    openshift.io/sa.scc.supplemental-groups: 1000060000/10000
+    openshift.io/sa.scc.uid-range: 1000060000/10000
   creationTimestamp: "2023-03-09T14:14:13Z"
   labels:
     kubernetes.io/metadata.name: openshift-etcd
@@ -22,8 +25,19 @@ metadata:
     manager: cluster-bootstrap
     operation: Update
     time: "2023-03-09T14:14:13Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:14:21Z"
   name: openshift-etcd
-  resourceVersion: "427"
+  resourceVersion: "500"
   uid: debc43f6-62ed-414c-b311-60a07642c2cd
 spec:
   finalizers:
