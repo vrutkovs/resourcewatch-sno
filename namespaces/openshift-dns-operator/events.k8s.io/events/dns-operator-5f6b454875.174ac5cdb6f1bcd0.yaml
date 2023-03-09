@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:14:58Z"
+deprecatedLastTimestamp: "2023-03-09T14:14:58Z"
+deprecatedSource:
+  component: replicaset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:14:58Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:14:58Z"
+  name: dns-operator-5f6b454875.174ac5cdb6f1bcd0
+  namespace: openshift-dns-operator
+  resourceVersion: "1416"
+  uid: 2c1248f8-cd3e-4c66-aa85-afa55e1f2782
+note: 'Error creating: pods "dns-operator-5f6b454875-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+  the cluster does not have any nodes'
+reason: FailedCreate
+regarding:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: dns-operator-5f6b454875
+  namespace: openshift-dns-operator
+  resourceVersion: "1413"
+  uid: b3f0bc55-85fe-4f4c-a7a2-2f5aa8e08d61
+type: Warning
