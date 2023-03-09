@@ -56,7 +56,7 @@ metadata:
     manager: cluster-network-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:14Z"
+    time: "2023-03-09T14:29:18Z"
   name: network
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -64,7 +64,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "9417"
+  resourceVersion: "9658"
   uid: efc0e65e-4103-4be7-8a5a-99dd46b6df53
 spec: {}
 status:
@@ -82,7 +82,6 @@ status:
     message: |-
       DaemonSet "/openshift-ovn-kubernetes/ovnkube-master" is not available (awaiting 1 nodes)
       DaemonSet "/openshift-ovn-kubernetes/ovnkube-node" is not available (awaiting 1 nodes)
-      DaemonSet "/openshift-network-diagnostics/network-check-target" is not available (awaiting 1 nodes)
     reason: Deploying
     status: "True"
     type: Progressing
