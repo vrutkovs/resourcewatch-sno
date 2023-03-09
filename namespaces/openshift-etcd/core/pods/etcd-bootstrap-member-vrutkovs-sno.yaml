@@ -185,6 +185,50 @@ metadata:
     manager: kubelet
     operation: Update
     time: "2023-03-09T14:23:09Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.93"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:23:15Z"
   name: etcd-bootstrap-member-vrutkovs-sno
   namespace: openshift-etcd
   ownerReferences:
@@ -193,7 +237,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "6457"
+  resourceVersion: "6798"
   uid: 80287658-f309-47b6-849c-6a377e69b4f2
 spec:
   containers:
@@ -318,5 +362,50 @@ spec:
       type: ""
     name: data-dir
 status:
-  phase: Pending
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:19:25Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:19:34Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:19:34Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:19:25Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://376a32e356b798b2082bbb06da4069966c984d9501c85213df455c59656be0d4
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    lastState: {}
+    name: etcd
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-09T14:19:33Z"
+  - containerID: cri-o://0220ff8a70f9f31aa47085d7db266885c3345905440a891c716a3a7ec20938cc
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    lastState: {}
+    name: etcdctl
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-09T14:19:33Z"
+  hostIP: 10.0.130.93
+  phase: Running
+  podIP: 10.0.130.93
+  podIPs:
+  - ip: 10.0.130.93
   qosClass: Burstable
+  startTime: "2023-03-09T14:19:25Z"
