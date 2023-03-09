@@ -39,18 +39,19 @@ metadata:
         .: {}
         f:conditions: {}
         f:generations: {}
+        f:observedGeneration: {}
         f:readyReplicas: {}
     manager: console
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:36Z"
+    time: "2023-03-09T14:32:39Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15509"
+  resourceVersion: "15601"
   uid: 220131d0-1fdb-4e14-a9b0-f123fc3fa77f
 spec:
   logLevel: Normal
@@ -96,14 +97,13 @@ status:
     reason: RouteNotAdmitted
     status: "False"
     type: RouteHealthAvailable
-  - lastTransitionTime: "2023-03-09T14:32:23Z"
-    message: no ingress for host console-openshift-console.apps.ocp.choomba.one in
-      route console in namespace openshift-console
-    reason: FailedIngress
-    status: "True"
-    type: SyncLoopRefreshDegraded
-  - lastTransitionTime: "2023-03-09T14:32:23Z"
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
     status: "False"
+    type: SyncLoopRefreshDegraded
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    message: Changes made during sync updates, additional sync expected.
+    reason: InProgress
+    status: "True"
     type: SyncLoopRefreshProgressing
   - lastTransitionTime: "2023-03-09T14:32:26Z"
     status: "False"
@@ -150,6 +150,71 @@ status:
   - lastTransitionTime: "2023-03-09T14:32:34Z"
     status: "False"
     type: ResourceSyncControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: ManagedClusterConfigSyncDegraded
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: ManagedClusterConfigSyncProgressing
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: ConfigMapSyncDegraded
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: ConfigMapSyncProgressing
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: ServiceCASyncDegraded
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: ServiceCASyncProgressing
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: TrustedCASyncDegraded
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: TrustedCASyncProgressing
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: CustomLogoSyncDegraded
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: CustomLogoSyncProgressing
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: OAuthServingCertValidationDegraded
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: OAuthServingCertValidationProgressing
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: OAuthClientSecretSyncDegraded
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: OAuthClientSecretSyncProgressing
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: OAuthClientSyncDegraded
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: OAuthClientSyncProgressing
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: DeploymentSyncDegraded
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: DeploymentSyncProgressing
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    message: 0 replicas available for console deployment
+    reason: InsufficientReplicas
+    status: "False"
+    type: DeploymentAvailable
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: ConsoleConfigDegraded
+  - lastTransitionTime: "2023-03-09T14:32:37Z"
+    status: "False"
+    type: ConsolePublicConfigMapDegraded
   generations:
   - group: apps
     hash: ""
@@ -157,4 +222,11 @@ status:
     name: downloads
     namespace: openshift-console
     resource: deployments
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: console
+    namespace: openshift-console
+    resource: deployments
+  observedGeneration: 1
   readyReplicas: 0
