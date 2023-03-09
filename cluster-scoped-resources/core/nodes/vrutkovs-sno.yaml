@@ -13,6 +13,7 @@ metadata:
     machineconfiguration.openshift.io/currentConfig: rendered-master-b84983722a8f041fcce35c8e28efcb54
     machineconfiguration.openshift.io/desiredConfig: rendered-master-b84983722a8f041fcce35c8e28efcb54
     machineconfiguration.openshift.io/desiredDrain: uncordon-rendered-master-b84983722a8f041fcce35c8e28efcb54
+    machineconfiguration.openshift.io/lastAppliedDrain: uncordon-rendered-master-b84983722a8f041fcce35c8e28efcb54
     machineconfiguration.openshift.io/reason: machineconfig.machineconfiguration.openshift.io
       "rendered-master-b84983722a8f041fcce35c8e28efcb54" not found
     machineconfiguration.openshift.io/ssh: accessed
@@ -92,17 +93,6 @@ metadata:
     fieldsV1:
       f:metadata:
         f:annotations:
-          f:machineconfiguration.openshift.io/controlPlaneTopology: {}
-        f:labels:
-          f:node-role.kubernetes.io/worker: {}
-    manager: machine-config-controller
-    operation: Update
-    time: "2023-03-09T14:22:31Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
           f:machineconfiguration.openshift.io/currentConfig: {}
           f:machineconfiguration.openshift.io/desiredConfig: {}
           f:machineconfiguration.openshift.io/desiredDrain: {}
@@ -112,8 +102,20 @@ metadata:
     manager: machine-config-daemon
     operation: Update
     time: "2023-03-09T14:22:56Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:machineconfiguration.openshift.io/controlPlaneTopology: {}
+          f:machineconfiguration.openshift.io/lastAppliedDrain: {}
+        f:labels:
+          f:node-role.kubernetes.io/worker: {}
+    manager: machine-config-controller
+    operation: Update
+    time: "2023-03-09T14:23:01Z"
   name: vrutkovs-sno
-  resourceVersion: "6060"
+  resourceVersion: "6250"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
 spec: {}
 status:
