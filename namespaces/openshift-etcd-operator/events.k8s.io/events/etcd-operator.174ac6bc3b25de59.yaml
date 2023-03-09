@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:02Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:02Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-09T14:32:02Z"
+  name: etcd-operator.174ac6bc3b25de59
+  namespace: openshift-etcd-operator
+  resourceVersion: "13976"
+  uid: bafabf45-38a0-4207-8457-3b0178934d00
+note: 'Status for clusteroperator/etcd changed: Degraded message changed from "NodeControllerDegraded:
+  The master nodes not ready: node \"vrutkovs-sno\" not ready since 2023-03-09 14:32:01
+  +0000 UTC because KubeletNotReady (container runtime status check may not have completed
+  yet)\nEtcdMembersDegraded: No unhealthy members found" to "NodeControllerDegraded:
+  All master nodes are ready\nEtcdMembersDegraded: No unhealthy members found"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 83b0ee74-72c5-4b95-9e21-87b97e13fab6
+type: Normal
