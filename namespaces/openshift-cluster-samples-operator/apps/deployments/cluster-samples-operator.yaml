@@ -145,7 +145,6 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
-        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -165,13 +164,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
+        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:56Z"
+    time: "2023-03-09T14:32:02Z"
   name: cluster-samples-operator
   namespace: openshift-cluster-samples-operator
   ownerReferences:
@@ -180,7 +179,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8750"
+  resourceVersion: "13761"
   uid: afb01b65-cac4-45fc-82c1-b0285738979e
 spec:
   progressDeadlineSeconds: 600
@@ -290,21 +289,20 @@ spec:
           defaultMode: 420
           secretName: samples-operator-tls
 status:
-  availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2023-03-09T14:28:56Z"
-    lastUpdateTime: "2023-03-09T14:28:56Z"
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
-    type: Available
   - lastTransitionTime: "2023-03-09T14:28:50Z"
     lastUpdateTime: "2023-03-09T14:28:56Z"
     message: ReplicaSet "cluster-samples-operator-58f7649996" has successfully progressed.
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
+  - lastTransitionTime: "2023-03-09T14:32:02Z"
+    lastUpdateTime: "2023-03-09T14:32:02Z"
+    message: Deployment does not have minimum availability.
+    reason: MinimumReplicasUnavailable
+    status: "False"
+    type: Available
   observedGeneration: 1
-  readyReplicas: 1
   replicas: 1
+  unavailableReplicas: 1
   updatedReplicas: 1
