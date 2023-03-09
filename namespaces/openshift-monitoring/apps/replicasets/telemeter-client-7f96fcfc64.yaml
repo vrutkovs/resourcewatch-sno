@@ -228,6 +228,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:28:25Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:25Z"
   name: telemeter-client-7f96fcfc64
   namespace: openshift-monitoring
   ownerReferences:
@@ -237,7 +246,7 @@ metadata:
     kind: Deployment
     name: telemeter-client
     uid: 08f8fbb9-af1b-499b-a1db-e123e8a5a590
-  resourceVersion: "7975"
+  resourceVersion: "7997"
   uid: 4d20d55e-0b0e-4d96-9919-61c23bb9cc36
 spec:
   replicas: 1
@@ -539,4 +548,5 @@ spec:
           optional: true
         name: telemeter-trusted-ca-bundle
 status:
+  observedGeneration: 1
   replicas: 0
