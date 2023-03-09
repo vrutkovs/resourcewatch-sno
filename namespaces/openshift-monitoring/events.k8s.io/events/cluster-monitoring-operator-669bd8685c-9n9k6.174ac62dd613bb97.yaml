@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:21:51Z"
+deprecatedLastTimestamp: "2023-03-09T14:21:51Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:21:51Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:21:51Z"
+  name: cluster-monitoring-operator-669bd8685c-9n9k6.174ac62dd613bb97
+  namespace: openshift-monitoring
+  resourceVersion: "3191"
+  uid: 197a4ac5-edc3-48c7-ae25-cb4db665af9d
+note: 'MountVolume.SetUp failed for volume "cluster-monitoring-operator-tls" : secret
+  "cluster-monitoring-operator-tls" not found'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: cluster-monitoring-operator-669bd8685c-9n9k6
+  namespace: openshift-monitoring
+  resourceVersion: "3123"
+  uid: ff407fd4-cfaa-42db-af8c-737d83b40584
+type: Warning
