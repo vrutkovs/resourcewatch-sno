@@ -114,6 +114,40 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:20:24Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:24Z"
   name: network-metrics-daemon-vwx7z
   namespace: openshift-multus
   ownerReferences:
@@ -123,7 +157,7 @@ metadata:
     kind: DaemonSet
     name: network-metrics-daemon
     uid: b9694f0c-0704-4642-ba1c-a72a1e8215fd
-  resourceVersion: "2602"
+  resourceVersion: "2607"
   uid: 775eae44-5277-44da-82fb-8e276826522c
 spec:
   affinity:
@@ -238,6 +272,45 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:24Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:24Z"
+    message: 'containers with unready status: [network-metrics-daemon kube-rbac-proxy]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:24Z"
+    message: 'containers with unready status: [network-metrics-daemon kube-rbac-proxy]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:24Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+    imageID: ""
+    lastState: {}
+    name: kube-rbac-proxy
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:406d5d02abb3a145daf99c8bf6c00036f4d6f6affe0f27ef90a58bd7cb3b3cdb
+    imageID: ""
+    lastState: {}
+    name: network-metrics-daemon
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.93
   phase: Pending
   qosClass: Burstable
+  startTime: "2023-03-09T14:20:24Z"
