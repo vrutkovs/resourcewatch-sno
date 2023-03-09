@@ -267,7 +267,7 @@ metadata:
     kind: ReplicaSet
     name: oauth-openshift-7749b8f584
     uid: 445b598f-a0d5-402c-9e1b-cdda347aad21
-  resourceVersion: "15134"
+  resourceVersion: "15138"
   uid: 6f6eb656-5372-4dd2-958f-29163b5fec6a
 spec:
   affinity:
@@ -380,6 +380,7 @@ spec:
   enableServiceLinks: true
   imagePullSecrets:
   - name: oauth-openshift-dockercfg-ftwhj
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -483,5 +484,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:32:25Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
