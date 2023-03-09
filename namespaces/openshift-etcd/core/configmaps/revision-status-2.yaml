@@ -1,6 +1,6 @@
 apiVersion: v1
 data:
-  reason: configmap "etcd-pod" not found
+  reason: configmap "etcd-pod-1" not found
   revision: "2"
 kind: ConfigMap
 metadata:
@@ -15,8 +15,8 @@ metadata:
         f:revision: {}
     manager: cluster-etcd-operator
     operation: Update
-    time: "2023-03-09T14:22:21Z"
+    time: "2023-03-09T14:22:40Z"
   name: revision-status-2
   namespace: openshift-etcd
-  resourceVersion: "4954"
+  resourceVersion: "5766"
   uid: 35c2b4e8-eb9c-4e78-b9f6-d2836b7e2338
