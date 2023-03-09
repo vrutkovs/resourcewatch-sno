@@ -14,6 +14,7 @@ metadata:
   creationTimestamp: "2023-03-09T14:14:37Z"
   labels:
     kubernetes.io/metadata.name: openshift-marketplace
+    olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: ""
     openshift.io/cluster-monitoring: "true"
     pod-security.kubernetes.io/audit: baseline
     pod-security.kubernetes.io/audit-version: v1.25
@@ -61,6 +62,15 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:37Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: {}
+    manager: olm
+    operation: Update
+    time: "2023-03-09T14:29:17Z"
   name: openshift-marketplace
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -68,7 +78,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "764"
+  resourceVersion: "9568"
   uid: 9d19382c-7a62-4d45-a3cd-7ba1f69b8055
 spec:
   finalizers:
