@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:02Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:02Z"
+deprecatedSource:
+  component: oauth-apiserver-status-controller-statussyncer_authentication
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:22:02Z"
+  name: authentication-operator.174ac630877a499a
+  namespace: openshift-authentication-operator
+  resourceVersion: "3833"
+  uid: 7fa10ff9-225d-412b-a338-23678666eb6f
+note: 'Status for clusteroperator/authentication changed: Available message changed
+  from "APIServicesAvailable: endpoints \"api\" not found\nOAuthServerServiceEndpointAccessibleControllerAvailable:
+  service \"oauth-openshift\" not found" to "APIServicesAvailable: endpoints \"api\"
+  not found\nOAuthServerServiceEndpointAccessibleControllerAvailable: service \"oauth-openshift\"
+  not found\nOAuthServerServiceEndpointsEndpointAccessibleControllerAvailable: endpoints
+  \"oauth-openshift\" not found"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
+type: Normal
