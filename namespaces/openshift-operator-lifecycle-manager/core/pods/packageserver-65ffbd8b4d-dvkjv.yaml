@@ -200,6 +200,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -214,19 +216,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:25Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:07Z"
   name: packageserver-65ffbd8b4d-dvkjv
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -236,7 +226,7 @@ metadata:
     kind: ReplicaSet
     name: packageserver-65ffbd8b4d
     uid: 339a1e91-3d6d-4eda-8612-df2805c26ea5
-  resourceVersion: "13797"
+  resourceVersion: "14270"
   uid: f596f7f8-174a-4dab-9079-9621f7175acc
 spec:
   affinity: {}
@@ -384,8 +374,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:25Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:25Z"
