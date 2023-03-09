@@ -46,7 +46,7 @@ metadata:
     manager: cluster-storage-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:13Z"
+    time: "2023-03-09T14:29:15Z"
   name: storage
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -54,13 +54,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "9250"
+  resourceVersion: "9445"
   uid: d50005c5-4639-432e-a3b4-00b0c797da0d
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:29:12Z"
-    message: All is well
+    message: 'SnapshotCRDControllerDegraded: Operation cannot be fulfilled on storages.operator.openshift.io
+      "cluster": the object has been modified; please apply your changes to the latest
+      version and try again'
     reason: AsExpected
     status: "False"
     type: Degraded
