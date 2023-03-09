@@ -1,0 +1,41 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:22:33.753006Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:33Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:22:33Z"
+  name: tuned-sz7v5.174ac637b77f605c
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "5477"
+  uid: 04830f51-62e8-41cd-8778-1f4d7a2428fe
+note: Successfully assigned openshift-cluster-node-tuning-operator/tuned-sz7v5 to
+  vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: tuned-sz7v5
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "5470"
+  uid: b68a5e0b-e530-48e1-b392-8e4113fd4d24
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
