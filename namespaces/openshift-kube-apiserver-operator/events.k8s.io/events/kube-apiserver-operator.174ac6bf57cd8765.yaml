@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:16Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:16Z"
+deprecatedSource:
+  component: kube-apiserver-operator-installer-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:16Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:32:16Z"
+  name: kube-apiserver-operator.174ac6bf57cd8765
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "14929"
+  uid: d1531ff6-21b0-4992-9131-0530f7bb24e6
+note: Updated node "vrutkovs-sno" from revision 0 to 2 because static pod is ready
+reason: NodeCurrentRevisionChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Normal
