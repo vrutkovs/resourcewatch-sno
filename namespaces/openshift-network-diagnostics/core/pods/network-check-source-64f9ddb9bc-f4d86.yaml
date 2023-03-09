@@ -116,7 +116,7 @@ metadata:
     kind: ReplicaSet
     name: network-check-source-64f9ddb9bc
     uid: 9ca97f0a-aa3d-454a-8513-79784e29c223
-  resourceVersion: "2809"
+  resourceVersion: "4958"
   uid: 166eef67-e958-43da-aa04-fad994e58b58
 spec:
   containers:
@@ -163,6 +163,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     beta.kubernetes.io/os: linux
   preemptionPolicy: PreemptLowerPriority
@@ -219,11 +220,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:34Z"
-    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node-role.kubernetes.io/master:
-      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
-    reason: Unschedulable
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:22:21Z"
+    status: "True"
     type: PodScheduled
   phase: Pending
   qosClass: Burstable
