@@ -92,14 +92,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:24Z"
+    time: "2023-03-09T14:32:25Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15050"
+  resourceVersion: "15057"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -286,8 +286,10 @@ status:
     reason: AsExpected
     status: "False"
     type: APIServerStaticResourcesDegraded
-  - lastTransitionTime: "2023-03-09T14:23:06Z"
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:32:24Z"
+    message: configmaps "oauth-openshift" already exists
+    reason: Error
+    status: "True"
     type: ResourceSyncControllerDegraded
   - lastTransitionTime: "2023-03-09T14:23:08Z"
     reason: AsExpected
