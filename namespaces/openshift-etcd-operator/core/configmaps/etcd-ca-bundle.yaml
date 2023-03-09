@@ -1,4 +1,26 @@
 apiVersion: v1
+data:
+  ca-bundle.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIDOTCCAiGgAwIBAgIID26nzI/Xrv0wDQYJKoZIhvcNAQELBQAwKjESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MRQwEgYDVQQDEwtldGNkLXNpZ25lcjAeFw0yMzAzMDkxNDEz
+    MDFaFw0zMzAzMDYxNDEzMDJaMCoxEjAQBgNVBAsTCW9wZW5zaGlmdDEUMBIGA1UE
+    AxMLZXRjZC1zaWduZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC8
+    lyH449RUcLqces007i8v5BQXjZ+QKDh2tdV4bKBONJzl+qzIsSERGSddwXxX/nDq
+    0OKlG6nfqg+FzZnkGLwU0VOY2UQnewrgiVcuy7+8b4oZJ+XPmVMwVSzkGBNirzPB
+    Kv+xacLKDW+lKGXco/QyuUocTWOC23j7RCaNJIrupO5ZX+WNEDyNonA3wzRgQvs0
+    VbpemQwBPhlekZxagZZJaMzzm+mVevchV+oujuGvbZ8M7fkEqtIh5hYnUBKTwanv
+    YXscZO5lzDK9Be0qmjTaS1V1PL3fJWHaWun98wsejn+x65fPukRi14HZHjSrqfSV
+    a6h27zhC8I8V1bg8t4AlAgMBAAGjYzBhMA4GA1UdDwEB/wQEAwICpDAPBgNVHRMB
+    Af8EBTADAQH/MB0GA1UdDgQWBBTeDfHNL9qgbnLRHU+ZDU3gWQ/NBjAfBgNVHSME
+    GDAWgBTeDfHNL9qgbnLRHU+ZDU3gWQ/NBjANBgkqhkiG9w0BAQsFAAOCAQEApJ5h
+    mrQIl1wv0TU1iUQXNkZKmf1rl1XbUfosrqtgVusTVEN088IVsSfezbGjahzOuSHc
+    5QV2ZBIDho8bWEjpq1eGiSJZjooiZG4Yg3gzVsb5C0/qZp5T0JApn/VLQus+92/S
+    6aglsQYqu0MZhJojsOUbcp7GnNmbZLdclwIATI4MYhlRHr0M01jej/pg95ocdKwC
+    yqCzaLBaaE/0RgzCud9BuQO6owq6h4goj62s0azegd5PbirDXhR41yVAoh+uiVUk
+    jIChk6CtoQX8eIhj8a060EDIfSED2lyvaOIx3atT9kY6wcGXEw/jFsaMPs2vIqLq
+    IoQ8OIT1wXw49MYWaQ==
+    -----END CERTIFICATE-----
 kind: ConfigMap
 metadata:
   annotations:
@@ -22,6 +44,15 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:50Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:ca-bundle.crt: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-09T14:22:05Z"
   name: etcd-ca-bundle
   namespace: openshift-etcd-operator
   ownerReferences:
@@ -29,5 +60,5 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1206"
+  resourceVersion: "4107"
   uid: 042737dd-c86f-4a2c-904b-86c08916974a
