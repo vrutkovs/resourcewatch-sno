@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:12Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:12Z"
+deprecatedSource:
+  component: controllermanager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:12Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:32:12Z"
+  name: console.174ac6be65a739c3
+  namespace: openshift-console
+  resourceVersion: "14775"
+  uid: c9fc8bae-4ab9-4936-bcfd-2bda7ef91a35
+note: No matching pods found
+reason: NoPods
+regarding:
+  apiVersion: policy/v1
+  kind: PodDisruptionBudget
+  name: console
+  namespace: openshift-console
+  resourceVersion: "14774"
+  uid: 46c57bb0-22c0-4f2e-b564-3a1a24a6334b
+type: Normal
