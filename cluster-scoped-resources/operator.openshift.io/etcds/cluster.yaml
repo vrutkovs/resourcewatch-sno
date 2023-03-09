@@ -34,18 +34,21 @@ metadata:
       f:status:
         .: {}
         f:conditions: {}
+        f:latestAvailableRevision: {}
+        f:latestAvailableRevisionReason: {}
+        f:nodeStatuses: {}
         f:readyReplicas: {}
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:04Z"
+    time: "2023-03-09T14:22:07Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3995"
+  resourceVersion: "4222"
   uid: e3da0174-daf2-4d9e-b232-e5e61f76793b
 spec:
   logLevel: Normal
@@ -79,4 +82,14 @@ status:
     reason: AsExpected
     status: "False"
     type: EtcdCertSignerControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:04Z"
+    message: All master nodes are ready
+    reason: MasterNodesReady
+    status: "False"
+    type: NodeControllerDegraded
+  latestAvailableRevision: 0
+  latestAvailableRevisionReason: ""
+  nodeStatuses:
+  - currentRevision: 0
+    nodeName: vrutkovs-sno
   readyReplicas: 0
