@@ -3,17 +3,17 @@ kind: Pod
 metadata:
   annotations:
     kubectl.kubernetes.io/default-container: etcd
-    kubernetes.io/config.hash: aef6af06d65f86c96769e9f0ed7b2669
-    kubernetes.io/config.mirror: aef6af06d65f86c96769e9f0ed7b2669
-    kubernetes.io/config.seen: "2023-03-09T14:23:29.886037452Z"
+    kubernetes.io/config.hash: 87929c5c22537de0668c5680bfa92501
+    kubernetes.io/config.mirror: 87929c5c22537de0668c5680bfa92501
+    kubernetes.io/config.seen: "2023-03-09T14:25:32.274584102Z"
     kubernetes.io/config.source: file
     target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
-  creationTimestamp: "2023-03-09T14:24:39Z"
+  creationTimestamp: "2023-03-09T14:27:02Z"
   labels:
     app: etcd
     etcd: "true"
     k8s-app: etcd
-    revision: "2"
+    revision: "3"
   managedFields:
   - apiVersion: v1
     fieldsType: FieldsV1
@@ -782,7 +782,7 @@ metadata:
             f:name: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:24:39Z"
+    time: "2023-03-09T14:27:02Z"
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -827,7 +827,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:24:43Z"
+    time: "2023-03-09T14:27:05Z"
   name: etcd-vrutkovs-sno
   namespace: openshift-etcd
   ownerReferences:
@@ -836,8 +836,8 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "7094"
-  uid: 0111b606-d60a-4025-bcaf-b03a5ddb1706
+  resourceVersion: "7636"
+  uid: 1b51edb2-8be2-46cd-9527-085464eea3b7
 spec:
   containers:
   - command:
@@ -888,7 +888,7 @@ spec:
     - name: NODE_vrutkovs_sno_IP
       value: 10.0.130.93
     - name: ETCD_STATIC_POD_VERSION
-      value: "2"
+      value: "3"
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     imagePullPolicy: IfNotPresent
     name: etcdctl
@@ -1003,7 +1003,7 @@ spec:
     - name: NODE_vrutkovs_sno_IP
       value: 10.0.130.93
     - name: ETCD_STATIC_POD_VERSION
-      value: "2"
+      value: "3"
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     imagePullPolicy: IfNotPresent
     livenessProbe:
@@ -1117,7 +1117,7 @@ spec:
     - name: NODE_vrutkovs_sno_IP
       value: 10.0.130.93
     - name: ETCD_STATIC_POD_VERSION
-      value: "2"
+      value: "3"
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     imagePullPolicy: IfNotPresent
     name: etcd-metrics
@@ -1366,7 +1366,7 @@ spec:
       type: ""
     name: static-pod-dir
   - hostPath:
-      path: /etc/kubernetes/static-pod-resources/etcd-pod-2
+      path: /etc/kubernetes/static-pod-resources/etcd-pod-3
       type: ""
     name: resource-dir
   - hostPath:
@@ -1388,15 +1388,15 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:24:11Z"
+    lastTransitionTime: "2023-03-09T14:26:45Z"
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:24:42Z"
+    lastTransitionTime: "2023-03-09T14:27:02Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:24:42Z"
+    lastTransitionTime: "2023-03-09T14:27:02Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
@@ -1404,7 +1404,7 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://5923482606f3274ffb8318f86da898fd0b1298c34dfd0d79fe9d3fb3b9b28b02
+  - containerID: cri-o://5e5b5963ceb0f3f08f9d84b7aaff4be9bdf06e78e1f99dbd1b2dbc31fb345918
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     lastState: {}
@@ -1414,8 +1414,8 @@ status:
     started: true
     state:
       running:
-        startedAt: "2023-03-09T14:24:22Z"
-  - containerID: cri-o://94872ba660454aec7878705ea21984000efc25ddeaa7f2f76b6b2723397d3e3c
+        startedAt: "2023-03-09T14:26:45Z"
+  - containerID: cri-o://bf3bf1183b837afaf39e33aa9e7f88b9412734b878df281a69861f319356cc64
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     lastState: {}
@@ -1425,8 +1425,8 @@ status:
     started: true
     state:
       running:
-        startedAt: "2023-03-09T14:24:22Z"
-  - containerID: cri-o://ea4a9da0945b5e9c7122e68afb0dd46df3e14b96ea19e7cc485d507a7b2d5bae
+        startedAt: "2023-03-09T14:26:46Z"
+  - containerID: cri-o://59a2b3802e9653fa4b46180d3c2e7f6e1dfa5a680ef5206c6e06a815db203596
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2948a32ac6e029f093ecf20b3bcd87105bfa7ec549d01203ab9592ed062ce7fa
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2948a32ac6e029f093ecf20b3bcd87105bfa7ec549d01203ab9592ed062ce7fa
     lastState: {}
@@ -1436,8 +1436,8 @@ status:
     started: true
     state:
       running:
-        startedAt: "2023-03-09T14:24:22Z"
-  - containerID: cri-o://ea674abe2878032a21511eb69ec376c4a6bff07fb94327559c285f09bc206566
+        startedAt: "2023-03-09T14:26:46Z"
+  - containerID: cri-o://8ac512f6e81238a9167a7fc55836e7301f45a397c6dd514fdad4b586d085cb80
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     lastState: {}
@@ -1447,10 +1447,10 @@ status:
     started: true
     state:
       running:
-        startedAt: "2023-03-09T14:24:22Z"
+        startedAt: "2023-03-09T14:26:45Z"
   hostIP: 10.0.130.93
   initContainerStatuses:
-  - containerID: cri-o://c3e0e9e9ccbcdde0fc4063fd68a661b16f48293f2ab69a518fcca7b77d204aed
+  - containerID: cri-o://b97ea46318232f4df46da563cd91f0064ec3bba016cfb21884329bc46d4c3f3f
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     lastState: {}
@@ -1459,12 +1459,12 @@ status:
     restartCount: 0
     state:
       terminated:
-        containerID: cri-o://c3e0e9e9ccbcdde0fc4063fd68a661b16f48293f2ab69a518fcca7b77d204aed
+        containerID: cri-o://b97ea46318232f4df46da563cd91f0064ec3bba016cfb21884329bc46d4c3f3f
         exitCode: 0
-        finishedAt: "2023-03-09T14:23:43Z"
+        finishedAt: "2023-03-09T14:26:42Z"
         reason: Completed
-        startedAt: "2023-03-09T14:23:43Z"
-  - containerID: cri-o://fd31a8e06d4684aa9109da50fc92515717a440fdc841ce1b49130859b8f15126
+        startedAt: "2023-03-09T14:26:42Z"
+  - containerID: cri-o://c9dd89b3ce49e8eef1cee7715c08808ca0957d8d0c9500147331a6d095b7b13f
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     lastState: {}
@@ -1473,12 +1473,12 @@ status:
     restartCount: 0
     state:
       terminated:
-        containerID: cri-o://fd31a8e06d4684aa9109da50fc92515717a440fdc841ce1b49130859b8f15126
+        containerID: cri-o://c9dd89b3ce49e8eef1cee7715c08808ca0957d8d0c9500147331a6d095b7b13f
         exitCode: 0
-        finishedAt: "2023-03-09T14:23:56Z"
+        finishedAt: "2023-03-09T14:26:43Z"
         reason: Completed
-        startedAt: "2023-03-09T14:23:56Z"
-  - containerID: cri-o://dbb9683c1db86580c285de1768f106d5d436f1a967bf58fbf89a2a875b1ef5e7
+        startedAt: "2023-03-09T14:26:43Z"
+  - containerID: cri-o://e86612b1643fa0adba712f9755969457e3218742c7a482957f60997af27417fd
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     lastState: {}
@@ -1487,11 +1487,11 @@ status:
     restartCount: 0
     state:
       terminated:
-        containerID: cri-o://dbb9683c1db86580c285de1768f106d5d436f1a967bf58fbf89a2a875b1ef5e7
+        containerID: cri-o://e86612b1643fa0adba712f9755969457e3218742c7a482957f60997af27417fd
         exitCode: 0
-        finishedAt: "2023-03-09T14:24:10Z"
+        finishedAt: "2023-03-09T14:26:44Z"
         reason: Completed
-        startedAt: "2023-03-09T14:24:10Z"
+        startedAt: "2023-03-09T14:26:44Z"
   phase: Running
   podIP: 10.0.130.93
   podIPs:
