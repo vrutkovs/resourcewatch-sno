@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:21:59Z"
 deprecatedLastTimestamp: "2023-03-09T14:21:59Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:22:00Z"
   name: kube-storage-version-migrator-operator.174ac62fd28fa8a3
   namespace: openshift-kube-storage-version-migrator-operator
-  resourceVersion: "3574"
+  resourceVersion: "3637"
   uid: cd8a6cc2-a0ee-4eee-9d41-22f821233e46
 note: 'Status for clusteroperator/kube-storage-version-migrator changed: Progressing
   changed from Unknown to True ("KubeStorageVersionMigratorProgressing: Waiting for
