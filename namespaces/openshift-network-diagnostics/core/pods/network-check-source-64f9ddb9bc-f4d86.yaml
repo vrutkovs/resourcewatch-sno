@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.30/23"],"mac_address":"0a:58:0a:80:00:1e","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.30/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:20:34Z"
@@ -107,6 +108,15 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:20:34Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:22:21Z"
   name: network-check-source-64f9ddb9bc-f4d86
   namespace: openshift-network-diagnostics
   ownerReferences:
@@ -116,7 +126,7 @@ metadata:
     kind: ReplicaSet
     name: network-check-source-64f9ddb9bc
     uid: 9ca97f0a-aa3d-454a-8513-79784e29c223
-  resourceVersion: "4958"
+  resourceVersion: "4962"
   uid: 166eef67-e958-43da-aa04-fad994e58b58
 spec:
   containers:
