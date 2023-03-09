@@ -50,7 +50,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3667"
+  resourceVersion: "3671"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -91,6 +91,10 @@ status:
     reason: ProfileEmpty
     status: "True"
     type: WorkerLatencyProfileComplete
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    reason: AsExpected
+    status: "False"
+    type: WorkerLatencyProfileDegraded
   latestAvailableRevision: 0
   latestAvailableRevisionReason: ""
   readyReplicas: 0
