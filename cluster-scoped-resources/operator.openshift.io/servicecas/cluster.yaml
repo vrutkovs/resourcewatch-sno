@@ -41,14 +41,14 @@ metadata:
     manager: Go-http-client
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:03Z"
+    time: "2023-03-09T14:22:04Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3930"
+  resourceVersion: "4004"
   uid: f7813b7b-6e7f-47b6-9ac4-0ca5ffe3197e
 spec:
   logLevel: Normal
@@ -63,15 +63,13 @@ status:
     reason: OperatorSyncLoopComplete
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:22:03Z"
-    message: |2-
-
-      service-ca does not have available replicas
-    reason: ManagedDeploymentsAvailable
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:22:04Z"
+    message: All service-ca-operator deployments updated
+    reason: ManagedDeploymentsCompleteAndUpdated
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:03Z"
-    reason: ManagedDeploymentsAvailable
+    reason: ManagedDeploymentsCompleteAndUpdated
     status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:03Z"
