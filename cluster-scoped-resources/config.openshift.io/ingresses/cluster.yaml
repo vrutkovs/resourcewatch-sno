@@ -7,6 +7,38 @@ metadata:
   - apiVersion: config.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:status:
+        f:componentRoutes:
+          k:{"name":"oauth-openshift","namespace":"openshift-authentication"}:
+            .: {}
+            f:conditions:
+              k:{"type":"Degraded"}:
+                .: {}
+                f:lastTransitionTime: {}
+                f:message: {}
+                f:reason: {}
+                f:status: {}
+                f:type: {}
+              k:{"type":"Progressing"}:
+                .: {}
+                f:lastTransitionTime: {}
+                f:message: {}
+                f:reason: {}
+                f:status: {}
+                f:type: {}
+            f:consumingUsers: {}
+            f:currentHostnames: {}
+            f:defaultHostname: {}
+            f:name: {}
+            f:namespace: {}
+            f:relatedObjects: {}
+    manager: AuthenticationCustomRouteController
+    operation: Apply
+    subresource: status
+    time: "2023-03-09T14:32:16Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:spec:
         .: {}
         f:domain: {}
@@ -29,7 +61,7 @@ metadata:
     subresource: status
     time: "2023-03-09T14:14:26Z"
   name: cluster
-  resourceVersion: "565"
+  resourceVersion: "14940"
   uid: c1484dd1-5fdc-4633-bc7c-b45c37efbd64
 spec:
   domain: apps.ocp.choomba.one
@@ -37,4 +69,29 @@ spec:
     platform:
       type: ""
 status:
+  componentRoutes:
+  - conditions:
+    - lastTransitionTime: "2023-03-09T14:32:16Z"
+      message: 'Route not admitted: no ingress for host oauth-openshift.apps.ocp.choomba.one
+        in route oauth-openshift in namespace openshift-authentication'
+      reason: RouteNotAdmitted
+      status: "True"
+      type: Progressing
+    - lastTransitionTime: "2023-03-09T14:32:16Z"
+      message: All is well
+      reason: AsExpected
+      status: "False"
+      type: Degraded
+    consumingUsers:
+    - system:serviceaccount:oauth-openshift:authentication-operator
+    currentHostnames:
+    - oauth-openshift.apps.ocp.choomba.one
+    defaultHostname: oauth-openshift.apps.ocp.choomba.one
+    name: oauth-openshift
+    namespace: openshift-authentication
+    relatedObjects:
+    - group: route.openshift.io
+      name: oauth-openshift
+      namespace: openshift-authentication
+      resource: routes
   defaultPlacement: ControlPlane
