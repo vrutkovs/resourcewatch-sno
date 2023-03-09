@@ -130,6 +130,7 @@ metadata:
         f:readyReplicas: {}
         f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -143,7 +144,7 @@ metadata:
     kind: Network
     name: cluster
     uid: e6519524-ef16-4ee8-82f1-2faa42688032
-  resourceVersion: "5583"
+  resourceVersion: "5588"
   uid: 3f577280-a91b-42dc-8ed6-a9b403637b32
 spec:
   progressDeadlineSeconds: 600
@@ -257,11 +258,12 @@ status:
     type: Available
   - lastTransitionTime: "2023-03-09T14:20:26Z"
     lastUpdateTime: "2023-03-09T14:22:38Z"
-    message: Created new replica set "multus-admission-controller-7cd94d77c5"
-    reason: NewReplicaSetCreated
+    message: ReplicaSet "multus-admission-controller-7cd94d77c5" is progressing.
+    reason: ReplicaSetUpdated
     status: "True"
     type: Progressing
   observedGeneration: 2
   readyReplicas: 1
-  replicas: 1
+  replicas: 2
   unavailableReplicas: 1
+  updatedReplicas: 1
