@@ -40,6 +40,7 @@ metadata:
       f:status:
         f:conditions: {}
         f:relatedObjects: {}
+        f:versions: {}
     manager: ingress-operator
     operation: Update
     subresource: status
@@ -51,24 +52,20 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4844"
+  resourceVersion: "4856"
   uid: c55987a1-3a24-4225-a426-155e472cf5db
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:19Z"
-    message: 'The "default" ingress controller reports Available=False: IngressControllerUnavailable:
-      One or more status conditions indicate unavailable: DeploymentAvailable=Unknown
-      (DeploymentAvailabilityUnknown: The deployment has no Available status condition
-      set)'
-    reason: IngressUnavailable
-    status: "False"
+    message: The "default" ingress controller reports Available=True.
+    reason: IngressAvailable
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:19Z"
     message: |-
-      ingresscontroller "default" is progressing: IngressControllerProgressing: One or more status conditions indicate progressing: DeploymentRollingOut=True (DeploymentRollingOut: Waiting for router deployment rollout to finish: 0 out of 1 new replica(s) have been updated...
+      ingresscontroller "default" is progressing: IngressControllerProgressing: One or more status conditions indicate progressing: DeploymentRollingOut=True (DeploymentRollingOut: Waiting for router deployment rollout to finish: 0 of 1 updated replica(s) are available...
       ).
-      Not all ingress controllers are available.
     reason: Reconciling
     status: "True"
     type: Progressing
@@ -101,3 +98,10 @@ status:
   - group: ""
     name: openshift-ingress
     resource: namespaces
+  versions:
+  - name: operator
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+  - name: ingress-controller
+    version: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:af5fed62790f3da5a9b7d32374331539ab531f17d006a69ea501622d946a07fe
+  - name: canary-server
+    version: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c85de6de3820e7ef13625ef4ceda1ec350d93fc924138ff8ef7717948f908d73
