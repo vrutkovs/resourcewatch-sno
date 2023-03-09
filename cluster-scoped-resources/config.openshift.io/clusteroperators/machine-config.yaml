@@ -43,10 +43,11 @@ metadata:
           .: {}
           f:master: {}
           f:worker: {}
+        f:versions: {}
     manager: machine-config-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:12Z"
+    time: "2023-03-09T14:23:13Z"
   name: machine-config
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -54,7 +55,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6687"
+  resourceVersion: "6691"
   uid: a2677b7f-e3c9-4360-88a8-42c47852f1d4
 spec: {}
 status:
@@ -102,3 +103,6 @@ status:
   - group: ""
     name: ""
     resource: nodes
+  versions:
+  - name: operator
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
