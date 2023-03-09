@@ -241,6 +241,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -253,6 +255,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -268,7 +272,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:35:11Z"
+    time: "2023-03-09T14:35:28Z"
   name: console-644696f6c4-nf77c
   namespace: openshift-console
   ownerReferences:
@@ -278,7 +282,7 @@ metadata:
     kind: ReplicaSet
     name: console-644696f6c4
     uid: 3977de21-e206-447a-8dd8-f221d6cc9fbf
-  resourceVersion: "17074"
+  resourceVersion: "17150"
   uid: db1a5fa9-d7ef-48f8-932b-a0fec7ae9c25
 spec:
   affinity: {}
@@ -450,12 +454,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:35:11Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:35:28Z"
+    message: 'containers with unready status: [console]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:35:11Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:35:28Z"
+    message: 'containers with unready status: [console]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:41Z"
@@ -467,11 +475,27 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:56b0668235191f7a5cf04912684788ce1ca0a8e36f7eaae7b016f1de8485de74
     lastState: {}
     name: console
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://576e5da7c225a4776a60db73ebbab96f186c7b9468dd143dcbec8269e603ad18
+        exitCode: 2
+        finishedAt: "2023-03-09T14:35:27Z"
+        message: |2
+           provider (retrying in 10s): request to OAuth issuer endpoint https://oauth-openshift.apps.ocp.choomba.one/oauth/token failed: Head "https://oauth-openshift.apps.ocp.choomba.one": EOF
+          E0309 14:34:02.739957       1 auth.go:239] error contacting auth provider (retrying in 10s): request to OAuth issuer endpoint https://oauth-openshift.apps.ocp.choomba.one/oauth/token failed: Head "https://oauth-openshift.apps.ocp.choomba.one": EOF
+          E0309 14:34:12.748427       1 auth.go:239] error contacting auth provider (retrying in 10s): request to OAuth issuer endpoint https://oauth-openshift.apps.ocp.choomba.one/oauth/token failed: Head "https://oauth-openshift.apps.ocp.choomba.one": EOF
+          E0309 14:34:22.755385       1 auth.go:239] error contacting auth provider (retrying in 10s): request to OAuth issuer endpoint https://oauth-openshift.apps.ocp.choomba.one/oauth/token failed: Head "https://oauth-openshift.apps.ocp.choomba.one": EOF
+          E0309 14:34:32.759341       1 auth.go:239] error contacting auth provider (retrying in 10s): request to OAuth issuer endpoint https://oauth-openshift.apps.ocp.choomba.one/oauth/token failed: Head "https://oauth-openshift.apps.ocp.choomba.one": EOF
+          E0309 14:34:42.762891       1 auth.go:239] error contacting auth provider (retrying in 10s): request to OAuth issuer endpoint https://oauth-openshift.apps.ocp.choomba.one/oauth/token failed: Head "https://oauth-openshift.apps.ocp.choomba.one": EOF
+          E0309 14:34:52.766334       1 auth.go:239] error contacting auth provider (retrying in 10s): request to OAuth issuer endpoint https://oauth-openshift.apps.ocp.choomba.one/oauth/token failed: Head "https://oauth-openshift.apps.ocp.choomba.one": EOF
+          I0309 14:35:02.781486       1 main.go:831] Binding to [::]:8443...
+          I0309 14:35:02.781516       1 main.go:833] using TLS
+          I0309 14:35:05.783254       1 metrics.go:87] usage.Metrics: Count console users...
+          I0309 14:35:06.193823       1 metrics.go:173] usage.Metrics: Update console users metrics: 0 kubeadmin, 0 cluster-admins, 0 developers, 0 unknown/errors (took 410.473998ms)
+        reason: Error
         startedAt: "2023-03-09T14:32:42Z"
   hostIP: 10.0.130.93
   phase: Running
