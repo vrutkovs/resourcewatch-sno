@@ -132,7 +132,7 @@ metadata:
     kind: CatalogSource
     name: redhat-marketplace
     uid: b1e096c1-9aee-45b4-9c8a-7a7145b2ad1d
-  resourceVersion: "9146"
+  resourceVersion: "9504"
   uid: 64e4353e-9138-42d7-a2c0-3412e8b68186
 spec:
   containers:
@@ -192,6 +192,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     kubernetes.io/os: linux
     node-role.kubernetes.io/master: ""
@@ -251,11 +252,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:12Z"
-    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
-      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
-    reason: Unschedulable
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:16Z"
+    status: "True"
     type: PodScheduled
   phase: Pending
   qosClass: Burstable
