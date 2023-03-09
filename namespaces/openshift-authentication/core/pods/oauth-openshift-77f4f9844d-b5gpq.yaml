@@ -285,7 +285,7 @@ metadata:
     kind: ReplicaSet
     name: oauth-openshift-77f4f9844d
     uid: cd292924-3c49-4427-846c-440dc342bad4
-  resourceVersion: "15462"
+  resourceVersion: "16191"
   uid: ec12560d-2f21-4566-9005-6af288f5f89f
 spec:
   affinity:
@@ -398,6 +398,7 @@ spec:
   enableServiceLinks: true
   imagePullSecrets:
   - name: oauth-openshift-dockercfg-ftwhj
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -503,12 +504,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:33Z"
-    message: '0/1 nodes are available: 1 node(s) didn''t match pod anti-affinity rules.
-      preemption: 0/1 nodes are available: 1 node(s) didn''t match pod anti-affinity
-      rules..'
-    reason: Unschedulable
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:33:01Z"
+    status: "True"
     type: PodScheduled
   phase: Pending
   qosClass: Burstable
