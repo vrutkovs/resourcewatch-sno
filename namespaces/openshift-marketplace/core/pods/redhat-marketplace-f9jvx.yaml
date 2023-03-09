@@ -194,7 +194,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:10Z"
+    time: "2023-03-09T14:32:13Z"
   name: redhat-marketplace-f9jvx
   namespace: openshift-marketplace
   ownerReferences:
@@ -204,7 +204,7 @@ metadata:
     kind: CatalogSource
     name: redhat-marketplace
     uid: b1e096c1-9aee-45b4-9c8a-7a7145b2ad1d
-  resourceVersion: "14641"
+  resourceVersion: "14871"
   uid: 64e4353e-9138-42d7-a2c0-3412e8b68186
 spec:
   containers:
@@ -351,7 +351,7 @@ status:
     name: registry-server
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
       running:
         startedAt: "2023-03-09T14:29:38Z"
