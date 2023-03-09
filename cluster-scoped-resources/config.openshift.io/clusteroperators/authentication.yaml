@@ -52,13 +52,14 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16310"
+  resourceVersion: "16317"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:33:05Z"
-    message: All is well
+    message: 'OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth
+      service endpoints are not ready'
     reason: AsExpected
     status: "False"
     type: Degraded
