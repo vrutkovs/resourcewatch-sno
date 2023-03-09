@@ -1,0 +1,20 @@
+apiVersion: v1
+data:
+  MTAuMC4xMzAuOTM: 10.0.130.93
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:14:43Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:MTAuMC4xMzAuOTM: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:14:43Z"
+  name: etcd-endpoints
+  namespace: openshift-etcd
+  resourceVersion: "1047"
+  uid: fa4c0ba3-ee70-4081-a8bd-8658b164bd0f
