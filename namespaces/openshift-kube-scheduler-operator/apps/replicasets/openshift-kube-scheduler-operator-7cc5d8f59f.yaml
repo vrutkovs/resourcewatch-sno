@@ -156,13 +156,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:00Z"
+    time: "2023-03-09T14:22:00Z"
   name: openshift-kube-scheduler-operator-7cc5d8f59f
   namespace: openshift-kube-scheduler-operator
   ownerReferences:
@@ -172,7 +174,7 @@ metadata:
     kind: Deployment
     name: openshift-kube-scheduler-operator
     uid: 63ed6034-26ff-494c-bb49-f929f1f6a34d
-  resourceVersion: "2376"
+  resourceVersion: "3448"
   uid: 5f98d709-e7df-4da0-bb93-20b5feced5fe
 spec:
   replicas: 1
@@ -289,6 +291,8 @@ spec:
                   fieldPath: metadata.namespace
                 path: namespace
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
