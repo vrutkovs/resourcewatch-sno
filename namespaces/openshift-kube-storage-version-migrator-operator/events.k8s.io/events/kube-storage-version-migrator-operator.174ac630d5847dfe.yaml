@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:04Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:04Z"
+deprecatedSource:
+  component: openshift-kube-storage-version-migrator-operator-status-controller-statussyncer_kube-storage-version-migrator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:04Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-03-09T14:22:04Z"
+  name: kube-storage-version-migrator-operator.174ac630d5847dfe
+  namespace: openshift-kube-storage-version-migrator-operator
+  resourceVersion: "3964"
+  uid: af497df5-1411-4095-8791-3d5595ad4ce6
+note: 'Status for clusteroperator/kube-storage-version-migrator changed: Progressing
+  changed from True to False ("All is well"),Available changed from False to True
+  ("All is well")'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-storage-version-migrator-operator
+  namespace: openshift-kube-storage-version-migrator-operator
+  uid: e175c73d-fd16-4746-ae1b-5ca4d30312d9
+type: Normal
