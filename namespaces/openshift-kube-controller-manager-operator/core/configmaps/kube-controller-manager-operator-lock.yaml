@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"kube-controller-manager-operator-7bc9cbb847-f9sqg_60d933ef-856c-4ca5-b738-2dd1c73bdf46","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:23:26Z","renewTime":"2023-03-09T14:31:33Z","leaderTransitions":1}'
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"kube-controller-manager-operator-7bc9cbb847-f9sqg_60d933ef-856c-4ca5-b738-2dd1c73bdf46","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:23:26Z","renewTime":"2023-03-09T14:32:33Z","leaderTransitions":1}'
   creationTimestamp: "2023-03-09T14:22:00Z"
   managedFields:
   - apiVersion: v1
@@ -14,8 +14,8 @@ metadata:
           f:control-plane.alpha.kubernetes.io/leader: {}
     manager: cluster-kube-controller-manager-operator
     operation: Update
-    time: "2023-03-09T14:31:33Z"
+    time: "2023-03-09T14:32:33Z"
   name: kube-controller-manager-operator-lock
   namespace: openshift-kube-controller-manager-operator
-  resourceVersion: "13061"
+  resourceVersion: "15470"
   uid: 883a87f6-5f0a-459c-bd49-1c4d475a4222
