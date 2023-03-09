@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:23:00Z"
 deprecatedLastTimestamp: "2023-03-09T14:23:00Z"
 deprecatedSource:
@@ -28,7 +28,7 @@ metadata:
     time: "2023-03-09T14:23:00Z"
   name: route-controller-manager-57654f6596-6m7sj.174ac63deb2a132c
   namespace: openshift-route-controller-manager
-  resourceVersion: "6182"
+  resourceVersion: "6194"
   uid: 5d18c083-a053-4124-b512-3dfb8f45ddaa
 note: 'MountVolume.SetUp failed for volume "client-ca" : configmap "client-ca" not
   found'
