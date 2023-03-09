@@ -172,6 +172,46 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:14:30Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.93"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:07Z"
   name: assisted-installer-controller-vwq9s
   namespace: assisted-installer
   ownerReferences:
@@ -181,7 +221,7 @@ metadata:
     kind: Job
     name: assisted-installer-controller
     uid: f5a4e959-715f-4436-8272-3a0acf078c12
-  resourceVersion: "2261"
+  resourceVersion: "2430"
   uid: bf338db4-906a-4d43-be22-8959360a0341
 spec:
   containers:
@@ -338,8 +378,40 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:07Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:07Z"
+    message: 'containers with unready status: [assisted-installer-controller]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:07Z"
+    message: 'containers with unready status: [assisted-installer-controller]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:19:59Z"
     status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: quay.io/edge-infrastructure/assisted-installer-controller:latest
+    imageID: ""
+    lastState: {}
+    name: assisted-installer-controller
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.93
   phase: Pending
+  podIP: 10.0.130.93
+  podIPs:
+  - ip: 10.0.130.93
   qosClass: BestEffort
+  startTime: "2023-03-09T14:20:07Z"
