@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:07Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:07Z"
+deprecatedSource:
+  component: cluster-authentication-operator-resource-sync-controller-resourcesynccontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:07Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:22:07Z"
+  name: authentication-operator.174ac63198ff4503
+  namespace: openshift-authentication-operator
+  resourceVersion: "4244"
+  uid: d6e1144c-1770-4be8-8445-d70dc874cf74
+note: Created Secret/etcd-client -n openshift-oauth-apiserver because it was missing
+reason: SecretCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
+type: Normal
