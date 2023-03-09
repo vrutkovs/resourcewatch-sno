@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:20:36Z"
+deprecatedLastTimestamp: "2023-03-09T14:20:36Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:36Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:20:36Z"
+  name: multus-additional-cni-plugins-tfc7q.174ac61c7d2d97fe
+  namespace: openshift-multus
+  resourceVersion: "2848"
+  uid: 6e248a5f-4b2d-4e1d-a15d-9e45bb52d766
+note: Pulling image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9f7dfaf9351c4deaac3d2846c64dd32a066c68dd3b844d8f9ee748cef7583859"
+reason: Pulling
+regarding:
+  apiVersion: v1
+  fieldPath: spec.initContainers{whereabouts-cni-bincopy}
+  kind: Pod
+  name: multus-additional-cni-plugins-tfc7q
+  namespace: openshift-multus
+  resourceVersion: "2581"
+  uid: c744a2d1-8bd9-4403-8cb9-bed2ff64ddff
+type: Normal
