@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.78/23"],"mac_address":"0a:58:0a:80:00:4e","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.78/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:32:47Z"
@@ -179,6 +180,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:32:47Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:32:47Z"
   name: prometheus-adapter-79cbcdfcfb-k4gsn
   namespace: openshift-monitoring
   ownerReferences:
@@ -188,7 +198,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-adapter-79cbcdfcfb
     uid: 90f3ce22-2467-4c26-a73b-b0809c59c454
-  resourceVersion: "15946"
+  resourceVersion: "15950"
   uid: 707a0d02-a993-4fd9-bca9-6d3a3105cde2
 spec:
   automountServiceAccountToken: true
