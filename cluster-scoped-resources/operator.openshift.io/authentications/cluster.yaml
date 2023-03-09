@@ -92,14 +92,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:27Z"
+    time: "2023-03-09T14:32:29Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15244"
+  resourceVersion: "15337"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -336,6 +336,21 @@ status:
     reason: SyncError
     status: "True"
     type: OAuthServerRouteEndpointAccessibleControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:32:28Z"
+    status: "False"
+    type: OAuthConfigDegraded
+  - lastTransitionTime: "2023-03-09T14:32:28Z"
+    status: "False"
+    type: OAuthConfigIngressDegraded
+  - lastTransitionTime: "2023-03-09T14:32:28Z"
+    status: "False"
+    type: OAuthConfigRouteDegraded
+  - lastTransitionTime: "2023-03-09T14:32:28Z"
+    status: "False"
+    type: OAuthConfigServiceDegraded
+  - lastTransitionTime: "2023-03-09T14:32:28Z"
+    status: "False"
+    type: OAuthSessionSecretDegraded
   generations:
   - group: apps
     hash: ""
