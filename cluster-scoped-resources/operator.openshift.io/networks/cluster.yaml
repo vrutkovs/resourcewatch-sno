@@ -4,7 +4,7 @@ metadata:
   annotations:
     networkoperator.openshift.io/ovn-cluster-initiator: 10.0.130.93
   creationTimestamp: "2023-03-09T14:20:15Z"
-  generation: 25
+  generation: 26
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -67,9 +67,9 @@ metadata:
         f:version: {}
     manager: cluster-network-operator
     operation: Update
-    time: "2023-03-09T14:22:29Z"
+    time: "2023-03-09T14:22:35Z"
   name: cluster
-  resourceVersion: "5367"
+  resourceVersion: "5515"
   uid: e6519524-ef16-4ee8-82f1-2faa42688032
 spec:
   clusterNetwork:
@@ -111,9 +111,8 @@ status:
     status: "True"
     type: Upgradeable
   - lastTransitionTime: "2023-03-09T14:20:23Z"
-    message: |-
-      DaemonSet "/openshift-network-diagnostics/network-check-target" is waiting for other operators to become ready
-      DaemonSet "/openshift-multus/network-metrics-daemon" is waiting for other operators to become ready
+    message: DaemonSet "/openshift-network-diagnostics/network-check-target" is waiting
+      for other operators to become ready
     reason: Deploying
     status: "True"
     type: Progressing
