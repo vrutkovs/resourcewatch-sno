@@ -44,7 +44,7 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:36Z"
+    time: "2023-03-09T14:22:40Z"
   name: etcd
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "5552"
+  resourceVersion: "5793"
   uid: 5b689e62-691b-4fc1-86d9-fed9d5250955
 spec: {}
 status:
@@ -64,7 +64,6 @@ status:
       EtcdEndpointsDegraded: failed to get member list: giving up getting a cached client after 3 tries
       RevisionControllerDegraded: configmaps "etcd-pod" not found
       InstallerControllerDegraded: missing required resources: [configmaps: etcd-scripts,restore-etcd-pod, configmaps: etcd-endpoints-1,etcd-metrics-proxy-client-ca-1,etcd-metrics-proxy-serving-ca-1,etcd-peer-client-ca-1,etcd-pod-1,etcd-serving-ca-1, secrets: etcd-all-certs-1]
-      EnvVarControllerDegraded: no supported cipherSuites not found in observedConfig
       ScriptControllerDegraded: "configmap/etcd-pod": missing env var values
     reason: AsExpected
     status: "False"
