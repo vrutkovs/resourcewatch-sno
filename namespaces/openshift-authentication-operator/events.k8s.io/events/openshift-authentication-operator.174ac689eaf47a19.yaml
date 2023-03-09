@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:28:26Z"
-deprecatedLastTimestamp: "2023-03-09T14:28:26Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:16Z"
 deprecatedSource:
   component: oauth-apiserver-status-controller-statussyncer_authentication
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-09T14:28:26Z"
+    time: "2023-03-09T14:29:17Z"
   name: openshift-authentication-operator.174ac689eaf47a19
   namespace: openshift-authentication-operator
-  resourceVersion: "8043"
+  resourceVersion: "9546"
   uid: d84c278e-aecd-455e-a909-5b0929fae905
 note: 'Status for clusteroperator/authentication changed: Degraded message changed
   from "APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable for
