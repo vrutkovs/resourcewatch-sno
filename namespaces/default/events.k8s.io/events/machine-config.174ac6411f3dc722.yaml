@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 6
+deprecatedCount: 7
 deprecatedFirstTimestamp: "2023-03-09T14:23:14Z"
-deprecatedLastTimestamp: "2023-03-09T14:23:26Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:28Z"
 deprecatedSource:
   component: machineconfigoperator
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: machine-config-operator
     operation: Update
-    time: "2023-03-09T14:23:26Z"
+    time: "2023-03-09T14:23:28Z"
   name: machine-config.174ac6411f3dc722
   namespace: default
-  resourceVersion: "6944"
+  resourceVersion: "6986"
   uid: e7f849d7-98d4-4e64-ae68-54645276c55e
 note: 'Failed to resync 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest because:
   configmap "kube-apiserver-client-ca" not found'
