@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:32:04Z"
-deprecatedLastTimestamp: "2023-03-09T14:32:04Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:06Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:32:10Z"
+    time: "2023-03-09T14:32:14Z"
   name: console-operator-5cb6dc7685-cgzvf.174ac6bca9071198
   namespace: openshift-console-operator
-  resourceVersion: "14637"
+  resourceVersion: "14875"
   uid: 2e3e989e-b514-4f32-97ef-305bb9c288b5
 note: 'MountVolume.SetUp failed for volume "webhook-serving-cert" : failed to sync
   secret cache: timed out waiting for the condition'
