@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    description: ConfigMap providing service CA bundle.
+    service.beta.openshift.io/inject-cabundle: "true"
+  creationTimestamp: "2023-03-09T14:22:18Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:description: {}
+          f:service.beta.openshift.io/inject-cabundle: {}
+    manager: ingress-operator
+    operation: Update
+    time: "2023-03-09T14:22:18Z"
+  name: service-ca-bundle
+  namespace: openshift-ingress
+  resourceVersion: "4811"
+  uid: 64789bc4-bb99-4e24-a766-c3dbf16a0e26
