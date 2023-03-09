@@ -1,0 +1,22 @@
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource:
+  component: apiserver
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:33:22Z"
+  name: kube-apiserver-vrutkovs-sno.174ac6cea67a2481
+  namespace: openshift-kube-apiserver
+  resourceVersion: "16393"
+  uid: 9b86e488-5a0f-4547-bc89-f42de4702e7b
+note: Received signal to terminate, becoming unready, but keeping serving
+reason: ShutdownInitiated
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: kube-apiserver-vrutkovs-sno
+  namespace: openshift-kube-apiserver
+type: Normal
