@@ -222,7 +222,7 @@ metadata:
     kind: ReplicaSet
     name: telemeter-client-7f96fcfc64
     uid: 4d20d55e-0b0e-4d96-9919-61c23bb9cc36
-  resourceVersion: "7989"
+  resourceVersion: "7993"
   uid: 56298754-7ac9-4ea1-a63f-854909871bba
 spec:
   containers:
@@ -497,6 +497,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     kubernetes.io/os: linux
   preemptionPolicy: PreemptLowerPriority
@@ -578,5 +579,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:28:25Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
