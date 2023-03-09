@@ -68,14 +68,14 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:03Z"
+    time: "2023-03-09T14:32:06Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "14042"
+  resourceVersion: "14172"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -186,8 +186,12 @@ status:
     reason: AsExpected
     status: "False"
     type: BackingResourceControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:22:14Z"
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:32:06Z"
+    message: 'Operation cannot be fulfilled on configmaps "sa-token-signing-certs":
+      the object has been modified; please apply your changes to the latest version
+      and try again'
+    reason: Error
+    status: "True"
     type: SATokenSignerDegraded
   - lastTransitionTime: "2023-03-09T14:22:18Z"
     status: "False"
