@@ -4,6 +4,7 @@ metadata:
   annotations:
     capability.openshift.io/name: marketplace
     config.openshift.io/inject-proxy: marketplace-operator
+    deployment.kubernetes.io/revision: "1"
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
   creationTimestamp: "2023-03-09T14:14:59Z"
@@ -166,6 +167,27 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:59Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:14:59Z"
   name: marketplace-operator
   namespace: openshift-marketplace
   ownerReferences:
@@ -174,7 +196,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1481"
+  resourceVersion: "1484"
   uid: 7561a895-f4b0-46ea-874b-45dc970b87c6
 spec:
   progressDeadlineSeconds: 600
@@ -303,4 +325,11 @@ spec:
         secret:
           defaultMode: 420
           secretName: marketplace-operator-metrics
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:14:59Z"
+    lastUpdateTime: "2023-03-09T14:14:59Z"
+    message: Created new replica set "marketplace-operator-674cf84489"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
