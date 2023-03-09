@@ -30,11 +30,21 @@ metadata:
       f:status:
         .: {}
         f:extension: {}
-        f:relatedObjects: {}
     manager: cluster-version-operator
     operation: Update
     subresource: status
     time: "2023-03-09T14:14:35Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:00Z"
   name: kube-scheduler
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -42,10 +52,27 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "630"
+  resourceVersion: "3441"
   uid: 441925ee-aa23-4d3c-937b-d1809e7a63de
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    reason: NoData
+    status: Unknown
+    type: Degraded
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    reason: NoData
+    status: Unknown
+    type: Progressing
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    reason: NoData
+    status: Unknown
+    type: Available
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    reason: NoData
+    status: Unknown
+    type: Upgradeable
   extension: null
   relatedObjects:
   - group: operator.openshift.io
@@ -61,12 +88,15 @@ status:
     name: openshift-config-managed
     resource: namespaces
   - group: ""
-    name: openshift-kube-scheduler-operator
+    name: openshift-kube-scheduler
     resource: namespaces
   - group: ""
-    name: openshift-kube-scheduler
+    name: openshift-kube-scheduler-operator
     resource: namespaces
   - group: controlplane.operator.openshift.io
     name: ""
-    namespace: openshift-kube-scheduler
+    namespace: openshift-kube-apiserver
     resource: podnetworkconnectivitychecks
+  versions:
+  - name: raw-internal
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
