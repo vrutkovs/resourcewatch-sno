@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
+    deployment.kubernetes.io/revision: "1"
     operator.openshift.io/spec-hash: 27f0ec1860447a4d913fd9430587fe8dbfd490d62468b86d7bbea2b91c79d324
   creationTimestamp: "2023-03-09T14:22:02Z"
   generation: 1
@@ -9,6 +10,27 @@ metadata:
     app: service-ca
     service-ca: "true"
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:02Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -104,7 +126,7 @@ metadata:
     time: "2023-03-09T14:22:02Z"
   name: service-ca
   namespace: openshift-service-ca
-  resourceVersion: "3836"
+  resourceVersion: "3842"
   uid: 9202bf82-fe2e-4cb4-b621-e9cc589d5fa4
 spec:
   progressDeadlineSeconds: 600
@@ -182,4 +204,11 @@ spec:
           defaultMode: 420
           name: signing-cabundle
         name: signing-cabundle
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:22:02Z"
+    lastUpdateTime: "2023-03-09T14:22:02Z"
+    message: Created new replica set "service-ca-854874ddf4"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
