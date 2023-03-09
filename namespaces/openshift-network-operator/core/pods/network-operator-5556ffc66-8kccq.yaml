@@ -212,8 +212,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -226,12 +224,11 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -242,7 +239,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:07Z"
+    time: "2023-03-09T14:20:15Z"
   name: network-operator-5556ffc66-8kccq
   namespace: openshift-network-operator
   ownerReferences:
@@ -252,7 +249,7 @@ metadata:
     kind: ReplicaSet
     name: network-operator-5556ffc66
     uid: 18aad614-008f-4452-91c3-1e80ca9007b7
-  resourceVersion: "2429"
+  resourceVersion: "2471"
   uid: 17fe0601-f9ea-49c6-8d0c-3292991ad2f4
 spec:
   affinity:
@@ -435,34 +432,31 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:07Z"
-    message: 'containers with unready status: [network-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:20:15Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:07Z"
-    message: 'containers with unready status: [network-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:20:15Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:00Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6f674d54345ba8ce675df69db58531f41a18deac6bcaec530b634cc54a38ab2c
-    imageID: ""
+  - containerID: cri-o://0871c8d1453f14b5ecfb94adba109e650b7bcf9a12182bca6f514a2e0fe4a0a0
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6f674d54345ba8ce675df69db58531f41a18deac6bcaec530b634cc54a38ab2c
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6f674d54345ba8ce675df69db58531f41a18deac6bcaec530b634cc54a38ab2c
     lastState: {}
     name: network-operator
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:20:15Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
   podIP: 10.0.130.93
   podIPs:
   - ip: 10.0.130.93
