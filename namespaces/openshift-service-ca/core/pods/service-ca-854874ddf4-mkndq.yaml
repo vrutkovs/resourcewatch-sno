@@ -144,6 +144,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -158,19 +160,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:04Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:07Z"
   name: service-ca-854874ddf4-mkndq
   namespace: openshift-service-ca
   ownerReferences:
@@ -180,7 +170,7 @@ metadata:
     kind: ReplicaSet
     name: service-ca-854874ddf4
     uid: 760c1e5d-253c-4a05-96a8-65b3a3769928
-  resourceVersion: "13930"
+  resourceVersion: "14279"
   uid: 541ba4d5-25d3-4731-9fde-c95bce4c1a15
 spec:
   containers:
@@ -289,8 +279,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:22:04Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:04Z"
