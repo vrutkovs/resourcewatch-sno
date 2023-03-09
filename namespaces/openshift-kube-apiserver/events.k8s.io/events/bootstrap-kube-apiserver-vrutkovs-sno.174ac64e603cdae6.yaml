@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:24:11Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:11Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:53Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:24:53Z"
+  name: bootstrap-kube-apiserver-vrutkovs-sno.174ac64e603cdae6
+  namespace: openshift-kube-apiserver
+  resourceVersion: "7321"
+  uid: 68ca9813-8749-474b-855c-24ca331ae814
+note: 'Readiness probe failed: Get "https://10.0.130.93:6443/readyz": unexpected EOF'
+reason: Unhealthy
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-apiserver}
+  kind: Pod
+  name: bootstrap-kube-apiserver-vrutkovs-sno
+  namespace: openshift-kube-apiserver
+  uid: ada9f0e1fc79fb2dbe89ee073f22e0d2
+type: Warning
