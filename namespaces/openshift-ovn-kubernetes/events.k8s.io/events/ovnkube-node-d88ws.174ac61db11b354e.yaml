@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:20:41Z"
-deprecatedLastTimestamp: "2023-03-09T14:20:41Z"
+deprecatedLastTimestamp: "2023-03-09T14:21:46Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:20:41Z"
+    time: "2023-03-09T14:21:46Z"
   name: ovnkube-node-d88ws.174ac61db11b354e
   namespace: openshift-ovn-kubernetes
-  resourceVersion: "2884"
+  resourceVersion: "3091"
   uid: 53f2190c-0ba9-4f0a-bfa2-9ea1b03ea990
 note: Created container ovn-controller
 reason: Created
