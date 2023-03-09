@@ -1,0 +1,53 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:36Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:36Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:36Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-09T14:22:36Z"
+  name: etcd-operator.174ac6386c74925d
+  namespace: openshift-etcd-operator
+  resourceVersion: "5555"
+  uid: 2038b52b-45ea-4822-bcad-048e60a2f829
+note: 'Status for clusteroperator/etcd changed: Degraded message changed from "EtcdMembersControllerDegraded:
+  giving up getting a cached client after 3 tries\nNodeControllerDegraded: All master
+  nodes are ready\nEtcdEndpointsDegraded: failed to get member list: giving up getting
+  a cached client after 3 tries\nRevisionControllerDegraded: configmaps \"etcd-pod\"
+  not found\nInstallerControllerDegraded: missing required resources: [configmaps:
+  etcd-scripts,restore-etcd-pod, configmaps: etcd-endpoints-1,etcd-metrics-proxy-client-ca-1,etcd-metrics-proxy-serving-ca-1,etcd-peer-client-ca-1,etcd-pod-1,etcd-serving-ca-1,
+  secrets: etcd-all-certs-1]\nEnvVarControllerDegraded: no supported cipherSuites
+  not found in observedConfig" to "EtcdMembersControllerDegraded: giving up getting
+  a cached client after 3 tries\nNodeControllerDegraded: All master nodes are ready\nEtcdEndpointsDegraded:
+  failed to get member list: giving up getting a cached client after 3 tries\nRevisionControllerDegraded:
+  configmaps \"etcd-pod\" not found\nInstallerControllerDegraded: missing required
+  resources: [configmaps: etcd-scripts,restore-etcd-pod, configmaps: etcd-endpoints-1,etcd-metrics-proxy-client-ca-1,etcd-metrics-proxy-serving-ca-1,etcd-peer-client-ca-1,etcd-pod-1,etcd-serving-ca-1,
+  secrets: etcd-all-certs-1]\nEnvVarControllerDegraded: no supported cipherSuites
+  not found in observedConfig\nScriptControllerDegraded: \"configmap/etcd-pod\": missing
+  env var values"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 83b0ee74-72c5-4b95-9e21-87b97e13fab6
+type: Normal
