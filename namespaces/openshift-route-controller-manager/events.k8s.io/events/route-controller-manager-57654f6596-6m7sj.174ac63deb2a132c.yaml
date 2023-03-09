@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:23:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:00Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:23:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:23:00Z"
+  name: route-controller-manager-57654f6596-6m7sj.174ac63deb2a132c
+  namespace: openshift-route-controller-manager
+  resourceVersion: "6182"
+  uid: 5d18c083-a053-4124-b512-3dfb8f45ddaa
+note: 'MountVolume.SetUp failed for volume "client-ca" : configmap "client-ca" not
+  found'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: route-controller-manager-57654f6596-6m7sj
+  namespace: openshift-route-controller-manager
+  resourceVersion: "6143"
+  uid: 73058960-10e6-492d-aa88-3527fe751cfe
+type: Warning
