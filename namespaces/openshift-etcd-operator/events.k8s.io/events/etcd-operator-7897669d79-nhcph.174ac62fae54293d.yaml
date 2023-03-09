@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:21:59Z"
-deprecatedLastTimestamp: "2023-03-09T14:21:59Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:05Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:22:06Z"
+    time: "2023-03-09T14:23:05Z"
   name: etcd-operator-7897669d79-nhcph.174ac62fae54293d
   namespace: openshift-etcd-operator
-  resourceVersion: "4202"
+  resourceVersion: "6350"
   uid: ff7f359c-9653-44ac-bc41-130cc4a1787b
 note: Started container etcd-operator
 reason: Started
