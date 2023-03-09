@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:01Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:01Z"
+deprecatedSource:
+  component: node-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:32:02Z"
+  name: marketplace-operator-674cf84489-dbxgt.174ac6bbfab57631
+  namespace: openshift-marketplace
+  resourceVersion: "13584"
+  uid: bfa2729e-e653-471f-a9a7-4b86af9172ca
+note: Node is not ready
+reason: NodeNotReady
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: marketplace-operator-674cf84489-dbxgt
+  namespace: openshift-marketplace
+  resourceVersion: "9422"
+  uid: e0c97e17-7e07-4da5-9587-dcabc1819678
+type: Warning
