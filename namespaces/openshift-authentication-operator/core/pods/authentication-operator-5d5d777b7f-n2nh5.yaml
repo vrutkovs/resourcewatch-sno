@@ -181,40 +181,6 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"ContainersReady"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Initialized"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Ready"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:containerStatuses: {}
-        f:hostIP: {}
-        f:startTime: {}
-    manager: kubelet
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:21:51Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:metadata:
         f:annotations:
           f:k8s.v1.cni.cncf.io/network-status: {}
@@ -231,6 +197,43 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-09T14:21:51Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.21"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:21:59Z"
   name: authentication-operator-5d5d777b7f-n2nh5
   namespace: openshift-authentication-operator
   ownerReferences:
@@ -240,7 +243,7 @@ metadata:
     kind: ReplicaSet
     name: authentication-operator-5d5d777b7f
     uid: 9d663e46-1f08-41c1-94e5-3d0d46f7e93e
-  resourceVersion: "3211"
+  resourceVersion: "3308"
   uid: 11698cce-3094-4d93-8221-8d619bf2ecd8
 spec:
   containers:
@@ -388,33 +391,33 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:21:51Z"
-    message: 'containers with unready status: [authentication-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:21:59Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:21:51Z"
-    message: 'containers with unready status: [authentication-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:21:59Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:21:51Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:911863c370cd31453bc66d3df7571aa87cdbc21d6c064d53541f3c594a2ea504
-    imageID: ""
+  - containerID: cri-o://8d1bdaa7e65897d85ca959d117e518ad55c177bfb362eb102150d4fe419def90
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:911863c370cd31453bc66d3df7571aa87cdbc21d6c064d53541f3c594a2ea504
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:911863c370cd31453bc66d3df7571aa87cdbc21d6c064d53541f3c594a2ea504
     lastState: {}
     name: authentication-operator
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:21:58Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.21
+  podIPs:
+  - ip: 10.128.0.21
   qosClass: Burstable
   startTime: "2023-03-09T14:21:51Z"
