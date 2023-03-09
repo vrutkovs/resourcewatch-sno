@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:14:59Z"
 deprecatedLastTimestamp: "2023-03-09T14:14:59Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:14:59Z"
   name: marketplace-operator-674cf84489.174ac5cdeb245d80
   namespace: openshift-marketplace
-  resourceVersion: "1485"
+  resourceVersion: "1488"
   uid: 758fb370-8ead-4b58-9a55-19089b6a5627
 note: 'Error creating: pods "marketplace-operator-674cf84489-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
   the cluster does not have any nodes'
