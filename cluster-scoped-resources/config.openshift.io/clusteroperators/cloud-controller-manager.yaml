@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8710"
+  resourceVersion: "8721"
   uid: 25b4d22b-b211-4dd9-b2b6-bb53eef652ba
 spec: {}
 status:
@@ -67,6 +67,16 @@ status:
     reason: AsExpected
     status: "False"
     type: CloudConfigControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:28:56Z"
+    message: Trusted CA Bundle Controller works as expected
+    reason: AsExpected
+    status: "True"
+    type: TrustedCABundleControllerControllerAvailable
+  - lastTransitionTime: "2023-03-09T14:28:56Z"
+    message: Trusted CA Bundle Controller works as expected
+    reason: AsExpected
+    status: "False"
+    type: TrustedCABundleControllerControllerDegraded
   extension: null
   relatedObjects:
   - group: ""
