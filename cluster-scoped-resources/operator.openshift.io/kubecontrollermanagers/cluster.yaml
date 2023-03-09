@@ -50,7 +50,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3696"
+  resourceVersion: "3716"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -99,6 +99,9 @@ status:
     reason: AsExpected
     status: "False"
     type: MissingStaticPodControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    status: "False"
+    type: StaticPodsDegraded
   latestAvailableRevision: 0
   latestAvailableRevisionReason: ""
   readyReplicas: 0
