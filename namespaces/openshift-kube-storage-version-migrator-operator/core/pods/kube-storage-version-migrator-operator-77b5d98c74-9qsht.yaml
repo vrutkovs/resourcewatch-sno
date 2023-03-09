@@ -178,8 +178,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -192,8 +190,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -209,7 +205,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:04Z"
+    time: "2023-03-09T14:23:05Z"
   name: kube-storage-version-migrator-operator-77b5d98c74-9qsht
   namespace: openshift-kube-storage-version-migrator-operator
   ownerReferences:
@@ -219,7 +215,7 @@ metadata:
     kind: ReplicaSet
     name: kube-storage-version-migrator-operator-77b5d98c74
     uid: 03917f08-1f25-4eff-8711-5bda51a91405
-  resourceVersion: "6316"
+  resourceVersion: "6337"
   uid: b63fa47c-1d22-4f70-ad4e-693f9fda121d
 spec:
   containers:
@@ -338,31 +334,22 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:23:04Z"
-    message: 'containers with unready status: [kube-storage-version-migrator-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:23:05Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:23:04Z"
-    message: 'containers with unready status: [kube-storage-version-migrator-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:23:05Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:21:51Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://149c5384ae9e6b7826454fa99af945a5096cf72b8ec13382f7d86da110c4a98b
+  - containerID: cri-o://34ee1a957e7407d4587f3ea170ef8f02d19e348844dab57d3492f50c5e3a6a80
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87f42f063f97dec016b3981f7d68e4c759c01411158eb65d20f42137bc475253
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87f42f063f97dec016b3981f7d68e4c759c01411158eb65d20f42137bc475253
-    lastState: {}
-    name: kube-storage-version-migrator-operator
-    ready: false
-    restartCount: 0
-    started: false
-    state:
+    lastState:
       terminated:
         containerID: cri-o://149c5384ae9e6b7826454fa99af945a5096cf72b8ec13382f7d86da110c4a98b
         exitCode: 1
@@ -387,6 +374,13 @@ status:
           I0309 14:23:04.303471       1 base_controller.go:167] Shutting down StatusSyncer_kube-storage-version-migrator ...
         reason: Error
         startedAt: "2023-03-09T14:21:58Z"
+    name: kube-storage-version-migrator-operator
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-09T14:23:04Z"
   hostIP: 10.0.130.93
   phase: Running
   podIP: 10.128.0.8
