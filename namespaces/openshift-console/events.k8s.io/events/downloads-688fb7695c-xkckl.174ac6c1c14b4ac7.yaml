@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:32:26Z"
-deprecatedLastTimestamp: "2023-03-09T14:32:26Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:27Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:32:26Z"
+    time: "2023-03-09T14:32:27Z"
   name: downloads-688fb7695c-xkckl.174ac6c1c14b4ac7
   namespace: openshift-console
-  resourceVersion: "15181"
+  resourceVersion: "15224"
   uid: 54ecaf16-fe9e-42b7-bb29-83ca0443e6ac
 note: 'Readiness probe failed: Get "http://10.128.0.73:8080/": dial tcp 10.128.0.73:8080:
   connect: connection refused'
