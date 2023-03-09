@@ -1,0 +1,47 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:02Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:02Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-status-controller-statussyncer_kube-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:03Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:22:03Z"
+  name: kube-controller-manager-operator.174ac6305ecb5f7d
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "3875"
+  uid: 98926876-1dfa-48a7-87f9-decc5cb6dbcd
+note: 'Status for clusteroperator/kube-controller-manager changed: Degraded message
+  changed from "InstallerControllerDegraded: missing required resources: [configmaps:
+  aggregator-client-ca,client-ca, secrets: csr-signer,kube-controller-manager-client-cert-key,
+  configmaps: cluster-policy-controller-config-0,config-0,controller-manager-kubeconfig-0,kube-controller-cert-syncer-kubeconfig-0,kube-controller-manager-pod-0,recycler-config-0,service-ca-0,serviceaccount-ca-0,
+  secrets: localhost-recovery-client-token-0,service-account-private-key-0]" to "InstallerControllerDegraded:
+  missing required resources: [configmaps: aggregator-client-ca,client-ca, secrets:
+  csr-signer,kube-controller-manager-client-cert-key, configmaps: cluster-policy-controller-config-0,config-0,controller-manager-kubeconfig-0,kube-controller-cert-syncer-kubeconfig-0,kube-controller-manager-pod-0,recycler-config-0,service-ca-0,serviceaccount-ca-0,
+  secrets: localhost-recovery-client-token-0,service-account-private-key-0]\nNodeControllerDegraded:
+  All master nodes are ready"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Normal
