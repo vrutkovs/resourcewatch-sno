@@ -92,14 +92,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:25:02Z"
+    time: "2023-03-09T14:25:05Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "7424"
+  resourceVersion: "7458"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -222,7 +222,7 @@ status:
     type: APIServerDeploymentAvailable
   - lastTransitionTime: "2023-03-09T14:22:02Z"
     message: 1 of 1 requested instances are unavailable for apiserver.openshift-oauth-apiserver
-      (container is waiting in pending apiserver-7f975bf8c6-fc59r pod)
+      ()
     reason: UnavailablePod
     status: "True"
     type: APIServerDeploymentDegraded
