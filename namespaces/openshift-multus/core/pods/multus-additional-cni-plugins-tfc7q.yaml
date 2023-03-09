@@ -396,8 +396,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -414,6 +412,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:20:44Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:02Z"
   name: multus-additional-cni-plugins-tfc7q
   namespace: openshift-multus
   ownerReferences:
@@ -423,7 +433,7 @@ metadata:
     kind: DaemonSet
     name: multus-additional-cni-plugins
     uid: f298fd66-e9c3-44fd-bc7d-4aca53e76970
-  resourceVersion: "2908"
+  resourceVersion: "13571"
   uid: c744a2d1-8bd9-4403-8cb9-bed2ff64ddff
 spec:
   affinity:
@@ -801,8 +811,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:44Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:01Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:44Z"
