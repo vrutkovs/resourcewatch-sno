@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:31:59Z"
 deprecatedLastTimestamp: "2023-03-09T14:31:59Z"
 deprecatedSource:
@@ -28,7 +28,7 @@ metadata:
     time: "2023-03-09T14:31:59Z"
   name: vrutkovs-sno.174ac6bb7933fed6
   namespace: default
-  resourceVersion: "13342"
+  resourceVersion: "13349"
   uid: c7676093-41ac-4af5-abb2-dd708cf112ef
 note: 'Node vrutkovs-sno status is now: NodeHasSufficientPID'
 reason: NodeHasSufficientPID
