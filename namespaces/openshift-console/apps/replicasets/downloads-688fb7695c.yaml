@@ -114,6 +114,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:32:12Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:12Z"
   name: downloads-688fb7695c
   namespace: openshift-console
   ownerReferences:
@@ -123,7 +132,7 @@ metadata:
     kind: Deployment
     name: downloads
     uid: 01cb3315-d49e-4b0f-9e54-758d7eef6bbe
-  resourceVersion: "14819"
+  resourceVersion: "14827"
   uid: ff4bbfd5-d819-4efa-a783-78f5e06c4ea9
 spec:
   replicas: 1
@@ -255,4 +264,5 @@ spec:
         operator: Exists
         tolerationSeconds: 120
 status:
+  observedGeneration: 1
   replicas: 0
