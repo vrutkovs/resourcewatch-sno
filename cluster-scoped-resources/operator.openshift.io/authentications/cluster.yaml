@@ -6,7 +6,7 @@ metadata:
     include.release.openshift.io/single-node-developer: "true"
     release.openshift.io/create-only: "true"
   creationTimestamp: "2023-03-09T14:14:46Z"
-  generation: 3
+  generation: 4
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -28,6 +28,21 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:46Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:generations: {}
+        f:oauthAPIServer:
+          .: {}
+          f:latestAvailableRevision: {}
+        f:readyReplicas: {}
+    manager: authentication-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:23:06Z"
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -70,35 +85,21 @@ metadata:
               .: {}
               f:cipherSuites: {}
               f:minTLSVersion: {}
+              f:namedCertificates: {}
             f:volumesToMount:
               .: {}
               f:identityProviders: {}
         f:unsupportedConfigOverrides: {}
     manager: authentication-operator
     operation: Update
-    time: "2023-03-09T14:22:07Z"
-  - apiVersion: operator.openshift.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        .: {}
-        f:conditions: {}
-        f:generations: {}
-        f:oauthAPIServer:
-          .: {}
-          f:latestAvailableRevision: {}
-        f:readyReplicas: {}
-    manager: authentication-operator
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:23:06Z"
+    time: "2023-03-09T14:23:07Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6397"
+  resourceVersion: "6420"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -155,6 +156,11 @@ spec:
         - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
         - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
         minTLSVersion: VersionTLS12
+        namedCertificates:
+        - certFile: /var/config/system/secrets/v4-0-config-system-router-certs/apps.ocp.choomba.one
+          keyFile: /var/config/system/secrets/v4-0-config-system-router-certs/apps.ocp.choomba.one
+          names:
+          - '*.apps.ocp.choomba.one'
       volumesToMount:
         identityProviders: '{}'
   operatorLogLevel: Normal
