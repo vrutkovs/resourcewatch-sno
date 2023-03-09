@@ -127,12 +127,14 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"PodScheduled"}:
@@ -145,6 +147,7 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -160,7 +163,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:39:38Z"
+    time: "2023-03-09T14:39:39Z"
   name: revision-pruner-6-vrutkovs-sno
   namespace: openshift-kube-controller-manager
   ownerReferences:
@@ -168,7 +171,7 @@ metadata:
     kind: ConfigMap
     name: revision-status-6
     uid: b9b4edf4-e8a6-4aa7-b40d-b692e347e75f
-  resourceVersion: "18005"
+  resourceVersion: "18007"
   uid: 6740dae1-f1d0-4a81-b8f9-dee4f7e34848
 spec:
   automountServiceAccountToken: false
@@ -248,15 +251,18 @@ status:
   conditions:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:39:36Z"
+    reason: PodCompleted
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:39:38Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:39:39Z"
+    reason: PodCompleted
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:39:38Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:39:39Z"
+    reason: PodCompleted
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:39:36Z"
@@ -268,11 +274,15 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d32df39b960a3d0fd95bb8269b5f82f104c4834d44ce0e86605741fe6546ff3d
     lastState: {}
     name: pruner
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://6894828155d12aaa2dd070af1aa8b866bdf7f10d8b40bf24e06e2316ccc2b95f
+        exitCode: 0
+        finishedAt: "2023-03-09T14:39:38Z"
+        reason: Completed
         startedAt: "2023-03-09T14:39:38Z"
   hostIP: 10.0.130.93
   phase: Running
