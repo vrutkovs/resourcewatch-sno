@@ -140,13 +140,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:19:59Z"
+    time: "2023-03-09T14:21:59Z"
   name: kube-storage-version-migrator-operator-77b5d98c74
   namespace: openshift-kube-storage-version-migrator-operator
   ownerReferences:
@@ -156,7 +158,7 @@ metadata:
     kind: Deployment
     name: kube-storage-version-migrator-operator
     uid: e175c73d-fd16-4746-ae1b-5ca4d30312d9
-  resourceVersion: "2320"
+  resourceVersion: "3307"
   uid: 03917f08-1f25-4eff-8711-5bda51a91405
 spec:
   replicas: 1
@@ -249,6 +251,8 @@ spec:
           name: config
         name: config
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
