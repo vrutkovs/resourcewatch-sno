@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:04Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:04Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:09Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:09Z"
+  name: kube-apiserver-operator-6d77968c5-8rckr.174ac6bc959da299
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "14573"
+  uid: c333f5c8-b928-412f-b713-38a8231fca09
+note: 'MountVolume.SetUp failed for volume "config" : failed to sync configmap cache:
+  timed out waiting for the condition'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: kube-apiserver-operator-6d77968c5-8rckr
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "8516"
+  uid: c46105cd-3ca0-40d7-accb-d09ed5679fe8
+type: Warning
