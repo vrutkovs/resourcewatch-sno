@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:21:03Z"
-deprecatedLastTimestamp: "2023-03-09T14:21:03Z"
+deprecatedLastTimestamp: "2023-03-09T14:21:33Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:21:03Z"
+    time: "2023-03-09T14:21:33Z"
   name: ovnkube-node-d88ws.174ac622beded803
   namespace: openshift-ovn-kubernetes
-  resourceVersion: "2972"
+  resourceVersion: "3032"
   uid: c911fc42-67f9-4496-9abd-7445c5674157
 note: 'Readiness probe failed: '
 reason: Unhealthy
