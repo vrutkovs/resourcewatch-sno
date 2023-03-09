@@ -114,9 +114,9 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:31Z"
   name: vrutkovs-sno
-  resourceVersion: "13912"
+  resourceVersion: "15385"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
 spec: {}
 status:
@@ -140,25 +140,25 @@ status:
     memory: 16342536Ki
     pods: "250"
   conditions:
-  - lastHeartbeatTime: "2023-03-09T14:32:02Z"
+  - lastHeartbeatTime: "2023-03-09T14:32:31Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient memory available
     reason: KubeletHasSufficientMemory
     status: "False"
     type: MemoryPressure
-  - lastHeartbeatTime: "2023-03-09T14:32:02Z"
+  - lastHeartbeatTime: "2023-03-09T14:32:31Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has no disk pressure
     reason: KubeletHasNoDiskPressure
     status: "False"
     type: DiskPressure
-  - lastHeartbeatTime: "2023-03-09T14:32:02Z"
+  - lastHeartbeatTime: "2023-03-09T14:32:31Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient PID available
     reason: KubeletHasSufficientPID
     status: "False"
     type: PIDPressure
-  - lastHeartbeatTime: "2023-03-09T14:32:02Z"
+  - lastHeartbeatTime: "2023-03-09T14:32:31Z"
     lastTransitionTime: "2023-03-09T14:32:02Z"
     message: kubelet is posting ready status
     reason: KubeletReady
@@ -168,6 +168,9 @@ status:
     kubeletEndpoint:
       Port: 10250
   images:
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6d46f731cbe328e293f88842f97b2dd6bfe8e9a82a1b0cf8cfc63cb2bf33f52c
+    sizeBytes: 1454769149
   - names:
     - registry.redhat.io/redhat/redhat-operator-index@sha256:12ccf3d13d87217d4b6dd854799a8dc25e0fdf719acbed7d003c781c6e3d2152
     - registry.redhat.io/redhat/redhat-operator-index@sha256:e24b543230ca822dabaa8a4c93dc67e0677d2cbdbb8a76e6da5bd0053782e15b
@@ -283,6 +286,9 @@ status:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:af5fed62790f3da5a9b7d32374331539ab531f17d006a69ea501622d946a07fe
     sizeBytes: 436025435
   - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e611740ca5f095ba0d1311e1ec0b7c3529815b7d641ea23d74294438ed7ae6d8
+    sizeBytes: 435826897
+  - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:5a2b43418ecaae507b49eede5bd621226eb19cc148792870139c8c28402fec71
     sizeBytes: 434370079
   - names:
@@ -321,12 +327,6 @@ status:
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8f9ca26966f087b3e9f2169fd5e09c379da9a90aa29ba0a32c2bb169d88abaf0
     sizeBytes: 413037739
-  - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:df80aa07467d1c6f59a39f3c00e00e130a6b25308b1419264565ca7cd8a76407
-    sizeBytes: 411751504
-  - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9ea15ecbb6c5cf3fde797915699919c1e6285edfdacf748b3a717b87ef6510fb
-    sizeBytes: 404869874
   nodeInfo:
     architecture: amd64
     bootID: fb8ee38c-473c-4e92-a927-ec95a38fb01a
