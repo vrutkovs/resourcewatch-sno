@@ -44,7 +44,7 @@ metadata:
     manager: cluster-openshift-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:15Z"
+    time: "2023-03-09T14:29:16Z"
   name: openshift-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,13 +52,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "9437"
+  resourceVersion: "9473"
   uid: 554eb8d5-f8a6-4fb8-afb7-e4785239d130
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:02Z"
-    message: All is well
+    message: 'APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable
+      for apiserver.openshift-apiserver (container is crashlooping in apiserver-5974c8c8bd-7zfsh
+      pod)'
     reason: AsExpected
     status: "False"
     type: Degraded
@@ -68,8 +70,10 @@ status:
     status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: 'APIServicesAvailable: PreconditionNotReady'
-    reason: APIServices_PreconditionNotReady
+    message: |-
+      APIServerDeploymentAvailable: no apiserver.openshift-apiserver pods available on any node.
+      APIServicesAvailable: PreconditionNotReady
+    reason: APIServerDeployment_NoPod::APIServices_PreconditionNotReady
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
