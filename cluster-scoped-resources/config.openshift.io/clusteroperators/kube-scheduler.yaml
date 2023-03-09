@@ -52,15 +52,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10049"
+  resourceVersion: "10051"
   uid: 441925ee-aa23-4d3c-937b-d1809e7a63de
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-09T14:24:39Z"
-    message: 'InstallerControllerDegraded: missing required resources: secrets: kube-scheduler-client-cert-key'
-    reason: InstallerController_Error
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:29:35Z"
+    message: 'NodeControllerDegraded: All master nodes are ready'
+    reason: AsExpected
+    status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:22:09Z"
     message: 'NodeInstallerProgressing: 1 nodes are at revision 0; 0 nodes have achieved
