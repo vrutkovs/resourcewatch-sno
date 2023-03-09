@@ -230,7 +230,7 @@ metadata:
     kind: ReplicaSet
     name: apiserver-6fb9dd7b7
     uid: c61cbb03-463c-4f3a-acd8-6f8e83dc3b84
-  resourceVersion: "4546"
+  resourceVersion: "4548"
   uid: 55a83382-2c01-473e-b952-0d3de004e919
 spec:
   affinity:
@@ -363,6 +363,7 @@ spec:
     - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
       name: kube-api-access-5wgcn
       readOnly: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -447,5 +448,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:22:12Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
