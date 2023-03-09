@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:33Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:33Z"
+deprecatedSource:
+  component: cluster-authentication-operator-trust-distribution-trustdistributioncontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:33Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:22:33Z"
+  name: authentication-operator.174ac6378b24d2cd
+  namespace: openshift-authentication-operator
+  resourceVersion: "5426"
+  uid: 48bdfdb2-41cd-448f-b884-64c6449fb766
+note: Created ConfigMap/oauth-serving-cert -n openshift-config-managed because it
+  was missing
+reason: ConfigMapCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
+type: Normal
