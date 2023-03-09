@@ -68,14 +68,14 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:38:09Z"
+    time: "2023-03-09T14:38:22Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "17655"
+  resourceVersion: "17689"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -154,35 +154,11 @@ status:
     type: MissingStaticPodControllerDegraded
   - lastTransitionTime: "2023-03-09T14:38:09Z"
     message: "pod/kube-controller-manager-vrutkovs-sno container \"cluster-policy-controller\"
-      is terminated: Completed: \npod/kube-controller-manager-vrutkovs-sno container
-      \"kube-controller-manager\" is terminated: Completed: \npod/kube-controller-manager-vrutkovs-sno
-      container \"kube-controller-manager-cert-syncer\" is terminated: Error: 0865
-      \      1 certsync_controller.go:66] Syncing configmaps: [{aggregator-client-ca
-      false} {client-ca false} {trusted-ca-bundle true}]\nI0309 14:37:29.801219       1
-      certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
-      false} {csr-signer false}]\nI0309 14:37:30.400903       1 certsync_controller.go:66]
-      Syncing configmaps: [{aggregator-client-ca false} {client-ca false} {trusted-ca-bundle
-      true}]\nI0309 14:37:30.401224       1 certsync_controller.go:170] Syncing secrets:
-      [{kube-controller-manager-client-cert-key false} {csr-signer false}]\nI0309
-      14:37:31.002365       1 certsync_controller.go:66] Syncing configmaps: [{aggregator-client-ca
-      false} {client-ca false} {trusted-ca-bundle true}]\nI0309 14:37:31.002678       1
-      certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
-      false} {csr-signer false}]\nI0309 14:37:31.603765       1 certsync_controller.go:66]
-      Syncing configmaps: [{aggregator-client-ca false} {client-ca false} {trusted-ca-bundle
-      true}]\nI0309 14:37:31.604111       1 certsync_controller.go:170] Syncing secrets:
-      [{kube-controller-manager-client-cert-key false} {csr-signer false}]\nI0309
-      14:37:40.903691       1 certsync_controller.go:66] Syncing configmaps: [{aggregator-client-ca
-      false} {client-ca false} {trusted-ca-bundle true}]\nI0309 14:37:40.906345       1
-      certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
-      false} {csr-signer false}]\nI0309 14:37:46.574415       1 certsync_controller.go:66]
-      Syncing configmaps: [{aggregator-client-ca false} {client-ca false} {trusted-ca-bundle
-      true}]\nI0309 14:37:46.574671       1 certsync_controller.go:170] Syncing secrets:
-      [{kube-controller-manager-client-cert-key false} {csr-signer false}]\nI0309
-      14:38:06.919095       1 certsync_controller.go:66] Syncing configmaps: [{aggregator-client-ca
-      false} {client-ca false} {trusted-ca-bundle true}]\nI0309 14:38:06.919332       1
-      certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
-      false} {csr-signer false}]\n\npod/kube-controller-manager-vrutkovs-sno container
-      \"kube-controller-manager-recovery-controller\" is terminated: Completed: "
+      is waiting: ContainerCreating: \npod/kube-controller-manager-vrutkovs-sno container
+      \"kube-controller-manager\" is waiting: ContainerCreating: \npod/kube-controller-manager-vrutkovs-sno
+      container \"kube-controller-manager-cert-syncer\" is waiting: ContainerCreating:
+      \npod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager-recovery-controller\"
+      is waiting: ContainerCreating: "
     reason: Error
     status: "True"
     type: StaticPodsDegraded
