@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"console-operator-5cb6dc7685-cgzvf_6a7e1b3b-5a20-46da-b76a-486bce84e03c","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:32:12Z","renewTime":"2023-03-09T14:38:12Z","leaderTransitions":0}'
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"console-operator-5cb6dc7685-cgzvf_6a7e1b3b-5a20-46da-b76a-486bce84e03c","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:32:12Z","renewTime":"2023-03-09T14:39:12Z","leaderTransitions":0}'
   creationTimestamp: "2023-03-09T14:32:12Z"
   managedFields:
   - apiVersion: v1
@@ -14,8 +14,8 @@ metadata:
           f:control-plane.alpha.kubernetes.io/leader: {}
     manager: console
     operation: Update
-    time: "2023-03-09T14:38:12Z"
+    time: "2023-03-09T14:39:12Z"
   name: console-operator-lock
   namespace: openshift-console-operator
-  resourceVersion: "17661"
+  resourceVersion: "17871"
   uid: 97924d30-70bd-4d56-b9d8-2882c49a4f08
