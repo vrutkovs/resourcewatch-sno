@@ -434,6 +434,21 @@ metadata:
     manager: PrometheusOperator
     operation: Update
     time: "2023-03-09T14:32:51Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:collisionCount: {}
+        f:currentReplicas: {}
+        f:currentRevision: {}
+        f:observedGeneration: {}
+        f:replicas: {}
+        f:updateRevision: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:51Z"
   name: alertmanager-main
   namespace: openshift-monitoring
   ownerReferences:
@@ -443,7 +458,7 @@ metadata:
     kind: Alertmanager
     name: main
     uid: f6381461-22da-446a-a1f6-dec73f2eccf8
-  resourceVersion: "16032"
+  resourceVersion: "16038"
   uid: 98deb091-f51e-4a1f-a4a3-8038c2d7d435
 spec:
   podManagementPolicy: Parallel
@@ -777,4 +792,10 @@ spec:
     type: RollingUpdate
 status:
   availableReplicas: 0
-  replicas: 0
+  collisionCount: 0
+  currentReplicas: 1
+  currentRevision: alertmanager-main-6c9d84bbcf
+  observedGeneration: 1
+  replicas: 1
+  updateRevision: alertmanager-main-6c9d84bbcf
+  updatedReplicas: 1
