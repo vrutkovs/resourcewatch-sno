@@ -182,13 +182,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:52Z"
+    time: "2023-03-09T14:32:08Z"
   name: cluster-baremetal-operator-78475cb658
   namespace: openshift-machine-api
   ownerReferences:
@@ -198,7 +200,7 @@ metadata:
     kind: Deployment
     name: cluster-baremetal-operator
     uid: b6205b7a-694f-4858-9471-af4328721b53
-  resourceVersion: "13791"
+  resourceVersion: "14469"
   uid: 626ba754-8d21-4c0d-a271-a6a742610587
 spec:
   replicas: 1
@@ -319,6 +321,8 @@ spec:
           name: cluster-baremetal-operator-images
         name: images
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
