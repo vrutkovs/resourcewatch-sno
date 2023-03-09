@@ -28,9 +28,32 @@ metadata:
     manager: ingress-operator
     operation: Update
     time: "2023-03-09T14:22:16Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:availableReplicas: {}
+        f:conditions: {}
+        f:domain: {}
+        f:endpointPublishingStrategy:
+          .: {}
+          f:hostNetwork:
+            .: {}
+            f:httpPort: {}
+            f:httpsPort: {}
+            f:protocol: {}
+            f:statsPort: {}
+          f:type: {}
+        f:observedGeneration: {}
+        f:selector: {}
+    manager: ingress-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:18Z"
   name: default
   namespace: openshift-ingress-operator
-  resourceVersion: "4721"
+  resourceVersion: "4794"
   uid: 581ce6e7-0dc9-460c-b609-a8d3a1b3ae1f
 spec:
   clientTLS:
@@ -45,3 +68,20 @@ spec:
   tuningOptions:
     reloadInterval: 0s
   unsupportedConfigOverrides: null
+status:
+  availableReplicas: 0
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:22:18Z"
+    reason: Valid
+    status: "True"
+    type: Admitted
+  domain: apps.ocp.choomba.one
+  endpointPublishingStrategy:
+    hostNetwork:
+      httpPort: 80
+      httpsPort: 443
+      protocol: TCP
+      statsPort: 1936
+    type: HostNetwork
+  observedGeneration: 1
+  selector: ""
