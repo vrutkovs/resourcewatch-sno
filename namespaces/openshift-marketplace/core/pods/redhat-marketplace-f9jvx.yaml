@@ -174,6 +174,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -188,19 +190,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:47Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:09Z"
   name: redhat-marketplace-f9jvx
   namespace: openshift-marketplace
   ownerReferences:
@@ -210,7 +200,7 @@ metadata:
     kind: CatalogSource
     name: redhat-marketplace
     uid: b1e096c1-9aee-45b4-9c8a-7a7145b2ad1d
-  resourceVersion: "13767"
+  resourceVersion: "14566"
   uid: 64e4353e-9138-42d7-a2c0-3412e8b68186
 spec:
   containers:
@@ -334,8 +324,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:47Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:47Z"
