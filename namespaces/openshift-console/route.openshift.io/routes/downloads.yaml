@@ -1,0 +1,42 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: "2023-03-09T14:32:13Z"
+  managedFields:
+  - apiVersion: route.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:host: {}
+        f:port:
+          .: {}
+          f:targetPort: {}
+        f:tls:
+          .: {}
+          f:insecureEdgeTerminationPolicy: {}
+          f:termination: {}
+        f:to:
+          f:kind: {}
+          f:name: {}
+          f:weight: {}
+        f:wildcardPolicy: {}
+    manager: console
+    operation: Update
+    time: "2023-03-09T14:32:13Z"
+  name: downloads
+  namespace: openshift-console
+  resourceVersion: "14853"
+  uid: 7d692879-b023-4155-a641-2af3267143be
+spec:
+  host: downloads-openshift-console.apps.ocp.choomba.one
+  port:
+    targetPort: http
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: downloads
+    weight: 100
+  wildcardPolicy: None
+status: {}
