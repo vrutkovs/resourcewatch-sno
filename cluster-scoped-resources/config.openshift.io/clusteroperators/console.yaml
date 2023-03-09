@@ -46,7 +46,7 @@ metadata:
     manager: console
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:22Z"
+    time: "2023-03-09T14:32:25Z"
   name: console
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -54,13 +54,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15032"
+  resourceVersion: "15125"
   uid: 515b351d-ea5a-461b-89c7-b327405f0155
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:32:14Z"
-    message: 'RouteHealthDegraded: console route is not admitted'
+    message: |-
+      RouteHealthDegraded: console route is not admitted
+      SyncLoopRefreshDegraded: no ingress for host console-openshift-console.apps.ocp.choomba.one in route console in namespace openshift-console
     reason: AsExpected
     status: "False"
     type: Degraded
