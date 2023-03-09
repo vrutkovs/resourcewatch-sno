@@ -35,9 +35,9 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:15:05Z"
+    time: "2023-03-09T14:28:19Z"
   name: version
-  resourceVersion: "2064"
+  resourceVersion: "7914"
   uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
 spec:
   channel: stable-4.13
@@ -72,12 +72,6 @@ status:
     status: "False"
     type: RetrievedUpdates
   - lastTransitionTime: "2023-03-09T14:14:35Z"
-    message: Disabling ownership via cluster version overrides prevents upgrades.
-      Please remove overrides before continuing.
-    reason: ClusterVersionOverridesSet
-    status: "False"
-    type: Upgradeable
-  - lastTransitionTime: "2023-03-09T14:14:35Z"
     message: Capabilities match configured spec
     reason: AsExpected
     status: "False"
@@ -96,8 +90,7 @@ status:
     status: "False"
     type: Failing
   - lastTransitionTime: "2023-03-09T14:14:35Z"
-    message: 'Working towards 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest:
-      347 of 840 done (41% complete)'
+    message: Working towards 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
     status: "True"
     type: Progressing
   desired:
@@ -110,5 +103,5 @@ status:
     state: Partial
     verified: false
     version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
-  observedGeneration: 1
+  observedGeneration: 2
   versionHash: PphPJCfTF3I=
