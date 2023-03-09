@@ -75,7 +75,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4675"
+  resourceVersion: "4697"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -160,9 +160,12 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     status: "False"
     type: StaticPodsDegraded
-  - lastTransitionTime: "2023-03-09T14:22:01Z"
-    reason: AsExpected
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:22:15Z"
+    message: 'error fetching rules: Get "https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules":
+      dial tcp: lookup thanos-querier.openshift-monitoring.svc on 172.30.0.10:53:
+      read udp 10.128.0.16:40298->172.30.0.10:53: read: connection refused'
+    reason: Error
+    status: "True"
     type: GarbageCollectorDegraded
   - lastTransitionTime: "2023-03-09T14:22:01Z"
     message: All master nodes are ready
