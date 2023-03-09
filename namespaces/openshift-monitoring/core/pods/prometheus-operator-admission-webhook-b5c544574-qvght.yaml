@@ -118,7 +118,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-operator-admission-webhook-b5c544574
     uid: e40c1494-47dc-4440-9bf3-73a7f1ea3faa
-  resourceVersion: "5240"
+  resourceVersion: "5243"
   uid: 6be02a99-8e3b-4979-beb8-0c3206b2773d
 spec:
   automountServiceAccountToken: false
@@ -173,6 +173,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   preemptionPolicy: PreemptLowerPriority
   priority: 2000000000
   priorityClassName: system-cluster-critical
@@ -210,5 +211,10 @@ spec:
         path: tls.key
       secretName: prometheus-operator-admission-webhook-tls
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:22:29Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
