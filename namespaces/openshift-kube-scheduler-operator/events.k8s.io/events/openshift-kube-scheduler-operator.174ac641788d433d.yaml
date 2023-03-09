@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:23:15Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:15Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-installer-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:23:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:23:15Z"
+  name: openshift-kube-scheduler-operator.174ac641788d433d
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "6790"
+  uid: fd801fcc-2dc8-4a95-b535-eddad3d6b98a
+note: 'secrets: kube-scheduler-client-cert-key, secrets: localhost-recovery-client-token-3'
+reason: RequiredInstallerResourcesMissing
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 63ed6034-26ff-494c-bb49-f929f1f6a34d
+type: Warning
