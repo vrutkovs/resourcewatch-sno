@@ -7,7 +7,7 @@ metadata:
     include.release.openshift.io/single-node-developer: "true"
     release.openshift.io/create-only: "true"
   creationTimestamp: "2023-03-09T14:14:46Z"
-  generation: 1
+  generation: 2
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -45,18 +45,69 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:22:06Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          .: {}
+          f:extendedArguments:
+            .: {}
+            f:cluster-cidr: {}
+            f:cluster-name: {}
+            f:feature-gates: {}
+            f:service-cluster-ip-range: {}
+          f:featureGates: {}
+          f:servingInfo:
+            .: {}
+            f:cipherSuites: {}
+            f:minTLSVersion: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:22:07Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4195"
+  resourceVersion: "4270"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
   managementState: Managed
+  observedConfig:
+    extendedArguments:
+      cluster-cidr:
+      - 10.128.0.0/14
+      cluster-name:
+      - ocp-rd9g5
+      feature-gates:
+      - APIPriorityAndFairness=true
+      - RotateKubeletServerCertificate=true
+      - DownwardAPIHugePages=true
+      - OpenShiftPodSecurityAdmission=true
+      - RetroactiveDefaultStorageClass=false
+      service-cluster-ip-range:
+      - 172.30.0.0/16
+    featureGates:
+    - APIPriorityAndFairness=true
+    - RotateKubeletServerCertificate=true
+    - DownwardAPIHugePages=true
+    - OpenShiftPodSecurityAdmission=true
+    - RetroactiveDefaultStorageClass=false
+    servingInfo:
+      cipherSuites:
+      - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+      - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      minTLSVersion: VersionTLS12
   operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
   useMoreSecureServiceCA: true
 status:
   conditions:
