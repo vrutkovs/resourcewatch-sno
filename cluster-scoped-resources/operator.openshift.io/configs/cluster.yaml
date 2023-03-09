@@ -47,7 +47,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3380"
+  resourceVersion: "3395"
   uid: a3c86411-6814-42d1-8bdb-a7a123f11aea
 spec:
   logLevel: Normal
@@ -75,4 +75,8 @@ status:
     reason: AsExpected
     status: "False"
     type: KubeCloudConfigControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:21:59Z"
+    reason: AsExpected
+    status: "False"
+    type: AWSPlatformServiceLocationControllerDegraded
   readyReplicas: 0
