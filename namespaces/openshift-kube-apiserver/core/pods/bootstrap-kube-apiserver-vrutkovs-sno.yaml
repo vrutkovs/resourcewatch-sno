@@ -217,6 +217,51 @@ metadata:
     manager: kubelet
     operation: Update
     time: "2023-03-09T14:21:13Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.93"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:21:15Z"
   name: bootstrap-kube-apiserver-vrutkovs-sno
   namespace: openshift-kube-apiserver
   ownerReferences:
@@ -225,7 +270,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "2998"
+  resourceVersion: "3002"
   uid: 00279aac-3656-425a-b5a5-9da5a4f966b1
 spec:
   containers:
@@ -370,5 +415,65 @@ spec:
       type: ""
     name: audit-dir
 status:
-  phase: Pending
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:19:33Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:19:48Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:19:48Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:19:25Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://2eb36039922c9e490bc42294aa1c4399ba4d9ad260779245641e78ad34ee8949
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
+    lastState: {}
+    name: kube-apiserver
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-09T14:19:33Z"
+  - containerID: cri-o://404f8adba085e8d9e45af5725c9452350a62a1d78f501863b7e38ae7f7f7dfbc
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
+    lastState: {}
+    name: kube-apiserver-insecure-readyz
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-09T14:19:38Z"
+  hostIP: 10.0.130.93
+  initContainerStatuses:
+  - containerID: cri-o://c7eb3892fdf56c666491f3256b2fc6b27d53127da819dad84399a2777dc1d163
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
+    lastState: {}
+    name: setup
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: cri-o://c7eb3892fdf56c666491f3256b2fc6b27d53127da819dad84399a2777dc1d163
+        exitCode: 0
+        finishedAt: "2023-03-09T14:19:33Z"
+        reason: Completed
+        startedAt: "2023-03-09T14:19:33Z"
+  phase: Running
+  podIP: 10.0.130.93
+  podIPs:
+  - ip: 10.0.130.93
   qosClass: Burstable
+  startTime: "2023-03-09T14:19:25Z"
