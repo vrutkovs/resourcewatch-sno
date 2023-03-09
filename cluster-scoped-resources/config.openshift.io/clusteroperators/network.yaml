@@ -55,7 +55,7 @@ metadata:
     manager: cluster-network-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:34Z"
+    time: "2023-03-09T14:20:35Z"
   name: network
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -63,7 +63,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "2797"
+  resourceVersion: "2823"
   uid: efc0e65e-4103-4be7-8a5a-99dd46b6df53
 spec: {}
 status:
@@ -85,10 +85,11 @@ status:
     type: Upgradeable
   - lastTransitionTime: "2023-03-09T14:20:23Z"
     message: |-
-      DaemonSet "/openshift-ovn-kubernetes/ovnkube-master" is not available (awaiting 1 nodes)
-      DaemonSet "/openshift-ovn-kubernetes/ovnkube-node" is not available (awaiting 1 nodes)
       DaemonSet "/openshift-multus/multus-additional-cni-plugins" is not available (awaiting 1 nodes)
       DaemonSet "/openshift-multus/network-metrics-daemon" is waiting for other operators to become ready
+      DaemonSet "/openshift-ovn-kubernetes/ovnkube-master" is not available (awaiting 1 nodes)
+      DaemonSet "/openshift-ovn-kubernetes/ovnkube-node" is not available (awaiting 1 nodes)
+      Deployment "/openshift-network-diagnostics/network-check-source" is not yet scheduled on any nodes
       Deployment "/openshift-multus/multus-admission-controller" is waiting for other operators to become ready
     reason: Deploying
     status: "True"
