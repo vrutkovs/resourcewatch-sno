@@ -111,11 +111,13 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:15:12Z"
+    time: "2023-03-09T14:19:59Z"
   name: machine-config-operator-8494d5cfff
   namespace: openshift-machine-config-operator
   ownerReferences:
@@ -125,7 +127,7 @@ metadata:
     kind: Deployment
     name: machine-config-operator
     uid: 2db1961c-62ad-4f93-a015-42fb019dfc21
-  resourceVersion: "2266"
+  resourceVersion: "2268"
   uid: 8c7f1761-63c0-4ba4-a559-948ea90c5d54
 spec:
   replicas: 1
@@ -195,5 +197,6 @@ spec:
           type: ""
         name: root-ca
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
