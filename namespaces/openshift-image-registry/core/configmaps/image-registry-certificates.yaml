@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    imageregistry.operator.openshift.io/checksum: sha256:4557fb73edc1388ad080c46a3da83cb4264130a3357453570e841b53ab4cf70c
+  creationTimestamp: "2023-03-09T14:29:12Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:imageregistry.operator.openshift.io/checksum: {}
+    manager: cluster-image-registry-operator
+    operation: Update
+    time: "2023-03-09T14:29:12Z"
+  name: image-registry-certificates
+  namespace: openshift-image-registry
+  resourceVersion: "9123"
+  uid: 404d1522-140d-4e81-bfcf-3266b8a95730
