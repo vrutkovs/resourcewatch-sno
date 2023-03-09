@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:02Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:02Z"
+deprecatedSource:
+  component: node-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:32:02Z"
+  name: machine-config-server-mp8n5.174ac6bc120c39e5
+  namespace: openshift-machine-config-operator
+  resourceVersion: "13934"
+  uid: f1bffd8b-c845-4358-bc5d-fc251826bef0
+note: Node is not ready
+reason: NodeNotReady
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: machine-config-server-mp8n5
+  namespace: openshift-machine-config-operator
+  resourceVersion: "5122"
+  uid: a6ad06b2-fca2-485a-a6da-9612dacddc3a
+type: Warning
