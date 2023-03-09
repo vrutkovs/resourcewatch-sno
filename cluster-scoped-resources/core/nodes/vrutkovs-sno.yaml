@@ -122,9 +122,9 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:01Z"
+    time: "2023-03-09T14:32:02Z"
   name: vrutkovs-sno
-  resourceVersion: "13530"
+  resourceVersion: "13884"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
 spec:
   taints:
@@ -139,7 +139,7 @@ status:
     type: Hostname
   allocatable:
     cpu: 7500m
-    ephemeral-storage: 125238252Ki
+    ephemeral-storage: "114345831029"
     hugepages-1Gi: "0"
     hugepages-2Mi: "0"
     memory: 15191560Ki
@@ -152,29 +152,29 @@ status:
     memory: 16342536Ki
     pods: "250"
   conditions:
-  - lastHeartbeatTime: "2023-03-09T14:32:01Z"
+  - lastHeartbeatTime: "2023-03-09T14:32:02Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient memory available
     reason: KubeletHasSufficientMemory
     status: "False"
     type: MemoryPressure
-  - lastHeartbeatTime: "2023-03-09T14:32:01Z"
+  - lastHeartbeatTime: "2023-03-09T14:32:02Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has no disk pressure
     reason: KubeletHasNoDiskPressure
     status: "False"
     type: DiskPressure
-  - lastHeartbeatTime: "2023-03-09T14:32:01Z"
+  - lastHeartbeatTime: "2023-03-09T14:32:02Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient PID available
     reason: KubeletHasSufficientPID
     status: "False"
     type: PIDPressure
-  - lastHeartbeatTime: "2023-03-09T14:32:01Z"
-    lastTransitionTime: "2023-03-09T14:32:01Z"
-    message: container runtime status check may not have completed yet
-    reason: KubeletNotReady
-    status: "False"
+  - lastHeartbeatTime: "2023-03-09T14:32:02Z"
+    lastTransitionTime: "2023-03-09T14:32:02Z"
+    message: kubelet is posting ready status
+    reason: KubeletReady
+    status: "True"
     type: Ready
   daemonEndpoints:
     kubeletEndpoint:
