@@ -208,7 +208,7 @@ metadata:
     kind: ReplicaSet
     name: console-5879b645d5
     uid: 0f354b94-b053-4264-af8f-a4995b7f4b27
-  resourceVersion: "16982"
+  resourceVersion: "16985"
   uid: 754ab60f-03ca-4e0a-ac8e-9f4708990007
 spec:
   affinity: {}
@@ -289,6 +289,7 @@ spec:
   enableServiceLinks: true
   imagePullSecrets:
   - name: console-dockercfg-qrw8p
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -373,5 +374,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:34:59Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
