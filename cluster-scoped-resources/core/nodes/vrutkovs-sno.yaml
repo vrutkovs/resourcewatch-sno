@@ -54,9 +54,9 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:29Z"
+    time: "2023-03-09T14:21:00Z"
   name: vrutkovs-sno
-  resourceVersion: "2691"
+  resourceVersion: "2966"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
 spec:
   taints:
@@ -85,25 +85,25 @@ status:
     memory: 16342536Ki
     pods: "250"
   conditions:
-  - lastHeartbeatTime: "2023-03-09T14:20:29Z"
+  - lastHeartbeatTime: "2023-03-09T14:21:00Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient memory available
     reason: KubeletHasSufficientMemory
     status: "False"
     type: MemoryPressure
-  - lastHeartbeatTime: "2023-03-09T14:20:29Z"
+  - lastHeartbeatTime: "2023-03-09T14:21:00Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has no disk pressure
     reason: KubeletHasNoDiskPressure
     status: "False"
     type: DiskPressure
-  - lastHeartbeatTime: "2023-03-09T14:20:29Z"
+  - lastHeartbeatTime: "2023-03-09T14:21:00Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient PID available
     reason: KubeletHasSufficientPID
     status: "False"
     type: PIDPressure
-  - lastHeartbeatTime: "2023-03-09T14:20:29Z"
+  - lastHeartbeatTime: "2023-03-09T14:21:00Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: 'container runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady
       message:Network plugin returns error: No CNI configuration file in /etc/kubernetes/cni/net.d/.
@@ -116,12 +116,21 @@ status:
       Port: 10250
   images:
   - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
+    sizeBytes: 921533943
+  - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
     sizeBytes: 835526326
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ebb2140174c027ad75a9f06f0d6f82ed82d20e871877b7504fd95d4b56acdff2
+    sizeBytes: 753179450
   - names:
     - quay.io/edge-infrastructure/assisted-installer-controller@sha256:81c2da91bf20932218d4b0ffc0a321385d81f9971a7529cc1c164d8fe9996d6f
     - quay.io/edge-infrastructure/assisted-installer-controller:latest
     sizeBytes: 740647178
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4e4bafb1e5f5b396d308ee8a7e49c4fd8b13597134c5887db0dd9d9c2d4e0e40
+    sizeBytes: 602617270
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:bd71d26b8b646787500887be672ea8241ad05b6d9412d85569941b549898b01c
     sizeBytes: 540825776
@@ -135,11 +144,26 @@ status:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
     sizeBytes: 447204293
   - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9f7dfaf9351c4deaac3d2846c64dd32a066c68dd3b844d8f9ee748cef7583859
+    sizeBytes: 443544284
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:1a3fb5eda79c9e3a3b9368a2f923c2ed63fffccba20502b718b8d1afb7675897
+    sizeBytes: 440452056
+  - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4a17a5edd33292beb6a274a3d484c8464a8f9291058107b4cb2cf6181058b1cd
     sizeBytes: 427538448
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
     sizeBytes: 425572704
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+    sizeBytes: 402764947
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:26d23cd931fe8b128262dcabd42370499cd80727283fedaeb552ee236c5a70fd
+    sizeBytes: 360076247
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ed68da48de609d277c0cbc6d388e49ba322c0d92e636f2d708274855abaa9c6b
+    sizeBytes: 354430079
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ebdafe9a37686d9e388cc2df3b277fb5ad778898e5cd0ad36bc94712406e7922
     sizeBytes: 351795523
