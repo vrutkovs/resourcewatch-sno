@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15425"
+  resourceVersion: "15426"
   uid: d07997f3-20d5-4c43-81d7-0e39c2ed7464
 spec: {}
 status:
@@ -64,7 +64,8 @@ status:
     message: Samples installation successful at 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
     status: "True"
     type: Available
-  - lastTransitionTime: "2023-03-09T14:32:22Z"
+  - lastTransitionTime: "2023-03-09T14:32:32Z"
+    message: Samples installation successful at 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
     status: "False"
     type: Progressing
   extension: null
