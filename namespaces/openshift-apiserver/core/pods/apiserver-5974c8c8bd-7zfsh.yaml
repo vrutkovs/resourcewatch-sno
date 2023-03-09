@@ -378,6 +378,7 @@ metadata:
         f:containerStatuses: {}
         f:hostIP: {}
         f:initContainerStatuses: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -388,7 +389,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:08Z"
+    time: "2023-03-09T14:23:09Z"
   name: apiserver-5974c8c8bd-7zfsh
   namespace: openshift-apiserver
   ownerReferences:
@@ -398,7 +399,7 @@ metadata:
     kind: ReplicaSet
     name: apiserver-5974c8c8bd
     uid: 0508d21e-7e56-41f5-a005-71a0a68a7b95
-  resourceVersion: "6427"
+  resourceVersion: "6453"
   uid: fa39b23c-acc9-42e0-9490-bf2e465ae9ad
 spec:
   affinity:
@@ -669,13 +670,13 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:23:04Z"
-    message: 'containers with unready status: [openshift-apiserver openshift-apiserver-check-endpoints]'
+    message: 'containers with unready status: [openshift-apiserver]'
     reason: ContainersNotReady
     status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:23:04Z"
-    message: 'containers with unready status: [openshift-apiserver openshift-apiserver-check-endpoints]'
+    message: 'containers with unready status: [openshift-apiserver]'
     reason: ContainersNotReady
     status: "False"
     type: ContainersReady
@@ -684,26 +685,28 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:356e58bdd42aeefdbc76f72b93b6e9e9930cd6abe19ab7163f2c6e354b6b7cbf
-    imageID: ""
+  - containerID: cri-o://d2894a39cb76bf069916fbf282cd5b94413fbd68cabb366b0748ee8d17bb6510
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:356e58bdd42aeefdbc76f72b93b6e9e9930cd6abe19ab7163f2c6e354b6b7cbf
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:356e58bdd42aeefdbc76f72b93b6e9e9930cd6abe19ab7163f2c6e354b6b7cbf
     lastState: {}
     name: openshift-apiserver
     ready: false
     restartCount: 0
     started: false
     state:
-      waiting:
-        reason: PodInitializing
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:23:08Z"
+  - containerID: cri-o://e0c66f54ae0ef0b75bcc85b77f1ca0feda9267586185faa218ff7b6c50eba7c5
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
     lastState: {}
     name: openshift-apiserver-check-endpoints
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: PodInitializing
+      running:
+        startedAt: "2023-03-09T14:23:09Z"
   hostIP: 10.0.130.93
   initContainerStatuses:
   - containerID: cri-o://3d1dfecb271c3050c479aed264178811770ee895c6fa3b3dbea1ccc56054f8ab
@@ -720,7 +723,7 @@ status:
         finishedAt: "2023-03-09T14:23:08Z"
         reason: Completed
         startedAt: "2023-03-09T14:23:08Z"
-  phase: Pending
+  phase: Running
   podIP: 10.128.0.40
   podIPs:
   - ip: 10.128.0.40
