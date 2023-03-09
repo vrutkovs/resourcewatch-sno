@@ -44,7 +44,7 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:31:37Z"
+    time: "2023-03-09T14:32:01Z"
   name: kube-scheduler
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,13 +52,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "13070"
+  resourceVersion: "13471"
   uid: 441925ee-aa23-4d3c-937b-d1809e7a63de
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:29:35Z"
-    message: 'NodeControllerDegraded: All master nodes are ready'
+    message: 'NodeControllerDegraded: The master nodes not ready: node "vrutkovs-sno"
+      not ready since 2023-03-09 14:32:01 +0000 UTC because KubeletNotReady (container
+      runtime status check may not have completed yet)'
     reason: AsExpected
     status: "False"
     type: Degraded
