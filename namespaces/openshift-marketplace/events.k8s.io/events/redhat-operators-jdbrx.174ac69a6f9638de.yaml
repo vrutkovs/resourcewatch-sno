@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:37Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:37Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:37Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:29:37Z"
+  name: redhat-operators-jdbrx.174ac69a6f9638de
+  namespace: openshift-marketplace
+  resourceVersion: "10093"
+  uid: 45b0717b-6006-4f26-9045-5826e78202e7
+note: Successfully pulled image "registry.redhat.io/redhat/redhat-operator-index:v4.12"
+  in 19.829903746s (19.829913542s including waiting)
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{registry-server}
+  kind: Pod
+  name: redhat-operators-jdbrx
+  namespace: openshift-marketplace
+  resourceVersion: "9507"
+  uid: 24c18e6d-5ec4-4179-bd33-3eee20816f69
+type: Normal
