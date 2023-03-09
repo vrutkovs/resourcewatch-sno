@@ -56,7 +56,7 @@ metadata:
     manager: cluster-network-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:35Z"
+    time: "2023-03-09T14:22:38Z"
   name: network
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -64,7 +64,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "5527"
+  resourceVersion: "5590"
   uid: efc0e65e-4103-4be7-8a5a-99dd46b6df53
 spec: {}
 status:
@@ -79,8 +79,9 @@ status:
     status: "True"
     type: Upgradeable
   - lastTransitionTime: "2023-03-09T14:20:23Z"
-    message: DaemonSet "/openshift-network-diagnostics/network-check-target" is waiting
-      for other operators to become ready
+    message: |-
+      DaemonSet "/openshift-network-diagnostics/network-check-target" is waiting for other operators to become ready
+      Deployment "/openshift-multus/multus-admission-controller" update is being processed (generation 2, observed generation 1)
     reason: Deploying
     status: "True"
     type: Progressing
