@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:22:08Z"
+  labels:
+    config.openshift.io/inject-trusted-cabundle: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:config.openshift.io/inject-trusted-cabundle: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:22:08Z"
+  name: v4-0-config-system-trusted-ca-bundle
+  namespace: openshift-authentication
+  resourceVersion: "4308"
+  uid: 19aafb90-f1b2-464f-89e6-c2d1e88d1f8f
