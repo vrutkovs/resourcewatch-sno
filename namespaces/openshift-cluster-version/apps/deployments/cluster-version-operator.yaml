@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    deployment.kubernetes.io/revision: "1"
+    deployment.kubernetes.io/revision: "2"
     exclude.release.openshift.io/internal-openshift-hosted: "true"
     include.release.openshift.io/self-managed-high-availability: "true"
     kubernetes.io/description: The cluster-version operator manages OpenShift updates
@@ -194,7 +194,7 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:26Z"
+    time: "2023-03-09T14:28:27Z"
   name: cluster-version-operator
   namespace: openshift-cluster-version
   ownerReferences:
@@ -203,7 +203,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8033"
+  resourceVersion: "8055"
   uid: aac71004-72e0-4099-a4c0-18313331c859
 spec:
   progressDeadlineSeconds: 600
@@ -334,16 +334,16 @@ spec:
                 path: namespace
 status:
   conditions:
-  - lastTransitionTime: "2023-03-09T14:14:43Z"
-    lastUpdateTime: "2023-03-09T14:22:29Z"
-    message: ReplicaSet "cluster-version-operator-c4f49bf9f" has successfully progressed.
-    reason: NewReplicaSetAvailable
-    status: "True"
-    type: Progressing
   - lastTransitionTime: "2023-03-09T14:28:26Z"
     lastUpdateTime: "2023-03-09T14:28:26Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-09T14:14:43Z"
+    lastUpdateTime: "2023-03-09T14:28:27Z"
+    message: Created new replica set "cluster-version-operator-569579d6cf"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
   observedGeneration: 2
