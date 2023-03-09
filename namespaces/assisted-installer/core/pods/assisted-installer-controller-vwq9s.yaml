@@ -181,8 +181,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -195,12 +193,11 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -211,7 +208,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:07Z"
+    time: "2023-03-09T14:20:15Z"
   name: assisted-installer-controller-vwq9s
   namespace: assisted-installer
   ownerReferences:
@@ -221,7 +218,7 @@ metadata:
     kind: Job
     name: assisted-installer-controller
     uid: f5a4e959-715f-4436-8272-3a0acf078c12
-  resourceVersion: "2430"
+  resourceVersion: "2469"
   uid: bf338db4-906a-4d43-be22-8959360a0341
 spec:
   containers:
@@ -382,34 +379,31 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:07Z"
-    message: 'containers with unready status: [assisted-installer-controller]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:20:15Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:07Z"
-    message: 'containers with unready status: [assisted-installer-controller]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:20:15Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:19:59Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: quay.io/edge-infrastructure/assisted-installer-controller:latest
-    imageID: ""
+  - containerID: cri-o://4cf7282b71186bc297e644025c1a16a2f87316c2b58d2ce868e9361ba18674f4
+    image: quay.io/edge-infrastructure/assisted-installer-controller:latest
+    imageID: quay.io/edge-infrastructure/assisted-installer-controller@sha256:81c2da91bf20932218d4b0ffc0a321385d81f9971a7529cc1c164d8fe9996d6f
     lastState: {}
     name: assisted-installer-controller
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:20:15Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
   podIP: 10.0.130.93
   podIPs:
   - ip: 10.0.130.93
