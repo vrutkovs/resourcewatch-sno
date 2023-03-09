@@ -6,6 +6,9 @@ metadata:
     kubernetes.io/description: The cluster-version operator manages OpenShift updates
       and reconciles core resources and cluster operators.
     openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c6,c0
+    openshift.io/sa.scc.supplemental-groups: 1000030000/10000
+    openshift.io/sa.scc.uid-range: 1000030000/10000
     workload.openshift.io/allowed: management
   creationTimestamp: "2023-03-09T14:13:44Z"
   labels:
@@ -39,8 +42,19 @@ metadata:
     manager: cluster-bootstrap
     operation: Update
     time: "2023-03-09T14:13:44Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:14:21Z"
   name: openshift-cluster-version
-  resourceVersion: "71"
+  resourceVersion: "491"
   uid: 7d539aeb-8e49-4e6f-91a5-2a6626adbd8c
 spec:
   finalizers:
