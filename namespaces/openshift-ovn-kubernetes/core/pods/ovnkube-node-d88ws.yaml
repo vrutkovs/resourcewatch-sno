@@ -520,7 +520,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:44Z"
+    time: "2023-03-09T14:21:45Z"
   name: ovnkube-node-d88ws
   namespace: openshift-ovn-kubernetes
   ownerReferences:
@@ -530,7 +530,7 @@ metadata:
     kind: DaemonSet
     name: ovnkube-node
     uid: 8b6ad0dc-8208-4b89-9ad9-f44d3b557593
-  resourceVersion: "2911"
+  resourceVersion: "3089"
   uid: db94c2b8-7410-40a2-990d-f725713e7562
 spec:
   affinity:
@@ -1048,13 +1048,13 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:33Z"
-    message: 'containers with unready status: [ovnkube-node]'
+    message: 'containers with unready status: [ovn-controller ovnkube-node]'
     reason: ContainersNotReady
     status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:33Z"
-    message: 'containers with unready status: [ovnkube-node]'
+    message: 'containers with unready status: [ovn-controller ovnkube-node]'
     reason: ContainersNotReady
     status: "False"
     type: ContainersReady
@@ -1101,11 +1101,15 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
     lastState: {}
     name: ovn-controller
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://cc0917812832d19d81b16b44b594bc36151c6af143552035bc314256622eb67a
+        exitCode: 0
+        finishedAt: "2023-03-09T14:21:45Z"
+        reason: Completed
         startedAt: "2023-03-09T14:20:41Z"
   - containerID: cri-o://56cf9a5c331d3b14d47c5fedd1140220775ce3ba747798fa7422231c05857c63
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
