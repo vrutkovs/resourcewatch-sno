@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:35Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:35Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-installer-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:35Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:29:35Z"
+  name: openshift-kube-scheduler-operator.174ac699f9833ef4
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "10047"
+  uid: fc8bbeb8-eb08-420c-962d-217658dab0f8
+note: Updating node "vrutkovs-sno" from revision 0 to 4 because node vrutkovs-sno
+  static pod not found
+reason: NodeTargetRevisionChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 63ed6034-26ff-494c-bb49-f929f1f6a34d
+type: Normal
