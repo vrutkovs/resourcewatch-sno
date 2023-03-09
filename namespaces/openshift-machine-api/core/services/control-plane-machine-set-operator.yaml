@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    service.alpha.openshift.io/serving-cert-secret-name: control-plane-machine-set-operator-tls
+  creationTimestamp: "2023-03-09T14:28:36Z"
+  labels:
+    k8s-app: control-plane-machine-set-operator
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:service.alpha.openshift.io/serving-cert-secret-name: {}
+        f:labels:
+          .: {}
+          f:k8s-app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b7590f0c-c37f-44e0-80d3-7b5df1e0e187"}: {}
+      f:spec:
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":9443,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-09T14:28:36Z"
+  name: control-plane-machine-set-operator
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
+  resourceVersion: "8139"
+  uid: 90d141f0-33b8-4a11-bc5b-0bcbf14d1b48
+spec:
+  clusterIP: 172.30.10.1
+  clusterIPs:
+  - 172.30.10.1
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: https
+    port: 9443
+    protocol: TCP
+    targetPort: https
+  selector:
+    k8s-app: control-plane-machine-set-operator
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
