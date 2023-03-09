@@ -1,0 +1,48 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:23:06Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:06Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-status-controller-statussyncer_etcd
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:23:07Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-09T14:23:07Z"
+  name: etcd-operator.174ac63f47c65b4c
+  namespace: openshift-etcd-operator
+  resourceVersion: "6398"
+  uid: 46b51a4b-188a-4b20-a0bb-56760dfe02ce
+note: 'Status for clusteroperator/etcd changed: Degraded message changed from "EtcdMembersControllerDegraded:
+  getting cache client could not retrieve endpoints: node lister not synced\nNodeControllerDegraded:
+  All master nodes are ready\nEtcdEndpointsDegraded: no etcd members are present\nClusterMemberControllerDegraded:
+  could not get list of unhealthy members: giving up getting a cached client after
+  3 tries\nEtcdMembersDegraded: No unhealthy members found" to "EtcdMembersControllerDegraded:
+  getting cache client could not retrieve endpoints: node lister not synced\nNodeControllerDegraded:
+  All master nodes are ready\nEtcdEndpointsDegraded: no etcd members are present\nScriptControllerDegraded:
+  \"configmap/etcd-pod\": missing env var values\nClusterMemberControllerDegraded:
+  could not get list of unhealthy members: giving up getting a cached client after
+  3 tries\nEtcdMembersDegraded: No unhealthy members found"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 83b0ee74-72c5-4b95-9e21-87b97e13fab6
+type: Normal
