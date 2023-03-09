@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:33:04Z"
+    time: "2023-03-09T14:33:05Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,17 +52,16 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16271"
+  resourceVersion: "16278"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-09T14:24:44Z"
-    message: |-
-      IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
-      OAuthServerDeploymentDegraded: 1 of 1 requested instances are unavailable for oauth-openshift.openshift-authentication ()
-    reason: IngressStateEndpoints_MissingSubsets::OAuthServerDeployment_UnavailablePod
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:33:05Z"
+    message: 'OAuthServerDeploymentDegraded: 1 of 1 requested instances are unavailable
+      for oauth-openshift.openshift-authentication ()'
+    reason: AsExpected
+    status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:32:30Z"
     message: 'WellKnownReadyControllerProgressing: kube-apiserver oauth endpoint https://10.0.130.93:6443/.well-known/oauth-authorization-server
