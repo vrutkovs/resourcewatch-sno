@@ -41,14 +41,14 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:30Z"
+    time: "2023-03-09T14:22:32Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "5312"
+  resourceVersion: "5418"
   uid: e3da0174-daf2-4d9e-b232-e5e61f76793b
 spec:
   logLevel: Normal
@@ -130,6 +130,11 @@ status:
     reason: AsExpected
     status: "False"
     type: BackingResourceControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:30Z"
+    message: no supported cipherSuites not found in observedConfig
+    reason: Error
+    status: "True"
+    type: EnvVarControllerDegraded
   latestAvailableRevision: 1
   latestAvailableRevisionReason: ""
   nodeStatuses:
