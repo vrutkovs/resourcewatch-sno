@@ -92,14 +92,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:16Z"
+    time: "2023-03-09T14:32:17Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "14937"
+  resourceVersion: "14949"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -306,6 +306,12 @@ status:
   - lastTransitionTime: "2023-03-09T14:32:16Z"
     status: "False"
     type: OAuthSystemMetadataDegraded
+  - lastTransitionTime: "2023-03-09T14:32:16Z"
+    message: 'failed to retrieve route from cache: route.route.openshift.io "oauth-openshift"
+      not found'
+    reason: ResourceNotFound
+    status: "False"
+    type: OAuthServerRouteEndpointAccessibleControllerAvailable
   generations:
   - group: apps
     hash: ""
