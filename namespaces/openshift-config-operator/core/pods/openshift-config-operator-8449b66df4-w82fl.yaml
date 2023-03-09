@@ -186,8 +186,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -200,8 +198,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -217,7 +213,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:21:59Z"
+    time: "2023-03-09T14:22:03Z"
   name: openshift-config-operator-8449b66df4-w82fl
   namespace: openshift-config-operator
   ownerReferences:
@@ -227,7 +223,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-config-operator-8449b66df4
     uid: a7ce20a1-22ae-4404-ae6c-14fa8404ad0f
-  resourceVersion: "3314"
+  resourceVersion: "3891"
   uid: 74e4983a-fd7b-4f4b-8dd6-8714bbf9ecbf
 spec:
   containers:
@@ -356,16 +352,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:21:51Z"
-    message: 'containers with unready status: [openshift-config-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:22:03Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:21:51Z"
-    message: 'containers with unready status: [openshift-config-operator]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:22:03Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:21:51Z"
@@ -377,7 +369,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:f79d88a33d2b57e68d0e153d69e2bf0c196b45191ad32687713ff5d4298b86df
     lastState: {}
     name: openshift-config-operator
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
