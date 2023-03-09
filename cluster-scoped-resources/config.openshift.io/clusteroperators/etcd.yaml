@@ -44,7 +44,7 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:02Z"
+    time: "2023-03-09T14:23:04Z"
   name: etcd
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6268"
+  resourceVersion: "6310"
   uid: 5b689e62-691b-4fc1-86d9-fed9d5250955
 spec: {}
 status:
@@ -60,7 +60,7 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
       NodeControllerDegraded: All master nodes are ready
-      EtcdEndpointsDegraded: failed to get member list: giving up getting a cached client after 3 tries
+      EtcdEndpointsDegraded: no etcd members are present
       ClusterMemberControllerDegraded: could not get list of unhealthy members: giving up getting a cached client after 3 tries
       EtcdMembersDegraded: No unhealthy members found
     reason: AsExpected
