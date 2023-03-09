@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  creationTimestamp: "2023-03-09T14:32:25Z"
-  name: fuse7-java11-openshift
-  namespace: openshift-cluster-samples-operator
-  resourceVersion: "15089"
-  uid: 4161cc3c-0257-4a2e-9fb8-6671a85dd22e
