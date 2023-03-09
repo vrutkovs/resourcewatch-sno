@@ -107,14 +107,14 @@ metadata:
     manager: cluster-kube-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:33:38Z"
+    time: "2023-03-09T14:33:45Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16453"
+  resourceVersion: "16550"
   uid: c0c6917e-93dd-43c7-a907-55546729e305
 spec:
   logLevel: Normal
@@ -348,19 +348,9 @@ status:
   - lastTransitionTime: "2023-03-09T14:30:47Z"
     status: "False"
     type: CertRotation_KubeAPIServerToKubeletClientCert_Degraded
-  - lastTransitionTime: "2023-03-09T14:33:37Z"
-    message: |
-      "assets/kube-apiserver/ns.yaml" (string): Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-apiserver": dial tcp 172.30.0.1:443: connect: connection refused
-      "assets/kube-apiserver/svc.yaml" (string): services "apiserver" is forbidden: User "system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator" cannot get resource "services" in API group "" in the namespace "openshift-kube-apiserver"
-      "assets/kube-apiserver/check-endpoints-clusterrole.yaml" (string): clusterroles.rbac.authorization.k8s.io "system:openshift:controller:check-endpoints" is forbidden: User "system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator" cannot get resource "clusterroles" in API group "rbac.authorization.k8s.io" at the cluster scope
-      "assets/kube-apiserver/check-endpoints-clusterrole-node-reader.yaml" (string): clusterroles.rbac.authorization.k8s.io "system:openshift:controller:check-endpoints-node-reader" is forbidden: User "system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator" cannot get resource "clusterroles" in API group "rbac.authorization.k8s.io" at the cluster scope
-      "assets/kube-apiserver/check-endpoints-clusterrole-crd-reader.yaml" (string): clusterroles.rbac.authorization.k8s.io "system:openshift:controller:check-endpoints-crd-reader" is forbidden: User "system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator" cannot get resource "clusterroles" in API group "rbac.authorization.k8s.io" at the cluster scope
-      "assets/kube-apiserver/check-endpoints-clusterrolebinding-auth-delegator.yaml" (string): clusterrolebindings.rbac.authorization.k8s.io "system:openshift:controller:kube-apiserver-check-endpoints-auth-delegator" is forbidden: User "system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator" cannot get resource "clusterrolebindings" in API group "rbac.authorization.k8s.io" at the cluster scope
-      "assets/kube-apiserver/check-endpoints-clusterrolebinding-node-reader.yaml" (string): clusterrolebindings.rbac.authorization.k8s.io "system:openshift:controller:kube-apiserver-check-endpoints-node-reader" is forbidden: User "system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator" cannot get resource "clusterrolebindings" in API group "rbac.authorization.k8s.io" at the cluster scope
-      "assets/kube-apiserver/check-endpoints-clusterrolebinding-crd-reader.yaml" (string): clusterrolebindings.rbac.authorization.k8s.io "system:openshift:controller:kube-apiserver-check-endpoints-crd-reader" is forbidden: User "system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator" cannot get resource "clusterrolebindings" in API group "rbac.authorization.k8s.io" at the cluster scope
-      "assets/kube-apiserver/check-endpoints-rolebinding-kube-system.yaml" (string): rolebindings.rbac.authorization.k8s.io "system:openshift:controller:kube-apiserver-check-endpoints" is forbidden: User "system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator" cannot get resource "rolebindings" in API group "rbac.authorization.k8s.io" in the namespace "kube-system"
-    reason: SyncError
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:33:45Z"
+    reason: AsExpected
+    status: "False"
     type: KubeAPIServerStaticResourcesDegraded
   - lastTransitionTime: "2023-03-09T14:30:52Z"
     status: "False"
