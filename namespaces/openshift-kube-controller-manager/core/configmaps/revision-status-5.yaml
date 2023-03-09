@@ -1,0 +1,22 @@
+apiVersion: v1
+data:
+  reason: secret/localhost-recovery-client-token has changed
+  revision: "5"
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:30:45Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:reason: {}
+        f:revision: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:30:45Z"
+  name: revision-status-5
+  namespace: openshift-kube-controller-manager
+  resourceVersion: "10766"
+  uid: a47c6f57-9955-479d-beef-786e3d6c9389
