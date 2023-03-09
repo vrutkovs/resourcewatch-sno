@@ -1,0 +1,23 @@
+apiVersion: oauth.openshift.io/v1
+grantMethod: auto
+kind: OAuthClient
+metadata:
+  creationTimestamp: "2023-03-09T14:32:20Z"
+  managedFields:
+  - apiVersion: oauth.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:grantMethod: {}
+      f:redirectURIs:
+        .: {}
+        v:"https://oauth-openshift.apps.ocp.choomba.one/oauth/token/implicit": {}
+      f:respondWithChallenges: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:32:20Z"
+  name: openshift-challenging-client
+  resourceVersion: "15009"
+  uid: c99ed4a6-98f9-4039-b846-83adfee0b9b2
+redirectURIs:
+- https://oauth-openshift.apps.ocp.choomba.one/oauth/token/implicit
+respondWithChallenges: true
