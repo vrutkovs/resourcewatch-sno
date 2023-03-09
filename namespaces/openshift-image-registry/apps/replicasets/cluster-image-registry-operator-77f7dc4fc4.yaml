@@ -160,13 +160,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:14Z"
+    time: "2023-03-09T14:32:08Z"
   name: cluster-image-registry-operator-77f7dc4fc4
   namespace: openshift-image-registry
   ownerReferences:
@@ -176,7 +178,7 @@ metadata:
     kind: Deployment
     name: cluster-image-registry-operator
     uid: 1e9d3536-e19e-494c-bd31-a8c27999e389
-  resourceVersion: "13776"
+  resourceVersion: "14433"
   uid: 0b33e420-b3fe-4d39-874f-ee40deaced68
 spec:
   replicas: 1
@@ -285,6 +287,8 @@ spec:
               expirationSeconds: 3600
               path: token
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
