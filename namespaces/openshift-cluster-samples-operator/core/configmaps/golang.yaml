@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  creationTimestamp: "2023-03-09T14:32:25Z"
-  name: golang
-  namespace: openshift-cluster-samples-operator
-  resourceVersion: "15071"
-  uid: 098bd2fd-8270-4106-8ac0-b9ad3afb09d4
