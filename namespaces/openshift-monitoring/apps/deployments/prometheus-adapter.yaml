@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    deployment.kubernetes.io/revision: "1"
+    deployment.kubernetes.io/revision: "2"
   creationTimestamp: "2023-03-09T14:22:40Z"
   generation: 2
   labels:
@@ -46,7 +46,7 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:08Z"
+    time: "2023-03-09T14:32:47Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -228,7 +228,7 @@ metadata:
     time: "2023-03-09T14:32:47Z"
   name: prometheus-adapter
   namespace: openshift-monitoring
-  resourceVersion: "15938"
+  resourceVersion: "15942"
   uid: 39994971-7ca2-40a2-b9c4-bc49c10b00ad
 spec:
   progressDeadlineSeconds: 600
@@ -384,9 +384,9 @@ status:
     status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:40Z"
-    lastUpdateTime: "2023-03-09T14:23:16Z"
-    message: ReplicaSet "prometheus-adapter-f5d985798" has successfully progressed.
-    reason: NewReplicaSetAvailable
+    lastUpdateTime: "2023-03-09T14:32:47Z"
+    message: Created new replica set "prometheus-adapter-79cbcdfcfb"
+    reason: NewReplicaSetCreated
     status: "True"
     type: Progressing
   observedGeneration: 1
