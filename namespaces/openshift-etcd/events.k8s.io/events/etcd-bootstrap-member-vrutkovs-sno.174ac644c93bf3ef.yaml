@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:23:29Z"
-deprecatedLastTimestamp: "2023-03-09T14:23:29Z"
+deprecatedLastTimestamp: "2023-03-09T14:24:01Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:23:29Z"
+    time: "2023-03-09T14:24:50Z"
   name: etcd-bootstrap-member-vrutkovs-sno.174ac644c93bf3ef
   namespace: openshift-etcd
-  resourceVersion: "7002"
+  resourceVersion: "7286"
   uid: a7c0cdd5-77fd-4fd9-99cb-4dc53835b887
 note: Stopping container etcdctl
 reason: Killing
