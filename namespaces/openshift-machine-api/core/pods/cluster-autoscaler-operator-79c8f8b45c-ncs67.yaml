@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.49/23"],"mac_address":"0a:58:0a:80:00:31","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.49/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.49"
+          ],
+          "mac": "0a:58:0a:80:00:31",
+          "default": true,
+          "dns": {}
+      }]
     kubectl.kubernetes.io/default-container: cluster-autoscaler-operator
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
@@ -205,6 +216,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-09T14:28:48Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:49Z"
   name: cluster-autoscaler-operator-79c8f8b45c-ncs67
   namespace: openshift-machine-api
   ownerReferences:
@@ -214,7 +235,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-autoscaler-operator-79c8f8b45c
     uid: c2f6ebb9-46f2-4812-b02b-6671806b38f3
-  resourceVersion: "8404"
+  resourceVersion: "8415"
   uid: 45789d7d-44e4-4ed4-be30-6bbd8d5edaaa
 spec:
   containers:
