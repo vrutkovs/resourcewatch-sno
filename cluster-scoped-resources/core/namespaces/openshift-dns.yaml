@@ -3,6 +3,9 @@ kind: Namespace
 metadata:
   annotations:
     openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c25,c0
+    openshift.io/sa.scc.supplemental-groups: 1000600000/10000
+    openshift.io/sa.scc.uid-range: 1000600000/10000
     workload.openshift.io/allowed: management
   creationTimestamp: "2023-03-09T14:22:11Z"
   labels:
@@ -13,6 +16,17 @@ metadata:
     pod-security.kubernetes.io/enforce: privileged
     pod-security.kubernetes.io/warn: privileged
   managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:22:11Z"
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -33,7 +47,7 @@ metadata:
     operation: Update
     time: "2023-03-09T14:22:11Z"
   name: openshift-dns
-  resourceVersion: "4435"
+  resourceVersion: "4443"
   uid: 5fd28822-991f-45fb-b868-5e4a253d1cfe
 spec:
   finalizers:
