@@ -133,7 +133,6 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
-        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -153,13 +152,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
+        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:49Z"
+    time: "2023-03-09T14:32:02Z"
   name: package-server-manager
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -168,7 +167,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10251"
+  resourceVersion: "13627"
   uid: aac23baf-87d8-4008-bec2-84a5ae6e961c
 spec:
   progressDeadlineSeconds: 600
@@ -272,21 +271,20 @@ spec:
         operator: Exists
         tolerationSeconds: 120
 status:
-  availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2023-03-09T14:29:49Z"
-    lastUpdateTime: "2023-03-09T14:29:49Z"
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
-    type: Available
   - lastTransitionTime: "2023-03-09T14:28:53Z"
     lastUpdateTime: "2023-03-09T14:29:49Z"
     message: ReplicaSet "package-server-manager-78b664bb45" has successfully progressed.
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
+  - lastTransitionTime: "2023-03-09T14:32:01Z"
+    lastUpdateTime: "2023-03-09T14:32:01Z"
+    message: Deployment does not have minimum availability.
+    reason: MinimumReplicasUnavailable
+    status: "False"
+    type: Available
   observedGeneration: 1
-  readyReplicas: 1
   replicas: 1
+  unavailableReplicas: 1
   updatedReplicas: 1
