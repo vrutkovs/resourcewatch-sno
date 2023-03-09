@@ -1,0 +1,41 @@
+apiVersion: v1
+data:
+  config.yaml: |
+    apiVersion: operator.openshift.io/v1
+    kind: GenericOperatorConfig
+kind: ConfigMap
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-03-09T14:14:50Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:config.yaml: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b7590f0c-c37f-44e0-80d3-7b5df1e0e187"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-09T14:14:50Z"
+  name: openshift-kube-scheduler-operator-config
+  namespace: openshift-kube-scheduler-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
+  resourceVersion: "1220"
+  uid: ebf9cde8-5f3e-4aa1-9a53-910c8507337c
