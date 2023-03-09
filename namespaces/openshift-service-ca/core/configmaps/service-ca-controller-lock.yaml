@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"service-ca-854874ddf4-mkndq_8add9610-df6e-421e-8eec-46a05b5c6589","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:22:04Z","renewTime":"2023-03-09T14:34:42Z","leaderTransitions":0}'
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"service-ca-854874ddf4-mkndq_8add9610-df6e-421e-8eec-46a05b5c6589","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:22:04Z","renewTime":"2023-03-09T14:35:42Z","leaderTransitions":0}'
   creationTimestamp: "2023-03-09T14:22:04Z"
   managedFields:
   - apiVersion: v1
@@ -14,8 +14,8 @@ metadata:
           f:control-plane.alpha.kubernetes.io/leader: {}
     manager: service-ca-operator
     operation: Update
-    time: "2023-03-09T14:34:42Z"
+    time: "2023-03-09T14:35:42Z"
   name: service-ca-controller-lock
   namespace: openshift-service-ca
-  resourceVersion: "16858"
+  resourceVersion: "17220"
   uid: e56b32d1-8b86-4cb5-8689-227fe73bde3f
