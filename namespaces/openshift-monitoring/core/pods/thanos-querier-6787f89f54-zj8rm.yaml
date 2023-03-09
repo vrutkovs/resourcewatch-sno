@@ -403,8 +403,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -417,8 +415,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -434,7 +430,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:58Z"
+    time: "2023-03-09T14:33:02Z"
   name: thanos-querier-6787f89f54-zj8rm
   namespace: openshift-monitoring
   ownerReferences:
@@ -444,7 +440,7 @@ metadata:
     kind: ReplicaSet
     name: thanos-querier-6787f89f54
     uid: e40551e7-3785-4683-ac07-1dc8a1d9d9de
-  resourceVersion: "16138"
+  resourceVersion: "16225"
   uid: 76abe55f-fb76-47dc-b980-e6ad551f2aca
 spec:
   containers:
@@ -807,16 +803,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:52Z"
-    message: 'containers with unready status: [oauth-proxy]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:33:02Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:52Z"
-    message: 'containers with unready status: [oauth-proxy]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:33:02Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:52Z"
@@ -861,7 +853,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87f1812b55e14f104d3ab49c06711f5ba37e94490717470e42c12749fe3c90ad
     lastState: {}
     name: oauth-proxy
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
