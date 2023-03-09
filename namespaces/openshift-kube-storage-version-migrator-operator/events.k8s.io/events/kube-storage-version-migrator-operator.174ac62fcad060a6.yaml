@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:21:59Z"
+deprecatedLastTimestamp: "2023-03-09T14:21:59Z"
+deprecatedSource:
+  component: openshift-kube-storage-version-migrator-operator-kubestorageversionmigratorstaticresources-staticresourcecontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:21:59Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2023-03-09T14:21:59Z"
+  name: kube-storage-version-migrator-operator.174ac62fcad060a6
+  namespace: openshift-kube-storage-version-migrator-operator
+  resourceVersion: "3358"
+  uid: 19083d0e-e030-4d14-9784-41f2ead2450c
+note: Created ServiceAccount/kube-storage-version-migrator-sa -n openshift-kube-storage-version-migrator
+  because it was missing
+reason: ServiceAccountCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-storage-version-migrator-operator
+  namespace: openshift-kube-storage-version-migrator-operator
+  uid: e175c73d-fd16-4746-ae1b-5ca4d30312d9
+type: Normal
