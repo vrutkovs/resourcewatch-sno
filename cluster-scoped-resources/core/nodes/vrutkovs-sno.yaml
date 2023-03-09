@@ -68,30 +68,6 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        f:allocatable:
-          f:ephemeral-storage: {}
-        f:conditions:
-          k:{"type":"DiskPressure"}:
-            f:lastHeartbeatTime: {}
-          k:{"type":"MemoryPressure"}:
-            f:lastHeartbeatTime: {}
-          k:{"type":"PIDPressure"}:
-            f:lastHeartbeatTime: {}
-          k:{"type":"Ready"}:
-            f:lastHeartbeatTime: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-        f:images: {}
-    manager: kubelet
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:29:47Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:metadata:
         f:annotations:
           f:machineconfiguration.openshift.io/controlPlaneTopology: {}
@@ -115,8 +91,32 @@ metadata:
     manager: machine-config-daemon
     operation: Update
     time: "2023-03-09T14:29:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:allocatable:
+          f:ephemeral-storage: {}
+        f:conditions:
+          k:{"type":"DiskPressure"}:
+            f:lastHeartbeatTime: {}
+          k:{"type":"MemoryPressure"}:
+            f:lastHeartbeatTime: {}
+          k:{"type":"PIDPressure"}:
+            f:lastHeartbeatTime: {}
+          k:{"type":"Ready"}:
+            f:lastHeartbeatTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+        f:images: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:30:07Z"
   name: vrutkovs-sno
-  resourceVersion: "10304"
+  resourceVersion: "10380"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
 spec: {}
 status:
@@ -140,25 +140,25 @@ status:
     memory: 16342536Ki
     pods: "250"
   conditions:
-  - lastHeartbeatTime: "2023-03-09T14:29:47Z"
+  - lastHeartbeatTime: "2023-03-09T14:30:07Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient memory available
     reason: KubeletHasSufficientMemory
     status: "False"
     type: MemoryPressure
-  - lastHeartbeatTime: "2023-03-09T14:29:47Z"
+  - lastHeartbeatTime: "2023-03-09T14:30:07Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has no disk pressure
     reason: KubeletHasNoDiskPressure
     status: "False"
     type: DiskPressure
-  - lastHeartbeatTime: "2023-03-09T14:29:47Z"
+  - lastHeartbeatTime: "2023-03-09T14:30:07Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient PID available
     reason: KubeletHasSufficientPID
     status: "False"
     type: PIDPressure
-  - lastHeartbeatTime: "2023-03-09T14:29:47Z"
+  - lastHeartbeatTime: "2023-03-09T14:30:07Z"
     lastTransitionTime: "2023-03-09T14:29:16Z"
     message: kubelet is posting ready status
     reason: KubeletReady
@@ -169,6 +169,11 @@ status:
       Port: 10250
   images:
   - names:
+    - registry.redhat.io/redhat/redhat-operator-index@sha256:12ccf3d13d87217d4b6dd854799a8dc25e0fdf719acbed7d003c781c6e3d2152
+    - registry.redhat.io/redhat/redhat-operator-index@sha256:e24b543230ca822dabaa8a4c93dc67e0677d2cbdbb8a76e6da5bd0053782e15b
+    - registry.redhat.io/redhat/redhat-operator-index:v4.12
+    sizeBytes: 1300503408
+  - names:
     - registry.redhat.io/redhat/community-operator-index@sha256:944ed0229cf470ac1da8f31d65ee50a6cf2641477c6cb97c7f002e0b296a5f34
     - registry.redhat.io/redhat/community-operator-index@sha256:c32e59e65cfdedcfcae39386daa7bc3d2d725d6fa3a180f178b6a78309055d5f
     - registry.redhat.io/redhat/community-operator-index:v4.12
@@ -177,8 +182,18 @@ status:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
     sizeBytes: 921533943
   - names:
+    - registry.redhat.io/redhat/certified-operator-index@sha256:3bb1c8f2f14003577ac4a2a1aa5f4ae0fb2f1c07c37c06070cb8273b4bf26f2c
+    - registry.redhat.io/redhat/certified-operator-index@sha256:8dcf91de61f81cedff46a7ffa33895815b83fb7dc2c977238676f8b229b0e9a2
+    - registry.redhat.io/redhat/certified-operator-index:v4.12
+    sizeBytes: 918469169
+  - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
     sizeBytes: 835526326
+  - names:
+    - registry.redhat.io/redhat/redhat-marketplace-index@sha256:5b32b791552c600a0dd74377ef6f62f65833fa7f898dd4bc8cf3f18a879cd71c
+    - registry.redhat.io/redhat/redhat-marketplace-index@sha256:65cd6138607cc6e68e80327025204ba8acce67145eb5822f9daa20400f39f003
+    - registry.redhat.io/redhat/redhat-marketplace-index:v4.12
+    sizeBytes: 820964395
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ebb2140174c027ad75a9f06f0d6f82ed82d20e871877b7504fd95d4b56acdff2
     sizeBytes: 753179450
@@ -312,15 +327,6 @@ status:
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
     sizeBytes: 402764947
-  - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:af34634b83637fe8cccb589b3e8ca3f38cb7ec9b493db02ab2ea2859aa51215b
-    sizeBytes: 401966748
-  - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e3089921fbd0c64d58f211f8544b243a5cc480ad0fa8547a805ac6cb368e4d83
-    sizeBytes: 401854646
-  - names:
-    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:a0ccbba3855d8d56437f16cc8336ea26cf1514f4508e83dbedb3f6f36ef371c5
-    sizeBytes: 401012338
   nodeInfo:
     architecture: amd64
     bootID: fb8ee38c-473c-4e92-a927-ec95a38fb01a
