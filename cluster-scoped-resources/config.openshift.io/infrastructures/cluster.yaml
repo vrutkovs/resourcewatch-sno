@@ -18,11 +18,40 @@ metadata:
     manager: cluster-bootstrap
     operation: Update
     time: "2023-03-09T14:14:25Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:apiServerInternalURI: {}
+        f:apiServerURL: {}
+        f:controlPlaneTopology: {}
+        f:etcdDiscoveryDomain: {}
+        f:infrastructureName: {}
+        f:infrastructureTopology: {}
+        f:platform: {}
+        f:platformStatus:
+          .: {}
+          f:type: {}
+    manager: cluster-bootstrap
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:14:25Z"
   name: cluster
-  resourceVersion: "551"
+  resourceVersion: "552"
   uid: d2d95d83-76b4-4bb6-b834-dd99d17bae7f
 spec:
   cloudConfig:
     name: ""
   platformSpec:
+    type: None
+status:
+  apiServerInternalURI: https://api-int.ocp.choomba.one:6443
+  apiServerURL: https://api.ocp.choomba.one:6443
+  controlPlaneTopology: SingleReplica
+  etcdDiscoveryDomain: ""
+  infrastructureName: ocp-rd9g5
+  infrastructureTopology: SingleReplica
+  platform: None
+  platformStatus:
     type: None
