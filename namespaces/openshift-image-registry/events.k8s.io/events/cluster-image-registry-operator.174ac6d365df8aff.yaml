@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:33:42Z"
+deprecatedLastTimestamp: "2023-03-09T14:33:42Z"
+deprecatedSource:
+  component: image-registry-operator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:33:42Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-image-registry-operator
+    operation: Update
+    time: "2023-03-09T14:33:42Z"
+  name: cluster-image-registry-operator.174ac6d365df8aff
+  namespace: openshift-image-registry
+  resourceVersion: "16494"
+  uid: d16d3fbe-d8fb-4637-9774-40de1cc06d83
+note: Created DaemonSet.apps/node-ca -n openshift-image-registry because it was missing
+reason: DaemonSetCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: cluster-image-registry-operator
+  namespace: openshift-image-registry
+  uid: 1e9d3536-e19e-494c-bd31-a8c27999e389
+type: Normal
