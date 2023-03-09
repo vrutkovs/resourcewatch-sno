@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:06Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:06Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:13Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:13Z"
+  name: router-default-7c6dfd9fb7-jthnw.174ac6bcff493ad9
+  namespace: openshift-ingress
+  resourceVersion: "14860"
+  uid: 59134d93-464e-4ebb-942a-0a4e72c47104
+note: Container image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:af5fed62790f3da5a9b7d32374331539ab531f17d006a69ea501622d946a07fe"
+  already present on machine
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{router}
+  kind: Pod
+  name: router-default-7c6dfd9fb7-jthnw
+  namespace: openshift-ingress
+  resourceVersion: "9358"
+  uid: 25f9052f-edeb-4f6b-a4da-f714b6374bdb
+type: Normal
