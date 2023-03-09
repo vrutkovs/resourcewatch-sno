@@ -1,0 +1,43 @@
+apiVersion: v1
+data:
+  service-account-001.pub: |
+    -----BEGIN RSA PUBLIC KEY-----
+    MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAvBSm+yFjZ2HQcvlHrCjN
+    bsqstiPa9KDKTvFS96W8kYPqyJ9l4vlLG09BEhQ/p+IvNTOXZn+p35wAq8e3MRW0
+    XOM+Sz94MbppRT3HG9Rhekv+5Eap+X64Rufm8mt1VRCkU1dzV71BN5mR4TPrRmlF
+    Ue8/pDRPrvq0R5gBSKZM+NlKITZSNPjN9tNbsz6FPotPblnL685hMW3L+K6+4/gf
+    3uZwKnKUFblE937WiJiLd5r6ROzeIdsg91qq0/ZKgPQG7LwcBV+sAf1n1HFuaLW4
+    JJ5FORKt4d7ugfF1LE92yUjdr0iK4+7D48l/nbLrJFtqGSJgNFWQTbRtyStl8qmw
+    7sChLwJD9zOV+c53+eksuxxNwAK3q9GdtlVv9eS9VXdZGxFMtFeK0POuzUswdbiD
+    L8Agq3YV8pZO9eBFLly+sAYYeSKUksm8A7fJl49hlAvTI11cmBtvu1mpjQdRZ5gi
+    mDR+HFrt3yZ6kv2Vwq9kRnEaojo2HCwYVJ8wMC8FeHF5PUNHQ9WWaMKz4ZRujpRZ
+    w1HRHtEsM4TbaiN7uRsOAbZlDE2hwt9Rx7u8mfmMyeDlseqPb+3d8AsALOc/K3vF
+    DqXSbLcCRd4n9Zki3ovkYeX1U8MhmalIMBCTpRuJvVlGGGKD8kKGunMTiUNiKugL
+    ZEwWV8rVAuCKMvHx9clFRNkCAwEAAQ==
+    -----END RSA PUBLIC KEY-----
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:service-account-001.pub: {}
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f06bc464-3667-4031-8d8a-db59cf974c2c"}: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:32:15Z"
+  name: bound-sa-token-signing-certs-3
+  namespace: openshift-kube-apiserver
+  ownerReferences:
+  - apiVersion: v1
+    kind: ConfigMap
+    name: revision-status-3
+    uid: f06bc464-3667-4031-8d8a-db59cf974c2c
+  resourceVersion: "14903"
+  uid: c8592b75-151e-41cc-b6a1-9e7dafb80858
