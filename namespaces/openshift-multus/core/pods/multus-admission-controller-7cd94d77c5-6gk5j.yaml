@@ -166,8 +166,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -183,6 +181,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:22:40Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:02Z"
   name: multus-admission-controller-7cd94d77c5-6gk5j
   namespace: openshift-multus
   ownerReferences:
@@ -192,7 +202,7 @@ metadata:
     kind: ReplicaSet
     name: multus-admission-controller-7cd94d77c5
     uid: 01dcd71a-ca99-45b5-b37f-40bba57bfbfb
-  resourceVersion: "5772"
+  resourceVersion: "13660"
   uid: ddd4e947-6f1a-4210-b205-7a3f71672a36
 spec:
   containers:
@@ -322,8 +332,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:40Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:02Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:40Z"
