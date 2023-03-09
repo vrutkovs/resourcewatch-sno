@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:17Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:17Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-config-observer-configobserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:18Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:22:18Z"
+  name: kube-controller-manager-operator.174ac633dc689b24
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "4774"
+  uid: 31fb13cb-d2ae-41f3-8e55-249eebf2566d
+note: 'Failed to write observed config: Operation cannot be fulfilled on kubecontrollermanagers.operator.openshift.io
+  "cluster": the object has been modified; please apply your changes to the latest
+  version and try again'
+reason: ObservedConfigWriteError
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Warning
