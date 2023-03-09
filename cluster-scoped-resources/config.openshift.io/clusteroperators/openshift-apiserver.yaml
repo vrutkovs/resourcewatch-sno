@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3678"
+  resourceVersion: "3711"
   uid: 554eb8d5-f8a6-4fb8-afb7-e4785239d130
 spec: {}
 status:
@@ -66,8 +66,9 @@ status:
     status: Unknown
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    reason: NoData
-    status: Unknown
+    message: 'APIServicesAvailable: endpoints "api" not found'
+    reason: APIServices_ErrorCheckingPrecondition
+    status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: All is well
