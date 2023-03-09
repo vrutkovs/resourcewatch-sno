@@ -15,6 +15,8 @@ metadata:
           "dns": {}
       }]
   creationTimestamp: "2023-03-09T14:20:26Z"
+  deletionGracePeriodSeconds: 30
+  deletionTimestamp: "2023-03-09T14:23:10Z"
   generateName: multus-admission-controller-7c44c4fd4c-
   labels:
     app: multus-admission-controller
@@ -210,7 +212,7 @@ metadata:
     kind: ReplicaSet
     name: multus-admission-controller-7c44c4fd4c
     uid: 7a585df6-dad3-48d7-b274-879569445ab4
-  resourceVersion: "5265"
+  resourceVersion: "5778"
   uid: 8ed3c998-db5a-4b2d-8aef-ef8476242060
 spec:
   containers:
