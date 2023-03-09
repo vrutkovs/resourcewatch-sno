@@ -202,6 +202,8 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -216,19 +218,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:13Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"Ready"}:
-            f:lastTransitionTime: {}
-            f:status: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:02Z"
+    time: "2023-03-09T14:32:08Z"
   name: dns-default-bmcbm
   namespace: openshift-dns
   ownerReferences:
@@ -238,7 +228,7 @@ metadata:
     kind: DaemonSet
     name: dns-default
     uid: 5dcfb4ec-c80c-463b-b4b2-44c23caada97
-  resourceVersion: "13739"
+  resourceVersion: "14340"
   uid: 53f53fd4-d73a-4693-b74f-978bc7aff7f6
 spec:
   affinity:
@@ -403,8 +393,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:02Z"
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:10Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:10Z"
