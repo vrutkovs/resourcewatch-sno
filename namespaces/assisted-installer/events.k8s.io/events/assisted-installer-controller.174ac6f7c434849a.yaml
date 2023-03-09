@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:36:18Z"
+deprecatedLastTimestamp: "2023-03-09T14:36:18Z"
+deprecatedSource:
+  component: job-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:36:18Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:36:18Z"
+  name: assisted-installer-controller.174ac6f7c434849a
+  namespace: assisted-installer
+  resourceVersion: "17304"
+  uid: ee0528e7-b816-4e74-94ef-5020ded6ad13
+note: Job completed
+reason: Completed
+regarding:
+  apiVersion: batch/v1
+  kind: Job
+  name: assisted-installer-controller
+  namespace: assisted-installer
+  resourceVersion: "17301"
+  uid: f5a4e959-715f-4436-8272-3a0acf078c12
+type: Normal
