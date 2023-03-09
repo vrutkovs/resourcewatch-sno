@@ -109,6 +109,24 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:15:14Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ReplicaFailure"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:15:14Z"
   name: csi-snapshot-controller-operator-6f7d895c88
   namespace: openshift-cluster-storage-operator
   ownerReferences:
@@ -118,7 +136,7 @@ metadata:
     kind: Deployment
     name: csi-snapshot-controller-operator
     uid: 79d88ae3-4366-475b-9556-f0485be3cce2
-  resourceVersion: "1893"
+  resourceVersion: "1896"
   uid: df4e4a3f-c794-44ac-bcba-aa2afa912a40
 spec:
   replicas: 1
@@ -193,4 +211,12 @@ spec:
         key: node-role.kubernetes.io/master
         operator: Exists
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:15:14Z"
+    message: 'pods "csi-snapshot-controller-operator-6f7d895c88-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
+      the cluster does not have any nodes'
+    reason: FailedCreate
+    status: "True"
+    type: ReplicaFailure
+  observedGeneration: 1
   replicas: 0
