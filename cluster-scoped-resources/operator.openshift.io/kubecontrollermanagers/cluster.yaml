@@ -68,14 +68,14 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:38:22Z"
+    time: "2023-03-09T14:38:23Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "17689"
+  resourceVersion: "17706"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -152,15 +152,8 @@ status:
     reason: AsExpected
     status: "False"
     type: MissingStaticPodControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:38:09Z"
-    message: "pod/kube-controller-manager-vrutkovs-sno container \"cluster-policy-controller\"
-      is waiting: ContainerCreating: \npod/kube-controller-manager-vrutkovs-sno container
-      \"kube-controller-manager\" is waiting: ContainerCreating: \npod/kube-controller-manager-vrutkovs-sno
-      container \"kube-controller-manager-cert-syncer\" is waiting: ContainerCreating:
-      \npod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager-recovery-controller\"
-      is waiting: ContainerCreating: "
-    reason: Error
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:38:23Z"
+    status: "False"
     type: StaticPodsDegraded
   - lastTransitionTime: "2023-03-09T14:33:47Z"
     reason: AsExpected
