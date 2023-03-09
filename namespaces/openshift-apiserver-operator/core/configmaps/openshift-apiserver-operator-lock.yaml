@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"openshift-apiserver-operator-7897d5b46f-mn99b_2c2e4cc5-e8f5-44cf-8d54-36030f1d6ea4","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:22:00Z","renewTime":"2023-03-09T14:22:00Z","leaderTransitions":0}'
+  creationTimestamp: "2023-03-09T14:22:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:control-plane.alpha.kubernetes.io/leader: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
+  name: openshift-apiserver-operator-lock
+  namespace: openshift-apiserver-operator
+  resourceVersion: "3556"
+  uid: 4b528666-b63a-42c5-af9e-6c0f9d87a355
