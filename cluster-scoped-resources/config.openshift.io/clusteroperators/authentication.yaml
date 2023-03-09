@@ -24,6 +24,16 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:35Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:14:36Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -31,6 +41,8 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "614"
+  resourceVersion: "703"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
+status:
+  extension: null
