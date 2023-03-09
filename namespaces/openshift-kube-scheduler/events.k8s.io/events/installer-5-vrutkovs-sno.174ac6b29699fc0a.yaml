@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:31:21Z"
+deprecatedLastTimestamp: "2023-03-09T14:31:21Z"
+deprecatedSource:
+  component: static-pod-installer
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:31:21Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:31:21Z"
+  name: installer-5-vrutkovs-sno.174ac6b29699fc0a
+  namespace: openshift-kube-scheduler
+  resourceVersion: "12652"
+  uid: e4716d95-5c11-4e4c-9e9e-8c8d901a2cbc
+note: Successfully installed revision 5
+reason: StaticPodInstallerCompleted
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: installer-5-vrutkovs-sno
+  namespace: openshift-kube-scheduler
+  uid: 96421fca-b921-4c4b-9d3e-3a3406e7ce70
+type: Normal
