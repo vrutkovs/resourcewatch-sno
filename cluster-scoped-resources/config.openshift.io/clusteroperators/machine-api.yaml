@@ -35,6 +35,15 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:14:35Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+    manager: machine-api-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:29:11Z"
   name: machine-api
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -42,10 +51,25 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "651"
+  resourceVersion: "9070"
   uid: f9027f2b-91b7-48e8-972b-4c1557f470e4
 spec: {}
 status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:29:11Z"
+    message: Operator is initializing
+    reason: Initializing
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2023-03-09T14:29:11Z"
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-03-09T14:29:11Z"
+    message: Operator is initializing
+    reason: Initializing
+    status: "False"
+    type: Available
   extension: null
   relatedObjects:
   - group: ""
