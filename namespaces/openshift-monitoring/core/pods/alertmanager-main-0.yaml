@@ -465,8 +465,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -479,8 +477,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -496,7 +492,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:58Z"
+    time: "2023-03-09T14:32:59Z"
   name: alertmanager-main-0
   namespace: openshift-monitoring
   ownerReferences:
@@ -506,7 +502,7 @@ metadata:
     kind: StatefulSet
     name: alertmanager-main
     uid: 98deb091-f51e-4a1f-a4a3-8038c2d7d435
-  resourceVersion: "16148"
+  resourceVersion: "16162"
   uid: a1fc1fe4-8eea-4bb1-bd86-50214a66e433
 spec:
   containers:
@@ -918,31 +914,22 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:51Z"
-    message: 'containers with unready status: [alertmanager]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:32:59Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:51Z"
-    message: 'containers with unready status: [alertmanager]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:32:59Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:51Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://cb8c94828bf729014aa46ea7e44049913da26dd39f8c53c31f040ae63ac3fc00
+  - containerID: cri-o://0a8af8ab2d2b9caa3aba314dd78dfaa6d96a006494a767785568da0475fc0858
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:10a5c4496e21c74681484951c4f7b1059355127b627962c4663f32391ed151c3
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:10a5c4496e21c74681484951c4f7b1059355127b627962c4663f32391ed151c3
-    lastState: {}
-    name: alertmanager
-    ready: false
-    restartCount: 0
-    started: false
-    state:
+    lastState:
       terminated:
         containerID: cri-o://cb8c94828bf729014aa46ea7e44049913da26dd39f8c53c31f040ae63ac3fc00
         exitCode: 1
@@ -954,6 +941,13 @@ status:
           ts=2023-03-09T14:32:54.704Z caller=coordinator.go:118 level=error component=configuration msg="Loading configuration file failed" file=/etc/alertmanager/config_out/alertmanager.env.yaml err="open /etc/alertmanager/config_out/alertmanager.env.yaml: no such file or directory"
         reason: Error
         startedAt: "2023-03-09T14:32:54Z"
+    name: alertmanager
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-09T14:32:58Z"
   - containerID: cri-o://fcf07fdb21df97711ae1f2cc1c918626864eb30ea996d6ed1e9c8c2e804851f3
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87f1812b55e14f104d3ab49c06711f5ba37e94490717470e42c12749fe3c90ad
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87f1812b55e14f104d3ab49c06711f5ba37e94490717470e42c12749fe3c90ad
