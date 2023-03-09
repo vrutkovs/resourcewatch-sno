@@ -178,6 +178,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -190,6 +192,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -205,7 +209,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:21:59Z"
+    time: "2023-03-09T14:23:04Z"
   name: kube-storage-version-migrator-operator-77b5d98c74-9qsht
   namespace: openshift-kube-storage-version-migrator-operator
   ownerReferences:
@@ -215,7 +219,7 @@ metadata:
     kind: ReplicaSet
     name: kube-storage-version-migrator-operator-77b5d98c74
     uid: 03917f08-1f25-4eff-8711-5bda51a91405
-  resourceVersion: "3304"
+  resourceVersion: "6316"
   uid: b63fa47c-1d22-4f70-ad4e-693f9fda121d
 spec:
   containers:
@@ -334,12 +338,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:21:59Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:23:04Z"
+    message: 'containers with unready status: [kube-storage-version-migrator-operator]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:21:59Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:23:04Z"
+    message: 'containers with unready status: [kube-storage-version-migrator-operator]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:21:51Z"
@@ -351,11 +359,33 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87f42f063f97dec016b3981f7d68e4c759c01411158eb65d20f42137bc475253
     lastState: {}
     name: kube-storage-version-migrator-operator
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://149c5384ae9e6b7826454fa99af945a5096cf72b8ec13382f7d86da110c4a98b
+        exitCode: 1
+        finishedAt: "2023-03-09T14:23:04Z"
+        message: |
+          :129] Restart triggered because of file /var/run/secrets/serving-cert/tls.crt was created
+          I0309 14:23:04.303140       1 observer_polling.go:111] Observed file "/var/run/secrets/serving-cert/tls.key" has been created (hash="ebb5e7e01f584e9af0dfc1e2d93e6d02ca7226c2ecb4c119c3c3a2900a516045")
+          I0309 14:23:04.303259       1 genericapiserver.go:470] [graceful-termination] RunPreShutdownHooks has completed
+          I0309 14:23:04.303311       1 base_controller.go:167] Shutting down StaticResourceController ...
+          I0309 14:23:04.303319       1 genericapiserver.go:419] "[graceful-termination] shutdown event" name="ShutdownInitiated"
+          I0309 14:23:04.303354       1 base_controller.go:167] Shutting down LoggingSyncer ...
+          I0309 14:23:04.303362       1 object_count_tracker.go:84] "StorageObjectCountTracker pruner is exiting"
+          I0309 14:23:04.303373       1 base_controller.go:114] Shutting down worker of StaticResourceController controller ...
+          I0309 14:23:04.303406       1 base_controller.go:104] All StaticResourceController workers have been terminated
+          I0309 14:23:04.303422       1 tlsconfig.go:255] "Shutting down DynamicServingCertificateController"
+          I0309 14:23:04.303433       1 requestheader_controller.go:183] Shutting down RequestHeaderAuthRequestController
+          I0309 14:23:04.303406       1 configmap_cafile_content.go:222] "Shutting down controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+          I0309 14:23:04.303390       1 base_controller.go:167] Shutting down RemoveStaleConditionsController ...
+          I0309 14:23:04.303436       1 dynamic_serving_content.go:145] "Shutting down controller" name="serving-cert::/tmp/serving-cert-1747724653/tls.crt::/tmp/serving-cert-1747724653/tls.key"
+          I0309 14:23:04.303409       1 base_controller.go:114] Shutting down worker of LoggingSyncer controller ...
+          W0309 14:23:04.303386       1 builder.go:106] graceful termination failed, controllers failed with error: stopped
+          I0309 14:23:04.303471       1 base_controller.go:167] Shutting down StatusSyncer_kube-storage-version-migrator ...
+        reason: Error
         startedAt: "2023-03-09T14:21:58Z"
   hostIP: 10.0.130.93
   phase: Running
