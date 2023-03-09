@@ -1,6 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
   creationTimestamp: "2023-03-09T14:22:29Z"
   generation: 1
   labels:
@@ -9,6 +11,28 @@ metadata:
     app.kubernetes.io/part-of: openshift-monitoring
     app.kubernetes.io/version: 0.63.0
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:29Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -119,7 +143,7 @@ metadata:
     time: "2023-03-09T14:22:29Z"
   name: prometheus-operator-admission-webhook
   namespace: openshift-monitoring
-  resourceVersion: "5236"
+  resourceVersion: "5241"
   uid: 20ed236b-4b5d-462e-a76a-6ea9ca496175
 spec:
   progressDeadlineSeconds: 600
@@ -208,4 +232,11 @@ spec:
           - key: tls.key
             path: tls.key
           secretName: prometheus-operator-admission-webhook-tls
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:22:29Z"
+    lastUpdateTime: "2023-03-09T14:22:29Z"
+    message: Created new replica set "prometheus-operator-admission-webhook-b5c544574"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
