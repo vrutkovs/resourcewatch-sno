@@ -88,14 +88,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:16Z"
+    time: "2023-03-09T14:22:20Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4716"
+  resourceVersion: "4889"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -242,8 +242,8 @@ status:
     status: "False"
     type: Encrypted
   - lastTransitionTime: "2023-03-09T14:22:13Z"
-    message: No endpoints found for oauth-server
-    reason: MissingEndpoints
+    message: No subsets found for the endpoints of oauth-server
+    reason: MissingSubsets
     status: "True"
     type: IngressStateEndpointsDegraded
   - lastTransitionTime: "2023-03-09T14:22:13Z"
