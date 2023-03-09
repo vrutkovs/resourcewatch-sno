@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 5
+deprecatedCount: 6
 deprecatedFirstTimestamp: "2023-03-09T14:14:56Z"
 deprecatedLastTimestamp: "2023-03-09T14:14:56Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:14:56Z"
   name: openshift-apiserver-operator-7897d5b46f.174ac5cd502d6081
   namespace: openshift-apiserver-operator
-  resourceVersion: "1351"
+  resourceVersion: "1356"
   uid: 7963c3c7-d544-4a0a-a5ec-f573b9c800cd
 note: 'Error creating: pods "openshift-apiserver-operator-7897d5b46f-" is forbidden:
   autoscaling.openshift.io/ManagementCPUsOverride the cluster does not have any nodes'
