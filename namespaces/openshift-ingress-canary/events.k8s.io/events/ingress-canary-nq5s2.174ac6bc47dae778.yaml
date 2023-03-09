@@ -1,0 +1,40 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:32:03.110603Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:03Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:32:03Z"
+  name: ingress-canary-nq5s2.174ac6bc47dae778
+  namespace: openshift-ingress-canary
+  resourceVersion: "14044"
+  uid: 5c685a09-0a25-4100-b1b7-e5f92723f114
+note: Successfully assigned openshift-ingress-canary/ingress-canary-nq5s2 to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: ingress-canary-nq5s2
+  namespace: openshift-ingress-canary
+  resourceVersion: "13595"
+  uid: 26eff830-6bd5-48a5-9969-7e94ee30b069
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
