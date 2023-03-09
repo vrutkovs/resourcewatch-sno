@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-09T14:32:26Z"
-deprecatedLastTimestamp: "2023-03-09T14:32:26Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:27Z"
 deprecatedSource:
   component: kubelet
   host: vrutkovs-sno
@@ -25,10 +25,10 @@ metadata:
       f:type: {}
     manager: kubelet
     operation: Update
-    time: "2023-03-09T14:32:26Z"
+    time: "2023-03-09T14:32:27Z"
   name: oauth-openshift-7749b8f584-djk22.174ac6c1a99840a8
   namespace: openshift-authentication
-  resourceVersion: "15186"
+  resourceVersion: "15233"
   uid: 1c10e4d7-1844-49a3-94f2-2387ab55d1b9
 note: 'MountVolume.SetUp failed for volume "v4-0-config-system-cliconfig" : configmap
   "v4-0-config-system-cliconfig" not found'
