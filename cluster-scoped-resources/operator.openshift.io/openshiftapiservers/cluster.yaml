@@ -7,7 +7,7 @@ metadata:
     include.release.openshift.io/single-node-developer: "true"
     release.openshift.io/create-only: "true"
   creationTimestamp: "2023-03-09T14:14:42Z"
-  generation: 1
+  generation: 2
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -42,18 +42,59 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:22:07Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          .: {}
+          f:projectConfig:
+            .: {}
+            f:projectRequestMessage: {}
+          f:routingConfig:
+            .: {}
+            f:subdomain: {}
+          f:servingInfo:
+            .: {}
+            f:cipherSuites: {}
+            f:minTLSVersion: {}
+          f:storageConfig:
+            .: {}
+            f:urls: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:23:00Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4251"
+  resourceVersion: "6166"
   uid: 745e26c2-906b-4bfc-8835-c7ba9c167c7b
 spec:
   logLevel: Normal
   managementState: Managed
+  observedConfig:
+    projectConfig:
+      projectRequestMessage: ""
+    routingConfig:
+      subdomain: apps.ocp.choomba.one
+    servingInfo:
+      cipherSuites:
+      - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+      - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      minTLSVersion: VersionTLS12
+    storageConfig:
+      urls:
+      - https://10.0.130.93:2379
   operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
