@@ -1,0 +1,40 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:32:55.482708Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:55Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:32:55Z"
+  name: prometheus-k8s-0.174ac6c87979e339
+  namespace: openshift-monitoring
+  resourceVersion: "16103"
+  uid: 7d9edc64-dbd8-4791-9a92-f47e90a6b1f5
+note: Successfully assigned openshift-monitoring/prometheus-k8s-0 to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: prometheus-k8s-0
+  namespace: openshift-monitoring
+  resourceVersion: "16099"
+  uid: a079c200-a6fa-4bd9-aa4c-a968e63115ee
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
