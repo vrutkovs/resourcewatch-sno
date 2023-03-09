@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedSource:
+  component: openshift-apiserver-operator-status-controller-statussyncer_openshift-apiserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
+  name: openshift-apiserver-operator.174ac63007699599
+  namespace: openshift-apiserver-operator
+  resourceVersion: "3684"
+  uid: f4975009-ad57-4017-bce9-b2421d980e7d
+note: 'Status for clusteroperator/openshift-apiserver changed: Upgradeable changed
+  from Unknown to True ("All is well")'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-apiserver-operator
+  namespace: openshift-apiserver-operator
+  uid: a2161746-31b9-4c81-9d80-ec57dac3c48f
+type: Normal
