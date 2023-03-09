@@ -129,40 +129,6 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        f:conditions:
-          k:{"type":"ContainersReady"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Initialized"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
-            f:type: {}
-          k:{"type":"Ready"}:
-            .: {}
-            f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
-        f:containerStatuses: {}
-        f:hostIP: {}
-        f:startTime: {}
-    manager: kubelet
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:20:24Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:metadata:
         f:annotations:
           .: {}
@@ -180,6 +146,43 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:22:32Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.3"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:34Z"
   name: network-metrics-daemon-vwx7z
   namespace: openshift-multus
   ownerReferences:
@@ -189,7 +192,7 @@ metadata:
     kind: DaemonSet
     name: network-metrics-daemon
     uid: b9694f0c-0704-4642-ba1c-a72a1e8215fd
-  resourceVersion: "5400"
+  resourceVersion: "5498"
   uid: 775eae44-5277-44da-82fb-8e276826522c
 spec:
   affinity:
@@ -306,43 +309,44 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:24Z"
-    message: 'containers with unready status: [network-metrics-daemon kube-rbac-proxy]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:22:34Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:20:24Z"
-    message: 'containers with unready status: [network-metrics-daemon kube-rbac-proxy]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:22:34Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:24Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
-    imageID: ""
+  - containerID: cri-o://381d9c2f2b42a17a9f6c8212290fb2ba54bde3ac8d9832bc8d69740a06024187
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747
     lastState: {}
     name: kube-rbac-proxy
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:406d5d02abb3a145daf99c8bf6c00036f4d6f6affe0f27ef90a58bd7cb3b3cdb
-    imageID: ""
+      running:
+        startedAt: "2023-03-09T14:22:34Z"
+  - containerID: cri-o://8337da3c8096a9e729703caa90098dd18cdcef9f455f98fb3e081578c3d82fa8
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:406d5d02abb3a145daf99c8bf6c00036f4d6f6affe0f27ef90a58bd7cb3b3cdb
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:406d5d02abb3a145daf99c8bf6c00036f4d6f6affe0f27ef90a58bd7cb3b3cdb
     lastState: {}
     name: network-metrics-daemon
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:22:34Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.3
+  podIPs:
+  - ip: 10.128.0.3
   qosClass: Burstable
   startTime: "2023-03-09T14:20:24Z"
