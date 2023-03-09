@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:29:30Z"
-deprecatedLastTimestamp: "2023-03-09T14:29:30Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:38Z"
 deprecatedSource:
   component: kube-controller-manager-operator-revisioncontroller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-controller-manager-operator
     operation: Update
-    time: "2023-03-09T14:29:30Z"
+    time: "2023-03-09T14:29:38Z"
   name: kube-controller-manager-operator.174ac698d90f6ca8
   namespace: openshift-kube-controller-manager-operator
-  resourceVersion: "9982"
+  resourceVersion: "10114"
   uid: eba1c028-eb63-40cf-b859-f78779c52c93
 note: new revision 4 triggered by "configmap/serviceaccount-ca has changed"
 reason: RevisionTriggered
