@@ -65,7 +65,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6011"
+  resourceVersion: "6016"
   uid: e3da0174-daf2-4d9e-b232-e5e61f76793b
 spec:
   logLevel: Normal
@@ -186,6 +186,15 @@ status:
     reason: AsExpected
     status: "False"
     type: UpgradeBackupControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:52Z"
+    status: "False"
+    type: InstallerPodPendingDegraded
+  - lastTransitionTime: "2023-03-09T14:22:52Z"
+    status: "False"
+    type: InstallerPodContainerWaitingDegraded
+  - lastTransitionTime: "2023-03-09T14:22:52Z"
+    status: "False"
+    type: InstallerPodNetworkingDegraded
   latestAvailableRevision: 1
   latestAvailableRevisionReason: ""
   nodeStatuses:
