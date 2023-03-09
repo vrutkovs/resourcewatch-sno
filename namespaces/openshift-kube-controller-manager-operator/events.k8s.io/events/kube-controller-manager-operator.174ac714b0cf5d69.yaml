@@ -1,0 +1,76 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:38:22Z"
+deprecatedLastTimestamp: "2023-03-09T14:38:22Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-status-controller-statussyncer_kube-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:38:22Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:38:22Z"
+  name: kube-controller-manager-operator.174ac714b0cf5d69
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "17692"
+  uid: f8ad9d04-2512-4e2f-8449-51f082f305ba
+note: 'Status for clusteroperator/kube-controller-manager changed: Degraded message
+  changed from "StaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno container
+  \"cluster-policy-controller\" is terminated: Completed: \nStaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno
+  container \"kube-controller-manager\" is terminated: Completed: \nStaticPodsDegraded:
+  pod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager-cert-syncer\"
+  is terminated: Error: 0865       1 certsync_controller.go:66] Syncing configmaps:
+  [{aggregator-client-ca false} {client-ca false} {trusted-ca-bundle true}]\nStaticPodsDegraded:
+  I0309 14:37:29.801219       1 certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
+  false} {csr-signer false}]\nStaticPodsDegraded: I0309 14:37:30.400903       1 certsync_controller.go:66]
+  Syncing configmaps: [{aggregator-client-ca false} {client-ca false} {trusted-ca-bundle
+  true}]\nStaticPodsDegraded: I0309 14:37:30.401224       1 certsync_controller.go:170]
+  Syncing secrets: [{kube-controller-manager-client-cert-key false} {csr-signer false}]\nStaticPodsDegraded:
+  I0309 14:37:31.002365       1 certsync_controller.go:66] Syncing configmaps: [{aggregator-client-ca
+  false} {client-ca false} {trusted-ca-bundle true}]\nStaticPodsDegraded: I0309 14:37:31.002678       1
+  certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
+  false} {csr-signer false}]\nStaticPodsDegraded: I0309 14:37:31.603765       1 certsync_controller.go:66]
+  Syncing configmaps: [{aggregator-client-ca false} {client-ca false} {trusted-ca-bundle
+  true}]\nStaticPodsDegraded: I0309 14:37:31.604111       1 certsync_controller.go:170]
+  Syncing secrets: [{kube-controller-manager-client-cert-key false} {csr-signer false}]\nStaticPodsDegraded:
+  I0309 14:37:40.903691       1 certsync_controller.go:66] Syncing configmaps: [{aggregator-client-ca
+  false} {client-ca false} {trusted-ca-bundle true}]\nStaticPodsDegraded: I0309 14:37:40.906345       1
+  certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
+  false} {csr-signer false}]\nStaticPodsDegraded: I0309 14:37:46.574415       1 certsync_controller.go:66]
+  Syncing configmaps: [{aggregator-client-ca false} {client-ca false} {trusted-ca-bundle
+  true}]\nStaticPodsDegraded: I0309 14:37:46.574671       1 certsync_controller.go:170]
+  Syncing secrets: [{kube-controller-manager-client-cert-key false} {csr-signer false}]\nStaticPodsDegraded:
+  I0309 14:38:06.919095       1 certsync_controller.go:66] Syncing configmaps: [{aggregator-client-ca
+  false} {client-ca false} {trusted-ca-bundle true}]\nStaticPodsDegraded: I0309 14:38:06.919332       1
+  certsync_controller.go:170] Syncing secrets: [{kube-controller-manager-client-cert-key
+  false} {csr-signer false}]\nStaticPodsDegraded: \nStaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno
+  container \"kube-controller-manager-recovery-controller\" is terminated: Completed:
+  \nNodeControllerDegraded: All master nodes are ready" to "StaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno
+  container \"cluster-policy-controller\" is waiting: ContainerCreating: \nStaticPodsDegraded:
+  pod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager\" is
+  waiting: ContainerCreating: \nStaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno
+  container \"kube-controller-manager-cert-syncer\" is waiting: ContainerCreating:
+  \nStaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager-recovery-controller\"
+  is waiting: ContainerCreating: \nNodeControllerDegraded: All master nodes are ready"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Normal
