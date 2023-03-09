@@ -1,0 +1,37 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:21:52Z"
+deprecatedLastTimestamp: "2023-03-09T14:21:52Z"
+deprecatedSource:
+  component: machineconfigoperator
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:21:52Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: machine-config-operator
+    operation: Update
+    time: "2023-03-09T14:21:52Z"
+  name: machine-config.174ac62e0882e309
+  namespace: default
+  resourceVersion: "3226"
+  uid: b86958c9-78d8-4dd9-8764-8b3257911cf6
+note: clusteroperator/machine-config-operator started a version change from [] to
+  [{operator 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest}]
+reason: OperatorVersionChanged
+regarding:
+  name: machine-config
+  uid: a2677b7f-e3c9-4360-88a8-42c47852f1d4
+type: Normal
