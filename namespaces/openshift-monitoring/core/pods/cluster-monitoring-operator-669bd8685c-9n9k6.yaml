@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.22/23"],"mac_address":"0a:58:0a:80:00:16","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.22/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:20:00Z"
@@ -122,6 +123,15 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:20:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:21:51Z"
   name: cluster-monitoring-operator-669bd8685c-9n9k6
   namespace: openshift-monitoring
   ownerReferences:
@@ -131,7 +141,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-monitoring-operator-669bd8685c
     uid: 194c53a2-cea2-42a0-b075-8030a374606f
-  resourceVersion: "3123"
+  resourceVersion: "3169"
   uid: ff407fd4-cfaa-42db-af8c-737d83b40584
 spec:
   containers:
