@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:25Z"
+  name: redhat-openjdk18-openshift
+  namespace: openshift-cluster-samples-operator
+  resourceVersion: "15096"
+  uid: cc13be5b-d18c-4130-82c0-6e0e05f5c797
