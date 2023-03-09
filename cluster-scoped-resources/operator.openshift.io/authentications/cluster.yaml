@@ -39,14 +39,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:02Z"
+    time: "2023-03-09T14:22:03Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3828"
+  resourceVersion: "3880"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -119,5 +119,12 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:02Z"
     status: "False"
     type: APIServerWorkloadDegraded
+  - lastTransitionTime: "2023-03-09T14:22:02Z"
+    message: Authentication requires functional ingress which requires at least one
+      schedulable and ready node. Got 0 worker nodes, 1 master nodes, 0 custom target
+      nodes (none are schedulable or ready for ingress pods).
+    reason: NoReadyIngressNodes
+    status: "False"
+    type: ReadyIngressNodesAvailable
   oauthAPIServer: {}
   readyReplicas: 0
