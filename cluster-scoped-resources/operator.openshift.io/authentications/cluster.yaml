@@ -99,7 +99,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15373"
+  resourceVersion: "15379"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -312,9 +312,11 @@ status:
     status: "False"
     type: OAuthServerRouteEndpointAccessibleControllerAvailable
   - lastTransitionTime: "2023-03-09T14:32:17Z"
-    message: 'The well-known endpoint is not yet available: failed to get oauth metadata
-      from openshift-config-managed/oauth-openshift ConfigMap: configmap "oauth-openshift"
-      not found (check authentication operator, it is supposed to create this)'
+    message: 'The well-known endpoint is not yet available: kube-apiserver oauth endpoint
+      https://10.0.130.93:6443/.well-known/oauth-authorization-server is not yet served
+      and authentication operator keeps waiting (check kube-apiserver operator, and
+      check that instances roll out successfully, which can take several minutes per
+      instance)'
     reason: NotReady
     status: "False"
     type: WellKnownAvailable
@@ -350,6 +352,14 @@ status:
   - lastTransitionTime: "2023-03-09T14:32:28Z"
     status: "False"
     type: OAuthSessionSecretDegraded
+  - lastTransitionTime: "2023-03-09T14:32:30Z"
+    message: kube-apiserver oauth endpoint https://10.0.130.93:6443/.well-known/oauth-authorization-server
+      is not yet served and authentication operator keeps waiting (check kube-apiserver
+      operator, and check that instances roll out successfully, which can take several
+      minutes per instance)
+    reason: OAuthMetadataNotYetServed
+    status: "True"
+    type: WellKnownReadyControllerProgressing
   generations:
   - group: apps
     hash: ""
