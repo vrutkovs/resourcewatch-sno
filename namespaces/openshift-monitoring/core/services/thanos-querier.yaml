@@ -2,7 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
     service.beta.openshift.io/serving-cert-secret-name: thanos-querier-tls
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
   creationTimestamp: "2023-03-09T14:22:38Z"
   labels:
     app.kubernetes.io/component: query-layer
@@ -59,9 +61,19 @@ metadata:
     manager: operator
     operation: Update
     time: "2023-03-09T14:22:38Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:22:38Z"
   name: thanos-querier
   namespace: openshift-monitoring
-  resourceVersion: "5603"
+  resourceVersion: "5623"
   uid: 98d1ed6b-9eb7-4689-83d0-594c8c2388a1
 spec:
   clusterIP: 172.30.121.173
