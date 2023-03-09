@@ -596,7 +596,7 @@ metadata:
     kind: StatefulSet
     name: prometheus-k8s
     uid: 9ab86299-d85a-42b3-adb1-dc3832bd9a6c
-  resourceVersion: "16099"
+  resourceVersion: "16100"
   uid: a079c200-a6fa-4bd9-aa4c-a968e63115ee
 spec:
   automountServiceAccountToken: true
@@ -996,6 +996,7 @@ spec:
     - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
       name: kube-api-access-s7z5k
       readOnly: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     kubernetes.io/os: linux
   preemptionPolicy: PreemptLowerPriority
@@ -1125,5 +1126,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:32:55Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
