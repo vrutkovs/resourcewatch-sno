@@ -1,0 +1,47 @@
+apiVersion: v1
+data:
+  console-config.yaml: |
+    apiVersion: console.openshift.io/v1
+    auth:
+      clientID: console
+      clientSecretFile: /var/oauth-config/clientSecret
+      oauthEndpointCAFile: /var/oauth-serving-cert/ca-bundle.crt
+    clusterInfo:
+      consoleBaseAddress: https://console-openshift-console.apps.ocp.choomba.one
+      controlPlaneTopology: SingleReplica
+      masterPublicURL: https://api.ocp.choomba.one:6443
+      nodeArchitectures:
+      - amd64
+      releaseVersion: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+    customization:
+      branding: ocp
+      documentationBaseURL: https://access.redhat.com/documentation/en-us/openshift_container_platform/4.13/
+    kind: ConsoleConfig
+    providers: {}
+    servingInfo:
+      bindAddress: https://[::]:8443
+      certFile: /var/serving-cert/tls.crt
+      keyFile: /var/serving-cert/tls.key
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:28Z"
+  labels:
+    app: console
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:console-config.yaml: {}
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+    manager: console
+    operation: Update
+    time: "2023-03-09T14:32:28Z"
+  name: console-config
+  namespace: openshift-console
+  resourceVersion: "15275"
+  uid: fe543672-441b-4b7a-a3ae-18bfc5aaaa59
