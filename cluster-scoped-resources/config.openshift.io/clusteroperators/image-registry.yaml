@@ -44,7 +44,7 @@ metadata:
     manager: cluster-image-registry-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:33:47Z"
+    time: "2023-03-09T14:34:56Z"
   name: image-registry
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16572"
+  resourceVersion: "16928"
   uid: b3c174db-4a7c-4e86-bf88-820c8067e5b0
 spec: {}
 status:
@@ -68,8 +68,8 @@ status:
   - lastTransitionTime: "2023-03-09T14:33:47Z"
     message: |-
       Progressing: All registry resources are removed
-      NodeCADaemonProgressing: The daemon set node-ca is updating node pods
-    reason: NodeCADaemonProgressing::Removed
+      NodeCADaemonProgressing: The daemon set node-ca is deploying node pods
+    reason: NodeCADaemonUnavailable::Removed
     status: "True"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:32:22Z"
