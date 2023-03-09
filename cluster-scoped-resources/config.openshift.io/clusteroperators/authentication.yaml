@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:14Z"
+    time: "2023-03-09T14:24:51Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,20 +52,19 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6702"
+  resourceVersion: "7299"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-09T14:22:00Z"
+  - lastTransitionTime: "2023-03-09T14:24:44Z"
     message: |-
-      WebhookAuthenticatorControllerDegraded: failed to retrieve service openshift-oauth-apiserver/api: service "api" not found
-      OAuthServerServiceEndpointAccessibleControllerDegraded: Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443: connect: connection refused
-      OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth service endpoints are not ready
       APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable for apiserver.openshift-oauth-apiserver ()
       IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
-    reason: AsExpected
-    status: "False"
+      OAuthServerServiceEndpointAccessibleControllerDegraded: Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443: connect: connection refused
+      OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth service endpoints are not ready
+    reason: APIServerDeployment_UnavailablePod::IngressStateEndpoints_MissingSubsets::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError
+    status: "True"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:23:14Z"
     message: 'AuthenticatorCertKeyProgressing: All is well'
