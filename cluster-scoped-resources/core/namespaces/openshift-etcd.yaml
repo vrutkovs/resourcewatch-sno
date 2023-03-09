@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/node-selector: ""
+  creationTimestamp: "2023-03-09T14:14:13Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-etcd
+    openshift.io/run-level: "0"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/node-selector: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/run-level: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-03-09T14:14:13Z"
+  name: openshift-etcd
+  resourceVersion: "427"
+  uid: debc43f6-62ed-414c-b311-60a07642c2cd
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
