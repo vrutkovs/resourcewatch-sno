@@ -8,7 +8,7 @@ metadata:
     operator.openshift.io/spec-hash: 87f5f7337f7d917ba2bf9508a1d3969e720a65b8fc082105613d1019806323c6
     release.openshift.io/version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
   creationTimestamp: "2023-03-09T14:30:44Z"
-  generation: 1
+  generation: 2
   labels:
     app: openshift-controller-manager-a
     controller-manager: "true"
@@ -197,10 +197,10 @@ metadata:
     kind: Deployment
     name: controller-manager
     uid: 7e15c298-15ea-44ed-8230-72efb092b45c
-  resourceVersion: "10717"
+  resourceVersion: "10722"
   uid: 761246e2-2c0e-421a-95d2-b29b44d0b4cf
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: openshift-controller-manager-a
