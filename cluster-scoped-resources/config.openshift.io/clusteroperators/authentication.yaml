@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:02Z"
+    time: "2023-03-09T14:22:03Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,28 +52,31 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3832"
+  resourceVersion: "3883"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: |-
-      WebhookAuthenticatorControllerDegraded: failed to retrieve service openshift-oauth-apiserver/api: service "api" not found
-      OAuthServiceDegraded: Unable to get oauth server service: service "oauth-openshift" not found
+    message: "WebhookAuthenticatorControllerDegraded: failed to retrieve service openshift-oauth-apiserver/api:
+      service \"api\" not found\nOAuthServiceDegraded: Unable to get oauth server
+      service: service \"oauth-openshift\" not found\nAPIServerDeploymentDegraded:
+      waiting for observed configuration to be available (haven't found APIServerArguments
+      in spec.ObservedConfig.Raw)\nAPIServerDeploymentDegraded: "
     reason: AsExpected
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:22:00Z"
-    reason: NoData
-    status: Unknown
+  - lastTransitionTime: "2023-03-09T14:22:02Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
       APIServicesAvailable: endpoints "api" not found
       OAuthServerServiceEndpointAccessibleControllerAvailable: service "oauth-openshift" not found
       OAuthServerServiceEndpointsEndpointAccessibleControllerAvailable: endpoints "oauth-openshift" not found
-    reason: APIServices_ErrorCheckingPrecondition::OAuthServerServiceEndpointAccessibleController_ResourceNotFound::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound
+    reason: APIServerDeployment_PreconditionNotFulfilled::APIServices_ErrorCheckingPrecondition::OAuthServerServiceEndpointAccessibleController_ResourceNotFound::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
