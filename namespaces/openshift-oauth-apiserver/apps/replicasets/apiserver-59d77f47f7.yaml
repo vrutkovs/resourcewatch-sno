@@ -10,7 +10,7 @@ metadata:
     operator.openshift.io/dep-openshift-oauth-apiserver.etcd-serving-ca.configmap: XxxUkw==
     operator.openshift.io/spec-hash: 07e24dc6698c2c8273664434cdc94d5ebb7d007958e7273b1d3fd8bdcb5e3817
   creationTimestamp: "2023-03-09T14:22:33Z"
-  generation: 1
+  generation: 2
   labels:
     apiserver: "true"
     app: openshift-oauth-apiserver
@@ -265,10 +265,10 @@ metadata:
     kind: Deployment
     name: apiserver
     uid: 39c9e401-3aa2-4df1-a514-e9eb77325346
-  resourceVersion: "5437"
+  resourceVersion: "5443"
   uid: 487d4513-d57a-47b1-9acf-7967b4eb5900
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       apiserver: "true"
