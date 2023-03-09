@@ -1,0 +1,23 @@
+apiVersion: v1
+data:
+  config.yaml: |
+    {"apiVersion":"openshiftcontrolplane.config.openshift.io/v1","kind":"OpenShiftControllerManagerConfig"}
+  openshift-route-controller-manager.serving-cert.secret: 1WUAiQ==
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:23:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:config.yaml: {}
+        f:openshift-route-controller-manager.serving-cert.secret: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:23:00Z"
+  name: config
+  namespace: openshift-route-controller-manager
+  resourceVersion: "6129"
+  uid: 162fd95b-3880-4f5f-a03f-0762186d124d
