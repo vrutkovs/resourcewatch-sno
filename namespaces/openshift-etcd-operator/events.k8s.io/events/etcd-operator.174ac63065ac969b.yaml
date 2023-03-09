@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:02Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:02Z"
+deprecatedSource:
+  component: openshift-cluster-etcd-operator-etcd-cert-signer-controller-etcdcertsignercontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-09T14:22:02Z"
+  name: etcd-operator.174ac63065ac969b
+  namespace: openshift-etcd-operator
+  resourceVersion: "3857"
+  uid: d8916544-a8ac-4283-9aee-39f4a0efd578
+note: Created Secret/etcd-peer-vrutkovs-sno -n openshift-etcd because it was missing
+reason: SecretCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: etcd-operator
+  namespace: openshift-etcd-operator
+  uid: 83b0ee74-72c5-4b95-9e21-87b97e13fab6
+type: Normal
