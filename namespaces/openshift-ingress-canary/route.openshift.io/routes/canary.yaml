@@ -1,0 +1,62 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    haproxy.router.openshift.io/balance: roundrobin
+    openshift.io/host.generated: "true"
+  creationTimestamp: "2023-03-09T14:32:01Z"
+  labels:
+    ingress.openshift.io/canary: canary_controller
+  managedFields:
+  - apiVersion: route.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:haproxy.router.openshift.io/balance: {}
+        f:labels:
+          .: {}
+          f:ingress.openshift.io/canary: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"8cada35d-3ced-4501-9955-de0cda7fcf82"}: {}
+      f:spec:
+        f:port:
+          .: {}
+          f:targetPort: {}
+        f:tls:
+          .: {}
+          f:insecureEdgeTerminationPolicy: {}
+          f:termination: {}
+        f:to:
+          f:kind: {}
+          f:name: {}
+          f:weight: {}
+        f:wildcardPolicy: {}
+    manager: ingress-operator
+    operation: Update
+    time: "2023-03-09T14:32:01Z"
+  name: canary
+  namespace: openshift-ingress-canary
+  ownerReferences:
+  - apiVersion: apps/v1
+    controller: true
+    kind: daemonset
+    name: ingress-canary
+    uid: 8cada35d-3ced-4501-9955-de0cda7fcf82
+  resourceVersion: "13470"
+  uid: 061b05fe-4e70-4a3b-9fe0-af15a7843992
+spec:
+  host: canary-openshift-ingress-canary.apps.ocp.choomba.one
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: ingress-canary
+    weight: 100
+  wildcardPolicy: None
+status: {}
