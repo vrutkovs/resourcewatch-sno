@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:30:50Z"
+deprecatedLastTimestamp: "2023-03-09T14:30:50Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:30:50Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:30:50Z"
+  name: installer-5-vrutkovs-sno.174ac6ab6acb7cef
+  namespace: openshift-kube-scheduler
+  resourceVersion: "10824"
+  uid: dc547900-b411-4505-80a2-4414189bba6c
+note: Created container installer
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{installer}
+  kind: Pod
+  name: installer-5-vrutkovs-sno
+  namespace: openshift-kube-scheduler
+  resourceVersion: "10810"
+  uid: 96421fca-b921-4c4b-9d3e-3a3406e7ce70
+type: Normal
