@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 4
+deprecatedCount: 5
 deprecatedFirstTimestamp: "2023-03-09T14:23:14Z"
-deprecatedLastTimestamp: "2023-03-09T14:23:21Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:24Z"
 deprecatedSource:
   component: machineconfigoperator
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: machine-config-operator
     operation: Update
-    time: "2023-03-09T14:23:21Z"
+    time: "2023-03-09T14:23:24Z"
   name: machine-config.174ac641370af681
   namespace: default
-  resourceVersion: "6913"
+  resourceVersion: "6928"
   uid: 1a472801-da22-4626-a236-1a4c6471c12b
 note: 'Cluster not available for [{operator 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest}]:
   configmap "kube-apiserver-client-ca" not found'
