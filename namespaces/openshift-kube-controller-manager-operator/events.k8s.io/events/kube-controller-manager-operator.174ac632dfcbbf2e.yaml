@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:22:12Z"
-deprecatedLastTimestamp: "2023-03-09T14:22:12Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:15Z"
 deprecatedSource:
   component: kube-controller-manager-operator-config-observer-configobserver
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-controller-manager-operator
     operation: Update
-    time: "2023-03-09T14:22:13Z"
+    time: "2023-03-09T14:22:15Z"
   name: kube-controller-manager-operator.174ac632dfcbbf2e
   namespace: openshift-kube-controller-manager-operator
-  resourceVersion: "4590"
+  resourceVersion: "4693"
   uid: a60d0664-9435-4c4f-a61c-328f25012996
 note: observed change in config
 reason: ObserveServiceCAConfigMap
