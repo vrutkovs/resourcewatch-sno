@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
+    deployment.kubernetes.io/revision: "1"
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
   creationTimestamp: "2023-03-09T14:14:55Z"
@@ -222,6 +223,27 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:55Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:14:55Z"
   name: network-operator
   namespace: openshift-network-operator
   ownerReferences:
@@ -230,7 +252,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1306"
+  resourceVersion: "1309"
   uid: fa931036-6675-4cee-8fe6-6b11b9af8ad6
 spec:
   progressDeadlineSeconds: 600
@@ -382,4 +404,11 @@ spec:
           defaultMode: 420
           optional: true
           secretName: metrics-tls
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:14:55Z"
+    lastUpdateTime: "2023-03-09T14:14:55Z"
+    message: Created new replica set "network-operator-5556ffc66"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
