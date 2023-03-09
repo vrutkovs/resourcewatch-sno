@@ -200,14 +200,14 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
-        f:replicas: {}
+        f:unavailableReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
     time: "2023-03-09T14:23:01Z"
   name: controller-manager
   namespace: openshift-controller-manager
-  resourceVersion: "6215"
+  resourceVersion: "6223"
   uid: 7e15c298-15ea-44ed-8230-72efb092b45c
 spec:
   progressDeadlineSeconds: 600
@@ -354,9 +354,9 @@ status:
     type: Available
   - lastTransitionTime: "2023-03-09T14:23:00Z"
     lastUpdateTime: "2023-03-09T14:23:01Z"
-    message: Created new replica set "controller-manager-764d9c8b77"
-    reason: NewReplicaSetCreated
+    message: ReplicaSet "controller-manager-764d9c8b77" is progressing.
+    reason: ReplicaSetUpdated
     status: "True"
     type: Progressing
   observedGeneration: 2
-  replicas: 1
+  unavailableReplicas: 1
