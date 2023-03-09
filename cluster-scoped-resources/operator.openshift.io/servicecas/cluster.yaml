@@ -48,7 +48,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3872"
+  resourceVersion: "3930"
   uid: f7813b7b-6e7f-47b6-9ac4-0ca5ffe3197e
 spec:
   logLevel: Normal
@@ -56,28 +56,28 @@ spec:
   operatorLogLevel: Normal
 status:
   conditions:
-  - lastTransitionTime: "2023-03-09T14:22:02Z"
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    status: "False"
+    type: ResourceSyncControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:03Z"
     reason: OperatorSyncLoopComplete
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:22:02Z"
+  - lastTransitionTime: "2023-03-09T14:22:03Z"
     message: |2-
 
       service-ca does not have available replicas
     reason: ManagedDeploymentsAvailable
     status: "True"
     type: Progressing
-  - lastTransitionTime: "2023-03-09T14:22:02Z"
+  - lastTransitionTime: "2023-03-09T14:22:03Z"
     reason: ManagedDeploymentsAvailable
     status: "True"
     type: Available
-  - lastTransitionTime: "2023-03-09T14:22:02Z"
+  - lastTransitionTime: "2023-03-09T14:22:03Z"
     reason: AsExpected
     status: "True"
     type: Upgradeable
-  - lastTransitionTime: "2023-03-09T14:22:03Z"
-    status: "False"
-    type: ResourceSyncControllerDegraded
   generations:
   - group: apps
     hash: ""
