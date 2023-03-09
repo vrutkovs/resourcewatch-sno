@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:33:07Z"
+    time: "2023-03-09T14:33:47Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16325"
+  resourceVersion: "16568"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
@@ -72,12 +72,10 @@ status:
     status: "True"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: 'WellKnownAvailable: The well-known endpoint is not yet available: kube-apiserver
-      oauth endpoint https://10.0.130.93:6443/.well-known/oauth-authorization-server
-      is not yet served and authentication operator keeps waiting (check kube-apiserver
-      operator, and check that instances roll out successfully, which can take several
-      minutes per instance)'
-    reason: WellKnown_NotReady
+    message: |-
+      OAuthServerRouteEndpointAccessibleControllerAvailable: Get "https://oauth-openshift.apps.ocp.choomba.one/healthz": EOF
+      WellKnownAvailable: The well-known endpoint is not yet available: kube-apiserver oauth endpoint https://10.0.130.93:6443/.well-known/oauth-authorization-server is not yet served and authentication operator keeps waiting (check kube-apiserver operator, and check that instances roll out successfully, which can take several minutes per instance)
+    reason: OAuthServerRouteEndpointAccessibleController_EndpointUnavailable::WellKnown_NotReady
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
