@@ -101,8 +101,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -115,12 +113,11 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
         f:podIP: {}
         f:podIPs:
           .: {}
@@ -131,7 +128,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:11Z"
+    time: "2023-03-09T14:22:19Z"
   name: node-resolver-7zhq7
   namespace: openshift-dns
   ownerReferences:
@@ -141,7 +138,7 @@ metadata:
     kind: DaemonSet
     name: node-resolver
     uid: 405dbad3-d0ef-453e-981a-4538d7778afc
-  resourceVersion: "4496"
+  resourceVersion: "4847"
   uid: 453255df-8f52-4c64-92e6-43bf57f2a9eb
 spec:
   affinity:
@@ -304,34 +301,31 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:11Z"
-    message: 'containers with unready status: [dns-node-resolver]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:22:19Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:11Z"
-    message: 'containers with unready status: [dns-node-resolver]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:22:19Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:11Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2dce8c783764cd2f0e9e7530a2ee1447b45d936311e845efe00a90da9c103a24
-    imageID: ""
+  - containerID: cri-o://ce4682b6790d14641f2dbbbbb48d5fe1af132e76d77a2fea1dc7b9ad36a254ef
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2dce8c783764cd2f0e9e7530a2ee1447b45d936311e845efe00a90da9c103a24
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2dce8c783764cd2f0e9e7530a2ee1447b45d936311e845efe00a90da9c103a24
     lastState: {}
     name: dns-node-resolver
-    ready: false
+    ready: true
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:22:18Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
   podIP: 10.0.130.93
   podIPs:
   - ip: 10.0.130.93
