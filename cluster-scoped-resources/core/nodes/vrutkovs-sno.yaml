@@ -13,7 +13,7 @@ metadata:
     machineconfiguration.openshift.io/currentConfig: rendered-master-b84983722a8f041fcce35c8e28efcb54
     machineconfiguration.openshift.io/desiredConfig: rendered-master-488a5071a7880577f352cdd858a32b9d
     machineconfiguration.openshift.io/desiredDrain: uncordon-rendered-master-488a5071a7880577f352cdd858a32b9d
-    machineconfiguration.openshift.io/lastAppliedDrain: uncordon-rendered-master-b84983722a8f041fcce35c8e28efcb54
+    machineconfiguration.openshift.io/lastAppliedDrain: uncordon-rendered-master-488a5071a7880577f352cdd858a32b9d
     machineconfiguration.openshift.io/reason: ""
     machineconfiguration.openshift.io/ssh: accessed
     machineconfiguration.openshift.io/state: Working
@@ -68,19 +68,6 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:machineconfiguration.openshift.io/controlPlaneTopology: {}
-          f:machineconfiguration.openshift.io/desiredConfig: {}
-          f:machineconfiguration.openshift.io/lastAppliedDrain: {}
-        f:labels:
-          f:node-role.kubernetes.io/worker: {}
-    manager: machine-config-controller
-    operation: Update
-    time: "2023-03-09T14:29:42Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:status:
         f:allocatable:
           f:ephemeral-storage: {}
@@ -115,8 +102,21 @@ metadata:
     manager: machine-config-daemon
     operation: Update
     time: "2023-03-09T14:29:49Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:machineconfiguration.openshift.io/controlPlaneTopology: {}
+          f:machineconfiguration.openshift.io/desiredConfig: {}
+          f:machineconfiguration.openshift.io/lastAppliedDrain: {}
+        f:labels:
+          f:node-role.kubernetes.io/worker: {}
+    manager: machine-config-controller
+    operation: Update
+    time: "2023-03-09T14:29:52Z"
   name: vrutkovs-sno
-  resourceVersion: "10258"
+  resourceVersion: "10272"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
 spec: {}
 status:
