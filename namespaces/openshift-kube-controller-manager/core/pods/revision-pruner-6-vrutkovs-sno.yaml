@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.90/23"],"mac_address":"0a:58:0a:80:00:5a","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.90/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.90"
+          ],
+          "mac": "0a:58:0a:80:00:5a",
+          "default": true,
+          "dns": {}
+      }]
   creationTimestamp: "2023-03-09T14:39:36Z"
   labels:
     app: pruner
@@ -137,6 +148,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-09T14:39:36Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:39:37Z"
   name: revision-pruner-6-vrutkovs-sno
   namespace: openshift-kube-controller-manager
   ownerReferences:
@@ -144,7 +165,7 @@ metadata:
     kind: ConfigMap
     name: revision-status-6
     uid: b9b4edf4-e8a6-4aa7-b40d-b692e347e75f
-  resourceVersion: "17990"
+  resourceVersion: "17996"
   uid: 6740dae1-f1d0-4a81-b8f9-dee4f7e34848
 spec:
   automountServiceAccountToken: false
