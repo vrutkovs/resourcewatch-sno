@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:37Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:37Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-installer-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:37Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:29:37Z"
+  name: openshift-kube-scheduler-operator.174ac69a703d9b05
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "10095"
+  uid: 8d53edd6-2f69-4417-9985-3e066029f367
+note: Created Pod/installer-4-vrutkovs-sno -n openshift-kube-scheduler because it
+  was missing
+reason: PodCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 63ed6034-26ff-494c-bb49-f929f1f6a34d
+type: Normal
