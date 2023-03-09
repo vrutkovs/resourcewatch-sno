@@ -71,7 +71,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6175"
+  resourceVersion: "6178"
   uid: 745e26c2-906b-4bfc-8835-c7ba9c167c7b
 spec:
   logLevel: Normal
@@ -154,5 +154,8 @@ status:
   - lastTransitionTime: "2023-03-09T14:23:00Z"
     status: "False"
     type: ResourceSyncControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:23:00Z"
+    status: "False"
+    type: ConfigObservationDegraded
   latestAvailableRevision: 2
   readyReplicas: 0
