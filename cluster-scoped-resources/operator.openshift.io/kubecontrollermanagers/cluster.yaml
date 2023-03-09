@@ -65,14 +65,14 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:10Z"
+    time: "2023-03-09T14:22:11Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4415"
+  resourceVersion: "4486"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -117,20 +117,20 @@ status:
     type: UnsupportedConfigOverridesUpgradeable
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: 'missing required resources: [configmaps: aggregator-client-ca,client-ca,
-      secrets: csr-signer,kube-controller-manager-client-cert-key, configmaps: cluster-policy-controller-config-0,config-0,controller-manager-kubeconfig-0,kube-controller-cert-syncer-kubeconfig-0,kube-controller-manager-pod-0,recycler-config-0,service-ca-0,serviceaccount-ca-0,
-      secrets: localhost-recovery-client-token-0,service-account-private-key-0]'
+      secrets: csr-signer,kube-controller-manager-client-cert-key, configmaps: cluster-policy-controller-config-1,config-1,controller-manager-kubeconfig-1,kube-controller-cert-syncer-kubeconfig-1,kube-controller-manager-pod-1,recycler-config-1,service-ca-1,serviceaccount-ca-1,
+      secrets: localhost-recovery-client-token-1,service-account-private-key-1]'
     reason: Error
     status: "True"
     type: InstallerControllerDegraded
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: 0 nodes are active; 1 nodes are at revision 0
+    message: 0 nodes are active; 1 nodes are at revision 0; 0 nodes have achieved
+      new revision 1
     reason: ZeroNodesActive
     status: "False"
     type: StaticPodsAvailable
-  - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: 1 nodes are at revision 0
-    reason: AllNodesAtLatestRevision
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:22:10Z"
+    message: 1 nodes are at revision 0; 0 nodes have achieved new revision 1
+    status: "True"
     type: NodeInstallerProgressing
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     status: "False"
