@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   annotations:
-    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"csi-snapshot-controller-operator-6f7d895c88-9c5xt_f2cf50c4-60a9-44f6-bb8f-47c5f55145b1","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:21:59Z","renewTime":"2023-03-09T14:21:59Z","leaderTransitions":0}'
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"csi-snapshot-controller-operator-6f7d895c88-9c5xt_f2cf50c4-60a9-44f6-bb8f-47c5f55145b1","leaseDurationSeconds":270,"acquireTime":"2023-03-09T14:21:59Z","renewTime":"2023-03-09T14:22:00Z","leaderTransitions":0}'
   creationTimestamp: "2023-03-09T14:21:59Z"
   managedFields:
   - apiVersion: v1
@@ -14,8 +14,8 @@ metadata:
           f:control-plane.alpha.kubernetes.io/leader: {}
     manager: csi-snapshot-controller-operator
     operation: Update
-    time: "2023-03-09T14:21:59Z"
+    time: "2023-03-09T14:22:00Z"
   name: csi-snapshot-controller-operator-lock
   namespace: openshift-cluster-storage-operator
-  resourceVersion: "3412"
+  resourceVersion: "3434"
   uid: 691cb281-0442-4e52-bcd8-8870f51c89d1
