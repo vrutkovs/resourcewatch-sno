@@ -246,7 +246,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:08Z"
+    time: "2023-03-09T14:32:10Z"
   name: prometheus-adapter-f5d985798-pb9tz
   namespace: openshift-monitoring
   ownerReferences:
@@ -256,7 +256,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-adapter-f5d985798
     uid: 00aafcc8-1f59-40dd-81f8-296659b61ac5
-  resourceVersion: "14423"
+  resourceVersion: "14631"
   uid: 4b3a2d80-8ba4-47c0-8a5d-948e31e9ab57
 spec:
   automountServiceAccountToken: true
@@ -433,11 +433,11 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:11Z"
+    lastTransitionTime: "2023-03-09T14:32:06Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:11Z"
+    lastTransitionTime: "2023-03-09T14:32:06Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
