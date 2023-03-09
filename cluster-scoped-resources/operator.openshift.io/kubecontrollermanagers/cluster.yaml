@@ -39,18 +39,19 @@ metadata:
         f:conditions: {}
         f:latestAvailableRevision: {}
         f:latestAvailableRevisionReason: {}
+        f:nodeStatuses: {}
         f:readyReplicas: {}
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:01Z"
+    time: "2023-03-09T14:22:02Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3769"
+  resourceVersion: "3785"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -106,6 +107,14 @@ status:
     reason: AsExpected
     status: "False"
     type: GarbageCollectorDegraded
+  - lastTransitionTime: "2023-03-09T14:22:01Z"
+    message: All master nodes are ready
+    reason: MasterNodesReady
+    status: "False"
+    type: NodeControllerDegraded
   latestAvailableRevision: 0
   latestAvailableRevisionReason: ""
+  nodeStatuses:
+  - currentRevision: 0
+    nodeName: vrutkovs-sno
   readyReplicas: 0
