@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 3
+deprecatedCount: 4
 deprecatedFirstTimestamp: "2023-03-09T14:14:58Z"
 deprecatedLastTimestamp: "2023-03-09T14:14:58Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:14:58Z"
   name: service-ca-operator-5b79975495.174ac5cdb102b253
   namespace: openshift-service-ca-operator
-  resourceVersion: "1407"
+  resourceVersion: "1410"
   uid: bb84ee75-175d-4036-bf50-7a1c3a28aa7b
 note: 'Error creating: pods "service-ca-operator-5b79975495-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
   the cluster does not have any nodes'
