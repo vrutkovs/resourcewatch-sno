@@ -1,0 +1,50 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-status-controller-statussyncer_kube-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
+  name: openshift-kube-scheduler-operator.174ac62fe34c6e90
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "3576"
+  uid: 07baa053-15d6-4f08-af1a-625c70e76f76
+note: 'Status for clusteroperator/kube-scheduler changed: Degraded set to Unknown
+  (""),Progressing set to Unknown (""),Available set to Unknown (""),Upgradeable set
+  to Unknown (""),status.relatedObjects changed from [{"operator.openshift.io" "kubeschedulers"
+  "" "cluster"} {"config.openshift.io" "schedulers" "" ""} {"" "namespaces" "" "openshift-config"}
+  {"" "namespaces" "" "openshift-config-managed"} {"" "namespaces" "" "openshift-kube-scheduler-operator"}
+  {"" "namespaces" "" "openshift-kube-scheduler"} {"controlplane.operator.openshift.io"
+  "podnetworkconnectivitychecks" "openshift-kube-scheduler" ""}] to [{"operator.openshift.io"
+  "kubeschedulers" "" "cluster"} {"config.openshift.io" "schedulers" "" ""} {"" "namespaces"
+  "" "openshift-config"} {"" "namespaces" "" "openshift-config-managed"} {"" "namespaces"
+  "" "openshift-kube-scheduler"} {"" "namespaces" "" "openshift-kube-scheduler-operator"}
+  {"controlplane.operator.openshift.io" "podnetworkconnectivitychecks" "openshift-kube-apiserver"
+  ""}],status.versions changed from [] to [{"raw-internal" "4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest"}]'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 63ed6034-26ff-494c-bb49-f929f1f6a34d
+type: Normal
