@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    service.beta.openshift.io/inject-cabundle: "true"
+  creationTimestamp: "2023-03-09T14:29:12Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:service.beta.openshift.io/inject-cabundle: {}
+    manager: cluster-image-registry-operator
+    operation: Update
+    time: "2023-03-09T14:29:12Z"
+  name: serviceca
+  namespace: openshift-image-registry
+  resourceVersion: "9135"
+  uid: 77e09cf9-821d-45c6-98a2-c5fe49df81e8
