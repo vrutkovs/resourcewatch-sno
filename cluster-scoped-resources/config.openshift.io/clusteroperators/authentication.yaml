@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:17Z"
+    time: "2023-03-09T14:32:18Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "14950"
+  resourceVersion: "14970"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
@@ -75,7 +75,8 @@ status:
       OAuthServerRouteEndpointAccessibleControllerAvailable: failed to retrieve route from cache: route.route.openshift.io "oauth-openshift" not found
       OAuthServerServiceEndpointAccessibleControllerAvailable: Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443: connect: connection refused
       OAuthServerServiceEndpointsEndpointAccessibleControllerAvailable: endpoints "oauth-openshift" not found
-    reason: OAuthServerRouteEndpointAccessibleController_ResourceNotFound::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound
+      WellKnownAvailable: route.route.openshift.io "oauth-openshift" not found
+    reason: OAuthServerRouteEndpointAccessibleController_ResourceNotFound::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound::WellKnown_PrereqsNotReady
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
