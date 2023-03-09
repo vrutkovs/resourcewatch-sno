@@ -1,0 +1,148 @@
+apiVersion: v1
+data:
+  client-ca-file: |
+    -----BEGIN CERTIFICATE-----
+    MIIDLzCCAhegAwIBAgIHMw//yISj3DANBgkqhkiG9w0BAQsFADA2MRIwEAYDVQQL
+    EwlvcGVuc2hpZnQxIDAeBgNVBAMTF2FkbWluLWt1YmVjb25maWctc2lnbmVyMB4X
+    DTIzMDMwOTE0MTAxNVoXDTMzMDMwNjE0MTAxNVowNjESMBAGA1UECxMJb3BlbnNo
+    aWZ0MSAwHgYDVQQDExdhZG1pbi1rdWJlY29uZmlnLXNpZ25lcjCCASIwDQYJKoZI
+    hvcNAQEBBQADggEPADCCAQoCggEBANZU4PhjM7lI9vKZGLgdSR4reanGe1yjbXJp
+    9Hiw6WJhvY7mBWvNu2+kCCYLLaKruWtow3GbuzDwmYWFaGL5oCMqgkGMf/AjzRg5
+    NVo1ct0AHUYUnhMLApWxEFV4132ZZpxl9V3ksROUKSoof7inlXtRgI+KVdnaM8pS
+    qMtPPobMSN6LQSfxBWLvnQfnXC/M91yJSx/RGuKNQsKaUmwoTf9eMf9AcOWJm/Cw
+    68A27IewcQsJM2yigKBDO3E6BKzAJktQJ4R1cIFx+7mXnK8H0kskDZyZb3sqoHWh
+    eL3HdPE2sKgVnlHTCnKVJo6/fqaCek4gm4lDESKnBYSaCMLfM+sCAwEAAaNCMEAw
+    DgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFEvLFYB2
+    Hn3NhGC6wGbe2Rgv9pr7MA0GCSqGSIb3DQEBCwUAA4IBAQAWr4yKxNQHZ5xAHdCI
+    zLM/G8Yd0zkEerrShb+WW7ez9j9eReIwDP6uj+UkFLmhL6ZKmPyCfBSil0185kRJ
+    Yz9lA0o1IBRymT5oaOn8hmCAuDjj4oTbOPbhg228cP4/LPxp3WgE20jx8gcDRfdU
+    kCzUcqRCYz9yALKZIwEUiutwZTLhKR2kWqtm9gi6kgg/sdwzdIYPOW5BjKQGZJbL
+    v/E82jOBY0Ped0TpIILrikEy5nItALvp/A+4J4KRuGWfS2AwdUWoJwAGD47CtHW6
+    GbKQIdgLugzvF9fELBP3MDoJF03ZCwQdQWB+1R48k9vHyiBgttSX65RO8vuP4LF5
+    AROQ
+    -----END CERTIFICATE-----
+    -----BEGIN CERTIFICATE-----
+    MIIDHjCCAgagAwIBAgIIWvLfNd1LH8MwDQYJKoZIhvcNAQELBQAwLTESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MRcwFQYDVQQDEw5rdWJlbGV0LXNpZ25lcjAeFw0yMzAzMDkx
+    NDEwMjBaFw0yMzAzMTAxNDEwMjBaMC0xEjAQBgNVBAsTCW9wZW5zaGlmdDEXMBUG
+    A1UEAxMOa3ViZWxldC1zaWduZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+    AoIBAQCs9NNnLvz1JG9hsQ9BXttbf42Eznf2/TsiU812+pMh8jqz4oOMVbx08sT6
+    lsE2uZbHhX6BV1EGk9f7iZZ26rIc4hgYuRuXgV8WUYTKrfd8tg9S/n1RP7EVqCFS
+    vpuonEMxQvkS3CyEY3Ti5ygfqLzGTpCN47SN0b0raUpHuuvb5DNc7kcNJl0lxw3Y
+    WagNgde5mUBt/K2WPX2dmqdUo4xfFYWTMbCbnVNf7MElmK9ocVqap4lqyVtnlEWh
+    URmfEc6RGJYi2+MaxyRr/wqp7phmFTVtbhNuY3SU9snyWwx85TXniEWOwTRwvypQ
+    +t2rl6I7uist+q1NSpQjzUzEgRCNAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwICpDAP
+    BgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBTmjz1ivowKNJs03XP+zIcI9SEc+TAN
+    BgkqhkiG9w0BAQsFAAOCAQEAoT1CMOwY1sNgfwZMU20JUJfs3UuRgmf3OofrEhVO
+    ia5wXSDlY7kzD1cQCCJlXoa6SUzPKldQkX53ADTkTfikPhb/KDRxehCw8zBK8fyW
+    OpikFZzwqLmCudLVkq7qaXTnauc3EYzboWCnnGhrLw/wpxpXIfptxHeIFLpmMv63
+    vfH0FpVt2T/Xqown1KMAUEG++w9fl7PawxgAVILS7BUQN/Ch5OkQIntfQl3Jlvyy
+    m6KjYUUxGkdzH6xbAze3gCuU/HHNYAMZNVyWadVCw3pxEX1B1mape5P68Q5vrH6M
+    2wtKsZLzRAlLlsqVETp057B5nP2rW4THrpT8wogO8+RD/Q==
+    -----END CERTIFICATE-----
+    -----BEGIN CERTIFICATE-----
+    MIIDMzCCAhugAwIBAgIHYtjzq6uGJzANBgkqhkiG9w0BAQsFADA4MRIwEAYDVQQL
+    EwlvcGVuc2hpZnQxIjAgBgNVBAMTGWt1YmUtY29udHJvbC1wbGFuZS1zaWduZXIw
+    HhcNMjMwMzA5MTQxMDIwWhcNMjQwMzA4MTQxMDIwWjA4MRIwEAYDVQQLEwlvcGVu
+    c2hpZnQxIjAgBgNVBAMTGWt1YmUtY29udHJvbC1wbGFuZS1zaWduZXIwggEiMA0G
+    CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDbt0k3CF1PktzrihvZtqf/kn7icC9i
+    5NlsQiXDqEzyx5/RVk2cjB+NRiGNwMW0XzXdAUImJopvPhREWUcIWWSgdH4mJ5T0
+    jPDu+zfjehA8l03U9p4Nx4FLVccoqNWHa7CCwAPwC2Rovae7FkeQ5iL9XY7e8H0N
+    Frv4belWJ9U6NvC9qwH2h/+6DCPjM5F62L3Kxt9WW/HLOvvkvItHlnJJrrA989HO
+    3AYThNvWLFz3nCr8i/rGRLsroEjvfT9AvjtfUhfvA/ufT12wYku3usJ56K70pfgs
+    I6XAlZjgLODQJWhS05RPS2Pr6MRoz77Jz9iCM4zZVUfXhDmKkOV6o7KxAgMBAAGj
+    QjBAMA4GA1UdDwEB/wQEAwICpDAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBT6
+    sJ3XuoEnOLMYvKsWgQaA+ECcbTANBgkqhkiG9w0BAQsFAAOCAQEAToQWM1RbPUh5
+    iXSaoulDdgTzaLbb+ZHNk5LfFpN6vvilxkJEWk2YIk9CIK1LZpu+O6xZ5GyjRRYf
+    7kRnGvLG3FwIUyplelsckoFuv3BRdkdoUlxPQsFfBWnA4XQoQl+z/vGtWD+bDzXk
+    u0ns0XTz0SPjKb3tqeVfFot4JyCmDFLr/E9g2/dHpwpbNmghB8TxltsbIbWQRJKL
+    rywUdE23l9GtZgHGfb3VbCyr48N2gKwy7JuYrxslzap3nWfFSUCEUs1ux4aRm6ea
+    tGKIKYk/w+fxOViRGvlXFKridJC989G5r9OSLFJYMo9K5Yn4tdQME3GlIGbQq4+G
+    9YKoIvtdTg==
+    -----END CERTIFICATE-----
+    -----BEGIN CERTIFICATE-----
+    MIIDQjCCAiqgAwIBAgIIX8717e2ZJrIwDQYJKoZIhvcNAQELBQAwPzESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MSkwJwYDVQQDEyBrdWJlLWFwaXNlcnZlci10by1rdWJlbGV0
+    LXNpZ25lcjAeFw0yMzAzMDkxNDEwMjFaFw0yNDAzMDgxNDEwMjFaMD8xEjAQBgNV
+    BAsTCW9wZW5zaGlmdDEpMCcGA1UEAxMga3ViZS1hcGlzZXJ2ZXItdG8ta3ViZWxl
+    dC1zaWduZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDpQoTSDQPW
+    1OrxrVvuASNJ51PvG9bDcItfeRTS1dsXTotdmV0OUTDRID1IHoaNDMNbai3ksGEQ
+    x5EK+rKwYGe1YEGwZ6Qc6v3kJUKSQqVpIwXqcA/XxMMzHb7z4RbD813NlVMwkZwd
+    4gRNLmVW5mkMB7jV8qisRfPef70VBPnZ4G4k8YY+7m3hQKRrAnZYTNb14/+qrbpd
+    68EP0uLIKj7PoXKFxcT0KnWXLuxOOfcgA06El5xtx+W5n5L+Fp/IjwEv7XOq6Z0N
+    JJavicugkKIY/1gXY6XwoGZ6+ygN12U4F0phgRocMvJc9yqs3iXgNkbi8QWiQSxu
+    BQzp3IruNmBXAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwICpDAPBgNVHRMBAf8EBTAD
+    AQH/MB0GA1UdDgQWBBTLFjSkrnved3CBzwRgD1c9misC3TANBgkqhkiG9w0BAQsF
+    AAOCAQEAQykvp/u8uP+JsW8pwnJ7400WacJpErkwU2jORqihiqKQ+lYQdmy4HAgu
+    qUWZOrfULDMkQxBZYXmT9EiQsyVadcuTM7trZQ7UD58TWYBoQoYvIdFoRvU7g+m7
+    WYyYJcmPwWfILI28ZAhBWd/5ElXmFnh2Y5GpRt6HWdRyHc+fWcWc2hxpXl4OU0vp
+    5Nix+NVmXRxj8iHvCLbNGaG4+y/ak0jbZnXMVhTWNabqgXVUwUI3bo7gRYeL6qGG
+    n8/SrTfQcZAyZPaOsuc3yj9L2aZR0YF8m16CqxAwz+fRiLCtfp7N8P8Wog9wKNTN
+    y+EnThsy3aLC+wm4IJ7hFdCYl5gLIw==
+    -----END CERTIFICATE-----
+    -----BEGIN CERTIFICATE-----
+    MIIDSDCCAjCgAwIBAgIIUIFbL5Y5IeAwDQYJKoZIhvcNAQELBQAwQjESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MSwwKgYDVQQDEyNrdWJlbGV0LWJvb3RzdHJhcC1rdWJlY29u
+    ZmlnLXNpZ25lcjAeFw0yMzAzMDkxNDEwMTdaFw0zMzAzMDYxNDEwMTdaMEIxEjAQ
+    BgNVBAsTCW9wZW5zaGlmdDEsMCoGA1UEAxMja3ViZWxldC1ib290c3RyYXAta3Vi
+    ZWNvbmZpZy1zaWduZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCs
+    mtPGC3/pO1daJMj+x9uMlg99SRpFbLwZViTySau3zXH+bt9iqecYSV3x1eRTuSC7
+    vJuDFC10nqFJfaWoMJNkgy7aZOeOTA5uVHbDiiQtlHtB5/0z5ze92T3ObzN+TsHq
+    dbu2G8tvuk4RwOeudhxoObL9tc8Ln6Xu3jkBWLwBXv9es70hJiVbrMD1BJt1yx48
+    tGJ4bfKR3o4lbHXK5gzgn06kxVT8/eZ3+WaYGd6X6SY1++WCVQg+s0EOjEN2cquX
+    izx3sH6v363+iv8rdQYHTJxbHfb/Hyt1/9ooJJ51ab7SNbSikfNeTTKoz576i4Ew
+    OuHLB2jY0g6iqk96itYbAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwICpDAPBgNVHRMB
+    Af8EBTADAQH/MB0GA1UdDgQWBBTFz+zajbcRlkXEH1YVvExQjD00GDANBgkqhkiG
+    9w0BAQsFAAOCAQEAFiDGuQ6OKEjeT3+GoM4NN9uTUZIWYy5FW5OOxNUuihCI9tE9
+    h3H4Vtzqjr9yzvWjoTk2V0zT0NspTpdNBSlaH+IrbTHcWD/bSRc5/cOE8Zb3bb19
+    VbUHIyBAwRhIJTmX09rh1cbSsr8KaRl/Ij46YdFCPkGsfZnAmXOGP4o+NamKdes1
+    SBThNs34USiifWSe02tCxdxrEvzZROn1au2sq6Q2zubwPPkwXAD3ShZcsFeTyQIV
+    DlgiXuba94DrMKDsdWqOdexBVDTBj1SjnOhmmKlNGvX/Say3YzUXe1o5wGmGySEk
+    S52ybvm4jAxoIjQmz4QGCF8SgnpZCR6n02NDoA==
+    -----END CERTIFICATE-----
+  requestheader-allowed-names: '["kube-apiserver-proxy","system:kube-apiserver-proxy","system:openshift-aggregator"]'
+  requestheader-client-ca-file: |
+    -----BEGIN CERTIFICATE-----
+    MIIDJDCCAgygAwIBAgIIcPGF42g5IuEwDQYJKoZIhvcNAQELBQAwMDESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MRowGAYDVQQDExFhZ2dyZWdhdG9yLXNpZ25lcjAeFw0yMzAz
+    MDkxNDEwMTdaFw0yMzAzMTAxNDEwMTdaMDAxEjAQBgNVBAsTCW9wZW5zaGlmdDEa
+    MBgGA1UEAxMRYWdncmVnYXRvci1zaWduZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IB
+    DwAwggEKAoIBAQC2sr5klqc0G75YTIFGsrL4CHXTMUqQfASpZ8dOfbUBHJzoZZrE
+    Cg5dYWzGO8b9OzdK5Tdmo9G+oM//3UyJPjWjkP/Bhsii+UvM86wZ5kqUlRjGXUuO
+    innL0XZHckVKD5epPK1rOu+6+HnxVMMi2/RdL/h7G8LaBw62+wfVWOMX3m/uKn01
+    hpOuDxaBxH9+j0aIcWS/ECLQkgFZo8Rxm9U9QswMLCOg3JwLSbYkcrl0iokYrE0H
+    t95O1RqiMSRK2QlcfWVaSGzMITkeeFfh6cRKnC8ixLglPp1Q6Km0y0KGGrdT7/Zu
+    jiZXp+GrtfW+1EIy2dVFkxpvnGVl6AIaKxSDAgMBAAGjQjBAMA4GA1UdDwEB/wQE
+    AwICpDAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBSxQOVBDEQInNQUkXWDoERf
+    mhusrDANBgkqhkiG9w0BAQsFAAOCAQEAJ/QitfBVwdHjQxhUFfnyzkW7O5JqpvlU
+    Q35lqj1Kb72FsSs3B6oanIJQ4VfmH4mp7fl67rCNs+7p9fqq4j4a1poLHSsfgT8r
+    ZNYphbm+seBpe515ZvianrF//ZGFtEAAdbuLSLAzFapcMcBPK4gyoIXfjn8B5Fgu
+    8vkSXogMQnyBWsErIQpOFUuRt0iJvIuzj4wrkEt3tTyKMBLtZ+Bs2ZgYqZmf/gxR
+    0s5boJ4qrJ9/+F/hDOZYrrhwSSTzMF0dN/EqkeLAy6yXm7Rl1wX5L3r6HfCD1lBB
+    wE6OrZyLqmfBpYPVv0gjirz+BCZbSC+73TSixfmnVwtCymOL+jHMfg==
+    -----END CERTIFICATE-----
+  requestheader-extra-headers-prefix: '["X-Remote-Extra-"]'
+  requestheader-group-headers: '["X-Remote-Group"]'
+  requestheader-username-headers: '["X-Remote-User"]'
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:13:44Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:client-ca-file: {}
+        f:requestheader-allowed-names: {}
+        f:requestheader-client-ca-file: {}
+        f:requestheader-extra-headers-prefix: {}
+        f:requestheader-group-headers: {}
+        f:requestheader-username-headers: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-03-09T14:13:44Z"
+  name: extension-apiserver-authentication
+  namespace: kube-system
+  resourceVersion: "21"
+  uid: bb20ca5e-8367-43fb-85f2-5935f3dbf32d
