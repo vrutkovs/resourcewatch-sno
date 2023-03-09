@@ -179,15 +179,6 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:conditions:
-          .: {}
-          k:{"type":"ReplicaFailure"}:
-            .: {}
-            f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
-            f:status: {}
-            f:type: {}
         f:observedGeneration: {}
     manager: kube-controller-manager
     operation: Update
@@ -202,7 +193,7 @@ metadata:
     kind: Deployment
     name: ingress-operator
     uid: 13ff7095-b051-46f7-9746-4f6b178a682e
-  resourceVersion: "1996"
+  resourceVersion: "2342"
   uid: 506330a6-6445-4b53-bc78-33b1bd4aaf6b
 spec:
   replicas: 1
@@ -340,12 +331,5 @@ spec:
               expirationSeconds: 3600
               path: token
 status:
-  conditions:
-  - lastTransitionTime: "2023-03-09T14:15:18Z"
-    message: 'pods "ingress-operator-55684fdfd8-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
-      the cluster does not have any nodes'
-    reason: FailedCreate
-    status: "True"
-    type: ReplicaFailure
   observedGeneration: 1
   replicas: 0
