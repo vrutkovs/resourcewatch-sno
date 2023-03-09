@@ -112,6 +112,25 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:32:12Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:13Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:status:
         f:conditions:
           k:{"type":"ContainersReady"}:
@@ -138,30 +157,18 @@ metadata:
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.73"}:
+            .: {}
+            f:ip: {}
         f:startTime: {}
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:12Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.ovn.org/pod-networks: {}
-    manager: vrutkovs-sno
-    operation: Update
-    time: "2023-03-09T14:32:12Z"
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          f:k8s.v1.cni.cncf.io/network-status: {}
-    manager: multus
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:13Z"
+    time: "2023-03-09T14:32:26Z"
   name: downloads-688fb7695c-xkckl
   namespace: openshift-console
   ownerReferences:
@@ -171,7 +178,7 @@ metadata:
     kind: ReplicaSet
     name: downloads-688fb7695c
     uid: ff4bbfd5-d819-4efa-a783-78f5e06c4ea9
-  resourceVersion: "14873"
+  resourceVersion: "15180"
   uid: 02157f75-7110-43df-87d1-40bcaeaf5461
 spec:
   affinity: {}
@@ -352,17 +359,21 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6d46f731cbe328e293f88842f97b2dd6bfe8e9a82a1b0cf8cfc63cb2bf33f52c
-    imageID: ""
+  - containerID: cri-o://829a60c52fe58ea780c699551b5f6af1649ff4e9baa68751bf8015dca8b38486
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6d46f731cbe328e293f88842f97b2dd6bfe8e9a82a1b0cf8cfc63cb2bf33f52c
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6d46f731cbe328e293f88842f97b2dd6bfe8e9a82a1b0cf8cfc63cb2bf33f52c
     lastState: {}
     name: download-server
     ready: false
     restartCount: 0
-    started: false
+    started: true
     state:
-      waiting:
-        reason: ContainerCreating
+      running:
+        startedAt: "2023-03-09T14:32:25Z"
   hostIP: 10.0.130.93
-  phase: Pending
+  phase: Running
+  podIP: 10.128.0.73
+  podIPs:
+  - ip: 10.128.0.73
   qosClass: Burstable
   startTime: "2023-03-09T14:32:12Z"
