@@ -68,14 +68,14 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:33Z"
+    time: "2023-03-09T14:22:39Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "5484"
+  resourceVersion: "5754"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -162,8 +162,7 @@ status:
     type: StaticPodsDegraded
   - lastTransitionTime: "2023-03-09T14:22:15Z"
     message: 'error fetching rules: Get "https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules":
-      dial tcp: lookup thanos-querier.openshift-monitoring.svc on 172.30.0.10:53:
-      read udp 10.128.0.16:49521->172.30.0.10:53: read: connection refused'
+      dial tcp 172.30.121.173:9091: connect: connection refused'
     reason: Error
     status: "True"
     type: GarbageCollectorDegraded
