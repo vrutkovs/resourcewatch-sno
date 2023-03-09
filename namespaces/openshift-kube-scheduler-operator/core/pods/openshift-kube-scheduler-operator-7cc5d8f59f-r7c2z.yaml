@@ -199,8 +199,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -216,6 +214,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:23:15Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:01Z"
   name: openshift-kube-scheduler-operator-7cc5d8f59f-r7c2z
   namespace: openshift-kube-scheduler-operator
   ownerReferences:
@@ -225,7 +235,7 @@ metadata:
     kind: ReplicaSet
     name: openshift-kube-scheduler-operator-7cc5d8f59f
     uid: 5f98d709-e7df-4da0-bb93-20b5feced5fe
-  resourceVersion: "6781"
+  resourceVersion: "13490"
   uid: 1606b883-c96d-441c-8e75-977ff1bb9b7c
 spec:
   automountServiceAccountToken: false
@@ -340,8 +350,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:23:15Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:01Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:23:15Z"
