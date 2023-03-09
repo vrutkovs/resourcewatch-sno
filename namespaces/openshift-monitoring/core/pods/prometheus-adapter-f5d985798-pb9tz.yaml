@@ -219,6 +219,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -231,6 +233,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -246,7 +250,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:16Z"
+    time: "2023-03-09T14:29:13Z"
   name: prometheus-adapter-f5d985798-pb9tz
   namespace: openshift-monitoring
   ownerReferences:
@@ -256,7 +260,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-adapter-f5d985798
     uid: 00aafcc8-1f59-40dd-81f8-296659b61ac5
-  resourceVersion: "6807"
+  resourceVersion: "9281"
   uid: 4b3a2d80-8ba4-47c0-8a5d-948e31e9ab57
 spec:
   automountServiceAccountToken: true
@@ -433,12 +437,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:23:16Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:29:11Z"
+    message: 'containers with unready status: [prometheus-adapter]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:23:16Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:29:11Z"
+    message: 'containers with unready status: [prometheus-adapter]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:40Z"
@@ -450,7 +458,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:86d474263af96d19f25f530fef4aa2ee8bc02e3c5202c1ecc74841626ded2852
     lastState: {}
     name: prometheus-adapter
-    ready: true
+    ready: false
     restartCount: 0
     started: true
     state:
