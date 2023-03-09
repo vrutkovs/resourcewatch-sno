@@ -332,7 +332,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:38:24Z"
+    time: "2023-03-09T14:39:24Z"
   name: kube-controller-manager-vrutkovs-sno
   namespace: openshift-kube-controller-manager
   ownerReferences:
@@ -341,7 +341,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "17712"
+  resourceVersion: "17940"
   uid: 90fba2be-3b3f-43d0-b578-7ad1c088d548
 spec:
   containers:
@@ -594,28 +594,48 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://b0fa21e3ca83e2047bd0dfad955da449a874dd00b673c2abc01f485cedae52a5
+  - containerID: cri-o://dde1851567ee169bc29488530d94c7fda6fa0b7a34bd1b4b22ae128b621b2b0a
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4a17a5edd33292beb6a274a3d484c8464a8f9291058107b4cb2cf6181058b1cd
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4a17a5edd33292beb6a274a3d484c8464a8f9291058107b4cb2cf6181058b1cd
-    lastState: {}
+    lastState:
+      terminated:
+        containerID: cri-o://b0fa21e3ca83e2047bd0dfad955da449a874dd00b673c2abc01f485cedae52a5
+        exitCode: 0
+        finishedAt: "2023-03-09T14:39:23Z"
+        reason: Completed
+        startedAt: "2023-03-09T14:38:23Z"
     name: cluster-policy-controller
     ready: false
-    restartCount: 0
+    restartCount: 1
     started: false
     state:
       running:
-        startedAt: "2023-03-09T14:38:23Z"
-  - containerID: cri-o://34cea20980ee486368507852cddf4e44a366123116007a61b4fa4ddc8446bb3e
+        startedAt: "2023-03-09T14:39:23Z"
+  - containerID: cri-o://aa931a66963c42aa6f2fdca0be5e4ea1a7dc08a678d554e6d8f9c2ae181c1880
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
-    lastState: {}
+    lastState:
+      terminated:
+        containerID: cri-o://34cea20980ee486368507852cddf4e44a366123116007a61b4fa4ddc8446bb3e
+        exitCode: 137
+        finishedAt: "2023-03-09T14:39:22Z"
+        message: |
+          es/static-pod-certs/configmaps/aggregator-client-ca/ca-bundle.crt" certDetail="\"openshift-kube-apiserver-operator_node-system-admin-signer@1678372134\" [] issuer=\"<self>\" (2023-03-09 14:28:53 +0000 UTC to 2024-03-08 14:28:54 +0000 UTC (now=2023-03-09 14:39:13.358016785 +0000 UTC))"
+          I0309 14:39:13.358063       1 tlsconfig.go:178] "Loaded client CA" index=7 certName="client-ca-bundle::/etc/kubernetes/static-pod-certs/configmaps/client-ca/ca-bundle.crt,request-header::/etc/kubernetes/static-pod-certs/configmaps/aggregator-client-ca/ca-bundle.crt" certDetail="\"aggregator-signer\" [] issuer=\"<self>\" (2023-03-09 14:10:17 +0000 UTC to 2023-03-10 14:10:17 +0000 UTC (now=2023-03-09 14:39:13.358055139 +0000 UTC))"
+          I0309 14:39:13.358156       1 tlsconfig.go:200] "Loaded serving cert" certName="serving-cert::/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.crt::/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.key" certDetail="\"kube-controller-manager.openshift-kube-controller-manager.svc\" [serving] validServingFor=[kube-controller-manager.openshift-kube-controller-manager.svc,kube-controller-manager.openshift-kube-controller-manager.svc.cluster.local] issuer=\"openshift-service-serving-signer@1678371721\" (2023-03-09 14:22:14 +0000 UTC to 2025-03-08 14:22:15 +0000 UTC (now=2023-03-09 14:39:13.35814238 +0000 UTC))"
+          I0309 14:39:13.358300       1 named_certificates.go:53] "Loaded SNI cert" index=0 certName="self-signed loopback" certDetail="\"apiserver-loopback-client@1678372753\" [serving] validServingFor=[apiserver-loopback-client] issuer=\"apiserver-loopback-client-ca@1678372753\" (2023-03-09 13:39:12 +0000 UTC to 2024-03-08 13:39:12 +0000 UTC (now=2023-03-09 14:39:13.358287414 +0000 UTC))"
+          I0309 14:39:13.358334       1 secure_serving.go:210] Serving securely on [::]:10257
+          I0309 14:39:13.358404       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+          I0309 14:39:13.358591       1 leaderelection.go:248] attempting to acquire leader lease kube-system/kube-controller-manager...
+        reason: Error
+        startedAt: "2023-03-09T14:38:23Z"
     name: kube-controller-manager
     ready: false
-    restartCount: 0
+    restartCount: 1
     started: false
     state:
       running:
-        startedAt: "2023-03-09T14:38:23Z"
+        startedAt: "2023-03-09T14:39:23Z"
   - containerID: cri-o://555c0b4340865e9a5f2a282cdc3505fe97e5548c6223bf60bb62647af46a326a
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d32df39b960a3d0fd95bb8269b5f82f104c4834d44ce0e86605741fe6546ff3d
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d32df39b960a3d0fd95bb8269b5f82f104c4834d44ce0e86605741fe6546ff3d
