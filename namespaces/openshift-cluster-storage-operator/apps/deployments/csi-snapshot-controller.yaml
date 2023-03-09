@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
+    deployment.kubernetes.io/revision: "1"
     operator.openshift.io/spec-hash: 1e7e6a54cf76efa73fb658d4f52e3514650973328262b0ac627ce2c6509fe04f
   creationTimestamp: "2023-03-09T14:22:00Z"
   generation: 1
@@ -77,9 +78,30 @@ metadata:
     manager: csi-snapshot-controller-operator
     operation: Update
     time: "2023-03-09T14:22:00Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:00Z"
   name: csi-snapshot-controller
   namespace: openshift-cluster-storage-operator
-  resourceVersion: "3468"
+  resourceVersion: "3506"
   uid: 9a5c2c2e-ce99-4436-9c0a-479980f226bc
 spec:
   progressDeadlineSeconds: 600
@@ -157,4 +179,11 @@ spec:
       - effect: NoSchedule
         key: node-role.kubernetes.io/master
         operator: Exists
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:22:00Z"
+    lastUpdateTime: "2023-03-09T14:22:00Z"
+    message: Created new replica set "csi-snapshot-controller-74f6d7449"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
