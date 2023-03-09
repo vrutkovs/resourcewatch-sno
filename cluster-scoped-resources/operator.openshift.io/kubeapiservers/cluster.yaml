@@ -50,7 +50,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8562"
+  resourceVersion: "8566"
   uid: c0c6917e-93dd-43c7-a907-55546729e305
 spec:
   logLevel: Normal
@@ -66,6 +66,11 @@ status:
     reason: AllowedFeatureGates_
     status: "True"
     type: FeatureGatesUpgradeable
+  - lastTransitionTime: "2023-03-09T14:28:53Z"
+    message: Kubelet and API server minor versions are synced.
+    reason: KubeletMinorVersionsSynced
+    status: "True"
+    type: KubeletMinorVersionUpgradeable
   latestAvailableRevision: 0
   latestAvailableRevisionReason: ""
   readyReplicas: 0
