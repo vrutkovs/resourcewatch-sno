@@ -15,6 +15,7 @@ metadata:
   labels:
     kubernetes.io/metadata.name: openshift-console
     network.openshift.io/policy-group: console
+    olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: ""
     openshift.io/cluster-monitoring: "true"
   managedFields:
   - apiVersion: v1
@@ -51,6 +52,15 @@ metadata:
     manager: cluster-policy-controller
     operation: Update
     time: "2023-03-09T14:32:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: {}
+    manager: olm
+    operation: Update
+    time: "2023-03-09T14:32:01Z"
   name: openshift-console
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -58,7 +68,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "13353"
+  resourceVersion: "13498"
   uid: 8128adb0-aca5-4b4a-b7b5-55e968b953bc
 spec:
   finalizers:
