@@ -1,0 +1,22 @@
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource:
+  component: apiserver
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:15:19Z"
+  name: openshift-kube-apiserver.174ac5d29926ffca
+  namespace: default
+  resourceVersion: "2037"
+  uid: a59a1b64-3455-41b4-81ab-4c19244d9636
+note: The minimal shutdown duration of 0s finished
+reason: AfterShutdownDelayDuration
+regarding:
+  apiVersion: v1
+  kind: Namespace
+  name: openshift-kube-apiserver
+  namespace: default
+type: Normal
