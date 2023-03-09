@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:20:24Z"
+deprecatedLastTimestamp: "2023-03-09T14:20:24Z"
+deprecatedSource:
+  component: daemonset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:24Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:20:24Z"
+  name: network-metrics-daemon.174ac61988cd6701
+  namespace: openshift-multus
+  resourceVersion: "2603"
+  uid: fe539bb4-ae4f-4869-8f63-fee3d28e69d5
+note: 'Created pod: network-metrics-daemon-vwx7z'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: DaemonSet
+  name: network-metrics-daemon
+  namespace: openshift-multus
+  resourceVersion: "2599"
+  uid: b9694f0c-0704-4642-ba1c-a72a1e8215fd
+type: Normal
