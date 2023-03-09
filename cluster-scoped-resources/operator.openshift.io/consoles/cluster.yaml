@@ -44,14 +44,14 @@ metadata:
     manager: console
     operation: Update
     subresource: status
-    time: "2023-03-09T14:35:02Z"
+    time: "2023-03-09T14:35:13Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "17032"
+  resourceVersion: "17090"
   uid: 220131d0-1fdb-4e14-a9b0-f123fc3fa77f
 spec:
   logLevel: Normal
@@ -84,20 +84,14 @@ status:
   - lastTransitionTime: "2023-03-09T14:32:17Z"
     status: "False"
     type: RedirectServiceSyncProgressing
-  - lastTransitionTime: "2023-03-09T14:34:43Z"
-    message: route not yet available, https://console-openshift-console.apps.ocp.choomba.one
-      returns '503 Service Unavailable'
-    reason: StatusError
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:35:13Z"
+    status: "False"
     type: RouteHealthDegraded
   - lastTransitionTime: "2023-03-09T14:32:20Z"
     status: "False"
     type: RouteHealthProgressing
-  - lastTransitionTime: "2023-03-09T14:32:20Z"
-    message: route not yet available, https://console-openshift-console.apps.ocp.choomba.one
-      returns '503 Service Unavailable'
-    reason: StatusError
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:35:13Z"
+    status: "True"
     type: RouteHealthAvailable
   - lastTransitionTime: "2023-03-09T14:32:37Z"
     status: "False"
