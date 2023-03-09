@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:11Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:11Z"
+deprecatedSource:
+  component: endpoint-slice-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:11Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:22:11Z"
+  name: dns-default.174ac63291a4cb57
+  namespace: openshift-dns
+  resourceVersion: "4471"
+  uid: 790f6982-f9d9-437d-be6e-20d1751fa922
+note: 'Insufficient Node information: allocatable CPU or zone not specified on one
+  or more nodes, addressType: IPv4'
+reason: TopologyAwareHintsDisabled
+regarding:
+  apiVersion: v1
+  kind: Service
+  name: dns-default
+  namespace: openshift-dns
+  resourceVersion: "4468"
+  uid: b314edfb-968c-4f34-92af-5a8a941d0c4f
+type: Warning
