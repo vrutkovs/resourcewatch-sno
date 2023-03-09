@@ -44,7 +44,7 @@ metadata:
     manager: cluster-openshift-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:11Z"
+    time: "2023-03-09T14:23:18Z"
   name: openshift-apiserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6662"
+  resourceVersion: "6873"
   uid: 554eb8d5-f8a6-4fb8-afb7-e4785239d130
 spec: {}
 status:
@@ -72,8 +72,16 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: |-
       APIServerDeploymentAvailable: no apiserver.openshift-apiserver pods available on any node.
-      APIServicesAvailable: PreconditionNotReady
-    reason: APIServerDeployment_NoPod::APIServices_PreconditionNotReady
+      APIServicesAvailable: "apps.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+      APIServicesAvailable: "authorization.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+      APIServicesAvailable: "build.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+      APIServicesAvailable: "image.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+      APIServicesAvailable: "project.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+      APIServicesAvailable: "quota.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+      APIServicesAvailable: "route.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+      APIServicesAvailable: "security.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+      APIServicesAvailable: "template.openshift.io.v1" is not ready: an attempt failed with statusCode = 503, err = the server is currently unable to handle the request
+    reason: APIServerDeployment_NoPod::APIServices_Error
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
