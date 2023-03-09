@@ -38,10 +38,11 @@ metadata:
       f:status:
         f:conditions: {}
         f:relatedObjects: {}
+        f:versions: {}
     manager: olm
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:22Z"
+    time: "2023-03-09T14:32:01Z"
   name: operator-lifecycle-manager-packageserver
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -49,7 +50,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "9770"
+  resourceVersion: "13491"
   uid: 1925a336-2158-411b-aeab-c2b82fca38c3
 spec: {}
 status:
@@ -57,12 +58,15 @@ status:
   - lastTransitionTime: "2023-03-09T14:29:17Z"
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:29:17Z"
-    status: "False"
-    type: Available
-  - lastTransitionTime: "2023-03-09T14:29:17Z"
-    message: Working toward 0.19.0
+  - lastTransitionTime: "2023-03-09T14:32:01Z"
+    message: ClusterServiceVersion openshift-operator-lifecycle-manager/packageserver
+      observed in phase Succeeded
+    reason: ClusterServiceVersionSucceeded
     status: "True"
+    type: Available
+  - lastTransitionTime: "2023-03-09T14:32:01Z"
+    message: Deployed version 0.19.0
+    status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:29:22Z"
     message: Safe to upgrade
@@ -77,3 +81,8 @@ status:
     name: packageserver
     namespace: openshift-operator-lifecycle-manager
     resource: clusterserviceversions
+  versions:
+  - name: operator
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+  - name: packageserver
+    version: 0.19.0
