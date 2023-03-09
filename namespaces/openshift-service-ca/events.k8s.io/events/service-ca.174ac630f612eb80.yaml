@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:04Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:04Z"
+deprecatedSource:
+  component: service-ca-controller-service-serving-cert-controller-serviceservingcertcontroller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:04Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:22:04Z"
+  name: service-ca.174ac630f612eb80
+  namespace: openshift-service-ca
+  resourceVersion: "4020"
+  uid: ef09c512-3c22-43ea-919c-137438e550fe
+note: Controller "ServiceServingCertController" resync interval is set to 0s which
+  might lead to client request throttling
+reason: FastControllerResync
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: service-ca
+  namespace: openshift-service-ca
+  uid: 9202bf82-fe2e-4cb4-b621-e9cc589d5fa4
+type: Warning
