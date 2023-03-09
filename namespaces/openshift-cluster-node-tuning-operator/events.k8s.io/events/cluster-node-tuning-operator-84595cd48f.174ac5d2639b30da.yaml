@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-09T14:15:18Z"
 deprecatedLastTimestamp: "2023-03-09T14:15:18Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:15:18Z"
   name: cluster-node-tuning-operator-84595cd48f.174ac5d2639b30da
   namespace: openshift-cluster-node-tuning-operator
-  resourceVersion: "1976"
+  resourceVersion: "1978"
   uid: 20b56b77-9fe5-4071-8171-223e1778a505
 note: 'Error creating: pods "cluster-node-tuning-operator-84595cd48f-" is forbidden:
   autoscaling.openshift.io/ManagementCPUsOverride the cluster does not have any nodes'
