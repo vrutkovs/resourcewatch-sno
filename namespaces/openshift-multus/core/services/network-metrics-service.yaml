@@ -1,0 +1,64 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    prometheus.io/scrape: "true"
+    service.alpha.openshift.io/serving-cert-secret-name: metrics-daemon-secret
+  creationTimestamp: "2023-03-09T14:20:24Z"
+  labels:
+    service: network-metrics-service
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:prometheus.io/scrape: {}
+          f:service.alpha.openshift.io/serving-cert-secret-name: {}
+        f:labels:
+          f:service: {}
+        f:ownerReferences:
+          k:{"uid":"e6519524-ef16-4ee8-82f1-2faa42688032"}: {}
+      f:spec:
+        f:clusterIP: {}
+        f:ports:
+          k:{"port":8443,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:type: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-03-09T14:20:24Z"
+  name: network-metrics-service
+  namespace: openshift-multus
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: e6519524-ef16-4ee8-82f1-2faa42688032
+  resourceVersion: "2610"
+  uid: 03bed8dc-5b9d-4ccc-b4e6-de2c79afb987
+spec:
+  clusterIP: None
+  clusterIPs:
+  - None
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: metrics
+    port: 8443
+    protocol: TCP
+    targetPort: https
+  selector:
+    app: network-metrics-daemon
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
