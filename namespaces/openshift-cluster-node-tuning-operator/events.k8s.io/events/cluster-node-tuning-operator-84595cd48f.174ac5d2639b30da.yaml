@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 7
+deprecatedCount: 8
 deprecatedFirstTimestamp: "2023-03-09T14:15:18Z"
-deprecatedLastTimestamp: "2023-03-09T14:15:18Z"
+deprecatedLastTimestamp: "2023-03-09T14:15:19Z"
 deprecatedSource:
   component: replicaset-controller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-09T14:15:18Z"
+    time: "2023-03-09T14:15:19Z"
   name: cluster-node-tuning-operator-84595cd48f.174ac5d2639b30da
   namespace: openshift-cluster-node-tuning-operator
-  resourceVersion: "2003"
+  resourceVersion: "2023"
   uid: 20b56b77-9fe5-4071-8171-223e1778a505
 note: 'Error creating: pods "cluster-node-tuning-operator-84595cd48f-" is forbidden:
   autoscaling.openshift.io/ManagementCPUsOverride the cluster does not have any nodes'
