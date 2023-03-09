@@ -4,8 +4,6 @@ metadata:
   annotations:
     openshift.io/scc: hostaccess
   creationTimestamp: "2023-03-09T14:14:30Z"
-  finalizers:
-  - batch.kubernetes.io/job-tracking
   generateName: assisted-installer-controller-
   labels:
     app: assisted-installer-controller
@@ -16,9 +14,6 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:metadata:
-        f:finalizers:
-          .: {}
-          v:"batch.kubernetes.io/job-tracking": {}
         f:generateName: {}
         f:labels:
           .: {}
@@ -221,7 +216,7 @@ metadata:
     kind: Job
     name: assisted-installer-controller
     uid: f5a4e959-715f-4436-8272-3a0acf078c12
-  resourceVersion: "17296"
+  resourceVersion: "17302"
   uid: bf338db4-906a-4d43-be22-8959360a0341
 spec:
   containers:
