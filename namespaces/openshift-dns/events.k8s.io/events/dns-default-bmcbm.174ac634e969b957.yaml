@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:21Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:21Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:24Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:22:24Z"
+  name: dns-default-bmcbm.174ac634e969b957
+  namespace: openshift-dns
+  resourceVersion: "5105"
+  uid: e3a517b5-eb84-4039-bac9-c638f0008209
+note: Container image "registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:199a16f6e9bdfc720f6efa5cb21b207d79ef1fcda9c58e5dbef1f2d2fc09d747"
+  already present on machine
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-rbac-proxy}
+  kind: Pod
+  name: dns-default-bmcbm
+  namespace: openshift-dns
+  resourceVersion: "4460"
+  uid: 53f53fd4-d73a-4693-b74f-978bc7aff7f6
+type: Normal
