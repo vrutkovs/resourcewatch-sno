@@ -5,6 +5,7 @@ metadata:
     capability.openshift.io/name: baremetal
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.48/23"],"mac_address":"0a:58:0a:80:00:30","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.48/23","gateway_ip":"10.128.0.1"}}'
     openshift.io/scc: anyuid
   creationTimestamp: "2023-03-09T14:28:48Z"
   generateName: cluster-baremetal-operator-78475cb658-
@@ -159,6 +160,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:28:48Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:28:48Z"
   name: cluster-baremetal-operator-78475cb658-nc8qw
   namespace: openshift-machine-api
   ownerReferences:
@@ -168,7 +178,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-baremetal-operator-78475cb658
     uid: 626ba754-8d21-4c0d-a271-a6a742610587
-  resourceVersion: "8376"
+  resourceVersion: "8381"
   uid: 799840ec-4d13-4b04-830e-e8b1904eefc4
 spec:
   containers:
