@@ -198,7 +198,7 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    samples.operator.openshift.io/version: ""
+    samples.operator.openshift.io/version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
   creationTimestamp: "2023-03-09T14:28:55Z"
   managedFields:
   - apiVersion: v1
@@ -407,8 +407,8 @@ metadata:
           f:samples.operator.openshift.io/version: {}
     manager: cluster-samples-operator
     operation: Update
-    time: "2023-03-09T14:28:55Z"
+    time: "2023-03-09T14:32:19Z"
   name: imagestreamtag-to-image
   namespace: openshift-cluster-samples-operator
-  resourceVersion: "8666"
+  resourceVersion: "14977"
   uid: 665e8be4-504d-47ea-9f6b-298076b877eb
