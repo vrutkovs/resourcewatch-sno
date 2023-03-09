@@ -14,6 +14,15 @@ metadata:
   - apiVersion: route.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:status:
+        f:ingress: {}
+    manager: openshift-router
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:45Z"
+  - apiVersion: route.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:metadata:
         f:labels:
           .: {}
@@ -41,7 +50,7 @@ metadata:
     time: "2023-03-09T14:32:45Z"
   name: thanos-querier
   namespace: openshift-monitoring
-  resourceVersion: "15860"
+  resourceVersion: "15863"
   uid: ba38d871-1538-4ca5-8723-08d314de6cb6
 spec:
   host: thanos-querier-openshift-monitoring.apps.ocp.choomba.one
@@ -56,4 +65,13 @@ spec:
     name: thanos-querier
     weight: 100
   wildcardPolicy: None
-status: {}
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: "2023-03-09T14:32:45Z"
+      status: "True"
+      type: Admitted
+    host: thanos-querier-openshift-monitoring.apps.ocp.choomba.one
+    routerCanonicalHostname: router-default.apps.ocp.choomba.one
+    routerName: default
+    wildcardPolicy: None
