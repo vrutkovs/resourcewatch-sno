@@ -1,0 +1,41 @@
+action: Scheduling
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:20:01.793237Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:01Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:20:01Z"
+  name: csi-snapshot-controller-operator-6f7d895c88-9c5xt.174ac61455fd4ba3
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "2414"
+  uid: a40416e5-068f-4df5-9cf2-46761a5abf3e
+note: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+  }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
+reason: FailedScheduling
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: csi-snapshot-controller-operator-6f7d895c88-9c5xt
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "2412"
+  uid: 5b9b5dc9-f3f3-4d99-8d75-9b1a5e511a26
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Warning
