@@ -281,8 +281,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -295,8 +293,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -323,7 +319,7 @@ metadata:
     kind: ReplicaSet
     name: apiserver-7f975bf8c6
     uid: b7001c83-c153-495e-9c27-b54d5e5a0c46
-  resourceVersion: "14705"
+  resourceVersion: "14706"
   uid: 12b283d0-81f3-4ae5-a5f7-9a42e72a57aa
 spec:
   affinity:
@@ -547,16 +543,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:07Z"
-    message: 'containers with unready status: [oauth-apiserver]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:32:11Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:32:07Z"
-    message: 'containers with unready status: [oauth-apiserver]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:32:11Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:24:58Z"
@@ -594,7 +586,7 @@ status:
         reason: Error
         startedAt: "2023-03-09T14:26:41Z"
     name: oauth-apiserver
-    ready: false
+    ready: true
     restartCount: 3
     started: true
     state:
