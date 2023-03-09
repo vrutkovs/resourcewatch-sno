@@ -45,7 +45,7 @@ metadata:
     manager: csi-snapshot-controller-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:00Z"
+    time: "2023-03-09T14:22:02Z"
   name: csi-snapshot-controller
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -53,13 +53,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3496"
+  resourceVersion: "3818"
   uid: e0331be3-eea0-4389-ad97-427d46033c20
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: All is well
+    message: 'CSISnapshotWebhookControllerDegraded: Operation cannot be fulfilled
+      on csisnapshotcontrollers.operator.openshift.io "cluster": the object has been
+      modified; please apply your changes to the latest version and try again'
     reason: AsExpected
     status: "False"
     type: Degraded
