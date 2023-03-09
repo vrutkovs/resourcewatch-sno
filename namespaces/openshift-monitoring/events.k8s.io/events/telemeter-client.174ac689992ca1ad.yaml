@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:28:25Z"
+deprecatedLastTimestamp: "2023-03-09T14:28:25Z"
+deprecatedSource:
+  component: deployment-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:25Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:28:25Z"
+  name: telemeter-client.174ac689992ca1ad
+  namespace: openshift-monitoring
+  resourceVersion: "7983"
+  uid: ef5f031c-75a0-4bd8-b32a-dbc29c88d520
+note: Scaled up replica set telemeter-client-7f96fcfc64 to 1
+reason: ScalingReplicaSet
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: telemeter-client
+  namespace: openshift-monitoring
+  resourceVersion: "7868"
+  uid: 08f8fbb9-af1b-499b-a1db-e123e8a5a590
+type: Normal
