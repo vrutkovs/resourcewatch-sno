@@ -1,6 +1,8 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.33/23"],"mac_address":"0a:58:0a:80:00:21","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.33/23","gateway_ip":"10.128.0.1"}}'
   creationTimestamp: "2023-03-09T14:22:38Z"
   generateName: multus-admission-controller-7cd94d77c5-
   labels:
@@ -16,7 +18,6 @@ metadata:
     fieldsV1:
       f:metadata:
         f:annotations:
-          .: {}
           f:target.workload.openshift.io/management: {}
         f:generateName: {}
         f:labels:
@@ -114,6 +115,16 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:22:38Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:22:38Z"
   name: multus-admission-controller-7cd94d77c5-6gk5j
   namespace: openshift-multus
   ownerReferences:
@@ -123,7 +134,7 @@ metadata:
     kind: ReplicaSet
     name: multus-admission-controller-7cd94d77c5
     uid: 01dcd71a-ca99-45b5-b37f-40bba57bfbfb
-  resourceVersion: "5582"
+  resourceVersion: "5586"
   uid: ddd4e947-6f1a-4210-b205-7a3f71672a36
 spec:
   containers:
