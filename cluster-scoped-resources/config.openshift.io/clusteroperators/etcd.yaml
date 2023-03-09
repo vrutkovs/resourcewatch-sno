@@ -44,7 +44,7 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:23:09Z"
+    time: "2023-03-09T14:24:49Z"
   name: etcd
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,30 +52,31 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6465"
+  resourceVersion: "7270"
   uid: 5b689e62-691b-4fc1-86d9-fed9d5250955
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-09T14:22:00Z"
+  - lastTransitionTime: "2023-03-09T14:24:45Z"
     message: |-
       NodeControllerDegraded: All master nodes are ready
-      EtcdEndpointsDegraded: no etcd members are present
       EtcdMembersDegraded: No unhealthy members found
     reason: AsExpected
     status: "False"
     type: Degraded
-  - lastTransitionTime: "2023-03-09T14:22:26Z"
-    message: 'NodeInstallerProgressing: 1 nodes are at revision 0; 0 nodes have achieved
-      new revision 2'
-    reason: NodeInstaller
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-09T14:22:26Z"
-    message: 'StaticPodsAvailable: 0 nodes are active; 1 nodes are at revision 0;
-      0 nodes have achieved new revision 2'
-    reason: StaticPods_ZeroNodesActive
+  - lastTransitionTime: "2023-03-09T14:24:49Z"
+    message: |-
+      NodeInstallerProgressing: 1 nodes are at revision 2
+      EtcdMembersProgressing: No unstarted etcd members found
+    reason: AsExpected
     status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-03-09T14:24:49Z"
+    message: |-
+      StaticPodsAvailable: 1 nodes are active; 1 nodes are at revision 2
+      EtcdMembersAvailable: 1 members are available
+    reason: AsExpected
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: All is well
@@ -107,4 +108,8 @@ status:
     resource: namespaces
   versions:
   - name: raw-internal
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+  - name: etcd
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+  - name: operator
     version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
