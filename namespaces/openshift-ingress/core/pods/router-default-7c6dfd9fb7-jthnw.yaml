@@ -333,7 +333,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:12Z"
+    time: "2023-03-09T14:29:13Z"
   name: router-default-7c6dfd9fb7-jthnw
   namespace: openshift-ingress
   ownerReferences:
@@ -343,7 +343,7 @@ metadata:
     kind: ReplicaSet
     name: router-default-7c6dfd9fb7
     uid: 60060897-6bbe-4498-872f-27825dcdc46a
-  resourceVersion: "9118"
+  resourceVersion: "9212"
   uid: 25f9052f-edeb-4f6b-a4da-f714b6374bdb
 spec:
   containers:
@@ -596,7 +596,7 @@ status:
     name: router
     ready: true
     restartCount: 2
-    started: true
+    started: false
     state:
       running:
         startedAt: "2023-03-09T14:28:09Z"
