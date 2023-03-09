@@ -206,8 +206,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -220,8 +218,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -237,7 +233,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:31:20Z"
+    time: "2023-03-09T14:31:21Z"
   name: route-controller-manager-749787b87c-p6r7p
   namespace: openshift-route-controller-manager
   ownerReferences:
@@ -247,7 +243,7 @@ metadata:
     kind: ReplicaSet
     name: route-controller-manager-749787b87c
     uid: 2b4606aa-d51a-4e5e-8290-62ada7748898
-  resourceVersion: "12317"
+  resourceVersion: "12524"
   uid: 72f3bf26-04c4-4a10-92aa-f5060fcd50a5
 spec:
   affinity:
@@ -391,16 +387,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:31:14Z"
-    message: 'containers with unready status: [route-controller-manager]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:31:21Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:31:14Z"
-    message: 'containers with unready status: [route-controller-manager]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:31:21Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:31:14Z"
@@ -412,7 +404,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:97e0c3d15736e8b042931afcc1f97d024c584f47480c7a3bc26fa9faf62d7a0a
     lastState: {}
     name: route-controller-manager
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
