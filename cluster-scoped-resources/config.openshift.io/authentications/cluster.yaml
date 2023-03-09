@@ -43,13 +43,25 @@ metadata:
     manager: authentication-operator
     operation: Update
     time: "2023-03-09T14:24:51Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:integratedOAuthMetadata:
+          .: {}
+          f:name: {}
+    manager: authentication-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:19Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "7297"
+  resourceVersion: "14981"
   uid: 56a4adc3-7b52-49aa-a2b9-f71df840f11e
 spec:
   oauthMetadata:
@@ -59,3 +71,6 @@ spec:
   webhookTokenAuthenticator:
     kubeConfig:
       name: webhook-authentication-integrated-oauth
+status:
+  integratedOAuthMetadata:
+    name: oauth-openshift
