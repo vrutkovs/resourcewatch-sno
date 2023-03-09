@@ -44,14 +44,14 @@ metadata:
     manager: cluster-kube-apiserver-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:59Z"
+    time: "2023-03-09T14:29:01Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8841"
+  resourceVersion: "8868"
   uid: c0c6917e-93dd-43c7-a907-55546729e305
 spec:
   logLevel: Normal
@@ -142,6 +142,12 @@ status:
   - lastTransitionTime: "2023-03-09T14:28:58Z"
     status: "False"
     type: NodeInstallerDegraded
+  - lastTransitionTime: "2023-03-09T14:28:59Z"
+    status: "False"
+    type: EncryptionMigrationControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:28:59Z"
+    status: "False"
+    type: EncryptionMigrationControllerProgressing
   latestAvailableRevision: 0
   latestAvailableRevisionReason: ""
   nodeStatuses:
