@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
+    deployment.kubernetes.io/revision: "1"
     operator.openshift.io/spec-hash: 1f6a7c00b90a67ca9fdbdf744b940b16529190679223cf29e2912143d2213ede
   creationTimestamp: "2023-03-09T14:32:12Z"
   generation: 1
@@ -110,9 +111,30 @@ metadata:
     manager: console
     operation: Update
     time: "2023-03-09T14:32:12Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:12Z"
   name: downloads
   namespace: openshift-console
-  resourceVersion: "14817"
+  resourceVersion: "14820"
   uid: 01cb3315-d49e-4b0f-9e54-758d7eef6bbe
 spec:
   progressDeadlineSeconds: 600
@@ -248,4 +270,11 @@ spec:
         key: node.kubernetes.io/unreachable
         operator: Exists
         tolerationSeconds: 120
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:32:12Z"
+    lastUpdateTime: "2023-03-09T14:32:12Z"
+    message: Created new replica set "downloads-688fb7695c"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
