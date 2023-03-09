@@ -57,14 +57,14 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:28Z"
+    time: "2023-03-09T14:23:15Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "5187"
+  resourceVersion: "6792"
   uid: 48eb058e-3e1d-45d9-baa8-cf6a53778010
 spec:
   logLevel: Normal
@@ -84,7 +84,8 @@ spec:
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: 'missing required resources: secrets: kube-scheduler-client-cert-key'
+    message: 'missing required resources: [secrets: kube-scheduler-client-cert-key,
+      secrets: localhost-recovery-client-token-3]'
     reason: Error
     status: "True"
     type: InstallerControllerDegraded
