@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 10
+deprecatedCount: 11
 deprecatedFirstTimestamp: "2023-03-09T14:15:08Z"
-deprecatedLastTimestamp: "2023-03-09T14:15:11Z"
+deprecatedLastTimestamp: "2023-03-09T14:15:13Z"
 deprecatedSource:
   component: replicaset-controller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-09T14:15:11Z"
+    time: "2023-03-09T14:15:13Z"
   name: etcd-operator-7897669d79.174ac5d00e2e7e2d
   namespace: openshift-etcd-operator
-  resourceVersion: "1770"
+  resourceVersion: "1837"
   uid: 4a20517e-7642-4b1a-9aa9-6b3bcc4dc834
 note: 'Error creating: pods "etcd-operator-7897669d79-" is forbidden: autoscaling.openshift.io/ManagementCPUsOverride
   the cluster does not have any nodes'
