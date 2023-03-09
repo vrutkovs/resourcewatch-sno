@@ -227,6 +227,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -245,6 +247,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -261,7 +265,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:21:15Z"
+    time: "2023-03-09T14:24:39Z"
   name: bootstrap-kube-apiserver-vrutkovs-sno
   namespace: openshift-kube-apiserver
   ownerReferences:
@@ -270,7 +274,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "3002"
+  resourceVersion: "7036"
   uid: 00279aac-3656-425a-b5a5-9da5a4f966b1
 spec:
   containers:
@@ -421,29 +425,82 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:19:48Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:24:11Z"
+    message: 'containers with unready status: [kube-apiserver]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:19:48Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:24:11Z"
+    message: 'containers with unready status: [kube-apiserver]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:19:25Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://2eb36039922c9e490bc42294aa1c4399ba4d9ad260779245641e78ad34ee8949
+  - containerID: cri-o://f225b475cd64b7f4c79605ed366d71950d6fab87c9513ebe13af6373469cd70f
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
-    lastState: {}
+    lastState:
+      terminated:
+        containerID: cri-o://22a8237fd79d8a71dfd7e157b1770eb88fa2d18d1501b58b2fbe2816752a12a4
+        exitCode: 1
+        finishedAt: "2023-03-09T14:24:31Z"
+        message: |
+          ion refused"
+          W0309 14:24:21.728223       1 logging.go:59] [core] [Channel #5 SubChannel #6] grpc: addrConn.createTransport failed to connect to {
+            "Addr": "localhost:2379",
+            "ServerName": "localhost",
+            "Attributes": null,
+            "BalancerAttributes": null,
+            "Type": 0,
+            "Metadata": null
+          }. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:2379: connect: connection refused"
+          W0309 14:24:22.613538       1 logging.go:59] [core] [Channel #3 SubChannel #4] grpc: addrConn.createTransport failed to connect to {
+            "Addr": "localhost:2379",
+            "ServerName": "localhost",
+            "Attributes": null,
+            "BalancerAttributes": null,
+            "Type": 0,
+            "Metadata": null
+          }. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:2379: connect: connection refused"
+          W0309 14:24:28.335660       1 logging.go:59] [core] [Channel #5 SubChannel #6] grpc: addrConn.createTransport failed to connect to {
+            "Addr": "localhost:2379",
+            "ServerName": "localhost",
+            "Attributes": null,
+            "BalancerAttributes": null,
+            "Type": 0,
+            "Metadata": null
+          }. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:2379: connect: connection refused"
+          W0309 14:24:28.361298       1 logging.go:59] [core] [Channel #1 SubChannel #2] grpc: addrConn.createTransport failed to connect to {
+            "Addr": "localhost:2379",
+            "ServerName": "localhost",
+            "Attributes": null,
+            "BalancerAttributes": null,
+            "Type": 0,
+            "Metadata": null
+          }. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:2379: connect: connection refused"
+          W0309 14:24:29.723301       1 logging.go:59] [core] [Channel #3 SubChannel #4] grpc: addrConn.createTransport failed to connect to {
+            "Addr": "localhost:2379",
+            "ServerName": "localhost",
+            "Attributes": null,
+            "BalancerAttributes": null,
+            "Type": 0,
+            "Metadata": null
+          }. Err: connection error: desc = "transport: Error while dialing dial tcp [::1]:2379: connect: connection refused"
+          E0309 14:24:31.590287       1 run.go:74] "command failed" err="context deadline exceeded"
+        reason: Error
+        startedAt: "2023-03-09T14:24:11Z"
     name: kube-apiserver
-    ready: true
-    restartCount: 0
+    ready: false
+    restartCount: 2
     started: true
     state:
       running:
-        startedAt: "2023-03-09T14:19:33Z"
+        startedAt: "2023-03-09T14:24:37Z"
   - containerID: cri-o://404f8adba085e8d9e45af5725c9452350a62a1d78f501863b7e38ae7f7f7dfbc
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
