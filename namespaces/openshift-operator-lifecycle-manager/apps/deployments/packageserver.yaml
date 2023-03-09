@@ -1,10 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    deployment.kubernetes.io/revision: "1"
   creationTimestamp: "2023-03-09T14:29:22Z"
-  generation: 2
+  generation: 3
   labels:
     olm.deployment-spec-hash: 6b97f97b96
     olm.owner: packageserver
@@ -163,10 +161,6 @@ metadata:
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:metadata:
-        f:annotations:
-          .: {}
-          f:deployment.kubernetes.io/revision: {}
       f:status:
         f:conditions:
           .: {}
@@ -203,7 +197,7 @@ metadata:
     kind: ClusterServiceVersion
     name: packageserver
     uid: fa1b9c20-b2c7-42ff-9444-df28f49c3e6f
-  resourceVersion: "14103"
+  resourceVersion: "14125"
   uid: 60bb2626-4e10-403c-8b3c-428e9227e322
 spec:
   progressDeadlineSeconds: 600
