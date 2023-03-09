@@ -246,6 +246,40 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:32:08Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:09Z"
   name: console-operator-5cb6dc7685-cgzvf
   namespace: openshift-console-operator
   ownerReferences:
@@ -255,7 +289,7 @@ metadata:
     kind: ReplicaSet
     name: console-operator-5cb6dc7685
     uid: 7a7ff091-2bce-41fb-a1bf-d16d7bd180e0
-  resourceVersion: "14388"
+  resourceVersion: "14582"
   uid: 3bd52f73-c24d-4e28-aacf-d04fc0002276
 spec:
   containers:
@@ -454,8 +488,47 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:32:03Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:32:03Z"
+    message: 'containers with unready status: [console-operator conversion-webhook-server]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:32:03Z"
+    message: 'containers with unready status: [console-operator conversion-webhook-server]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:02Z"
     status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e611740ca5f095ba0d1311e1ec0b7c3529815b7d641ea23d74294438ed7ae6d8
+    imageID: ""
+    lastState: {}
+    name: console-operator
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e611740ca5f095ba0d1311e1ec0b7c3529815b7d641ea23d74294438ed7ae6d8
+    imageID: ""
+    lastState: {}
+    name: conversion-webhook-server
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.93
   phase: Pending
   qosClass: Burstable
+  startTime: "2023-03-09T14:32:03Z"
