@@ -149,6 +149,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -161,6 +163,8 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -176,7 +180,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:31Z"
+    time: "2023-03-09T14:29:13Z"
   name: prometheus-operator-admission-webhook-b5c544574-qvght
   namespace: openshift-monitoring
   ownerReferences:
@@ -186,7 +190,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-operator-admission-webhook-b5c544574
     uid: e40c1494-47dc-4440-9bf3-73a7f1ea3faa
-  resourceVersion: "5336"
+  resourceVersion: "9187"
   uid: 6be02a99-8e3b-4979-beb8-0c3206b2773d
 spec:
   automountServiceAccountToken: false
@@ -285,12 +289,16 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:31Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:29:08Z"
+    message: 'containers with unready status: [prometheus-operator-admission-webhook]'
+    reason: ContainersNotReady
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:31Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:29:08Z"
+    message: 'containers with unready status: [prometheus-operator-admission-webhook]'
+    reason: ContainersNotReady
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:29Z"
@@ -302,7 +310,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c09c1a8eba7586dfc3bbf97ee7141d33e7a7ec871e025967ff992a642b0c0c3f
     lastState: {}
     name: prometheus-operator-admission-webhook
-    ready: true
+    ready: false
     restartCount: 0
     started: true
     state:
