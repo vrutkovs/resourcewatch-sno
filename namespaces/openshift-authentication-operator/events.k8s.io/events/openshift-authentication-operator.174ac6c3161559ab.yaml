@@ -1,0 +1,55 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:32Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:32Z"
+deprecatedSource:
+  component: cluster-authentication-operator-config-observer-configobserver
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:32Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:32:32Z"
+  name: openshift-authentication-operator.174ac6c3161559ab
+  namespace: openshift-authentication-operator
+  resourceVersion: "15401"
+  uid: 5c4a6570-115a-4026-b174-be9cd562df09
+note: 'Writing updated section ("oauthServer") of observed config: "\u00a0\u00a0map[string]any{\n\u00a0\u00a0\t\"corsAllowedOrigins\":
+  []any{string(`//127\\.0\\.0\\.1(:|$)`), string(\"//localhost(:|$)\")},\n\u00a0\u00a0\t\"oauthConfig\":
+  map[string]any{\n-\u00a0\t\t\"assetPublicURL\": string(\"\"),\n+\u00a0\t\t\"assetPublicURL\":
+  string(\"https://console-openshift-console.apps.ocp.choomba.one\"),\n\u00a0\u00a0\t\t\"loginURL\":       string(\"https://api.ocp.choomba.one:6443\"),\n\u00a0\u00a0\t\t\"templates\":      map[string]any{\"error\":
+  string(\"/var/config/system/secrets/v4-0-config-system-ocp-branding-templ\"...),
+  \"login\": string(\"/var/config/system/secrets/v4-0-config-system-ocp-branding-templ\"...),
+  \"providerSelection\": string(\"/var/config/system/secrets/v4-0-config-system-ocp-branding-templ\"...)},\n\u00a0\u00a0\t\t\"tokenConfig\":    map[string]any{\"accessTokenMaxAgeSeconds\":
+  float64(86400), \"authorizeTokenMaxAgeSeconds\": float64(300)},\n\u00a0\u00a0\t},\n\u00a0\u00a0\t\"serverArguments\":
+  map[string]any{\"audit-log-format\": []any{string(\"json\")}, \"audit-log-maxbackup\":
+  []any{string(\"10\")}, \"audit-log-maxsize\": []any{string(\"100\")}, \"audit-log-path\":
+  []any{string(\"/var/log/oauth-server/audit.log\")}, ...},\n\u00a0\u00a0\t\"servingInfo\":     map[string]any{\"cipherSuites\":
+  []any{string(\"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256\"), string(\"TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256\"),
+  string(\"TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384\"), string(\"TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384\"),
+  ...}, \"minTLSVersion\": string(\"VersionTLS12\"), \"namedCertificates\": []any{map[string]any{\"certFile\":
+  string(\"/var/config/system/secrets/v4-0-config-system-router-certs/apps.\"...),
+  \"keyFile\": string(\"/var/config/system/secrets/v4-0-config-system-router-certs/apps.\"...),
+  \"names\": []any{string(\"*.apps.ocp.choomba.one\")}}}},\n\u00a0\u00a0\t\"volumesToMount\":  map[string]any{\"identityProviders\":
+  string(\"{}\")},\n\u00a0\u00a0}\n"'
+reason: ObservedConfigChanged
+regarding:
+  apiVersion: v1
+  kind: Namespace
+  name: openshift-authentication-operator
+  namespace: openshift-authentication-operator
+type: Normal
