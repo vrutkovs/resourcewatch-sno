@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:30:26Z"
+deprecatedLastTimestamp: "2023-03-09T14:30:26Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:30:26Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:30:26Z"
+  name: kube-controller-manager-vrutkovs-sno.174ac6a5b217bbfd
+  namespace: openshift-kube-controller-manager
+  resourceVersion: "10504"
+  uid: aaeb876e-a95e-44d8-8d8c-4760056f907b
+note: 'Startup probe failed: Get "https://10.0.130.93:10257/healthz": dial tcp 10.0.130.93:10257:
+  connect: connection refused'
+reason: Unhealthy
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-controller-manager}
+  kind: Pod
+  name: kube-controller-manager-vrutkovs-sno
+  namespace: openshift-kube-controller-manager
+  uid: c43d7605b57736fba78d78fadd4b65dd
+type: Warning
