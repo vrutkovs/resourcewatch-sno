@@ -58,14 +58,14 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:53Z"
+    time: "2023-03-09T14:22:54Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "6029"
+  resourceVersion: "6037"
   uid: e3da0174-daf2-4d9e-b232-e5e61f76793b
 spec:
   logLevel: Normal
@@ -141,12 +141,12 @@ status:
     type: InstallerControllerDegraded
   - lastTransitionTime: "2023-03-09T14:22:24Z"
     message: 0 nodes are active; 1 nodes are at revision 0; 0 nodes have achieved
-      new revision 1
+      new revision 2
     reason: ZeroNodesActive
     status: "False"
     type: StaticPodsAvailable
   - lastTransitionTime: "2023-03-09T14:22:24Z"
-    message: 1 nodes are at revision 0; 0 nodes have achieved new revision 1
+    message: 1 nodes are at revision 0; 0 nodes have achieved new revision 2
     status: "True"
     type: NodeInstallerProgressing
   - lastTransitionTime: "2023-03-09T14:22:24Z"
@@ -204,4 +204,5 @@ status:
   nodeStatuses:
   - currentRevision: 0
     nodeName: vrutkovs-sno
+    targetRevision: 2
   readyReplicas: 0
