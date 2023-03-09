@@ -8,7 +8,7 @@ metadata:
     operator.openshift.io/rvs-hash: Sapc_RK9rFrZQJ0M4RBOjSI2EqtQTf8dkGzZwfkaQycMJMHnpUAAdn4N2NHXKWXJ8UevwkonOyHBE_yqci-Oew
     operator.openshift.io/spec-hash: 37b8251ede1721ac63bd6f8d982347a003ad2e1e9d1a59f3b877e3779ff0f39c
   creationTimestamp: "2023-03-09T14:32:33Z"
-  generation: 1
+  generation: 2
   labels:
     app: oauth-openshift
     oauth-openshift-anti-affinity: "true"
@@ -295,10 +295,10 @@ metadata:
     kind: Deployment
     name: oauth-openshift
     uid: 28c413a6-04a7-4cae-8efd-4240ba332c8e
-  resourceVersion: "15445"
+  resourceVersion: "15451"
   uid: cd292924-3c49-4427-846c-440dc342bad4
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: oauth-openshift
