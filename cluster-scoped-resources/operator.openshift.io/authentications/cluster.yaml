@@ -31,18 +31,6 @@ metadata:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        .: {}
-        f:conditions: {}
-        f:oauthAPIServer: {}
-        f:readyReplicas: {}
-    manager: authentication-operator
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:22:03Z"
-  - apiVersion: operator.openshift.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:spec:
         f:observedConfig:
           .: {}
@@ -80,13 +68,25 @@ metadata:
     manager: authentication-operator
     operation: Update
     time: "2023-03-09T14:22:04Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:oauthAPIServer: {}
+        f:readyReplicas: {}
+    manager: authentication-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:05Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3982"
+  resourceVersion: "4139"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -204,5 +204,10 @@ status:
     reason: NoReadyIngressNodes
     status: "False"
     type: ReadyIngressNodesAvailable
+  - lastTransitionTime: "2023-03-09T14:22:04Z"
+    message: secret "v4-0-config-system-router-certs" not found
+    reason: Error
+    status: "True"
+    type: OAuthServerConfigObservationDegraded
   oauthAPIServer: {}
   readyReplicas: 0
