@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:25Z"
+  name: perl
+  namespace: openshift-cluster-samples-operator
+  resourceVersion: "15090"
+  uid: d77f170b-18cc-4b4c-9c43-fb38fa1013e4
