@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:20:07Z"
+deprecatedLastTimestamp: "2023-03-09T14:20:07Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:07Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:20:07Z"
+  name: assisted-installer-controller-vwq9s.174ac615c018a0f5
+  namespace: assisted-installer
+  resourceVersion: "2438"
+  uid: ad27cfe0-3adf-4578-ab10-2f573096e822
+note: Pulling image "quay.io/edge-infrastructure/assisted-installer-controller:latest"
+reason: Pulling
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{assisted-installer-controller}
+  kind: Pod
+  name: assisted-installer-controller-vwq9s
+  namespace: assisted-installer
+  resourceVersion: "2261"
+  uid: bf338db4-906a-4d43-be22-8959360a0341
+type: Normal
