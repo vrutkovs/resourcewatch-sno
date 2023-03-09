@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:35Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:35Z"
+deprecatedSource:
+  component: openshift-cluster-kube-scheduler-operator-status-controller-statussyncer_kube-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:35Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-03-09T14:29:35Z"
+  name: openshift-kube-scheduler-operator.174ac699fc2e7c9f
+  namespace: openshift-kube-scheduler-operator
+  resourceVersion: "10052"
+  uid: 0f2abeac-6d95-4ee4-b15f-c93aae2e0bb5
+note: 'Status for clusteroperator/kube-scheduler changed: Degraded changed from True
+  to False ("NodeControllerDegraded: All master nodes are ready")'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: openshift-kube-scheduler-operator
+  namespace: openshift-kube-scheduler-operator
+  uid: 63ed6034-26ff-494c-bb49-f929f1f6a34d
+type: Normal
