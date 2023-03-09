@@ -8,15 +8,6 @@ metadata:
   - apiVersion: route.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        f:ingress: {}
-    manager: openshift-router
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:46Z"
-  - apiVersion: route.openshift.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:spec:
         f:path: {}
         f:port:
@@ -36,7 +27,7 @@ metadata:
     time: "2023-03-09T14:32:46Z"
   name: prometheus-k8s-federate
   namespace: openshift-monitoring
-  resourceVersion: "15887"
+  resourceVersion: "17008"
   uid: ad3106cc-3e41-41a6-a83d-58425e7366fd
 spec:
   host: prometheus-k8s-federate-openshift-monitoring.apps.ocp.choomba.one
