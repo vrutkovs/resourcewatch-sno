@@ -253,8 +253,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Ready"}:
@@ -278,7 +276,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:38Z"
+    time: "2023-03-09T14:22:41Z"
   name: node-exporter-dj9kl
   namespace: openshift-monitoring
   ownerReferences:
@@ -288,7 +286,7 @@ metadata:
     kind: DaemonSet
     name: node-exporter
     uid: 719fd696-9e6f-4b15-9718-b5de9defc5c1
-  resourceVersion: "5682"
+  resourceVersion: "5825"
   uid: d20f866f-3ce8-41d0-9b9a-7b811162ed48
 spec:
   affinity:
@@ -495,10 +493,8 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:38Z"
-    message: 'containers with incomplete status: [init-textfile]'
-    reason: ContainersNotInitialized
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:22:41Z"
+    status: "True"
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:38Z"
@@ -539,15 +535,20 @@ status:
         reason: PodInitializing
   hostIP: 10.0.130.93
   initContainerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:59eb5e22e7c2b150cb6aab53f3e77aa3c4a785fa42cda7db08ec38cde445cbd9
-    imageID: ""
+  - containerID: cri-o://b5e0f055364339445ba202875fbf75dd603156c0c51e63d1370f7fb9c1bfb130
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:59eb5e22e7c2b150cb6aab53f3e77aa3c4a785fa42cda7db08ec38cde445cbd9
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:59eb5e22e7c2b150cb6aab53f3e77aa3c4a785fa42cda7db08ec38cde445cbd9
     lastState: {}
     name: init-textfile
-    ready: false
+    ready: true
     restartCount: 0
     state:
-      waiting:
-        reason: PodInitializing
+      terminated:
+        containerID: cri-o://b5e0f055364339445ba202875fbf75dd603156c0c51e63d1370f7fb9c1bfb130
+        exitCode: 0
+        finishedAt: "2023-03-09T14:22:41Z"
+        reason: Completed
+        startedAt: "2023-03-09T14:22:41Z"
   phase: Pending
   podIP: 10.0.130.93
   podIPs:
