@@ -39,6 +39,7 @@ metadata:
         f:conditions: {}
         f:extension:
           .: {}
+          f:lastSyncError: {}
           f:master: {}
           f:worker: {}
         f:relatedObjects: {}
@@ -46,7 +47,7 @@ metadata:
     manager: machine-config-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:35Z"
+    time: "2023-03-09T14:29:42Z"
   name: machine-config
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -54,7 +55,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10045"
+  resourceVersion: "10173"
   uid: a2677b7f-e3c9-4360-88a8-42c47852f1d4
 spec: {}
 status:
@@ -78,6 +79,8 @@ status:
     status: "True"
     type: Available
   extension:
+    lastSyncError: 'error required pool master is not ready, retrying. Status: (total:
+      1, ready 1, updated: 1, unavailable: 0, degraded: 0)'
     master: all 1 nodes are at latest configuration rendered-master-b84983722a8f041fcce35c8e28efcb54
     worker: all 0 nodes are at latest configuration rendered-worker-b30c18907c1b1658d47b3a459ef99f7d
   relatedObjects:
