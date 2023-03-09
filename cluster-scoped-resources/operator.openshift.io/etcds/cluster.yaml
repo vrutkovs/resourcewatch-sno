@@ -41,14 +41,14 @@ metadata:
     manager: cluster-etcd-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:23Z"
+    time: "2023-03-09T14:22:26Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "5054"
+  resourceVersion: "5136"
   uid: e3da0174-daf2-4d9e-b232-e5e61f76793b
 spec:
   logLevel: Normal
@@ -106,6 +106,26 @@ status:
     reason: ContentCreationError
     status: "True"
     type: RevisionControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:24Z"
+    message: 'missing required resources: [configmaps: etcd-scripts,restore-etcd-pod,
+      configmaps: etcd-endpoints-0,etcd-metrics-proxy-client-ca-0,etcd-metrics-proxy-serving-ca-0,etcd-peer-client-ca-0,etcd-pod-0,etcd-serving-ca-0,
+      secrets: etcd-all-certs-0]'
+    reason: Error
+    status: "True"
+    type: InstallerControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:24Z"
+    message: 0 nodes are active; 1 nodes are at revision 0; 0 nodes have achieved
+      new revision 1
+    reason: ZeroNodesActive
+    status: "False"
+    type: StaticPodsAvailable
+  - lastTransitionTime: "2023-03-09T14:22:24Z"
+    message: 1 nodes are at revision 0; 0 nodes have achieved new revision 1
+    status: "True"
+    type: NodeInstallerProgressing
+  - lastTransitionTime: "2023-03-09T14:22:24Z"
+    status: "False"
+    type: NodeInstallerDegraded
   latestAvailableRevision: 1
   latestAvailableRevisionReason: ""
   nodeStatuses:
