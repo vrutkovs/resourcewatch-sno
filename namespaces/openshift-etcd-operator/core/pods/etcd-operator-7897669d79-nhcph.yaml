@@ -1,0 +1,311 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2023-03-09T14:19:59Z"
+  generateName: etcd-operator-7897669d79-
+  labels:
+    app: etcd-operator
+    pod-template-hash: 7897669d79
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"e176b871-584e-4519-89f0-3385169cda9c"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"etcd-operator"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPENSHIFT_PROFILE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERAND_IMAGE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_IMAGE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/run/configmaps/config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/configmaps/etcd-ca"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/configmaps/etcd-service-ca"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/secrets/etcd-client"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/secrets/serving-cert"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:runAsUser: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"config"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"etcd-ca"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"etcd-client"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"etcd-service-ca"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"serving-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:optional: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:19:59Z"
+  name: etcd-operator-7897669d79-nhcph
+  namespace: openshift-etcd-operator
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: etcd-operator-7897669d79
+    uid: e176b871-584e-4519-89f0-3385169cda9c
+  resourceVersion: "2298"
+  uid: 9d9aa1ac-3740-4d62-8c9c-a417c1fd40be
+spec:
+  containers:
+  - args:
+    - --config=/var/run/configmaps/config/config.yaml
+    - -v=4
+    - --terminate-on-files=/var/run/secrets/serving-cert/tls.crt
+    - --terminate-on-files=/var/run/secrets/serving-cert/tls.key
+    command:
+    - cluster-etcd-operator
+    - operator
+    env:
+    - name: IMAGE
+      value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    - name: OPERATOR_IMAGE
+      value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2948a32ac6e029f093ecf20b3bcd87105bfa7ec549d01203ab9592ed062ce7fa
+    - name: OPERATOR_IMAGE_VERSION
+      value: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+    - name: OPERAND_IMAGE_VERSION
+      value: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+    - name: OPENSHIFT_PROFILE
+      value: web
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2948a32ac6e029f093ecf20b3bcd87105bfa7ec549d01203ab9592ed062ce7fa
+    imagePullPolicy: IfNotPresent
+    name: etcd-operator
+    ports:
+    - containerPort: 8443
+      name: metrics
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/configmaps/config
+      name: config
+    - mountPath: /var/run/secrets/serving-cert
+      name: serving-cert
+    - mountPath: /var/run/configmaps/etcd-ca
+      name: etcd-ca
+    - mountPath: /var/run/configmaps/etcd-service-ca
+      name: etcd-service-ca
+    - mountPath: /var/run/secrets/etcd-client
+      name: etcd-client
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-68t9r
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 65534
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: etcd-operator
+  serviceAccountName: etcd-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: serving-cert
+    secret:
+      defaultMode: 420
+      optional: true
+      secretName: etcd-operator-serving-cert
+  - configMap:
+      defaultMode: 420
+      name: etcd-operator-config
+    name: config
+  - configMap:
+      defaultMode: 420
+      name: etcd-ca-bundle
+    name: etcd-ca
+  - configMap:
+      defaultMode: 420
+      name: etcd-service-ca-bundle
+    name: etcd-service-ca
+  - name: etcd-client
+    secret:
+      defaultMode: 420
+      secretName: etcd-client
+  - name: kube-api-access-68t9r
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  phase: Pending
+  qosClass: Burstable
