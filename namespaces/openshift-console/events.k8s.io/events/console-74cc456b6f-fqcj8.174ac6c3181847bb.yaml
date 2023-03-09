@@ -1,0 +1,40 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:32:32.374091Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:32Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:32:32Z"
+  name: console-74cc456b6f-fqcj8.174ac6c3181847bb
+  namespace: openshift-console
+  resourceVersion: "15412"
+  uid: cf1ca343-0239-4994-8241-72c624123169
+note: Successfully assigned openshift-console/console-74cc456b6f-fqcj8 to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: console-74cc456b6f-fqcj8
+  namespace: openshift-console
+  resourceVersion: "15400"
+  uid: f2157db7-19c8-4b37-8174-94393f1a4f21
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
