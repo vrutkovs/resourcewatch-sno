@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:23:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:23:00Z"
+deprecatedSource:
+  component: deployment-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:23:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:23:00Z"
+  name: route-controller-manager.174ac63ddd5ed909
+  namespace: openshift-route-controller-manager
+  resourceVersion: "6139"
+  uid: c2abd03e-38aa-4768-92ba-e04ce0fd60d4
+note: Scaled up replica set route-controller-manager-57654f6596 to 1
+reason: ScalingReplicaSet
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: route-controller-manager
+  namespace: openshift-route-controller-manager
+  resourceVersion: "6134"
+  uid: ad9d7992-335d-4009-a433-f1dc108a6d16
+type: Normal
