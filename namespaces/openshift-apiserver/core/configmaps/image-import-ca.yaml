@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:23:02Z"
+  name: image-import-ca
+  namespace: openshift-apiserver
+  resourceVersion: "6256"
+  uid: bf3b3476-ad2a-4365-a811-28d985a34abf
