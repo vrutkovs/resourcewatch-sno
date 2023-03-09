@@ -1,0 +1,41 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:21:51.030542Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:21:51Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:21:51Z"
+  name: ingress-operator-55684fdfd8-f9svb.174ac62dc50a4744
+  namespace: openshift-ingress-operator
+  resourceVersion: "3147"
+  uid: 8c9788b9-aa57-4699-aff8-3c95c0a2fad1
+note: Successfully assigned openshift-ingress-operator/ingress-operator-55684fdfd8-f9svb
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: ingress-operator-55684fdfd8-f9svb
+  namespace: openshift-ingress-operator
+  resourceVersion: "2343"
+  uid: 8586aeeb-8734-4698-adcd-01ee23ee37ca
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
