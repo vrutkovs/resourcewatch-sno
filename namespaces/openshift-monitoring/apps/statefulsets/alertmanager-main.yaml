@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   annotations:
-    prometheus-operator-input-hash: "4439860127776425378"
+    prometheus-operator-input-hash: "10854863394614264087"
   creationTimestamp: "2023-03-09T14:32:51Z"
   generation: 1
   labels:
@@ -443,7 +443,7 @@ metadata:
     kind: Alertmanager
     name: main
     uid: f6381461-22da-446a-a1f6-dec73f2eccf8
-  resourceVersion: "16028"
+  resourceVersion: "16032"
   uid: 98deb091-f51e-4a1f-a4a3-8038c2d7d435
 spec:
   podManagementPolicy: Parallel
