@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:02Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:02Z"
+deprecatedSource:
+  component: node-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:03Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:32:03Z"
+  name: prometheus-operator-admission-webhook-b5c544574-qvght.174ac6bc2f6e7e28
+  namespace: openshift-monitoring
+  resourceVersion: "14083"
+  uid: a2cbef76-1ff5-4525-a3f1-f08352e48a05
+note: Node is not ready
+reason: NodeNotReady
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: prometheus-operator-admission-webhook-b5c544574-qvght
+  namespace: openshift-monitoring
+  resourceVersion: "9197"
+  uid: 6be02a99-8e3b-4979-beb8-0c3206b2773d
+type: Warning
