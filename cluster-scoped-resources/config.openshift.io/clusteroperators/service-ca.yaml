@@ -43,7 +43,7 @@ metadata:
     manager: Go-http-client
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:00Z"
+    time: "2023-03-09T14:22:01Z"
   name: service-ca
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -51,14 +51,15 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3638"
+  resourceVersion: "3719"
   uid: 935201b8-7c3b-44fc-af21-124cf389bf27
 spec: {}
 status:
   conditions:
-  - lastTransitionTime: "2023-03-09T14:22:00Z"
-    reason: NoData
-    status: Unknown
+  - lastTransitionTime: "2023-03-09T14:22:01Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     reason: NoData
