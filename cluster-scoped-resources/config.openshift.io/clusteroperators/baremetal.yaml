@@ -54,19 +54,22 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8786"
+  resourceVersion: "8788"
   uid: e8f87eaa-c972-4e21-aad0-1cb9594b146b
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:28:57Z"
+    reason: WaitingForProvisioningCR
     status: "False"
     type: Progressing
   - lastTransitionTime: "2023-03-09T14:28:57Z"
     status: "False"
     type: Degraded
   - lastTransitionTime: "2023-03-09T14:28:57Z"
-    status: "False"
+    message: Waiting for Provisioning CR on BareMetal Platform
+    reason: WaitingForProvisioningCR
+    status: "True"
     type: Available
   - lastTransitionTime: "2023-03-09T14:28:57Z"
     status: "True"
