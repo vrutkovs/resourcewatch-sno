@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    service.beta.openshift.io/inject-cabundle: "true"
+  creationTimestamp: "2023-03-09T14:22:38Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:service.beta.openshift.io/inject-cabundle: {}
+    manager: operator
+    operation: Update
+    time: "2023-03-09T14:22:38Z"
+  name: telemeter-client-serving-certs-ca-bundle
+  namespace: openshift-monitoring
+  resourceVersion: "5596"
+  uid: 4c2e283f-1714-4529-b4be-1e754a015a6d
