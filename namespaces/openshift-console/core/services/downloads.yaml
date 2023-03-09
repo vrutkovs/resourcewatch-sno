@@ -1,0 +1,54 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    operator.openshift.io/spec-hash: 41d6e4f36bf41ab5be57dec2289f1f8807bbed4b0f642342f213a53bb3ff4d6d
+  creationTimestamp: "2023-03-09T14:32:13Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:operator.openshift.io/spec-hash: {}
+      f:spec:
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":80,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: console
+    operation: Update
+    time: "2023-03-09T14:32:13Z"
+  name: downloads
+  namespace: openshift-console
+  resourceVersion: "14845"
+  uid: c8bc872a-fab2-4222-920d-7fd329ab9127
+spec:
+  clusterIP: 172.30.54.201
+  clusterIPs:
+  - 172.30.54.201
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: console
+    component: downloads
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
