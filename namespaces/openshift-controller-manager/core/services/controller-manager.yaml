@@ -3,7 +3,9 @@ kind: Service
 metadata:
   annotations:
     operator.openshift.io/spec-hash: b3b96749ab82e4de02ef6aa9f0e168108d09315e18d73931c12251d267378e74
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
     service.beta.openshift.io/serving-cert-secret-name: serving-cert
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
   creationTimestamp: "2023-03-09T14:22:00Z"
   labels:
     prometheus: openshift-controller-manager
@@ -35,9 +37,19 @@ metadata:
     manager: cluster-openshift-controller-manager-operator
     operation: Update
     time: "2023-03-09T14:22:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:22:08Z"
   name: controller-manager
   namespace: openshift-controller-manager
-  resourceVersion: "3680"
+  resourceVersion: "4319"
   uid: f8bfa149-80d4-4c1a-b116-f7471f762044
 spec:
   clusterIP: 172.30.189.108
