@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:20:35Z"
+deprecatedLastTimestamp: "2023-03-09T14:20:35Z"
+deprecatedSource:
+  component: daemonset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:35Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:20:35Z"
+  name: network-check-target.174ac61c4827d7ee
+  namespace: openshift-network-diagnostics
+  resourceVersion: "2828"
+  uid: 8aed01ad-3d7a-4e2d-897f-e7bd15f3f7b7
+note: 'Created pod: network-check-target-g7pv6'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: DaemonSet
+  name: network-check-target
+  namespace: openshift-network-diagnostics
+  resourceVersion: "2824"
+  uid: 62454efe-a10a-4b0f-95f3-f94bf8ea8fd3
+type: Normal
