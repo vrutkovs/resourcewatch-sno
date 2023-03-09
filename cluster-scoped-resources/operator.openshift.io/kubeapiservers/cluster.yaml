@@ -111,7 +111,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10940"
+  resourceVersion: "10944"
   uid: c0c6917e-93dd-43c7-a907-55546729e305
 spec:
   logLevel: Normal
@@ -254,11 +254,8 @@ status:
   - lastTransitionTime: "2023-03-09T14:28:56Z"
     status: "False"
     type: VirtualResourceAdmissionError
-  - lastTransitionTime: "2023-03-09T14:28:58Z"
-    message: 'missing required resources: [configmaps: bound-sa-token-signing-certs-1,config-1,etcd-serving-ca-1,kube-apiserver-audit-policies-1,kube-apiserver-cert-syncer-kubeconfig-1,kube-apiserver-pod-1,kubelet-serving-ca-1,sa-token-signing-certs-1,
-      secrets: etcd-client-1,localhost-recovery-client-token-1,localhost-recovery-serving-certkey-1]'
-    reason: Error
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:31:09Z"
+    status: "False"
     type: InstallerControllerDegraded
   - lastTransitionTime: "2023-03-09T14:28:58Z"
     message: 0 nodes are active; 1 nodes are at revision 0; 0 nodes have achieved
