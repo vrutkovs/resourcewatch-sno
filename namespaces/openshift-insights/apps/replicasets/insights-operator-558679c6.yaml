@@ -168,7 +168,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -182,7 +184,7 @@ metadata:
     kind: Deployment
     name: insights-operator
     uid: 3211dbbf-b32c-4b79-a70c-fe2f5c0ee357
-  resourceVersion: "8357"
+  resourceVersion: "8361"
   uid: 676c392a-9c6b-4895-9a89-2500abfa49c6
 spec:
   replicas: 1
@@ -291,5 +293,6 @@ spec:
           optional: true
           secretName: openshift-insights-serving-cert
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
