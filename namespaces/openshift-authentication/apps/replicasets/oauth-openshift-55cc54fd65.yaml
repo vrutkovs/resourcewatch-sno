@@ -8,7 +8,7 @@ metadata:
     operator.openshift.io/rvs-hash: q_WUyiqrIOKjhBW1LV7Edj9281_lFrYastgX3H2w8RFuos1-4l6r_FID10a2TqMV3vxo7WeS-TIOpV6helOSng
     operator.openshift.io/spec-hash: 6d3f34c8631b752841de82c4e9f0fc2813555e6ab4496848bfbff56c4ffd89f8
   creationTimestamp: "2023-03-09T14:33:05Z"
-  generation: 1
+  generation: 2
   labels:
     app: oauth-openshift
     oauth-openshift-anti-affinity: "true"
@@ -276,7 +276,7 @@ metadata:
                   f:secretName: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-09T14:33:05Z"
+    time: "2023-03-09T14:33:06Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -295,10 +295,10 @@ metadata:
     kind: Deployment
     name: oauth-openshift
     uid: 28c413a6-04a7-4cae-8efd-4240ba332c8e
-  resourceVersion: "16286"
+  resourceVersion: "16295"
   uid: 97c55886-f755-4cd7-8710-71d24ef8a077
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: oauth-openshift
