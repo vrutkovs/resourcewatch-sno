@@ -1,0 +1,44 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:26Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:26Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:26Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:26Z"
+  name: downloads-688fb7695c-xkckl.174ac6c1c14af593
+  namespace: openshift-console
+  resourceVersion: "15179"
+  uid: ed094d64-f6aa-485e-83b7-375bfd4d8fd8
+note: "Readiness probe error: Get \"http://10.128.0.73:8080/\": dial tcp 10.128.0.73:8080:
+  connect: connection refused\nbody: \n"
+reason: ProbeError
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{download-server}
+  kind: Pod
+  name: downloads-688fb7695c-xkckl
+  namespace: openshift-console
+  resourceVersion: "14824"
+  uid: 02157f75-7110-43df-87d1-40bcaeaf5461
+type: Warning
