@@ -75,7 +75,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "10144"
+  resourceVersion: "10148"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -120,10 +120,8 @@ status:
     reason: NoUnsupportedConfigOverrides
     status: "True"
     type: UnsupportedConfigOverridesUpgradeable
-  - lastTransitionTime: "2023-03-09T14:22:00Z"
-    message: 'missing required resources: configmaps: client-ca'
-    reason: Error
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:29:39Z"
+    status: "False"
     type: InstallerControllerDegraded
   - lastTransitionTime: "2023-03-09T14:22:00Z"
     message: 0 nodes are active; 1 nodes are at revision 0; 0 nodes have achieved
