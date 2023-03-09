@@ -2,6 +2,9 @@ apiVersion: v1
 kind: Namespace
 metadata:
   annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
     openshift.io/node-selector: ""
     openshift.io/sa.scc.mcs: s0:c9,c4
     openshift.io/sa.scc.supplemental-groups: 1000080000/10000
@@ -40,8 +43,28 @@ metadata:
     manager: cluster-policy-controller
     operation: Update
     time: "2023-03-09T14:14:22Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b7590f0c-c37f-44e0-80d3-7b5df1e0e187"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-09T14:15:03Z"
   name: openshift-kube-apiserver-operator
-  resourceVersion: "507"
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
+  resourceVersion: "1554"
   uid: 109c1e6d-8939-4644-983a-5c812002db7f
 spec:
   finalizers:
