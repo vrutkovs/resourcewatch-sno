@@ -4,7 +4,7 @@ metadata:
   annotations:
     networkoperator.openshift.io/ovn-cluster-initiator: 10.0.130.93
   creationTimestamp: "2023-03-09T14:20:15Z"
-  generation: 13
+  generation: 14
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -69,7 +69,7 @@ metadata:
     operation: Update
     time: "2023-03-09T14:20:33Z"
   name: cluster
-  resourceVersion: "2756"
+  resourceVersion: "2763"
   uid: e6519524-ef16-4ee8-82f1-2faa42688032
 spec:
   clusterNetwork:
@@ -120,7 +120,7 @@ status:
     message: |-
       DaemonSet "/openshift-multus/multus-additional-cni-plugins" is not available (awaiting 1 nodes)
       DaemonSet "/openshift-multus/network-metrics-daemon" is waiting for other operators to become ready
-      DaemonSet "/openshift-ovn-kubernetes/ovnkube-master" is not yet scheduled on any nodes
+      DaemonSet "/openshift-ovn-kubernetes/ovnkube-master" is not available (awaiting 1 nodes)
       Deployment "/openshift-multus/multus-admission-controller" is waiting for other operators to become ready
     reason: Deploying
     status: "True"
