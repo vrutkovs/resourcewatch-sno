@@ -99,7 +99,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "15443"
+  resourceVersion: "15472"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -185,11 +185,9 @@ status:
     reason: AsExpected
     status: "False"
     type: WebhookAuthenticatorControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:22:01Z"
-    message: 'Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443:
-      connect: connection refused'
-    reason: EndpointUnavailable
-    status: "False"
+  - lastTransitionTime: "2023-03-09T14:32:33Z"
+    reason: AsExpected
+    status: "True"
     type: OAuthServerServiceEndpointAccessibleControllerAvailable
   - lastTransitionTime: "2023-03-09T14:22:20Z"
     message: 'Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443:
