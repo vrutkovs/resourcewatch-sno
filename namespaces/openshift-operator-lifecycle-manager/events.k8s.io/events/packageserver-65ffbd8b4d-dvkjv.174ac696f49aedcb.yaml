@@ -1,0 +1,41 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:22Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:22Z"
+deprecatedSource:
+  component: default-scheduler
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:22Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:29:22Z"
+  name: packageserver-65ffbd8b4d-dvkjv.174ac696f49aedcb
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "9806"
+  uid: e877d179-cb84-4cad-8dea-0d9f6173db32
+note: Successfully assigned openshift-operator-lifecycle-manager/packageserver-65ffbd8b4d-dvkjv
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: packageserver-65ffbd8b4d-dvkjv
+  namespace: openshift-operator-lifecycle-manager
+  resourceVersion: "9800"
+  uid: f596f7f8-174a-4dab-9079-9621f7175acc
+type: Normal
