@@ -148,11 +148,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:15:13Z"
+    time: "2023-03-09T14:20:00Z"
   name: cluster-monitoring-operator
   namespace: openshift-monitoring
   ownerReferences:
@@ -161,7 +163,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "2369"
+  resourceVersion: "2370"
   uid: 3fbddbae-91a0-49f3-9def-60d43a684e07
 spec:
   progressDeadlineSeconds: 600
@@ -276,15 +278,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:15:13Z"
     lastUpdateTime: "2023-03-09T14:15:13Z"
-    message: Created new replica set "cluster-monitoring-operator-669bd8685c"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-09T14:15:13Z"
-    lastUpdateTime: "2023-03-09T14:15:13Z"
     message: Deployment does not have minimum availability.
     reason: MinimumReplicasUnavailable
     status: "False"
     type: Available
+  - lastTransitionTime: "2023-03-09T14:15:13Z"
+    lastUpdateTime: "2023-03-09T14:20:00Z"
+    message: ReplicaSet "cluster-monitoring-operator-669bd8685c" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
