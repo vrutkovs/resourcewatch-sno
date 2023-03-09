@@ -65,14 +65,14 @@ metadata:
     manager: cluster-kube-controller-manager-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:11Z"
+    time: "2023-03-09T14:22:12Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4486"
+  resourceVersion: "4538"
   uid: b5866809-2025-4ddf-b687-3992e2169b2b
 spec:
   logLevel: Normal
@@ -179,6 +179,9 @@ status:
     reason: AsExpected
     status: "False"
     type: GuardControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:11Z"
+    status: "False"
+    type: ConfigObservationDegraded
   latestAvailableRevision: 1
   latestAvailableRevisionReason: ""
   nodeStatuses:
