@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:21:58Z"
+deprecatedLastTimestamp: "2023-03-09T14:21:58Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:03Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:22:03Z"
+  name: authentication-operator-5d5d777b7f-n2nh5.174ac62f9bb496ac
+  namespace: openshift-authentication-operator
+  resourceVersion: "3873"
+  uid: 82e8c3ec-1585-4b57-868b-2ae7576acda4
+note: Created container authentication-operator
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{authentication-operator}
+  kind: Pod
+  name: authentication-operator-5d5d777b7f-n2nh5
+  namespace: openshift-authentication-operator
+  resourceVersion: "3126"
+  uid: 11698cce-3094-4d93-8221-8d619bf2ecd8
+type: Normal
