@@ -1,0 +1,41 @@
+action: Binding
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
+eventTime: "2023-03-09T14:22:00.271638Z"
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:00Z"
+  managedFields:
+  - apiVersion: events.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:action: {}
+      f:eventTime: {}
+      f:note: {}
+      f:reason: {}
+      f:regarding: {}
+      f:reportingController: {}
+      f:reportingInstance: {}
+      f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
+  name: csi-snapshot-webhook-54dc7f6b54-zkvrm.174ac62febda41f2
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "3530"
+  uid: f1708cb1-5571-45a6-851c-b20d2591a12f
+note: Successfully assigned openshift-cluster-storage-operator/csi-snapshot-webhook-54dc7f6b54-zkvrm
+  to vrutkovs-sno
+reason: Scheduled
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: csi-snapshot-webhook-54dc7f6b54-zkvrm
+  namespace: openshift-cluster-storage-operator
+  resourceVersion: "3507"
+  uid: 54c31e4a-7309-4e5a-a251-c52cbc91e8e8
+reportingController: default-scheduler
+reportingInstance: default-scheduler-vrutkovs-sno
+type: Normal
