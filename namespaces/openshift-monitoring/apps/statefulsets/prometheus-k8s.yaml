@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   annotations:
-    prometheus-operator-input-hash: "11452111874694898096"
+    prometheus-operator-input-hash: "16148916719062818902"
   creationTimestamp: "2023-03-09T14:32:55Z"
   generation: 1
   labels:
@@ -622,7 +622,7 @@ metadata:
     kind: Prometheus
     name: k8s
     uid: 7a33d1cb-c2e6-4559-b78c-c50369df7494
-  resourceVersion: "16101"
+  resourceVersion: "16107"
   uid: 9ab86299-d85a-42b3-adb1-dc3832bd9a6c
 spec:
   podManagementPolicy: Parallel
