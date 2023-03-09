@@ -231,7 +231,6 @@ metadata:
           .: {}
           f:deployment.kubernetes.io/revision: {}
       f:status:
-        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -251,16 +250,16 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
+        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:28:33Z"
+    time: "2023-03-09T14:32:02Z"
   name: telemeter-client
   namespace: openshift-monitoring
-  resourceVersion: "8120"
+  resourceVersion: "13880"
   uid: 08f8fbb9-af1b-499b-a1db-e123e8a5a590
 spec:
   progressDeadlineSeconds: 600
@@ -567,21 +566,20 @@ spec:
           optional: true
         name: telemeter-trusted-ca-bundle
 status:
-  availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2023-03-09T14:28:33Z"
-    lastUpdateTime: "2023-03-09T14:28:33Z"
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
-    type: Available
   - lastTransitionTime: "2023-03-09T14:28:25Z"
     lastUpdateTime: "2023-03-09T14:28:33Z"
     message: ReplicaSet "telemeter-client-7f96fcfc64" has successfully progressed.
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
+  - lastTransitionTime: "2023-03-09T14:32:02Z"
+    lastUpdateTime: "2023-03-09T14:32:02Z"
+    message: Deployment does not have minimum availability.
+    reason: MinimumReplicasUnavailable
+    status: "False"
+    type: Available
   observedGeneration: 1
-  readyReplicas: 1
   replicas: 1
+  unavailableReplicas: 1
   updatedReplicas: 1
