@@ -1,0 +1,36 @@
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource:
+  component: apiserver
+  host: apiserver-5974c8c8bd-7zfsh
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:24:52Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:involvedObject: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: openshift-apiserver
+    operation: Update
+    time: "2023-03-09T14:24:52Z"
+  name: apiserver-5974c8c8bd-7zfsh.174ac657fa538680
+  namespace: openshift-apiserver
+  resourceVersion: "7307"
+  uid: 0a440487-9145-4e56-af20-3886cdc53c82
+note: Server has stopped listening
+reason: TerminationStoppedServing
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: apiserver-5974c8c8bd-7zfsh
+  namespace: openshift-apiserver
+type: Normal
