@@ -398,7 +398,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:32:09Z"
+    time: "2023-03-09T14:32:10Z"
   name: kube-apiserver-vrutkovs-sno
   namespace: openshift-kube-apiserver
   ownerReferences:
@@ -407,7 +407,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "14579"
+  resourceVersion: "14640"
   uid: 7abd9119-5805-49e6-9da3-7d5e81d1bf97
 spec:
   containers:
@@ -721,13 +721,13 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:03Z"
-    message: 'containers with unready status: [kube-apiserver kube-apiserver-check-endpoints]'
+    message: 'containers with unready status: [kube-apiserver-check-endpoints]'
     reason: ContainersNotReady
     status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:03Z"
-    message: 'containers with unready status: [kube-apiserver kube-apiserver-check-endpoints]'
+    message: 'containers with unready status: [kube-apiserver-check-endpoints]'
     reason: ContainersNotReady
     status: "False"
     type: ContainersReady
@@ -741,7 +741,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
     lastState: {}
     name: kube-apiserver
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
