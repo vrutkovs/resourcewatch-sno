@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedSource:
+  component: oauth-apiserver-status-controller-statussyncer_authentication
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:22:00Z"
+  name: authentication-operator.174ac630105ec0d1
+  namespace: openshift-authentication-operator
+  resourceVersion: "3709"
+  uid: 1e9943d0-8263-43b7-8993-eb7057f4de19
+note: 'Status for clusteroperator/authentication changed: Degraded changed from Unknown
+  to False ("All is well"),Available changed from Unknown to False ("APIServicesAvailable:
+  endpoints \"api\" not found"),Upgradeable changed from Unknown to True ("All is
+  well")'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
+type: Normal
