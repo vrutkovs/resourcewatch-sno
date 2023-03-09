@@ -309,7 +309,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:25:04Z"
+    time: "2023-03-09T14:27:09Z"
   name: apiserver-7f975bf8c6-fc59r
   namespace: openshift-oauth-apiserver
   ownerReferences:
@@ -319,7 +319,7 @@ metadata:
     kind: ReplicaSet
     name: apiserver-7f975bf8c6
     uid: b7001c83-c153-495e-9c27-b54d5e5a0c46
-  resourceVersion: "7441"
+  resourceVersion: "7675"
   uid: 12b283d0-81f3-4ae5-a5f7-9a42e72a57aa
 spec:
   affinity:
@@ -543,11 +543,11 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:25:04Z"
+    lastTransitionTime: "2023-03-09T14:27:09Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:25:04Z"
+    lastTransitionTime: "2023-03-09T14:27:09Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
@@ -555,17 +555,43 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://e850167c265183a969fcb76bfd5c049b0e26090ae0ba2cdf5fe6bf46bf795200
+  - containerID: cri-o://144577d88865685f62644e0123bf946d3e231a30b2ce09415408e4a38b52b6ca
     image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:5a2b43418ecaae507b49eede5bd621226eb19cc148792870139c8c28402fec71
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:5a2b43418ecaae507b49eede5bd621226eb19cc148792870139c8c28402fec71
-    lastState: {}
+    lastState:
+      terminated:
+        containerID: cri-o://e9d27f2cabd567ad5dfdbce96ea2a63aa95fb32a44d4220308fd7287d7406b4a
+        exitCode: 1
+        finishedAt: "2023-03-09T14:26:41Z"
+        message: |
+          41.627140       1 flags.go:64] FLAG: --shutdown-send-retry-after="false"
+          I0309 14:26:41.627153       1 flags.go:64] FLAG: --skip-headers="false"
+          I0309 14:26:41.627166       1 flags.go:64] FLAG: --skip-log-headers="false"
+          I0309 14:26:41.627179       1 flags.go:64] FLAG: --stderrthreshold="2"
+          I0309 14:26:41.627232       1 flags.go:64] FLAG: --storage-backend=""
+          I0309 14:26:41.627251       1 flags.go:64] FLAG: --storage-media-type="application/json"
+          I0309 14:26:41.627265       1 flags.go:64] FLAG: --strict-transport-security-directives="[]"
+          I0309 14:26:41.627279       1 flags.go:64] FLAG: --tls-cert-file="/var/run/secrets/serving-cert/tls.crt"
+          I0309 14:26:41.627292       1 flags.go:64] FLAG: --tls-cipher-suites="[TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256]"
+          I0309 14:26:41.627312       1 flags.go:64] FLAG: --tls-min-version="VersionTLS12"
+          I0309 14:26:41.627326       1 flags.go:64] FLAG: --tls-private-key-file="/var/run/secrets/serving-cert/tls.key"
+          I0309 14:26:41.627339       1 flags.go:64] FLAG: --tls-sni-cert-key="[]"
+          I0309 14:26:41.627354       1 flags.go:64] FLAG: --tracing-config-file=""
+          I0309 14:26:41.627367       1 flags.go:64] FLAG: --v="2"
+          I0309 14:26:41.627380       1 flags.go:64] FLAG: --vmodule=""
+          I0309 14:26:41.627393       1 flags.go:64] FLAG: --watch-cache="true"
+          I0309 14:26:41.627406       1 flags.go:64] FLAG: --watch-cache-sizes="[]"
+          I0309 14:26:41.627992       1 dynamic_serving_content.go:113] "Loaded a new cert/key pair" name="serving-cert::/var/run/secrets/serving-cert/tls.crt::/var/run/secrets/serving-cert/tls.key"
+          E0309 14:26:41.817685       1 run.go:74] "command failed" err="unable to load configmap based request-header-client-ca-file: Get \"https://172.30.0.1:443/api/v1/namespaces/kube-system/configmaps/extension-apiserver-authentication\": dial tcp 172.30.0.1:443: connect: connection refused"
+        reason: Error
+        startedAt: "2023-03-09T14:26:41Z"
     name: oauth-apiserver
     ready: true
-    restartCount: 0
+    restartCount: 3
     started: true
     state:
       running:
-        startedAt: "2023-03-09T14:25:02Z"
+        startedAt: "2023-03-09T14:27:03Z"
   hostIP: 10.0.130.93
   initContainerStatuses:
   - containerID: cri-o://2d5e1583c21a0342f2b0400a9f398bf344258166fce6334b86dc512b0e787365
