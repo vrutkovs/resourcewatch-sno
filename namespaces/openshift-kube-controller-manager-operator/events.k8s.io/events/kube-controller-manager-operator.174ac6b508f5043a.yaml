@@ -1,0 +1,71 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:31:31Z"
+deprecatedLastTimestamp: "2023-03-09T14:31:31Z"
+deprecatedSource:
+  component: kube-controller-manager-operator-status-controller-statussyncer_kube-controller-manager
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:31:31Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-controller-manager-operator
+    operation: Update
+    time: "2023-03-09T14:31:31Z"
+  name: kube-controller-manager-operator.174ac6b508f5043a
+  namespace: openshift-kube-controller-manager-operator
+  resourceVersion: "13055"
+  uid: 1703d3e0-893b-487d-ab87-5c4c2a6c7479
+note: 'Status for clusteroperator/kube-controller-manager changed: Degraded message
+  changed from "GarbageCollectorDegraded: error fetching rules: Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\":
+  dial tcp 172.30.121.173:9091: connect: connection refused" to "GarbageCollectorDegraded:
+  error fetching rules: Get \"https://thanos-querier.openshift-monitoring.svc:9091/api/v1/rules\":
+  dial tcp 172.30.121.173:9091: connect: connection refused\nStaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno
+  container \"cluster-policy-controller\" is terminated: Completed: \nStaticPodsDegraded:
+  pod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager\" is
+  terminated: Completed: \nStaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno
+  container \"kube-controller-manager-cert-syncer\" is terminated: Error: lid for
+  kubernetes, kubernetes.default, kubernetes.default.svc, kubernetes.default.svc.cluster.local,
+  openshift, openshift.default, openshift.default.svc, openshift.default.svc.cluster.local,
+  not localhost-recovery''(may retry after sleeping)\nStaticPodsDegraded: E0309 14:31:27.456320       1
+  event.go:276] Unable to write event: ''&v1.Event{TypeMeta:v1.TypeMeta{Kind:\"\",
+  APIVersion:\"\"}, ObjectMeta:v1.ObjectMeta{Name:\"kube-controller-manager-vrutkovs-sno.174ac6a3904c1c99\",
+  GenerateName:\"\", Namespace:\"openshift-kube-controller-manager\", SelfLink:\"\",
+  UID:\"\", ResourceVersion:\"\", Generation:0, CreationTimestamp:time.Date(1, time.January,
+  1, 0, 0, 0, 0, time.UTC), DeletionTimestamp:<nil>, DeletionGracePeriodSeconds:(*int64)(nil),
+  Labels:map[string]string(nil), Annotations:map[string]string(nil), OwnerReferences:[]v1.OwnerReference(nil),
+  Finalizers:[]string(nil), ManagedFields:[]v1.ManagedFieldsEntry(nil)}, InvolvedObject:v1.ObjectReference{Kind:\"Pod\",
+  Namespace:\"openshift-kube-controller-manager\", Name:\"kube-controller-manager-vrutkovs-sno\",
+  UID:\"\", APIVersion:\"v1\", ResourceVersion:\"\", FieldPath:\"\"}, Reason:\"FastControllerResync\",
+  Message:\"Controller \\\"CertSyncController\\\" resync interval is set to 0s which
+  might lead to client request throttling\", Source:v1.EventSource{Component:\"cert-syncer-certsynccontroller\",
+  Host:\"\"}, FirstTimestamp:time.Date(2023, time.March, 9, 14, 30, 16, 951807129,
+  time.Local), LastTimestamp:time.Date(2023, time.March, 9, 14, 30, 16, 951807129,
+  time.Local), Count:1, Type:\"Warning\", EventTime:time.Date(1, time.January, 1,
+  0, 0, 0, 0, time.UTC), Series:(*v1.EventSeries)(nil), Action:\"\", Related:(*v1.ObjectReference)(nil),
+  ReportingController:\"\", ReportingInstance:\"\"}'': ''Post \"https://localhost:6443/api/v1/namespaces/openshift-kube-controller-manager/events\":
+  x509: certificate is valid for kubernetes, kubernetes.default, kubernetes.default.svc,
+  kubernetes.default.svc.cluster.local, openshift, openshift.default, openshift.default.svc,
+  openshift.default.svc.cluster.local, not localhost-recovery''(may retry after sleeping)\nStaticPodsDegraded:
+  \nStaticPodsDegraded: pod/kube-controller-manager-vrutkovs-sno container \"kube-controller-manager-recovery-controller\"
+  is terminated: Completed: "'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-controller-manager-operator
+  namespace: openshift-kube-controller-manager-operator
+  uid: e487e422-01a3-482f-b66f-1a088257cb61
+type: Normal
