@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:25:48Z"
+deprecatedLastTimestamp: "2023-03-09T14:25:48Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:27:11Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:27:11Z"
+  name: bootstrap-kube-scheduler-vrutkovs-sno.174ac664fdd9af9e
+  namespace: kube-system
+  resourceVersion: "7695"
+  uid: 1dda9bdb-b9b1-4869-b197-6399d4b0dc55
+note: Back-off restarting failed container kube-scheduler in pod bootstrap-kube-scheduler-vrutkovs-sno_kube-system(6f5867e7cd79c22abcfac150232a4c91)
+reason: BackOff
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-scheduler}
+  kind: Pod
+  name: bootstrap-kube-scheduler-vrutkovs-sno
+  namespace: kube-system
+  uid: 6f5867e7cd79c22abcfac150232a4c91
+type: Warning
