@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
+    deployment.kubernetes.io/revision: "1"
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
   creationTimestamp: "2023-03-09T14:15:13Z"
@@ -121,6 +122,27 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:15:13Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:15:13Z"
   name: cluster-monitoring-operator
   namespace: openshift-monitoring
   ownerReferences:
@@ -129,7 +151,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1845"
+  resourceVersion: "1848"
   uid: 3fbddbae-91a0-49f3-9def-60d43a684e07
 spec:
   progressDeadlineSeconds: 600
@@ -240,4 +262,11 @@ spec:
         secret:
           defaultMode: 420
           secretName: cluster-monitoring-operator-tls
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:15:13Z"
+    lastUpdateTime: "2023-03-09T14:15:13Z"
+    message: Created new replica set "cluster-monitoring-operator-669bd8685c"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
