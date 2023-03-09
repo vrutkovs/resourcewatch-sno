@@ -147,7 +147,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-version-operator-c4f49bf9f
     uid: fecf325a-68c4-4c40-90b9-720005fcd7de
-  resourceVersion: "2271"
+  resourceVersion: "2273"
   uid: 73eecfbd-4528-4a41-8f34-97198bb47986
 spec:
   automountServiceAccountToken: false
@@ -209,6 +209,7 @@ spec:
   dnsPolicy: ClusterFirstWithHostNet
   enableServiceLinks: true
   hostNetwork: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -280,5 +281,10 @@ spec:
               fieldPath: metadata.namespace
             path: namespace
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:19:59Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
