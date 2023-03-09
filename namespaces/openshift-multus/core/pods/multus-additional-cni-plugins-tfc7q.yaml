@@ -418,7 +418,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:31Z"
+    time: "2023-03-09T14:20:34Z"
   name: multus-additional-cni-plugins-tfc7q
   namespace: openshift-multus
   ownerReferences:
@@ -428,7 +428,7 @@ metadata:
     kind: DaemonSet
     name: multus-additional-cni-plugins
     uid: f298fd66-e9c3-44fd-bc7d-4aca53e76970
-  resourceVersion: "2722"
+  resourceVersion: "2799"
   uid: c744a2d1-8bd9-4403-8cb9-bed2ff64ddff
 spec:
   affinity:
@@ -803,8 +803,8 @@ status:
   conditions:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:23Z"
-    message: 'containers with incomplete status: [bond-cni-plugin routeoverride-cni
-      whereabouts-cni-bincopy whereabouts-cni]'
+    message: 'containers with incomplete status: [routeoverride-cni whereabouts-cni-bincopy
+      whereabouts-cni]'
     reason: ContainersNotInitialized
     status: "False"
     type: Initialized
@@ -865,15 +865,20 @@ status:
         finishedAt: "2023-03-09T14:20:31Z"
         reason: Completed
         startedAt: "2023-03-09T14:20:31Z"
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ed68da48de609d277c0cbc6d388e49ba322c0d92e636f2d708274855abaa9c6b
-    imageID: ""
+  - containerID: cri-o://33edae8bfa29f726159ab73425a34b813f6f5d9502de8163d20ab3425cff15fd
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ed68da48de609d277c0cbc6d388e49ba322c0d92e636f2d708274855abaa9c6b
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ed68da48de609d277c0cbc6d388e49ba322c0d92e636f2d708274855abaa9c6b
     lastState: {}
     name: bond-cni-plugin
-    ready: false
+    ready: true
     restartCount: 0
     state:
-      waiting:
-        reason: PodInitializing
+      terminated:
+        containerID: cri-o://33edae8bfa29f726159ab73425a34b813f6f5d9502de8163d20ab3425cff15fd
+        exitCode: 0
+        finishedAt: "2023-03-09T14:20:34Z"
+        reason: Completed
+        startedAt: "2023-03-09T14:20:34Z"
   - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:26d23cd931fe8b128262dcabd42370499cd80727283fedaeb552ee236c5a70fd
     imageID: ""
     lastState: {}
