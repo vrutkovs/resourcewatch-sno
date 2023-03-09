@@ -182,7 +182,9 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -196,7 +198,7 @@ metadata:
     kind: Deployment
     name: cluster-baremetal-operator
     uid: b6205b7a-694f-4858-9471-af4328721b53
-  resourceVersion: "8374"
+  resourceVersion: "8379"
   uid: 626ba754-8d21-4c0d-a271-a6a742610587
 spec:
   replicas: 1
@@ -317,5 +319,6 @@ spec:
           name: cluster-baremetal-operator-images
         name: images
 status:
+  fullyLabeledReplicas: 1
   observedGeneration: 1
-  replicas: 0
+  replicas: 1
