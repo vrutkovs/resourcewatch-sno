@@ -3,6 +3,17 @@ kind: Pod
 metadata:
   annotations:
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.9/23"],"mac_address":"0a:58:0a:80:00:09","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.9/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.9"
+          ],
+          "mac": "0a:58:0a:80:00:09",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: restricted-v2
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
   creationTimestamp: "2023-03-09T14:20:00Z"
@@ -218,6 +229,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-09T14:21:51Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:07Z"
   name: ingress-operator-55684fdfd8-f9svb
   namespace: openshift-ingress-operator
   ownerReferences:
@@ -227,7 +248,7 @@ metadata:
     kind: ReplicaSet
     name: ingress-operator-55684fdfd8
     uid: 506330a6-6445-4b53-bc78-33b1bd4aaf6b
-  resourceVersion: "3176"
+  resourceVersion: "4239"
   uid: 8586aeeb-8734-4698-adcd-01ee23ee37ca
 spec:
   containers:
