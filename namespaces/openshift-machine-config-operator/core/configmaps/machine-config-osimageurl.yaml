@@ -1,0 +1,45 @@
+apiVersion: v1
+data:
+  baseOSContainerImage: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2c3e3ebacf2d17163089ff8a1cd84ba51e20d451ff5e3a29e6dc01ae6db5dc90
+  baseOSExtensionsContainerImage: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:23c32dd8835f97938d2c62a2558d4980a55f7c73c2b5cbe21f428056e23852b0
+  osImageURL: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:a69f54b3d53ebc47032a3570992da590ad40638c2be7ef3289a4bee379b21445
+  releaseVersion: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+kind: ConfigMap
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-03-09T14:15:13Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:baseOSContainerImage: {}
+        f:baseOSExtensionsContainerImage: {}
+        f:osImageURL: {}
+        f:releaseVersion: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b7590f0c-c37f-44e0-80d3-7b5df1e0e187"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-09T14:15:13Z"
+  name: machine-config-osimageurl
+  namespace: openshift-machine-config-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
+  resourceVersion: "1836"
+  uid: 41c06a78-9466-4f1d-b431-18fa5eeaf5db
