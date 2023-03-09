@@ -1,6 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
   creationTimestamp: "2023-03-09T14:29:22Z"
   generation: 1
   labels:
@@ -9,6 +11,28 @@ metadata:
     olm.owner.kind: ClusterServiceVersion
     olm.owner.namespace: openshift-operator-lifecycle-manager
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:29:22Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -167,7 +191,7 @@ metadata:
     kind: ClusterServiceVersion
     name: packageserver
     uid: fa1b9c20-b2c7-42ff-9444-df28f49c3e6f
-  resourceVersion: "9793"
+  resourceVersion: "9798"
   uid: 60bb2626-4e10-403c-8b3c-428e9227e322
 spec:
   progressDeadlineSeconds: 600
@@ -296,4 +320,11 @@ spec:
           - key: tls.key
             path: tls.key
           secretName: packageserver-service-cert
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:29:22Z"
+    lastUpdateTime: "2023-03-09T14:29:22Z"
+    message: Created new replica set "packageserver-65ffbd8b4d"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
