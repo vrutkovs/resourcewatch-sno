@@ -74,7 +74,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
             f:reason: {}
             f:status: {}
             f:type: {}
@@ -82,13 +81,13 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
             f:reason: {}
             f:status: {}
             f:type: {}
@@ -104,7 +103,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:15Z"
+    time: "2023-03-09T14:20:16Z"
   name: mtu-prober-ttgwh
   namespace: openshift-network-operator
   ownerReferences:
@@ -114,7 +113,7 @@ metadata:
     kind: Job
     name: mtu-prober
     uid: db7d7933-5153-400a-a756-a012e41bd310
-  resourceVersion: "2491"
+  resourceVersion: "2499"
   uid: 921f35b3-628d-4f61-8af9-88f3a1ba4c45
 spec:
   containers:
@@ -205,18 +204,17 @@ status:
   conditions:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:15Z"
+    reason: PodCompleted
     status: "True"
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:15Z"
-    message: 'containers with unready status: [prober]'
-    reason: ContainersNotReady
+    reason: PodCompleted
     status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:15Z"
-    message: 'containers with unready status: [prober]'
-    reason: ContainersNotReady
+    reason: PodCompleted
     status: "False"
     type: ContainersReady
   - lastProbeTime: null
@@ -224,16 +222,21 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6f674d54345ba8ce675df69db58531f41a18deac6bcaec530b634cc54a38ab2c
-    imageID: ""
+  - containerID: cri-o://883c7d1c1388bf80635434cfcac71819342c43e068a531ad77699fe6b4ac7d08
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6f674d54345ba8ce675df69db58531f41a18deac6bcaec530b634cc54a38ab2c
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6f674d54345ba8ce675df69db58531f41a18deac6bcaec530b634cc54a38ab2c
     lastState: {}
     name: prober
     ready: false
     restartCount: 0
     started: false
     state:
-      waiting:
-        reason: ContainerCreating
+      terminated:
+        containerID: cri-o://883c7d1c1388bf80635434cfcac71819342c43e068a531ad77699fe6b4ac7d08
+        exitCode: 0
+        finishedAt: "2023-03-09T14:20:16Z"
+        reason: Completed
+        startedAt: "2023-03-09T14:20:16Z"
   hostIP: 10.0.130.93
   phase: Pending
   podIP: 10.0.130.93
