@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:29:01Z"
+deprecatedLastTimestamp: "2023-03-09T14:29:01Z"
+deprecatedSource:
+  component: kube-apiserver-operator-cert-rotation-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:29:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-03-09T14:29:02Z"
+  name: kube-apiserver-operator.174ac691e1f829c9
+  namespace: openshift-kube-apiserver-operator
+  resourceVersion: "8887"
+  uid: 92c01b84-f07f-4fd8-a7e8-72419bb1a9e8
+note: Created ConfigMap/kube-control-plane-signer-ca -n openshift-kube-apiserver-operator
+  because it was missing
+reason: ConfigMapCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: kube-apiserver-operator
+  namespace: openshift-kube-apiserver-operator
+  uid: ccdd404a-701f-4fe1-a722-bccfe2055c6f
+type: Normal
