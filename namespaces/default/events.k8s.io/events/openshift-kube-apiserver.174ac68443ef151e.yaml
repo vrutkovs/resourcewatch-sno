@@ -1,0 +1,22 @@
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource:
+  component: apiserver
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:28:02Z"
+  name: openshift-kube-apiserver.174ac68443ef151e
+  namespace: default
+  resourceVersion: "7882"
+  uid: cbb599ba-6a01-400c-9553-ce6eedc07894
+note: readyz=true
+reason: KubeAPIReadyz
+regarding:
+  apiVersion: v1
+  kind: Namespace
+  name: openshift-kube-apiserver
+  namespace: default
+type: Warning
