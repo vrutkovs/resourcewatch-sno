@@ -1,0 +1,42 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:30:10Z"
+deprecatedLastTimestamp: "2023-03-09T14:30:10Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:30:10Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:30:10Z"
+  name: openshift-kube-scheduler-vrutkovs-sno.174ac6a213caea65
+  namespace: openshift-kube-scheduler
+  resourceVersion: "10398"
+  uid: afab1ba3-5cc3-4894-bf96-f100de028e27
+note: Started container wait-for-host-port
+reason: Started
+regarding:
+  apiVersion: v1
+  fieldPath: spec.initContainers{wait-for-host-port}
+  kind: Pod
+  name: openshift-kube-scheduler-vrutkovs-sno
+  namespace: openshift-kube-scheduler
+  uid: 97643d75ddd58e188484778669b9a694
+type: Normal
