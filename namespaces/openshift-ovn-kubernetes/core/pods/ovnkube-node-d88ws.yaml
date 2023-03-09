@@ -489,8 +489,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
@@ -503,8 +501,6 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
-            f:message: {}
-            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -520,7 +516,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:13Z"
+    time: "2023-03-09T14:29:20Z"
   name: ovnkube-node-d88ws
   namespace: openshift-ovn-kubernetes
   ownerReferences:
@@ -530,7 +526,7 @@ metadata:
     kind: DaemonSet
     name: ovnkube-node
     uid: 8b6ad0dc-8208-4b89-9ad9-f44d3b557593
-  resourceVersion: "9205"
+  resourceVersion: "9725"
   uid: db94c2b8-7410-40a2-990d-f725713e7562
 spec:
   affinity:
@@ -1047,16 +1043,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:10Z"
-    message: 'containers with unready status: [ovnkube-node]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:20Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:10Z"
-    message: 'containers with unready status: [ovnkube-node]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2023-03-09T14:29:20Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:33Z"
@@ -1118,7 +1110,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:d554d78ce21caa55b704d4621d7a2ba806dd6321912c36d5cd8b61e9a0934d0b
     lastState: {}
     name: ovnkube-node
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
