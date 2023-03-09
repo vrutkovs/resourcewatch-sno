@@ -1,0 +1,1500 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubectl.kubernetes.io/default-container: etcd
+    kubernetes.io/config.hash: aef6af06d65f86c96769e9f0ed7b2669
+    kubernetes.io/config.mirror: aef6af06d65f86c96769e9f0ed7b2669
+    kubernetes.io/config.seen: "2023-03-09T14:23:29.886037452Z"
+    kubernetes.io/config.source: file
+    target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+  creationTimestamp: "2023-03-09T14:24:39Z"
+  labels:
+    app: etcd
+    etcd: "true"
+    k8s-app: etcd
+    revision: "2"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/default-container: {}
+          f:kubernetes.io/config.hash: {}
+          f:kubernetes.io/config.mirror: {}
+          f:kubernetes.io/config.seen: {}
+          f:kubernetes.io/config.source: {}
+          f:target.workload.openshift.io/management: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:etcd: {}
+          f:k8s-app: {}
+          f:revision: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"08a7e8a3-d906-4471-95ae-d16a1161f435"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"etcd"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"ALL_ETCD_ENDPOINTS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_CIPHER_SUITES"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_DATA_DIR"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_ELECTION_TIMEOUT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_ENABLE_PPROF"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_EXPERIMENTAL_MAX_LEARNERS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_HEARTBEAT_INTERVAL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_INITIAL_CLUSTER_STATE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_QUOTA_BACKEND_BYTES"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_SOCKET_REUSE_ADDRESS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_STATIC_POD_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_API"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_CACERT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_CERT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_ENDPOINTS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_KEY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_vrutkovs_sno_ETCD_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_vrutkovs_sno_ETCD_URL_HOST"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_vrutkovs_sno_IP"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:startupProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes/manifests"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-resources"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/etcd/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"etcd-metrics"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"ALL_ETCD_ENDPOINTS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_CIPHER_SUITES"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_DATA_DIR"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_ELECTION_TIMEOUT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_ENABLE_PPROF"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_EXPERIMENTAL_MAX_LEARNERS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_HEARTBEAT_INTERVAL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_INITIAL_CLUSTER_STATE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_QUOTA_BACKEND_BYTES"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_SOCKET_REUSE_ADDRESS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_STATIC_POD_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_API"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_CACERT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_CERT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_ENDPOINTS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_KEY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_vrutkovs_sno_ETCD_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_vrutkovs_sno_ETCD_URL_HOST"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_vrutkovs_sno_IP"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-resources"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/etcd/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"etcd-readyz"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"ALL_ETCD_ENDPOINTS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_CIPHER_SUITES"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_DATA_DIR"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_ELECTION_TIMEOUT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_ENABLE_PPROF"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_EXPERIMENTAL_MAX_LEARNERS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_HEARTBEAT_INTERVAL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_INITIAL_CLUSTER_STATE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_QUOTA_BACKEND_BYTES"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_SOCKET_REUSE_ADDRESS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_API"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_CACERT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_CERT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_ENDPOINTS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_KEY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_vrutkovs_sno_ETCD_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_vrutkovs_sno_ETCD_URL_HOST"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_vrutkovs_sno_IP"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9980,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/log/etcd/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"etcdctl"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"ALL_ETCD_ENDPOINTS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_CIPHER_SUITES"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_DATA_DIR"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_ELECTION_TIMEOUT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_ENABLE_PPROF"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_EXPERIMENTAL_MAX_LEARNERS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_HEARTBEAT_INTERVAL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_INITIAL_CLUSTER_STATE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_QUOTA_BACKEND_BYTES"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_SOCKET_REUSE_ADDRESS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_STATIC_POD_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_API"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_CACERT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_CERT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_ENDPOINTS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_KEY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_vrutkovs_sno_ETCD_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_vrutkovs_sno_ETCD_URL_HOST"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_vrutkovs_sno_IP"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes/manifests"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-resources"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/etcd/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"etcd-ensure-env-vars"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"ALL_ETCD_ENDPOINTS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_CIPHER_SUITES"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_DATA_DIR"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_ELECTION_TIMEOUT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_ENABLE_PPROF"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_EXPERIMENTAL_MAX_LEARNERS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_HEARTBEAT_INTERVAL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_INITIAL_CLUSTER_STATE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_QUOTA_BACKEND_BYTES"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCD_SOCKET_REUSE_ADDRESS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_API"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_CACERT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_CERT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_ENDPOINTS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ETCDCTL_KEY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_IP"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"NODE_vrutkovs_sno_ETCD_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_vrutkovs_sno_ETCD_URL_HOST"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_vrutkovs_sno_IP"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+          k:{"name":"etcd-resources-copy"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/kubernetes/static-pod-resources"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/usr/local/bin"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"setup"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/log/etcd"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:nodeName: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"cert-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"data-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"log-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"resource-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"static-pod-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"usr-local-bin"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:24:39Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.93"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:24:43Z"
+  name: etcd-vrutkovs-sno
+  namespace: openshift-etcd
+  ownerReferences:
+  - apiVersion: v1
+    controller: true
+    kind: Node
+    name: vrutkovs-sno
+    uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
+  resourceVersion: "7094"
+  uid: 0111b606-d60a-4025-bcaf-b03a5ddb1706
+spec:
+  containers:
+  - command:
+    - /bin/bash
+    - -c
+    - trap TERM INT; sleep infinity & wait
+    env:
+    - name: ALL_ETCD_ENDPOINTS
+      value: https://10.0.130.93:2379
+    - name: ETCDCTL_API
+      value: "3"
+    - name: ETCDCTL_CACERT
+      value: /etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt
+    - name: ETCDCTL_CERT
+      value: /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.crt
+    - name: ETCDCTL_ENDPOINTS
+      value: https://10.0.130.93:2379
+    - name: ETCDCTL_KEY
+      value: /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.key
+    - name: ETCD_CIPHER_SUITES
+      value: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - name: ETCD_DATA_DIR
+      value: /var/lib/etcd
+    - name: ETCD_ELECTION_TIMEOUT
+      value: "1000"
+    - name: ETCD_ENABLE_PPROF
+      value: "true"
+    - name: ETCD_EXPERIMENTAL_MAX_LEARNERS
+      value: "1"
+    - name: ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION
+      value: 200ms
+    - name: ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL
+      value: 5s
+    - name: ETCD_HEARTBEAT_INTERVAL
+      value: "100"
+    - name: ETCD_IMAGE
+      value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    - name: ETCD_INITIAL_CLUSTER_STATE
+      value: existing
+    - name: ETCD_QUOTA_BACKEND_BYTES
+      value: "8589934592"
+    - name: ETCD_SOCKET_REUSE_ADDRESS
+      value: "true"
+    - name: NODE_vrutkovs_sno_ETCD_NAME
+      value: vrutkovs-sno
+    - name: NODE_vrutkovs_sno_ETCD_URL_HOST
+      value: 10.0.130.93
+    - name: NODE_vrutkovs_sno_IP
+      value: 10.0.130.93
+    - name: ETCD_STATIC_POD_VERSION
+      value: "2"
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    imagePullPolicy: IfNotPresent
+    name: etcdctl
+    resources:
+      requests:
+        cpu: 10m
+        memory: 60Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kubernetes/manifests
+      name: static-pod-dir
+    - mountPath: /etc/kubernetes/static-pod-resources
+      name: resource-dir
+    - mountPath: /etc/kubernetes/static-pod-certs
+      name: cert-dir
+    - mountPath: /var/lib/etcd/
+      name: data-dir
+  - command:
+    - /bin/sh
+    - -c
+    - |
+      #!/bin/sh
+      set -euo pipefail
+
+      etcdctl member list || true
+
+      # this has a non-zero return code if the command is non-zero.  If you use an export first, it doesn't and you
+      # will succeed when you should fail.
+      ETCD_INITIAL_CLUSTER=$(discover-etcd-initial-cluster \
+        --cacert=/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt \
+        --cert=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.crt \
+        --key=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.key \
+        --endpoints=${ALL_ETCD_ENDPOINTS} \
+        --data-dir=/var/lib/etcd \
+        --target-peer-url-host=${NODE_vrutkovs_sno_ETCD_URL_HOST} \
+        --target-name=vrutkovs-sno)
+      export ETCD_INITIAL_CLUSTER
+
+      # we cannot use the "normal" port conflict initcontainer because when we upgrade, the existing static pod will never yield,
+      # so we do the detection in etcd container itself.
+      echo -n "Waiting for ports 2379, 2380 and 9978 to be released."
+      time while [ -n "$(ss -Htan '( sport = 2379 or sport = 2380 or sport = 9978 )')" ]; do
+        echo -n "."
+        sleep 1
+      done
+
+      export ETCD_NAME=${NODE_vrutkovs_sno_ETCD_NAME}
+      env | grep ETCD | grep -v NODE
+
+      set -x
+      # See https://etcd.io/docs/v3.4.0/tuning/ for why we use ionice
+      exec nice -n -19 ionice -c2 -n0 etcd \
+        --logger=zap \
+        --log-level=info \
+        --experimental-initial-corrupt-check=true \
+        --initial-advertise-peer-urls=https://${NODE_vrutkovs_sno_IP}:2380 \
+        --cert-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-vrutkovs-sno.crt \
+        --key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-vrutkovs-sno.key \
+        --trusted-ca-file=/etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt \
+        --client-cert-auth=true \
+        --peer-cert-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.crt \
+        --peer-key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.key \
+        --peer-trusted-ca-file=/etc/kubernetes/static-pod-certs/configmaps/etcd-peer-client-ca/ca-bundle.crt \
+        --peer-client-cert-auth=true \
+        --advertise-client-urls=https://${NODE_vrutkovs_sno_IP}:2379 \
+        --listen-client-urls=https://0.0.0.0:2379,unixs://${NODE_vrutkovs_sno_IP}:0 \
+        --listen-peer-urls=https://0.0.0.0:2380 \
+        --metrics=extensive \
+        --listen-metrics-urls=https://0.0.0.0:9978 ||  mv /etc/kubernetes/etcd-backup-dir/etcd-member.yaml /etc/kubernetes/manifests
+    env:
+    - name: ALL_ETCD_ENDPOINTS
+      value: https://10.0.130.93:2379
+    - name: ETCDCTL_API
+      value: "3"
+    - name: ETCDCTL_CACERT
+      value: /etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt
+    - name: ETCDCTL_CERT
+      value: /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.crt
+    - name: ETCDCTL_ENDPOINTS
+      value: https://10.0.130.93:2379
+    - name: ETCDCTL_KEY
+      value: /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.key
+    - name: ETCD_CIPHER_SUITES
+      value: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - name: ETCD_DATA_DIR
+      value: /var/lib/etcd
+    - name: ETCD_ELECTION_TIMEOUT
+      value: "1000"
+    - name: ETCD_ENABLE_PPROF
+      value: "true"
+    - name: ETCD_EXPERIMENTAL_MAX_LEARNERS
+      value: "1"
+    - name: ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION
+      value: 200ms
+    - name: ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL
+      value: 5s
+    - name: ETCD_HEARTBEAT_INTERVAL
+      value: "100"
+    - name: ETCD_IMAGE
+      value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    - name: ETCD_INITIAL_CLUSTER_STATE
+      value: existing
+    - name: ETCD_QUOTA_BACKEND_BYTES
+      value: "8589934592"
+    - name: ETCD_SOCKET_REUSE_ADDRESS
+      value: "true"
+    - name: NODE_vrutkovs_sno_ETCD_NAME
+      value: vrutkovs-sno
+    - name: NODE_vrutkovs_sno_ETCD_URL_HOST
+      value: 10.0.130.93
+    - name: NODE_vrutkovs_sno_IP
+      value: 10.0.130.93
+    - name: ETCD_STATIC_POD_VERSION
+      value: "2"
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 5
+      httpGet:
+        path: healthz
+        port: 9980
+        scheme: HTTPS
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 30
+    name: etcd
+    readinessProbe:
+      failureThreshold: 5
+      httpGet:
+        path: readyz
+        port: 9980
+        scheme: HTTPS
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 30
+    resources:
+      requests:
+        cpu: 300m
+        memory: 600Mi
+    securityContext:
+      privileged: true
+    startupProbe:
+      failureThreshold: 18
+      httpGet:
+        path: readyz
+        port: 9980
+        scheme: HTTPS
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kubernetes/manifests
+      name: static-pod-dir
+    - mountPath: /etc/kubernetes/static-pod-resources
+      name: resource-dir
+    - mountPath: /etc/kubernetes/static-pod-certs
+      name: cert-dir
+    - mountPath: /var/lib/etcd/
+      name: data-dir
+  - command:
+    - /bin/sh
+    - -c
+    - |
+      #!/bin/sh
+      set -euo pipefail
+
+      export ETCD_NAME=${NODE_vrutkovs_sno_ETCD_NAME}
+
+      exec nice -n -18 etcd grpc-proxy start \
+        --endpoints https://${NODE_vrutkovs_sno_ETCD_URL_HOST}:9978 \
+        --metrics-addr https://0.0.0.0:9979 \
+        --listen-addr 127.0.0.1:9977 \
+        --advertise-client-url ""  \
+        --key /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.key \
+        --key-file /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-metrics-vrutkovs-sno.key \
+        --cert /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.crt \
+        --cert-file /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-metrics-vrutkovs-sno.crt \
+        --cacert /etc/kubernetes/static-pod-certs/configmaps/etcd-peer-client-ca/ca-bundle.crt \
+        --trusted-ca-file /etc/kubernetes/static-pod-certs/configmaps/etcd-metrics-proxy-serving-ca/ca-bundle.crt \
+        --listen-cipher-suites TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256
+    env:
+    - name: ALL_ETCD_ENDPOINTS
+      value: https://10.0.130.93:2379
+    - name: ETCDCTL_API
+      value: "3"
+    - name: ETCDCTL_CACERT
+      value: /etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt
+    - name: ETCDCTL_CERT
+      value: /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.crt
+    - name: ETCDCTL_ENDPOINTS
+      value: https://10.0.130.93:2379
+    - name: ETCDCTL_KEY
+      value: /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.key
+    - name: ETCD_CIPHER_SUITES
+      value: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - name: ETCD_DATA_DIR
+      value: /var/lib/etcd
+    - name: ETCD_ELECTION_TIMEOUT
+      value: "1000"
+    - name: ETCD_ENABLE_PPROF
+      value: "true"
+    - name: ETCD_EXPERIMENTAL_MAX_LEARNERS
+      value: "1"
+    - name: ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION
+      value: 200ms
+    - name: ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL
+      value: 5s
+    - name: ETCD_HEARTBEAT_INTERVAL
+      value: "100"
+    - name: ETCD_IMAGE
+      value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    - name: ETCD_INITIAL_CLUSTER_STATE
+      value: existing
+    - name: ETCD_QUOTA_BACKEND_BYTES
+      value: "8589934592"
+    - name: ETCD_SOCKET_REUSE_ADDRESS
+      value: "true"
+    - name: NODE_vrutkovs_sno_ETCD_NAME
+      value: vrutkovs-sno
+    - name: NODE_vrutkovs_sno_ETCD_URL_HOST
+      value: 10.0.130.93
+    - name: NODE_vrutkovs_sno_IP
+      value: 10.0.130.93
+    - name: ETCD_STATIC_POD_VERSION
+      value: "2"
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    imagePullPolicy: IfNotPresent
+    name: etcd-metrics
+    resources:
+      requests:
+        cpu: 40m
+        memory: 200Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kubernetes/static-pod-resources
+      name: resource-dir
+    - mountPath: /etc/kubernetes/static-pod-certs
+      name: cert-dir
+    - mountPath: /var/lib/etcd/
+      name: data-dir
+  - command:
+    - /bin/sh
+    - -c
+    - |
+      #!/bin/sh
+      set -euo pipefail
+
+      exec nice -n -18 cluster-etcd-operator readyz \
+        --target=https://localhost:2379 \
+        --listen-port=9980 \
+        --serving-cert-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-vrutkovs-sno.crt \
+        --serving-key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-serving-vrutkovs-sno.key \
+        --client-cert-file=$(ETCDCTL_CERT) \
+        --client-key-file=$(ETCDCTL_KEY) \
+        --client-cacert-file=$(ETCDCTL_CACERT)
+    env:
+    - name: ALL_ETCD_ENDPOINTS
+      value: https://10.0.130.93:2379
+    - name: ETCDCTL_API
+      value: "3"
+    - name: ETCDCTL_CACERT
+      value: /etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt
+    - name: ETCDCTL_CERT
+      value: /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.crt
+    - name: ETCDCTL_ENDPOINTS
+      value: https://10.0.130.93:2379
+    - name: ETCDCTL_KEY
+      value: /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.key
+    - name: ETCD_CIPHER_SUITES
+      value: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - name: ETCD_DATA_DIR
+      value: /var/lib/etcd
+    - name: ETCD_ELECTION_TIMEOUT
+      value: "1000"
+    - name: ETCD_ENABLE_PPROF
+      value: "true"
+    - name: ETCD_EXPERIMENTAL_MAX_LEARNERS
+      value: "1"
+    - name: ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION
+      value: 200ms
+    - name: ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL
+      value: 5s
+    - name: ETCD_HEARTBEAT_INTERVAL
+      value: "100"
+    - name: ETCD_IMAGE
+      value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    - name: ETCD_INITIAL_CLUSTER_STATE
+      value: existing
+    - name: ETCD_QUOTA_BACKEND_BYTES
+      value: "8589934592"
+    - name: ETCD_SOCKET_REUSE_ADDRESS
+      value: "true"
+    - name: NODE_vrutkovs_sno_ETCD_NAME
+      value: vrutkovs-sno
+    - name: NODE_vrutkovs_sno_ETCD_URL_HOST
+      value: 10.0.130.93
+    - name: NODE_vrutkovs_sno_IP
+      value: 10.0.130.93
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2948a32ac6e029f093ecf20b3bcd87105bfa7ec549d01203ab9592ed062ce7fa
+    imagePullPolicy: IfNotPresent
+    name: etcd-readyz
+    ports:
+    - containerPort: 9980
+      hostPort: 9980
+      name: readyz
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/log/etcd/
+      name: log-dir
+    - mountPath: /etc/kubernetes/static-pod-certs
+      name: cert-dir
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  initContainers:
+  - command:
+    - /bin/sh
+    - -c
+    - |
+      #!/bin/sh
+      echo -n "Fixing etcd log permissions."
+      chmod 0700 /var/log/etcd && touch /var/log/etcd/etcd-health-probe.log && chmod 0600 /var/log/etcd/*
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    imagePullPolicy: IfNotPresent
+    name: setup
+    resources:
+      requests:
+        cpu: 5m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/log/etcd
+      name: log-dir
+  - command:
+    - /bin/sh
+    - -c
+    - |
+      #!/bin/sh
+      set -euo pipefail
+
+      : "${NODE_vrutkovs_sno_ETCD_URL_HOST?not set}"
+      : "${NODE_vrutkovs_sno_ETCD_NAME?not set}"
+      : "${NODE_vrutkovs_sno_IP?not set}"
+
+      # check for ipv4 addresses as well as ipv6 addresses with extra square brackets
+      if [[ "${NODE_vrutkovs_sno_IP}" != "${NODE_IP}" && "${NODE_vrutkovs_sno_IP}" != "[${NODE_IP}]" ]]; then
+        # echo the error message to stderr
+        echo "Expected node IP to be ${NODE_IP} got ${NODE_vrutkovs_sno_IP}" >&2
+        exit 1
+      fi
+
+      # check for ipv4 addresses as well as ipv6 addresses with extra square brackets
+      if [[ "${NODE_vrutkovs_sno_ETCD_URL_HOST}" != "${NODE_IP}" && "${NODE_vrutkovs_sno_ETCD_URL_HOST}" != "[${NODE_IP}]" ]]; then
+        # echo the error message to stderr
+        echo "Expected etcd url host to be ${NODE_IP} got ${NODE_vrutkovs_sno_ETCD_URL_HOST}" >&2
+        exit 1
+      fi
+    env:
+    - name: ALL_ETCD_ENDPOINTS
+      value: https://10.0.130.93:2379
+    - name: ETCDCTL_API
+      value: "3"
+    - name: ETCDCTL_CACERT
+      value: /etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt
+    - name: ETCDCTL_CERT
+      value: /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.crt
+    - name: ETCDCTL_ENDPOINTS
+      value: https://10.0.130.93:2379
+    - name: ETCDCTL_KEY
+      value: /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-vrutkovs-sno.key
+    - name: ETCD_CIPHER_SUITES
+      value: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - name: ETCD_DATA_DIR
+      value: /var/lib/etcd
+    - name: ETCD_ELECTION_TIMEOUT
+      value: "1000"
+    - name: ETCD_ENABLE_PPROF
+      value: "true"
+    - name: ETCD_EXPERIMENTAL_MAX_LEARNERS
+      value: "1"
+    - name: ETCD_EXPERIMENTAL_WARNING_APPLY_DURATION
+      value: 200ms
+    - name: ETCD_EXPERIMENTAL_WATCH_PROGRESS_NOTIFY_INTERVAL
+      value: 5s
+    - name: ETCD_HEARTBEAT_INTERVAL
+      value: "100"
+    - name: ETCD_IMAGE
+      value: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    - name: ETCD_INITIAL_CLUSTER_STATE
+      value: existing
+    - name: ETCD_QUOTA_BACKEND_BYTES
+      value: "8589934592"
+    - name: ETCD_SOCKET_REUSE_ADDRESS
+      value: "true"
+    - name: NODE_vrutkovs_sno_ETCD_NAME
+      value: vrutkovs-sno
+    - name: NODE_vrutkovs_sno_ETCD_URL_HOST
+      value: 10.0.130.93
+    - name: NODE_vrutkovs_sno_IP
+      value: 10.0.130.93
+    - name: NODE_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.podIP
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    imagePullPolicy: IfNotPresent
+    name: etcd-ensure-env-vars
+    resources:
+      requests:
+        cpu: 10m
+        memory: 60Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+  - command:
+    - /bin/sh
+    - -c
+    - |
+      #!/bin/sh
+      set -euo pipefail
+
+      rm -f $(grep -l '^### Created by cluster-etcd-operator' /usr/local/bin/*)
+      cp -p /etc/kubernetes/static-pod-certs/configmaps/etcd-scripts/*.sh /usr/local/bin
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    imagePullPolicy: IfNotPresent
+    name: etcd-resources-copy
+    resources:
+      requests:
+        cpu: 10m
+        memory: 60Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kubernetes/static-pod-resources
+      name: resource-dir
+    - mountPath: /etc/kubernetes/static-pod-certs
+      name: cert-dir
+    - mountPath: /usr/local/bin
+      name: usr-local-bin
+  nodeName: vrutkovs-sno
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/kubernetes/manifests
+      type: ""
+    name: static-pod-dir
+  - hostPath:
+      path: /etc/kubernetes/static-pod-resources/etcd-pod-2
+      type: ""
+    name: resource-dir
+  - hostPath:
+      path: /etc/kubernetes/static-pod-resources/etcd-certs
+      type: ""
+    name: cert-dir
+  - hostPath:
+      path: /var/lib/etcd
+      type: ""
+    name: data-dir
+  - hostPath:
+      path: /usr/local/bin
+      type: ""
+    name: usr-local-bin
+  - hostPath:
+      path: /var/log/etcd
+      type: ""
+    name: log-dir
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:24:11Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:24:42Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:24:42Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:23:29Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://5923482606f3274ffb8318f86da898fd0b1298c34dfd0d79fe9d3fb3b9b28b02
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    lastState: {}
+    name: etcd
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-09T14:24:22Z"
+  - containerID: cri-o://94872ba660454aec7878705ea21984000efc25ddeaa7f2f76b6b2723397d3e3c
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    lastState: {}
+    name: etcd-metrics
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-09T14:24:22Z"
+  - containerID: cri-o://ea4a9da0945b5e9c7122e68afb0dd46df3e14b96ea19e7cc485d507a7b2d5bae
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2948a32ac6e029f093ecf20b3bcd87105bfa7ec549d01203ab9592ed062ce7fa
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:2948a32ac6e029f093ecf20b3bcd87105bfa7ec549d01203ab9592ed062ce7fa
+    lastState: {}
+    name: etcd-readyz
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-09T14:24:22Z"
+  - containerID: cri-o://ea674abe2878032a21511eb69ec376c4a6bff07fb94327559c285f09bc206566
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    lastState: {}
+    name: etcdctl
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-09T14:24:22Z"
+  hostIP: 10.0.130.93
+  initContainerStatuses:
+  - containerID: cri-o://c3e0e9e9ccbcdde0fc4063fd68a661b16f48293f2ab69a518fcca7b77d204aed
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    lastState: {}
+    name: setup
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: cri-o://c3e0e9e9ccbcdde0fc4063fd68a661b16f48293f2ab69a518fcca7b77d204aed
+        exitCode: 0
+        finishedAt: "2023-03-09T14:23:43Z"
+        reason: Completed
+        startedAt: "2023-03-09T14:23:43Z"
+  - containerID: cri-o://fd31a8e06d4684aa9109da50fc92515717a440fdc841ce1b49130859b8f15126
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    lastState: {}
+    name: etcd-ensure-env-vars
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: cri-o://fd31a8e06d4684aa9109da50fc92515717a440fdc841ce1b49130859b8f15126
+        exitCode: 0
+        finishedAt: "2023-03-09T14:23:56Z"
+        reason: Completed
+        startedAt: "2023-03-09T14:23:56Z"
+  - containerID: cri-o://dbb9683c1db86580c285de1768f106d5d436f1a967bf58fbf89a2a875b1ef5e7
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    lastState: {}
+    name: etcd-resources-copy
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: cri-o://dbb9683c1db86580c285de1768f106d5d436f1a967bf58fbf89a2a875b1ef5e7
+        exitCode: 0
+        finishedAt: "2023-03-09T14:24:10Z"
+        reason: Completed
+        startedAt: "2023-03-09T14:24:10Z"
+  phase: Running
+  podIP: 10.0.130.93
+  podIPs:
+  - ip: 10.0.130.93
+  qosClass: Burstable
+  startTime: "2023-03-09T14:23:29Z"
