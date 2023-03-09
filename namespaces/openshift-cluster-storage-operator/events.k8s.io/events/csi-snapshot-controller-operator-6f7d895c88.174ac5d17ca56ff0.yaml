@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:15:14Z"
 deprecatedLastTimestamp: "2023-03-09T14:15:14Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:15:14Z"
   name: csi-snapshot-controller-operator-6f7d895c88.174ac5d17ca56ff0
   namespace: openshift-cluster-storage-operator
-  resourceVersion: "1897"
+  resourceVersion: "1898"
   uid: e5de3779-2998-4245-a6ac-9173b565cc9b
 note: 'Error creating: pods "csi-snapshot-controller-operator-6f7d895c88-" is forbidden:
   autoscaling.openshift.io/ManagementCPUsOverride the cluster does not have any nodes'
