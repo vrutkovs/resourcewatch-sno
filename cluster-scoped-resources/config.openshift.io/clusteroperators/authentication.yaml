@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:24:51Z"
+    time: "2023-03-09T14:24:58Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,14 +52,14 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "7299"
+  resourceVersion: "7380"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:24:44Z"
     message: |-
-      APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable for apiserver.openshift-oauth-apiserver ()
+      APIServerDeploymentDegraded: 1 of 1 requested instances are unavailable for apiserver.openshift-oauth-apiserver (2 containers are waiting in pending apiserver-7f975bf8c6-fc59r pod)
       IngressStateEndpointsDegraded: No subsets found for the endpoints of oauth-server
       OAuthServerServiceEndpointAccessibleControllerDegraded: Get "https://172.30.70.249:443/healthz": dial tcp 172.30.70.249:443: connect: connection refused
       OAuthServerServiceEndpointsEndpointAccessibleControllerDegraded: oauth service endpoints are not ready
