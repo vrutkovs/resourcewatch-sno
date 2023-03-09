@@ -2,7 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
     service.beta.openshift.io/serving-cert-secret-name: prometheus-operator-tls
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
   creationTimestamp: "2023-03-09T14:22:32Z"
   labels:
     app.kubernetes.io/component: controller
@@ -40,9 +42,19 @@ metadata:
     manager: operator
     operation: Update
     time: "2023-03-09T14:22:32Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:22:32Z"
   name: prometheus-operator
   namespace: openshift-monitoring
-  resourceVersion: "5373"
+  resourceVersion: "5407"
   uid: a213d6a4-11e0-44cd-9e20-b3760312c528
 spec:
   clusterIP: None
