@@ -6,6 +6,8 @@ metadata:
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
     service.alpha.openshift.io/serving-cert-secret-name: machine-api-controllers-tls
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1678371721
   creationTimestamp: "2023-03-09T14:28:58Z"
   labels:
     k8s-app: controller
@@ -54,6 +56,16 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:28:58Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-03-09T14:28:58Z"
   name: machine-api-controllers
   namespace: openshift-machine-api
   ownerReferences:
@@ -62,7 +74,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8798"
+  resourceVersion: "8820"
   uid: b638e834-6033-4064-a74d-5cfbab7043a2
 spec:
   clusterIP: 172.30.74.158
