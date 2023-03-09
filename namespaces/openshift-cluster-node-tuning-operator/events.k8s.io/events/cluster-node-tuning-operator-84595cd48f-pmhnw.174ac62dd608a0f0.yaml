@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:21:51Z"
+deprecatedLastTimestamp: "2023-03-09T14:21:51Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:21:51Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:21:51Z"
+  name: cluster-node-tuning-operator-84595cd48f-pmhnw.174ac62dd608a0f0
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "3189"
+  uid: 3c7dfdba-c8c5-44c8-9f18-a0af408339ba
+note: 'MountVolume.SetUp failed for volume "apiservice-cert" : secret "performance-addon-operator-webhook-cert"
+  not found'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: cluster-node-tuning-operator-84595cd48f-pmhnw
+  namespace: openshift-cluster-node-tuning-operator
+  resourceVersion: "3127"
+  uid: 5eb0d1b7-2449-4479-93aa-eda071f39d77
+type: Warning
