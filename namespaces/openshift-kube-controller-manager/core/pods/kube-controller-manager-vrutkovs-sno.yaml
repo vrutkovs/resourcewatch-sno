@@ -341,7 +341,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "10505"
+  resourceVersion: "10507"
   uid: b26a2787-debb-4287-8897-76b5d75deb45
 spec:
   containers:
@@ -579,13 +579,13 @@ status:
     type: Initialized
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:30:15Z"
-    message: 'containers with unready status: [kube-controller-manager cluster-policy-controller]'
+    message: 'containers with unready status: [kube-controller-manager]'
     reason: ContainersNotReady
     status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:30:15Z"
-    message: 'containers with unready status: [kube-controller-manager cluster-policy-controller]'
+    message: 'containers with unready status: [kube-controller-manager]'
     reason: ContainersNotReady
     status: "False"
     type: ContainersReady
@@ -599,7 +599,7 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4a17a5edd33292beb6a274a3d484c8464a8f9291058107b4cb2cf6181058b1cd
     lastState: {}
     name: cluster-policy-controller
-    ready: false
+    ready: true
     restartCount: 0
     started: true
     state:
