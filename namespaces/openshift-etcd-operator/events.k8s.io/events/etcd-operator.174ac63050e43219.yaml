@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 2
+deprecatedCount: 3
 deprecatedFirstTimestamp: "2023-03-09T14:22:01Z"
-deprecatedLastTimestamp: "2023-03-09T14:22:22Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:38Z"
 deprecatedSource:
   component: openshift-cluster-etcd-operator-config-observer-configobserver
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-etcd-operator
     operation: Update
-    time: "2023-03-09T14:22:22Z"
+    time: "2023-03-09T14:22:38Z"
   name: etcd-operator.174ac63050e43219
   namespace: openshift-etcd-operator
-  resourceVersion: "5012"
+  resourceVersion: "5594"
   uid: b8e6e691-8ad0-410e-8f4b-c5da5b80dabb
 note: "Writing updated observed config:   map[string]any{\n+ \t\"controlPlane\": map[string]any{\"replicas\":
   float64(1)},\n+ \t\"servingInfo\": map[string]any{\n+ \t\t\"cipherSuites\": []any{\n+
