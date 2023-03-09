@@ -210,6 +210,54 @@ metadata:
     manager: kubelet
     operation: Update
     time: "2023-03-09T14:30:10Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.93"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:30:10Z"
   name: openshift-kube-scheduler-vrutkovs-sno
   namespace: openshift-kube-scheduler
   ownerReferences:
@@ -218,7 +266,7 @@ metadata:
     kind: Node
     name: vrutkovs-sno
     uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-  resourceVersion: "10388"
+  resourceVersion: "10402"
   uid: f523c4a2-c950-4cb7-9a84-cf5844b890e8
 spec:
   containers:
@@ -381,5 +429,79 @@ spec:
       type: ""
     name: cert-dir
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:30:10Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:30:09Z"
+    message: 'containers with unready status: [kube-scheduler kube-scheduler-cert-syncer
+      kube-scheduler-recovery-controller]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:30:09Z"
+    message: 'containers with unready status: [kube-scheduler kube-scheduler-cert-syncer
+      kube-scheduler-recovery-controller]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:30:09Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
+    imageID: ""
+    lastState: {}
+    name: kube-scheduler
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: PodInitializing
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
+    imageID: ""
+    lastState: {}
+    name: kube-scheduler-cert-syncer
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: PodInitializing
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:e115ee30638812d85a52b26b710bee54b02113e241f97bfd18c40817bf9a083b
+    imageID: ""
+    lastState: {}
+    name: kube-scheduler-recovery-controller
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: PodInitializing
+  hostIP: 10.0.130.93
+  initContainerStatuses:
+  - containerID: cri-o://d9629a9909b76f44470d199594582dace6e2b6edec35d2e445131a48a163855a
+    image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
+    imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
+    lastState: {}
+    name: wait-for-host-port
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: cri-o://d9629a9909b76f44470d199594582dace6e2b6edec35d2e445131a48a163855a
+        exitCode: 0
+        finishedAt: "2023-03-09T14:30:10Z"
+        reason: Completed
+        startedAt: "2023-03-09T14:30:10Z"
   phase: Pending
+  podIP: 10.0.130.93
+  podIPs:
+  - ip: 10.0.130.93
   qosClass: Burstable
+  startTime: "2023-03-09T14:30:09Z"
