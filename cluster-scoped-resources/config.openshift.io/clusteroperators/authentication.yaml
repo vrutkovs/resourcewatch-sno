@@ -44,7 +44,7 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:34:58Z"
+    time: "2023-03-09T14:35:05Z"
   name: authentication
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16953"
+  resourceVersion: "17048"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
@@ -124,3 +124,5 @@ status:
     version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
   - name: oauth-apiserver
     version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+  - name: oauth-openshift
+    version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest_openshift
