@@ -52,7 +52,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "3807"
+  resourceVersion: "3832"
   uid: a294aaf5-989f-4f25-9058-2331cada925b
 spec: {}
 status:
@@ -72,7 +72,8 @@ status:
     message: |-
       APIServicesAvailable: endpoints "api" not found
       OAuthServerServiceEndpointAccessibleControllerAvailable: service "oauth-openshift" not found
-    reason: APIServices_ErrorCheckingPrecondition::OAuthServerServiceEndpointAccessibleController_ResourceNotFound
+      OAuthServerServiceEndpointsEndpointAccessibleControllerAvailable: endpoints "oauth-openshift" not found
+    reason: APIServices_ErrorCheckingPrecondition::OAuthServerServiceEndpointAccessibleController_ResourceNotFound::OAuthServerServiceEndpointsEndpointAccessibleController_ResourceNotFound
     status: "False"
     type: Available
   - lastTransitionTime: "2023-03-09T14:22:00Z"
