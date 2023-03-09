@@ -7,7 +7,7 @@ metadata:
     include.release.openshift.io/single-node-developer: "true"
     release.openshift.io/create-only: "true"
   creationTimestamp: "2023-03-09T14:15:16Z"
-  generation: 2
+  generation: 3
   managedFields:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
@@ -30,6 +30,21 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:15:16Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:latestAvailableRevision: {}
+        f:latestAvailableRevisionReason: {}
+        f:nodeStatuses: {}
+        f:readyReplicas: {}
+        f:serviceAccountIssuers: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:16Z"
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -76,6 +91,9 @@ metadata:
             f:service-account-issuer: {}
             f:service-account-jwks-uri: {}
             f:shutdown-delay-duration: {}
+          f:authConfig:
+            .: {}
+            f:oauthMetadataFile: {}
           f:corsAllowedOrigins: {}
           f:gracefulTerminationDuration: {}
           f:servicesSubnet: {}
@@ -89,29 +107,14 @@ metadata:
         f:unsupportedConfigOverrides: {}
     manager: cluster-kube-apiserver-operator
     operation: Update
-    time: "2023-03-09T14:29:28Z"
-  - apiVersion: operator.openshift.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        .: {}
-        f:conditions: {}
-        f:latestAvailableRevision: {}
-        f:latestAvailableRevisionReason: {}
-        f:nodeStatuses: {}
-        f:readyReplicas: {}
-        f:serviceAccountIssuers: {}
-    manager: cluster-kube-apiserver-operator
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:16Z"
+    time: "2023-03-09T14:32:19Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "14928"
+  resourceVersion: "14983"
   uid: c0c6917e-93dd-43c7-a907-55546729e305
 spec:
   logLevel: Normal
@@ -162,6 +165,8 @@ spec:
       - https://api-int.ocp.choomba.one:6443/openid/v1/jwks
       shutdown-delay-duration:
       - 0s
+    authConfig:
+      oauthMetadataFile: /etc/kubernetes/static-pod-resources/configmaps/oauth-metadata/oauthMetadata
     corsAllowedOrigins:
     - //127\.0\.0\.1(:|$)
     - //localhost(:|$)
