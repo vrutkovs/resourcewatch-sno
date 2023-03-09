@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:05Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:05Z"
+deprecatedSource:
+  component: oauth-apiserver-openshiftauthenticatorcertrequester
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:05Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:22:05Z"
+  name: authentication-operator.174ac63109c0c5c2
+  namespace: openshift-authentication-operator
+  resourceVersion: "4078"
+  uid: 94c78898-8485-4c09-b068-7d559b465133
+note: 'No valid client certificate for OpenShiftAuthenticatorCertRequester is found:
+  unable to parse certificate: data does not contain any valid RSA or ECDSA certificates'
+reason: NoValidCertificateFound
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
+type: Normal
