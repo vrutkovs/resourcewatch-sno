@@ -1,0 +1,40 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:20:23Z"
+deprecatedLastTimestamp: "2023-03-09T14:20:23Z"
+deprecatedSource:
+  component: daemonset-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:20:23Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-03-09T14:20:23Z"
+  name: multus.174ac6194fbb5b07
+  namespace: openshift-multus
+  resourceVersion: "2573"
+  uid: 603a4e52-4a16-49b8-9345-b281ff29803e
+note: 'Created pod: multus-lj5sd'
+reason: SuccessfulCreate
+regarding:
+  apiVersion: apps/v1
+  kind: DaemonSet
+  name: multus
+  namespace: openshift-multus
+  resourceVersion: "2566"
+  uid: 5132994f-a471-445f-8f61-19331bc66668
+type: Normal
