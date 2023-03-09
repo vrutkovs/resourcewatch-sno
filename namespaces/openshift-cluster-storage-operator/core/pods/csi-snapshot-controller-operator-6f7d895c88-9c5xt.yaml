@@ -90,6 +90,24 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:20:01Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:01Z"
   name: csi-snapshot-controller-operator-6f7d895c88-9c5xt
   namespace: openshift-cluster-storage-operator
   ownerReferences:
@@ -99,7 +117,7 @@ metadata:
     kind: ReplicaSet
     name: csi-snapshot-controller-operator-6f7d895c88
     uid: df4e4a3f-c794-44ac-bcba-aa2afa912a40
-  resourceVersion: "2412"
+  resourceVersion: "2415"
   uid: 5b9b5dc9-f3f3-4d99-8d75-9b1a5e511a26
 spec:
   containers:
@@ -198,5 +216,13 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:01Z"
+    message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+      }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
+    reason: Unschedulable
+    status: "False"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
