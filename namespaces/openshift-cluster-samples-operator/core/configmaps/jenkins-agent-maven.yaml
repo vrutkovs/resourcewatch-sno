@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:25Z"
+  name: jenkins-agent-maven
+  namespace: openshift-cluster-samples-operator
+  resourceVersion: "15107"
+  uid: 2190248c-a284-4cb7-87f8-349b497419fb
