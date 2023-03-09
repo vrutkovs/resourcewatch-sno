@@ -4,6 +4,17 @@ metadata:
   annotations:
     cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
     k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.60/23"],"mac_address":"0a:58:0a:80:00:3c","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.60/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.60"
+          ],
+          "mac": "0a:58:0a:80:00:3c",
+          "default": true,
+          "dns": {}
+      }]
     openshift.io/scc: restricted-v2
     operatorframework.io/managed-by: marketplace-operator
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
@@ -167,6 +178,16 @@ metadata:
     manager: vrutkovs-sno
     operation: Update
     time: "2023-03-09T14:29:16Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:29:17Z"
   name: redhat-operators-jdbrx
   namespace: openshift-marketplace
   ownerReferences:
@@ -176,7 +197,7 @@ metadata:
     kind: CatalogSource
     name: redhat-operators
     uid: 0d01f0d0-d14a-433d-aa2b-f890372ecc3c
-  resourceVersion: "9534"
+  resourceVersion: "9610"
   uid: 24c18e6d-5ec4-4179-bd33-3eee20816f69
 spec:
   containers:
