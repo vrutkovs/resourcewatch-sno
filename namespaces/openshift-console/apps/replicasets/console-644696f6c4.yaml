@@ -15,12 +15,23 @@ metadata:
     deployment.kubernetes.io/revision: "2"
     operator.openshift.io/spec-hash: 8b6baade2b1a72a22223ea0e0699904cec12bea1e3b56dd2d299f56e653ed044
   creationTimestamp: "2023-03-09T14:32:41Z"
-  generation: 1
+  generation: 2
   labels:
     app: console
     component: ui
     pod-template-hash: 644696f6c4
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:fullyLabeledReplicas: {}
+        f:observedGeneration: {}
+        f:replicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:41Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -223,18 +234,7 @@ metadata:
                 f:name: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-09T14:32:41Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:fullyLabeledReplicas: {}
-        f:observedGeneration: {}
-        f:replicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:32:41Z"
+    time: "2023-03-09T14:35:02Z"
   name: console-644696f6c4
   namespace: openshift-console
   ownerReferences:
@@ -244,10 +244,10 @@ metadata:
     kind: Deployment
     name: console
     uid: 8cf32543-ad95-4aa3-8d4f-21c433364acd
-  resourceVersion: "15698"
+  resourceVersion: "17019"
   uid: 3977de21-e206-447a-8dd8-f221d6cc9fbf
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: console
