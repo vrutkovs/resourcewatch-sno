@@ -99,7 +99,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16263"
+  resourceVersion: "16266"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -327,10 +327,9 @@ status:
     reason: AsExpected
     status: "False"
     type: CustomRouteControllerDegraded
-  - lastTransitionTime: "2023-03-09T14:32:27Z"
-    message: 'Get "https://oauth-openshift.apps.ocp.choomba.one/healthz": EOF'
-    reason: SyncError
-    status: "True"
+  - lastTransitionTime: "2023-03-09T14:33:04Z"
+    reason: AsExpected
+    status: "False"
     type: OAuthServerRouteEndpointAccessibleControllerDegraded
   - lastTransitionTime: "2023-03-09T14:32:28Z"
     status: "False"
