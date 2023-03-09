@@ -228,13 +228,15 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
+        f:availableReplicas: {}
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:34:59Z"
+    time: "2023-03-09T14:35:02Z"
   name: console-5879b645d5
   namespace: openshift-console
   ownerReferences:
@@ -244,7 +246,7 @@ metadata:
     kind: Deployment
     name: console
     uid: 8cf32543-ad95-4aa3-8d4f-21c433364acd
-  resourceVersion: "16987"
+  resourceVersion: "17018"
   uid: 0f354b94-b053-4264-af8f-a4995b7f4b27
 spec:
   replicas: 1
@@ -392,6 +394,8 @@ spec:
           name: trusted-ca-bundle
         name: trusted-ca-bundle
 status:
+  availableReplicas: 1
   fullyLabeledReplicas: 1
   observedGeneration: 2
+  readyReplicas: 1
   replicas: 1
