@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:22:01Z"
-deprecatedLastTimestamp: "2023-03-09T14:22:01Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:22Z"
 deprecatedSource:
   component: openshift-cluster-etcd-operator-config-observer-configobserver
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-etcd-operator
     operation: Update
-    time: "2023-03-09T14:22:02Z"
+    time: "2023-03-09T14:22:22Z"
   name: etcd-operator.174ac63050dfd168
   namespace: openshift-etcd-operator
-  resourceVersion: "3797"
+  resourceVersion: "5009"
   uid: b1ff9d96-f334-4d22-8036-16e93099a8ac
 note: cipherSuites changed to ["TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256" "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
   "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384" "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
