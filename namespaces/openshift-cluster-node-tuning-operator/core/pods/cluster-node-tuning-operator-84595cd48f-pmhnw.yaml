@@ -200,8 +200,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -217,6 +215,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:22:29Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:02Z"
   name: cluster-node-tuning-operator-84595cd48f-pmhnw
   namespace: openshift-cluster-node-tuning-operator
   ownerReferences:
@@ -226,7 +236,7 @@ metadata:
     kind: ReplicaSet
     name: cluster-node-tuning-operator-84595cd48f
     uid: 5a224cf2-d5d8-4189-a9d6-c72b78f27ed8
-  resourceVersion: "5269"
+  resourceVersion: "13874"
   uid: 5eb0d1b7-2449-4479-93aa-eda071f39d77
 spec:
   containers:
@@ -363,8 +373,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:29Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:02Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:29Z"
