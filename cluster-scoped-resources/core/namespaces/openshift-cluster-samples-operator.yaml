@@ -6,12 +6,26 @@ metadata:
     include.release.openshift.io/ibm-cloud-managed: "true"
     include.release.openshift.io/self-managed-high-availability: "true"
     openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c16,c5
+    openshift.io/sa.scc.supplemental-groups: 1000250000/10000
+    openshift.io/sa.scc.uid-range: 1000250000/10000
     workload.openshift.io/allowed: management
   creationTimestamp: "2023-03-09T14:14:38Z"
   labels:
     kubernetes.io/metadata.name: openshift-cluster-samples-operator
     openshift.io/cluster-monitoring: "true"
   managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-03-09T14:14:38Z"
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -42,7 +56,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "839"
+  resourceVersion: "844"
   uid: 91b4afe4-e589-4e70-a2e7-b2adeda0f66f
 spec:
   finalizers:
