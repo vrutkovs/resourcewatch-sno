@@ -1,0 +1,39 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:22:24Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:24Z"
+deprecatedSource:
+  component: cluster-authentication-operator-openshiftauthenticationstaticresources-openshiftauthenticationstaticresources
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:22:24Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2023-03-09T14:22:24Z"
+  name: authentication-operator.174ac6357dccea41
+  namespace: openshift-authentication-operator
+  resourceVersion: "5067"
+  uid: aceaee33-6d92-434f-9fc1-2f67ac147c39
+note: Created ConfigMap/audit -n openshift-authentication because it was missing
+reason: ConfigMapCreated
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: authentication-operator
+  namespace: openshift-authentication-operator
+  uid: 936d3c28-188a-4425-81a5-c7e9e2f6000c
+type: Normal
