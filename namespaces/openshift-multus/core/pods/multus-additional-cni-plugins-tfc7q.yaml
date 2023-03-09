@@ -376,6 +376,49 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:20:23Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.130.93"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:23Z"
   name: multus-additional-cni-plugins-tfc7q
   namespace: openshift-multus
   ownerReferences:
@@ -385,7 +428,7 @@ metadata:
     kind: DaemonSet
     name: multus-additional-cni-plugins
     uid: f298fd66-e9c3-44fd-bc7d-4aca53e76970
-  resourceVersion: "2581"
+  resourceVersion: "2586"
   uid: c744a2d1-8bd9-4403-8cb9-bed2ff64ddff
 spec:
   affinity:
@@ -760,7 +803,97 @@ status:
   conditions:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:20:23Z"
+    message: 'containers with incomplete status: [egress-router-binary-copy cni-plugins
+      bond-cni-plugin routeoverride-cni whereabouts-cni-bincopy whereabouts-cni]'
+    reason: ContainersNotInitialized
+    status: "False"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:23Z"
+    message: 'containers with unready status: [kube-multus-additional-cni-plugins]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:23Z"
+    message: 'containers with unready status: [kube-multus-additional-cni-plugins]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:20:23Z"
     status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ebb2140174c027ad75a9f06f0d6f82ed82d20e871877b7504fd95d4b56acdff2
+    imageID: ""
+    lastState: {}
+    name: kube-multus-additional-cni-plugins
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: PodInitializing
+  hostIP: 10.0.130.93
+  initContainerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:1a3fb5eda79c9e3a3b9368a2f923c2ed63fffccba20502b718b8d1afb7675897
+    imageID: ""
+    lastState: {}
+    name: egress-router-binary-copy
+    ready: false
+    restartCount: 0
+    state:
+      waiting:
+        reason: PodInitializing
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4e4bafb1e5f5b396d308ee8a7e49c4fd8b13597134c5887db0dd9d9c2d4e0e40
+    imageID: ""
+    lastState: {}
+    name: cni-plugins
+    ready: false
+    restartCount: 0
+    state:
+      waiting:
+        reason: PodInitializing
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ed68da48de609d277c0cbc6d388e49ba322c0d92e636f2d708274855abaa9c6b
+    imageID: ""
+    lastState: {}
+    name: bond-cni-plugin
+    ready: false
+    restartCount: 0
+    state:
+      waiting:
+        reason: PodInitializing
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:26d23cd931fe8b128262dcabd42370499cd80727283fedaeb552ee236c5a70fd
+    imageID: ""
+    lastState: {}
+    name: routeoverride-cni
+    ready: false
+    restartCount: 0
+    state:
+      waiting:
+        reason: PodInitializing
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9f7dfaf9351c4deaac3d2846c64dd32a066c68dd3b844d8f9ee748cef7583859
+    imageID: ""
+    lastState: {}
+    name: whereabouts-cni-bincopy
+    ready: false
+    restartCount: 0
+    state:
+      waiting:
+        reason: PodInitializing
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9f7dfaf9351c4deaac3d2846c64dd32a066c68dd3b844d8f9ee748cef7583859
+    imageID: ""
+    lastState: {}
+    name: whereabouts-cni
+    ready: false
+    restartCount: 0
+    state:
+      waiting:
+        reason: PodInitializing
   phase: Pending
+  podIP: 10.0.130.93
+  podIPs:
+  - ip: 10.0.130.93
   qosClass: Burstable
+  startTime: "2023-03-09T14:20:23Z"
