@@ -37,6 +37,15 @@ metadata:
     manager: ingress-operator
     operation: Update
     time: "2023-03-09T14:32:01Z"
+  - apiVersion: route.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:ingress: {}
+    manager: openshift-router
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:15Z"
   name: canary
   namespace: openshift-ingress-canary
   ownerReferences:
@@ -45,7 +54,7 @@ metadata:
     kind: daemonset
     name: ingress-canary
     uid: 8cada35d-3ced-4501-9955-de0cda7fcf82
-  resourceVersion: "13470"
+  resourceVersion: "14913"
   uid: 061b05fe-4e70-4a3b-9fe0-af15a7843992
 spec:
   host: canary-openshift-ingress-canary.apps.ocp.choomba.one
@@ -59,4 +68,13 @@ spec:
     name: ingress-canary
     weight: 100
   wildcardPolicy: None
-status: {}
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: "2023-03-09T14:32:15Z"
+      status: "True"
+      type: Admitted
+    host: canary-openshift-ingress-canary.apps.ocp.choomba.one
+    routerCanonicalHostname: router-default.apps.ocp.choomba.one
+    routerName: default
+    wildcardPolicy: None
