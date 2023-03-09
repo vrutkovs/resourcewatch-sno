@@ -160,7 +160,7 @@ metadata:
     kind: DaemonSet
     name: dns-default
     uid: 5dcfb4ec-c80c-463b-b4b2-44c23caada97
-  resourceVersion: "4456"
+  resourceVersion: "4460"
   uid: 53f53fd4-d73a-4693-b74f-978bc7aff7f6
 spec:
   affinity:
@@ -250,6 +250,7 @@ spec:
       readOnly: true
   dnsPolicy: Default
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     kubernetes.io/os: linux
   preemptionPolicy: PreemptLowerPriority
@@ -318,5 +319,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:22:11Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
