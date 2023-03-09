@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:04Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:04Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:04Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:04Z"
+  name: insights-operator-558679c6-2zsfm.174ac6bc8cbf64cf
+  namespace: openshift-insights
+  resourceVersion: "14136"
+  uid: d5266ee1-e94f-44d8-8518-d3ea56dee436
+note: 'MountVolume.SetUp failed for volume "trusted-ca-bundle" : failed to sync configmap
+  cache: timed out waiting for the condition'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: insights-operator-558679c6-2zsfm
+  namespace: openshift-insights
+  resourceVersion: "9388"
+  uid: 005bb3a4-6468-4232-a227-5fd234462534
+type: Warning
