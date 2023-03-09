@@ -277,6 +277,15 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:32:25Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:observedGeneration: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:25Z"
   name: oauth-openshift-7749b8f584
   namespace: openshift-authentication
   ownerReferences:
@@ -286,7 +295,7 @@ metadata:
     kind: Deployment
     name: oauth-openshift
     uid: 28c413a6-04a7-4cae-8efd-4240ba332c8e
-  resourceVersion: "15131"
+  resourceVersion: "15136"
   uid: 445b598f-a0d5-402c-9e1b-cdda347aad21
 spec:
   replicas: 1
@@ -487,4 +496,5 @@ spec:
           optional: true
         name: v4-0-config-system-trusted-ca-bundle
 status:
+  observedGeneration: 1
   replicas: 0
