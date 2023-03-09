@@ -186,8 +186,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -203,6 +201,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:22:36Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:01Z"
   name: prometheus-operator-74df59b65d-n9sq6
   namespace: openshift-monitoring
   ownerReferences:
@@ -212,7 +222,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-operator-74df59b65d
     uid: 3268f7b5-068f-4138-9dde-b59322d4757b
-  resourceVersion: "5537"
+  resourceVersion: "13534"
   uid: 82ade848-f870-485d-b793-db7dcd7c2982
 spec:
   automountServiceAccountToken: true
@@ -370,8 +380,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:22:36Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:01Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:22:36Z"
