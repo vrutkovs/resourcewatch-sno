@@ -251,7 +251,6 @@ metadata:
     fieldsType: FieldsV1
     fieldsV1:
       f:status:
-        f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
         f:replicas: {}
     manager: kube-controller-manager
@@ -267,7 +266,7 @@ metadata:
     kind: Deployment
     name: apiserver
     uid: 39c9e401-3aa2-4df1-a514-e9eb77325346
-  resourceVersion: "6572"
+  resourceVersion: "6574"
   uid: 487d4513-d57a-47b1-9acf-7967b4eb5900
 spec:
   replicas: 0
@@ -470,6 +469,5 @@ spec:
           type: ""
         name: audit-dir
 status:
-  fullyLabeledReplicas: 1
   observedGeneration: 3
-  replicas: 1
+  replicas: 0
