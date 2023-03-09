@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:04Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:04Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:09Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:09Z"
+  name: cluster-baremetal-operator-78475cb658-nc8qw.174ac6bc957abd9d
+  namespace: openshift-machine-api
+  resourceVersion: "14496"
+  uid: 34eaa2df-eb15-4518-901d-eec2e4a20b8d
+note: 'MountVolume.SetUp failed for volume "images" : failed to sync configmap cache:
+  timed out waiting for the condition'
+reason: FailedMount
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: cluster-baremetal-operator-78475cb658-nc8qw
+  namespace: openshift-machine-api
+  resourceVersion: "8510"
+  uid: 799840ec-4d13-4b04-830e-e8b1904eefc4
+type: Warning
