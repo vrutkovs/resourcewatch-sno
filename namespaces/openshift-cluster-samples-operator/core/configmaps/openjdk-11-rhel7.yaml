@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  creationTimestamp: "2023-03-09T14:32:25Z"
-  name: openjdk-11-rhel7
-  namespace: openshift-cluster-samples-operator
-  resourceVersion: "15095"
-  uid: 922361a9-b954-4a26-8e02-d31b70a87260
