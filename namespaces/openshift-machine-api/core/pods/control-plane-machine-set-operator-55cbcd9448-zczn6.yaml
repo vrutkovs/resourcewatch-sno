@@ -99,7 +99,7 @@ metadata:
     kind: ReplicaSet
     name: control-plane-machine-set-operator-55cbcd9448
     uid: 46a4ab56-f8ac-4331-941d-f2c8accfcf72
-  resourceVersion: "8157"
+  resourceVersion: "8159"
   uid: 51423c38-33e8-40c1-a206-a72518e3c693
 spec:
   containers:
@@ -148,6 +148,7 @@ spec:
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
+  nodeName: vrutkovs-sno
   nodeSelector:
     node-role.kubernetes.io/master: ""
   preemptionPolicy: PreemptLowerPriority
@@ -208,5 +209,10 @@ spec:
             path: service-ca.crt
           name: openshift-service-ca.crt
 status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:28:37Z"
+    status: "True"
+    type: PodScheduled
   phase: Pending
   qosClass: Burstable
