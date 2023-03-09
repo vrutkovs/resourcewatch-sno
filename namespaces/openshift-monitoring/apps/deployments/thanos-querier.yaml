@@ -40,7 +40,9 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -410,7 +412,7 @@ metadata:
     time: "2023-03-09T14:32:52Z"
   name: thanos-querier
   namespace: openshift-monitoring
-  resourceVersion: "16055"
+  resourceVersion: "16060"
   uid: 30e0f03b-6f20-442e-b102-e07b4eb190a7
 spec:
   progressDeadlineSeconds: 600
@@ -723,15 +725,17 @@ status:
   conditions:
   - lastTransitionTime: "2023-03-09T14:32:52Z"
     lastUpdateTime: "2023-03-09T14:32:52Z"
-    message: Created new replica set "thanos-querier-6787f89f54"
-    reason: NewReplicaSetCreated
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2023-03-09T14:32:52Z"
-    lastUpdateTime: "2023-03-09T14:32:52Z"
     message: Deployment has minimum availability.
     reason: MinimumReplicasAvailable
     status: "True"
     type: Available
+  - lastTransitionTime: "2023-03-09T14:32:52Z"
+    lastUpdateTime: "2023-03-09T14:32:52Z"
+    message: ReplicaSet "thanos-querier-6787f89f54" is progressing.
+    reason: ReplicaSetUpdated
+    status: "True"
+    type: Progressing
   observedGeneration: 1
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
