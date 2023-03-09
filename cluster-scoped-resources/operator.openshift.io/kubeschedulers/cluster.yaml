@@ -33,20 +33,6 @@ metadata:
   - apiVersion: operator.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        .: {}
-        f:conditions: {}
-        f:latestAvailableRevision: {}
-        f:latestAvailableRevisionReason: {}
-        f:nodeStatuses: {}
-        f:readyReplicas: {}
-    manager: cluster-kube-scheduler-operator
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:22:03Z"
-  - apiVersion: operator.openshift.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:spec:
         f:observedConfig:
           .: {}
@@ -58,13 +44,27 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     time: "2023-03-09T14:22:04Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:latestAvailableRevision: {}
+        f:latestAvailableRevisionReason: {}
+        f:nodeStatuses: {}
+        f:readyReplicas: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:05Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4036"
+  resourceVersion: "4123"
   uid: 48eb058e-3e1d-45d9-baa8-cf6a53778010
 spec:
   logLevel: Normal
@@ -127,6 +127,9 @@ status:
   - lastTransitionTime: "2023-03-09T14:22:02Z"
     status: "False"
     type: ResourceSyncControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:22:04Z"
+    status: "False"
+    type: ConfigObservationDegraded
   latestAvailableRevision: 0
   latestAvailableRevisionReason: ""
   nodeStatuses:
