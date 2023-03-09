@@ -181,8 +181,6 @@ metadata:
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
-            f:lastTransitionTime: {}
-            f:status: {}
             f:type: {}
         f:containerStatuses: {}
         f:hostIP: {}
@@ -198,6 +196,18 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:29:20Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Ready"}:
+            f:lastTransitionTime: {}
+            f:status: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:01Z"
   name: catalog-operator-78586c554b-pvcfc
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -207,7 +217,7 @@ metadata:
     kind: ReplicaSet
     name: catalog-operator-78586c554b
     uid: ae6e6601-2c53-467b-9f43-706d423b723d
-  resourceVersion: "9715"
+  resourceVersion: "13493"
   uid: 4cd62dbd-153e-43df-a0c5-361a9afb81bc
 spec:
   containers:
@@ -354,8 +364,8 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:29:20Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:32:01Z"
+    status: "False"
     type: Ready
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:29:20Z"
