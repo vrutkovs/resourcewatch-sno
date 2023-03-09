@@ -301,11 +301,12 @@ metadata:
       f:status:
         f:fullyLabeledReplicas: {}
         f:observedGeneration: {}
+        f:readyReplicas: {}
         f:replicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:12Z"
+    time: "2023-03-09T14:32:16Z"
   name: router-default-7c6dfd9fb7
   namespace: openshift-ingress
   ownerReferences:
@@ -315,7 +316,7 @@ metadata:
     kind: Deployment
     name: router-default
     uid: 455f2d3e-7299-414a-8476-22ae647963b2
-  resourceVersion: "9364"
+  resourceVersion: "14926"
   uid: 60060897-6bbe-4498-872f-27825dcdc46a
 spec:
   minReadySeconds: 30
@@ -500,4 +501,5 @@ spec:
 status:
   fullyLabeledReplicas: 1
   observedGeneration: 1
+  readyReplicas: 1
   replicas: 1
