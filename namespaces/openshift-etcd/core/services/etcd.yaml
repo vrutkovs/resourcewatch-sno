@@ -1,6 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    operator.openshift.io/spec-hash: 0685cfaa0976bfb7ba58513629369c20bf05f4fba36949e982bdb43af328f0e1
+    prometheus.io/scheme: https
+    prometheus.io/scrape: "true"
+    service.alpha.openshift.io/serving-cert-secret-name: serving-cert
   creationTimestamp: "2023-03-09T14:14:38Z"
   labels:
     k8s-app: etcd
@@ -28,15 +33,29 @@ metadata:
             f:port: {}
             f:protocol: {}
             f:targetPort: {}
-        f:selector: {}
         f:sessionAffinity: {}
         f:type: {}
     manager: cluster-bootstrap
     operation: Update
     time: "2023-03-09T14:14:38Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:operator.openshift.io/spec-hash: {}
+          f:prometheus.io/scheme: {}
+          f:prometheus.io/scrape: {}
+          f:service.alpha.openshift.io/serving-cert-secret-name: {}
+      f:spec:
+        f:selector: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-03-09T14:22:05Z"
   name: etcd
   namespace: openshift-etcd
-  resourceVersion: "795"
+  resourceVersion: "4096"
   uid: 389b24ff-7c78-4684-9a01-4db9f2789f8d
 spec:
   clusterIP: 172.30.62.150
@@ -56,7 +75,7 @@ spec:
     protocol: TCP
     targetPort: 9979
   selector:
-    k8s-app: etcd
+    etcd: "true"
   sessionAffinity: None
   type: ClusterIP
 status:
