@@ -92,14 +92,14 @@ metadata:
     manager: authentication-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:33:05Z"
+    time: "2023-03-09T14:33:06Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "16277"
+  resourceVersion: "16309"
   uid: 3b03badb-01a3-4361-9f35-c043073c968d
 spec:
   logLevel: Normal
@@ -350,20 +350,19 @@ status:
     reason: OAuthMetadataNotYetServed
     status: "True"
     type: WellKnownReadyControllerProgressing
-  - lastTransitionTime: "2023-03-09T14:32:36Z"
-    message: no oauth-openshift.openshift-authentication pods available on any node.
-    reason: NoPod
-    status: "False"
-    type: OAuthServerDeploymentAvailable
-  - lastTransitionTime: "2023-03-09T14:32:36Z"
-    message: 1 of 1 requested instances are unavailable for oauth-openshift.openshift-authentication
-      ()
-    reason: UnavailablePod
+  - lastTransitionTime: "2023-03-09T14:33:05Z"
+    reason: AsExpected
     status: "True"
-    type: OAuthServerDeploymentDegraded
-  - lastTransitionTime: "2023-03-09T14:32:36Z"
+    type: OAuthServerDeploymentAvailable
+  - lastTransitionTime: "2023-03-09T14:33:05Z"
     reason: AsExpected
     status: "False"
+    type: OAuthServerDeploymentDegraded
+  - lastTransitionTime: "2023-03-09T14:33:05Z"
+    message: 'deployment/oauth-openshift.openshift-authentication: observed generation
+      is 2, desired generation is 3.'
+    reason: NewGeneration
+    status: "True"
     type: OAuthServerDeploymentProgressing
   - lastTransitionTime: "2023-03-09T14:32:33Z"
     status: "False"
@@ -377,7 +376,7 @@ status:
     resource: deployments
   - group: apps
     hash: ""
-    lastGeneration: 2
+    lastGeneration: 3
     name: oauth-openshift
     namespace: openshift-authentication
     resource: deployments
