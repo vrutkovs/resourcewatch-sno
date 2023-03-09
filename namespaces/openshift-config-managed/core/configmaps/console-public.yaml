@@ -1,0 +1,20 @@
+apiVersion: v1
+data:
+  consoleURL: https://console-openshift-console.apps.ocp.choomba.one
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-03-09T14:32:32Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:consoleURL: {}
+    manager: console
+    operation: Update
+    time: "2023-03-09T14:32:32Z"
+  name: console-public
+  namespace: openshift-config-managed
+  resourceVersion: "15402"
+  uid: eb345e05-b558-4025-93fe-9b88d1a9efa5
