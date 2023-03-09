@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    service.alpha.openshift.io/serving-cert-secret-name: etcd-operator-serving-cert
+  creationTimestamp: "2023-03-09T14:14:45Z"
+  labels:
+    app: etcd-operator
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:service.alpha.openshift.io/serving-cert-secret-name: {}
+        f:labels:
+          .: {}
+          f:app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b7590f0c-c37f-44e0-80d3-7b5df1e0e187"}: {}
+      f:spec:
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":443,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-03-09T14:14:45Z"
+  name: metrics
+  namespace: openshift-etcd-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
+  resourceVersion: "1084"
+  uid: c3862e55-4eab-49fb-ab94-853d969f3469
+spec:
+  clusterIP: 172.30.18.82
+  clusterIPs:
+  - 172.30.18.82
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: https
+    port: 443
+    protocol: TCP
+    targetPort: 8443
+  selector:
+    app: etcd-operator
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
