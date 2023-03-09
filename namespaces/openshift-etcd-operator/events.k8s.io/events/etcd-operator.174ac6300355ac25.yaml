@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:22:00Z"
-deprecatedLastTimestamp: "2023-03-09T14:22:00Z"
+deprecatedLastTimestamp: "2023-03-09T14:22:02Z"
 deprecatedSource:
   component: openshift-cluster-etcd-operator-nodecontroller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-etcd-operator
     operation: Update
-    time: "2023-03-09T14:22:00Z"
+    time: "2023-03-09T14:22:03Z"
   name: etcd-operator.174ac6300355ac25
   namespace: openshift-etcd-operator
-  resourceVersion: "3714"
+  resourceVersion: "3876"
   uid: 5a7ed53a-3fbc-4f5a-9d13-c0b551654e59
 note: Observed new master node vrutkovs-sno
 reason: MasterNodeObserved
