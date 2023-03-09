@@ -57,14 +57,14 @@ metadata:
     manager: cluster-kube-scheduler-operator
     operation: Update
     subresource: status
-    time: "2023-03-09T14:22:11Z"
+    time: "2023-03-09T14:22:12Z"
   name: cluster
   ownerReferences:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "4494"
+  resourceVersion: "4505"
   uid: 48eb058e-3e1d-45d9-baa8-cf6a53778010
 spec:
   logLevel: Normal
@@ -151,6 +151,12 @@ status:
     reason: AsExpected
     status: "False"
     type: KubeControllerManagerStaticResourcesDegraded
+  - lastTransitionTime: "2023-03-09T14:22:11Z"
+    message: '"serviceaccount/localhost-recovery-client": serviceaccounts "localhost-recovery-client"
+      not found'
+    reason: SynchronizationError
+    status: "True"
+    type: TargetConfigControllerDegraded
   latestAvailableRevision: 1
   latestAvailableRevisionReason: ""
   nodeStatuses:
