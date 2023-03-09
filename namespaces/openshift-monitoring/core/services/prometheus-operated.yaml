@@ -1,0 +1,72 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-03-09T14:32:55Z"
+  labels:
+    operated-prometheus: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:operated-prometheus: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"7a33d1cb-c2e6-4559-b78c-c50369df7494"}: {}
+      f:spec:
+        f:clusterIP: {}
+        f:internalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":9090,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+          k:{"port":10901,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: PrometheusOperator
+    operation: Update
+    time: "2023-03-09T14:32:55Z"
+  name: prometheus-operated
+  namespace: openshift-monitoring
+  ownerReferences:
+  - apiVersion: monitoring.coreos.com/v1
+    kind: Prometheus
+    name: k8s
+    uid: 7a33d1cb-c2e6-4559-b78c-c50369df7494
+  resourceVersion: "16093"
+  uid: 5728fdcc-73db-4956-844c-8f2af5e64858
+spec:
+  clusterIP: None
+  clusterIPs:
+  - None
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: web
+    port: 9090
+    protocol: TCP
+    targetPort: web
+  - name: grpc
+    port: 10901
+    protocol: TCP
+    targetPort: grpc
+  selector:
+    app.kubernetes.io/name: prometheus
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
