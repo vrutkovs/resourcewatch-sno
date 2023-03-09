@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:30:44Z"
-deprecatedLastTimestamp: "2023-03-09T14:30:44Z"
+deprecatedLastTimestamp: "2023-03-09T14:30:46Z"
 deprecatedSource:
   component: openshift-cluster-kube-scheduler-operator-revisioncontroller
 eventTime: null
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-scheduler-operator
     operation: Update
-    time: "2023-03-09T14:30:44Z"
+    time: "2023-03-09T14:30:46Z"
   name: openshift-kube-scheduler-operator.174ac6a9ed9c0bcb
   namespace: openshift-kube-scheduler-operator
-  resourceVersion: "10579"
+  resourceVersion: "10781"
   uid: 25d5c173-48ef-47e7-a721-04a6e804013f
 note: new revision 5 triggered by "secret/localhost-recovery-client-token has changed"
 reason: RevisionTriggered
