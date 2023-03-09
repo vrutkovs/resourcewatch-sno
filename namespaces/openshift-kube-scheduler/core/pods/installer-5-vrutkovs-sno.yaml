@@ -188,7 +188,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:31:22Z"
+    time: "2023-03-09T14:31:24Z"
   name: installer-5-vrutkovs-sno
   namespace: openshift-kube-scheduler
   ownerReferences:
@@ -196,7 +196,7 @@ metadata:
     kind: ConfigMap
     name: revision-status-5
     uid: 8e2dd828-dc7c-45ce-8766-3a84eb05629a
-  resourceVersion: "12773"
+  resourceVersion: "12989"
   uid: 96421fca-b921-4c4b-9d3e-3a3406e7ce70
 spec:
   automountServiceAccountToken: false
@@ -335,7 +335,7 @@ status:
         reason: Completed
         startedAt: "2023-03-09T14:30:50Z"
   hostIP: 10.0.130.93
-  phase: Running
+  phase: Succeeded
   podIP: 10.128.0.66
   podIPs:
   - ip: 10.128.0.66
