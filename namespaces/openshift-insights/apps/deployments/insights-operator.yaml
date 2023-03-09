@@ -4,6 +4,7 @@ metadata:
   annotations:
     capability.openshift.io/name: Insights
     config.openshift.io/inject-proxy: insights-operator
+    deployment.kubernetes.io/revision: "1"
     exclude.release.openshift.io/internal-openshift-hosted: "true"
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
@@ -154,6 +155,27 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:28:48Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:48Z"
   name: insights-operator
   namespace: openshift-insights
   ownerReferences:
@@ -162,7 +184,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8350"
+  resourceVersion: "8353"
   uid: 3211dbbf-b32c-4b79-a70c-fe2f5c0ee357
 spec:
   progressDeadlineSeconds: 600
@@ -272,4 +294,11 @@ spec:
           defaultMode: 420
           optional: true
           secretName: openshift-insights-serving-cert
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:28:48Z"
+    lastUpdateTime: "2023-03-09T14:28:48Z"
+    message: Created new replica set "insights-operator-558679c6"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
