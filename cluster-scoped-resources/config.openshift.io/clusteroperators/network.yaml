@@ -39,16 +39,6 @@ metadata:
   - apiVersion: config.openshift.io/v1
     fieldsType: FieldsV1
     fieldsV1:
-      f:status:
-        f:conditions: {}
-        f:relatedObjects: {}
-    manager: cluster-network-operator
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:20:23Z"
-  - apiVersion: config.openshift.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
       f:metadata:
         f:annotations:
           f:network.operator.openshift.io/last-seen-state: {}
@@ -56,6 +46,16 @@ metadata:
     manager: cluster-network-operator
     operation: Update
     time: "2023-03-09T14:20:24Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+    manager: cluster-network-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:25Z"
   name: network
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -63,7 +63,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "2614"
+  resourceVersion: "2622"
   uid: efc0e65e-4103-4be7-8a5a-99dd46b6df53
 spec: {}
 status:
@@ -84,7 +84,10 @@ status:
     status: "True"
     type: Upgradeable
   - lastTransitionTime: "2023-03-09T14:20:23Z"
-    message: DaemonSet "/openshift-multus/multus" is not available (awaiting 1 nodes)
+    message: |-
+      DaemonSet "/openshift-multus/network-metrics-daemon" is waiting for other operators to become ready
+      DaemonSet "/openshift-multus/multus" is not available (awaiting 1 nodes)
+      DaemonSet "/openshift-multus/multus-additional-cni-plugins" is not available (awaiting 1 nodes)
     reason: Deploying
     status: "True"
     type: Progressing
