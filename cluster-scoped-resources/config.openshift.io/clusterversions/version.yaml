@@ -38,7 +38,7 @@ metadata:
     subresource: status
     time: "2023-03-09T14:14:35Z"
   name: version
-  resourceVersion: "594"
+  resourceVersion: "635"
   uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
 spec:
   channel: stable-4.13
@@ -207,4 +207,4 @@ status:
     verified: false
     version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
   observedGeneration: 1
-  versionHash: ""
+  versionHash: PphPJCfTF3I=
