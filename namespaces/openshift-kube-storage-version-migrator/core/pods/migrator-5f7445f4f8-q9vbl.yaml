@@ -66,6 +66,40 @@ metadata:
     manager: kube-controller-manager
     operation: Update
     time: "2023-03-09T14:21:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:21:59Z"
   name: migrator-5f7445f4f8-q9vbl
   namespace: openshift-kube-storage-version-migrator
   ownerReferences:
@@ -75,7 +109,7 @@ metadata:
     kind: ReplicaSet
     name: migrator-5f7445f4f8
     uid: d2311d9c-6acd-47b6-956e-6451e24bc679
-  resourceVersion: "3384"
+  resourceVersion: "3389"
   uid: 5b2a848a-9d72-4eb5-9c70-5b2b8993ea78
 spec:
   containers:
@@ -163,6 +197,35 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:21:59Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:21:59Z"
+    message: 'containers with unready status: [migrator]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:21:59Z"
+    message: 'containers with unready status: [migrator]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:21:59Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:87b6a9e1a56c11e9c67ff89a7edd87c95da64bd7ad3964cff0ee5d1dcae87b92
+    imageID: ""
+    lastState: {}
+    name: migrator
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.93
   phase: Pending
   qosClass: Burstable
+  startTime: "2023-03-09T14:21:59Z"
