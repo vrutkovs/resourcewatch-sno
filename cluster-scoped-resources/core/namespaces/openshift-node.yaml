@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2023-03-09T14:23:11Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-node
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+    manager: openshift-apiserver
+    operation: Update
+    time: "2023-03-09T14:23:11Z"
+  name: openshift-node
+  resourceVersion: "6649"
+  uid: 6ad5c5e0-c9b0-4698-8d65-554d5d666e03
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
