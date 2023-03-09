@@ -1,0 +1,43 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:08Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:08Z"
+deprecatedSource:
+  component: kubelet
+  host: vrutkovs-sno
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:15Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+        f:host: {}
+      f:type: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:32:15Z"
+  name: ingress-canary-nq5s2.174ac6bd7c38ab6e
+  namespace: openshift-ingress-canary
+  resourceVersion: "14912"
+  uid: 1b5de38f-c805-41d5-8fc1-41253cf2e90b
+note: Started container serve-healthcheck-canary
+reason: Started
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{serve-healthcheck-canary}
+  kind: Pod
+  name: ingress-canary-nq5s2
+  namespace: openshift-ingress-canary
+  resourceVersion: "14039"
+  uid: 26eff830-6bd5-48a5-9969-7e94ee30b069
+type: Normal
