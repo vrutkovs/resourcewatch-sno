@@ -39,6 +39,14 @@ metadata:
     fieldsV1:
       f:status:
         f:conditions: {}
+    manager: cluster-controller-manager-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:28:56Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
         f:relatedObjects: {}
         f:versions: {}
     manager: config-sync-controllers
@@ -52,7 +60,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8721"
+  resourceVersion: "8725"
   uid: 25b4d22b-b211-4dd9-b2b6-bb53eef652ba
 spec: {}
 status:
@@ -77,6 +85,23 @@ status:
     reason: AsExpected
     status: "False"
     type: TrustedCABundleControllerControllerDegraded
+  - lastTransitionTime: "2023-03-09T14:28:56Z"
+    message: Cluster Cloud Controller Manager Operator is available at 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-03-09T14:28:56Z"
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-03-09T14:28:56Z"
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-03-09T14:28:56Z"
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
   extension: null
   relatedObjects:
   - group: ""
