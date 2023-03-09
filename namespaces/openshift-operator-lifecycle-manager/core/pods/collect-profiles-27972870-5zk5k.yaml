@@ -136,18 +136,21 @@ metadata:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Initialized"}:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
           k:{"type":"Ready"}:
             .: {}
             f:lastProbeTime: {}
             f:lastTransitionTime: {}
+            f:reason: {}
             f:status: {}
             f:type: {}
         f:containerStatuses: {}
@@ -163,7 +166,7 @@ metadata:
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:30:01Z"
+    time: "2023-03-09T14:30:03Z"
   name: collect-profiles-27972870-5zk5k
   namespace: openshift-operator-lifecycle-manager
   ownerReferences:
@@ -173,7 +176,7 @@ metadata:
     kind: Job
     name: collect-profiles-27972870
     uid: 759d7395-7ae5-440a-b37a-7922d6e077d4
-  resourceVersion: "10334"
+  resourceVersion: "10351"
   uid: 58131f07-d25b-4b26-b3d0-dbe5170f8612
 spec:
   containers:
@@ -277,15 +280,18 @@ status:
   conditions:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:30:00Z"
+    reason: PodCompleted
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:30:01Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:30:03Z"
+    reason: PodCompleted
+    status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-03-09T14:30:01Z"
-    status: "True"
+    lastTransitionTime: "2023-03-09T14:30:03Z"
+    reason: PodCompleted
+    status: "False"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:30:00Z"
@@ -297,11 +303,15 @@ status:
     imageID: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:70c02853f645d8d0e82db73c738d51ace951044ac4e98e35d1db4f7cd75a3e71
     lastState: {}
     name: collect-profiles
-    ready: true
+    ready: false
     restartCount: 0
-    started: true
+    started: false
     state:
-      running:
+      terminated:
+        containerID: cri-o://729729c9034125941057b68f082d7506e3d9c53d4a421263e1259b06db698fd3
+        exitCode: 0
+        finishedAt: "2023-03-09T14:30:02Z"
+        reason: Completed
         startedAt: "2023-03-09T14:30:01Z"
   hostIP: 10.0.130.93
   phase: Running
