@@ -1,0 +1,45 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:41Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:41Z"
+deprecatedSource:
+  component: console-operator-status-controller-statussyncer_console
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:41Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: console
+    operation: Update
+    time: "2023-03-09T14:32:41Z"
+  name: console-operator.174ac6c544796212
+  namespace: openshift-console-operator
+  resourceVersion: "15736"
+  uid: 0d402f07-d5bf-4550-ad52-49c24c081729
+note: 'Status for clusteroperator/console changed: Degraded message changed from "RouteHealthDegraded:
+  console route is not admitted" to "RouteHealthDegraded: route not yet available,
+  https://console-openshift-console.apps.ocp.choomba.one returns ''503 Service Unavailable''",Available
+  message changed from "DeploymentAvailable: 0 replicas available for console deployment\nRouteHealthAvailable:
+  console route is not admitted" to "DeploymentAvailable: 0 replicas available for
+  console deployment\nRouteHealthAvailable: route not yet available, https://console-openshift-console.apps.ocp.choomba.one
+  returns ''503 Service Unavailable''"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: console-operator
+  namespace: openshift-console-operator
+  uid: 96b3e259-2eaa-49a3-8a5e-54df68da1860
+type: Normal
