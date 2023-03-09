@@ -24,6 +24,17 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:14:35Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+        f:relatedObjects: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:14:36Z"
   name: openshift-samples
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -31,6 +42,23 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "621"
+  resourceVersion: "693"
   uid: d07997f3-20d5-4c43-81d7-0e39c2ed7464
 spec: {}
+status:
+  extension: null
+  relatedObjects:
+  - group: samples.operator.openshift.io
+    name: cluster
+    resource: configs
+  - group: ""
+    name: openshift-cluster-samples-operator
+    resource: namespaces
+  - group: template.openshift.io
+    name: ""
+    namespace: openshift
+    resource: templates
+  - group: image.openshift.io
+    name: ""
+    namespace: openshift
+    resource: imagestreams
