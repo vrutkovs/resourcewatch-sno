@@ -158,7 +158,6 @@ metadata:
         f:annotations:
           f:deployment.kubernetes.io/revision: {}
       f:status:
-        f:availableReplicas: {}
         f:conditions:
           .: {}
           k:{"type":"Available"}:
@@ -178,13 +177,13 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
-        f:readyReplicas: {}
         f:replicas: {}
+        f:unavailableReplicas: {}
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
-    time: "2023-03-09T14:29:14Z"
+    time: "2023-03-09T14:32:02Z"
   name: cluster-image-registry-operator
   namespace: openshift-image-registry
   ownerReferences:
@@ -193,7 +192,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "9399"
+  resourceVersion: "13815"
   uid: 1e9d3536-e19e-494c-bd31-a8c27999e389
 spec:
   progressDeadlineSeconds: 600
@@ -307,14 +306,7 @@ spec:
               expirationSeconds: 3600
               path: token
 status:
-  availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2023-03-09T14:29:14Z"
-    lastUpdateTime: "2023-03-09T14:29:14Z"
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
-    type: Available
   - lastTransitionTime: "2023-03-09T14:28:56Z"
     lastUpdateTime: "2023-03-09T14:29:14Z"
     message: ReplicaSet "cluster-image-registry-operator-77f7dc4fc4" has successfully
@@ -322,7 +314,13 @@ status:
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
+  - lastTransitionTime: "2023-03-09T14:32:02Z"
+    lastUpdateTime: "2023-03-09T14:32:02Z"
+    message: Deployment does not have minimum availability.
+    reason: MinimumReplicasUnavailable
+    status: "False"
+    type: Available
   observedGeneration: 1
-  readyReplicas: 1
   replicas: 1
+  unavailableReplicas: 1
   updatedReplicas: 1
