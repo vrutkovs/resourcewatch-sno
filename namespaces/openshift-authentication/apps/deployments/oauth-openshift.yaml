@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
+    deployment.kubernetes.io/revision: "1"
     operator.openshift.io/rvs-hash: f9WA1--BhoucWI8d6_-jBfBXdEgrEKAZMGv7DK_F2D_gSezB-x9iUHjBR7X3Ib-0Sej7G6XwV_gJbydo9DsrWA
     operator.openshift.io/spec-hash: 9894f144e7913225a17f0da75dedb5a4446fe86f1d5af7ac1325195a6dff64f2
   creationTimestamp: "2023-03-09T14:32:25Z"
@@ -271,9 +272,30 @@ metadata:
     manager: authentication-operator
     operation: Update
     time: "2023-03-09T14:32:25Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:25Z"
   name: oauth-openshift
   namespace: openshift-authentication
-  resourceVersion: "15128"
+  resourceVersion: "15133"
   uid: 28c413a6-04a7-4cae-8efd-4240ba332c8e
 spec:
   progressDeadlineSeconds: 600
@@ -478,4 +500,11 @@ spec:
           name: v4-0-config-system-trusted-ca-bundle
           optional: true
         name: v4-0-config-system-trusted-ca-bundle
-status: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-09T14:32:25Z"
+    lastUpdateTime: "2023-03-09T14:32:25Z"
+    message: Created new replica set "oauth-openshift-7749b8f584"
+    reason: NewReplicaSetCreated
+    status: "True"
+    type: Progressing
