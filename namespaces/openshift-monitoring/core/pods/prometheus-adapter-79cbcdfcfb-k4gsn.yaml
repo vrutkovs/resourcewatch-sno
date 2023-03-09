@@ -183,6 +183,40 @@ metadata:
   - apiVersion: v1
     fieldsType: FieldsV1
     fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:32:47Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
       f:metadata:
         f:annotations:
           f:k8s.ovn.org/pod-networks: {}
@@ -198,7 +232,7 @@ metadata:
     kind: ReplicaSet
     name: prometheus-adapter-79cbcdfcfb
     uid: 90f3ce22-2467-4c26-a73b-b0809c59c454
-  resourceVersion: "15950"
+  resourceVersion: "15960"
   uid: 707a0d02-a993-4fd9-bca9-6d3a3105cde2
 spec:
   automountServiceAccountToken: true
@@ -375,6 +409,35 @@ status:
   - lastProbeTime: null
     lastTransitionTime: "2023-03-09T14:32:47Z"
     status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:32:47Z"
+    message: 'containers with unready status: [prometheus-adapter]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:32:47Z"
+    message: 'containers with unready status: [prometheus-adapter]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-09T14:32:47Z"
+    status: "True"
     type: PodScheduled
+  containerStatuses:
+  - image: registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:86d474263af96d19f25f530fef4aa2ee8bc02e3c5202c1ecc74841626ded2852
+    imageID: ""
+    lastState: {}
+    name: prometheus-adapter
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      waiting:
+        reason: ContainerCreating
+  hostIP: 10.0.130.93
   phase: Pending
   qosClass: Burstable
+  startTime: "2023-03-09T14:32:47Z"
