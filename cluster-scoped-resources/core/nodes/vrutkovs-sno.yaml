@@ -1,0 +1,148 @@
+apiVersion: v1
+kind: Node
+metadata:
+  annotations:
+    volumes.kubernetes.io/controller-managed-attach-detach: "true"
+  creationTimestamp: "2023-03-09T14:19:59Z"
+  labels:
+    beta.kubernetes.io/arch: amd64
+    beta.kubernetes.io/os: linux
+    kubernetes.io/arch: amd64
+    kubernetes.io/hostname: vrutkovs-sno
+    kubernetes.io/os: linux
+    node-role.kubernetes.io/control-plane: ""
+    node-role.kubernetes.io/master: ""
+    node.openshift.io/os_id: rhcos
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:volumes.kubernetes.io/controller-managed-attach-detach: {}
+        f:labels:
+          .: {}
+          f:beta.kubernetes.io/arch: {}
+          f:beta.kubernetes.io/os: {}
+          f:kubernetes.io/arch: {}
+          f:kubernetes.io/hostname: {}
+          f:kubernetes.io/os: {}
+          f:node-role.kubernetes.io/control-plane: {}
+          f:node-role.kubernetes.io/master: {}
+          f:node.openshift.io/os_id: {}
+      f:spec:
+        f:taints: {}
+    manager: kubelet
+    operation: Update
+    time: "2023-03-09T14:19:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"DiskPressure"}:
+            f:lastHeartbeatTime: {}
+          k:{"type":"MemoryPressure"}:
+            f:lastHeartbeatTime: {}
+          k:{"type":"PIDPressure"}:
+            f:lastHeartbeatTime: {}
+          k:{"type":"Ready"}:
+            f:lastHeartbeatTime: {}
+            f:message: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:20:09Z"
+  name: vrutkovs-sno
+  resourceVersion: "2444"
+  uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
+spec:
+  taints:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+  - effect: NoSchedule
+    key: node.kubernetes.io/not-ready
+status:
+  addresses:
+  - address: 10.0.130.93
+    type: InternalIP
+  - address: vrutkovs-sno
+    type: Hostname
+  allocatable:
+    cpu: 7500m
+    ephemeral-storage: "114345831029"
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 15191560Ki
+    pods: "250"
+  capacity:
+    cpu: "8"
+    ephemeral-storage: 125238252Ki
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 16342536Ki
+    pods: "250"
+  conditions:
+  - lastHeartbeatTime: "2023-03-09T14:20:09Z"
+    lastTransitionTime: "2023-03-09T14:19:59Z"
+    message: kubelet has sufficient memory available
+    reason: KubeletHasSufficientMemory
+    status: "False"
+    type: MemoryPressure
+  - lastHeartbeatTime: "2023-03-09T14:20:09Z"
+    lastTransitionTime: "2023-03-09T14:19:59Z"
+    message: kubelet has no disk pressure
+    reason: KubeletHasNoDiskPressure
+    status: "False"
+    type: DiskPressure
+  - lastHeartbeatTime: "2023-03-09T14:20:09Z"
+    lastTransitionTime: "2023-03-09T14:19:59Z"
+    message: kubelet has sufficient PID available
+    reason: KubeletHasSufficientPID
+    status: "False"
+    type: PIDPressure
+  - lastHeartbeatTime: "2023-03-09T14:20:09Z"
+    lastTransitionTime: "2023-03-09T14:19:59Z"
+    message: 'container runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady
+      message:Network plugin returns error: No CNI configuration file in /etc/kubernetes/cni/net.d/.
+      Has your network provider started?'
+    reason: KubeletNotReady
+    status: "False"
+    type: Ready
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 10250
+  images:
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
+    sizeBytes: 835526326
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:bd71d26b8b646787500887be672ea8241ad05b6d9412d85569941b549898b01c
+    sizeBytes: 540825776
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:40cda5fb6d1b85aac5696cd4ae0edceb5953c9b767b4455c0da98a5a65378be5
+    sizeBytes: 507394797
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:9826eacd15780748de6e4d50a1c30e7f761137c57de0800f2154d799caf2c10b
+    sizeBytes: 447204293
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:4a17a5edd33292beb6a274a3d484c8464a8f9291058107b4cb2cf6181058b1cd
+    sizeBytes: 427538448
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:c319ee887362ff3ce889126e7be803ab11cd331ea89c7ac43a93c33ed3bc4b76
+    sizeBytes: 425572704
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:ebdafe9a37686d9e388cc2df3b277fb5ad778898e5cd0ad36bc94712406e7922
+    sizeBytes: 351795523
+  nodeInfo:
+    architecture: amd64
+    bootID: fb8ee38c-473c-4e92-a927-ec95a38fb01a
+    containerRuntimeVersion: cri-o://1.26.1-10.rhaos4.13.gitcb86088.el8
+    kernelVersion: 4.18.0-372.46.1.el8_6.x86_64
+    kubeProxyVersion: v1.26.2+bc894ae
+    kubeletVersion: v1.26.2+bc894ae
+    machineID: 99d91eb1dac84905be7480af16f1da33
+    operatingSystem: linux
+    osImage: Red Hat Enterprise Linux CoreOS 413.86.202303080142-0 (Ootpa)
+    systemUUID: 99d91eb1-dac8-4905-be74-80af16f1da33
