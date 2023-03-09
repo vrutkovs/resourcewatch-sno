@@ -75,8 +75,6 @@ metadata:
           f:machineconfiguration.openshift.io/lastAppliedDrain: {}
         f:labels:
           f:node-role.kubernetes.io/worker: {}
-      f:spec:
-        f:taints: {}
     manager: machine-config-controller
     operation: Update
     time: "2023-03-09T14:29:42Z"
@@ -118,12 +116,9 @@ metadata:
     subresource: status
     time: "2023-03-09T14:29:47Z"
   name: vrutkovs-sno
-  resourceVersion: "10222"
+  resourceVersion: "10225"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
-spec:
-  taints:
-  - effect: PreferNoSchedule
-    key: UpdateInProgress
+spec: {}
 status:
   addresses:
   - address: 10.0.130.93
