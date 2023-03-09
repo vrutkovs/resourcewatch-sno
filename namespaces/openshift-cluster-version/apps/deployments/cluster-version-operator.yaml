@@ -191,7 +191,9 @@ metadata:
             f:status: {}
             f:type: {}
         f:observedGeneration: {}
+        f:replicas: {}
         f:unavailableReplicas: {}
+        f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
     subresource: status
@@ -204,7 +206,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "8060"
+  resourceVersion: "8063"
   uid: aac71004-72e0-4099-a4c0-18313331c859
 spec:
   progressDeadlineSeconds: 600
@@ -343,9 +345,11 @@ status:
     type: Available
   - lastTransitionTime: "2023-03-09T14:14:43Z"
     lastUpdateTime: "2023-03-09T14:28:27Z"
-    message: Created new replica set "cluster-version-operator-569579d6cf"
-    reason: NewReplicaSetCreated
+    message: ReplicaSet "cluster-version-operator-569579d6cf" is progressing.
+    reason: ReplicaSetUpdated
     status: "True"
     type: Progressing
   observedGeneration: 2
+  replicas: 1
   unavailableReplicas: 1
+  updatedReplicas: 1
