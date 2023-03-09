@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:28:55Z"
 deprecatedLastTimestamp: "2023-03-09T14:28:55Z"
 deprecatedSource:
@@ -23,10 +23,10 @@ metadata:
       f:type: {}
     manager: cluster-kube-apiserver-operator
     operation: Update
-    time: "2023-03-09T14:28:57Z"
+    time: "2023-03-09T14:28:58Z"
   name: kube-apiserver-operator.174ac690898873ea
   namespace: openshift-kube-apiserver-operator
-  resourceVersion: "8781"
+  resourceVersion: "8824"
   uid: f01c1a32-3a30-42c7-beed-2a74c3e2babc
 note: '"loadbalancer-serving-ca" in "openshift-kube-apiserver-operator" requires a
   new cert'
