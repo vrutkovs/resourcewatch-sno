@@ -1,0 +1,46 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-03-09T14:32:39Z"
+deprecatedLastTimestamp: "2023-03-09T14:32:39Z"
+deprecatedSource:
+  component: console-operator-status-controller-statussyncer_console
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-03-09T14:32:39Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:count: {}
+      f:firstTimestamp: {}
+      f:involvedObject: {}
+      f:lastTimestamp: {}
+      f:message: {}
+      f:reason: {}
+      f:source:
+        f:component: {}
+      f:type: {}
+    manager: console
+    operation: Update
+    time: "2023-03-09T14:32:39Z"
+  name: console-operator.174ac6c4b4cc3443
+  namespace: openshift-console-operator
+  resourceVersion: "15603"
+  uid: 2e380abd-b853-4a95-a90d-23385569e510
+note: 'Status for clusteroperator/console changed: Degraded message changed from "RouteHealthDegraded:
+  console route is not admitted\nSyncLoopRefreshDegraded: no ingress for host console-openshift-console.apps.ocp.choomba.one
+  in route console in namespace openshift-console" to "RouteHealthDegraded: console
+  route is not admitted",Progressing changed from False to True ("SyncLoopRefreshProgressing:
+  Changes made during sync updates, additional sync expected."),Available message
+  changed from "RouteHealthAvailable: console route is not admitted" to "DeploymentAvailable:
+  0 replicas available for console deployment\nRouteHealthAvailable: console route
+  is not admitted"'
+reason: OperatorStatusChanged
+regarding:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: console-operator
+  namespace: openshift-console-operator
+  uid: 96b3e259-2eaa-49a3-8a5e-54df68da1860
+type: Normal
