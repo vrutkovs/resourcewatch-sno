@@ -1,6 +1,8 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.18/23"],"mac_address":"0a:58:0a:80:00:12","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.18/23","gateway_ip":"10.128.0.1"}}'
   creationTimestamp: "2023-03-09T14:19:59Z"
   generateName: dns-operator-5f6b454875-
   labels:
@@ -12,7 +14,6 @@ metadata:
     fieldsV1:
       f:metadata:
         f:annotations:
-          .: {}
           f:target.workload.openshift.io/management: {}
         f:generateName: {}
         f:labels:
@@ -143,6 +144,16 @@ metadata:
     operation: Update
     subresource: status
     time: "2023-03-09T14:19:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:k8s.ovn.org/pod-networks: {}
+    manager: vrutkovs-sno
+    operation: Update
+    time: "2023-03-09T14:21:51Z"
   name: dns-operator-5f6b454875-rr6dw
   namespace: openshift-dns-operator
   ownerReferences:
@@ -152,7 +163,7 @@ metadata:
     kind: ReplicaSet
     name: dns-operator-5f6b454875
     uid: b3f0bc55-85fe-4f4c-a7a2-2f5aa8e08d61
-  resourceVersion: "3116"
+  resourceVersion: "3163"
   uid: 75faecd8-af6d-4744-8fa4-36fccee2e4ba
 spec:
   containers:
