@@ -14,6 +14,7 @@ metadata:
   labels:
     kubernetes.io/metadata.name: openshift-machine-api
     name: openshift-machine-api
+    olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: ""
     openshift.io/cluster-monitoring: "true"
     openshift.io/run-level: ""
     pod-security.kubernetes.io/audit: privileged
@@ -57,6 +58,15 @@ metadata:
     manager: cluster-version-operator
     operation: Update
     time: "2023-03-09T14:15:14Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/60fca715-42aa-4de0-a0b3-19c41fce20f7: {}
+    manager: olm
+    operation: Update
+    time: "2023-03-09T14:29:17Z"
   name: openshift-machine-api
   ownerReferences:
   - apiVersion: config.openshift.io/v1
@@ -64,7 +74,7 @@ metadata:
     kind: ClusterVersion
     name: version
     uid: b7590f0c-c37f-44e0-80d3-7b5df1e0e187
-  resourceVersion: "1870"
+  resourceVersion: "9557"
   uid: d82b5e54-88d6-4a09-b834-e15786d5ce16
 spec:
   finalizers:
