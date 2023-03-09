@@ -1,5 +1,5 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1
+deprecatedCount: 2
 deprecatedFirstTimestamp: "2023-03-09T14:23:26Z"
 deprecatedLastTimestamp: "2023-03-09T14:23:26Z"
 deprecatedSource:
@@ -26,7 +26,7 @@ metadata:
     time: "2023-03-09T14:23:26Z"
   name: kube-controller-manager-operator.174ac6441c7f97e5
   namespace: openshift-kube-controller-manager-operator
-  resourceVersion: "6965"
+  resourceVersion: "6967"
   uid: 04795f06-a4e4-43c2-87d0-fd056baff1b3
 note: 'configmaps: aggregator-client-ca,client-ca, secrets: kube-controller-manager-client-cert-key,
   configmaps: cluster-policy-controller-config-3,config-3,controller-manager-kubeconfig-3,kube-controller-cert-syncer-kubeconfig-3,kube-controller-manager-pod-3,recycler-config-3,service-ca-3,serviceaccount-ca-3'
