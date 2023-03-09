@@ -50,12 +50,13 @@ metadata:
           k:{"type":"Ready"}:
             f:lastHeartbeatTime: {}
             f:message: {}
+        f:images: {}
     manager: kubelet
     operation: Update
     subresource: status
-    time: "2023-03-09T14:20:09Z"
+    time: "2023-03-09T14:20:29Z"
   name: vrutkovs-sno
-  resourceVersion: "2444"
+  resourceVersion: "2691"
   uid: 08a7e8a3-d906-4471-95ae-d16a1161f435
 spec:
   taints:
@@ -84,25 +85,25 @@ status:
     memory: 16342536Ki
     pods: "250"
   conditions:
-  - lastHeartbeatTime: "2023-03-09T14:20:09Z"
+  - lastHeartbeatTime: "2023-03-09T14:20:29Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient memory available
     reason: KubeletHasSufficientMemory
     status: "False"
     type: MemoryPressure
-  - lastHeartbeatTime: "2023-03-09T14:20:09Z"
+  - lastHeartbeatTime: "2023-03-09T14:20:29Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has no disk pressure
     reason: KubeletHasNoDiskPressure
     status: "False"
     type: DiskPressure
-  - lastHeartbeatTime: "2023-03-09T14:20:09Z"
+  - lastHeartbeatTime: "2023-03-09T14:20:29Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: kubelet has sufficient PID available
     reason: KubeletHasSufficientPID
     status: "False"
     type: PIDPressure
-  - lastHeartbeatTime: "2023-03-09T14:20:09Z"
+  - lastHeartbeatTime: "2023-03-09T14:20:29Z"
     lastTransitionTime: "2023-03-09T14:19:59Z"
     message: 'container runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady
       message:Network plugin returns error: No CNI configuration file in /etc/kubernetes/cni/net.d/.
@@ -118,8 +119,15 @@ status:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:8fff645df6f28fc44be28ba10f99a33d30de328e80869dedcb094093879e46d4
     sizeBytes: 835526326
   - names:
+    - quay.io/edge-infrastructure/assisted-installer-controller@sha256:81c2da91bf20932218d4b0ffc0a321385d81f9971a7529cc1c164d8fe9996d6f
+    - quay.io/edge-infrastructure/assisted-installer-controller:latest
+    sizeBytes: 740647178
+  - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:bd71d26b8b646787500887be672ea8241ad05b6d9412d85569941b549898b01c
     sizeBytes: 540825776
+  - names:
+    - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:6f674d54345ba8ce675df69db58531f41a18deac6bcaec530b634cc54a38ab2c
+    sizeBytes: 513820021
   - names:
     - registry.build05.ci.openshift.org/ci-ln-88xnydk/stable@sha256:40cda5fb6d1b85aac5696cd4ae0edceb5953c9b767b4455c0da98a5a65378be5
     sizeBytes: 507394797
