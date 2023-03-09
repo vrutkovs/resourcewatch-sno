@@ -10,7 +10,7 @@ metadata:
     networkoperator.openshift.io/non-critical: ""
     release.openshift.io/version: 4.13.0-0.ci.test-2023-03-09-115511-ci-ln-88xnydk-latest
   creationTimestamp: "2023-03-09T14:20:26Z"
-  generation: 1
+  generation: 2
   labels:
     app: multus-admission-controller
     component: network
@@ -19,6 +19,19 @@ metadata:
     pod-template-hash: 7c44c4fd4c
     type: infra
   managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:availableReplicas: {}
+        f:fullyLabeledReplicas: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-03-09T14:22:29Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -140,20 +153,7 @@ metadata:
                   f:secretName: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2023-03-09T14:20:26Z"
-  - apiVersion: apps/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:status:
-        f:availableReplicas: {}
-        f:fullyLabeledReplicas: {}
-        f:observedGeneration: {}
-        f:readyReplicas: {}
-        f:replicas: {}
-    manager: kube-controller-manager
-    operation: Update
-    subresource: status
-    time: "2023-03-09T14:22:29Z"
+    time: "2023-03-09T14:22:40Z"
   name: multus-admission-controller-7c44c4fd4c
   namespace: openshift-multus
   ownerReferences:
@@ -163,10 +163,10 @@ metadata:
     kind: Deployment
     name: multus-admission-controller
     uid: 3f577280-a91b-42dc-8ed6-a9b403637b32
-  resourceVersion: "5268"
+  resourceVersion: "5776"
   uid: 7a585df6-dad3-48d7-b274-879569445ab4
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: multus-admission-controller
